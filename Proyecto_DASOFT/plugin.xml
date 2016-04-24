@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Proyecto_DASOFT -->
+      <package
+            uri="Formularios_DASOFT"
+            class="Formularios_DASOFT.Formularios_DASOFTPackage"
+            genModel="model/Proyecto_DASOFT.genmodel"/>
+   </extension>
+
+</plugin>
