@@ -2,6 +2,7 @@
  */
 package Formularios_DASOFT;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -76,29 +77,19 @@ public interface Layout extends EObject {
 	void setAltura(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Entradas</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Entradas</b></em>' containment reference list.
+	 * The list contents are of type {@link Formularios_DASOFT.Input}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Entradas</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Entradas</em>' containment reference.
-	 * @see #setEntradas(Input)
+	 * @return the value of the '<em>Entradas</em>' containment reference list.
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getLayout_Entradas()
 	 * @model containment="true"
 	 * @generated
 	 */
-	Input getEntradas();
-
-	/**
-	 * Sets the value of the '{@link Formularios_DASOFT.Layout#getEntradas <em>Entradas</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Entradas</em>' containment reference.
-	 * @see #getEntradas()
-	 * @generated
-	 */
-	void setEntradas(Input value);
+	EList<Input> getEntradas();
 
 } // Layout

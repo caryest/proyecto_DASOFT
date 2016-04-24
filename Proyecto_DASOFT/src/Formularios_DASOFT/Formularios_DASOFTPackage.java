@@ -228,7 +228,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int LAYOUT__ALTURA = 1;
 
 	/**
-	 * The feature id for the '<em><b>Entradas</b></em>' containment reference.
+	 * The feature id for the '<em><b>Entradas</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1011,10 +1011,10 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EAttribute getLayout_Altura();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link Formularios_DASOFT.Layout#getEntradas <em>Entradas</em>}'.
+	 * Returns the meta object for the containment reference list '{@link Formularios_DASOFT.Layout#getEntradas <em>Entradas</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Entradas</em>'.
+	 * @return the meta object for the containment reference list '<em>Entradas</em>'.
 	 * @see Formularios_DASOFT.Layout#getEntradas()
 	 * @see #getLayout()
 	 * @generated
@@ -1304,7 +1304,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EAttribute LAYOUT__ALTURA = eINSTANCE.getLayout_Altura();
 
 		/**
-		 * The meta object literal for the '<em><b>Entradas</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Entradas</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

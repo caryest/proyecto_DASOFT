@@ -6,14 +6,18 @@ import Formularios_DASOFT.Formularios_DASOFTPackage;
 import Formularios_DASOFT.Input;
 import Formularios_DASOFT.Layout;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,14 +76,14 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	protected int altura = ALTURA_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getEntradas() <em>Entradas</em>}' containment reference.
+	 * The cached value of the '{@link #getEntradas() <em>Entradas</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getEntradas()
 	 * @generated
 	 * @ordered
 	 */
-	protected Input entradas;
+	protected EList<Input> entradas;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -147,42 +151,11 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Input getEntradas() {
+	public EList<Input> getEntradas() {
+		if (entradas == null) {
+			entradas = new EObjectContainmentEList<Input>(Input.class, this, Formularios_DASOFTPackage.LAYOUT__ENTRADAS);
+		}
 		return entradas;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetEntradas(Input newEntradas, NotificationChain msgs) {
-		Input oldEntradas = entradas;
-		entradas = newEntradas;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.LAYOUT__ENTRADAS, oldEntradas, newEntradas);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setEntradas(Input newEntradas) {
-		if (newEntradas != entradas) {
-			NotificationChain msgs = null;
-			if (entradas != null)
-				msgs = ((InternalEObject)entradas).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - Formularios_DASOFTPackage.LAYOUT__ENTRADAS, null, msgs);
-			if (newEntradas != null)
-				msgs = ((InternalEObject)newEntradas).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - Formularios_DASOFTPackage.LAYOUT__ENTRADAS, null, msgs);
-			msgs = basicSetEntradas(newEntradas, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.LAYOUT__ENTRADAS, newEntradas, newEntradas));
 	}
 
 	/**
@@ -194,7 +167,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case Formularios_DASOFTPackage.LAYOUT__ENTRADAS:
-				return basicSetEntradas(null, msgs);
+				return ((InternalEList<?>)getEntradas()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -222,6 +195,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -232,7 +206,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 				setAltura((Integer)newValue);
 				return;
 			case Formularios_DASOFTPackage.LAYOUT__ENTRADAS:
-				setEntradas((Input)newValue);
+				getEntradas().clear();
+				getEntradas().addAll((Collection<? extends Input>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -253,7 +228,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 				setAltura(ALTURA_EDEFAULT);
 				return;
 			case Formularios_DASOFTPackage.LAYOUT__ENTRADAS:
-				setEntradas((Input)null);
+				getEntradas().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -272,7 +247,7 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 			case Formularios_DASOFTPackage.LAYOUT__ALTURA:
 				return altura != ALTURA_EDEFAULT;
 			case Formularios_DASOFTPackage.LAYOUT__ENTRADAS:
-				return entradas != null;
+				return entradas != null && !entradas.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
