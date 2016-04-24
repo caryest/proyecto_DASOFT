@@ -85,6 +85,42 @@ public interface Formularios_DASOFTFactory extends EFactory {
 	InputBoton createInputBoton();
 
 	/**
+	 * Returns a new object of class '<em>Layout</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Layout</em>'.
+	 * @generated
+	 */
+	Layout createLayout();
+
+	/**
+	 * Returns a new object of class '<em>Prueba Interfaz</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Prueba Interfaz</em>'.
+	 * @generated
+	 */
+	PruebaInterfaz createPruebaInterfaz();
+
+	/**
+	 * Returns a new object of class '<em>Accion</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Accion</em>'.
+	 * @generated
+	 */
+	Accion createAccion();
+
+	/**
+	 * Returns a new object of class '<em>Asercion</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Asercion</em>'.
+	 * @generated
+	 */
+	Asercion createAsercion();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

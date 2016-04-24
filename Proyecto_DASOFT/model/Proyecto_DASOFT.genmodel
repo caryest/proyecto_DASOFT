@@ -7,8 +7,11 @@
   <foreignModel>Proyecto_DASOFT.ecore</foreignModel>
   <genPackages prefix="Formularios_DASOFT" disposableProviderFactory="true" ecorePackage="Proyecto_DASOFT.ecore#/">
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Formulario">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Formulario/entradas"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Formulario/layout"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Formulario/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Formulario/comprobarAsercion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Formulario/comprobarAccion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Formulario/pruebas"/>
     </genClasses>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Input">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Input/name"/>
@@ -18,5 +21,15 @@
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputCombo"/>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputCheck"/>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputBoton"/>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Layout">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Layout/anchura"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Layout/altura"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Layout/entradas"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//PruebaInterfaz">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//PruebaInterfaz/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Accion"/>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Asercion"/>
   </genPackages>
 </genmodel:GenModel>

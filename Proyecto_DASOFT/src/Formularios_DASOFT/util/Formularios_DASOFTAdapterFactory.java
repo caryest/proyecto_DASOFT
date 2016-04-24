@@ -96,6 +96,22 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 				return createInputBotonAdapter();
 			}
 			@Override
+			public Adapter caseLayout(Layout object) {
+				return createLayoutAdapter();
+			}
+			@Override
+			public Adapter casePruebaInterfaz(PruebaInterfaz object) {
+				return createPruebaInterfazAdapter();
+			}
+			@Override
+			public Adapter caseAccion(Accion object) {
+				return createAccionAdapter();
+			}
+			@Override
+			public Adapter caseAsercion(Asercion object) {
+				return createAsercionAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -210,6 +226,62 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInputBotonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.Layout <em>Layout</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.Layout
+	 * @generated
+	 */
+	public Adapter createLayoutAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.PruebaInterfaz <em>Prueba Interfaz</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.PruebaInterfaz
+	 * @generated
+	 */
+	public Adapter createPruebaInterfazAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.Accion <em>Accion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.Accion
+	 * @generated
+	 */
+	public Adapter createAccionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.Asercion <em>Asercion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.Asercion
+	 * @generated
+	 */
+	public Adapter createAsercionAdapter() {
 		return null;
 	}
 

@@ -113,6 +113,30 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Formularios_DASOFTPackage.LAYOUT: {
+				Layout layout = (Layout)theEObject;
+				T result = caseLayout(layout);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ: {
+				PruebaInterfaz pruebaInterfaz = (PruebaInterfaz)theEObject;
+				T result = casePruebaInterfaz(pruebaInterfaz);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.ACCION: {
+				Accion accion = (Accion)theEObject;
+				T result = caseAccion(accion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.ASERCION: {
+				Asercion asercion = (Asercion)theEObject;
+				T result = caseAsercion(asercion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -219,6 +243,66 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInputBoton(InputBoton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Layout</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Layout</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLayout(Layout object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Prueba Interfaz</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Prueba Interfaz</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePruebaInterfaz(PruebaInterfaz object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Accion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Accion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccion(Accion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Asercion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Asercion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAsercion(Asercion object) {
 		return null;
 	}
 

@@ -63,6 +63,10 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 			case Formularios_DASOFTPackage.INPUT_COMBO: return createInputCombo();
 			case Formularios_DASOFTPackage.INPUT_CHECK: return createInputCheck();
 			case Formularios_DASOFTPackage.INPUT_BOTON: return createInputBoton();
+			case Formularios_DASOFTPackage.LAYOUT: return createLayout();
+			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ: return createPruebaInterfaz();
+			case Formularios_DASOFTPackage.ACCION: return createAccion();
+			case Formularios_DASOFTPackage.ASERCION: return createAsercion();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -136,6 +140,46 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 	public InputBoton createInputBoton() {
 		InputBotonImpl inputBoton = new InputBotonImpl();
 		return inputBoton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Layout createLayout() {
+		LayoutImpl layout = new LayoutImpl();
+		return layout;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PruebaInterfaz createPruebaInterfaz() {
+		PruebaInterfazImpl pruebaInterfaz = new PruebaInterfazImpl();
+		return pruebaInterfaz;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Accion createAccion() {
+		AccionImpl accion = new AccionImpl();
+		return accion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Asercion createAsercion() {
+		AsercionImpl asercion = new AsercionImpl();
+		return asercion;
 	}
 
 	/**
