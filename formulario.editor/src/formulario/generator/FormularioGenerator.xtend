@@ -23,12 +23,16 @@ class FormularioGenerator implements IGenerator {
 		fsa.generateFile("../tests/forms/Formulario.java", generarTest())
 
  		for(Formulario form : resource.allContents.toIterable.filter(Formulario)){
+ 			
+ 			
 			//fsa.generateFile("gui/BaseDatos.java", form.compile())
 			
 			/*for(Input inp : form.layout.entradas){
 				val nombre = "gui/PanelTabla" + inp.name + ".java";
 				fsa.generateFile(nombre, inp.compile())
 			}*/
+			
+			
 		}
 		
 	}
