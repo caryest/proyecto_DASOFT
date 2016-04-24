@@ -13,18 +13,32 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Formulario/comprobarAccion"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Formulario/pruebas"/>
     </genClasses>
-    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Input">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Input/name"/>
-    </genClasses>
-    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputTexto"/>
-    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputRadio"/>
-    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputCombo"/>
-    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputCheck"/>
-    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputBoton"/>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Layout">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Layout/anchura"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Layout/altura"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Layout/entradas"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Input">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Input/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Input/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Input/habilitado"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputTexto">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//InputTexto/obligatorio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//InputTexto/valor"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputBoton"/>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputMultiple">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//InputMultiple/valores"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputRadio">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//InputRadio/seleccion"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputCombo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//InputCombo/seleccion"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputCheck">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//InputCheck/seleccion"/>
     </genClasses>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//PruebaInterfaz">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//PruebaInterfaz/name"/>

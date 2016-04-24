@@ -72,6 +72,12 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Formularios_DASOFTPackage.LAYOUT: {
+				Layout layout = (Layout)theEObject;
+				T result = caseLayout(layout);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Formularios_DASOFTPackage.INPUT: {
 				Input input = (Input)theEObject;
 				T result = caseInput(input);
@@ -85,27 +91,6 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Formularios_DASOFTPackage.INPUT_RADIO: {
-				InputRadio inputRadio = (InputRadio)theEObject;
-				T result = caseInputRadio(inputRadio);
-				if (result == null) result = caseInput(inputRadio);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Formularios_DASOFTPackage.INPUT_COMBO: {
-				InputCombo inputCombo = (InputCombo)theEObject;
-				T result = caseInputCombo(inputCombo);
-				if (result == null) result = caseInput(inputCombo);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case Formularios_DASOFTPackage.INPUT_CHECK: {
-				InputCheck inputCheck = (InputCheck)theEObject;
-				T result = caseInputCheck(inputCheck);
-				if (result == null) result = caseInput(inputCheck);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case Formularios_DASOFTPackage.INPUT_BOTON: {
 				InputBoton inputBoton = (InputBoton)theEObject;
 				T result = caseInputBoton(inputBoton);
@@ -113,9 +98,34 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Formularios_DASOFTPackage.LAYOUT: {
-				Layout layout = (Layout)theEObject;
-				T result = caseLayout(layout);
+			case Formularios_DASOFTPackage.INPUT_MULTIPLE: {
+				InputMultiple inputMultiple = (InputMultiple)theEObject;
+				T result = caseInputMultiple(inputMultiple);
+				if (result == null) result = caseInput(inputMultiple);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.INPUT_RADIO: {
+				InputRadio inputRadio = (InputRadio)theEObject;
+				T result = caseInputRadio(inputRadio);
+				if (result == null) result = caseInputMultiple(inputRadio);
+				if (result == null) result = caseInput(inputRadio);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.INPUT_COMBO: {
+				InputCombo inputCombo = (InputCombo)theEObject;
+				T result = caseInputCombo(inputCombo);
+				if (result == null) result = caseInputMultiple(inputCombo);
+				if (result == null) result = caseInput(inputCombo);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.INPUT_CHECK: {
+				InputCheck inputCheck = (InputCheck)theEObject;
+				T result = caseInputCheck(inputCheck);
+				if (result == null) result = caseInputMultiple(inputCheck);
+				if (result == null) result = caseInput(inputCheck);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -243,6 +253,21 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInputBoton(InputBoton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Input Multiple</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Input Multiple</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInputMultiple(InputMultiple object) {
 		return null;
 	}
 

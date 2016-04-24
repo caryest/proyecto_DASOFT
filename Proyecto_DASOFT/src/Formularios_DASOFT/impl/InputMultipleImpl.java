@@ -3,51 +3,54 @@
 package Formularios_DASOFT.impl;
 
 import Formularios_DASOFT.Formularios_DASOFTPackage;
-import Formularios_DASOFT.InputCombo;
+import Formularios_DASOFT.InputMultiple;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Input Combo</b></em>'.
+ * An implementation of the model object '<em><b>Input Multiple</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Formularios_DASOFT.impl.InputComboImpl#getSeleccion <em>Seleccion</em>}</li>
+ *   <li>{@link Formularios_DASOFT.impl.InputMultipleImpl#getValores <em>Valores</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class InputComboImpl extends InputMultipleImpl implements InputCombo {
+public class InputMultipleImpl extends InputImpl implements InputMultiple {
 	/**
-	 * The default value of the '{@link #getSeleccion() <em>Seleccion</em>}' attribute.
+	 * The default value of the '{@link #getValores() <em>Valores</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSeleccion()
+	 * @see #getValores()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int SELECCION_EDEFAULT = 0;
+	protected static final String VALORES_EDEFAULT = null;
+
 	/**
-	 * The cached value of the '{@link #getSeleccion() <em>Seleccion</em>}' attribute.
+	 * The cached value of the '{@link #getValores() <em>Valores</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSeleccion()
+	 * @see #getValores()
 	 * @generated
 	 * @ordered
 	 */
-	protected int seleccion = SELECCION_EDEFAULT;
+	protected String valores = VALORES_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InputComboImpl() {
+	protected InputMultipleImpl() {
 		super();
 	}
 
@@ -58,7 +61,7 @@ public class InputComboImpl extends InputMultipleImpl implements InputCombo {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Formularios_DASOFTPackage.Literals.INPUT_COMBO;
+		return Formularios_DASOFTPackage.Literals.INPUT_MULTIPLE;
 	}
 
 	/**
@@ -66,8 +69,8 @@ public class InputComboImpl extends InputMultipleImpl implements InputCombo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getSeleccion() {
-		return seleccion;
+	public String getValores() {
+		return valores;
 	}
 
 	/**
@@ -75,11 +78,11 @@ public class InputComboImpl extends InputMultipleImpl implements InputCombo {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSeleccion(int newSeleccion) {
-		int oldSeleccion = seleccion;
-		seleccion = newSeleccion;
+	public void setValores(String newValores) {
+		String oldValores = valores;
+		valores = newValores;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.INPUT_COMBO__SELECCION, oldSeleccion, seleccion));
+			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.INPUT_MULTIPLE__VALORES, oldValores, valores));
 	}
 
 	/**
@@ -90,8 +93,8 @@ public class InputComboImpl extends InputMultipleImpl implements InputCombo {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_COMBO__SELECCION:
-				return getSeleccion();
+			case Formularios_DASOFTPackage.INPUT_MULTIPLE__VALORES:
+				return getValores();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -104,8 +107,8 @@ public class InputComboImpl extends InputMultipleImpl implements InputCombo {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_COMBO__SELECCION:
-				setSeleccion((Integer)newValue);
+			case Formularios_DASOFTPackage.INPUT_MULTIPLE__VALORES:
+				setValores((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -119,8 +122,8 @@ public class InputComboImpl extends InputMultipleImpl implements InputCombo {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_COMBO__SELECCION:
-				setSeleccion(SELECCION_EDEFAULT);
+			case Formularios_DASOFTPackage.INPUT_MULTIPLE__VALORES:
+				setValores(VALORES_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -134,8 +137,8 @@ public class InputComboImpl extends InputMultipleImpl implements InputCombo {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_COMBO__SELECCION:
-				return seleccion != SELECCION_EDEFAULT;
+			case Formularios_DASOFTPackage.INPUT_MULTIPLE__VALORES:
+				return VALORES_EDEFAULT == null ? valores != null : !VALORES_EDEFAULT.equals(valores);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -150,10 +153,10 @@ public class InputComboImpl extends InputMultipleImpl implements InputCombo {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (seleccion: ");
-		result.append(seleccion);
+		result.append(" (valores: ");
+		result.append(valores);
 		result.append(')');
 		return result.toString();
 	}
 
-} //InputComboImpl
+} //InputMultipleImpl

@@ -72,12 +72,24 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 				return createFormularioAdapter();
 			}
 			@Override
+			public Adapter caseLayout(Layout object) {
+				return createLayoutAdapter();
+			}
+			@Override
 			public Adapter caseInput(Input object) {
 				return createInputAdapter();
 			}
 			@Override
 			public Adapter caseInputTexto(InputTexto object) {
 				return createInputTextoAdapter();
+			}
+			@Override
+			public Adapter caseInputBoton(InputBoton object) {
+				return createInputBotonAdapter();
+			}
+			@Override
+			public Adapter caseInputMultiple(InputMultiple object) {
+				return createInputMultipleAdapter();
 			}
 			@Override
 			public Adapter caseInputRadio(InputRadio object) {
@@ -90,14 +102,6 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseInputCheck(InputCheck object) {
 				return createInputCheckAdapter();
-			}
-			@Override
-			public Adapter caseInputBoton(InputBoton object) {
-				return createInputBotonAdapter();
-			}
-			@Override
-			public Adapter caseLayout(Layout object) {
-				return createLayoutAdapter();
 			}
 			@Override
 			public Adapter casePruebaInterfaz(PruebaInterfaz object) {
@@ -226,6 +230,20 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInputBotonAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.InputMultiple <em>Input Multiple</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.InputMultiple
+	 * @generated
+	 */
+	public Adapter createInputMultipleAdapter() {
 		return null;
 	}
 

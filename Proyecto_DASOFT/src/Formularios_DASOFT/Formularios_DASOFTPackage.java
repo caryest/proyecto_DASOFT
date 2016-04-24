@@ -137,34 +137,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInput()
 	 * @generated
 	 */
-	int INPUT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__NAME = 0;
-
-	/**
-	 * The number of structural features of the '<em>Input</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Input</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_OPERATION_COUNT = 0;
+	int INPUT = 2;
 
 	/**
 	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputTextoImpl <em>Input Texto</em>}' class.
@@ -174,34 +147,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputTexto()
 	 * @generated
 	 */
-	int INPUT_TEXTO = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_TEXTO__NAME = INPUT__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Input Texto</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_TEXTO_FEATURE_COUNT = INPUT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Input Texto</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_TEXTO_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
+	int INPUT_TEXTO = 3;
 
 	/**
 	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputRadioImpl <em>Input Radio</em>}' class.
@@ -211,34 +157,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputRadio()
 	 * @generated
 	 */
-	int INPUT_RADIO = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_RADIO__NAME = INPUT__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Input Radio</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_RADIO_FEATURE_COUNT = INPUT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Input Radio</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_RADIO_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
+	int INPUT_RADIO = 6;
 
 	/**
 	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputComboImpl <em>Input Combo</em>}' class.
@@ -248,34 +167,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputCombo()
 	 * @generated
 	 */
-	int INPUT_COMBO = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_COMBO__NAME = INPUT__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Input Combo</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_COMBO_FEATURE_COUNT = INPUT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Input Combo</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_COMBO_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
+	int INPUT_COMBO = 7;
 
 	/**
 	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputCheckImpl <em>Input Check</em>}' class.
@@ -285,34 +177,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputCheck()
 	 * @generated
 	 */
-	int INPUT_CHECK = 5;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_CHECK__NAME = INPUT__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Input Check</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_CHECK_FEATURE_COUNT = INPUT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Input Check</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_CHECK_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
+	int INPUT_CHECK = 8;
 
 	/**
 	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputBotonImpl <em>Input Boton</em>}' class.
@@ -322,35 +187,17 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputBoton()
 	 * @generated
 	 */
-	int INPUT_BOTON = 6;
+	int INPUT_BOTON = 4;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputMultipleImpl <em>Input Multiple</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.InputMultipleImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputMultiple()
 	 * @generated
-	 * @ordered
 	 */
-	int INPUT_BOTON__NAME = INPUT__NAME;
-
-	/**
-	 * The number of structural features of the '<em>Input Boton</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_BOTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Input Boton</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_BOTON_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
-
+	int INPUT_MULTIPLE = 5;
 
 	/**
 	 * The meta object id for the '{@link Formularios_DASOFT.impl.LayoutImpl <em>Layout</em>}' class.
@@ -360,7 +207,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getLayout()
 	 * @generated
 	 */
-	int LAYOUT = 7;
+	int LAYOUT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Anchura</b></em>' attribute.
@@ -408,6 +255,402 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int LAYOUT_OPERATION_COUNT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__VISIBLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT__HABILITADO = 2;
+
+	/**
+	 * The number of structural features of the '<em>Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_TEXTO__NAME = INPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_TEXTO__VISIBLE = INPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_TEXTO__HABILITADO = INPUT__HABILITADO;
+
+	/**
+	 * The feature id for the '<em><b>Obligatorio</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_TEXTO__OBLIGATORIO = INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Valor</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_TEXTO__VALOR = INPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Input Texto</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_TEXTO_FEATURE_COUNT = INPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Input Texto</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_TEXTO_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_BOTON__NAME = INPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_BOTON__VISIBLE = INPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_BOTON__HABILITADO = INPUT__HABILITADO;
+
+	/**
+	 * The number of structural features of the '<em>Input Boton</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_BOTON_FEATURE_COUNT = INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Input Boton</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_BOTON_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_MULTIPLE__NAME = INPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_MULTIPLE__VISIBLE = INPUT__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_MULTIPLE__HABILITADO = INPUT__HABILITADO;
+
+	/**
+	 * The feature id for the '<em><b>Valores</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_MULTIPLE__VALORES = INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Input Multiple</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_MULTIPLE_FEATURE_COUNT = INPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Input Multiple</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_MULTIPLE_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_RADIO__NAME = INPUT_MULTIPLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_RADIO__VISIBLE = INPUT_MULTIPLE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_RADIO__HABILITADO = INPUT_MULTIPLE__HABILITADO;
+
+	/**
+	 * The feature id for the '<em><b>Valores</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_RADIO__VALORES = INPUT_MULTIPLE__VALORES;
+
+	/**
+	 * The feature id for the '<em><b>Seleccion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_RADIO__SELECCION = INPUT_MULTIPLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Input Radio</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_RADIO_FEATURE_COUNT = INPUT_MULTIPLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Input Radio</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_RADIO_OPERATION_COUNT = INPUT_MULTIPLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_COMBO__NAME = INPUT_MULTIPLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_COMBO__VISIBLE = INPUT_MULTIPLE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_COMBO__HABILITADO = INPUT_MULTIPLE__HABILITADO;
+
+	/**
+	 * The feature id for the '<em><b>Valores</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_COMBO__VALORES = INPUT_MULTIPLE__VALORES;
+
+	/**
+	 * The feature id for the '<em><b>Seleccion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_COMBO__SELECCION = INPUT_MULTIPLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Input Combo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_COMBO_FEATURE_COUNT = INPUT_MULTIPLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Input Combo</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_COMBO_OPERATION_COUNT = INPUT_MULTIPLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_CHECK__NAME = INPUT_MULTIPLE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_CHECK__VISIBLE = INPUT_MULTIPLE__VISIBLE;
+
+	/**
+	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_CHECK__HABILITADO = INPUT_MULTIPLE__HABILITADO;
+
+	/**
+	 * The feature id for the '<em><b>Valores</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_CHECK__VALORES = INPUT_MULTIPLE__VALORES;
+
+	/**
+	 * The feature id for the '<em><b>Seleccion</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_CHECK__SELECCION = INPUT_MULTIPLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Input Check</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_CHECK_FEATURE_COUNT = INPUT_MULTIPLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Input Check</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INPUT_CHECK_OPERATION_COUNT = INPUT_MULTIPLE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link Formularios_DASOFT.impl.PruebaInterfazImpl <em>Prueba Interfaz</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -415,7 +658,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getPruebaInterfaz()
 	 * @generated
 	 */
-	int PRUEBA_INTERFAZ = 8;
+	int PRUEBA_INTERFAZ = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -452,7 +695,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAccion()
 	 * @generated
 	 */
-	int ACCION = 9;
+	int ACCION = 10;
 
 	/**
 	 * The number of structural features of the '<em>Accion</em>' class.
@@ -480,7 +723,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercion()
 	 * @generated
 	 */
-	int ASERCION = 10;
+	int ASERCION = 11;
 
 	/**
 	 * The number of structural features of the '<em>Asercion</em>' class.
@@ -588,6 +831,28 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EAttribute getInput_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Input#isVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Visible</em>'.
+	 * @see Formularios_DASOFT.Input#isVisible()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EAttribute getInput_Visible();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Input#isHabilitado <em>Habilitado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Habilitado</em>'.
+	 * @see Formularios_DASOFT.Input#isHabilitado()
+	 * @see #getInput()
+	 * @generated
+	 */
+	EAttribute getInput_Habilitado();
+
+	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.InputTexto <em>Input Texto</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -596,6 +861,28 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInputTexto();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.InputTexto#isObligatorio <em>Obligatorio</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Obligatorio</em>'.
+	 * @see Formularios_DASOFT.InputTexto#isObligatorio()
+	 * @see #getInputTexto()
+	 * @generated
+	 */
+	EAttribute getInputTexto_Obligatorio();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.InputTexto#getValor <em>Valor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valor</em>'.
+	 * @see Formularios_DASOFT.InputTexto#getValor()
+	 * @see #getInputTexto()
+	 * @generated
+	 */
+	EAttribute getInputTexto_Valor();
 
 	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.InputRadio <em>Input Radio</em>}'.
@@ -608,6 +895,17 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EClass getInputRadio();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.InputRadio#getSeleccion <em>Seleccion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Seleccion</em>'.
+	 * @see Formularios_DASOFT.InputRadio#getSeleccion()
+	 * @see #getInputRadio()
+	 * @generated
+	 */
+	EAttribute getInputRadio_Seleccion();
+
+	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.InputCombo <em>Input Combo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -616,6 +914,17 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInputCombo();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.InputCombo#getSeleccion <em>Seleccion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Seleccion</em>'.
+	 * @see Formularios_DASOFT.InputCombo#getSeleccion()
+	 * @see #getInputCombo()
+	 * @generated
+	 */
+	EAttribute getInputCombo_Seleccion();
 
 	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.InputCheck <em>Input Check</em>}'.
@@ -628,6 +937,17 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EClass getInputCheck();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link Formularios_DASOFT.InputCheck#getSeleccion <em>Seleccion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Seleccion</em>'.
+	 * @see Formularios_DASOFT.InputCheck#getSeleccion()
+	 * @see #getInputCheck()
+	 * @generated
+	 */
+	EAttribute getInputCheck_Seleccion();
+
+	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.InputBoton <em>Input Boton</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -636,6 +956,27 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInputBoton();
+
+	/**
+	 * Returns the meta object for class '{@link Formularios_DASOFT.InputMultiple <em>Input Multiple</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Input Multiple</em>'.
+	 * @see Formularios_DASOFT.InputMultiple
+	 * @generated
+	 */
+	EClass getInputMultiple();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.InputMultiple#getValores <em>Valores</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valores</em>'.
+	 * @see Formularios_DASOFT.InputMultiple#getValores()
+	 * @see #getInputMultiple()
+	 * @generated
+	 */
+	EAttribute getInputMultiple_Valores();
 
 	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.Layout <em>Layout</em>}'.
@@ -813,6 +1154,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EAttribute INPUT__NAME = eINSTANCE.getInput_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Visible</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT__VISIBLE = eINSTANCE.getInput_Visible();
+
+		/**
+		 * The meta object literal for the '<em><b>Habilitado</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT__HABILITADO = eINSTANCE.getInput_Habilitado();
+
+		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputTextoImpl <em>Input Texto</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -821,6 +1178,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INPUT_TEXTO = eINSTANCE.getInputTexto();
+
+		/**
+		 * The meta object literal for the '<em><b>Obligatorio</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT_TEXTO__OBLIGATORIO = eINSTANCE.getInputTexto_Obligatorio();
+
+		/**
+		 * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT_TEXTO__VALOR = eINSTANCE.getInputTexto_Valor();
 
 		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputRadioImpl <em>Input Radio</em>}' class.
@@ -833,6 +1206,14 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EClass INPUT_RADIO = eINSTANCE.getInputRadio();
 
 		/**
+		 * The meta object literal for the '<em><b>Seleccion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT_RADIO__SELECCION = eINSTANCE.getInputRadio_Seleccion();
+
+		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputComboImpl <em>Input Combo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -841,6 +1222,14 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INPUT_COMBO = eINSTANCE.getInputCombo();
+
+		/**
+		 * The meta object literal for the '<em><b>Seleccion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT_COMBO__SELECCION = eINSTANCE.getInputCombo_Seleccion();
 
 		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputCheckImpl <em>Input Check</em>}' class.
@@ -853,6 +1242,14 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EClass INPUT_CHECK = eINSTANCE.getInputCheck();
 
 		/**
+		 * The meta object literal for the '<em><b>Seleccion</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT_CHECK__SELECCION = eINSTANCE.getInputCheck_Seleccion();
+
+		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputBotonImpl <em>Input Boton</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -861,6 +1258,24 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INPUT_BOTON = eINSTANCE.getInputBoton();
+
+		/**
+		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputMultipleImpl <em>Input Multiple</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Formularios_DASOFT.impl.InputMultipleImpl
+		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputMultiple()
+		 * @generated
+		 */
+		EClass INPUT_MULTIPLE = eINSTANCE.getInputMultiple();
+
+		/**
+		 * The meta object literal for the '<em><b>Valores</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT_MULTIPLE__VALORES = eINSTANCE.getInputMultiple_Valores();
 
 		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.LayoutImpl <em>Layout</em>}' class.

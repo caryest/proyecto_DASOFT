@@ -85,6 +85,15 @@ public interface Formularios_DASOFTFactory extends EFactory {
 	InputBoton createInputBoton();
 
 	/**
+	 * Returns a new object of class '<em>Input Multiple</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Input Multiple</em>'.
+	 * @generated
+	 */
+	InputMultiple createInputMultiple();
+
+	/**
 	 * Returns a new object of class '<em>Layout</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -11,6 +11,7 @@ import Formularios_DASOFT.Input;
 import Formularios_DASOFT.InputBoton;
 import Formularios_DASOFT.InputCheck;
 import Formularios_DASOFT.InputCombo;
+import Formularios_DASOFT.InputMultiple;
 import Formularios_DASOFT.InputRadio;
 import Formularios_DASOFT.InputTexto;
 
@@ -78,6 +79,13 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * @generated
 	 */
 	private EClass inputBotonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass inputMultipleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -245,8 +253,44 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getInput_Visible() {
+		return (EAttribute)inputEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInput_Habilitado() {
+		return (EAttribute)inputEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInputTexto() {
 		return inputTextoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInputTexto_Obligatorio() {
+		return (EAttribute)inputTextoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInputTexto_Valor() {
+		return (EAttribute)inputTextoEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -263,8 +307,26 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getInputRadio_Seleccion() {
+		return (EAttribute)inputRadioEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInputCombo() {
 		return inputComboEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInputCombo_Seleccion() {
+		return (EAttribute)inputComboEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -281,8 +343,35 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getInputCheck_Seleccion() {
+		return (EAttribute)inputCheckEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInputBoton() {
 		return inputBotonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInputMultiple() {
+		return inputMultipleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInputMultiple_Valores() {
+		return (EAttribute)inputMultipleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -392,23 +481,33 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 		createEAttribute(formularioEClass, FORMULARIO__COMPROBAR_ACCION);
 		createEReference(formularioEClass, FORMULARIO__PRUEBAS);
 
-		inputEClass = createEClass(INPUT);
-		createEAttribute(inputEClass, INPUT__NAME);
-
-		inputTextoEClass = createEClass(INPUT_TEXTO);
-
-		inputRadioEClass = createEClass(INPUT_RADIO);
-
-		inputComboEClass = createEClass(INPUT_COMBO);
-
-		inputCheckEClass = createEClass(INPUT_CHECK);
-
-		inputBotonEClass = createEClass(INPUT_BOTON);
-
 		layoutEClass = createEClass(LAYOUT);
 		createEAttribute(layoutEClass, LAYOUT__ANCHURA);
 		createEAttribute(layoutEClass, LAYOUT__ALTURA);
 		createEReference(layoutEClass, LAYOUT__ENTRADAS);
+
+		inputEClass = createEClass(INPUT);
+		createEAttribute(inputEClass, INPUT__NAME);
+		createEAttribute(inputEClass, INPUT__VISIBLE);
+		createEAttribute(inputEClass, INPUT__HABILITADO);
+
+		inputTextoEClass = createEClass(INPUT_TEXTO);
+		createEAttribute(inputTextoEClass, INPUT_TEXTO__OBLIGATORIO);
+		createEAttribute(inputTextoEClass, INPUT_TEXTO__VALOR);
+
+		inputBotonEClass = createEClass(INPUT_BOTON);
+
+		inputMultipleEClass = createEClass(INPUT_MULTIPLE);
+		createEAttribute(inputMultipleEClass, INPUT_MULTIPLE__VALORES);
+
+		inputRadioEClass = createEClass(INPUT_RADIO);
+		createEAttribute(inputRadioEClass, INPUT_RADIO__SELECCION);
+
+		inputComboEClass = createEClass(INPUT_COMBO);
+		createEAttribute(inputComboEClass, INPUT_COMBO__SELECCION);
+
+		inputCheckEClass = createEClass(INPUT_CHECK);
+		createEAttribute(inputCheckEClass, INPUT_CHECK__SELECCION);
 
 		pruebaInterfazEClass = createEClass(PRUEBA_INTERFAZ);
 		createEAttribute(pruebaInterfazEClass, PRUEBA_INTERFAZ__NAME);
@@ -447,10 +546,11 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 
 		// Add supertypes to classes
 		inputTextoEClass.getESuperTypes().add(this.getInput());
-		inputRadioEClass.getESuperTypes().add(this.getInput());
-		inputComboEClass.getESuperTypes().add(this.getInput());
-		inputCheckEClass.getESuperTypes().add(this.getInput());
 		inputBotonEClass.getESuperTypes().add(this.getInput());
+		inputMultipleEClass.getESuperTypes().add(this.getInput());
+		inputRadioEClass.getESuperTypes().add(this.getInputMultiple());
+		inputComboEClass.getESuperTypes().add(this.getInputMultiple());
+		inputCheckEClass.getESuperTypes().add(this.getInputMultiple());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(formularioEClass, Formulario.class, "Formulario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -460,23 +560,33 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 		initEAttribute(getFormulario_ComprobarAccion(), ecorePackage.getEBoolean(), "comprobarAccion", null, 0, 1, Formulario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFormulario_Pruebas(), this.getPruebaInterfaz(), null, "pruebas", null, 0, 1, Formulario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getInput_Name(), ecorePackage.getEString(), "name", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(inputTextoEClass, InputTexto.class, "InputTexto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(inputRadioEClass, InputRadio.class, "InputRadio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(inputComboEClass, InputCombo.class, "InputCombo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(inputCheckEClass, InputCheck.class, "InputCheck", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(inputBotonEClass, InputBoton.class, "InputBoton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(layoutEClass, Layout.class, "Layout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLayout_Anchura(), ecorePackage.getEInt(), "anchura", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getLayout_Altura(), ecorePackage.getEInt(), "altura", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLayout_Entradas(), this.getInput(), null, "entradas", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInput_Name(), ecorePackage.getEString(), "name", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInput_Visible(), ecorePackage.getEBoolean(), "visible", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInput_Habilitado(), ecorePackage.getEBoolean(), "habilitado", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inputTextoEClass, InputTexto.class, "InputTexto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInputTexto_Obligatorio(), ecorePackage.getEBoolean(), "obligatorio", null, 0, 1, InputTexto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInputTexto_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, InputTexto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inputBotonEClass, InputBoton.class, "InputBoton", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(inputMultipleEClass, InputMultiple.class, "InputMultiple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInputMultiple_Valores(), ecorePackage.getEString(), "valores", null, 0, 1, InputMultiple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inputRadioEClass, InputRadio.class, "InputRadio", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInputRadio_Seleccion(), ecorePackage.getEInt(), "seleccion", null, 0, 1, InputRadio.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inputComboEClass, InputCombo.class, "InputCombo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInputCombo_Seleccion(), ecorePackage.getEInt(), "seleccion", null, 0, 1, InputCombo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(inputCheckEClass, InputCheck.class, "InputCheck", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInputCheck_Seleccion(), ecorePackage.getEInt(), "seleccion", null, 0, -1, InputCheck.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pruebaInterfazEClass, PruebaInterfaz.class, "PruebaInterfaz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPruebaInterfaz_Name(), ecorePackage.getEString(), "name", null, 0, 1, PruebaInterfaz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
