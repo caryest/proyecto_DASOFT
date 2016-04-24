@@ -5,27 +5,20 @@ import "platform:/resource/Proyecto_DASOFT/model/Proyecto_DASOFT.ecore"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 Formulario returns Formulario:
-	(comprobarAsercion?='comprobarAsercion')?
-	(comprobarAccion?='comprobarAccion')?
-	'Formulario'
-	name=EString
+	name=EString ':' ((comprobarAsercion?='comprobarAsercion')? & (comprobarAccion?='comprobarAccion')?)
 	'{'
-		'layout' layout=Layout
-		('pruebas' pruebas=PruebaInterfaz)?
+		layout=Layout
+		(pruebas=PruebaInterfaz)?
 	'}';
-
-
 
 Input returns Input:
 	Input_Impl | InputTexto | InputRadio | InputCombo | InputCheck | InputBoton;
 
 Layout returns Layout:
 	{Layout}
-	'Layout'
+	'Contenido:' (anchura=EInt)? (altura=EInt)?
 	'{'
-		('anchura' anchura=EInt)?
-		('altura' altura=EInt)?
-		('entradas' entradas=Input)?
+		(entradas=Input)?
 	'}';
 
 EString returns ecore::EString:
