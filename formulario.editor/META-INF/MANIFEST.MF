@@ -7,6 +7,20 @@ Bundle-SymbolicName: formulario.editor; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.equinox.common;bundle-version="3.5.0",
- Proyecto_DASOFT
+ Proyecto_DASOFT,
+ org.eclipse.xtext.util,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.common.types,
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: formulario,
+ formulario.services,
+ formulario.serializer,
+ formulario.parser.antlr,
+ formulario.parser.antlr.internal,
+ formulario.validation,
+ formulario.scoping,
+ formulario.generator,
+ formulario.formatting

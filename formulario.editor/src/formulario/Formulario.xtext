@@ -10,8 +10,8 @@ Formulario returns Formulario:
 	'Formulario'
 	name=EString
 	'{'
-		'layout' layout=Layout
-		('pruebas' pruebas=PruebaInterfaz)?
+		layout=Layout
+		(pruebas=PruebaInterfaz)?
 	'}';
 
 
