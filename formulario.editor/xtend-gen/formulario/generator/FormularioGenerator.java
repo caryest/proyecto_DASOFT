@@ -3,10 +3,24 @@
  */
 package formulario.generator;
 
+import Formularios_DASOFT.Formulario;
+import Formularios_DASOFT.Input;
+import Formularios_DASOFT.InputBoton;
+import Formularios_DASOFT.InputCheck;
+import Formularios_DASOFT.InputCombo;
+import Formularios_DASOFT.InputRadio;
+import Formularios_DASOFT.InputTexto;
+import Formularios_DASOFT.Layout;
+import Formularios_DASOFT.PruebaInterfaz;
+import com.google.common.collect.Iterables;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
+import org.eclipse.xtext.xbase.lib.IteratorExtensions;
 
 /**
  * Generates code from your model files on save.
@@ -17,40 +31,313 @@ import org.eclipse.xtext.generator.IGenerator;
 public class FormularioGenerator implements IGenerator {
   @Override
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nFormulario cannot be resolved to a type."
-      + "\nThe method or field Formulario is undefined for the type FormularioGenerator"
-      + "\npruebas cannot be resolved");
+    TreeIterator<EObject> _allContents = resource.getAllContents();
+    Iterable<EObject> _iterable = IteratorExtensions.<EObject>toIterable(_allContents);
+    Iterable<Formulario> _filter = Iterables.<Formulario>filter(_iterable, Formulario.class);
+    for (final Formulario form : _filter) {
+      {
+        CharSequence _generarFormulario = this.generarFormulario(form);
+        fsa.generateFile("forms/Formulario.java", _generarFormulario);
+        PruebaInterfaz _pruebas = form.getPruebas();
+        CharSequence _generarTest = this.generarTest(_pruebas);
+        fsa.generateFile("../tests/forms/Formulario.java", _generarTest);
+      }
+    }
   }
   
-  public CharSequence generarFormulario(final /* Formulario */Object form) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nInputBoton cannot be resolved to a type."
-      + "\nInputTexto cannot be resolved to a type."
-      + "\nInputCheck cannot be resolved to a type."
-      + "\nInputRadio cannot be resolved to a type."
-      + "\nInputCombo cannot be resolved to a type."
-      + "\nname cannot be resolved"
-      + "\nlayout cannot be resolved"
-      + "\nentradas cannot be resolved"
-      + "\nclass cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nname cannot be resolved"
-      + "\nlayout cannot be resolved"
-      + "\naltura cannot be resolved"
-      + "\nlayout cannot be resolved"
-      + "\nanchura cannot be resolved");
+  public CharSequence generarFormulario(final Formulario form) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("package forms;");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("import org.eclipse.swt.SWT;");
+    _builder.newLine();
+    _builder.append("import org.eclipse.swt.events.SelectionEvent;");
+    _builder.newLine();
+    _builder.append("import org.eclipse.swt.events.SelectionListener;");
+    _builder.newLine();
+    _builder.append("import org.eclipse.swt.layout.GridData;");
+    _builder.newLine();
+    _builder.append("import org.eclipse.swt.layout.GridLayout;");
+    _builder.newLine();
+    _builder.append("import org.eclipse.swt.widgets.Button;");
+    _builder.newLine();
+    _builder.append("import org.eclipse.swt.widgets.Display;");
+    _builder.newLine();
+    _builder.append("import org.eclipse.swt.widgets.Label;");
+    _builder.newLine();
+    _builder.append("import org.eclipse.swt.widgets.Shell;");
+    _builder.newLine();
+    _builder.append("import org.eclipse.swt.widgets.Text;");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("public class Formulario {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public static void main(String[] args) {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("Display display = new Display();");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("Shell   shell   = new SampleForm().showForm(display);");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("while (!shell.isDisposed()) ");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("if (!display.readAndDispatch())");
+    _builder.newLine();
+    _builder.append("\t\t\t\t");
+    _builder.append("display.sleep();");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("display.dispose();");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    _builder.newLine();
+    _builder.append("public Shell showForm(Display display) {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("Shell shell = new Shell(display);");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("shell.setText  (\"");
+    String _name = form.getName();
+    _builder.append(_name, "\t");
+    _builder.append("\");");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.newLine();
+    {
+      Layout _layout = form.getLayout();
+      EList<Input> _entradas = _layout.getEntradas();
+      for(final Input input : _entradas) {
+        _builder.append("\t");
+        _builder.append("// ");
+        Class<? extends Input> _class = input.getClass();
+        _builder.append(_class, "\t");
+        _builder.newLineIfNotEmpty();
+        {
+          if ((input instanceof InputBoton)) {
+            _builder.append("\t");
+            _builder.append("Button boton");
+            String _name_1 = ((InputBoton)input).getName();
+            _builder.append(_name_1, "\t");
+            _builder.append(" = new Button(shell, SWT.CHECK);");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            _builder.append("boton");
+            String _name_2 = ((InputBoton)input).getName();
+            _builder.append(_name_2, "\t");
+            _builder.append(".setText(\"");
+            String _name_3 = ((InputBoton)input).getName();
+            _builder.append(_name_3, "\t");
+            _builder.append("\");");
+            _builder.newLineIfNotEmpty();
+          } else {
+            if ((input instanceof InputTexto)) {
+              _builder.append("\t");
+              _builder.append("Label label");
+              String _name_4 = input.getName();
+              _builder.append(_name_4, "\t");
+              _builder.append(" = new Label(shell, SWT.NONE);");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("Text  text");
+              String _name_5 = input.getName();
+              _builder.append(_name_5, "\t");
+              _builder.append("  = new Text(shell, SWT.BORDER);");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("label");
+              String _name_6 = input.getName();
+              _builder.append(_name_6, "\t");
+              _builder.append(".setText(\"");
+              String _name_7 = input.getName();
+              _builder.append(_name_7, "\t");
+              _builder.append("\");");
+              _builder.newLineIfNotEmpty();
+            } else {
+              if ((input instanceof InputCheck)) {
+                _builder.append("\t");
+                _builder.append("Button boton");
+                String _name_8 = input.getName();
+                _builder.append(_name_8, "\t");
+                _builder.append(" = new Button(shell, SWT.CHECK);");
+                _builder.newLineIfNotEmpty();
+                _builder.append("\t");
+                _builder.append("boton");
+                String _name_9 = input.getName();
+                _builder.append(_name_9, "\t");
+                _builder.append(".setText(\"");
+                String _name_10 = input.getName();
+                _builder.append(_name_10, "\t");
+                _builder.append("\");");
+                _builder.newLineIfNotEmpty();
+              } else {
+                if ((input instanceof InputRadio)) {
+                  _builder.append("\t");
+                  _builder.newLine();
+                } else {
+                  if ((input instanceof InputCombo)) {
+                    _builder.append("\t");
+                    _builder.newLine();
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("// layout");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("shell.setLayout(new GridLayout(");
+    Layout _layout_1 = form.getLayout();
+    int _altura = _layout_1.getAltura();
+    _builder.append(_altura, "\t");
+    _builder.append(", true));");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("data.horizontalSpan = ");
+    Layout _layout_2 = form.getLayout();
+    int _anchura = _layout_2.getAnchura();
+    _builder.append(_anchura, "\t");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.append("\t");
+    _builder.append("//checkCash.setLayoutData(data);\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("/**");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("// checkbutton");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("Button checkCash = new Button(shell, SWT.CHECK);");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("checkCash.setText(\"Pay with cash?\");\t\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("// text field");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("Label labelCCNumber = new Label(shell, SWT.NONE);");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("Text  textCCNumber  = new Text(shell, SWT.BORDER);");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("labelCCNumber.setText(\"Credit card number\");*/");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("// layout");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("shell.setLayout(new GridLayout(2, true));");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("data.horizontalSpan = 2;");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("checkCash.setLayoutData(data);\t\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("**/");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("/**");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("// show or hide text field depending on checkbutton selection");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("checkCash.addSelectionListener(new SelectionListener() {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("@Override");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("public void widgetSelected(SelectionEvent arg0) {");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("labelCCNumber.setVisible( !checkCash.getSelection() );");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("textCCNumber.setVisible ( !checkCash.getSelection() );");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("@Override");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("public void widgetDefaultSelected(SelectionEvent arg0) {}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("});");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("**/");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("// show form");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("shell.pack();");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("shell.open();");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("return shell;");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
   }
   
-  public CharSequence compile(final /* Formulario */Object f) {
+  public CharSequence compile(final Formulario f) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("/**");
     _builder.newLine();
@@ -71,7 +358,7 @@ public class FormularioGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence compile(final /* Input */Object inp) {
+  public CharSequence compile(final Input inp) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("/**");
     _builder.newLine();
@@ -92,7 +379,7 @@ public class FormularioGenerator implements IGenerator {
     return _builder;
   }
   
-  public CharSequence generarTest(final /* PruebaInterfaz */Object pruebas) {
+  public CharSequence generarTest(final PruebaInterfaz pruebas) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("package forms;");
     _builder.newLine();
