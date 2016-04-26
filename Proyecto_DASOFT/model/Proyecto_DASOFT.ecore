@@ -28,7 +28,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputBoton" eSuperTypes="#//Input"/>
   <eClassifiers xsi:type="ecore:EClass" name="InputMultiple" eSuperTypes="#//Input">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valores" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valores" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputRadio" eSuperTypes="#//InputMultiple">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="seleccion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -42,6 +43,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PruebaInterfaz">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acciones" upperBound="-1"
+        eType="#//Accion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aserciones" upperBound="-1"
+        eType="#//Asercion"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Accion"/>
   <eClassifiers xsi:type="ecore:EClass" name="Asercion"/>

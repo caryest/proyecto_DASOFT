@@ -2,6 +2,8 @@
  */
 package Formularios_DASOFT;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -21,29 +23,19 @@ package Formularios_DASOFT;
  */
 public interface InputMultiple extends Input {
 	/**
-	 * Returns the value of the '<em><b>Valores</b></em>' attribute.
+	 * Returns the value of the '<em><b>Valores</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Valores</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Valores</em>' attribute.
-	 * @see #setValores(String)
+	 * @return the value of the '<em>Valores</em>' attribute list.
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInputMultiple_Valores()
 	 * @model
 	 * @generated
 	 */
-	String getValores();
-
-	/**
-	 * Sets the value of the '{@link Formularios_DASOFT.InputMultiple#getValores <em>Valores</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Valores</em>' attribute.
-	 * @see #getValores()
-	 * @generated
-	 */
-	void setValores(String value);
+	EList<String> getValores();
 
 } // InputMultiple

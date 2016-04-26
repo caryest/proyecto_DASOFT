@@ -435,7 +435,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_MULTIPLE__HABILITADO = INPUT__HABILITADO;
 
 	/**
-	 * The feature id for the '<em><b>Valores</b></em>' attribute.
+	 * The feature id for the '<em><b>Valores</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -489,7 +489,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_RADIO__HABILITADO = INPUT_MULTIPLE__HABILITADO;
 
 	/**
-	 * The feature id for the '<em><b>Valores</b></em>' attribute.
+	 * The feature id for the '<em><b>Valores</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -552,7 +552,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_COMBO__HABILITADO = INPUT_MULTIPLE__HABILITADO;
 
 	/**
-	 * The feature id for the '<em><b>Valores</b></em>' attribute.
+	 * The feature id for the '<em><b>Valores</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -615,7 +615,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_CHECK__HABILITADO = INPUT_MULTIPLE__HABILITADO;
 
 	/**
-	 * The feature id for the '<em><b>Valores</b></em>' attribute.
+	 * The feature id for the '<em><b>Valores</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -670,13 +670,31 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int PRUEBA_INTERFAZ__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Acciones</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRUEBA_INTERFAZ__ACCIONES = 1;
+
+	/**
+	 * The feature id for the '<em><b>Aserciones</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRUEBA_INTERFAZ__ASERCIONES = 2;
+
+	/**
 	 * The number of structural features of the '<em>Prueba Interfaz</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRUEBA_INTERFAZ_FEATURE_COUNT = 1;
+	int PRUEBA_INTERFAZ_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Prueba Interfaz</em>' class.
@@ -968,10 +986,10 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EClass getInputMultiple();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.InputMultiple#getValores <em>Valores</em>}'.
+	 * Returns the meta object for the attribute list '{@link Formularios_DASOFT.InputMultiple#getValores <em>Valores</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Valores</em>'.
+	 * @return the meta object for the attribute list '<em>Valores</em>'.
 	 * @see Formularios_DASOFT.InputMultiple#getValores()
 	 * @see #getInputMultiple()
 	 * @generated
@@ -1041,6 +1059,28 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPruebaInterfaz_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link Formularios_DASOFT.PruebaInterfaz#getAcciones <em>Acciones</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Acciones</em>'.
+	 * @see Formularios_DASOFT.PruebaInterfaz#getAcciones()
+	 * @see #getPruebaInterfaz()
+	 * @generated
+	 */
+	EReference getPruebaInterfaz_Acciones();
+
+	/**
+	 * Returns the meta object for the reference list '{@link Formularios_DASOFT.PruebaInterfaz#getAserciones <em>Aserciones</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Aserciones</em>'.
+	 * @see Formularios_DASOFT.PruebaInterfaz#getAserciones()
+	 * @see #getPruebaInterfaz()
+	 * @generated
+	 */
+	EReference getPruebaInterfaz_Aserciones();
 
 	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.Accion <em>Accion</em>}'.
@@ -1270,7 +1310,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EClass INPUT_MULTIPLE = eINSTANCE.getInputMultiple();
 
 		/**
-		 * The meta object literal for the '<em><b>Valores</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Valores</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1328,6 +1368,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PRUEBA_INTERFAZ__NAME = eINSTANCE.getPruebaInterfaz_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Acciones</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRUEBA_INTERFAZ__ACCIONES = eINSTANCE.getPruebaInterfaz_Acciones();
+
+		/**
+		 * The meta object literal for the '<em><b>Aserciones</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PRUEBA_INTERFAZ__ASERCIONES = eINSTANCE.getPruebaInterfaz_Aserciones();
 
 		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AccionImpl <em>Accion</em>}' class.

@@ -36,7 +36,7 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input {
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = "prueba";
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.

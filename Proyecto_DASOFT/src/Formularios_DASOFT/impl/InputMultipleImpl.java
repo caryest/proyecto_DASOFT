@@ -5,11 +5,10 @@ package Formularios_DASOFT.impl;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
 import Formularios_DASOFT.InputMultiple;
 
-import org.eclipse.emf.common.notify.Notification;
-
+import java.util.Collection;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,24 +25,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class InputMultipleImpl extends InputImpl implements InputMultiple {
 	/**
-	 * The default value of the '{@link #getValores() <em>Valores</em>}' attribute.
+	 * The cached value of the '{@link #getValores() <em>Valores</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getValores()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String VALORES_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getValores() <em>Valores</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getValores()
-	 * @generated
-	 * @ordered
-	 */
-	protected String valores = VALORES_EDEFAULT;
+	protected EList<String> valores;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,20 +58,11 @@ public class InputMultipleImpl extends InputImpl implements InputMultiple {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getValores() {
+	public EList<String> getValores() {
+		if (valores == null) {
+			valores = new EDataTypeUniqueEList<String>(String.class, this, Formularios_DASOFTPackage.INPUT_MULTIPLE__VALORES);
+		}
 		return valores;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setValores(String newValores) {
-		String oldValores = valores;
-		valores = newValores;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.INPUT_MULTIPLE__VALORES, oldValores, valores));
 	}
 
 	/**
@@ -104,11 +84,13 @@ public class InputMultipleImpl extends InputImpl implements InputMultiple {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case Formularios_DASOFTPackage.INPUT_MULTIPLE__VALORES:
-				setValores((String)newValue);
+				getValores().clear();
+				getValores().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,7 +105,7 @@ public class InputMultipleImpl extends InputImpl implements InputMultiple {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case Formularios_DASOFTPackage.INPUT_MULTIPLE__VALORES:
-				setValores(VALORES_EDEFAULT);
+				getValores().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -138,7 +120,7 @@ public class InputMultipleImpl extends InputImpl implements InputMultiple {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case Formularios_DASOFTPackage.INPUT_MULTIPLE__VALORES:
-				return VALORES_EDEFAULT == null ? valores != null : !VALORES_EDEFAULT.equals(valores);
+				return valores != null && !valores.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

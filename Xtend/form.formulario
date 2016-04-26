@@ -2,6 +2,38 @@ Formulario Prueba2
 {
 	Layout
 	{
-		
+		anchura 5
+		altura 5
+		entradas
+		{
+			InputTexto texto1
+			{
+				valor Pepe
+			},
+			InputTexto texto2
+			{
+				valor Pepa
+			},
+			InputBoton boton1,
+			InputRadio radio1
+			{
+				valores val1
+				seleccion 1
+			},
+			InputCombo combo1
+			{
+				valores val1
+				seleccion 1
+			},
+			InputCheck check1
+			{
+				valores val1
+				seleccion{ 
+					1,2,3
+				}
+			}
+			
+		}
 	}
+	PruebaInterfaz prueba1
 }

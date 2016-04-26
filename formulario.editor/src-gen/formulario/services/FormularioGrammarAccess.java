@@ -29,19 +29,22 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameEStringParserRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cLayoutAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cLayoutLayoutParserRuleCall_5_0 = (RuleCall)cLayoutAssignment_5.eContents().get(0);
-		private final Assignment cPruebasAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cPruebasPruebaInterfazParserRuleCall_6_0 = (RuleCall)cPruebasAssignment_6.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cLayoutKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cLayoutAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cLayoutLayoutParserRuleCall_6_0 = (RuleCall)cLayoutAssignment_6.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cPruebasKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cPruebasAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cPruebasPruebaInterfazParserRuleCall_7_1_0 = (RuleCall)cPruebasAssignment_7_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Formulario:
-		//	comprobarAsercion?="comprobarAsercion"? comprobarAccion?="comprobarAccion"? "Formulario" name=EString "{"
-		//	layout=Layout pruebas=PruebaInterfaz? "}";
+		//	comprobarAsercion?="comprobarAsercion"? comprobarAccion?="comprobarAccion"? "Formulario" name=EString "{" "layout"
+		//	layout=Layout ("pruebas" pruebas=PruebaInterfaz)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//comprobarAsercion?="comprobarAsercion"? comprobarAccion?="comprobarAccion"? "Formulario" name=EString "{" layout=Layout
-		//pruebas=PruebaInterfaz? "}"
+		//comprobarAsercion?="comprobarAsercion"? comprobarAccion?="comprobarAccion"? "Formulario" name=EString "{" "layout"
+		//layout=Layout ("pruebas" pruebas=PruebaInterfaz)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//comprobarAsercion?="comprobarAsercion"?
@@ -68,20 +71,29 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
+		//"layout"
+		public Keyword getLayoutKeyword_5() { return cLayoutKeyword_5; }
+
 		//layout=Layout
-		public Assignment getLayoutAssignment_5() { return cLayoutAssignment_5; }
+		public Assignment getLayoutAssignment_6() { return cLayoutAssignment_6; }
 
 		//Layout
-		public RuleCall getLayoutLayoutParserRuleCall_5_0() { return cLayoutLayoutParserRuleCall_5_0; }
+		public RuleCall getLayoutLayoutParserRuleCall_6_0() { return cLayoutLayoutParserRuleCall_6_0; }
 
-		//pruebas=PruebaInterfaz?
-		public Assignment getPruebasAssignment_6() { return cPruebasAssignment_6; }
+		//("pruebas" pruebas=PruebaInterfaz)?
+		public Group getGroup_7() { return cGroup_7; }
+
+		//"pruebas"
+		public Keyword getPruebasKeyword_7_0() { return cPruebasKeyword_7_0; }
+
+		//pruebas=PruebaInterfaz
+		public Assignment getPruebasAssignment_7_1() { return cPruebasAssignment_7_1; }
 
 		//PruebaInterfaz
-		public RuleCall getPruebasPruebaInterfazParserRuleCall_6_0() { return cPruebasPruebaInterfazParserRuleCall_6_0; }
+		public RuleCall getPruebasPruebaInterfazParserRuleCall_7_1_0() { return cPruebasPruebaInterfazParserRuleCall_7_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class InputElements extends AbstractParserRuleElementFinder {
@@ -273,12 +285,42 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPruebaInterfazKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cAccionesKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cAccionesAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final CrossReference cAccionesAccionCrossReference_4_2_0 = (CrossReference)cAccionesAssignment_4_2.eContents().get(0);
+		private final RuleCall cAccionesAccionEStringParserRuleCall_4_2_0_1 = (RuleCall)cAccionesAccionCrossReference_4_2_0.eContents().get(1);
+		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
+		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
+		private final Assignment cAccionesAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
+		private final CrossReference cAccionesAccionCrossReference_4_3_1_0 = (CrossReference)cAccionesAssignment_4_3_1.eContents().get(0);
+		private final RuleCall cAccionesAccionEStringParserRuleCall_4_3_1_0_1 = (RuleCall)cAccionesAccionCrossReference_4_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cAsercionesKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Assignment cAsercionesAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final CrossReference cAsercionesAsercionCrossReference_5_2_0 = (CrossReference)cAsercionesAssignment_5_2.eContents().get(0);
+		private final RuleCall cAsercionesAsercionEStringParserRuleCall_5_2_0_1 = (RuleCall)cAsercionesAsercionCrossReference_5_2_0.eContents().get(1);
+		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
+		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
+		private final Assignment cAsercionesAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
+		private final CrossReference cAsercionesAsercionCrossReference_5_3_1_0 = (CrossReference)cAsercionesAssignment_5_3_1.eContents().get(0);
+		private final RuleCall cAsercionesAsercionEStringParserRuleCall_5_3_1_0_1 = (RuleCall)cAsercionesAsercionCrossReference_5_3_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//PruebaInterfaz:
-		//	{PruebaInterfaz} "PruebaInterfaz" name=EString;
+		//	{PruebaInterfaz} "PruebaInterfaz" name=EString "{" ("acciones" "(" acciones+=[Accion|EString] (","
+		//	acciones+=[Accion|EString])* ")")? ("aserciones" "(" aserciones+=[Asercion|EString] (","
+		//	aserciones+=[Asercion|EString])* ")")? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//{PruebaInterfaz} "PruebaInterfaz" name=EString
+		//{PruebaInterfaz} "PruebaInterfaz" name=EString "{" ("acciones" "(" acciones+=[Accion|EString] (","
+		//acciones+=[Accion|EString])* ")")? ("aserciones" "(" aserciones+=[Asercion|EString] (","
+		//aserciones+=[Asercion|EString])* ")")? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{PruebaInterfaz}
@@ -292,6 +334,84 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 
 		//EString
 		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+
+		//("acciones" "(" acciones+=[Accion|EString] ("," acciones+=[Accion|EString])* ")")?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"acciones"
+		public Keyword getAccionesKeyword_4_0() { return cAccionesKeyword_4_0; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_4_1() { return cLeftParenthesisKeyword_4_1; }
+
+		//acciones+=[Accion|EString]
+		public Assignment getAccionesAssignment_4_2() { return cAccionesAssignment_4_2; }
+
+		//[Accion|EString]
+		public CrossReference getAccionesAccionCrossReference_4_2_0() { return cAccionesAccionCrossReference_4_2_0; }
+
+		//EString
+		public RuleCall getAccionesAccionEStringParserRuleCall_4_2_0_1() { return cAccionesAccionEStringParserRuleCall_4_2_0_1; }
+
+		//("," acciones+=[Accion|EString])*
+		public Group getGroup_4_3() { return cGroup_4_3; }
+
+		//","
+		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
+
+		//acciones+=[Accion|EString]
+		public Assignment getAccionesAssignment_4_3_1() { return cAccionesAssignment_4_3_1; }
+
+		//[Accion|EString]
+		public CrossReference getAccionesAccionCrossReference_4_3_1_0() { return cAccionesAccionCrossReference_4_3_1_0; }
+
+		//EString
+		public RuleCall getAccionesAccionEStringParserRuleCall_4_3_1_0_1() { return cAccionesAccionEStringParserRuleCall_4_3_1_0_1; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_4_4() { return cRightParenthesisKeyword_4_4; }
+
+		//("aserciones" "(" aserciones+=[Asercion|EString] ("," aserciones+=[Asercion|EString])* ")")?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"aserciones"
+		public Keyword getAsercionesKeyword_5_0() { return cAsercionesKeyword_5_0; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_5_1() { return cLeftParenthesisKeyword_5_1; }
+
+		//aserciones+=[Asercion|EString]
+		public Assignment getAsercionesAssignment_5_2() { return cAsercionesAssignment_5_2; }
+
+		//[Asercion|EString]
+		public CrossReference getAsercionesAsercionCrossReference_5_2_0() { return cAsercionesAsercionCrossReference_5_2_0; }
+
+		//EString
+		public RuleCall getAsercionesAsercionEStringParserRuleCall_5_2_0_1() { return cAsercionesAsercionEStringParserRuleCall_5_2_0_1; }
+
+		//("," aserciones+=[Asercion|EString])*
+		public Group getGroup_5_3() { return cGroup_5_3; }
+
+		//","
+		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
+
+		//aserciones+=[Asercion|EString]
+		public Assignment getAsercionesAssignment_5_3_1() { return cAsercionesAssignment_5_3_1; }
+
+		//[Asercion|EString]
+		public CrossReference getAsercionesAsercionCrossReference_5_3_1_0() { return cAsercionesAsercionCrossReference_5_3_1_0; }
+
+		//EString
+		public RuleCall getAsercionesAsercionEStringParserRuleCall_5_3_1_0_1() { return cAsercionesAsercionEStringParserRuleCall_5_3_1_0_1; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_5_4() { return cRightParenthesisKeyword_5_4; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class EIntElements extends AbstractParserRuleElementFinder {
@@ -494,17 +614,23 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cValoresKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cValoresAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cValoresEStringParserRuleCall_6_1_0 = (RuleCall)cValoresAssignment_6_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cValoresAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cValoresEStringParserRuleCall_6_2_0 = (RuleCall)cValoresAssignment_6_2.eContents().get(0);
+		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
+		private final Assignment cValoresAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
+		private final RuleCall cValoresEStringParserRuleCall_6_3_1_0 = (RuleCall)cValoresAssignment_6_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//InputMultiple_Impl returns InputMultiple:
-		//	{InputMultiple} visible?="visible"? habilitado?="habilitado"? "InputMultiple" name=EString "{" ("valores"
-		//	valores=EString)? "}";
+		//	{InputMultiple} visible?="visible"? habilitado?="habilitado"? "InputMultiple" name=EString "{" ("valores" "{"
+		//	valores+=EString ("," valores+=EString)* "}")? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//{InputMultiple} visible?="visible"? habilitado?="habilitado"? "InputMultiple" name=EString "{" ("valores"
-		//valores=EString)? "}"
+		//{InputMultiple} visible?="visible"? habilitado?="habilitado"? "InputMultiple" name=EString "{" ("valores" "{"
+		//valores+=EString ("," valores+=EString)* "}")? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{InputMultiple}
@@ -534,17 +660,35 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
 
-		//("valores" valores=EString)?
+		//("valores" "{" valores+=EString ("," valores+=EString)* "}")?
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"valores"
 		public Keyword getValoresKeyword_6_0() { return cValoresKeyword_6_0; }
 
-		//valores=EString
-		public Assignment getValoresAssignment_6_1() { return cValoresAssignment_6_1; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
+
+		//valores+=EString
+		public Assignment getValoresAssignment_6_2() { return cValoresAssignment_6_2; }
 
 		//EString
-		public RuleCall getValoresEStringParserRuleCall_6_1_0() { return cValoresEStringParserRuleCall_6_1_0; }
+		public RuleCall getValoresEStringParserRuleCall_6_2_0() { return cValoresEStringParserRuleCall_6_2_0; }
+
+		//("," valores+=EString)*
+		public Group getGroup_6_3() { return cGroup_6_3; }
+
+		//","
+		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
+
+		//valores+=EString
+		public Assignment getValoresAssignment_6_3_1() { return cValoresAssignment_6_3_1; }
+
+		//EString
+		public RuleCall getValoresEStringParserRuleCall_6_3_1_0() { return cValoresEStringParserRuleCall_6_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
@@ -564,8 +708,14 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cValoresKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cValoresAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cValoresEStringParserRuleCall_6_1_0 = (RuleCall)cValoresAssignment_6_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cValoresAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cValoresEStringParserRuleCall_6_2_0 = (RuleCall)cValoresAssignment_6_2.eContents().get(0);
+		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
+		private final Assignment cValoresAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
+		private final RuleCall cValoresEStringParserRuleCall_6_3_1_0 = (RuleCall)cValoresAssignment_6_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cSeleccionKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Assignment cSeleccionAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
@@ -573,12 +723,12 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//InputRadio:
-		//	{InputRadio} visible?="visible"? habilitado?="habilitado"? "InputRadio" name=EString "{" ("valores" valores=EString)?
-		//	("seleccion" seleccion=EInt)? "}";
+		//	{InputRadio} visible?="visible"? habilitado?="habilitado"? "InputRadio" name=EString "{" ("valores" "{"
+		//	valores+=EString ("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//{InputRadio} visible?="visible"? habilitado?="habilitado"? "InputRadio" name=EString "{" ("valores" valores=EString)?
-		//("seleccion" seleccion=EInt)? "}"
+		//{InputRadio} visible?="visible"? habilitado?="habilitado"? "InputRadio" name=EString "{" ("valores" "{" valores+=EString
+		//("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{InputRadio}
@@ -608,17 +758,35 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
 
-		//("valores" valores=EString)?
+		//("valores" "{" valores+=EString ("," valores+=EString)* "}")?
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"valores"
 		public Keyword getValoresKeyword_6_0() { return cValoresKeyword_6_0; }
 
-		//valores=EString
-		public Assignment getValoresAssignment_6_1() { return cValoresAssignment_6_1; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
+
+		//valores+=EString
+		public Assignment getValoresAssignment_6_2() { return cValoresAssignment_6_2; }
 
 		//EString
-		public RuleCall getValoresEStringParserRuleCall_6_1_0() { return cValoresEStringParserRuleCall_6_1_0; }
+		public RuleCall getValoresEStringParserRuleCall_6_2_0() { return cValoresEStringParserRuleCall_6_2_0; }
+
+		//("," valores+=EString)*
+		public Group getGroup_6_3() { return cGroup_6_3; }
+
+		//","
+		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
+
+		//valores+=EString
+		public Assignment getValoresAssignment_6_3_1() { return cValoresAssignment_6_3_1; }
+
+		//EString
+		public RuleCall getValoresEStringParserRuleCall_6_3_1_0() { return cValoresEStringParserRuleCall_6_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
 
 		//("seleccion" seleccion=EInt)?
 		public Group getGroup_7() { return cGroup_7; }
@@ -650,8 +818,14 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cValoresKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cValoresAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cValoresEStringParserRuleCall_6_1_0 = (RuleCall)cValoresAssignment_6_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cValoresAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cValoresEStringParserRuleCall_6_2_0 = (RuleCall)cValoresAssignment_6_2.eContents().get(0);
+		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
+		private final Assignment cValoresAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
+		private final RuleCall cValoresEStringParserRuleCall_6_3_1_0 = (RuleCall)cValoresAssignment_6_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cSeleccionKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Assignment cSeleccionAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
@@ -659,12 +833,12 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//InputCombo:
-		//	{InputCombo} visible?="visible"? habilitado?="habilitado"? "InputCombo" name=EString "{" ("valores" valores=EString)?
-		//	("seleccion" seleccion=EInt)? "}";
+		//	{InputCombo} visible?="visible"? habilitado?="habilitado"? "InputCombo" name=EString "{" ("valores" "{"
+		//	valores+=EString ("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//{InputCombo} visible?="visible"? habilitado?="habilitado"? "InputCombo" name=EString "{" ("valores" valores=EString)?
-		//("seleccion" seleccion=EInt)? "}"
+		//{InputCombo} visible?="visible"? habilitado?="habilitado"? "InputCombo" name=EString "{" ("valores" "{" valores+=EString
+		//("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{InputCombo}
@@ -694,17 +868,35 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
 
-		//("valores" valores=EString)?
+		//("valores" "{" valores+=EString ("," valores+=EString)* "}")?
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"valores"
 		public Keyword getValoresKeyword_6_0() { return cValoresKeyword_6_0; }
 
-		//valores=EString
-		public Assignment getValoresAssignment_6_1() { return cValoresAssignment_6_1; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
+
+		//valores+=EString
+		public Assignment getValoresAssignment_6_2() { return cValoresAssignment_6_2; }
 
 		//EString
-		public RuleCall getValoresEStringParserRuleCall_6_1_0() { return cValoresEStringParserRuleCall_6_1_0; }
+		public RuleCall getValoresEStringParserRuleCall_6_2_0() { return cValoresEStringParserRuleCall_6_2_0; }
+
+		//("," valores+=EString)*
+		public Group getGroup_6_3() { return cGroup_6_3; }
+
+		//","
+		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
+
+		//valores+=EString
+		public Assignment getValoresAssignment_6_3_1() { return cValoresAssignment_6_3_1; }
+
+		//EString
+		public RuleCall getValoresEStringParserRuleCall_6_3_1_0() { return cValoresEStringParserRuleCall_6_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
 
 		//("seleccion" seleccion=EInt)?
 		public Group getGroup_7() { return cGroup_7; }
@@ -736,8 +928,14 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cValoresKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cValoresAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cValoresEStringParserRuleCall_6_1_0 = (RuleCall)cValoresAssignment_6_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cValoresAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cValoresEStringParserRuleCall_6_2_0 = (RuleCall)cValoresAssignment_6_2.eContents().get(0);
+		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
+		private final Assignment cValoresAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
+		private final RuleCall cValoresEStringParserRuleCall_6_3_1_0 = (RuleCall)cValoresAssignment_6_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cSeleccionKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
@@ -751,12 +949,12 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//InputCheck:
-		//	{InputCheck} visible?="visible"? habilitado?="habilitado"? "InputCheck" name=EString "{" ("valores" valores=EString)?
-		//	("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "}";
+		//	{InputCheck} visible?="visible"? habilitado?="habilitado"? "InputCheck" name=EString "{" ("valores" "{"
+		//	valores+=EString ("," valores+=EString)* "}")? ("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//{InputCheck} visible?="visible"? habilitado?="habilitado"? "InputCheck" name=EString "{" ("valores" valores=EString)?
-		//("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "}"
+		//{InputCheck} visible?="visible"? habilitado?="habilitado"? "InputCheck" name=EString "{" ("valores" "{" valores+=EString
+		//("," valores+=EString)* "}")? ("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{InputCheck}
@@ -786,17 +984,35 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
 
-		//("valores" valores=EString)?
+		//("valores" "{" valores+=EString ("," valores+=EString)* "}")?
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"valores"
 		public Keyword getValoresKeyword_6_0() { return cValoresKeyword_6_0; }
 
-		//valores=EString
-		public Assignment getValoresAssignment_6_1() { return cValoresAssignment_6_1; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
+
+		//valores+=EString
+		public Assignment getValoresAssignment_6_2() { return cValoresAssignment_6_2; }
 
 		//EString
-		public RuleCall getValoresEStringParserRuleCall_6_1_0() { return cValoresEStringParserRuleCall_6_1_0; }
+		public RuleCall getValoresEStringParserRuleCall_6_2_0() { return cValoresEStringParserRuleCall_6_2_0; }
+
+		//("," valores+=EString)*
+		public Group getGroup_6_3() { return cGroup_6_3; }
+
+		//","
+		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
+
+		//valores+=EString
+		public Assignment getValoresAssignment_6_3_1() { return cValoresAssignment_6_3_1; }
+
+		//EString
+		public RuleCall getValoresEStringParserRuleCall_6_3_1_0() { return cValoresEStringParserRuleCall_6_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
 
 		//("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")?
 		public Group getGroup_7() { return cGroup_7; }
@@ -831,6 +1047,46 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
+
+	public class AccionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Accion");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cAccionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cAccionKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//Accion:
+		//	{Accion} "Accion";
+		@Override public ParserRule getRule() { return rule; }
+
+		//{Accion} "Accion"
+		public Group getGroup() { return cGroup; }
+
+		//{Accion}
+		public Action getAccionAction_0() { return cAccionAction_0; }
+
+		//"Accion"
+		public Keyword getAccionKeyword_1() { return cAccionKeyword_1; }
+	}
+
+	public class AsercionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Asercion");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cAsercionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cAsercionKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//Asercion:
+		//	{Asercion} "Asercion";
+		@Override public ParserRule getRule() { return rule; }
+
+		//{Asercion} "Asercion"
+		public Group getGroup() { return cGroup; }
+
+		//{Asercion}
+		public Action getAsercionAction_0() { return cAsercionAction_0; }
+
+		//"Asercion"
+		public Keyword getAsercionKeyword_1() { return cAsercionKeyword_1; }
+	}
 	
 	
 	private final FormularioElements pFormulario;
@@ -847,6 +1103,8 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	private final InputRadioElements pInputRadio;
 	private final InputComboElements pInputCombo;
 	private final InputCheckElements pInputCheck;
+	private final AccionElements pAccion;
+	private final AsercionElements pAsercion;
 	
 	private final Grammar grammar;
 
@@ -871,6 +1129,8 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		this.pInputRadio = new InputRadioElements();
 		this.pInputCombo = new InputComboElements();
 		this.pInputCheck = new InputCheckElements();
+		this.pAccion = new AccionElements();
+		this.pAsercion = new AsercionElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -901,8 +1161,8 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Formulario:
-	//	comprobarAsercion?="comprobarAsercion"? comprobarAccion?="comprobarAccion"? "Formulario" name=EString "{"
-	//	layout=Layout pruebas=PruebaInterfaz? "}";
+	//	comprobarAsercion?="comprobarAsercion"? comprobarAccion?="comprobarAccion"? "Formulario" name=EString "{" "layout"
+	//	layout=Layout ("pruebas" pruebas=PruebaInterfaz)? "}";
 	public FormularioElements getFormularioAccess() {
 		return pFormulario;
 	}
@@ -953,7 +1213,9 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//PruebaInterfaz:
-	//	{PruebaInterfaz} "PruebaInterfaz" name=EString;
+	//	{PruebaInterfaz} "PruebaInterfaz" name=EString "{" ("acciones" "(" acciones+=[Accion|EString] (","
+	//	acciones+=[Accion|EString])* ")")? ("aserciones" "(" aserciones+=[Asercion|EString] (","
+	//	aserciones+=[Asercion|EString])* ")")? "}";
 	public PruebaInterfazElements getPruebaInterfazAccess() {
 		return pPruebaInterfaz;
 	}
@@ -1004,8 +1266,8 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InputMultiple_Impl returns InputMultiple:
-	//	{InputMultiple} visible?="visible"? habilitado?="habilitado"? "InputMultiple" name=EString "{" ("valores"
-	//	valores=EString)? "}";
+	//	{InputMultiple} visible?="visible"? habilitado?="habilitado"? "InputMultiple" name=EString "{" ("valores" "{"
+	//	valores+=EString ("," valores+=EString)* "}")? "}";
 	public InputMultiple_ImplElements getInputMultiple_ImplAccess() {
 		return pInputMultiple_Impl;
 	}
@@ -1015,8 +1277,8 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InputRadio:
-	//	{InputRadio} visible?="visible"? habilitado?="habilitado"? "InputRadio" name=EString "{" ("valores" valores=EString)?
-	//	("seleccion" seleccion=EInt)? "}";
+	//	{InputRadio} visible?="visible"? habilitado?="habilitado"? "InputRadio" name=EString "{" ("valores" "{"
+	//	valores+=EString ("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "}";
 	public InputRadioElements getInputRadioAccess() {
 		return pInputRadio;
 	}
@@ -1026,8 +1288,8 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InputCombo:
-	//	{InputCombo} visible?="visible"? habilitado?="habilitado"? "InputCombo" name=EString "{" ("valores" valores=EString)?
-	//	("seleccion" seleccion=EInt)? "}";
+	//	{InputCombo} visible?="visible"? habilitado?="habilitado"? "InputCombo" name=EString "{" ("valores" "{"
+	//	valores+=EString ("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "}";
 	public InputComboElements getInputComboAccess() {
 		return pInputCombo;
 	}
@@ -1037,14 +1299,34 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InputCheck:
-	//	{InputCheck} visible?="visible"? habilitado?="habilitado"? "InputCheck" name=EString "{" ("valores" valores=EString)?
-	//	("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "}";
+	//	{InputCheck} visible?="visible"? habilitado?="habilitado"? "InputCheck" name=EString "{" ("valores" "{"
+	//	valores+=EString ("," valores+=EString)* "}")? ("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "}";
 	public InputCheckElements getInputCheckAccess() {
 		return pInputCheck;
 	}
 	
 	public ParserRule getInputCheckRule() {
 		return getInputCheckAccess().getRule();
+	}
+
+	//Accion:
+	//	{Accion} "Accion";
+	public AccionElements getAccionAccess() {
+		return pAccion;
+	}
+	
+	public ParserRule getAccionRule() {
+		return getAccionAccess().getRule();
+	}
+
+	//Asercion:
+	//	{Asercion} "Asercion";
+	public AsercionElements getAsercionAccess() {
+		return pAsercion;
+	}
+	
+	public ParserRule getAsercionRule() {
+		return getAsercionAccess().getRule();
 	}
 
 	//terminal ID:

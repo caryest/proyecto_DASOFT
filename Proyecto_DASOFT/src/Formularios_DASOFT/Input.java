@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Input extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The default value is <code>"prueba"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
@@ -34,7 +35,7 @@ public interface Input extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInput_Name()
-	 * @model
+	 * @model default="prueba"
 	 * @generated
 	 */
 	String getName();

@@ -3,6 +3,8 @@
  */
 package formulario.serializer;
 
+import Formularios_DASOFT.Accion;
+import Formularios_DASOFT.Asercion;
 import Formularios_DASOFT.Formulario;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
 import Formularios_DASOFT.Input;
@@ -19,15 +21,12 @@ import com.google.inject.Provider;
 import formulario.services.FormularioGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
-import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
-import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
-import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
 public abstract class AbstractFormularioSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -38,6 +37,12 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	@Override
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == Formularios_DASOFTPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case Formularios_DASOFTPackage.ACCION:
+				sequence_Accion(context, (Accion) semanticObject); 
+				return; 
+			case Formularios_DASOFTPackage.ASERCION:
+				sequence_Asercion(context, (Asercion) semanticObject); 
+				return; 
 			case Formularios_DASOFTPackage.FORMULARIO:
 				sequence_Formulario(context, (Formulario) semanticObject); 
 				return; 
@@ -74,6 +79,24 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
+	 *     {Accion}
+	 */
+	protected void sequence_Accion(EObject context, Accion semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     {Asercion}
+	 */
+	protected void sequence_Asercion(EObject context, Asercion semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (comprobarAsercion?='comprobarAsercion'? comprobarAccion?='comprobarAccion'? name=EString layout=Layout pruebas=PruebaInterfaz?)
 	 */
 	protected void sequence_Formulario(EObject context, Formulario semanticObject) {
@@ -92,7 +115,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString valores=EString? (seleccion+=EInt seleccion+=EInt*)?)
+	 *     (visible?='visible'? habilitado?='habilitado'? name=EString (valores+=EString valores+=EString*)? (seleccion+=EInt seleccion+=EInt*)?)
 	 */
 	protected void sequence_InputCheck(EObject context, InputCheck semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -101,7 +124,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString valores=EString? seleccion=EInt?)
+	 *     (visible?='visible'? habilitado?='habilitado'? name=EString (valores+=EString valores+=EString*)? seleccion=EInt?)
 	 */
 	protected void sequence_InputCombo(EObject context, InputCombo semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -110,7 +133,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString valores=EString?)
+	 *     (visible?='visible'? habilitado?='habilitado'? name=EString (valores+=EString valores+=EString*)?)
 	 */
 	protected void sequence_InputMultiple_Impl(EObject context, InputMultiple semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -119,7 +142,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString valores=EString? seleccion=EInt?)
+	 *     (visible?='visible'? habilitado?='habilitado'? name=EString (valores+=EString valores+=EString*)? seleccion=EInt?)
 	 */
 	protected void sequence_InputRadio(EObject context, InputRadio semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -155,16 +178,9 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     name=EString
+	 *     (name=EString (acciones+=[Accion|EString] acciones+=[Accion|EString]*)? (aserciones+=[Asercion|EString] aserciones+=[Asercion|EString]*)?)
 	 */
 	protected void sequence_PruebaInterfaz(EObject context, PruebaInterfaz semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.PRUEBA_INTERFAZ__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.PRUEBA_INTERFAZ__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getPruebaInterfazAccess().getNameEStringParserRuleCall_2_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 }
