@@ -4,7 +4,6 @@ package Formularios_DASOFT;
 
 import org.eclipse.emf.common.util.EList;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Input Check</b></em>'.
@@ -22,7 +21,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface InputCheck extends InputMultiple {
-
 	/**
 	 * Returns the value of the '<em><b>Seleccion</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Integer}.
@@ -38,4 +36,5 @@ public interface InputCheck extends InputMultiple {
 	 * @generated
 	 */
 	EList<Integer> getSeleccion();
+
 } // InputCheck

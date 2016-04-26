@@ -21,7 +21,6 @@ package Formularios_DASOFT;
  * @generated
  */
 public interface InputTexto extends Input {
-
 	/**
 	 * Returns the value of the '<em><b>Obligatorio</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -73,4 +72,5 @@ public interface InputTexto extends Input {
 	 * @generated
 	 */
 	void setValor(String value);
+
 } // InputTexto

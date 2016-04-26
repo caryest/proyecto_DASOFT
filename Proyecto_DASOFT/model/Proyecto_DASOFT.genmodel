@@ -43,9 +43,25 @@
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//PruebaInterfaz">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//PruebaInterfaz/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//PruebaInterfaz/acciones"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//PruebaInterfaz/aserciones"/>
     </genClasses>
-    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Accion"/>
-    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Asercion"/>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Accion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Accion/elemento"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Accion/asercion"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Asercion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Asercion/elemento"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//AsercionInvisible">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//AsercionInvisible/estado"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//AsercionHabilitado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//AsercionHabilitado/estado"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//AsercionValor">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//AsercionValor/valor"/>
+    </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//AsercionSeleccionado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//AsercionSeleccionado/estado"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

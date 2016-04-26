@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInput()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Input extends EObject {

@@ -1,6 +1,6 @@
 Formulario Prueba2
 {
-	Layout
+	layout Layout
 	{
 		anchura 5
 		altura 5
@@ -17,17 +17,23 @@ Formulario Prueba2
 			InputBoton boton1,
 			InputRadio radio1
 			{
-				valores val1
+				valores{ 
+					val1
+				}
 				seleccion 1
 			},
 			InputCombo combo1
 			{
-				valores val1
+				valores{ 
+					val1
+				}
 				seleccion 1
 			},
 			InputCheck check1
 			{
-				valores val1
+				valores{ 
+					val1
+				}
 				seleccion{ 
 					1,2,3
 				}
@@ -35,5 +41,24 @@ Formulario Prueba2
 			
 		}
 	}
-	PruebaInterfaz prueba1
+	pruebas PruebaInterfaz prueba1
+	{
+		acciones{
+			Accion{
+				elemento combo1
+				asercion AsercionValor
+				{
+					valor "1"
+					elemento texto1
+				}
+			},
+			Accion{
+				elemento texto1
+				asercion estado AsercionHabilitado // Aqui es "true" habilitado
+				{
+					elemento texto2
+				}
+			}
+		}
+	}
 }

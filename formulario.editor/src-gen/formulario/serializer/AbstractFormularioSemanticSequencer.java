@@ -4,10 +4,12 @@
 package formulario.serializer;
 
 import Formularios_DASOFT.Accion;
-import Formularios_DASOFT.Asercion;
+import Formularios_DASOFT.AsercionHabilitado;
+import Formularios_DASOFT.AsercionInvisible;
+import Formularios_DASOFT.AsercionSeleccionado;
+import Formularios_DASOFT.AsercionValor;
 import Formularios_DASOFT.Formulario;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
-import Formularios_DASOFT.Input;
 import Formularios_DASOFT.InputBoton;
 import Formularios_DASOFT.InputCheck;
 import Formularios_DASOFT.InputCombo;
@@ -40,14 +42,20 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 			case Formularios_DASOFTPackage.ACCION:
 				sequence_Accion(context, (Accion) semanticObject); 
 				return; 
-			case Formularios_DASOFTPackage.ASERCION:
-				sequence_Asercion(context, (Asercion) semanticObject); 
+			case Formularios_DASOFTPackage.ASERCION_HABILITADO:
+				sequence_AsercionHabilitado(context, (AsercionHabilitado) semanticObject); 
+				return; 
+			case Formularios_DASOFTPackage.ASERCION_INVISIBLE:
+				sequence_AsercionInvisible(context, (AsercionInvisible) semanticObject); 
+				return; 
+			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO:
+				sequence_AsercionSeleccionado(context, (AsercionSeleccionado) semanticObject); 
+				return; 
+			case Formularios_DASOFTPackage.ASERCION_VALOR:
+				sequence_AsercionValor(context, (AsercionValor) semanticObject); 
 				return; 
 			case Formularios_DASOFTPackage.FORMULARIO:
 				sequence_Formulario(context, (Formulario) semanticObject); 
-				return; 
-			case Formularios_DASOFTPackage.INPUT:
-				sequence_Input_Impl(context, (Input) semanticObject); 
 				return; 
 			case Formularios_DASOFTPackage.INPUT_BOTON:
 				sequence_InputBoton(context, (InputBoton) semanticObject); 
@@ -79,7 +87,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     {Accion}
+	 *     (elemento=[Input|EString]? asercion=Asercion?)
 	 */
 	protected void sequence_Accion(EObject context, Accion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -88,9 +96,36 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     {Asercion}
+	 *     (estado?='estado'? elemento=[Input|EString]?)
 	 */
-	protected void sequence_Asercion(EObject context, Asercion semanticObject) {
+	protected void sequence_AsercionHabilitado(EObject context, AsercionHabilitado semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (estado?='estado'? elemento=[Input|EString]?)
+	 */
+	protected void sequence_AsercionInvisible(EObject context, AsercionInvisible semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (estado?='estado'? elemento=[Input|EString]?)
+	 */
+	protected void sequence_AsercionSeleccionado(EObject context, AsercionSeleccionado semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (valor=EString? elemento=[Input|EString]?)
+	 */
+	protected void sequence_AsercionValor(EObject context, AsercionValor semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -160,15 +195,6 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString)
-	 */
-	protected void sequence_Input_Impl(EObject context, Input semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     (anchura=EInt? altura=EInt? (entradas+=Input entradas+=Input*)?)
 	 */
 	protected void sequence_Layout(EObject context, Layout semanticObject) {
@@ -178,7 +204,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (name=EString (acciones+=[Accion|EString] acciones+=[Accion|EString]*)? (aserciones+=[Asercion|EString] aserciones+=[Asercion|EString]*)?)
+	 *     (name=EString (acciones+=Accion acciones+=Accion*)?)
 	 */
 	protected void sequence_PruebaInterfaz(EObject context, PruebaInterfaz semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

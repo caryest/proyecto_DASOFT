@@ -130,76 +130,6 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int FORMULARIO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputImpl <em>Input</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Formularios_DASOFT.impl.InputImpl
-	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInput()
-	 * @generated
-	 */
-	int INPUT = 2;
-
-	/**
-	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputTextoImpl <em>Input Texto</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Formularios_DASOFT.impl.InputTextoImpl
-	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputTexto()
-	 * @generated
-	 */
-	int INPUT_TEXTO = 3;
-
-	/**
-	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputRadioImpl <em>Input Radio</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Formularios_DASOFT.impl.InputRadioImpl
-	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputRadio()
-	 * @generated
-	 */
-	int INPUT_RADIO = 6;
-
-	/**
-	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputComboImpl <em>Input Combo</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Formularios_DASOFT.impl.InputComboImpl
-	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputCombo()
-	 * @generated
-	 */
-	int INPUT_COMBO = 7;
-
-	/**
-	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputCheckImpl <em>Input Check</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Formularios_DASOFT.impl.InputCheckImpl
-	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputCheck()
-	 * @generated
-	 */
-	int INPUT_CHECK = 8;
-
-	/**
-	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputBotonImpl <em>Input Boton</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Formularios_DASOFT.impl.InputBotonImpl
-	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputBoton()
-	 * @generated
-	 */
-	int INPUT_BOTON = 4;
-
-	/**
-	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputMultipleImpl <em>Input Multiple</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see Formularios_DASOFT.impl.InputMultipleImpl
-	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputMultiple()
-	 * @generated
-	 */
-	int INPUT_MULTIPLE = 5;
-
-	/**
 	 * The meta object id for the '{@link Formularios_DASOFT.impl.LayoutImpl <em>Layout</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -255,6 +185,16 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int LAYOUT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputImpl <em>Input</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.InputImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInput()
+	 * @generated
+	 */
+	int INPUT = 2;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -298,6 +238,16 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @ordered
 	 */
 	int INPUT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputTextoImpl <em>Input Texto</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.InputTextoImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputTexto()
+	 * @generated
+	 */
+	int INPUT_TEXTO = 3;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -363,6 +313,16 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_TEXTO_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputBotonImpl <em>Input Boton</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.InputBotonImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputBoton()
+	 * @generated
+	 */
+	int INPUT_BOTON = 4;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -406,6 +366,16 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @ordered
 	 */
 	int INPUT_BOTON_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputMultipleImpl <em>Input Multiple</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.InputMultipleImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputMultiple()
+	 * @generated
+	 */
+	int INPUT_MULTIPLE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -460,6 +430,16 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @ordered
 	 */
 	int INPUT_MULTIPLE_OPERATION_COUNT = INPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputRadioImpl <em>Input Radio</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.InputRadioImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputRadio()
+	 * @generated
+	 */
+	int INPUT_RADIO = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -525,6 +505,16 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_RADIO_OPERATION_COUNT = INPUT_MULTIPLE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputComboImpl <em>Input Combo</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.InputComboImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputCombo()
+	 * @generated
+	 */
+	int INPUT_COMBO = 7;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -586,6 +576,16 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @ordered
 	 */
 	int INPUT_COMBO_OPERATION_COUNT = INPUT_MULTIPLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.InputCheckImpl <em>Input Check</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.InputCheckImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputCheck()
+	 * @generated
+	 */
+	int INPUT_CHECK = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -670,7 +670,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int PRUEBA_INTERFAZ__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Acciones</b></em>' reference list.
+	 * The feature id for the '<em><b>Acciones</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -679,22 +679,13 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int PRUEBA_INTERFAZ__ACCIONES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Aserciones</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRUEBA_INTERFAZ__ASERCIONES = 2;
-
-	/**
 	 * The number of structural features of the '<em>Prueba Interfaz</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRUEBA_INTERFAZ_FEATURE_COUNT = 3;
+	int PRUEBA_INTERFAZ_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Prueba Interfaz</em>' class.
@@ -716,13 +707,31 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int ACCION = 10;
 
 	/**
+	 * The feature id for the '<em><b>Elemento</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCION__ELEMENTO = 0;
+
+	/**
+	 * The feature id for the '<em><b>Asercion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCION__ASERCION = 1;
+
+	/**
 	 * The number of structural features of the '<em>Accion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCION_FEATURE_COUNT = 0;
+	int ACCION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Accion</em>' class.
@@ -744,13 +753,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int ASERCION = 11;
 
 	/**
+	 * The feature id for the '<em><b>Elemento</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION__ELEMENTO = 0;
+
+	/**
 	 * The number of structural features of the '<em>Asercion</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASERCION_FEATURE_COUNT = 0;
+	int ASERCION_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Asercion</em>' class.
@@ -760,6 +778,190 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @ordered
 	 */
 	int ASERCION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.AsercionInvisibleImpl <em>Asercion Invisible</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.AsercionInvisibleImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionInvisible()
+	 * @generated
+	 */
+	int ASERCION_INVISIBLE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Elemento</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_INVISIBLE__ELEMENTO = ASERCION__ELEMENTO;
+
+	/**
+	 * The feature id for the '<em><b>Estado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_INVISIBLE__ESTADO = ASERCION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Asercion Invisible</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_INVISIBLE_FEATURE_COUNT = ASERCION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Asercion Invisible</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_INVISIBLE_OPERATION_COUNT = ASERCION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.AsercionHabilitadoImpl <em>Asercion Habilitado</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.AsercionHabilitadoImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionHabilitado()
+	 * @generated
+	 */
+	int ASERCION_HABILITADO = 13;
+
+	/**
+	 * The feature id for the '<em><b>Elemento</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_HABILITADO__ELEMENTO = ASERCION__ELEMENTO;
+
+	/**
+	 * The feature id for the '<em><b>Estado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_HABILITADO__ESTADO = ASERCION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Asercion Habilitado</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_HABILITADO_FEATURE_COUNT = ASERCION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Asercion Habilitado</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_HABILITADO_OPERATION_COUNT = ASERCION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.AsercionValorImpl <em>Asercion Valor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.AsercionValorImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionValor()
+	 * @generated
+	 */
+	int ASERCION_VALOR = 14;
+
+	/**
+	 * The feature id for the '<em><b>Elemento</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_VALOR__ELEMENTO = ASERCION__ELEMENTO;
+
+	/**
+	 * The feature id for the '<em><b>Valor</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_VALOR__VALOR = ASERCION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Asercion Valor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_VALOR_FEATURE_COUNT = ASERCION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Asercion Valor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_VALOR_OPERATION_COUNT = ASERCION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.AsercionSeleccionadoImpl <em>Asercion Seleccionado</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.AsercionSeleccionadoImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionSeleccionado()
+	 * @generated
+	 */
+	int ASERCION_SELECCIONADO = 15;
+
+	/**
+	 * The feature id for the '<em><b>Elemento</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_SELECCIONADO__ELEMENTO = ASERCION__ELEMENTO;
+
+	/**
+	 * The feature id for the '<em><b>Estado</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_SELECCIONADO__ESTADO = ASERCION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Asercion Seleccionado</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_SELECCIONADO_FEATURE_COUNT = ASERCION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Asercion Seleccionado</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASERCION_SELECCIONADO_OPERATION_COUNT = ASERCION_OPERATION_COUNT + 0;
 
 
 	/**
@@ -826,6 +1028,49 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFormulario_Pruebas();
+
+	/**
+	 * Returns the meta object for class '{@link Formularios_DASOFT.Layout <em>Layout</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Layout</em>'.
+	 * @see Formularios_DASOFT.Layout
+	 * @generated
+	 */
+	EClass getLayout();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Layout#getAnchura <em>Anchura</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Anchura</em>'.
+	 * @see Formularios_DASOFT.Layout#getAnchura()
+	 * @see #getLayout()
+	 * @generated
+	 */
+	EAttribute getLayout_Anchura();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Layout#getAltura <em>Altura</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Altura</em>'.
+	 * @see Formularios_DASOFT.Layout#getAltura()
+	 * @see #getLayout()
+	 * @generated
+	 */
+	EAttribute getLayout_Altura();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link Formularios_DASOFT.Layout#getEntradas <em>Entradas</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Entradas</em>'.
+	 * @see Formularios_DASOFT.Layout#getEntradas()
+	 * @see #getLayout()
+	 * @generated
+	 */
+	EReference getLayout_Entradas();
 
 	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.Input <em>Input</em>}'.
@@ -903,6 +1148,37 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EAttribute getInputTexto_Valor();
 
 	/**
+	 * Returns the meta object for class '{@link Formularios_DASOFT.InputBoton <em>Input Boton</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Input Boton</em>'.
+	 * @see Formularios_DASOFT.InputBoton
+	 * @generated
+	 */
+	EClass getInputBoton();
+
+	/**
+	 * Returns the meta object for class '{@link Formularios_DASOFT.InputMultiple <em>Input Multiple</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Input Multiple</em>'.
+	 * @see Formularios_DASOFT.InputMultiple
+	 * @generated
+	 */
+	EClass getInputMultiple();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link Formularios_DASOFT.InputMultiple#getValores <em>Valores</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Valores</em>'.
+	 * @see Formularios_DASOFT.InputMultiple#getValores()
+	 * @see #getInputMultiple()
+	 * @generated
+	 */
+	EAttribute getInputMultiple_Valores();
+
+	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.InputRadio <em>Input Radio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -966,80 +1242,6 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EAttribute getInputCheck_Seleccion();
 
 	/**
-	 * Returns the meta object for class '{@link Formularios_DASOFT.InputBoton <em>Input Boton</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input Boton</em>'.
-	 * @see Formularios_DASOFT.InputBoton
-	 * @generated
-	 */
-	EClass getInputBoton();
-
-	/**
-	 * Returns the meta object for class '{@link Formularios_DASOFT.InputMultiple <em>Input Multiple</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input Multiple</em>'.
-	 * @see Formularios_DASOFT.InputMultiple
-	 * @generated
-	 */
-	EClass getInputMultiple();
-
-	/**
-	 * Returns the meta object for the attribute list '{@link Formularios_DASOFT.InputMultiple#getValores <em>Valores</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Valores</em>'.
-	 * @see Formularios_DASOFT.InputMultiple#getValores()
-	 * @see #getInputMultiple()
-	 * @generated
-	 */
-	EAttribute getInputMultiple_Valores();
-
-	/**
-	 * Returns the meta object for class '{@link Formularios_DASOFT.Layout <em>Layout</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Layout</em>'.
-	 * @see Formularios_DASOFT.Layout
-	 * @generated
-	 */
-	EClass getLayout();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Layout#getAnchura <em>Anchura</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Anchura</em>'.
-	 * @see Formularios_DASOFT.Layout#getAnchura()
-	 * @see #getLayout()
-	 * @generated
-	 */
-	EAttribute getLayout_Anchura();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Layout#getAltura <em>Altura</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Altura</em>'.
-	 * @see Formularios_DASOFT.Layout#getAltura()
-	 * @see #getLayout()
-	 * @generated
-	 */
-	EAttribute getLayout_Altura();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link Formularios_DASOFT.Layout#getEntradas <em>Entradas</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Entradas</em>'.
-	 * @see Formularios_DASOFT.Layout#getEntradas()
-	 * @see #getLayout()
-	 * @generated
-	 */
-	EReference getLayout_Entradas();
-
-	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.PruebaInterfaz <em>Prueba Interfaz</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1061,26 +1263,15 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EAttribute getPruebaInterfaz_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link Formularios_DASOFT.PruebaInterfaz#getAcciones <em>Acciones</em>}'.
+	 * Returns the meta object for the containment reference list '{@link Formularios_DASOFT.PruebaInterfaz#getAcciones <em>Acciones</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Acciones</em>'.
+	 * @return the meta object for the containment reference list '<em>Acciones</em>'.
 	 * @see Formularios_DASOFT.PruebaInterfaz#getAcciones()
 	 * @see #getPruebaInterfaz()
 	 * @generated
 	 */
 	EReference getPruebaInterfaz_Acciones();
-
-	/**
-	 * Returns the meta object for the reference list '{@link Formularios_DASOFT.PruebaInterfaz#getAserciones <em>Aserciones</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Aserciones</em>'.
-	 * @see Formularios_DASOFT.PruebaInterfaz#getAserciones()
-	 * @see #getPruebaInterfaz()
-	 * @generated
-	 */
-	EReference getPruebaInterfaz_Aserciones();
 
 	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.Accion <em>Accion</em>}'.
@@ -1093,6 +1284,28 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EClass getAccion();
 
 	/**
+	 * Returns the meta object for the reference '{@link Formularios_DASOFT.Accion#getElemento <em>Elemento</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Elemento</em>'.
+	 * @see Formularios_DASOFT.Accion#getElemento()
+	 * @see #getAccion()
+	 * @generated
+	 */
+	EReference getAccion_Elemento();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link Formularios_DASOFT.Accion#getAsercion <em>Asercion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Asercion</em>'.
+	 * @see Formularios_DASOFT.Accion#getAsercion()
+	 * @see #getAccion()
+	 * @generated
+	 */
+	EReference getAccion_Asercion();
+
+	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.Asercion <em>Asercion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1101,6 +1314,101 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getAsercion();
+
+	/**
+	 * Returns the meta object for the reference '{@link Formularios_DASOFT.Asercion#getElemento <em>Elemento</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Elemento</em>'.
+	 * @see Formularios_DASOFT.Asercion#getElemento()
+	 * @see #getAsercion()
+	 * @generated
+	 */
+	EReference getAsercion_Elemento();
+
+	/**
+	 * Returns the meta object for class '{@link Formularios_DASOFT.AsercionInvisible <em>Asercion Invisible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Asercion Invisible</em>'.
+	 * @see Formularios_DASOFT.AsercionInvisible
+	 * @generated
+	 */
+	EClass getAsercionInvisible();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.AsercionInvisible#isEstado <em>Estado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Estado</em>'.
+	 * @see Formularios_DASOFT.AsercionInvisible#isEstado()
+	 * @see #getAsercionInvisible()
+	 * @generated
+	 */
+	EAttribute getAsercionInvisible_Estado();
+
+	/**
+	 * Returns the meta object for class '{@link Formularios_DASOFT.AsercionHabilitado <em>Asercion Habilitado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Asercion Habilitado</em>'.
+	 * @see Formularios_DASOFT.AsercionHabilitado
+	 * @generated
+	 */
+	EClass getAsercionHabilitado();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.AsercionHabilitado#isEstado <em>Estado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Estado</em>'.
+	 * @see Formularios_DASOFT.AsercionHabilitado#isEstado()
+	 * @see #getAsercionHabilitado()
+	 * @generated
+	 */
+	EAttribute getAsercionHabilitado_Estado();
+
+	/**
+	 * Returns the meta object for class '{@link Formularios_DASOFT.AsercionValor <em>Asercion Valor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Asercion Valor</em>'.
+	 * @see Formularios_DASOFT.AsercionValor
+	 * @generated
+	 */
+	EClass getAsercionValor();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.AsercionValor#getValor <em>Valor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valor</em>'.
+	 * @see Formularios_DASOFT.AsercionValor#getValor()
+	 * @see #getAsercionValor()
+	 * @generated
+	 */
+	EAttribute getAsercionValor_Valor();
+
+	/**
+	 * Returns the meta object for class '{@link Formularios_DASOFT.AsercionSeleccionado <em>Asercion Seleccionado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Asercion Seleccionado</em>'.
+	 * @see Formularios_DASOFT.AsercionSeleccionado
+	 * @generated
+	 */
+	EClass getAsercionSeleccionado();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.AsercionSeleccionado#isEstado <em>Estado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Estado</em>'.
+	 * @see Formularios_DASOFT.AsercionSeleccionado#isEstado()
+	 * @see #getAsercionSeleccionado()
+	 * @generated
+	 */
+	EAttribute getAsercionSeleccionado_Estado();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1176,6 +1484,40 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EReference FORMULARIO__PRUEBAS = eINSTANCE.getFormulario_Pruebas();
 
 		/**
+		 * The meta object literal for the '{@link Formularios_DASOFT.impl.LayoutImpl <em>Layout</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Formularios_DASOFT.impl.LayoutImpl
+		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getLayout()
+		 * @generated
+		 */
+		EClass LAYOUT = eINSTANCE.getLayout();
+
+		/**
+		 * The meta object literal for the '<em><b>Anchura</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LAYOUT__ANCHURA = eINSTANCE.getLayout_Anchura();
+
+		/**
+		 * The meta object literal for the '<em><b>Altura</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LAYOUT__ALTURA = eINSTANCE.getLayout_Altura();
+
+		/**
+		 * The meta object literal for the '<em><b>Entradas</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LAYOUT__ENTRADAS = eINSTANCE.getLayout_Entradas();
+
+		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputImpl <em>Input</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1236,6 +1578,34 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EAttribute INPUT_TEXTO__VALOR = eINSTANCE.getInputTexto_Valor();
 
 		/**
+		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputBotonImpl <em>Input Boton</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Formularios_DASOFT.impl.InputBotonImpl
+		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputBoton()
+		 * @generated
+		 */
+		EClass INPUT_BOTON = eINSTANCE.getInputBoton();
+
+		/**
+		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputMultipleImpl <em>Input Multiple</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Formularios_DASOFT.impl.InputMultipleImpl
+		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputMultiple()
+		 * @generated
+		 */
+		EClass INPUT_MULTIPLE = eINSTANCE.getInputMultiple();
+
+		/**
+		 * The meta object literal for the '<em><b>Valores</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INPUT_MULTIPLE__VALORES = eINSTANCE.getInputMultiple_Valores();
+
+		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputRadioImpl <em>Input Radio</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1290,68 +1660,6 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EAttribute INPUT_CHECK__SELECCION = eINSTANCE.getInputCheck_Seleccion();
 
 		/**
-		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputBotonImpl <em>Input Boton</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Formularios_DASOFT.impl.InputBotonImpl
-		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputBoton()
-		 * @generated
-		 */
-		EClass INPUT_BOTON = eINSTANCE.getInputBoton();
-
-		/**
-		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputMultipleImpl <em>Input Multiple</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Formularios_DASOFT.impl.InputMultipleImpl
-		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getInputMultiple()
-		 * @generated
-		 */
-		EClass INPUT_MULTIPLE = eINSTANCE.getInputMultiple();
-
-		/**
-		 * The meta object literal for the '<em><b>Valores</b></em>' attribute list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INPUT_MULTIPLE__VALORES = eINSTANCE.getInputMultiple_Valores();
-
-		/**
-		 * The meta object literal for the '{@link Formularios_DASOFT.impl.LayoutImpl <em>Layout</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see Formularios_DASOFT.impl.LayoutImpl
-		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getLayout()
-		 * @generated
-		 */
-		EClass LAYOUT = eINSTANCE.getLayout();
-
-		/**
-		 * The meta object literal for the '<em><b>Anchura</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LAYOUT__ANCHURA = eINSTANCE.getLayout_Anchura();
-
-		/**
-		 * The meta object literal for the '<em><b>Altura</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LAYOUT__ALTURA = eINSTANCE.getLayout_Altura();
-
-		/**
-		 * The meta object literal for the '<em><b>Entradas</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference LAYOUT__ENTRADAS = eINSTANCE.getLayout_Entradas();
-
-		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.PruebaInterfazImpl <em>Prueba Interfaz</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1370,20 +1678,12 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EAttribute PRUEBA_INTERFAZ__NAME = eINSTANCE.getPruebaInterfaz_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Acciones</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Acciones</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference PRUEBA_INTERFAZ__ACCIONES = eINSTANCE.getPruebaInterfaz_Acciones();
-
-		/**
-		 * The meta object literal for the '<em><b>Aserciones</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PRUEBA_INTERFAZ__ASERCIONES = eINSTANCE.getPruebaInterfaz_Aserciones();
 
 		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AccionImpl <em>Accion</em>}' class.
@@ -1396,6 +1696,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EClass ACCION = eINSTANCE.getAccion();
 
 		/**
+		 * The meta object literal for the '<em><b>Elemento</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACCION__ELEMENTO = eINSTANCE.getAccion_Elemento();
+
+		/**
+		 * The meta object literal for the '<em><b>Asercion</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ACCION__ASERCION = eINSTANCE.getAccion_Asercion();
+
+		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AsercionImpl <em>Asercion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1404,6 +1720,86 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ASERCION = eINSTANCE.getAsercion();
+
+		/**
+		 * The meta object literal for the '<em><b>Elemento</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASERCION__ELEMENTO = eINSTANCE.getAsercion_Elemento();
+
+		/**
+		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AsercionInvisibleImpl <em>Asercion Invisible</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Formularios_DASOFT.impl.AsercionInvisibleImpl
+		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionInvisible()
+		 * @generated
+		 */
+		EClass ASERCION_INVISIBLE = eINSTANCE.getAsercionInvisible();
+
+		/**
+		 * The meta object literal for the '<em><b>Estado</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASERCION_INVISIBLE__ESTADO = eINSTANCE.getAsercionInvisible_Estado();
+
+		/**
+		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AsercionHabilitadoImpl <em>Asercion Habilitado</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Formularios_DASOFT.impl.AsercionHabilitadoImpl
+		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionHabilitado()
+		 * @generated
+		 */
+		EClass ASERCION_HABILITADO = eINSTANCE.getAsercionHabilitado();
+
+		/**
+		 * The meta object literal for the '<em><b>Estado</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASERCION_HABILITADO__ESTADO = eINSTANCE.getAsercionHabilitado_Estado();
+
+		/**
+		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AsercionValorImpl <em>Asercion Valor</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Formularios_DASOFT.impl.AsercionValorImpl
+		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionValor()
+		 * @generated
+		 */
+		EClass ASERCION_VALOR = eINSTANCE.getAsercionValor();
+
+		/**
+		 * The meta object literal for the '<em><b>Valor</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASERCION_VALOR__VALOR = eINSTANCE.getAsercionValor_Valor();
+
+		/**
+		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AsercionSeleccionadoImpl <em>Asercion Seleccionado</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Formularios_DASOFT.impl.AsercionSeleccionadoImpl
+		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionSeleccionado()
+		 * @generated
+		 */
+		EClass ASERCION_SELECCIONADO = eINSTANCE.getAsercionSeleccionado();
+
+		/**
+		 * The meta object literal for the '<em><b>Estado</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASERCION_SELECCIONADO__ESTADO = eINSTANCE.getAsercionSeleccionado_Estado();
 
 	}
 

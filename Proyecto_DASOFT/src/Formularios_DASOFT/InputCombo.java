@@ -20,7 +20,6 @@ package Formularios_DASOFT;
  * @generated
  */
 public interface InputCombo extends InputMultiple {
-
 	/**
 	 * Returns the value of the '<em><b>Seleccion</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -46,4 +45,5 @@ public interface InputCombo extends InputMultiple {
 	 * @generated
 	 */
 	void setSeleccion(int value);
+
 } // InputCombo

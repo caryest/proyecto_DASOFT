@@ -6,7 +6,9 @@ import Formularios_DASOFT.Formularios_DASOFTPackage;
 import Formularios_DASOFT.InputCombo;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -32,6 +34,7 @@ public class InputComboImpl extends InputMultipleImpl implements InputCombo {
 	 * @ordered
 	 */
 	protected static final int SELECCION_EDEFAULT = 0;
+
 	/**
 	 * The cached value of the '{@link #getSeleccion() <em>Seleccion</em>}' attribute.
 	 * <!-- begin-user-doc -->

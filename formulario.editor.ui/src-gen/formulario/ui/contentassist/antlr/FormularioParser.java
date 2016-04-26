@@ -38,6 +38,7 @@ public class FormularioParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getInputAccess().getAlternatives(), "rule__Input__Alternatives");
+					put(grammarAccess.getAsercionAccess().getAlternatives(), "rule__Asercion__Alternatives");
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getEBooleanAccess().getAlternatives(), "rule__EBoolean__Alternatives");
 					put(grammarAccess.getFormularioAccess().getGroup(), "rule__Formulario__Group__0");
@@ -50,10 +51,7 @@ public class FormularioParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPruebaInterfazAccess().getGroup(), "rule__PruebaInterfaz__Group__0");
 					put(grammarAccess.getPruebaInterfazAccess().getGroup_4(), "rule__PruebaInterfaz__Group_4__0");
 					put(grammarAccess.getPruebaInterfazAccess().getGroup_4_3(), "rule__PruebaInterfaz__Group_4_3__0");
-					put(grammarAccess.getPruebaInterfazAccess().getGroup_5(), "rule__PruebaInterfaz__Group_5__0");
-					put(grammarAccess.getPruebaInterfazAccess().getGroup_5_3(), "rule__PruebaInterfaz__Group_5_3__0");
 					put(grammarAccess.getEIntAccess().getGroup(), "rule__EInt__Group__0");
-					put(grammarAccess.getInput_ImplAccess().getGroup(), "rule__Input_Impl__Group__0");
 					put(grammarAccess.getInputTextoAccess().getGroup(), "rule__InputTexto__Group__0");
 					put(grammarAccess.getInputTextoAccess().getGroup_7(), "rule__InputTexto__Group_7__0");
 					put(grammarAccess.getInputBotonAccess().getGroup(), "rule__InputBoton__Group__0");
@@ -74,7 +72,17 @@ public class FormularioParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInputCheckAccess().getGroup_7(), "rule__InputCheck__Group_7__0");
 					put(grammarAccess.getInputCheckAccess().getGroup_7_3(), "rule__InputCheck__Group_7_3__0");
 					put(grammarAccess.getAccionAccess().getGroup(), "rule__Accion__Group__0");
-					put(grammarAccess.getAsercionAccess().getGroup(), "rule__Asercion__Group__0");
+					put(grammarAccess.getAccionAccess().getGroup_3(), "rule__Accion__Group_3__0");
+					put(grammarAccess.getAccionAccess().getGroup_4(), "rule__Accion__Group_4__0");
+					put(grammarAccess.getAsercionInvisibleAccess().getGroup(), "rule__AsercionInvisible__Group__0");
+					put(grammarAccess.getAsercionInvisibleAccess().getGroup_4(), "rule__AsercionInvisible__Group_4__0");
+					put(grammarAccess.getAsercionHabilitadoAccess().getGroup(), "rule__AsercionHabilitado__Group__0");
+					put(grammarAccess.getAsercionHabilitadoAccess().getGroup_4(), "rule__AsercionHabilitado__Group_4__0");
+					put(grammarAccess.getAsercionValorAccess().getGroup(), "rule__AsercionValor__Group__0");
+					put(grammarAccess.getAsercionValorAccess().getGroup_3(), "rule__AsercionValor__Group_3__0");
+					put(grammarAccess.getAsercionValorAccess().getGroup_4(), "rule__AsercionValor__Group_4__0");
+					put(grammarAccess.getAsercionSeleccionadoAccess().getGroup(), "rule__AsercionSeleccionado__Group__0");
+					put(grammarAccess.getAsercionSeleccionadoAccess().getGroup_4(), "rule__AsercionSeleccionado__Group_4__0");
 					put(grammarAccess.getFormularioAccess().getComprobarAsercionAssignment_0(), "rule__Formulario__ComprobarAsercionAssignment_0");
 					put(grammarAccess.getFormularioAccess().getComprobarAccionAssignment_1(), "rule__Formulario__ComprobarAccionAssignment_1");
 					put(grammarAccess.getFormularioAccess().getNameAssignment_3(), "rule__Formulario__NameAssignment_3");
@@ -87,11 +95,6 @@ public class FormularioParser extends AbstractContentAssistParser {
 					put(grammarAccess.getPruebaInterfazAccess().getNameAssignment_2(), "rule__PruebaInterfaz__NameAssignment_2");
 					put(grammarAccess.getPruebaInterfazAccess().getAccionesAssignment_4_2(), "rule__PruebaInterfaz__AccionesAssignment_4_2");
 					put(grammarAccess.getPruebaInterfazAccess().getAccionesAssignment_4_3_1(), "rule__PruebaInterfaz__AccionesAssignment_4_3_1");
-					put(grammarAccess.getPruebaInterfazAccess().getAsercionesAssignment_5_2(), "rule__PruebaInterfaz__AsercionesAssignment_5_2");
-					put(grammarAccess.getPruebaInterfazAccess().getAsercionesAssignment_5_3_1(), "rule__PruebaInterfaz__AsercionesAssignment_5_3_1");
-					put(grammarAccess.getInput_ImplAccess().getVisibleAssignment_1(), "rule__Input_Impl__VisibleAssignment_1");
-					put(grammarAccess.getInput_ImplAccess().getHabilitadoAssignment_2(), "rule__Input_Impl__HabilitadoAssignment_2");
-					put(grammarAccess.getInput_ImplAccess().getNameAssignment_4(), "rule__Input_Impl__NameAssignment_4");
 					put(grammarAccess.getInputTextoAccess().getVisibleAssignment_1(), "rule__InputTexto__VisibleAssignment_1");
 					put(grammarAccess.getInputTextoAccess().getHabilitadoAssignment_2(), "rule__InputTexto__HabilitadoAssignment_2");
 					put(grammarAccess.getInputTextoAccess().getObligatorioAssignment_3(), "rule__InputTexto__ObligatorioAssignment_3");
@@ -124,6 +127,16 @@ public class FormularioParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInputCheckAccess().getValoresAssignment_6_3_1(), "rule__InputCheck__ValoresAssignment_6_3_1");
 					put(grammarAccess.getInputCheckAccess().getSeleccionAssignment_7_2(), "rule__InputCheck__SeleccionAssignment_7_2");
 					put(grammarAccess.getInputCheckAccess().getSeleccionAssignment_7_3_1(), "rule__InputCheck__SeleccionAssignment_7_3_1");
+					put(grammarAccess.getAccionAccess().getElementoAssignment_3_1(), "rule__Accion__ElementoAssignment_3_1");
+					put(grammarAccess.getAccionAccess().getAsercionAssignment_4_1(), "rule__Accion__AsercionAssignment_4_1");
+					put(grammarAccess.getAsercionInvisibleAccess().getEstadoAssignment_1(), "rule__AsercionInvisible__EstadoAssignment_1");
+					put(grammarAccess.getAsercionInvisibleAccess().getElementoAssignment_4_1(), "rule__AsercionInvisible__ElementoAssignment_4_1");
+					put(grammarAccess.getAsercionHabilitadoAccess().getEstadoAssignment_1(), "rule__AsercionHabilitado__EstadoAssignment_1");
+					put(grammarAccess.getAsercionHabilitadoAccess().getElementoAssignment_4_1(), "rule__AsercionHabilitado__ElementoAssignment_4_1");
+					put(grammarAccess.getAsercionValorAccess().getValorAssignment_3_1(), "rule__AsercionValor__ValorAssignment_3_1");
+					put(grammarAccess.getAsercionValorAccess().getElementoAssignment_4_1(), "rule__AsercionValor__ElementoAssignment_4_1");
+					put(grammarAccess.getAsercionSeleccionadoAccess().getEstadoAssignment_1(), "rule__AsercionSeleccionado__EstadoAssignment_1");
+					put(grammarAccess.getAsercionSeleccionadoAccess().getElementoAssignment_4_1(), "rule__AsercionSeleccionado__ElementoAssignment_4_1");
 				}
 			};
 		}

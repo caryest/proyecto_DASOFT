@@ -8,6 +8,12 @@ import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
 import Formularios_DASOFT.Formulario
 import Formularios_DASOFT.Input
+import Formularios_DASOFT.InputBoton
+import Formularios_DASOFT.InputTexto
+import Formularios_DASOFT.InputCheck
+import Formularios_DASOFT.InputRadio
+import Formularios_DASOFT.InputCombo
+import Formularios_DASOFT.PruebaInterfaz
 
 /**
  * Generates code from your model files on save.
@@ -17,23 +23,17 @@ import Formularios_DASOFT.Input
 class FormularioGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-
-		fsa.generateFile("forms/Formulario.java", generarMain())
 		
-		fsa.generateFile("../tests/forms/Formulario.java", generarTest())
 
  		for(Formulario form : resource.allContents.toIterable.filter(Formulario)){
-			//fsa.generateFile("gui/BaseDatos.java", form.compile())
-			
-			/*for(Input inp : form.layout.entradas){
-				val nombre = "gui/PanelTabla" + inp.name + ".java";
-				fsa.generateFile(nombre, inp.compile())
-			}*/
+			fsa.generateFile("forms/Formulario.java", generarFormulario(form))
+		
+			fsa.generateFile("../tests/forms/Formulario.java", generarTest(form.pruebas))
 		}
 		
 	}
 	
-	def generarMain ()'''
+	def generarFormulario (Formulario form)'''
 		package forms;
 
 		import org.eclipse.swt.SWT;
@@ -63,8 +63,34 @@ class FormularioGenerator implements IGenerator {
 		public Shell showForm(Display display) {
 			
 			Shell shell = new Shell(display);
-			shell.setText  ("Sample Form");
+			shell.setText  ("«form.name»");
 			
+			«FOR input : form.layout.entradas»
+			// « input.class »
+			« IF input instanceof InputBoton »
+			Button boton«input.name» = new Button(shell, SWT.CHECK);
+			boton«input.name».setText("«input.name»");
+			« ELSEIF input instanceof InputTexto »
+			Label label«input.name» = new Label(shell, SWT.NONE);
+			Text  text«input.name»  = new Text(shell, SWT.BORDER);
+			label«input.name».setText("«input.name»");
+			« ELSEIF input instanceof InputCheck »
+			Button boton«input.name» = new Button(shell, SWT.CHECK);
+			boton«input.name».setText("«input.name»");
+			« ELSEIF input instanceof InputRadio »
+			
+			« ELSEIF input instanceof InputCombo »
+			
+			« ENDIF »
+			«ENDFOR»
+			
+			// layout
+			GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
+			shell.setLayout(new GridLayout(«form.layout.altura», true));
+			data.horizontalSpan = «form.layout.anchura»;
+			//checkCash.setLayoutData(data);	
+			
+			/**
 			// checkbutton
 			Button checkCash = new Button(shell, SWT.CHECK);
 			checkCash.setText("Pay with cash?");		
@@ -72,14 +98,16 @@ class FormularioGenerator implements IGenerator {
 			// text field
 			Label labelCCNumber = new Label(shell, SWT.NONE);
 			Text  textCCNumber  = new Text(shell, SWT.BORDER);
-			labelCCNumber.setText("Credit card number");
+			labelCCNumber.setText("Credit card number");*/
 			
 			// layout
 			GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
 			shell.setLayout(new GridLayout(2, true));
 			data.horizontalSpan = 2;
 			checkCash.setLayoutData(data);		
+			**/
 			
+			/**
 			// show or hide text field depending on checkbutton selection
 			checkCash.addSelectionListener(new SelectionListener() {
 				
@@ -92,6 +120,7 @@ class FormularioGenerator implements IGenerator {
 				@Override
 				public void widgetDefaultSelected(SelectionEvent arg0) {}
 			});
+			**/
 			
 			// show form
 			shell.pack();
@@ -125,7 +154,7 @@ class FormularioGenerator implements IGenerator {
 		}
 	'''
 	
-	def generarTest ()'''
+	def generarTest (PruebaInterfaz pruebas)'''
 		package forms;
 
 		import static org.junit.Assert.assertFalse;

@@ -3,19 +3,24 @@
 package Formularios_DASOFT.impl;
 
 import Formularios_DASOFT.Accion;
-import Formularios_DASOFT.Asercion;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
 import Formularios_DASOFT.PruebaInterfaz;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +32,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link Formularios_DASOFT.impl.PruebaInterfazImpl#getName <em>Name</em>}</li>
  *   <li>{@link Formularios_DASOFT.impl.PruebaInterfazImpl#getAcciones <em>Acciones</em>}</li>
- *   <li>{@link Formularios_DASOFT.impl.PruebaInterfazImpl#getAserciones <em>Aserciones</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,7 +58,7 @@ public class PruebaInterfazImpl extends MinimalEObjectImpl.Container implements 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getAcciones() <em>Acciones</em>}' reference list.
+	 * The cached value of the '{@link #getAcciones() <em>Acciones</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAcciones()
@@ -62,16 +66,6 @@ public class PruebaInterfazImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<Accion> acciones;
-
-	/**
-	 * The cached value of the '{@link #getAserciones() <em>Aserciones</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAserciones()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Asercion> aserciones;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,7 +114,7 @@ public class PruebaInterfazImpl extends MinimalEObjectImpl.Container implements 
 	 */
 	public EList<Accion> getAcciones() {
 		if (acciones == null) {
-			acciones = new EObjectResolvingEList<Accion>(Accion.class, this, Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ACCIONES);
+			acciones = new EObjectContainmentEList<Accion>(Accion.class, this, Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ACCIONES);
 		}
 		return acciones;
 	}
@@ -130,11 +124,13 @@ public class PruebaInterfazImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Asercion> getAserciones() {
-		if (aserciones == null) {
-			aserciones = new EObjectResolvingEList<Asercion>(Asercion.class, this, Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ASERCIONES);
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ACCIONES:
+				return ((InternalEList<?>)getAcciones()).basicRemove(otherEnd, msgs);
 		}
-		return aserciones;
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -149,8 +145,6 @@ public class PruebaInterfazImpl extends MinimalEObjectImpl.Container implements 
 				return getName();
 			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ACCIONES:
 				return getAcciones();
-			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ASERCIONES:
-				return getAserciones();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -171,10 +165,6 @@ public class PruebaInterfazImpl extends MinimalEObjectImpl.Container implements 
 				getAcciones().clear();
 				getAcciones().addAll((Collection<? extends Accion>)newValue);
 				return;
-			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ASERCIONES:
-				getAserciones().clear();
-				getAserciones().addAll((Collection<? extends Asercion>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -193,9 +183,6 @@ public class PruebaInterfazImpl extends MinimalEObjectImpl.Container implements 
 			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ACCIONES:
 				getAcciones().clear();
 				return;
-			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ASERCIONES:
-				getAserciones().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -212,8 +199,6 @@ public class PruebaInterfazImpl extends MinimalEObjectImpl.Container implements 
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ACCIONES:
 				return acciones != null && !acciones.isEmpty();
-			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ__ASERCIONES:
-				return aserciones != null && !aserciones.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

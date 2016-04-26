@@ -2,8 +2,8 @@
  */
 package Formularios_DASOFT.impl;
 
+import Formularios_DASOFT.AsercionSeleccionado;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
-import Formularios_DASOFT.InputRadio;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -13,44 +13,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Input Radio</b></em>'.
+ * An implementation of the model object '<em><b>Asercion Seleccionado</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Formularios_DASOFT.impl.InputRadioImpl#getSeleccion <em>Seleccion</em>}</li>
+ *   <li>{@link Formularios_DASOFT.impl.AsercionSeleccionadoImpl#isEstado <em>Estado</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class InputRadioImpl extends InputMultipleImpl implements InputRadio {
+public class AsercionSeleccionadoImpl extends AsercionImpl implements AsercionSeleccionado {
 	/**
-	 * The default value of the '{@link #getSeleccion() <em>Seleccion</em>}' attribute.
+	 * The default value of the '{@link #isEstado() <em>Estado</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSeleccion()
+	 * @see #isEstado()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int SELECCION_EDEFAULT = 0;
+	protected static final boolean ESTADO_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getSeleccion() <em>Seleccion</em>}' attribute.
+	 * The cached value of the '{@link #isEstado() <em>Estado</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSeleccion()
+	 * @see #isEstado()
 	 * @generated
 	 * @ordered
 	 */
-	protected int seleccion = SELECCION_EDEFAULT;
+	protected boolean estado = ESTADO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InputRadioImpl() {
+	protected AsercionSeleccionadoImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class InputRadioImpl extends InputMultipleImpl implements InputRadio {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Formularios_DASOFTPackage.Literals.INPUT_RADIO;
+		return Formularios_DASOFTPackage.Literals.ASERCION_SELECCIONADO;
 	}
 
 	/**
@@ -69,8 +69,8 @@ public class InputRadioImpl extends InputMultipleImpl implements InputRadio {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getSeleccion() {
-		return seleccion;
+	public boolean isEstado() {
+		return estado;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class InputRadioImpl extends InputMultipleImpl implements InputRadio {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSeleccion(int newSeleccion) {
-		int oldSeleccion = seleccion;
-		seleccion = newSeleccion;
+	public void setEstado(boolean newEstado) {
+		boolean oldEstado = estado;
+		estado = newEstado;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.INPUT_RADIO__SELECCION, oldSeleccion, seleccion));
+			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.ASERCION_SELECCIONADO__ESTADO, oldEstado, estado));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class InputRadioImpl extends InputMultipleImpl implements InputRadio {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_RADIO__SELECCION:
-				return getSeleccion();
+			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO__ESTADO:
+				return isEstado();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class InputRadioImpl extends InputMultipleImpl implements InputRadio {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_RADIO__SELECCION:
-				setSeleccion((Integer)newValue);
+			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO__ESTADO:
+				setEstado((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class InputRadioImpl extends InputMultipleImpl implements InputRadio {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_RADIO__SELECCION:
-				setSeleccion(SELECCION_EDEFAULT);
+			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO__ESTADO:
+				setEstado(ESTADO_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class InputRadioImpl extends InputMultipleImpl implements InputRadio {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_RADIO__SELECCION:
-				return seleccion != SELECCION_EDEFAULT;
+			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO__ESTADO:
+				return estado != ESTADO_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,10 +153,10 @@ public class InputRadioImpl extends InputMultipleImpl implements InputRadio {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (seleccion: ");
-		result.append(seleccion);
+		result.append(" (estado: ");
+		result.append(estado);
 		result.append(')');
 		return result.toString();
 	}
 
-} //InputRadioImpl
+} //AsercionSeleccionadoImpl

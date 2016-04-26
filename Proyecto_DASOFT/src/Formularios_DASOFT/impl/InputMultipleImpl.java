@@ -6,8 +6,11 @@ import Formularios_DASOFT.Formularios_DASOFTPackage;
 import Formularios_DASOFT.InputMultiple;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**

@@ -1,0 +1,1 @@
+import "platform:/resource/Proyecto_DASOFT/model/Proyecto_DASOFT.ecore"

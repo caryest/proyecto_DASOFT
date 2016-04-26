@@ -4,6 +4,10 @@ package Formularios_DASOFT.impl;
 
 import Formularios_DASOFT.Accion;
 import Formularios_DASOFT.Asercion;
+import Formularios_DASOFT.AsercionHabilitado;
+import Formularios_DASOFT.AsercionInvisible;
+import Formularios_DASOFT.AsercionSeleccionado;
+import Formularios_DASOFT.AsercionValor;
 import Formularios_DASOFT.Formulario;
 import Formularios_DASOFT.Formularios_DASOFTFactory;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
@@ -14,9 +18,9 @@ import Formularios_DASOFT.InputCombo;
 import Formularios_DASOFT.InputMultiple;
 import Formularios_DASOFT.InputRadio;
 import Formularios_DASOFT.InputTexto;
-
 import Formularios_DASOFT.Layout;
 import Formularios_DASOFT.PruebaInterfaz;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -43,6 +47,13 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass layoutEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass inputEClass = null;
 
 	/**
@@ -51,6 +62,20 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * @generated
 	 */
 	private EClass inputTextoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass inputBotonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass inputMultipleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,27 +103,6 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass inputBotonEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass inputMultipleEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass layoutEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass pruebaInterfazEClass = null;
 
 	/**
@@ -114,6 +118,34 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * @generated
 	 */
 	private EClass asercionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass asercionInvisibleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass asercionHabilitadoEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass asercionValorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass asercionSeleccionadoEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -235,6 +267,42 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLayout() {
+		return layoutEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLayout_Anchura() {
+		return (EAttribute)layoutEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getLayout_Altura() {
+		return (EAttribute)layoutEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getLayout_Entradas() {
+		return (EReference)layoutEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInput() {
 		return inputEClass;
 	}
@@ -298,6 +366,33 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getInputBoton() {
+		return inputBotonEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInputMultiple() {
+		return inputMultipleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getInputMultiple_Valores() {
+		return (EAttribute)inputMultipleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getInputRadio() {
 		return inputRadioEClass;
 	}
@@ -352,69 +447,6 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInputBoton() {
-		return inputBotonEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInputMultiple() {
-		return inputMultipleEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getInputMultiple_Valores() {
-		return (EAttribute)inputMultipleEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getLayout() {
-		return layoutEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLayout_Anchura() {
-		return (EAttribute)layoutEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getLayout_Altura() {
-		return (EAttribute)layoutEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getLayout_Entradas() {
-		return (EReference)layoutEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPruebaInterfaz() {
 		return pruebaInterfazEClass;
 	}
@@ -442,15 +474,6 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPruebaInterfaz_Aserciones() {
-		return (EReference)pruebaInterfazEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAccion() {
 		return accionEClass;
 	}
@@ -460,8 +483,107 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAccion_Elemento() {
+		return (EReference)accionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAccion_Asercion() {
+		return (EReference)accionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getAsercion() {
 		return asercionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAsercion_Elemento() {
+		return (EReference)asercionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAsercionInvisible() {
+		return asercionInvisibleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAsercionInvisible_Estado() {
+		return (EAttribute)asercionInvisibleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAsercionHabilitado() {
+		return asercionHabilitadoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAsercionHabilitado_Estado() {
+		return (EAttribute)asercionHabilitadoEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAsercionValor() {
+		return asercionValorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAsercionValor_Valor() {
+		return (EAttribute)asercionValorEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAsercionSeleccionado() {
+		return asercionSeleccionadoEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAsercionSeleccionado_Estado() {
+		return (EAttribute)asercionSeleccionadoEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -530,11 +652,25 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 		pruebaInterfazEClass = createEClass(PRUEBA_INTERFAZ);
 		createEAttribute(pruebaInterfazEClass, PRUEBA_INTERFAZ__NAME);
 		createEReference(pruebaInterfazEClass, PRUEBA_INTERFAZ__ACCIONES);
-		createEReference(pruebaInterfazEClass, PRUEBA_INTERFAZ__ASERCIONES);
 
 		accionEClass = createEClass(ACCION);
+		createEReference(accionEClass, ACCION__ELEMENTO);
+		createEReference(accionEClass, ACCION__ASERCION);
 
 		asercionEClass = createEClass(ASERCION);
+		createEReference(asercionEClass, ASERCION__ELEMENTO);
+
+		asercionInvisibleEClass = createEClass(ASERCION_INVISIBLE);
+		createEAttribute(asercionInvisibleEClass, ASERCION_INVISIBLE__ESTADO);
+
+		asercionHabilitadoEClass = createEClass(ASERCION_HABILITADO);
+		createEAttribute(asercionHabilitadoEClass, ASERCION_HABILITADO__ESTADO);
+
+		asercionValorEClass = createEClass(ASERCION_VALOR);
+		createEAttribute(asercionValorEClass, ASERCION_VALOR__VALOR);
+
+		asercionSeleccionadoEClass = createEClass(ASERCION_SELECCIONADO);
+		createEAttribute(asercionSeleccionadoEClass, ASERCION_SELECCIONADO__ESTADO);
 	}
 
 	/**
@@ -571,6 +707,10 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 		inputRadioEClass.getESuperTypes().add(this.getInputMultiple());
 		inputComboEClass.getESuperTypes().add(this.getInputMultiple());
 		inputCheckEClass.getESuperTypes().add(this.getInputMultiple());
+		asercionInvisibleEClass.getESuperTypes().add(this.getAsercion());
+		asercionHabilitadoEClass.getESuperTypes().add(this.getAsercion());
+		asercionValorEClass.getESuperTypes().add(this.getAsercion());
+		asercionSeleccionadoEClass.getESuperTypes().add(this.getAsercion());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(formularioEClass, Formulario.class, "Formulario", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -585,7 +725,7 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 		initEAttribute(getLayout_Altura(), ecorePackage.getEInt(), "altura", null, 0, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getLayout_Entradas(), this.getInput(), null, "entradas", null, 0, -1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(inputEClass, Input.class, "Input", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInput_Name(), ecorePackage.getEString(), "name", "prueba", 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_Visible(), ecorePackage.getEBoolean(), "visible", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getInput_Habilitado(), ecorePackage.getEBoolean(), "habilitado", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -610,12 +750,26 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 
 		initEClass(pruebaInterfazEClass, PruebaInterfaz.class, "PruebaInterfaz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPruebaInterfaz_Name(), ecorePackage.getEString(), "name", null, 0, 1, PruebaInterfaz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPruebaInterfaz_Acciones(), this.getAccion(), null, "acciones", null, 0, -1, PruebaInterfaz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getPruebaInterfaz_Aserciones(), this.getAsercion(), null, "aserciones", null, 0, -1, PruebaInterfaz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPruebaInterfaz_Acciones(), this.getAccion(), null, "acciones", null, 0, -1, PruebaInterfaz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accionEClass, Accion.class, "Accion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAccion_Elemento(), this.getInput(), null, "elemento", null, 0, 1, Accion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAccion_Asercion(), this.getAsercion(), null, "asercion", null, 0, 1, Accion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(asercionEClass, Asercion.class, "Asercion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(asercionEClass, Asercion.class, "Asercion", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAsercion_Elemento(), this.getInput(), null, "elemento", null, 0, 1, Asercion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(asercionInvisibleEClass, AsercionInvisible.class, "AsercionInvisible", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAsercionInvisible_Estado(), ecorePackage.getEBoolean(), "estado", null, 0, 1, AsercionInvisible.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(asercionHabilitadoEClass, AsercionHabilitado.class, "AsercionHabilitado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAsercionHabilitado_Estado(), ecorePackage.getEBoolean(), "estado", null, 0, 1, AsercionHabilitado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(asercionValorEClass, AsercionValor.class, "AsercionValor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAsercionValor_Valor(), ecorePackage.getEString(), "valor", null, 0, 1, AsercionValor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(asercionSeleccionadoEClass, AsercionSeleccionado.class, "AsercionSeleccionado", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAsercionSeleccionado_Estado(), ecorePackage.getEBoolean(), "estado", null, 0, 1, AsercionSeleccionado.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

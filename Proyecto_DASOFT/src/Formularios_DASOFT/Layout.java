@@ -3,6 +3,7 @@
 package Formularios_DASOFT;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -81,7 +82,7 @@ public interface Layout extends EObject {
 	 * The list contents are of type {@link Formularios_DASOFT.Input}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Entradas</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Entradas</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

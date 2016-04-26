@@ -6,6 +6,14 @@ package formulario.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import Formularios_DASOFT.Formulario
+import Formularios_DASOFT.Input
+import Formularios_DASOFT.InputBoton
+import Formularios_DASOFT.InputTexto
+import Formularios_DASOFT.InputCheck
+import Formularios_DASOFT.InputRadio
+import Formularios_DASOFT.InputCombo
+import Formularios_DASOFT.PruebaInterfaz
 
 /**
  * Generates code from your model files on save.
@@ -15,10 +23,207 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 class FormularioGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
+		
+
+ 		for(Formulario form : resource.allContents.toIterable.filter(Formulario)){
+			fsa.generateFile("forms/Formulario.java", generarFormulario(form))
+		
+			fsa.generateFile("../tests/forms/Formulario.java", generarTest(form.pruebas))
+		}
+		
 	}
+	
+	def generarFormulario (Formulario form)'''
+		package forms;
+
+		import org.eclipse.swt.SWT;
+		import org.eclipse.swt.events.SelectionEvent;
+		import org.eclipse.swt.events.SelectionListener;
+		import org.eclipse.swt.layout.GridData;
+		import org.eclipse.swt.layout.GridLayout;
+		import org.eclipse.swt.widgets.Button;
+		import org.eclipse.swt.widgets.Display;
+		import org.eclipse.swt.widgets.Label;
+		import org.eclipse.swt.widgets.Shell;
+		import org.eclipse.swt.widgets.Text;
+		
+		public class Formulario {
+			
+			public static void main(String[] args) {
+				Display display = new Display();
+				Shell   shell   = new SampleForm().showForm(display);
+				while (!shell.isDisposed()) 
+					if (!display.readAndDispatch())
+						display.sleep();
+				display.dispose();
+			}
+			
+		}
+		
+		public Shell showForm(Display display) {
+			
+			Shell shell = new Shell(display);
+			shell.setText  ("«form.name»");
+			
+			«FOR input : form.layout.entradas»
+			// « input.class »
+			« IF input instanceof InputBoton »
+			Button boton«input.name» = new Button(shell, SWT.CHECK);
+			boton«input.name».setText("«input.name»");
+			« ELSEIF input instanceof InputTexto »
+			Label label«input.name» = new Label(shell, SWT.NONE);
+			Text  text«input.name»  = new Text(shell, SWT.BORDER);
+			label«input.name».setText("«input.name»");
+			« ELSEIF input instanceof InputCheck »
+			Button boton«input.name» = new Button(shell, SWT.CHECK);
+			boton«input.name».setText("«input.name»");
+			« ELSEIF input instanceof InputRadio »
+			
+			« ELSEIF input instanceof InputCombo »
+			
+			« ENDIF »
+			«ENDFOR»
+			
+			// layout
+			GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
+			shell.setLayout(new GridLayout(«form.layout.altura», true));
+			data.horizontalSpan = «form.layout.anchura»;
+			//checkCash.setLayoutData(data);	
+			
+			/**
+			// checkbutton
+			Button checkCash = new Button(shell, SWT.CHECK);
+			checkCash.setText("Pay with cash?");		
+			
+			// text field
+			Label labelCCNumber = new Label(shell, SWT.NONE);
+			Text  textCCNumber  = new Text(shell, SWT.BORDER);
+			labelCCNumber.setText("Credit card number");*/
+			
+			// layout
+			GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
+			shell.setLayout(new GridLayout(2, true));
+			data.horizontalSpan = 2;
+			checkCash.setLayoutData(data);		
+			**/
+			
+			/**
+			// show or hide text field depending on checkbutton selection
+			checkCash.addSelectionListener(new SelectionListener() {
+				
+				@Override
+				public void widgetSelected(SelectionEvent arg0) {
+					labelCCNumber.setVisible( !checkCash.getSelection() );
+					textCCNumber.setVisible ( !checkCash.getSelection() );
+				}
+				
+				@Override
+				public void widgetDefaultSelected(SelectionEvent arg0) {}
+			});
+			**/
+			
+			// show form
+			shell.pack();
+			shell.open();
+			return shell;
+			
+		}
+	'''
+	
+	def compile (Formulario f)'''
+		/**
+		* Ventana principal.
+		*/
+		package gui;
+		
+		import javax.swing.*;
+		
+		public class BaseDatos extends JFrame {
+		}
+	'''
+	
+	def compile (Input inp)'''
+		/**
+		* Ventana principal.
+		*/
+		package gui;
+		
+		import javax.swing.*;
+		
+		public class BaseDatos extends JFrame {
+		}
+	'''
+	
+	def generarTest (PruebaInterfaz pruebas)'''
+		package forms;
+
+		import static org.junit.Assert.assertFalse;
+		import static org.junit.Assert.assertTrue;
+		
+		import org.eclipse.swt.widgets.Display;
+		import org.eclipse.swt.widgets.Shell;
+		import org.eclipse.swtbot.swt.finder.SWTBot;
+		import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
+		import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
+		import org.eclipse.swtbot.swt.finder.widgets.SWTBotCheckBox;
+		import org.eclipse.swtbot.swt.finder.widgets.SWTBotLabel;
+		import org.eclipse.swtbot.swt.finder.widgets.SWTBotText;
+		import org.junit.Before;
+		import org.junit.Test;
+		import org.junit.runner.RunWith;
+		
+		@RunWith(SWTBotJunit4ClassRunner.class)
+		public class SampleFormTest {
+		
+		    private Display display;
+		    private Shell shell;
+		    private SWTBot bot;
+		    
+			@Before
+		    public void setup() {
+		      display = new Display();
+		      shell   = new SampleForm().showForm(display);
+		      bot     = new SWTBot(shell);
+			}
+		
+			@Test
+			public void test1() {
+				// slow down execution
+				SWTBotPreferences.PLAYBACK_DELAY = 100;
+		
+				SWTBotCheckBox checkCash  = bot.checkBox("Pay with cash?");
+				SWTBotText  textCCNumber  = bot.textWithLabel("Credit card number");
+				SWTBotLabel labelCCNumber = bot.label("Credit card number");
+		
+				// checkbutton should be unchecked, text field should be visible
+				assertFalse(checkCash.isChecked());
+				assertTrue(textCCNumber.isVisible());
+				assertTrue(labelCCNumber.isVisible());
+		
+				// select check
+				checkCash.setFocus();
+				checkCash.select();
+				display.update();
+		
+				// checkbutton should be checked, text field should be hidden
+				assertTrue(checkCash.isChecked());
+				assertFalse(textCCNumber.isVisible());
+				assertFalse(labelCCNumber.isVisible());
+		
+				// deselect check
+				checkCash.setFocus();
+				checkCash.deselect();
+				display.update();
+		
+				// checkbutton should be unchecked, text field should be visible
+				assertFalse(checkCash.isChecked());
+				assertTrue(textCCNumber.isVisible());
+				assertTrue(labelCCNumber.isVisible());
+		
+				display.dispose();
+				shell.dispose();		 
+			}
+		}
+	'''
+	
 }

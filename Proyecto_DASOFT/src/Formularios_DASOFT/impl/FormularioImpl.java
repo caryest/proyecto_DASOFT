@@ -6,9 +6,10 @@ import Formularios_DASOFT.Formulario;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
 import Formularios_DASOFT.Layout;
 import Formularios_DASOFT.PruebaInterfaz;
-import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 

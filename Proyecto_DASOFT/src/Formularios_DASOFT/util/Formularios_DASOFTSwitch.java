@@ -147,6 +147,34 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Formularios_DASOFTPackage.ASERCION_INVISIBLE: {
+				AsercionInvisible asercionInvisible = (AsercionInvisible)theEObject;
+				T result = caseAsercionInvisible(asercionInvisible);
+				if (result == null) result = caseAsercion(asercionInvisible);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.ASERCION_HABILITADO: {
+				AsercionHabilitado asercionHabilitado = (AsercionHabilitado)theEObject;
+				T result = caseAsercionHabilitado(asercionHabilitado);
+				if (result == null) result = caseAsercion(asercionHabilitado);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.ASERCION_VALOR: {
+				AsercionValor asercionValor = (AsercionValor)theEObject;
+				T result = caseAsercionValor(asercionValor);
+				if (result == null) result = caseAsercion(asercionValor);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO: {
+				AsercionSeleccionado asercionSeleccionado = (AsercionSeleccionado)theEObject;
+				T result = caseAsercionSeleccionado(asercionSeleccionado);
+				if (result == null) result = caseAsercion(asercionSeleccionado);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -163,6 +191,21 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseFormulario(Formulario object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Layout</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Layout</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLayout(Layout object) {
 		return null;
 	}
 
@@ -193,6 +236,36 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInputTexto(InputTexto object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Input Boton</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Input Boton</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInputBoton(InputBoton object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Input Multiple</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Input Multiple</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInputMultiple(InputMultiple object) {
 		return null;
 	}
 
@@ -242,51 +315,6 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Boton</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Boton</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInputBoton(InputBoton object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input Multiple</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input Multiple</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseInputMultiple(InputMultiple object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Layout</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Layout</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseLayout(Layout object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Prueba Interfaz</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -328,6 +356,66 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAsercion(Asercion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Asercion Invisible</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Asercion Invisible</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAsercionInvisible(AsercionInvisible object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Asercion Habilitado</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Asercion Habilitado</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAsercionHabilitado(AsercionHabilitado object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Asercion Valor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Asercion Valor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAsercionValor(AsercionValor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Asercion Seleccionado</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Asercion Seleccionado</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAsercionSeleccionado(AsercionSeleccionado object) {
 		return null;
 	}
 

@@ -58,7 +58,6 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 		switch (eClass.getClassifierID()) {
 			case Formularios_DASOFTPackage.FORMULARIO: return createFormulario();
 			case Formularios_DASOFTPackage.LAYOUT: return createLayout();
-			case Formularios_DASOFTPackage.INPUT: return createInput();
 			case Formularios_DASOFTPackage.INPUT_TEXTO: return createInputTexto();
 			case Formularios_DASOFTPackage.INPUT_BOTON: return createInputBoton();
 			case Formularios_DASOFTPackage.INPUT_MULTIPLE: return createInputMultiple();
@@ -67,7 +66,10 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 			case Formularios_DASOFTPackage.INPUT_CHECK: return createInputCheck();
 			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ: return createPruebaInterfaz();
 			case Formularios_DASOFTPackage.ACCION: return createAccion();
-			case Formularios_DASOFTPackage.ASERCION: return createAsercion();
+			case Formularios_DASOFTPackage.ASERCION_INVISIBLE: return createAsercionInvisible();
+			case Formularios_DASOFTPackage.ASERCION_HABILITADO: return createAsercionHabilitado();
+			case Formularios_DASOFTPackage.ASERCION_VALOR: return createAsercionValor();
+			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO: return createAsercionSeleccionado();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -88,9 +90,9 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Input createInput() {
-		InputImpl input = new InputImpl();
-		return input;
+	public Layout createLayout() {
+		LayoutImpl layout = new LayoutImpl();
+		return layout;
 	}
 
 	/**
@@ -101,6 +103,26 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 	public InputTexto createInputTexto() {
 		InputTextoImpl inputTexto = new InputTextoImpl();
 		return inputTexto;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputBoton createInputBoton() {
+		InputBotonImpl inputBoton = new InputBotonImpl();
+		return inputBoton;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InputMultiple createInputMultiple() {
+		InputMultipleImpl inputMultiple = new InputMultipleImpl();
+		return inputMultiple;
 	}
 
 	/**
@@ -138,36 +160,6 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InputBoton createInputBoton() {
-		InputBotonImpl inputBoton = new InputBotonImpl();
-		return inputBoton;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InputMultiple createInputMultiple() {
-		InputMultipleImpl inputMultiple = new InputMultipleImpl();
-		return inputMultiple;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Layout createLayout() {
-		LayoutImpl layout = new LayoutImpl();
-		return layout;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public PruebaInterfaz createPruebaInterfaz() {
 		PruebaInterfazImpl pruebaInterfaz = new PruebaInterfazImpl();
 		return pruebaInterfaz;
@@ -188,9 +180,39 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Asercion createAsercion() {
-		AsercionImpl asercion = new AsercionImpl();
-		return asercion;
+	public AsercionInvisible createAsercionInvisible() {
+		AsercionInvisibleImpl asercionInvisible = new AsercionInvisibleImpl();
+		return asercionInvisible;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AsercionHabilitado createAsercionHabilitado() {
+		AsercionHabilitadoImpl asercionHabilitado = new AsercionHabilitadoImpl();
+		return asercionHabilitado;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AsercionValor createAsercionValor() {
+		AsercionValorImpl asercionValor = new AsercionValorImpl();
+		return asercionValor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AsercionSeleccionado createAsercionSeleccionado() {
+		AsercionSeleccionadoImpl asercionSeleccionado = new AsercionSeleccionadoImpl();
+		return asercionSeleccionado;
 	}
 
 	/**
