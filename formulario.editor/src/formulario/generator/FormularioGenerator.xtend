@@ -48,6 +48,7 @@ class FormularioGenerator implements IGenerator {
 		import org.eclipse.swt.widgets.Button;
 		import org.eclipse.swt.widgets.Combo;
 		import org.eclipse.swt.widgets.Display;
+		import org.eclipse.swt.widgets.Composite;
 		import org.eclipse.swt.widgets.Label;
 		import org.eclipse.swt.widgets.Shell;
 		import org.eclipse.swt.widgets.Text;
@@ -67,6 +68,7 @@ class FormularioGenerator implements IGenerator {
 				
 				Shell shell = new Shell(display);
 				shell.setText  ("«form.name»");
+				shell.setLayout(new GridLayout(«form.layout.columnas», false));
 				«FOR input : form.layout.entradas»
 				
 				//« input.class.name »
@@ -85,21 +87,30 @@ class FormularioGenerator implements IGenerator {
 				boton«input.name».setText("«input.name»");  
 				« ENDIF »
 				« ELSEIF input instanceof InputTexto »// CASO TEXTO
-				Label label«input.name» = new Label(shell, SWT.NONE);
-				Text  text«input.name»  = new Text(shell, SWT.BORDER);
+				Composite contentText«input.name» = new Composite(shell, SWT.BORDER);
+				contentText«input.name».setLayout(new GridLayout(2, true));
+				Label label«input.name» = new Label(contentText«input.name», SWT.NONE);
+				Text  text«input.name»  = new Text(contentText«input.name», SWT.BORDER);
 				label«input.name».setText("«input.name»");
 				« ELSEIF input instanceof InputCheck »// CASO CHECKBOX
-				Button boton«input.name» = new Button(shell, SWT.CHECK);
-				boton«input.name».setText("«input.name»");
+				Composite contentCheck«input.name» = new Composite(shell, SWT.BORDER);
+				contentCheck«input.name».setLayout(new GridLayout(1, true));
+				Button[] check«input.name» = new Button[«(input as InputCheck).valores.size»];
+				
+				«FOR valor : (input as InputCheck).valores»
+				check«input.name»[«(input as InputCheck).valores.indexOf(valor)»] = new Button(contentCheck«input.name», SWT.CHECK);
+				check«input.name»[«(input as InputCheck).valores.indexOf(valor)»].setText("«valor»");
+				«ENDFOR»
 				« ELSEIF input instanceof InputRadio »// CASO RADIO
+				Composite contentRadio«input.name» = new Composite(shell, SWT.BORDER);
+				contentRadio«input.name».setLayout(new GridLayout(1, true));
 				Button[] radio«input.name» = new Button[«(input as InputRadio).valores.size»];
 
 				«FOR valor : (input as InputRadio).valores»
-				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»] = new Button(shell, SWT.RADIO);
+				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»] = new Button(contentRadio«input.name», SWT.RADIO);
 				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»].setSelection(false);
 				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»].setText("«valor»");
 				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»].setBounds(10, 5, 75, 30);
-				
 				«ENDFOR»
 				« ELSEIF input instanceof InputCombo » // CASO COMBO
 				Combo combo«input.name» = new Combo(shell, SWT.SIMPLE);
@@ -111,7 +122,6 @@ class FormularioGenerator implements IGenerator {
 				
 				// layout
 				GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
-				shell.setLayout(new GridLayout(«form.layout.columnas», true));
 				data.horizontalSpan = 2;
 				//checkCash.setLayoutData(data);	
 				

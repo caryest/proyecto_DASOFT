@@ -24,17 +24,17 @@ Formulario Prueba2
 			InputCombo combo1
 			{
 				valores{ 
-					val1
+					val1, val2
 				}
 				seleccion 1
 			},
 			InputCheck check1
 			{
 				valores{ 
-					val1
+					val1, val2
 				}
 				seleccion{ 
-					1,2,3
+					1,2
 				}
 				reaccion ReaccionVisible
 				{
