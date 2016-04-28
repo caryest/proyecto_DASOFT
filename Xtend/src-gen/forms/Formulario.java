@@ -28,7 +28,7 @@ public class Formulario {
 		
 		Shell shell = new Shell(display);
 		shell.setText  ("Prueba2");
-		shell.setLayout(new GridLayout(3, false));
+		shell.setLayout(new GridLayout(2, false));
 		
 		//Formularios_DASOFT.impl.InputTextoImpl
 		// CASO TEXTO
