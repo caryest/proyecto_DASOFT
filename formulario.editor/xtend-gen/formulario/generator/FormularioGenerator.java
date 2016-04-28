@@ -3,6 +3,10 @@
  */
 package formulario.generator;
 
+import Formularios_DASOFT.BotonCancelar;
+import Formularios_DASOFT.BotonCustom;
+import Formularios_DASOFT.BotonGuardar;
+import Formularios_DASOFT.BotonValidar;
 import Formularios_DASOFT.Formulario;
 import Formularios_DASOFT.Input;
 import Formularios_DASOFT.InputBoton;
@@ -62,6 +66,8 @@ public class FormularioGenerator implements IGenerator {
     _builder.newLine();
     _builder.append("import org.eclipse.swt.widgets.Button;");
     _builder.newLine();
+    _builder.append("import org.eclipse.swt.widgets.Combo;");
+    _builder.newLine();
     _builder.append("import org.eclipse.swt.widgets.Display;");
     _builder.newLine();
     _builder.append("import org.eclipse.swt.widgets.Label;");
@@ -115,82 +121,222 @@ public class FormularioGenerator implements IGenerator {
     _builder.append(_name, "\t\t");
     _builder.append("\");");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t\t");
-    _builder.newLine();
     {
       Layout _layout = form.getLayout();
       EList<Input> _entradas = _layout.getEntradas();
       for(final Input input : _entradas) {
         _builder.append("\t\t");
-        _builder.append("// ");
+        _builder.newLine();
+        _builder.append("\t\t");
+        _builder.append("//");
         Class<? extends Input> _class = input.getClass();
-        _builder.append(_class, "\t\t");
+        String _name_1 = _class.getName();
+        _builder.append(_name_1, "\t\t");
         _builder.newLineIfNotEmpty();
+        _builder.append("\t\t");
         {
           if ((input instanceof InputBoton)) {
-            _builder.append("\t\t");
-            _builder.append("Button boton");
-            String _name_1 = ((InputBoton)input).getName();
-            _builder.append(_name_1, "\t\t");
-            _builder.append(" = new Button(shell, SWT.CHECK);");
+            _builder.append("// CASO BOTONES");
             _builder.newLineIfNotEmpty();
-            _builder.append("\t\t");
-            _builder.append("boton");
-            String _name_2 = ((InputBoton)input).getName();
-            _builder.append(_name_2, "\t\t");
-            _builder.append(".setText(\"");
-            String _name_3 = ((InputBoton)input).getName();
-            _builder.append(_name_3, "\t\t");
-            _builder.append("\");");
-            _builder.newLineIfNotEmpty();
-          } else {
-            if ((input instanceof InputTexto)) {
-              _builder.append("\t\t");
-              _builder.append("Label label");
-              String _name_4 = input.getName();
-              _builder.append(_name_4, "\t\t");
-              _builder.append(" = new Label(shell, SWT.NONE);");
-              _builder.newLineIfNotEmpty();
-              _builder.append("\t\t");
-              _builder.append("Text  text");
-              String _name_5 = input.getName();
-              _builder.append(_name_5, "\t\t");
-              _builder.append("  = new Text(shell, SWT.BORDER);");
-              _builder.newLineIfNotEmpty();
-              _builder.append("\t\t");
-              _builder.append("label");
-              String _name_6 = input.getName();
-              _builder.append(_name_6, "\t\t");
-              _builder.append(".setText(\"");
-              String _name_7 = input.getName();
-              _builder.append(_name_7, "\t\t");
-              _builder.append("\");");
-              _builder.newLineIfNotEmpty();
-            } else {
-              if ((input instanceof InputCheck)) {
+            {
+              if ((input instanceof BotonValidar)) {
                 _builder.append("\t\t");
                 _builder.append("Button boton");
-                String _name_8 = input.getName();
-                _builder.append(_name_8, "\t\t");
+                String _name_2 = ((BotonValidar)input).getName();
+                _builder.append(_name_2, "\t\t");
                 _builder.append(" = new Button(shell, SWT.CHECK);");
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t");
                 _builder.append("boton");
-                String _name_9 = input.getName();
-                _builder.append(_name_9, "\t\t");
-                _builder.append(".setText(\"");
-                String _name_10 = input.getName();
-                _builder.append(_name_10, "\t\t");
-                _builder.append("\");");
+                String _name_3 = ((BotonValidar)input).getName();
+                _builder.append(_name_3, "\t\t");
+                _builder.append(".setText(\"Validar\");");
                 _builder.newLineIfNotEmpty();
               } else {
-                if ((input instanceof InputRadio)) {
+                if ((input instanceof BotonGuardar)) {
                   _builder.append("\t\t");
+                  _builder.append("Button boton");
+                  String _name_4 = ((InputBoton)input).getName();
+                  _builder.append(_name_4, "\t\t");
+                  _builder.append(" = new Button(shell, SWT.CHECK);");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t\t");
+                  _builder.append("boton");
+                  String _name_5 = ((InputBoton)input).getName();
+                  _builder.append(_name_5, "\t\t");
+                  _builder.append(".setText(\"Guardar\");");
+                  _builder.newLineIfNotEmpty();
+                } else {
+                  if ((input instanceof BotonCancelar)) {
+                    _builder.append("\t\t");
+                    _builder.append("Button boton");
+                    String _name_6 = ((InputBoton)input).getName();
+                    _builder.append(_name_6, "\t\t");
+                    _builder.append(" = new Button(shell, SWT.CHECK);");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("\t\t");
+                    _builder.append("boton");
+                    String _name_7 = ((InputBoton)input).getName();
+                    _builder.append(_name_7, "\t\t");
+                    _builder.append(".setText(\"Cancelar\");  ");
+                    _builder.newLineIfNotEmpty();
+                  } else {
+                    if ((input instanceof BotonCustom)) {
+                      _builder.append("\t\t");
+                      _builder.append("Button boton");
+                      String _name_8 = ((InputBoton)input).getName();
+                      _builder.append(_name_8, "\t\t");
+                      _builder.append(" = new Button(shell, SWT.CHECK);");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append("\t\t");
+                      _builder.append("boton");
+                      String _name_9 = ((InputBoton)input).getName();
+                      _builder.append(_name_9, "\t\t");
+                      _builder.append(".setText(\"");
+                      String _name_10 = ((InputBoton)input).getName();
+                      _builder.append(_name_10, "\t\t");
+                      _builder.append("\");  ");
+                      _builder.newLineIfNotEmpty();
+                    }
+                  }
+                }
+              }
+            }
+            _builder.append("\t\t");
+          } else {
+            if ((input instanceof InputTexto)) {
+              _builder.append("// CASO TEXTO");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t\t");
+              _builder.append("Label label");
+              String _name_11 = input.getName();
+              _builder.append(_name_11, "\t\t");
+              _builder.append(" = new Label(shell, SWT.NONE);");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t\t");
+              _builder.append("Text  text");
+              String _name_12 = input.getName();
+              _builder.append(_name_12, "\t\t");
+              _builder.append("  = new Text(shell, SWT.BORDER);");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t\t");
+              _builder.append("label");
+              String _name_13 = input.getName();
+              _builder.append(_name_13, "\t\t");
+              _builder.append(".setText(\"");
+              String _name_14 = input.getName();
+              _builder.append(_name_14, "\t\t");
+              _builder.append("\");");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t\t");
+            } else {
+              if ((input instanceof InputCheck)) {
+                _builder.append("// CASO CHECKBOX");
+                _builder.newLineIfNotEmpty();
+                _builder.append("\t\t");
+                _builder.append("Button boton");
+                String _name_15 = input.getName();
+                _builder.append(_name_15, "\t\t");
+                _builder.append(" = new Button(shell, SWT.CHECK);");
+                _builder.newLineIfNotEmpty();
+                _builder.append("\t\t");
+                _builder.append("boton");
+                String _name_16 = input.getName();
+                _builder.append(_name_16, "\t\t");
+                _builder.append(".setText(\"");
+                String _name_17 = input.getName();
+                _builder.append(_name_17, "\t\t");
+                _builder.append("\");");
+                _builder.newLineIfNotEmpty();
+                _builder.append("\t\t");
+              } else {
+                if ((input instanceof InputRadio)) {
+                  _builder.append("// CASO RADIO");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t\t");
+                  _builder.append("Button[] radio");
+                  String _name_18 = input.getName();
+                  _builder.append(_name_18, "\t\t");
+                  _builder.append(" = new Button[");
+                  EList<String> _valores = ((InputRadio) input).getValores();
+                  int _size = _valores.size();
+                  _builder.append(_size, "\t\t");
+                  _builder.append("];");
+                  _builder.newLineIfNotEmpty();
                   _builder.newLine();
+                  {
+                    EList<String> _valores_1 = ((InputRadio) input).getValores();
+                    for(final String valor : _valores_1) {
+                      _builder.append("\t\t");
+                      _builder.append("radio");
+                      String _name_19 = input.getName();
+                      _builder.append(_name_19, "\t\t");
+                      _builder.append("[");
+                      EList<String> _valores_2 = ((InputRadio) input).getValores();
+                      int _indexOf = _valores_2.indexOf(valor);
+                      _builder.append(_indexOf, "\t\t");
+                      _builder.append("] = new Button(shell, SWT.RADIO);");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append("\t\t");
+                      _builder.append("radio");
+                      String _name_20 = input.getName();
+                      _builder.append(_name_20, "\t\t");
+                      _builder.append("[");
+                      EList<String> _valores_3 = ((InputRadio) input).getValores();
+                      int _indexOf_1 = _valores_3.indexOf(valor);
+                      _builder.append(_indexOf_1, "\t\t");
+                      _builder.append("].setSelection(false);");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append("\t\t");
+                      _builder.append("radio");
+                      String _name_21 = input.getName();
+                      _builder.append(_name_21, "\t\t");
+                      _builder.append("[");
+                      EList<String> _valores_4 = ((InputRadio) input).getValores();
+                      int _indexOf_2 = _valores_4.indexOf(valor);
+                      _builder.append(_indexOf_2, "\t\t");
+                      _builder.append("].setText(\"");
+                      _builder.append(valor, "\t\t");
+                      _builder.append("\");");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append("\t\t");
+                      _builder.append("radio");
+                      String _name_22 = input.getName();
+                      _builder.append(_name_22, "\t\t");
+                      _builder.append("[");
+                      EList<String> _valores_5 = ((InputRadio) input).getValores();
+                      int _indexOf_3 = _valores_5.indexOf(valor);
+                      _builder.append(_indexOf_3, "\t\t");
+                      _builder.append("].setBounds(10, 5, 75, 30);");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append("\t\t");
+                      _builder.newLine();
+                    }
+                  }
+                  _builder.append("\t\t");
                 } else {
                   if ((input instanceof InputCombo)) {
+                    _builder.append(" // CASO COMBO");
+                    _builder.newLineIfNotEmpty();
                     _builder.append("\t\t");
-                    _builder.newLine();
+                    _builder.append("Combo combo");
+                    String _name_23 = input.getName();
+                    _builder.append(_name_23, "\t\t");
+                    _builder.append(" = new Combo(shell, SWT.SIMPLE);");
+                    _builder.newLineIfNotEmpty();
+                    {
+                      EList<String> _valores_6 = ((InputCombo) input).getValores();
+                      for(final String valor_1 : _valores_6) {
+                        _builder.append("\t\t");
+                        _builder.append("combo");
+                        String _name_24 = input.getName();
+                        _builder.append(_name_24, "\t\t");
+                        _builder.append(".add(\"");
+                        _builder.append(valor_1, "\t\t");
+                        _builder.append("\");");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
                   }
                 }
               }

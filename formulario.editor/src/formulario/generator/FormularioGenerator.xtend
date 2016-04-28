@@ -14,6 +14,10 @@ import Formularios_DASOFT.InputCheck
 import Formularios_DASOFT.InputRadio
 import Formularios_DASOFT.InputCombo
 import Formularios_DASOFT.PruebaInterfaz
+import Formularios_DASOFT.BotonValidar
+import Formularios_DASOFT.BotonGuardar
+import Formularios_DASOFT.BotonCancelar
+import Formularios_DASOFT.BotonCustom
 
 /**
  * Generates code from your model files on save.
@@ -42,6 +46,7 @@ class FormularioGenerator implements IGenerator {
 		import org.eclipse.swt.layout.GridData;
 		import org.eclipse.swt.layout.GridLayout;
 		import org.eclipse.swt.widgets.Button;
+		import org.eclipse.swt.widgets.Combo;
 		import org.eclipse.swt.widgets.Display;
 		import org.eclipse.swt.widgets.Label;
 		import org.eclipse.swt.widgets.Shell;
@@ -62,23 +67,45 @@ class FormularioGenerator implements IGenerator {
 				
 				Shell shell = new Shell(display);
 				shell.setText  ("«form.name»");
-				
 				«FOR input : form.layout.entradas»
-				// « input.class »
-				« IF input instanceof InputBoton »
+				
+				//« input.class.name »
+				« IF input instanceof InputBoton »// CASO BOTONES
+				« IF input instanceof BotonValidar »
 				Button boton«input.name» = new Button(shell, SWT.CHECK);
-				boton«input.name».setText("«input.name»");
-				« ELSEIF input instanceof InputTexto »
+				boton«input.name».setText("Validar");
+				« ELSEIF input instanceof BotonGuardar »
+				Button boton«input.name» = new Button(shell, SWT.CHECK);
+				boton«input.name».setText("Guardar");
+				« ELSEIF input instanceof BotonCancelar »
+				Button boton«input.name» = new Button(shell, SWT.CHECK);
+				boton«input.name».setText("Cancelar");  
+				« ELSEIF input instanceof BotonCustom » 
+				Button boton«input.name» = new Button(shell, SWT.CHECK);
+				boton«input.name».setText("«input.name»");  
+				« ENDIF »
+				« ELSEIF input instanceof InputTexto »// CASO TEXTO
 				Label label«input.name» = new Label(shell, SWT.NONE);
 				Text  text«input.name»  = new Text(shell, SWT.BORDER);
 				label«input.name».setText("«input.name»");
-				« ELSEIF input instanceof InputCheck »
+				« ELSEIF input instanceof InputCheck »// CASO CHECKBOX
 				Button boton«input.name» = new Button(shell, SWT.CHECK);
 				boton«input.name».setText("«input.name»");
-				« ELSEIF input instanceof InputRadio »
+				« ELSEIF input instanceof InputRadio »// CASO RADIO
+				Button[] radio«input.name» = new Button[«(input as InputRadio).valores.size»];
+
+				«FOR valor : (input as InputRadio).valores»
+				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»] = new Button(shell, SWT.RADIO);
+				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»].setSelection(false);
+				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»].setText("«valor»");
+				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»].setBounds(10, 5, 75, 30);
 				
-				« ELSEIF input instanceof InputCombo »
-				
+				«ENDFOR»
+				« ELSEIF input instanceof InputCombo » // CASO COMBO
+				Combo combo«input.name» = new Combo(shell, SWT.SIMPLE);
+				«FOR valor : (input as InputCombo).valores»
+				combo«input.name».add("«valor»");
+				«ENDFOR»
 				« ENDIF »
 				«ENDFOR»
 				
