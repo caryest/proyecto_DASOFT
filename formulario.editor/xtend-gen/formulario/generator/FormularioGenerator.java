@@ -44,7 +44,7 @@ public class FormularioGenerator implements IGenerator {
         fsa.generateFile("forms/Formulario.java", _generarFormulario);
         PruebaInterfaz _pruebas = form.getPruebas();
         CharSequence _generarTest = this.generarTest(_pruebas);
-        fsa.generateFile("../tests/forms/Formulario.java", _generarTest);
+        fsa.generateFile("../tests/forms/FormularioTest.java", _generarTest);
       }
     }
   }
@@ -629,7 +629,7 @@ public class FormularioGenerator implements IGenerator {
     _builder.newLine();
     _builder.append("@RunWith(SWTBotJunit4ClassRunner.class)");
     _builder.newLine();
-    _builder.append("public class SampleFormTest {");
+    _builder.append("public class FormularioTest {");
     _builder.newLine();
     _builder.newLine();
     _builder.append("    ");
@@ -653,7 +653,7 @@ public class FormularioGenerator implements IGenerator {
     _builder.append("display = new Display();");
     _builder.newLine();
     _builder.append("      ");
-    _builder.append("shell   = new SampleForm().showForm(display);");
+    _builder.append("shell   = new Formulario().showForm(display);");
     _builder.newLine();
     _builder.append("      ");
     _builder.append("bot     = new SWTBot(shell);");

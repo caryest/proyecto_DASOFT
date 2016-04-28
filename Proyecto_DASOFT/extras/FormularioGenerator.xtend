@@ -32,7 +32,7 @@ class FormularioGenerator implements IGenerator {
  		for(Formulario form : resource.allContents.toIterable.filter(Formulario)){
 			fsa.generateFile("forms/Formulario.java", generarFormulario(form))
 		
-			fsa.generateFile("../tests/forms/Formulario.java", generarTest(form.pruebas))
+			fsa.generateFile("../tests/forms/FormularioTest.java", generarTest(form.pruebas))
 		}
 		
 	}
@@ -98,7 +98,7 @@ class FormularioGenerator implements IGenerator {
 				Button[] check«input.name» = new Button[«(input as InputCheck).valores.size»];
 				
 				«FOR valor : (input as InputCheck).valores»
-				check«input.name»[«(input as InputCheck).valores.indexOf(valor)»] = new Button(check«input.name», SWT.CHECK);
+				check«input.name»[«(input as InputCheck).valores.indexOf(valor)»] = new Button(contentCheck«input.name», SWT.CHECK);
 				check«input.name»[«(input as InputCheck).valores.indexOf(valor)»].setText("«valor»");
 				«ENDFOR»
 				« ELSEIF input instanceof InputRadio »// CASO RADIO

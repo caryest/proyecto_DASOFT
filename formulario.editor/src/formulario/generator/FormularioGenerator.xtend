@@ -32,7 +32,7 @@ class FormularioGenerator implements IGenerator {
  		for(Formulario form : resource.allContents.toIterable.filter(Formulario)){
 			fsa.generateFile("forms/Formulario.java", generarFormulario(form))
 		
-			fsa.generateFile("../tests/forms/Formulario.java", generarTest(form.pruebas))
+			fsa.generateFile("../tests/forms/FormularioTest.java", generarTest(form.pruebas))
 		}
 		
 	}
@@ -209,7 +209,7 @@ class FormularioGenerator implements IGenerator {
 		import org.junit.runner.RunWith;
 		
 		@RunWith(SWTBotJunit4ClassRunner.class)
-		public class SampleFormTest {
+		public class FormularioTest {
 		
 		    private Display display;
 		    private Shell shell;
@@ -218,7 +218,7 @@ class FormularioGenerator implements IGenerator {
 			@Before
 		    public void setup() {
 		      display = new Display();
-		      shell   = new SampleForm().showForm(display);
+		      shell   = new Formulario().showForm(display);
 		      bot     = new SWTBot(shell);
 			}
 		

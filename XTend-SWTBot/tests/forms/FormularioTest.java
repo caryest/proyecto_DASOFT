@@ -16,7 +16,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(SWTBotJunit4ClassRunner.class)
-public class SampleFormTest {
+public class FormularioTest {
 
     private Display display;
     private Shell shell;
@@ -25,7 +25,7 @@ public class SampleFormTest {
 	@Before
     public void setup() {
       display = new Display();
-      shell   = new SampleForm().showForm(display);
+      shell   = new Formulario().showForm(display);
       bot     = new SWTBot(shell);
 	}
 
