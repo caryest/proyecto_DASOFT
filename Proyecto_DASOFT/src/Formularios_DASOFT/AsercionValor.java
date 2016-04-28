@@ -31,7 +31,7 @@ public interface AsercionValor extends Asercion {
 	 * @return the value of the '<em>Valor</em>' attribute.
 	 * @see #setValor(String)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAsercionValor_Valor()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getValor();

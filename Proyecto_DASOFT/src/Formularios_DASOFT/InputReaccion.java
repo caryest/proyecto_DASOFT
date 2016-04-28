@@ -31,7 +31,7 @@ public interface InputReaccion extends InputMultiple {
 	 * @return the value of the '<em>Reaccion</em>' containment reference.
 	 * @see #setReaccion(Reaccion)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInputReaccion_Reaccion()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Reaccion getReaccion();

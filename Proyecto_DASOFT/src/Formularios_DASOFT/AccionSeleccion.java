@@ -31,7 +31,7 @@ public interface AccionSeleccion extends Accion {
 	 * @return the value of the '<em>Valor</em>' attribute.
 	 * @see #setValor(int)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAccionSeleccion_Valor()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getValor();

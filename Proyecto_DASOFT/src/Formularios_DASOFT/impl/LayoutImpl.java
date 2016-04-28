@@ -30,8 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Formularios_DASOFT.impl.LayoutImpl#getAnchura <em>Anchura</em>}</li>
- *   <li>{@link Formularios_DASOFT.impl.LayoutImpl#getAltura <em>Altura</em>}</li>
+ *   <li>{@link Formularios_DASOFT.impl.LayoutImpl#getColumnas <em>Columnas</em>}</li>
  *   <li>{@link Formularios_DASOFT.impl.LayoutImpl#getEntradas <em>Entradas</em>}</li>
  * </ul>
  *
@@ -39,44 +38,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	/**
-	 * The default value of the '{@link #getAnchura() <em>Anchura</em>}' attribute.
+	 * The default value of the '{@link #getColumnas() <em>Columnas</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnchura()
+	 * @see #getColumnas()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int ANCHURA_EDEFAULT = 0;
+	protected static final int COLUMNAS_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #getAnchura() <em>Anchura</em>}' attribute.
+	 * The cached value of the '{@link #getColumnas() <em>Columnas</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnchura()
+	 * @see #getColumnas()
 	 * @generated
 	 * @ordered
 	 */
-	protected int anchura = ANCHURA_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getAltura() <em>Altura</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAltura()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final int ALTURA_EDEFAULT = 0;
-
-	/**
-	 * The cached value of the '{@link #getAltura() <em>Altura</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAltura()
-	 * @generated
-	 * @ordered
-	 */
-	protected int altura = ALTURA_EDEFAULT;
+	protected int columnas = COLUMNAS_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getEntradas() <em>Entradas</em>}' containment reference list.
@@ -112,8 +91,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getAnchura() {
-		return anchura;
+	public int getColumnas() {
+		return columnas;
 	}
 
 	/**
@@ -121,32 +100,11 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAnchura(int newAnchura) {
-		int oldAnchura = anchura;
-		anchura = newAnchura;
+	public void setColumnas(int newColumnas) {
+		int oldColumnas = columnas;
+		columnas = newColumnas;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.LAYOUT__ANCHURA, oldAnchura, anchura));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public int getAltura() {
-		return altura;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAltura(int newAltura) {
-		int oldAltura = altura;
-		altura = newAltura;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.LAYOUT__ALTURA, oldAltura, altura));
+			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.LAYOUT__COLUMNAS, oldColumnas, columnas));
 	}
 
 	/**
@@ -183,10 +141,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.LAYOUT__ANCHURA:
-				return getAnchura();
-			case Formularios_DASOFTPackage.LAYOUT__ALTURA:
-				return getAltura();
+			case Formularios_DASOFTPackage.LAYOUT__COLUMNAS:
+				return getColumnas();
 			case Formularios_DASOFTPackage.LAYOUT__ENTRADAS:
 				return getEntradas();
 		}
@@ -202,11 +158,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.LAYOUT__ANCHURA:
-				setAnchura((Integer)newValue);
-				return;
-			case Formularios_DASOFTPackage.LAYOUT__ALTURA:
-				setAltura((Integer)newValue);
+			case Formularios_DASOFTPackage.LAYOUT__COLUMNAS:
+				setColumnas((Integer)newValue);
 				return;
 			case Formularios_DASOFTPackage.LAYOUT__ENTRADAS:
 				getEntradas().clear();
@@ -224,11 +177,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.LAYOUT__ANCHURA:
-				setAnchura(ANCHURA_EDEFAULT);
-				return;
-			case Formularios_DASOFTPackage.LAYOUT__ALTURA:
-				setAltura(ALTURA_EDEFAULT);
+			case Formularios_DASOFTPackage.LAYOUT__COLUMNAS:
+				setColumnas(COLUMNAS_EDEFAULT);
 				return;
 			case Formularios_DASOFTPackage.LAYOUT__ENTRADAS:
 				getEntradas().clear();
@@ -245,10 +195,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.LAYOUT__ANCHURA:
-				return anchura != ANCHURA_EDEFAULT;
-			case Formularios_DASOFTPackage.LAYOUT__ALTURA:
-				return altura != ALTURA_EDEFAULT;
+			case Formularios_DASOFTPackage.LAYOUT__COLUMNAS:
+				return columnas != COLUMNAS_EDEFAULT;
 			case Formularios_DASOFTPackage.LAYOUT__ENTRADAS:
 				return entradas != null && !entradas.isEmpty();
 		}
@@ -265,10 +213,8 @@ public class LayoutImpl extends MinimalEObjectImpl.Container implements Layout {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (anchura: ");
-		result.append(anchura);
-		result.append(", altura: ");
-		result.append(altura);
+		result.append(" (columnas: ");
+		result.append(columnas);
 		result.append(')');
 		return result.toString();
 	}

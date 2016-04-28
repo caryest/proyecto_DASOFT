@@ -11,13 +11,13 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Layout">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="anchura" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="altura" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="columnas" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entradas" upperBound="-1"
         eType="#//Input" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         defaultValueLiteral="prueba"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="visible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="habilitado" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -32,8 +32,8 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputReaccion" abstract="true" eSuperTypes="#//InputMultiple">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reaccion" eType="#//Reaccion"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reaccion" lowerBound="1"
+        eType="#//Reaccion" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputRadio" eSuperTypes="#//InputReaccion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="seleccion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -49,7 +49,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="BotonGuardar" eSuperTypes="#//InputBoton"/>
   <eClassifiers xsi:type="ecore:EClass" name="BotonCancelar" eSuperTypes="#//BotonGuardar"/>
   <eClassifiers xsi:type="ecore:EClass" name="BotonCustom" eSuperTypes="#//InputBoton">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="funcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="funcion" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Reaccion" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="objetivo" lowerBound="1"

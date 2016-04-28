@@ -2,8 +2,7 @@ Formulario Prueba2
 {
 	layout Layout
 	{
-		anchura 5
-		altura 5
+		columnas 2
 		entradas
 		{
 			InputTexto texto1

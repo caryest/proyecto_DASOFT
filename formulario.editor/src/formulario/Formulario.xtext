@@ -29,11 +29,9 @@ Asercion returns Asercion:
 	AsercionInvisible | AsercionHabilitado | AsercionValor | AsercionSeleccion;
 
 Layout returns Layout:
-	{Layout}
 	'Layout'
 	'{'
-		('anchura' anchura=EInt)?
-		('altura' altura=EInt)?
+		'columnas' columnas=EInt
 		('entradas' '{' entradas+=Input ( "," entradas+=Input)* '}' )?
 	'}';
 
@@ -66,7 +64,6 @@ InputTexto returns InputTexto:
 	'}';
 
 InputRadio returns InputRadio:
-	{InputRadio}
 	(visible?='visible')?
 	(habilitado?='habilitado')?
 	'InputRadio'
@@ -74,7 +71,7 @@ InputRadio returns InputRadio:
 	'{'
 		('valores' '{' valores+=EString ( "," valores+=EString)* '}' )?
 		('seleccion' seleccion=EInt)?
-		('reaccion' reaccion=Reaccion)?
+		'reaccion' reaccion=Reaccion
 	'}';
 
 InputCombo returns InputCombo:
@@ -89,7 +86,6 @@ InputCombo returns InputCombo:
 	'}';
 
 InputCheck returns InputCheck:
-	{InputCheck}
 	(visible?='visible')?
 	(habilitado?='habilitado')?
 	'InputCheck'
@@ -97,7 +93,7 @@ InputCheck returns InputCheck:
 	'{'
 		('valores' '{' valores+=EString ( "," valores+=EString)* '}' )?
 		('seleccion' '{' seleccion+=EInt ( "," seleccion+=EInt)* '}' )?
-		('reaccion' reaccion=Reaccion)?
+		'reaccion' reaccion=Reaccion
 	'}';
 
 BotonValidar returns BotonValidar:
@@ -122,77 +118,68 @@ BotonCancelar returns BotonCancelar:
 	name=EString;
 
 BotonCustom returns BotonCustom:
-	{BotonCustom}
 	(visible?='visible')?
 	(habilitado?='habilitado')?
 	'BotonCustom'
 	name=EString
 	'{'
-		('funcion' funcion=EString)?
+		'funcion' funcion=EString
 	'}';
 
 ReaccionVisible returns ReaccionVisible:
-	{ReaccionVisible}
 	'ReaccionVisible'
 	'{'
-		('activacion' activacion=EInt)?
-		('objetivo' objetivo=[Input|EString])?
+		'activacion' activacion=EInt
+		'objetivo' objetivo=[Input|EString]
 	'}';
 
 ReaccionHabilitado returns ReaccionHabilitado:
-	{ReaccionHabilitado}
 	'ReaccionHabilitado'
 	'{'
-		('activacion' activacion=EInt)?
-		('objetivo' objetivo=[Input|EString])?
+		'activacion' activacion=EInt
+		'objetivo' objetivo=[Input|EString]
 	'}';
 
 AccionValor returns AccionValor:
-	{AccionValor}
 	'AccionValor'
 	'{'
-		('valor' valor=EString)?
-		('elemento' elemento=[Input|EString])?
-		('asercion' asercion=Asercion)?
+		'valor' valor=EString
+		'elemento' elemento=[Input|EString]
+		'asercion' asercion=Asercion
 	'}';
 
 AccionSeleccion returns AccionSeleccion:
-	{AccionSeleccion}
 	'AccionSeleccion'
 	'{'
-		('valor' valor=EInt)?
-		('elemento' elemento=[Input|EString])?
-		('asercion' asercion=Asercion)?
+		'valor' valor=EInt
+		'elemento' elemento=[Input|EString]
+		'asercion' asercion=Asercion
 	'}';
 
 AsercionInvisible returns AsercionInvisible:
-	{AsercionInvisible}
-	(estado?='estado')?
+	estado?='estado'
 	'AsercionInvisible'
 	'{'
-		('elemento' elemento=[Input|EString])?
+		'elemento' elemento=[Input|EString]
 	'}';
 
 AsercionHabilitado returns AsercionHabilitado:
-	{AsercionHabilitado}
-	(estado?='estado')?
+	estado?='estado'
 	'AsercionHabilitado'
 	'{'
-		('elemento' elemento=[Input|EString])?
+		'elemento' elemento=[Input|EString]
 	'}';
 
 AsercionValor returns AsercionValor:
-	{AsercionValor}
 	'AsercionValor'
 	'{'
-		('valor' valor=EString)?
-		('elemento' elemento=[Input|EString])?
+		'valor' valor=EString
+		'elemento' elemento=[Input|EString]
 	'}';
 
 AsercionSeleccion returns AsercionSeleccion:
-	{AsercionSeleccion}
 	'AsercionSeleccion'
 	'{'
-		('estado' estado=EInt)?
-		('elemento' elemento=[Input|EString])?
+		'estado' estado=EInt
+		'elemento' elemento=[Input|EString]
 	'}';

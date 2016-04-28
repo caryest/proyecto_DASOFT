@@ -140,22 +140,13 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int LAYOUT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Anchura</b></em>' attribute.
+	 * The feature id for the '<em><b>Columnas</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LAYOUT__ANCHURA = 0;
-
-	/**
-	 * The feature id for the '<em><b>Altura</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LAYOUT__ALTURA = 1;
+	int LAYOUT__COLUMNAS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Entradas</b></em>' containment reference list.
@@ -164,7 +155,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYOUT__ENTRADAS = 2;
+	int LAYOUT__ENTRADAS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Layout</em>' class.
@@ -173,7 +164,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LAYOUT_FEATURE_COUNT = 3;
+	int LAYOUT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Layout</em>' class.
@@ -1608,26 +1599,15 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EClass getLayout();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Layout#getAnchura <em>Anchura</em>}'.
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Layout#getColumnas <em>Columnas</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Anchura</em>'.
-	 * @see Formularios_DASOFT.Layout#getAnchura()
+	 * @return the meta object for the attribute '<em>Columnas</em>'.
+	 * @see Formularios_DASOFT.Layout#getColumnas()
 	 * @see #getLayout()
 	 * @generated
 	 */
-	EAttribute getLayout_Anchura();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Layout#getAltura <em>Altura</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Altura</em>'.
-	 * @see Formularios_DASOFT.Layout#getAltura()
-	 * @see #getLayout()
-	 * @generated
-	 */
-	EAttribute getLayout_Altura();
+	EAttribute getLayout_Columnas();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link Formularios_DASOFT.Layout#getEntradas <em>Entradas</em>}'.
@@ -2228,20 +2208,12 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EClass LAYOUT = eINSTANCE.getLayout();
 
 		/**
-		 * The meta object literal for the '<em><b>Anchura</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Columnas</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute LAYOUT__ANCHURA = eINSTANCE.getLayout_Anchura();
-
-		/**
-		 * The meta object literal for the '<em><b>Altura</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute LAYOUT__ALTURA = eINSTANCE.getLayout_Altura();
+		EAttribute LAYOUT__COLUMNAS = eINSTANCE.getLayout_Columnas();
 
 		/**
 		 * The meta object literal for the '<em><b>Entradas</b></em>' containment reference list feature.

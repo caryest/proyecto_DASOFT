@@ -31,7 +31,7 @@ public interface AccionValor extends Accion {
 	 * @return the value of the '<em>Valor</em>' attribute.
 	 * @see #setValor(String)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAccionValor_Valor()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getValor();

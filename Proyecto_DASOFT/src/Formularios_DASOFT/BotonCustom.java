@@ -31,7 +31,7 @@ public interface BotonCustom extends InputBoton {
 	 * @return the value of the '<em>Funcion</em>' attribute.
 	 * @see #setFuncion(String)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getBotonCustom_Funcion()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getFuncion();

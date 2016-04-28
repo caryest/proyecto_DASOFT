@@ -35,7 +35,7 @@ public interface Input extends EObject {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInput_Name()
-	 * @model default="prueba"
+	 * @model default="prueba" required="true"
 	 * @generated
 	 */
 	String getName();

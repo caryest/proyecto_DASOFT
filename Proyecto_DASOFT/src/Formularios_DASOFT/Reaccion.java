@@ -33,7 +33,7 @@ public interface Reaccion extends EObject {
 	 * @return the value of the '<em>Objetivo</em>' reference.
 	 * @see #setObjetivo(Input)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getReaccion_Objetivo()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Input getObjetivo();
@@ -59,7 +59,7 @@ public interface Reaccion extends EObject {
 	 * @return the value of the '<em>Activacion</em>' attribute.
 	 * @see #setActivacion(int)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getReaccion_Activacion()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getActivacion();

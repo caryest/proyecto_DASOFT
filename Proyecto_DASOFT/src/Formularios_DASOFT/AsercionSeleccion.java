@@ -31,7 +31,7 @@ public interface AsercionSeleccion extends Asercion {
 	 * @return the value of the '<em>Estado</em>' attribute.
 	 * @see #setEstado(int)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAsercionSeleccion_Estado()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getEstado();

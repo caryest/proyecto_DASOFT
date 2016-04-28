@@ -31,7 +31,7 @@ public interface AsercionHabilitado extends Asercion {
 	 * @return the value of the '<em>Estado</em>' attribute.
 	 * @see #setEstado(boolean)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAsercionHabilitado_Estado()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	boolean isEstado();

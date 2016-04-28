@@ -15,8 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link Formularios_DASOFT.Layout#getAnchura <em>Anchura</em>}</li>
- *   <li>{@link Formularios_DASOFT.Layout#getAltura <em>Altura</em>}</li>
+ *   <li>{@link Formularios_DASOFT.Layout#getColumnas <em>Columnas</em>}</li>
  *   <li>{@link Formularios_DASOFT.Layout#getEntradas <em>Entradas</em>}</li>
  * </ul>
  *
@@ -26,56 +25,30 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Layout extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Anchura</b></em>' attribute.
+	 * Returns the value of the '<em><b>Columnas</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Anchura</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Columnas</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Anchura</em>' attribute.
-	 * @see #setAnchura(int)
-	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getLayout_Anchura()
-	 * @model
+	 * @return the value of the '<em>Columnas</em>' attribute.
+	 * @see #setColumnas(int)
+	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getLayout_Columnas()
+	 * @model required="true"
 	 * @generated
 	 */
-	int getAnchura();
+	int getColumnas();
 
 	/**
-	 * Sets the value of the '{@link Formularios_DASOFT.Layout#getAnchura <em>Anchura</em>}' attribute.
+	 * Sets the value of the '{@link Formularios_DASOFT.Layout#getColumnas <em>Columnas</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Anchura</em>' attribute.
-	 * @see #getAnchura()
+	 * @param value the new value of the '<em>Columnas</em>' attribute.
+	 * @see #getColumnas()
 	 * @generated
 	 */
-	void setAnchura(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Altura</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Altura</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Altura</em>' attribute.
-	 * @see #setAltura(int)
-	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getLayout_Altura()
-	 * @model
-	 * @generated
-	 */
-	int getAltura();
-
-	/**
-	 * Sets the value of the '{@link Formularios_DASOFT.Layout#getAltura <em>Altura</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Altura</em>' attribute.
-	 * @see #getAltura()
-	 * @generated
-	 */
-	void setAltura(int value);
+	void setColumnas(int value);
 
 	/**
 	 * Returns the value of the '<em><b>Entradas</b></em>' containment reference list.

@@ -28,12 +28,15 @@ import com.google.inject.Provider;
 import formulario.services.FormularioGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
+import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
 public abstract class AbstractFormularioSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -107,55 +110,121 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (valor=EInt? elemento=[Input|EString]? asercion=Asercion?)
+	 *     (valor=EInt elemento=[Input|EString] asercion=Asercion)
 	 */
 	protected void sequence_AccionSeleccion(EObject context, AccionSeleccion semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO));
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ACCION__ASERCION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ACCION__ASERCION));
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ACCION_SELECCION__VALOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ACCION_SELECCION__VALOR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAccionSeleccionAccess().getValorEIntParserRuleCall_3_0(), semanticObject.getValor());
+		feeder.accept(grammarAccess.getAccionSeleccionAccess().getElementoInputEStringParserRuleCall_5_0_1(), semanticObject.getElemento());
+		feeder.accept(grammarAccess.getAccionSeleccionAccess().getAsercionAsercionParserRuleCall_7_0(), semanticObject.getAsercion());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (valor=EString? elemento=[Input|EString]? asercion=Asercion?)
+	 *     (valor=EString elemento=[Input|EString] asercion=Asercion)
 	 */
 	protected void sequence_AccionValor(EObject context, AccionValor semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO));
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ACCION__ASERCION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ACCION__ASERCION));
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ACCION_VALOR__VALOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ACCION_VALOR__VALOR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAccionValorAccess().getValorEStringParserRuleCall_3_0(), semanticObject.getValor());
+		feeder.accept(grammarAccess.getAccionValorAccess().getElementoInputEStringParserRuleCall_5_0_1(), semanticObject.getElemento());
+		feeder.accept(grammarAccess.getAccionValorAccess().getAsercionAsercionParserRuleCall_7_0(), semanticObject.getAsercion());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (estado?='estado'? elemento=[Input|EString]?)
+	 *     (estado?='estado' elemento=[Input|EString])
 	 */
 	protected void sequence_AsercionHabilitado(EObject context, AsercionHabilitado semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO));
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_HABILITADO__ESTADO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_HABILITADO__ESTADO));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAsercionHabilitadoAccess().getEstadoEstadoKeyword_0_0(), semanticObject.isEstado());
+		feeder.accept(grammarAccess.getAsercionHabilitadoAccess().getElementoInputEStringParserRuleCall_4_0_1(), semanticObject.getElemento());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (estado?='estado'? elemento=[Input|EString]?)
+	 *     (estado?='estado' elemento=[Input|EString])
 	 */
 	protected void sequence_AsercionInvisible(EObject context, AsercionInvisible semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO));
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_INVISIBLE__ESTADO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_INVISIBLE__ESTADO));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAsercionInvisibleAccess().getEstadoEstadoKeyword_0_0(), semanticObject.isEstado());
+		feeder.accept(grammarAccess.getAsercionInvisibleAccess().getElementoInputEStringParserRuleCall_4_0_1(), semanticObject.getElemento());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (estado=EInt? elemento=[Input|EString]?)
+	 *     (estado=EInt elemento=[Input|EString])
 	 */
 	protected void sequence_AsercionSeleccion(EObject context, AsercionSeleccion semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO));
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_SELECCION__ESTADO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_SELECCION__ESTADO));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAsercionSeleccionAccess().getEstadoEIntParserRuleCall_3_0(), semanticObject.getEstado());
+		feeder.accept(grammarAccess.getAsercionSeleccionAccess().getElementoInputEStringParserRuleCall_5_0_1(), semanticObject.getElemento());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (valor=EString? elemento=[Input|EString]?)
+	 *     (valor=EString elemento=[Input|EString])
 	 */
 	protected void sequence_AsercionValor(EObject context, AsercionValor semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO));
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_VALOR__VALOR) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_VALOR__VALOR));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAsercionValorAccess().getValorEStringParserRuleCall_3_0(), semanticObject.getValor());
+		feeder.accept(grammarAccess.getAsercionValorAccess().getElementoInputEStringParserRuleCall_5_0_1(), semanticObject.getElemento());
+		feeder.finish();
 	}
 	
 	
@@ -170,7 +239,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString funcion=EString?)
+	 *     (visible?='visible'? habilitado?='habilitado'? name=EString funcion=EString)
 	 */
 	protected void sequence_BotonCustom(EObject context, BotonCustom semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -212,7 +281,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	 *         name=EString 
 	 *         (valores+=EString valores+=EString*)? 
 	 *         (seleccion+=EInt seleccion+=EInt*)? 
-	 *         reaccion=Reaccion?
+	 *         reaccion=Reaccion
 	 *     )
 	 */
 	protected void sequence_InputCheck(EObject context, InputCheck semanticObject) {
@@ -237,7 +306,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	 *         name=EString 
 	 *         (valores+=EString valores+=EString*)? 
 	 *         seleccion=EInt? 
-	 *         reaccion=Reaccion?
+	 *         reaccion=Reaccion
 	 *     )
 	 */
 	protected void sequence_InputRadio(EObject context, InputRadio semanticObject) {
@@ -256,7 +325,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (anchura=EInt? altura=EInt? (entradas+=Input entradas+=Input*)?)
+	 *     (columnas=EInt (entradas+=Input entradas+=Input*)?)
 	 */
 	protected void sequence_Layout(EObject context, Layout semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -274,18 +343,38 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (activacion=EInt? objetivo=[Input|EString]?)
+	 *     (activacion=EInt objetivo=[Input|EString])
 	 */
 	protected void sequence_ReaccionHabilitado(EObject context, ReaccionHabilitado semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.REACCION__OBJETIVO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.REACCION__OBJETIVO));
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.REACCION__ACTIVACION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.REACCION__ACTIVACION));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getReaccionHabilitadoAccess().getActivacionEIntParserRuleCall_3_0(), semanticObject.getActivacion());
+		feeder.accept(grammarAccess.getReaccionHabilitadoAccess().getObjetivoInputEStringParserRuleCall_5_0_1(), semanticObject.getObjetivo());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (activacion=EInt? objetivo=[Input|EString]?)
+	 *     (activacion=EInt objetivo=[Input|EString])
 	 */
 	protected void sequence_ReaccionVisible(EObject context, ReaccionVisible semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.REACCION__OBJETIVO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.REACCION__OBJETIVO));
+			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.REACCION__ACTIVACION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.REACCION__ACTIVACION));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getReaccionVisibleAccess().getActivacionEIntParserRuleCall_3_0(), semanticObject.getActivacion());
+		feeder.accept(grammarAccess.getReaccionVisibleAccess().getObjetivoInputEStringParserRuleCall_5_0_1(), semanticObject.getObjetivo());
+		feeder.finish();
 	}
 }

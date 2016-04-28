@@ -32,7 +32,7 @@ public interface Asercion extends EObject {
 	 * @return the value of the '<em>Elemento</em>' reference.
 	 * @see #setElemento(Input)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAsercion_Elemento()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Input getElemento();

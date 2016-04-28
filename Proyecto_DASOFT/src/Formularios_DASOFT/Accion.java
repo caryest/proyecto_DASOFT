@@ -33,7 +33,7 @@ public interface Accion extends EObject {
 	 * @return the value of the '<em>Elemento</em>' reference.
 	 * @see #setElemento(Input)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAccion_Elemento()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	Input getElemento();
@@ -59,7 +59,7 @@ public interface Accion extends EObject {
 	 * @return the value of the '<em>Asercion</em>' containment reference.
 	 * @see #setAsercion(Asercion)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAccion_Asercion()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Asercion getAsercion();

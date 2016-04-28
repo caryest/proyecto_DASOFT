@@ -14,8 +14,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Formulario/pruebas"/>
     </genClasses>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Layout">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Layout/anchura"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Layout/altura"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Layout/columnas"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Layout/entradas"/>
     </genClasses>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Input">
