@@ -48,85 +48,84 @@ class FormularioGenerator implements IGenerator {
 		import org.eclipse.swt.widgets.Text;
 		
 		public class Formulario {
-			
+				
 			public static void main(String[] args) {
 				Display display = new Display();
-				Shell   shell   = new SampleForm().showForm(display);
+				Shell   shell   = new Formulario().showForm(display);
 				while (!shell.isDisposed()) 
 					if (!display.readAndDispatch())
 						display.sleep();
 				display.dispose();
 			}
 			
-		}
-		
-		public Shell showForm(Display display) {
-			
-			Shell shell = new Shell(display);
-			shell.setText  ("«form.name»");
-			
-			«FOR input : form.layout.entradas»
-			// « input.class »
-			« IF input instanceof InputBoton »
-			Button boton«input.name» = new Button(shell, SWT.CHECK);
-			boton«input.name».setText("«input.name»");
-			« ELSEIF input instanceof InputTexto »
-			Label label«input.name» = new Label(shell, SWT.NONE);
-			Text  text«input.name»  = new Text(shell, SWT.BORDER);
-			label«input.name».setText("«input.name»");
-			« ELSEIF input instanceof InputCheck »
-			Button boton«input.name» = new Button(shell, SWT.CHECK);
-			boton«input.name».setText("«input.name»");
-			« ELSEIF input instanceof InputRadio »
-			
-			« ELSEIF input instanceof InputCombo »
-			
-			« ENDIF »
-			«ENDFOR»
-			
-			// layout
-			GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
-			shell.setLayout(new GridLayout(«form.layout.altura», true));
-			data.horizontalSpan = «form.layout.anchura»;
-			//checkCash.setLayoutData(data);	
-			
-			/**
-			// checkbutton
-			Button checkCash = new Button(shell, SWT.CHECK);
-			checkCash.setText("Pay with cash?");		
-			
-			// text field
-			Label labelCCNumber = new Label(shell, SWT.NONE);
-			Text  textCCNumber  = new Text(shell, SWT.BORDER);
-			labelCCNumber.setText("Credit card number");*/
-			
-			// layout
-			GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
-			shell.setLayout(new GridLayout(2, true));
-			data.horizontalSpan = 2;
-			checkCash.setLayoutData(data);		
-			**/
-			
-			/**
-			// show or hide text field depending on checkbutton selection
-			checkCash.addSelectionListener(new SelectionListener() {
+			public Shell showForm(Display display) {
 				
-				@Override
-				public void widgetSelected(SelectionEvent arg0) {
-					labelCCNumber.setVisible( !checkCash.getSelection() );
-					textCCNumber.setVisible ( !checkCash.getSelection() );
-				}
+				Shell shell = new Shell(display);
+				shell.setText  ("«form.name»");
 				
-				@Override
-				public void widgetDefaultSelected(SelectionEvent arg0) {}
-			});
-			**/
-			
-			// show form
-			shell.pack();
-			shell.open();
-			return shell;
-			
+				«FOR input : form.layout.entradas»
+				// « input.class »
+				« IF input instanceof InputBoton »
+				Button boton«input.name» = new Button(shell, SWT.CHECK);
+				boton«input.name».setText("«input.name»");
+				« ELSEIF input instanceof InputTexto »
+				Label label«input.name» = new Label(shell, SWT.NONE);
+				Text  text«input.name»  = new Text(shell, SWT.BORDER);
+				label«input.name».setText("«input.name»");
+				« ELSEIF input instanceof InputCheck »
+				Button boton«input.name» = new Button(shell, SWT.CHECK);
+				boton«input.name».setText("«input.name»");
+				« ELSEIF input instanceof InputRadio »
+				
+				« ELSEIF input instanceof InputCombo »
+				
+				« ENDIF »
+				«ENDFOR»
+				
+				// layout
+				GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
+				shell.setLayout(new GridLayout(«form.layout.columnas», true));
+				data.horizontalSpan = 2;
+				//checkCash.setLayoutData(data);	
+				
+				/**
+				// checkbutton
+				Button checkCash = new Button(shell, SWT.CHECK);
+				checkCash.setText("Pay with cash?");		
+				
+				// text field
+				Label labelCCNumber = new Label(shell, SWT.NONE);
+				Text  textCCNumber  = new Text(shell, SWT.BORDER);
+				labelCCNumber.setText("Credit card number");
+				
+				// layout
+				GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
+				shell.setLayout(new GridLayout(2, true));
+				data.horizontalSpan = 2;
+				checkCash.setLayoutData(data);		
+				**/
+				
+				/**
+				// show or hide text field depending on checkbutton selection
+				checkCash.addSelectionListener(new SelectionListener() {
+					
+					@Override
+					public void widgetSelected(SelectionEvent arg0) {
+						labelCCNumber.setVisible( !checkCash.getSelection() );
+						textCCNumber.setVisible ( !checkCash.getSelection() );
+					}
+					
+					@Override
+					public void widgetDefaultSelected(SelectionEvent arg0) {}
+				});
+				**/
+				
+				// show form
+				shell.pack();
+				shell.open();
+				return shell;
+				
+			}
 		}
 	'''
 	
