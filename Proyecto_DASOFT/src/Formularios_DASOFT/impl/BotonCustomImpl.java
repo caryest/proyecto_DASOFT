@@ -2,47 +2,55 @@
  */
 package Formularios_DASOFT.impl;
 
+import Formularios_DASOFT.BotonCustom;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
-import Formularios_DASOFT.InputCheck;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Input Check</b></em>'.
+ * An implementation of the model object '<em><b>Boton Custom</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Formularios_DASOFT.impl.InputCheckImpl#getSeleccion <em>Seleccion</em>}</li>
+ *   <li>{@link Formularios_DASOFT.impl.BotonCustomImpl#getFuncion <em>Funcion</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class InputCheckImpl extends InputReaccionImpl implements InputCheck {
+public class BotonCustomImpl extends InputBotonImpl implements BotonCustom {
 	/**
-	 * The cached value of the '{@link #getSeleccion() <em>Seleccion</em>}' attribute list.
+	 * The default value of the '{@link #getFuncion() <em>Funcion</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSeleccion()
+	 * @see #getFuncion()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Integer> seleccion;
+	protected static final String FUNCION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFuncion() <em>Funcion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFuncion()
+	 * @generated
+	 * @ordered
+	 */
+	protected String funcion = FUNCION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InputCheckImpl() {
+	protected BotonCustomImpl() {
 		super();
 	}
 
@@ -53,7 +61,7 @@ public class InputCheckImpl extends InputReaccionImpl implements InputCheck {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Formularios_DASOFTPackage.Literals.INPUT_CHECK;
+		return Formularios_DASOFTPackage.Literals.BOTON_CUSTOM;
 	}
 
 	/**
@@ -61,11 +69,20 @@ public class InputCheckImpl extends InputReaccionImpl implements InputCheck {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Integer> getSeleccion() {
-		if (seleccion == null) {
-			seleccion = new EDataTypeUniqueEList<Integer>(Integer.class, this, Formularios_DASOFTPackage.INPUT_CHECK__SELECCION);
-		}
-		return seleccion;
+	public String getFuncion() {
+		return funcion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFuncion(String newFuncion) {
+		String oldFuncion = funcion;
+		funcion = newFuncion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.BOTON_CUSTOM__FUNCION, oldFuncion, funcion));
 	}
 
 	/**
@@ -76,8 +93,8 @@ public class InputCheckImpl extends InputReaccionImpl implements InputCheck {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_CHECK__SELECCION:
-				return getSeleccion();
+			case Formularios_DASOFTPackage.BOTON_CUSTOM__FUNCION:
+				return getFuncion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -87,13 +104,11 @@ public class InputCheckImpl extends InputReaccionImpl implements InputCheck {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_CHECK__SELECCION:
-				getSeleccion().clear();
-				getSeleccion().addAll((Collection<? extends Integer>)newValue);
+			case Formularios_DASOFTPackage.BOTON_CUSTOM__FUNCION:
+				setFuncion((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -107,8 +122,8 @@ public class InputCheckImpl extends InputReaccionImpl implements InputCheck {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_CHECK__SELECCION:
-				getSeleccion().clear();
+			case Formularios_DASOFTPackage.BOTON_CUSTOM__FUNCION:
+				setFuncion(FUNCION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -122,8 +137,8 @@ public class InputCheckImpl extends InputReaccionImpl implements InputCheck {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.INPUT_CHECK__SELECCION:
-				return seleccion != null && !seleccion.isEmpty();
+			case Formularios_DASOFTPackage.BOTON_CUSTOM__FUNCION:
+				return FUNCION_EDEFAULT == null ? funcion != null : !FUNCION_EDEFAULT.equals(funcion);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -138,10 +153,10 @@ public class InputCheckImpl extends InputReaccionImpl implements InputCheck {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (seleccion: ");
-		result.append(seleccion);
+		result.append(" (funcion: ");
+		result.append(funcion);
 		result.append(')');
 		return result.toString();
 	}
 
-} //InputCheckImpl
+} //BotonCustomImpl

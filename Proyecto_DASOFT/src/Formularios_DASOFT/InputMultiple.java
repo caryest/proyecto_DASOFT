@@ -17,7 +17,7 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInputMultiple()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface InputMultiple extends Input {

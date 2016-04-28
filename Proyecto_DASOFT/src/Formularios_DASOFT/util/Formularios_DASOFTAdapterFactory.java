@@ -92,6 +92,10 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 				return createInputMultipleAdapter();
 			}
 			@Override
+			public Adapter caseInputReaccion(InputReaccion object) {
+				return createInputReaccionAdapter();
+			}
+			@Override
 			public Adapter caseInputRadio(InputRadio object) {
 				return createInputRadioAdapter();
 			}
@@ -104,12 +108,48 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 				return createInputCheckAdapter();
 			}
 			@Override
+			public Adapter caseBotonValidar(BotonValidar object) {
+				return createBotonValidarAdapter();
+			}
+			@Override
+			public Adapter caseBotonGuardar(BotonGuardar object) {
+				return createBotonGuardarAdapter();
+			}
+			@Override
+			public Adapter caseBotonCancelar(BotonCancelar object) {
+				return createBotonCancelarAdapter();
+			}
+			@Override
+			public Adapter caseBotonCustom(BotonCustom object) {
+				return createBotonCustomAdapter();
+			}
+			@Override
+			public Adapter caseReaccion(Reaccion object) {
+				return createReaccionAdapter();
+			}
+			@Override
+			public Adapter caseReaccionVisible(ReaccionVisible object) {
+				return createReaccionVisibleAdapter();
+			}
+			@Override
+			public Adapter caseReaccionHabilitado(ReaccionHabilitado object) {
+				return createReaccionHabilitadoAdapter();
+			}
+			@Override
 			public Adapter casePruebaInterfaz(PruebaInterfaz object) {
 				return createPruebaInterfazAdapter();
 			}
 			@Override
 			public Adapter caseAccion(Accion object) {
 				return createAccionAdapter();
+			}
+			@Override
+			public Adapter caseAccionValor(AccionValor object) {
+				return createAccionValorAdapter();
+			}
+			@Override
+			public Adapter caseAccionSeleccion(AccionSeleccion object) {
+				return createAccionSeleccionAdapter();
 			}
 			@Override
 			public Adapter caseAsercion(Asercion object) {
@@ -128,8 +168,8 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 				return createAsercionValorAdapter();
 			}
 			@Override
-			public Adapter caseAsercionSeleccionado(AsercionSeleccionado object) {
-				return createAsercionSeleccionadoAdapter();
+			public Adapter caseAsercionSeleccion(AsercionSeleccion object) {
+				return createAsercionSeleccionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -236,6 +276,20 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.InputReaccion <em>Input Reaccion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.InputReaccion
+	 * @generated
+	 */
+	public Adapter createInputReaccionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.InputRadio <em>Input Radio</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -278,6 +332,104 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.BotonValidar <em>Boton Validar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.BotonValidar
+	 * @generated
+	 */
+	public Adapter createBotonValidarAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.BotonGuardar <em>Boton Guardar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.BotonGuardar
+	 * @generated
+	 */
+	public Adapter createBotonGuardarAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.BotonCancelar <em>Boton Cancelar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.BotonCancelar
+	 * @generated
+	 */
+	public Adapter createBotonCancelarAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.BotonCustom <em>Boton Custom</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.BotonCustom
+	 * @generated
+	 */
+	public Adapter createBotonCustomAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.Reaccion <em>Reaccion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.Reaccion
+	 * @generated
+	 */
+	public Adapter createReaccionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.ReaccionVisible <em>Reaccion Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.ReaccionVisible
+	 * @generated
+	 */
+	public Adapter createReaccionVisibleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.ReaccionHabilitado <em>Reaccion Habilitado</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.ReaccionHabilitado
+	 * @generated
+	 */
+	public Adapter createReaccionHabilitadoAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.PruebaInterfaz <em>Prueba Interfaz</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -302,6 +454,34 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAccionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.AccionValor <em>Accion Valor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.AccionValor
+	 * @generated
+	 */
+	public Adapter createAccionValorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.AccionSeleccion <em>Accion Seleccion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.AccionSeleccion
+	 * @generated
+	 */
+	public Adapter createAccionSeleccionAdapter() {
 		return null;
 	}
 
@@ -362,16 +542,16 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.AsercionSeleccionado <em>Asercion Seleccionado</em>}'.
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.AsercionSeleccion <em>Asercion Seleccion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see Formularios_DASOFT.AsercionSeleccionado
+	 * @see Formularios_DASOFT.AsercionSeleccion
 	 * @generated
 	 */
-	public Adapter createAsercionSeleccionadoAdapter() {
+	public Adapter createAsercionSeleccionAdapter() {
 		return null;
 	}
 

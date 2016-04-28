@@ -49,24 +49,6 @@ public interface Formularios_DASOFTFactory extends EFactory {
 	InputTexto createInputTexto();
 
 	/**
-	 * Returns a new object of class '<em>Input Boton</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input Boton</em>'.
-	 * @generated
-	 */
-	InputBoton createInputBoton();
-
-	/**
-	 * Returns a new object of class '<em>Input Multiple</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Input Multiple</em>'.
-	 * @generated
-	 */
-	InputMultiple createInputMultiple();
-
-	/**
 	 * Returns a new object of class '<em>Input Radio</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -94,6 +76,60 @@ public interface Formularios_DASOFTFactory extends EFactory {
 	InputCheck createInputCheck();
 
 	/**
+	 * Returns a new object of class '<em>Boton Validar</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boton Validar</em>'.
+	 * @generated
+	 */
+	BotonValidar createBotonValidar();
+
+	/**
+	 * Returns a new object of class '<em>Boton Guardar</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boton Guardar</em>'.
+	 * @generated
+	 */
+	BotonGuardar createBotonGuardar();
+
+	/**
+	 * Returns a new object of class '<em>Boton Cancelar</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boton Cancelar</em>'.
+	 * @generated
+	 */
+	BotonCancelar createBotonCancelar();
+
+	/**
+	 * Returns a new object of class '<em>Boton Custom</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Boton Custom</em>'.
+	 * @generated
+	 */
+	BotonCustom createBotonCustom();
+
+	/**
+	 * Returns a new object of class '<em>Reaccion Visible</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reaccion Visible</em>'.
+	 * @generated
+	 */
+	ReaccionVisible createReaccionVisible();
+
+	/**
+	 * Returns a new object of class '<em>Reaccion Habilitado</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Reaccion Habilitado</em>'.
+	 * @generated
+	 */
+	ReaccionHabilitado createReaccionHabilitado();
+
+	/**
 	 * Returns a new object of class '<em>Prueba Interfaz</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,13 +139,22 @@ public interface Formularios_DASOFTFactory extends EFactory {
 	PruebaInterfaz createPruebaInterfaz();
 
 	/**
-	 * Returns a new object of class '<em>Accion</em>'.
+	 * Returns a new object of class '<em>Accion Valor</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Accion</em>'.
+	 * @return a new object of class '<em>Accion Valor</em>'.
 	 * @generated
 	 */
-	Accion createAccion();
+	AccionValor createAccionValor();
+
+	/**
+	 * Returns a new object of class '<em>Accion Seleccion</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Accion Seleccion</em>'.
+	 * @generated
+	 */
+	AccionSeleccion createAccionSeleccion();
 
 	/**
 	 * Returns a new object of class '<em>Asercion Invisible</em>'.
@@ -139,13 +184,13 @@ public interface Formularios_DASOFTFactory extends EFactory {
 	AsercionValor createAsercionValor();
 
 	/**
-	 * Returns a new object of class '<em>Asercion Seleccionado</em>'.
+	 * Returns a new object of class '<em>Asercion Seleccion</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Asercion Seleccionado</em>'.
+	 * @return a new object of class '<em>Asercion Seleccion</em>'.
 	 * @generated
 	 */
-	AsercionSeleccionado createAsercionSeleccionado();
+	AsercionSeleccion createAsercionSeleccion();
 
 	/**
 	 * Returns the package supported by this factory.

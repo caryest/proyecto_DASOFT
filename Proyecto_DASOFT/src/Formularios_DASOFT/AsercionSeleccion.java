@@ -5,21 +5,21 @@ package Formularios_DASOFT;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Asercion Seleccionado</b></em>'.
+ * A representation of the model object '<em><b>Asercion Seleccion</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link Formularios_DASOFT.AsercionSeleccionado#isEstado <em>Estado</em>}</li>
+ *   <li>{@link Formularios_DASOFT.AsercionSeleccion#getEstado <em>Estado</em>}</li>
  * </ul>
  *
- * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAsercionSeleccionado()
+ * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAsercionSeleccion()
  * @model
  * @generated
  */
-public interface AsercionSeleccionado extends Asercion {
+public interface AsercionSeleccion extends Asercion {
 	/**
 	 * Returns the value of the '<em><b>Estado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -29,21 +29,21 @@ public interface AsercionSeleccionado extends Asercion {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Estado</em>' attribute.
-	 * @see #setEstado(boolean)
-	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAsercionSeleccionado_Estado()
+	 * @see #setEstado(int)
+	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAsercionSeleccion_Estado()
 	 * @model
 	 * @generated
 	 */
-	boolean isEstado();
+	int getEstado();
 
 	/**
-	 * Sets the value of the '{@link Formularios_DASOFT.AsercionSeleccionado#isEstado <em>Estado</em>}' attribute.
+	 * Sets the value of the '{@link Formularios_DASOFT.AsercionSeleccion#getEstado <em>Estado</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Estado</em>' attribute.
-	 * @see #isEstado()
+	 * @see #getEstado()
 	 * @generated
 	 */
-	void setEstado(boolean value);
+	void setEstado(int value);
 
-} // AsercionSeleccionado
+} // AsercionSeleccion

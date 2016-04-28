@@ -2,25 +2,25 @@
  */
 package Formularios_DASOFT.impl;
 
+import Formularios_DASOFT.BotonCancelar;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
-import Formularios_DASOFT.InputBoton;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Input Boton</b></em>'.
+ * An implementation of the model object '<em><b>Boton Cancelar</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class InputBotonImpl extends InputImpl implements InputBoton {
+public class BotonCancelarImpl extends BotonGuardarImpl implements BotonCancelar {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InputBotonImpl() {
+	protected BotonCancelarImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public abstract class InputBotonImpl extends InputImpl implements InputBoton {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Formularios_DASOFTPackage.Literals.INPUT_BOTON;
+		return Formularios_DASOFTPackage.Literals.BOTON_CANCELAR;
 	}
 
-} //InputBotonImpl
+} //BotonCancelarImpl

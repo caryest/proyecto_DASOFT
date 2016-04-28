@@ -2,7 +2,7 @@
  */
 package Formularios_DASOFT.impl;
 
-import Formularios_DASOFT.AsercionSeleccionado;
+import Formularios_DASOFT.AccionSeleccion;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,44 +13,44 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Asercion Seleccionado</b></em>'.
+ * An implementation of the model object '<em><b>Accion Seleccion</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link Formularios_DASOFT.impl.AsercionSeleccionadoImpl#isEstado <em>Estado</em>}</li>
+ *   <li>{@link Formularios_DASOFT.impl.AccionSeleccionImpl#getValor <em>Valor</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AsercionSeleccionadoImpl extends AsercionImpl implements AsercionSeleccionado {
+public class AccionSeleccionImpl extends AccionImpl implements AccionSeleccion {
 	/**
-	 * The default value of the '{@link #isEstado() <em>Estado</em>}' attribute.
+	 * The default value of the '{@link #getValor() <em>Valor</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isEstado()
+	 * @see #getValor()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean ESTADO_EDEFAULT = false;
+	protected static final int VALOR_EDEFAULT = 0;
 
 	/**
-	 * The cached value of the '{@link #isEstado() <em>Estado</em>}' attribute.
+	 * The cached value of the '{@link #getValor() <em>Valor</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isEstado()
+	 * @see #getValor()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean estado = ESTADO_EDEFAULT;
+	protected int valor = VALOR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AsercionSeleccionadoImpl() {
+	protected AccionSeleccionImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class AsercionSeleccionadoImpl extends AsercionImpl implements AsercionSe
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Formularios_DASOFTPackage.Literals.ASERCION_SELECCIONADO;
+		return Formularios_DASOFTPackage.Literals.ACCION_SELECCION;
 	}
 
 	/**
@@ -69,8 +69,8 @@ public class AsercionSeleccionadoImpl extends AsercionImpl implements AsercionSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isEstado() {
-		return estado;
+	public int getValor() {
+		return valor;
 	}
 
 	/**
@@ -78,11 +78,11 @@ public class AsercionSeleccionadoImpl extends AsercionImpl implements AsercionSe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEstado(boolean newEstado) {
-		boolean oldEstado = estado;
-		estado = newEstado;
+	public void setValor(int newValor) {
+		int oldValor = valor;
+		valor = newValor;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.ASERCION_SELECCIONADO__ESTADO, oldEstado, estado));
+			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.ACCION_SELECCION__VALOR, oldValor, valor));
 	}
 
 	/**
@@ -93,8 +93,8 @@ public class AsercionSeleccionadoImpl extends AsercionImpl implements AsercionSe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO__ESTADO:
-				return isEstado();
+			case Formularios_DASOFTPackage.ACCION_SELECCION__VALOR:
+				return getValor();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -107,8 +107,8 @@ public class AsercionSeleccionadoImpl extends AsercionImpl implements AsercionSe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO__ESTADO:
-				setEstado((Boolean)newValue);
+			case Formularios_DASOFTPackage.ACCION_SELECCION__VALOR:
+				setValor((Integer)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -122,8 +122,8 @@ public class AsercionSeleccionadoImpl extends AsercionImpl implements AsercionSe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO__ESTADO:
-				setEstado(ESTADO_EDEFAULT);
+			case Formularios_DASOFTPackage.ACCION_SELECCION__VALOR:
+				setValor(VALOR_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -137,8 +137,8 @@ public class AsercionSeleccionadoImpl extends AsercionImpl implements AsercionSe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO__ESTADO:
-				return estado != ESTADO_EDEFAULT;
+			case Formularios_DASOFTPackage.ACCION_SELECCION__VALOR:
+				return valor != VALOR_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -153,10 +153,10 @@ public class AsercionSeleccionadoImpl extends AsercionImpl implements AsercionSe
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (estado: ");
-		result.append(estado);
+		result.append(" (valor: ");
+		result.append(valor);
 		result.append(')');
 		return result.toString();
 	}
 
-} //AsercionSeleccionadoImpl
+} //AccionSeleccionImpl

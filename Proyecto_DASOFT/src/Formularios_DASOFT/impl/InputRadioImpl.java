@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class InputRadioImpl extends InputMultipleImpl implements InputRadio {
+public class InputRadioImpl extends InputReaccionImpl implements InputRadio {
 	/**
 	 * The default value of the '{@link #getSeleccion() <em>Seleccion</em>}' attribute.
 	 * <!-- begin-user-doc -->

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see Formularios_DASOFT.Formularios_DASOFTPackage#getAccion()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface Accion extends EObject {

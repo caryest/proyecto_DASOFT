@@ -19,7 +19,7 @@ package Formularios_DASOFT;
  * @model
  * @generated
  */
-public interface InputRadio extends InputMultiple {
+public interface InputRadio extends InputReaccion {
 	/**
 	 * Returns the value of the '<em><b>Seleccion</b></em>' attribute.
 	 * <!-- begin-user-doc -->

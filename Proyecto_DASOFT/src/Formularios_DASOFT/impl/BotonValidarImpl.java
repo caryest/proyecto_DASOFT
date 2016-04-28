@@ -2,25 +2,25 @@
  */
 package Formularios_DASOFT.impl;
 
+import Formularios_DASOFT.BotonValidar;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
-import Formularios_DASOFT.InputBoton;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Input Boton</b></em>'.
+ * An implementation of the model object '<em><b>Boton Validar</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class InputBotonImpl extends InputImpl implements InputBoton {
+public class BotonValidarImpl extends InputBotonImpl implements BotonValidar {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InputBotonImpl() {
+	protected BotonValidarImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public abstract class InputBotonImpl extends InputImpl implements InputBoton {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Formularios_DASOFTPackage.Literals.INPUT_BOTON;
+		return Formularios_DASOFTPackage.Literals.BOTON_VALIDAR;
 	}
 
-} //InputBotonImpl
+} //BotonValidarImpl

@@ -3,24 +3,24 @@
 package Formularios_DASOFT.impl;
 
 import Formularios_DASOFT.Formularios_DASOFTPackage;
-import Formularios_DASOFT.InputBoton;
+import Formularios_DASOFT.ReaccionVisible;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Input Boton</b></em>'.
+ * An implementation of the model object '<em><b>Reaccion Visible</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class InputBotonImpl extends InputImpl implements InputBoton {
+public class ReaccionVisibleImpl extends ReaccionImpl implements ReaccionVisible {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InputBotonImpl() {
+	protected ReaccionVisibleImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public abstract class InputBotonImpl extends InputImpl implements InputBoton {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return Formularios_DASOFTPackage.Literals.INPUT_BOTON;
+		return Formularios_DASOFTPackage.Literals.REACCION_VISIBLE;
 	}
 
-} //InputBotonImpl
+} //ReaccionVisibleImpl

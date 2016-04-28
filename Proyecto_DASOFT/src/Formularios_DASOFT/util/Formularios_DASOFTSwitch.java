@@ -105,9 +105,18 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Formularios_DASOFTPackage.INPUT_REACCION: {
+				InputReaccion inputReaccion = (InputReaccion)theEObject;
+				T result = caseInputReaccion(inputReaccion);
+				if (result == null) result = caseInputMultiple(inputReaccion);
+				if (result == null) result = caseInput(inputReaccion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Formularios_DASOFTPackage.INPUT_RADIO: {
 				InputRadio inputRadio = (InputRadio)theEObject;
 				T result = caseInputRadio(inputRadio);
+				if (result == null) result = caseInputReaccion(inputRadio);
 				if (result == null) result = caseInputMultiple(inputRadio);
 				if (result == null) result = caseInput(inputRadio);
 				if (result == null) result = defaultCase(theEObject);
@@ -124,8 +133,62 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 			case Formularios_DASOFTPackage.INPUT_CHECK: {
 				InputCheck inputCheck = (InputCheck)theEObject;
 				T result = caseInputCheck(inputCheck);
+				if (result == null) result = caseInputReaccion(inputCheck);
 				if (result == null) result = caseInputMultiple(inputCheck);
 				if (result == null) result = caseInput(inputCheck);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.BOTON_VALIDAR: {
+				BotonValidar botonValidar = (BotonValidar)theEObject;
+				T result = caseBotonValidar(botonValidar);
+				if (result == null) result = caseInputBoton(botonValidar);
+				if (result == null) result = caseInput(botonValidar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.BOTON_GUARDAR: {
+				BotonGuardar botonGuardar = (BotonGuardar)theEObject;
+				T result = caseBotonGuardar(botonGuardar);
+				if (result == null) result = caseInputBoton(botonGuardar);
+				if (result == null) result = caseInput(botonGuardar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.BOTON_CANCELAR: {
+				BotonCancelar botonCancelar = (BotonCancelar)theEObject;
+				T result = caseBotonCancelar(botonCancelar);
+				if (result == null) result = caseBotonGuardar(botonCancelar);
+				if (result == null) result = caseInputBoton(botonCancelar);
+				if (result == null) result = caseInput(botonCancelar);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.BOTON_CUSTOM: {
+				BotonCustom botonCustom = (BotonCustom)theEObject;
+				T result = caseBotonCustom(botonCustom);
+				if (result == null) result = caseInputBoton(botonCustom);
+				if (result == null) result = caseInput(botonCustom);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.REACCION: {
+				Reaccion reaccion = (Reaccion)theEObject;
+				T result = caseReaccion(reaccion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.REACCION_VISIBLE: {
+				ReaccionVisible reaccionVisible = (ReaccionVisible)theEObject;
+				T result = caseReaccionVisible(reaccionVisible);
+				if (result == null) result = caseReaccion(reaccionVisible);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.REACCION_HABILITADO: {
+				ReaccionHabilitado reaccionHabilitado = (ReaccionHabilitado)theEObject;
+				T result = caseReaccionHabilitado(reaccionHabilitado);
+				if (result == null) result = caseReaccion(reaccionHabilitado);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -138,6 +201,20 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 			case Formularios_DASOFTPackage.ACCION: {
 				Accion accion = (Accion)theEObject;
 				T result = caseAccion(accion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.ACCION_VALOR: {
+				AccionValor accionValor = (AccionValor)theEObject;
+				T result = caseAccionValor(accionValor);
+				if (result == null) result = caseAccion(accionValor);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case Formularios_DASOFTPackage.ACCION_SELECCION: {
+				AccionSeleccion accionSeleccion = (AccionSeleccion)theEObject;
+				T result = caseAccionSeleccion(accionSeleccion);
+				if (result == null) result = caseAccion(accionSeleccion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -168,10 +245,10 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO: {
-				AsercionSeleccionado asercionSeleccionado = (AsercionSeleccionado)theEObject;
-				T result = caseAsercionSeleccionado(asercionSeleccionado);
-				if (result == null) result = caseAsercion(asercionSeleccionado);
+			case Formularios_DASOFTPackage.ASERCION_SELECCION: {
+				AsercionSeleccion asercionSeleccion = (AsercionSeleccion)theEObject;
+				T result = caseAsercionSeleccion(asercionSeleccion);
+				if (result == null) result = caseAsercion(asercionSeleccion);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -270,6 +347,21 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Input Reaccion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Input Reaccion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInputReaccion(InputReaccion object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Input Radio</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -315,6 +407,111 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Boton Validar</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Boton Validar</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBotonValidar(BotonValidar object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Boton Guardar</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Boton Guardar</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBotonGuardar(BotonGuardar object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Boton Cancelar</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Boton Cancelar</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBotonCancelar(BotonCancelar object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Boton Custom</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Boton Custom</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBotonCustom(BotonCustom object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Reaccion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Reaccion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReaccion(Reaccion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Reaccion Visible</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Reaccion Visible</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReaccionVisible(ReaccionVisible object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Reaccion Habilitado</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Reaccion Habilitado</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseReaccionHabilitado(ReaccionHabilitado object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Prueba Interfaz</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -341,6 +538,36 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAccion(Accion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Accion Valor</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Accion Valor</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccionValor(AccionValor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Accion Seleccion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Accion Seleccion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccionSeleccion(AccionSeleccion object) {
 		return null;
 	}
 
@@ -405,17 +632,17 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Asercion Seleccionado</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Asercion Seleccion</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Asercion Seleccionado</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Asercion Seleccion</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAsercionSeleccionado(AsercionSeleccionado object) {
+	public T caseAsercionSeleccion(AsercionSeleccion object) {
 		return null;
 	}
 

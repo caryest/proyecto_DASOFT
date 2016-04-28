@@ -26,30 +26,53 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="obligatorio" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InputBoton" eSuperTypes="#//Input"/>
-  <eClassifiers xsi:type="ecore:EClass" name="InputMultiple" eSuperTypes="#//Input">
+  <eClassifiers xsi:type="ecore:EClass" name="InputBoton" abstract="true" eSuperTypes="#//Input"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InputMultiple" abstract="true" eSuperTypes="#//Input">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valores" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InputRadio" eSuperTypes="#//InputMultiple">
+  <eClassifiers xsi:type="ecore:EClass" name="InputReaccion" abstract="true" eSuperTypes="#//InputMultiple">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reaccion" eType="#//Reaccion"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InputRadio" eSuperTypes="#//InputReaccion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="seleccion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputCombo" eSuperTypes="#//InputMultiple">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="seleccion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InputCheck" eSuperTypes="#//InputMultiple">
+  <eClassifiers xsi:type="ecore:EClass" name="InputCheck" eSuperTypes="#//InputReaccion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="seleccion" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BotonValidar" eSuperTypes="#//InputBoton"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BotonGuardar" eSuperTypes="#//InputBoton"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BotonCancelar" eSuperTypes="#//BotonGuardar"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BotonCustom" eSuperTypes="#//InputBoton">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="funcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Reaccion" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objetivo" eType="#//Input"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="activacion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ReaccionVisible" eSuperTypes="#//Reaccion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReaccionHabilitado" eSuperTypes="#//Reaccion"/>
   <eClassifiers xsi:type="ecore:EClass" name="PruebaInterfaz">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="acciones" upperBound="-1"
         eType="#//Accion" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Accion">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elemento" eType="#//Input"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="asercion" eType="#//Asercion"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Accion" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elemento" lowerBound="1"
+        eType="#//Input"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="asercion" lowerBound="1"
+        eType="#//Asercion" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AccionValor" eSuperTypes="#//Accion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AccionSeleccion" eSuperTypes="#//Accion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Asercion" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="elemento" eType="#//Input"/>
@@ -63,7 +86,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="AsercionValor" eSuperTypes="#//Asercion">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valor" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AsercionSeleccionado" eSuperTypes="#//Asercion">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AsercionSeleccion" eSuperTypes="#//Asercion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
 </ecore:EPackage>

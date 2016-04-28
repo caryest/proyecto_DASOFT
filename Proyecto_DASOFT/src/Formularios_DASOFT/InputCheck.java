@@ -20,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface InputCheck extends InputMultiple {
+public interface InputCheck extends InputReaccion {
 	/**
 	 * Returns the value of the '<em><b>Seleccion</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.Integer}.

@@ -3,21 +3,26 @@
  */
 package formulario.serializer;
 
-import Formularios_DASOFT.Accion;
+import Formularios_DASOFT.AccionSeleccion;
+import Formularios_DASOFT.AccionValor;
 import Formularios_DASOFT.AsercionHabilitado;
 import Formularios_DASOFT.AsercionInvisible;
-import Formularios_DASOFT.AsercionSeleccionado;
+import Formularios_DASOFT.AsercionSeleccion;
 import Formularios_DASOFT.AsercionValor;
+import Formularios_DASOFT.BotonCancelar;
+import Formularios_DASOFT.BotonCustom;
+import Formularios_DASOFT.BotonGuardar;
+import Formularios_DASOFT.BotonValidar;
 import Formularios_DASOFT.Formulario;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
-import Formularios_DASOFT.InputBoton;
 import Formularios_DASOFT.InputCheck;
 import Formularios_DASOFT.InputCombo;
-import Formularios_DASOFT.InputMultiple;
 import Formularios_DASOFT.InputRadio;
 import Formularios_DASOFT.InputTexto;
 import Formularios_DASOFT.Layout;
 import Formularios_DASOFT.PruebaInterfaz;
+import Formularios_DASOFT.ReaccionHabilitado;
+import Formularios_DASOFT.ReaccionVisible;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import formulario.services.FormularioGrammarAccess;
@@ -39,8 +44,11 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	@Override
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == Formularios_DASOFTPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case Formularios_DASOFTPackage.ACCION:
-				sequence_Accion(context, (Accion) semanticObject); 
+			case Formularios_DASOFTPackage.ACCION_SELECCION:
+				sequence_AccionSeleccion(context, (AccionSeleccion) semanticObject); 
+				return; 
+			case Formularios_DASOFTPackage.ACCION_VALOR:
+				sequence_AccionValor(context, (AccionValor) semanticObject); 
 				return; 
 			case Formularios_DASOFTPackage.ASERCION_HABILITADO:
 				sequence_AsercionHabilitado(context, (AsercionHabilitado) semanticObject); 
@@ -48,26 +56,32 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 			case Formularios_DASOFTPackage.ASERCION_INVISIBLE:
 				sequence_AsercionInvisible(context, (AsercionInvisible) semanticObject); 
 				return; 
-			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO:
-				sequence_AsercionSeleccionado(context, (AsercionSeleccionado) semanticObject); 
+			case Formularios_DASOFTPackage.ASERCION_SELECCION:
+				sequence_AsercionSeleccion(context, (AsercionSeleccion) semanticObject); 
 				return; 
 			case Formularios_DASOFTPackage.ASERCION_VALOR:
 				sequence_AsercionValor(context, (AsercionValor) semanticObject); 
 				return; 
+			case Formularios_DASOFTPackage.BOTON_CANCELAR:
+				sequence_BotonCancelar(context, (BotonCancelar) semanticObject); 
+				return; 
+			case Formularios_DASOFTPackage.BOTON_CUSTOM:
+				sequence_BotonCustom(context, (BotonCustom) semanticObject); 
+				return; 
+			case Formularios_DASOFTPackage.BOTON_GUARDAR:
+				sequence_BotonGuardar_Impl(context, (BotonGuardar) semanticObject); 
+				return; 
+			case Formularios_DASOFTPackage.BOTON_VALIDAR:
+				sequence_BotonValidar(context, (BotonValidar) semanticObject); 
+				return; 
 			case Formularios_DASOFTPackage.FORMULARIO:
 				sequence_Formulario(context, (Formulario) semanticObject); 
-				return; 
-			case Formularios_DASOFTPackage.INPUT_BOTON:
-				sequence_InputBoton(context, (InputBoton) semanticObject); 
 				return; 
 			case Formularios_DASOFTPackage.INPUT_CHECK:
 				sequence_InputCheck(context, (InputCheck) semanticObject); 
 				return; 
 			case Formularios_DASOFTPackage.INPUT_COMBO:
 				sequence_InputCombo(context, (InputCombo) semanticObject); 
-				return; 
-			case Formularios_DASOFTPackage.INPUT_MULTIPLE:
-				sequence_InputMultiple_Impl(context, (InputMultiple) semanticObject); 
 				return; 
 			case Formularios_DASOFTPackage.INPUT_RADIO:
 				sequence_InputRadio(context, (InputRadio) semanticObject); 
@@ -81,15 +95,30 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ:
 				sequence_PruebaInterfaz(context, (PruebaInterfaz) semanticObject); 
 				return; 
+			case Formularios_DASOFTPackage.REACCION_HABILITADO:
+				sequence_ReaccionHabilitado(context, (ReaccionHabilitado) semanticObject); 
+				return; 
+			case Formularios_DASOFTPackage.REACCION_VISIBLE:
+				sequence_ReaccionVisible(context, (ReaccionVisible) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
 	 * Constraint:
-	 *     (elemento=[Input|EString]? asercion=Asercion?)
+	 *     (valor=EInt? elemento=[Input|EString]? asercion=Asercion?)
 	 */
-	protected void sequence_Accion(EObject context, Accion semanticObject) {
+	protected void sequence_AccionSeleccion(EObject context, AccionSeleccion semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (valor=EString? elemento=[Input|EString]? asercion=Asercion?)
+	 */
+	protected void sequence_AccionValor(EObject context, AccionValor semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -114,9 +143,9 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (estado?='estado'? elemento=[Input|EString]?)
+	 *     (estado=EInt? elemento=[Input|EString]?)
 	 */
-	protected void sequence_AsercionSeleccionado(EObject context, AsercionSeleccionado semanticObject) {
+	protected void sequence_AsercionSeleccion(EObject context, AsercionSeleccion semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -132,6 +161,42 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
+	 *     (visible?='visible'? habilitado?='habilitado'? name=EString)
+	 */
+	protected void sequence_BotonCancelar(EObject context, BotonCancelar semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (visible?='visible'? habilitado?='habilitado'? name=EString funcion=EString?)
+	 */
+	protected void sequence_BotonCustom(EObject context, BotonCustom semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (visible?='visible'? habilitado?='habilitado'? name=EString)
+	 */
+	protected void sequence_BotonGuardar_Impl(EObject context, BotonGuardar semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (visible?='visible'? habilitado?='habilitado'? name=EString)
+	 */
+	protected void sequence_BotonValidar(EObject context, BotonValidar semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (comprobarAsercion?='comprobarAsercion'? comprobarAccion?='comprobarAccion'? name=EString layout=Layout pruebas=PruebaInterfaz?)
 	 */
 	protected void sequence_Formulario(EObject context, Formulario semanticObject) {
@@ -141,16 +206,14 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString)
-	 */
-	protected void sequence_InputBoton(EObject context, InputBoton semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString (valores+=EString valores+=EString*)? (seleccion+=EInt seleccion+=EInt*)?)
+	 *     (
+	 *         visible?='visible'? 
+	 *         habilitado?='habilitado'? 
+	 *         name=EString 
+	 *         (valores+=EString valores+=EString*)? 
+	 *         (seleccion+=EInt seleccion+=EInt*)? 
+	 *         reaccion=Reaccion?
+	 *     )
 	 */
 	protected void sequence_InputCheck(EObject context, InputCheck semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -168,16 +231,14 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString (valores+=EString valores+=EString*)?)
-	 */
-	protected void sequence_InputMultiple_Impl(EObject context, InputMultiple semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString (valores+=EString valores+=EString*)? seleccion=EInt?)
+	 *     (
+	 *         visible?='visible'? 
+	 *         habilitado?='habilitado'? 
+	 *         name=EString 
+	 *         (valores+=EString valores+=EString*)? 
+	 *         seleccion=EInt? 
+	 *         reaccion=Reaccion?
+	 *     )
 	 */
 	protected void sequence_InputRadio(EObject context, InputRadio semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -207,6 +268,24 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	 *     (name=EString (acciones+=Accion acciones+=Accion*)?)
 	 */
 	protected void sequence_PruebaInterfaz(EObject context, PruebaInterfaz semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (activacion=EInt? objetivo=[Input|EString]?)
+	 */
+	protected void sequence_ReaccionHabilitado(EObject context, ReaccionHabilitado semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (activacion=EInt? objetivo=[Input|EString]?)
+	 */
+	protected void sequence_ReaccionVisible(EObject context, ReaccionVisible semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }

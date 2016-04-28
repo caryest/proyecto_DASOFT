@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  *
  * @generated
  */
-public class InputMultipleImpl extends InputImpl implements InputMultiple {
+public abstract class InputMultipleImpl extends InputImpl implements InputMultiple {
 	/**
 	 * The cached value of the '{@link #getValores() <em>Valores</em>}' attribute list.
 	 * <!-- begin-user-doc -->

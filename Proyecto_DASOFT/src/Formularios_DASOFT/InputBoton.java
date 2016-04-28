@@ -10,7 +10,7 @@ package Formularios_DASOFT;
  *
  *
  * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInputBoton()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface InputBoton extends Input {

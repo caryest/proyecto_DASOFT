@@ -10,17 +10,17 @@ Formulario Prueba2
 			{
 				valor Pepe
 			},
-			InputTexto texto2
-			{
-				valor Pepa
-			},
-			InputBoton boton1,
 			InputRadio radio1
 			{
 				valores{ 
-					val1
+					val1, val2, val3
 				}
 				seleccion 1
+				reaccion ReaccionHabilitado
+				{
+					activacion 1
+					objetivo texto1
+				}
 			},
 			InputCombo combo1
 			{
@@ -37,6 +37,11 @@ Formulario Prueba2
 				seleccion{ 
 					1,2,3
 				}
+				reaccion ReaccionVisible
+				{
+					activacion 2
+					objetivo radio1
+				}
 			}
 			
 		}
@@ -44,19 +49,21 @@ Formulario Prueba2
 	pruebas PruebaInterfaz prueba1
 	{
 		acciones{
-			Accion{
+			AccionSeleccion{
+				valor 2
 				elemento combo1
-				asercion AsercionValor
+				asercion AsercionSeleccion
 				{
-					valor "1"
+					estado 1
 					elemento texto1
 				}
 			},
-			Accion{
+			AccionValor{
+				valor Pepe
 				elemento texto1
 				asercion estado AsercionHabilitado // Aqui es "true" habilitado
 				{
-					elemento texto2
+					elemento texto1
 				}
 			}
 		}

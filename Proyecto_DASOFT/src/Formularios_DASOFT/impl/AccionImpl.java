@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class AccionImpl extends MinimalEObjectImpl.Container implements Accion {
+public abstract class AccionImpl extends MinimalEObjectImpl.Container implements Accion {
 	/**
 	 * The cached value of the '{@link #getElemento() <em>Elemento</em>}' reference.
 	 * <!-- begin-user-doc -->

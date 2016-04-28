@@ -59,17 +59,22 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 			case Formularios_DASOFTPackage.FORMULARIO: return createFormulario();
 			case Formularios_DASOFTPackage.LAYOUT: return createLayout();
 			case Formularios_DASOFTPackage.INPUT_TEXTO: return createInputTexto();
-			case Formularios_DASOFTPackage.INPUT_BOTON: return createInputBoton();
-			case Formularios_DASOFTPackage.INPUT_MULTIPLE: return createInputMultiple();
 			case Formularios_DASOFTPackage.INPUT_RADIO: return createInputRadio();
 			case Formularios_DASOFTPackage.INPUT_COMBO: return createInputCombo();
 			case Formularios_DASOFTPackage.INPUT_CHECK: return createInputCheck();
+			case Formularios_DASOFTPackage.BOTON_VALIDAR: return createBotonValidar();
+			case Formularios_DASOFTPackage.BOTON_GUARDAR: return createBotonGuardar();
+			case Formularios_DASOFTPackage.BOTON_CANCELAR: return createBotonCancelar();
+			case Formularios_DASOFTPackage.BOTON_CUSTOM: return createBotonCustom();
+			case Formularios_DASOFTPackage.REACCION_VISIBLE: return createReaccionVisible();
+			case Formularios_DASOFTPackage.REACCION_HABILITADO: return createReaccionHabilitado();
 			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ: return createPruebaInterfaz();
-			case Formularios_DASOFTPackage.ACCION: return createAccion();
+			case Formularios_DASOFTPackage.ACCION_VALOR: return createAccionValor();
+			case Formularios_DASOFTPackage.ACCION_SELECCION: return createAccionSeleccion();
 			case Formularios_DASOFTPackage.ASERCION_INVISIBLE: return createAsercionInvisible();
 			case Formularios_DASOFTPackage.ASERCION_HABILITADO: return createAsercionHabilitado();
 			case Formularios_DASOFTPackage.ASERCION_VALOR: return createAsercionValor();
-			case Formularios_DASOFTPackage.ASERCION_SELECCIONADO: return createAsercionSeleccionado();
+			case Formularios_DASOFTPackage.ASERCION_SELECCION: return createAsercionSeleccion();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -110,26 +115,6 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InputBoton createInputBoton() {
-		InputBotonImpl inputBoton = new InputBotonImpl();
-		return inputBoton;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InputMultiple createInputMultiple() {
-		InputMultipleImpl inputMultiple = new InputMultipleImpl();
-		return inputMultiple;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public InputRadio createInputRadio() {
 		InputRadioImpl inputRadio = new InputRadioImpl();
 		return inputRadio;
@@ -160,6 +145,66 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BotonValidar createBotonValidar() {
+		BotonValidarImpl botonValidar = new BotonValidarImpl();
+		return botonValidar;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BotonGuardar createBotonGuardar() {
+		BotonGuardarImpl botonGuardar = new BotonGuardarImpl();
+		return botonGuardar;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BotonCancelar createBotonCancelar() {
+		BotonCancelarImpl botonCancelar = new BotonCancelarImpl();
+		return botonCancelar;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BotonCustom createBotonCustom() {
+		BotonCustomImpl botonCustom = new BotonCustomImpl();
+		return botonCustom;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReaccionVisible createReaccionVisible() {
+		ReaccionVisibleImpl reaccionVisible = new ReaccionVisibleImpl();
+		return reaccionVisible;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReaccionHabilitado createReaccionHabilitado() {
+		ReaccionHabilitadoImpl reaccionHabilitado = new ReaccionHabilitadoImpl();
+		return reaccionHabilitado;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PruebaInterfaz createPruebaInterfaz() {
 		PruebaInterfazImpl pruebaInterfaz = new PruebaInterfazImpl();
 		return pruebaInterfaz;
@@ -170,9 +215,19 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Accion createAccion() {
-		AccionImpl accion = new AccionImpl();
-		return accion;
+	public AccionValor createAccionValor() {
+		AccionValorImpl accionValor = new AccionValorImpl();
+		return accionValor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AccionSeleccion createAccionSeleccion() {
+		AccionSeleccionImpl accionSeleccion = new AccionSeleccionImpl();
+		return accionSeleccion;
 	}
 
 	/**
@@ -210,9 +265,9 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AsercionSeleccionado createAsercionSeleccionado() {
-		AsercionSeleccionadoImpl asercionSeleccionado = new AsercionSeleccionadoImpl();
-		return asercionSeleccionado;
+	public AsercionSeleccion createAsercionSeleccion() {
+		AsercionSeleccionImpl asercionSeleccion = new AsercionSeleccionImpl();
+		return asercionSeleccion;
 	}
 
 	/**
