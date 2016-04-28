@@ -38,8 +38,8 @@ Formulario Prueba2
 				}
 				reaccion ReaccionVisible
 				{
-					activacion 2
-					objetivo radio1
+					activacion 1
+					objetivo texto1
 				}
 			}
 			

@@ -96,6 +96,38 @@ public class Formulario {
 		checkCash.setLayoutData(data);		
 		**/
 		
+		// Funciones Reaccion
+		
+		//Formularios_DASOFT.impl.InputTextoImpl
+				
+		//Formularios_DASOFT.impl.InputRadioImpl
+		// CASO RADIO
+		radioradio1[0].addSelectionListener(new SelectionListener() {
+			
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				texttexto1.setEnabled( !radioradio1[0].getSelection() );
+			}
+			
+			@Override
+			public void widgetDefaultSelected(SelectionEvent arg0) {}
+		});
+		
+		//Formularios_DASOFT.impl.InputComboImpl
+				
+		//Formularios_DASOFT.impl.InputCheckImpl
+		// CASO CHECKBOX
+		checkcheck1[0].addSelectionListener(new SelectionListener() {
+			
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				texttexto1.setVisible( !checkcheck1[0].getSelection() );
+			}
+			
+			@Override
+			public void widgetDefaultSelected(SelectionEvent arg0) {}
+		});
+				
 		/**
 		// show or hide text field depending on checkbutton selection
 		checkCash.addSelectionListener(new SelectionListener() {

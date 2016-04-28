@@ -18,6 +18,8 @@ import Formularios_DASOFT.BotonValidar
 import Formularios_DASOFT.BotonGuardar
 import Formularios_DASOFT.BotonCancelar
 import Formularios_DASOFT.BotonCustom
+import Formularios_DASOFT.ReaccionHabilitado
+import Formularios_DASOFT.ReaccionVisible
 
 /**
  * Generates code from your model files on save.
@@ -142,6 +144,105 @@ class FormularioGenerator implements IGenerator {
 				checkCash.setLayoutData(data);		
 				**/
 				
+				// Funciones Reaccion
+				«FOR input : form.layout.entradas»
+				
+				//« input.class.name »
+				« IF input instanceof InputCheck »// CASO CHECKBOX
+				« IF (input as InputCheck).reaccion != null »
+				« IF (input as InputCheck).reaccion instanceof ReaccionVisible »
+				check«input.name»[«(input as InputCheck).reaccion.activacion»].addSelectionListener(new SelectionListener() {
+					
+					@Override
+					public void widgetSelected(SelectionEvent arg0) {
+						« IF (input as InputCheck).reaccion.objetivo instanceof InputBoton »
+						boton«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputTexto »
+						text«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCheck »
+						check«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCombo »
+						combo«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputRadio »
+						radio«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						« ENDIF »
+					}
+					
+					@Override
+					public void widgetDefaultSelected(SelectionEvent arg0) {}
+				});
+				« ELSEIF (input as InputCheck).reaccion instanceof ReaccionHabilitado »
+				check«input.name»[«(input as InputCheck).reaccion.activacion»].addSelectionListener(new SelectionListener() {
+					
+					@Override
+					public void widgetSelected(SelectionEvent arg0) {
+						« IF (input as InputCheck).reaccion.objetivo instanceof InputBoton »
+						boton«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputTexto »
+						text«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCheck »
+						check«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCombo »
+						combo«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputRadio »
+						radio«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						« ENDIF »
+					}
+					
+					@Override
+					public void widgetDefaultSelected(SelectionEvent arg0) {}
+				});
+				« ENDIF »
+				« ENDIF »
+				« ELSEIF input instanceof InputRadio »// CASO RADIO
+				« IF (input as InputRadio).reaccion != null »
+				« IF (input as InputRadio).reaccion instanceof ReaccionVisible »
+				radio«input.name»[«(input as InputRadio).reaccion.activacion»].addSelectionListener(new SelectionListener() {
+					
+					@Override
+					public void widgetSelected(SelectionEvent arg0) {
+						« IF (input as InputRadio).reaccion.objetivo instanceof InputBoton »
+						boton«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputTexto »
+						text«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCheck »
+						check«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCombo »
+						combo«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputRadio »
+						radio«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						« ENDIF »
+					}
+					
+					@Override
+					public void widgetDefaultSelected(SelectionEvent arg0) {}
+				});
+				« ELSEIF (input as InputRadio).reaccion instanceof ReaccionHabilitado »
+				radio«input.name»[«(input as InputRadio).reaccion.activacion»].addSelectionListener(new SelectionListener() {
+					
+					@Override
+					public void widgetSelected(SelectionEvent arg0) {
+						« IF (input as InputRadio).reaccion.objetivo instanceof InputBoton »
+						boton«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputTexto »
+						text«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCheck »
+						check«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCombo »
+						combo«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputRadio »
+						radio«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						« ENDIF »
+					}
+					
+					@Override
+					public void widgetDefaultSelected(SelectionEvent arg0) {}
+				});
+				« ENDIF »
+				« ENDIF »
+				« ENDIF »
+				«ENDFOR»
+				
 				/**
 				// show or hide text field depending on checkbutton selection
 				checkCash.addSelectionListener(new SelectionListener() {
@@ -163,30 +264,6 @@ class FormularioGenerator implements IGenerator {
 				return shell;
 				
 			}
-		}
-	'''
-	
-	def compile (Formulario f)'''
-		/**
-		* Ventana principal.
-		*/
-		package gui;
-		
-		import javax.swing.*;
-		
-		public class BaseDatos extends JFrame {
-		}
-	'''
-	
-	def compile (Input inp)'''
-		/**
-		* Ventana principal.
-		*/
-		package gui;
-		
-		import javax.swing.*;
-		
-		public class BaseDatos extends JFrame {
 		}
 	'''
 	

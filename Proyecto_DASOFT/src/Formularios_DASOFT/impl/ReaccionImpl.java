@@ -132,7 +132,7 @@ public abstract class ReaccionImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	public void setActivacion(int newActivacion) {
 		int oldActivacion = activacion;
-		activacion = newActivacion;
+		activacion = newActivacion-1;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.REACCION__ACTIVACION, oldActivacion, activacion));
 	}

@@ -16,6 +16,10 @@ import Formularios_DASOFT.InputRadio;
 import Formularios_DASOFT.InputTexto;
 import Formularios_DASOFT.Layout;
 import Formularios_DASOFT.PruebaInterfaz;
+import Formularios_DASOFT.Reaccion;
+import Formularios_DASOFT.ReaccionHabilitado;
+import Formularios_DASOFT.ReaccionVisible;
+import com.google.common.base.Objects;
 import com.google.common.collect.Iterables;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.TreeIterator;
@@ -489,6 +493,648 @@ public class FormularioGenerator implements IGenerator {
     _builder.append("\t\t");
     _builder.newLine();
     _builder.append("\t\t");
+    _builder.append("// Funciones Reaccion");
+    _builder.newLine();
+    {
+      Layout _layout_2 = form.getLayout();
+      EList<Input> _entradas_1 = _layout_2.getEntradas();
+      for(final Input input_1 : _entradas_1) {
+        _builder.append("\t\t");
+        _builder.newLine();
+        _builder.append("\t\t");
+        _builder.append("//");
+        Class<? extends Input> _class_1 = input_1.getClass();
+        String _name_35 = _class_1.getName();
+        _builder.append(_name_35, "\t\t");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t\t");
+        {
+          if ((input_1 instanceof InputCheck)) {
+            _builder.append("// CASO CHECKBOX");
+            _builder.newLineIfNotEmpty();
+            {
+              Reaccion _reaccion = ((InputCheck) input_1).getReaccion();
+              boolean _notEquals = (!Objects.equal(_reaccion, null));
+              if (_notEquals) {
+                {
+                  Reaccion _reaccion_1 = ((InputCheck) input_1).getReaccion();
+                  if ((_reaccion_1 instanceof ReaccionVisible)) {
+                    _builder.append("\t\t");
+                    _builder.append("check");
+                    String _name_36 = ((InputCheck)input_1).getName();
+                    _builder.append(_name_36, "\t\t");
+                    _builder.append("[");
+                    Reaccion _reaccion_2 = ((InputCheck) input_1).getReaccion();
+                    int _activacion = _reaccion_2.getActivacion();
+                    _builder.append(_activacion, "\t\t");
+                    _builder.append("].addSelectionListener(new SelectionListener() {");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("\t\t");
+                    _builder.append("\t");
+                    _builder.newLine();
+                    _builder.append("\t\t");
+                    _builder.append("\t");
+                    _builder.append("@Override");
+                    _builder.newLine();
+                    _builder.append("\t\t");
+                    _builder.append("\t");
+                    _builder.append("public void widgetSelected(SelectionEvent arg0) {");
+                    _builder.newLine();
+                    {
+                      Reaccion _reaccion_3 = ((InputCheck) input_1).getReaccion();
+                      Input _objetivo = _reaccion_3.getObjetivo();
+                      if ((_objetivo instanceof InputBoton)) {
+                        _builder.append("\t\t");
+                        _builder.append("\t\t");
+                        _builder.append("boton");
+                        Reaccion _reaccion_4 = ((InputCheck) input_1).getReaccion();
+                        Input _objetivo_1 = _reaccion_4.getObjetivo();
+                        String _name_37 = _objetivo_1.getName();
+                        _builder.append(_name_37, "\t\t\t\t");
+                        _builder.append(".setVisible( !check");
+                        String _name_38 = ((InputCheck)input_1).getName();
+                        _builder.append(_name_38, "\t\t\t\t");
+                        _builder.append("[");
+                        Reaccion _reaccion_5 = ((InputCheck) input_1).getReaccion();
+                        int _activacion_1 = _reaccion_5.getActivacion();
+                        _builder.append(_activacion_1, "\t\t\t\t");
+                        _builder.append("].getSelection() );");
+                        _builder.newLineIfNotEmpty();
+                      } else {
+                        Reaccion _reaccion_6 = ((InputCheck) input_1).getReaccion();
+                        Input _objetivo_2 = _reaccion_6.getObjetivo();
+                        if ((_objetivo_2 instanceof InputTexto)) {
+                          _builder.append("\t\t");
+                          _builder.append("\t\t");
+                          _builder.append("text");
+                          Reaccion _reaccion_7 = ((InputCheck) input_1).getReaccion();
+                          Input _objetivo_3 = _reaccion_7.getObjetivo();
+                          String _name_39 = _objetivo_3.getName();
+                          _builder.append(_name_39, "\t\t\t\t");
+                          _builder.append(".setVisible( !check");
+                          String _name_40 = ((InputCheck)input_1).getName();
+                          _builder.append(_name_40, "\t\t\t\t");
+                          _builder.append("[");
+                          Reaccion _reaccion_8 = ((InputCheck) input_1).getReaccion();
+                          int _activacion_2 = _reaccion_8.getActivacion();
+                          _builder.append(_activacion_2, "\t\t\t\t");
+                          _builder.append("].getSelection() );");
+                          _builder.newLineIfNotEmpty();
+                        } else {
+                          Reaccion _reaccion_9 = ((InputCheck) input_1).getReaccion();
+                          Input _objetivo_4 = _reaccion_9.getObjetivo();
+                          if ((_objetivo_4 instanceof InputCheck)) {
+                            _builder.append("\t\t");
+                            _builder.append("\t\t");
+                            _builder.append("check");
+                            Reaccion _reaccion_10 = ((InputCheck) input_1).getReaccion();
+                            Input _objetivo_5 = _reaccion_10.getObjetivo();
+                            String _name_41 = _objetivo_5.getName();
+                            _builder.append(_name_41, "\t\t\t\t");
+                            _builder.append(".setVisible( !check");
+                            String _name_42 = ((InputCheck)input_1).getName();
+                            _builder.append(_name_42, "\t\t\t\t");
+                            _builder.append("[");
+                            Reaccion _reaccion_11 = ((InputCheck) input_1).getReaccion();
+                            int _activacion_3 = _reaccion_11.getActivacion();
+                            _builder.append(_activacion_3, "\t\t\t\t");
+                            _builder.append("].getSelection() );");
+                            _builder.newLineIfNotEmpty();
+                          } else {
+                            Reaccion _reaccion_12 = ((InputCheck) input_1).getReaccion();
+                            Input _objetivo_6 = _reaccion_12.getObjetivo();
+                            if ((_objetivo_6 instanceof InputCombo)) {
+                              _builder.append("\t\t");
+                              _builder.append("\t\t");
+                              _builder.append("combo");
+                              Reaccion _reaccion_13 = ((InputCheck) input_1).getReaccion();
+                              Input _objetivo_7 = _reaccion_13.getObjetivo();
+                              String _name_43 = _objetivo_7.getName();
+                              _builder.append(_name_43, "\t\t\t\t");
+                              _builder.append(".setVisible( !check");
+                              String _name_44 = ((InputCheck)input_1).getName();
+                              _builder.append(_name_44, "\t\t\t\t");
+                              _builder.append("[");
+                              Reaccion _reaccion_14 = ((InputCheck) input_1).getReaccion();
+                              int _activacion_4 = _reaccion_14.getActivacion();
+                              _builder.append(_activacion_4, "\t\t\t\t");
+                              _builder.append("].getSelection() );");
+                              _builder.newLineIfNotEmpty();
+                            } else {
+                              Reaccion _reaccion_15 = ((InputCheck) input_1).getReaccion();
+                              Input _objetivo_8 = _reaccion_15.getObjetivo();
+                              if ((_objetivo_8 instanceof InputRadio)) {
+                                _builder.append("\t\t");
+                                _builder.append("\t\t");
+                                _builder.append("radio");
+                                Reaccion _reaccion_16 = ((InputCheck) input_1).getReaccion();
+                                Input _objetivo_9 = _reaccion_16.getObjetivo();
+                                String _name_45 = _objetivo_9.getName();
+                                _builder.append(_name_45, "\t\t\t\t");
+                                _builder.append(".setVisible( !check");
+                                String _name_46 = ((InputCheck)input_1).getName();
+                                _builder.append(_name_46, "\t\t\t\t");
+                                _builder.append("[");
+                                Reaccion _reaccion_17 = ((InputCheck) input_1).getReaccion();
+                                int _activacion_5 = _reaccion_17.getActivacion();
+                                _builder.append(_activacion_5, "\t\t\t\t");
+                                _builder.append("].getSelection() );");
+                                _builder.newLineIfNotEmpty();
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    _builder.append("\t\t");
+                    _builder.append("\t");
+                    _builder.append("}");
+                    _builder.newLine();
+                    _builder.append("\t\t");
+                    _builder.append("\t");
+                    _builder.newLine();
+                    _builder.append("\t\t");
+                    _builder.append("\t");
+                    _builder.append("@Override");
+                    _builder.newLine();
+                    _builder.append("\t\t");
+                    _builder.append("\t");
+                    _builder.append("public void widgetDefaultSelected(SelectionEvent arg0) {}");
+                    _builder.newLine();
+                    _builder.append("\t\t");
+                    _builder.append("});");
+                    _builder.newLine();
+                  } else {
+                    Reaccion _reaccion_18 = ((InputCheck) input_1).getReaccion();
+                    if ((_reaccion_18 instanceof ReaccionHabilitado)) {
+                      _builder.append("\t\t");
+                      _builder.append("check");
+                      String _name_47 = ((InputCheck)input_1).getName();
+                      _builder.append(_name_47, "\t\t");
+                      _builder.append("[");
+                      Reaccion _reaccion_19 = ((InputCheck) input_1).getReaccion();
+                      int _activacion_6 = _reaccion_19.getActivacion();
+                      _builder.append(_activacion_6, "\t\t");
+                      _builder.append("].addSelectionListener(new SelectionListener() {");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.append("@Override");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.append("public void widgetSelected(SelectionEvent arg0) {");
+                      _builder.newLine();
+                      {
+                        Reaccion _reaccion_20 = ((InputCheck) input_1).getReaccion();
+                        Input _objetivo_10 = _reaccion_20.getObjetivo();
+                        if ((_objetivo_10 instanceof InputBoton)) {
+                          _builder.append("\t\t");
+                          _builder.append("\t\t");
+                          _builder.append("boton");
+                          Reaccion _reaccion_21 = ((InputCheck) input_1).getReaccion();
+                          Input _objetivo_11 = _reaccion_21.getObjetivo();
+                          String _name_48 = _objetivo_11.getName();
+                          _builder.append(_name_48, "\t\t\t\t");
+                          _builder.append(".setEnabled( !check");
+                          String _name_49 = ((InputCheck)input_1).getName();
+                          _builder.append(_name_49, "\t\t\t\t");
+                          _builder.append("[");
+                          Reaccion _reaccion_22 = ((InputCheck) input_1).getReaccion();
+                          int _activacion_7 = _reaccion_22.getActivacion();
+                          _builder.append(_activacion_7, "\t\t\t\t");
+                          _builder.append("].getSelection() );");
+                          _builder.newLineIfNotEmpty();
+                        } else {
+                          Reaccion _reaccion_23 = ((InputCheck) input_1).getReaccion();
+                          Input _objetivo_12 = _reaccion_23.getObjetivo();
+                          if ((_objetivo_12 instanceof InputTexto)) {
+                            _builder.append("\t\t");
+                            _builder.append("\t\t");
+                            _builder.append("text");
+                            Reaccion _reaccion_24 = ((InputCheck) input_1).getReaccion();
+                            Input _objetivo_13 = _reaccion_24.getObjetivo();
+                            String _name_50 = _objetivo_13.getName();
+                            _builder.append(_name_50, "\t\t\t\t");
+                            _builder.append(".setEnabled( !check");
+                            String _name_51 = ((InputCheck)input_1).getName();
+                            _builder.append(_name_51, "\t\t\t\t");
+                            _builder.append("[");
+                            Reaccion _reaccion_25 = ((InputCheck) input_1).getReaccion();
+                            int _activacion_8 = _reaccion_25.getActivacion();
+                            _builder.append(_activacion_8, "\t\t\t\t");
+                            _builder.append("].getSelection() );");
+                            _builder.newLineIfNotEmpty();
+                          } else {
+                            Reaccion _reaccion_26 = ((InputCheck) input_1).getReaccion();
+                            Input _objetivo_14 = _reaccion_26.getObjetivo();
+                            if ((_objetivo_14 instanceof InputCheck)) {
+                              _builder.append("\t\t");
+                              _builder.append("\t\t");
+                              _builder.append("check");
+                              Reaccion _reaccion_27 = ((InputCheck) input_1).getReaccion();
+                              Input _objetivo_15 = _reaccion_27.getObjetivo();
+                              String _name_52 = _objetivo_15.getName();
+                              _builder.append(_name_52, "\t\t\t\t");
+                              _builder.append(".setEnabled( !check");
+                              String _name_53 = ((InputCheck)input_1).getName();
+                              _builder.append(_name_53, "\t\t\t\t");
+                              _builder.append("[");
+                              Reaccion _reaccion_28 = ((InputCheck) input_1).getReaccion();
+                              int _activacion_9 = _reaccion_28.getActivacion();
+                              _builder.append(_activacion_9, "\t\t\t\t");
+                              _builder.append("].getSelection() );");
+                              _builder.newLineIfNotEmpty();
+                            } else {
+                              Reaccion _reaccion_29 = ((InputCheck) input_1).getReaccion();
+                              Input _objetivo_16 = _reaccion_29.getObjetivo();
+                              if ((_objetivo_16 instanceof InputCombo)) {
+                                _builder.append("\t\t");
+                                _builder.append("\t\t");
+                                _builder.append("combo");
+                                Reaccion _reaccion_30 = ((InputCheck) input_1).getReaccion();
+                                Input _objetivo_17 = _reaccion_30.getObjetivo();
+                                String _name_54 = _objetivo_17.getName();
+                                _builder.append(_name_54, "\t\t\t\t");
+                                _builder.append(".setEnabled( !check");
+                                String _name_55 = ((InputCheck)input_1).getName();
+                                _builder.append(_name_55, "\t\t\t\t");
+                                _builder.append("[");
+                                Reaccion _reaccion_31 = ((InputCheck) input_1).getReaccion();
+                                int _activacion_10 = _reaccion_31.getActivacion();
+                                _builder.append(_activacion_10, "\t\t\t\t");
+                                _builder.append("].getSelection() );");
+                                _builder.newLineIfNotEmpty();
+                              } else {
+                                Reaccion _reaccion_32 = ((InputCheck) input_1).getReaccion();
+                                Input _objetivo_18 = _reaccion_32.getObjetivo();
+                                if ((_objetivo_18 instanceof InputRadio)) {
+                                  _builder.append("\t\t");
+                                  _builder.append("\t\t");
+                                  _builder.append("radio");
+                                  Reaccion _reaccion_33 = ((InputCheck) input_1).getReaccion();
+                                  Input _objetivo_19 = _reaccion_33.getObjetivo();
+                                  String _name_56 = _objetivo_19.getName();
+                                  _builder.append(_name_56, "\t\t\t\t");
+                                  _builder.append(".setEnabled( !check");
+                                  String _name_57 = ((InputCheck)input_1).getName();
+                                  _builder.append(_name_57, "\t\t\t\t");
+                                  _builder.append("[");
+                                  Reaccion _reaccion_34 = ((InputCheck) input_1).getReaccion();
+                                  int _activacion_11 = _reaccion_34.getActivacion();
+                                  _builder.append(_activacion_11, "\t\t\t\t");
+                                  _builder.append("].getSelection() );");
+                                  _builder.newLineIfNotEmpty();
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.append("}");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.append("@Override");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.append("public void widgetDefaultSelected(SelectionEvent arg0) {}");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("});");
+                      _builder.newLine();
+                    }
+                  }
+                }
+              }
+            }
+            _builder.append("\t\t");
+          } else {
+            if ((input_1 instanceof InputRadio)) {
+              _builder.append("// CASO RADIO");
+              _builder.newLineIfNotEmpty();
+              {
+                Reaccion _reaccion_35 = ((InputRadio) input_1).getReaccion();
+                boolean _notEquals_1 = (!Objects.equal(_reaccion_35, null));
+                if (_notEquals_1) {
+                  {
+                    Reaccion _reaccion_36 = ((InputRadio) input_1).getReaccion();
+                    if ((_reaccion_36 instanceof ReaccionVisible)) {
+                      _builder.append("\t\t");
+                      _builder.append("radio");
+                      String _name_58 = input_1.getName();
+                      _builder.append(_name_58, "\t\t");
+                      _builder.append("[");
+                      Reaccion _reaccion_37 = ((InputRadio) input_1).getReaccion();
+                      int _activacion_12 = _reaccion_37.getActivacion();
+                      _builder.append(_activacion_12, "\t\t");
+                      _builder.append("].addSelectionListener(new SelectionListener() {");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.append("@Override");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.append("public void widgetSelected(SelectionEvent arg0) {");
+                      _builder.newLine();
+                      {
+                        Reaccion _reaccion_38 = ((InputRadio) input_1).getReaccion();
+                        Input _objetivo_20 = _reaccion_38.getObjetivo();
+                        if ((_objetivo_20 instanceof InputBoton)) {
+                          _builder.append("\t\t");
+                          _builder.append("\t\t");
+                          _builder.append("boton");
+                          Reaccion _reaccion_39 = ((InputRadio) input_1).getReaccion();
+                          Input _objetivo_21 = _reaccion_39.getObjetivo();
+                          String _name_59 = _objetivo_21.getName();
+                          _builder.append(_name_59, "\t\t\t\t");
+                          _builder.append(".setVisible( !radio");
+                          String _name_60 = input_1.getName();
+                          _builder.append(_name_60, "\t\t\t\t");
+                          _builder.append("[");
+                          Reaccion _reaccion_40 = ((InputRadio) input_1).getReaccion();
+                          int _activacion_13 = _reaccion_40.getActivacion();
+                          _builder.append(_activacion_13, "\t\t\t\t");
+                          _builder.append("].getSelection() );");
+                          _builder.newLineIfNotEmpty();
+                        } else {
+                          Reaccion _reaccion_41 = ((InputRadio) input_1).getReaccion();
+                          Input _objetivo_22 = _reaccion_41.getObjetivo();
+                          if ((_objetivo_22 instanceof InputTexto)) {
+                            _builder.append("\t\t");
+                            _builder.append("\t\t");
+                            _builder.append("text");
+                            Reaccion _reaccion_42 = ((InputRadio) input_1).getReaccion();
+                            Input _objetivo_23 = _reaccion_42.getObjetivo();
+                            String _name_61 = _objetivo_23.getName();
+                            _builder.append(_name_61, "\t\t\t\t");
+                            _builder.append(".setVisible( !radio");
+                            String _name_62 = input_1.getName();
+                            _builder.append(_name_62, "\t\t\t\t");
+                            _builder.append("[");
+                            Reaccion _reaccion_43 = ((InputRadio) input_1).getReaccion();
+                            int _activacion_14 = _reaccion_43.getActivacion();
+                            _builder.append(_activacion_14, "\t\t\t\t");
+                            _builder.append("].getSelection() );");
+                            _builder.newLineIfNotEmpty();
+                          } else {
+                            Reaccion _reaccion_44 = ((InputRadio) input_1).getReaccion();
+                            Input _objetivo_24 = _reaccion_44.getObjetivo();
+                            if ((_objetivo_24 instanceof InputCheck)) {
+                              _builder.append("\t\t");
+                              _builder.append("\t\t");
+                              _builder.append("check");
+                              Reaccion _reaccion_45 = ((InputRadio) input_1).getReaccion();
+                              Input _objetivo_25 = _reaccion_45.getObjetivo();
+                              String _name_63 = _objetivo_25.getName();
+                              _builder.append(_name_63, "\t\t\t\t");
+                              _builder.append(".setVisible( !radio");
+                              String _name_64 = input_1.getName();
+                              _builder.append(_name_64, "\t\t\t\t");
+                              _builder.append("[");
+                              Reaccion _reaccion_46 = ((InputRadio) input_1).getReaccion();
+                              int _activacion_15 = _reaccion_46.getActivacion();
+                              _builder.append(_activacion_15, "\t\t\t\t");
+                              _builder.append("].getSelection() );");
+                              _builder.newLineIfNotEmpty();
+                            } else {
+                              Reaccion _reaccion_47 = ((InputRadio) input_1).getReaccion();
+                              Input _objetivo_26 = _reaccion_47.getObjetivo();
+                              if ((_objetivo_26 instanceof InputCombo)) {
+                                _builder.append("\t\t");
+                                _builder.append("\t\t");
+                                _builder.append("combo");
+                                Reaccion _reaccion_48 = ((InputRadio) input_1).getReaccion();
+                                Input _objetivo_27 = _reaccion_48.getObjetivo();
+                                String _name_65 = _objetivo_27.getName();
+                                _builder.append(_name_65, "\t\t\t\t");
+                                _builder.append(".setVisible( !radio");
+                                String _name_66 = input_1.getName();
+                                _builder.append(_name_66, "\t\t\t\t");
+                                _builder.append("[");
+                                Reaccion _reaccion_49 = ((InputRadio) input_1).getReaccion();
+                                int _activacion_16 = _reaccion_49.getActivacion();
+                                _builder.append(_activacion_16, "\t\t\t\t");
+                                _builder.append("].getSelection() );");
+                                _builder.newLineIfNotEmpty();
+                              } else {
+                                Reaccion _reaccion_50 = ((InputRadio) input_1).getReaccion();
+                                Input _objetivo_28 = _reaccion_50.getObjetivo();
+                                if ((_objetivo_28 instanceof InputRadio)) {
+                                  _builder.append("\t\t");
+                                  _builder.append("\t\t");
+                                  _builder.append("radio");
+                                  Reaccion _reaccion_51 = ((InputRadio) input_1).getReaccion();
+                                  Input _objetivo_29 = _reaccion_51.getObjetivo();
+                                  String _name_67 = _objetivo_29.getName();
+                                  _builder.append(_name_67, "\t\t\t\t");
+                                  _builder.append(".setVisible( !radio");
+                                  String _name_68 = input_1.getName();
+                                  _builder.append(_name_68, "\t\t\t\t");
+                                  _builder.append("[");
+                                  Reaccion _reaccion_52 = ((InputRadio) input_1).getReaccion();
+                                  int _activacion_17 = _reaccion_52.getActivacion();
+                                  _builder.append(_activacion_17, "\t\t\t\t");
+                                  _builder.append("].getSelection() );");
+                                  _builder.newLineIfNotEmpty();
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.append("}");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.append("@Override");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("\t");
+                      _builder.append("public void widgetDefaultSelected(SelectionEvent arg0) {}");
+                      _builder.newLine();
+                      _builder.append("\t\t");
+                      _builder.append("});");
+                      _builder.newLine();
+                    } else {
+                      Reaccion _reaccion_53 = ((InputRadio) input_1).getReaccion();
+                      if ((_reaccion_53 instanceof ReaccionHabilitado)) {
+                        _builder.append("\t\t");
+                        _builder.append("radio");
+                        String _name_69 = input_1.getName();
+                        _builder.append(_name_69, "\t\t");
+                        _builder.append("[");
+                        Reaccion _reaccion_54 = ((InputRadio) input_1).getReaccion();
+                        int _activacion_18 = _reaccion_54.getActivacion();
+                        _builder.append(_activacion_18, "\t\t");
+                        _builder.append("].addSelectionListener(new SelectionListener() {");
+                        _builder.newLineIfNotEmpty();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.newLine();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.append("@Override");
+                        _builder.newLine();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.append("public void widgetSelected(SelectionEvent arg0) {");
+                        _builder.newLine();
+                        {
+                          Reaccion _reaccion_55 = ((InputRadio) input_1).getReaccion();
+                          Input _objetivo_30 = _reaccion_55.getObjetivo();
+                          if ((_objetivo_30 instanceof InputBoton)) {
+                            _builder.append("\t\t");
+                            _builder.append("\t\t");
+                            _builder.append("boton");
+                            Reaccion _reaccion_56 = ((InputRadio) input_1).getReaccion();
+                            Input _objetivo_31 = _reaccion_56.getObjetivo();
+                            String _name_70 = _objetivo_31.getName();
+                            _builder.append(_name_70, "\t\t\t\t");
+                            _builder.append(".setEnabled( !radio");
+                            String _name_71 = input_1.getName();
+                            _builder.append(_name_71, "\t\t\t\t");
+                            _builder.append("[");
+                            Reaccion _reaccion_57 = ((InputRadio) input_1).getReaccion();
+                            int _activacion_19 = _reaccion_57.getActivacion();
+                            _builder.append(_activacion_19, "\t\t\t\t");
+                            _builder.append("].getSelection() );");
+                            _builder.newLineIfNotEmpty();
+                          } else {
+                            Reaccion _reaccion_58 = ((InputRadio) input_1).getReaccion();
+                            Input _objetivo_32 = _reaccion_58.getObjetivo();
+                            if ((_objetivo_32 instanceof InputTexto)) {
+                              _builder.append("\t\t");
+                              _builder.append("\t\t");
+                              _builder.append("text");
+                              Reaccion _reaccion_59 = ((InputRadio) input_1).getReaccion();
+                              Input _objetivo_33 = _reaccion_59.getObjetivo();
+                              String _name_72 = _objetivo_33.getName();
+                              _builder.append(_name_72, "\t\t\t\t");
+                              _builder.append(".setEnabled( !radio");
+                              String _name_73 = input_1.getName();
+                              _builder.append(_name_73, "\t\t\t\t");
+                              _builder.append("[");
+                              Reaccion _reaccion_60 = ((InputRadio) input_1).getReaccion();
+                              int _activacion_20 = _reaccion_60.getActivacion();
+                              _builder.append(_activacion_20, "\t\t\t\t");
+                              _builder.append("].getSelection() );");
+                              _builder.newLineIfNotEmpty();
+                            } else {
+                              Reaccion _reaccion_61 = ((InputRadio) input_1).getReaccion();
+                              Input _objetivo_34 = _reaccion_61.getObjetivo();
+                              if ((_objetivo_34 instanceof InputCheck)) {
+                                _builder.append("\t\t");
+                                _builder.append("\t\t");
+                                _builder.append("check");
+                                Reaccion _reaccion_62 = ((InputRadio) input_1).getReaccion();
+                                Input _objetivo_35 = _reaccion_62.getObjetivo();
+                                String _name_74 = _objetivo_35.getName();
+                                _builder.append(_name_74, "\t\t\t\t");
+                                _builder.append(".setEnabled( !radio");
+                                String _name_75 = input_1.getName();
+                                _builder.append(_name_75, "\t\t\t\t");
+                                _builder.append("[");
+                                Reaccion _reaccion_63 = ((InputRadio) input_1).getReaccion();
+                                int _activacion_21 = _reaccion_63.getActivacion();
+                                _builder.append(_activacion_21, "\t\t\t\t");
+                                _builder.append("].getSelection() );");
+                                _builder.newLineIfNotEmpty();
+                              } else {
+                                Reaccion _reaccion_64 = ((InputRadio) input_1).getReaccion();
+                                Input _objetivo_36 = _reaccion_64.getObjetivo();
+                                if ((_objetivo_36 instanceof InputCombo)) {
+                                  _builder.append("\t\t");
+                                  _builder.append("\t\t");
+                                  _builder.append("combo");
+                                  Reaccion _reaccion_65 = ((InputRadio) input_1).getReaccion();
+                                  Input _objetivo_37 = _reaccion_65.getObjetivo();
+                                  String _name_76 = _objetivo_37.getName();
+                                  _builder.append(_name_76, "\t\t\t\t");
+                                  _builder.append(".setEnabled( !radio");
+                                  String _name_77 = input_1.getName();
+                                  _builder.append(_name_77, "\t\t\t\t");
+                                  _builder.append("[");
+                                  Reaccion _reaccion_66 = ((InputRadio) input_1).getReaccion();
+                                  int _activacion_22 = _reaccion_66.getActivacion();
+                                  _builder.append(_activacion_22, "\t\t\t\t");
+                                  _builder.append("].getSelection() );");
+                                  _builder.newLineIfNotEmpty();
+                                } else {
+                                  Reaccion _reaccion_67 = ((InputRadio) input_1).getReaccion();
+                                  Input _objetivo_38 = _reaccion_67.getObjetivo();
+                                  if ((_objetivo_38 instanceof InputRadio)) {
+                                    _builder.append("\t\t");
+                                    _builder.append("\t\t");
+                                    _builder.append("radio");
+                                    Reaccion _reaccion_68 = ((InputRadio) input_1).getReaccion();
+                                    Input _objetivo_39 = _reaccion_68.getObjetivo();
+                                    String _name_78 = _objetivo_39.getName();
+                                    _builder.append(_name_78, "\t\t\t\t");
+                                    _builder.append(".setEnabled( !radio");
+                                    String _name_79 = input_1.getName();
+                                    _builder.append(_name_79, "\t\t\t\t");
+                                    _builder.append("[");
+                                    Reaccion _reaccion_69 = ((InputRadio) input_1).getReaccion();
+                                    int _activacion_23 = _reaccion_69.getActivacion();
+                                    _builder.append(_activacion_23, "\t\t\t\t");
+                                    _builder.append("].getSelection() );");
+                                    _builder.newLineIfNotEmpty();
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.append("}");
+                        _builder.newLine();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.newLine();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.append("@Override");
+                        _builder.newLine();
+                        _builder.append("\t\t");
+                        _builder.append("\t");
+                        _builder.append("public void widgetDefaultSelected(SelectionEvent arg0) {}");
+                        _builder.newLine();
+                        _builder.append("\t\t");
+                        _builder.append("});");
+                        _builder.newLine();
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    _builder.append("\t\t");
+    _builder.newLine();
+    _builder.append("\t\t");
     _builder.append("/**");
     _builder.newLine();
     _builder.append("\t\t");
@@ -546,48 +1192,6 @@ public class FormularioGenerator implements IGenerator {
     _builder.newLine();
     _builder.append("\t");
     _builder.append("}");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
-    return _builder;
-  }
-  
-  public CharSequence compile(final Formulario f) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("/**");
-    _builder.newLine();
-    _builder.append("* Ventana principal.");
-    _builder.newLine();
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("package gui;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("import javax.swing.*;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("public class BaseDatos extends JFrame {");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
-    return _builder;
-  }
-  
-  public CharSequence compile(final Input inp) {
-    StringConcatenation _builder = new StringConcatenation();
-    _builder.append("/**");
-    _builder.newLine();
-    _builder.append("* Ventana principal.");
-    _builder.newLine();
-    _builder.append("*/");
-    _builder.newLine();
-    _builder.append("package gui;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("import javax.swing.*;");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("public class BaseDatos extends JFrame {");
     _builder.newLine();
     _builder.append("}");
     _builder.newLine();
