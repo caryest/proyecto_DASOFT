@@ -1567,19 +1567,6 @@ public class FormularioGenerator implements IGenerator {
     }
     _builder.newLine();
     _builder.append("\t\t");
-    _builder.append("// checkbutton should be unchecked, text field should be visible");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("assertFalse(checkCash.isChecked());");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("assertTrue(textCCNumber.isVisible());");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("assertTrue(labelCCNumber.isVisible());");
-    _builder.newLine();
-    _builder.newLine();
-    _builder.append("\t\t");
     _builder.append("// select check");
     _builder.newLine();
     _builder.append("\t\t");

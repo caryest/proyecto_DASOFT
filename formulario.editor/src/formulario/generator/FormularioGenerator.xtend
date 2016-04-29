@@ -363,11 +363,6 @@ class FormularioGenerator implements IGenerator {
 				« ENDIF »
 				« ENDFOR »
 		
-				// checkbutton should be unchecked, text field should be visible
-				assertFalse(checkCash.isChecked());
-				assertTrue(textCCNumber.isVisible());
-				assertTrue(labelCCNumber.isVisible());
-		
 				// select check
 				checkCash.setFocus();
 				checkCash.select();
