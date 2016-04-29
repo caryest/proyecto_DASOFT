@@ -28,9 +28,10 @@ public class Formulario {
 		
 		Shell shell = new Shell(display);
 		shell.setText  ("Prueba2");
-		shell.setLayout(new GridLayout(2, false));
+		shell.setLayout(new GridLayout(3, false));
 		
-		//Formularios_DASOFT.impl.InputTextoImpl
+		// Añadimos los elementos de la interfaz
+		
 		// CASO TEXTO
 		Composite contentTexttexto1 = new Composite(shell, SWT.BORDER);
 		contentTexttexto1.setLayout(new GridLayout(2, true));
@@ -38,7 +39,6 @@ public class Formulario {
 		Text  texttexto1  = new Text(contentTexttexto1, SWT.BORDER);
 		labeltexto1.setText("texto1");
 				
-		//Formularios_DASOFT.impl.InputRadioImpl
 		// CASO RADIO
 		Composite contentRadioradio1 = new Composite(shell, SWT.BORDER);
 		contentRadioradio1.setLayout(new GridLayout(1, true));
@@ -57,13 +57,11 @@ public class Formulario {
 		radioradio1[2].setText("val3");
 		radioradio1[2].setBounds(10, 5, 75, 30);
 				
-		//Formularios_DASOFT.impl.InputComboImpl
 		 // CASO COMBO
 		Combo combocombo1 = new Combo(shell, SWT.SIMPLE);
 		combocombo1.add("val1");
 		combocombo1.add("val2");
 		
-		//Formularios_DASOFT.impl.InputCheckImpl
 		// CASO CHECKBOX
 		Composite contentCheckcheck1 = new Composite(shell, SWT.BORDER);
 		contentCheckcheck1.setLayout(new GridLayout(1, true));

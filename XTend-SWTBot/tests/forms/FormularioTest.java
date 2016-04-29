@@ -34,9 +34,14 @@ public class FormularioTest {
 		// slow down execution
 		SWTBotPreferences.PLAYBACK_DELAY = 100;
 
+		 // CASO ACCION SELECCION
+				// CASO ACCION VALOR
+						
+		/*
 		SWTBotCheckBox checkCash  = bot.checkBox("Pay with cash?");
 		SWTBotText  textCCNumber  = bot.textWithLabel("Credit card number");
 		SWTBotLabel labelCCNumber = bot.label("Credit card number");
+		*/
 
 		// checkbutton should be unchecked, text field should be visible
 		assertFalse(checkCash.isChecked());

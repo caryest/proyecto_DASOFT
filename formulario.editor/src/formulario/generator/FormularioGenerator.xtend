@@ -20,6 +20,12 @@ import Formularios_DASOFT.BotonCancelar
 import Formularios_DASOFT.BotonCustom
 import Formularios_DASOFT.ReaccionHabilitado
 import Formularios_DASOFT.ReaccionVisible
+import Formularios_DASOFT.AccionValor
+import Formularios_DASOFT.AccionSeleccion
+import Formularios_DASOFT.AsercionHabilitado
+import Formularios_DASOFT.AsercionInvisible
+import Formularios_DASOFT.AsercionValor
+import Formularios_DASOFT.AsercionSeleccion
 
 /**
  * Generates code from your model files on save.
@@ -71,28 +77,18 @@ class FormularioGenerator implements IGenerator {
 				Shell shell = new Shell(display);
 				shell.setText  ("«form.name»");
 				shell.setLayout(new GridLayout(«form.layout.columnas», false));
+				
+				// Añadimos los elementos de la interfaz
 				«FOR input : form.layout.entradas»
 				
-				//« input.class.name »
 				« IF input instanceof InputBoton »// CASO BOTONES
-				« IF input instanceof BotonValidar »
 				Button boton«input.name» = new Button(shell, SWT.CHECK);
-				boton«input.name».setText("Validar");
-				« ELSEIF input instanceof BotonGuardar »
-				Button boton«input.name» = new Button(shell, SWT.CHECK);
-				boton«input.name».setText("Guardar");
-				« ELSEIF input instanceof BotonCancelar »
-				Button boton«input.name» = new Button(shell, SWT.CHECK);
-				boton«input.name».setText("Cancelar");  
-				« ELSEIF input instanceof BotonCustom » 
-				Button boton«input.name» = new Button(shell, SWT.CHECK);
-				boton«input.name».setText("«input.name»");  
-				« ENDIF »
+				boton«input.name».setText("«input.name»");
 				« ELSEIF input instanceof InputTexto »// CASO TEXTO
 				Composite contentText«input.name» = new Composite(shell, SWT.BORDER);
 				contentText«input.name».setLayout(new GridLayout(2, true));
 				Label label«input.name» = new Label(contentText«input.name», SWT.NONE);
-				Text  text«input.name»  = new Text(contentText«input.name», SWT.BORDER);
+				Text  texto«input.name»  = new Text(contentText«input.name», SWT.BORDER);
 				label«input.name».setText("«input.name»");
 				« ELSEIF input instanceof InputCheck »// CASO CHECKBOX
 				Composite contentCheck«input.name» = new Composite(shell, SWT.BORDER);
@@ -158,7 +154,7 @@ class FormularioGenerator implements IGenerator {
 						« IF (input as InputCheck).reaccion.objetivo instanceof InputBoton »
 						boton«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputTexto »
-						text«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						texto«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCheck »
 						check«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCombo »
@@ -179,7 +175,7 @@ class FormularioGenerator implements IGenerator {
 						« IF (input as InputCheck).reaccion.objetivo instanceof InputBoton »
 						boton«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputTexto »
-						text«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
+						texto«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCheck »
 						check«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCombo »
@@ -204,7 +200,7 @@ class FormularioGenerator implements IGenerator {
 						« IF (input as InputRadio).reaccion.objetivo instanceof InputBoton »
 						boton«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputTexto »
-						text«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						texto«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCheck »
 						check«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCombo »
@@ -225,7 +221,7 @@ class FormularioGenerator implements IGenerator {
 						« IF (input as InputRadio).reaccion.objetivo instanceof InputBoton »
 						boton«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputTexto »
-						text«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
+						texto«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCheck »
 						check«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion»].getSelection() );
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCombo »
@@ -304,9 +300,68 @@ class FormularioGenerator implements IGenerator {
 				// slow down execution
 				SWTBotPreferences.PLAYBACK_DELAY = 100;
 		
+				« FOR accion : pruebas.acciones »
+				« IF accion instanceof AccionValor »// CASO ACCION VALOR
+				« IF accion.elemento instanceof InputBoton »// CASO BOTONES
+				SWTBotButton boton«accion.elemento.name» = bot.button("«accion.elemento.name»");
+				« ELSEIF accion.elemento instanceof InputTexto »// CASO TEXTO
+				SWTBotText texto«accion.elemento.name» = bot.textWithLabel("«accion.elemento.name»");
+				« ENDIF »
+				« ELSEIF accion instanceof AccionSeleccion » // CASO ACCION SELECCION
+				« IF accion.elemento instanceof InputCombo »// CASO COMBO
+				SWTBotButton boton«accion.elemento.name» = bot.comboWithLabel("«(accion.elemento as InputCheck).valores.get((accion as AccionSeleccion).valor)»");
+				« ELSEIF accion.elemento instanceof InputRadio »// CASO RADIO
+				SWTBotButton texto«accion.elemento.name» = bot.button("«accion.elemento.name»");
+				« ELSEIF accion.elemento instanceof InputCheck »// CASO CHECK
+				SWTBotCheckBox check«accion.elemento.name» = bot.checkBox("«(accion.elemento as InputCheck).valores.get((accion as AccionSeleccion).valor)»");
+				« ENDIF »
+				« ENDIF »
+				« ENDFOR »
+				
+				/*
 				SWTBotCheckBox checkCash  = bot.checkBox("Pay with cash?");
 				SWTBotText  textCCNumber  = bot.textWithLabel("Credit card number");
 				SWTBotLabel labelCCNumber = bot.label("Credit card number");
+				*/
+				
+				// Ahora codificamos los ASSERTS
+				
+				« FOR accion : pruebas.acciones »
+				« IF accion.asercion instanceof AsercionHabilitado »
+				« IF accion.asercion.elemento instanceof InputBoton »
+				assertTrue(boton«accion.asercion.elemento.name».isEnabled());
+				« ELSEIF accion.asercion.elemento instanceof InputTexto »
+				assertTrue(texto«accion.asercion.elemento.name».isEnabled());
+				« ELSEIF accion.asercion.elemento instanceof InputCombo »
+				assertTrue(combo«accion.asercion.elemento.name».isEnabled());
+				« ELSEIF accion.asercion.elemento instanceof InputRadio »
+				assertTrue(radio«accion.asercion.elemento.name».isEnabled()); /// ESTAAAAAA MAAAAAAAAAAAAAAL
+				« ELSEIF accion.asercion.elemento instanceof InputCheck »
+				assertTrue(check«accion.asercion.elemento.name».isEnabled());
+				« ENDIF»
+				« ELSEIF accion.asercion instanceof AsercionInvisible »
+				« IF accion.asercion.elemento instanceof InputBoton »
+				assertTrue(boton«accion.asercion.elemento.name».isVisible());
+				« ELSEIF accion.asercion.elemento instanceof InputTexto »
+				assertTrue(texto«accion.asercion.elemento.name».isVisible());
+				« ELSEIF accion.asercion.elemento instanceof InputCombo »
+				assertTrue(combo«accion.asercion.elemento.name».isVisible());
+				« ELSEIF accion.asercion.elemento instanceof InputRadio »
+				assertTrue(radio«accion.asercion.elemento.name».isVisible()); /// ESTAAAAAA MAAAAAAAAAAAAAAL
+				« ELSEIF accion.asercion.elemento instanceof InputCheck »
+				assertTrue(check«accion.asercion.elemento.name».isVisible());
+				« ELSEIF accion.asercion instanceof AsercionValor »
+				« ELSEIF accion.asercion instanceof AsercionSeleccion »
+				« IF accion.asercion.elemento instanceof InputCheck »
+				assertTrue(check«accion.asercion.elemento.name».isSelected());
+				« ELSEIF accion.asercion.elemento instanceof InputCombo »
+				assertTrue(combo«accion.asercion.elemento.name».isSelected());
+				« ELSEIF accion.asercion.elemento instanceof InputRadio »
+				assertTrue(radio«accion.asercion.elemento.name».isSelected());
+				« ENDIF »
+				« ENDIF »
+				« ENDIF »
+				« ENDFOR »
 		
 				// checkbutton should be unchecked, text field should be visible
 				assertFalse(checkCash.isChecked());

@@ -2,7 +2,7 @@ Formulario Prueba2
 {
 	layout Layout
 	{
-		columnas 2
+		columnas 3
 		entradas
 		{
 			InputTexto texto1
