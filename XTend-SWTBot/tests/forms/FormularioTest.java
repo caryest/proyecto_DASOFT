@@ -9,7 +9,6 @@ import org.eclipse.swtbot.swt.finder.SWTBot;
 import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
 import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotButton;
-import org.eclipse.swtbot.swt.finder.widgets.SWTBotCCombo;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotCheckBox;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotLabel;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotText;
@@ -45,7 +44,7 @@ public class FormularioTest {
 
 				
 		 // CASO COMBO
-		//SWTBotCCombo botoncombo1 = bot.comboWithLabel("combo1");
+		SWTBotButton botoncombo1 = bot.comboWithLabel("combo1");
 		
 		// CASO CHECKBOX
 		
@@ -61,30 +60,16 @@ public class FormularioTest {
 				
 		// Ahora codificamos los ASSERTS
 		
+// ****************AUN QUEDA******************
+		radioradio1.setFocus();
+		radioradio1.select();
+		display.update();
 		assertTrue(textotexto1.isEnabled());
-		assertTrue(textotexto1.isVisible());
-
-		/*
-		// select check
-		checkCash.setFocus();
-		checkCash.select();
+// ****************AUN QUEDA******************
+		checkcheck1.setFocus();
+		checkcheck1.select();
 		display.update();
-
-		// checkbutton should be checked, text field should be hidden
-		assertTrue(checkCash.isChecked());
-		assertFalse(textCCNumber.isVisible());
-		assertFalse(labelCCNumber.isVisible());
-
-		// deselect check
-		checkCash.setFocus();
-		checkCash.deselect();
-		display.update();
-
-		// checkbutton should be unchecked, text field should be visible
-		assertFalse(checkCash.isChecked());
-		assertTrue(textCCNumber.isVisible());
-		assertTrue(labelCCNumber.isVisible());
-		*/
+				assertTrue(textotexto1.isVisible());
 
 		display.dispose();
 		shell.dispose();		 
