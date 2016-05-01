@@ -97,8 +97,4 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="estado" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
-<<<<<<< HEAD
-=======
-  <eClassifiers xsi:type="ecore:EClass" name="PRUEBA"/>
->>>>>>> branch 'master' of https://github.com/caryest/proyecto_DASOFT
 </ecore:EPackage>
