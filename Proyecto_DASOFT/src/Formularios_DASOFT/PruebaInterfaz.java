@@ -17,6 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link Formularios_DASOFT.PruebaInterfaz#getName <em>Name</em>}</li>
  *   <li>{@link Formularios_DASOFT.PruebaInterfaz#getAcciones <em>Acciones</em>}</li>
+ *   <li>{@link Formularios_DASOFT.PruebaInterfaz#isComprobarAsercion <em>Comprobar Asercion</em>}</li>
+ *   <li>{@link Formularios_DASOFT.PruebaInterfaz#isComprobarAccion <em>Comprobar Accion</em>}</li>
  * </ul>
  *
  * @see Formularios_DASOFT.Formularios_DASOFTPackage#getPruebaInterfaz()
@@ -65,5 +67,57 @@ public interface PruebaInterfaz extends EObject {
 	 * @generated
 	 */
 	EList<Accion> getAcciones();
+
+	/**
+	 * Returns the value of the '<em><b>Comprobar Asercion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Comprobar Asercion</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Comprobar Asercion</em>' attribute.
+	 * @see #setComprobarAsercion(boolean)
+	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getPruebaInterfaz_ComprobarAsercion()
+	 * @model
+	 * @generated
+	 */
+	boolean isComprobarAsercion();
+
+	/**
+	 * Sets the value of the '{@link Formularios_DASOFT.PruebaInterfaz#isComprobarAsercion <em>Comprobar Asercion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Comprobar Asercion</em>' attribute.
+	 * @see #isComprobarAsercion()
+	 * @generated
+	 */
+	void setComprobarAsercion(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Comprobar Accion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Comprobar Accion</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Comprobar Accion</em>' attribute.
+	 * @see #setComprobarAccion(boolean)
+	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getPruebaInterfaz_ComprobarAccion()
+	 * @model
+	 * @generated
+	 */
+	boolean isComprobarAccion();
+
+	/**
+	 * Sets the value of the '{@link Formularios_DASOFT.PruebaInterfaz#isComprobarAccion <em>Comprobar Accion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Comprobar Accion</em>' attribute.
+	 * @see #isComprobarAccion()
+	 * @generated
+	 */
+	void setComprobarAccion(boolean value);
 
 } // PruebaInterfaz

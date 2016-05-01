@@ -3,29 +3,28 @@
  */
 package formulario.generator
 
-import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.xtext.generator.IGenerator
-import org.eclipse.xtext.generator.IFileSystemAccess
-import Formularios_DASOFT.Formulario
-import Formularios_DASOFT.Input
-import Formularios_DASOFT.InputBoton
-import Formularios_DASOFT.InputTexto
-import Formularios_DASOFT.InputCheck
-import Formularios_DASOFT.InputRadio
-import Formularios_DASOFT.InputCombo
-import Formularios_DASOFT.PruebaInterfaz
-import Formularios_DASOFT.BotonValidar
-import Formularios_DASOFT.BotonGuardar
-import Formularios_DASOFT.BotonCancelar
-import Formularios_DASOFT.BotonCustom
-import Formularios_DASOFT.ReaccionHabilitado
-import Formularios_DASOFT.ReaccionVisible
-import Formularios_DASOFT.AccionValor
 import Formularios_DASOFT.AccionSeleccion
+import Formularios_DASOFT.AccionValor
 import Formularios_DASOFT.AsercionHabilitado
 import Formularios_DASOFT.AsercionInvisible
-import Formularios_DASOFT.AsercionValor
 import Formularios_DASOFT.AsercionSeleccion
+import Formularios_DASOFT.AsercionValor
+import Formularios_DASOFT.Formulario
+import Formularios_DASOFT.InputBoton
+import Formularios_DASOFT.InputCheck
+import Formularios_DASOFT.InputCombo
+import Formularios_DASOFT.InputRadio
+import Formularios_DASOFT.InputTexto
+import Formularios_DASOFT.PruebaInterfaz
+import Formularios_DASOFT.ReaccionHabilitado
+import Formularios_DASOFT.ReaccionVisible
+import org.eclipse.emf.ecore.resource.Resource
+import org.eclipse.xtext.generator.IFileSystemAccess
+import org.eclipse.xtext.generator.IGenerator
+import Formularios_DASOFT.BotonValidar
+import Formularios_DASOFT.BotonCancelar
+import Formularios_DASOFT.BotonGuardar
+import Formularios_DASOFT.impl.InputCheckImpl
 
 /**
  * Generates code from your model files on save.
@@ -40,7 +39,7 @@ class FormularioGenerator implements IGenerator {
  		for(Formulario form : resource.allContents.toIterable.filter(Formulario)){
 			fsa.generateFile("forms/Formulario.java", generarFormulario(form))
 		
-			fsa.generateFile("../tests/forms/FormularioTest.java", generarTest(form.pruebas))
+			fsa.generateFile("../tests/forms/FormularioTest.java", generarTest(form))
 		}
 		
 	}
@@ -48,6 +47,8 @@ class FormularioGenerator implements IGenerator {
 	def generarFormulario (Formulario form)'''
 		package forms;
 
+		import java.io.FileWriter;
+		
 		import org.eclipse.swt.SWT;
 		import org.eclipse.swt.events.SelectionEvent;
 		import org.eclipse.swt.events.SelectionListener;
@@ -56,8 +57,10 @@ class FormularioGenerator implements IGenerator {
 		import org.eclipse.swt.widgets.Button;
 		import org.eclipse.swt.widgets.Combo;
 		import org.eclipse.swt.widgets.Display;
+		import org.eclipse.swt.widgets.FileDialog;
 		import org.eclipse.swt.widgets.Composite;
 		import org.eclipse.swt.widgets.Label;
+		import org.eclipse.swt.widgets.MessageBox;
 		import org.eclipse.swt.widgets.Shell;
 		import org.eclipse.swt.widgets.Text;
 		
@@ -81,8 +84,8 @@ class FormularioGenerator implements IGenerator {
 				// Añadimos los elementos de la interfaz
 				«FOR input : form.layout.entradas»
 				
-				« IF input instanceof InputBoton »// CASO BOTONES
-				Button boton«input.name» = new Button(shell, SWT.CHECK);
+				« IF input instanceof InputBoton »// CASO BOTON
+				Button boton«input.name» = new Button(shell, SWT.BUTTON1);
 				boton«input.name».setText("«input.name»");
 				« ELSEIF input instanceof InputTexto »// CASO TEXTO
 				Composite contentText«input.name» = new Composite(shell, SWT.BORDER);
@@ -118,32 +121,8 @@ class FormularioGenerator implements IGenerator {
 				« ENDIF »
 				«ENDFOR»
 				
-				// layout
-				GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
-				data.horizontalSpan = 2;
-				//checkCash.setLayoutData(data);	
-				
-				/**
-				// checkbutton
-				Button checkCash = new Button(shell, SWT.CHECK);
-				checkCash.setText("Pay with cash?");		
-				
-				// text field
-				Label labelCCNumber = new Label(shell, SWT.NONE);
-				Text  textCCNumber  = new Text(shell, SWT.BORDER);
-				labelCCNumber.setText("Credit card number");
-				
-				// layout
-				GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
-				shell.setLayout(new GridLayout(2, true));
-				data.horizontalSpan = 2;
-				checkCash.setLayoutData(data);		
-				**/
-				
 				// Funciones Reaccion
 				«FOR input : form.layout.entradas»
-				
-				//« input.class.name »
 				« IF input instanceof InputCheck »// CASO CHECKBOX
 				« IF (input as InputCheck).reaccion != null »
 				« IF (input as InputCheck).reaccion instanceof ReaccionVisible »
@@ -239,20 +218,148 @@ class FormularioGenerator implements IGenerator {
 				« ENDIF »
 				«ENDFOR»
 				
-				/**
-				// show or hide text field depending on checkbutton selection
-				checkCash.addSelectionListener(new SelectionListener() {
+				// Funciones de Input de tipo BOTON
+				«FOR input : form.layout.entradas»
+				« IF input instanceof BotonValidar »
+				// Caso Validar
+				boton«input.name».addSelectionListener(new SelectionListener() {
 					
 					@Override
 					public void widgetSelected(SelectionEvent arg0) {
-						labelCCNumber.setVisible( !checkCash.getSelection() );
-						textCCNumber.setVisible ( !checkCash.getSelection() );
+						
+						String mensaje_error = "";
+						boolean hay_error = false;
+						
+						«FOR inputVal : form.layout.entradas»
+						« IF inputVal instanceof InputTexto»
+						« IF (inputVal as InputTexto).obligatorio == true »
+						if (texto«inputVal.name».getText().length() == 0){
+							hay_error = true;
+							mensaje_error += "*La entrada de texto '«inputVal.name»' no puede estar vacía.\n";
+						}
+						« ENDIF »
+						« ENDIF »
+						« ENDFOR »
+						
+						if (hay_error){
+							MessageBox dialog = new MessageBox(shell, SWT.ICON_ERROR | SWT.OK);
+							dialog.setText("Validación");
+							dialog.setMessage(mensaje_error);
+							
+							// open dialog and await user selection
+							dialog.open();
+						}else{
+							MessageBox dialog = new MessageBox(shell, SWT.ICON_INFORMATION | SWT.OK);
+							dialog.setText("Validación");
+							dialog.setMessage("Resultado de la validación correcto.");
+							
+							// open dialog and await user selection
+							dialog.open();
+						}
+						
 					}
 					
 					@Override
 					public void widgetDefaultSelected(SelectionEvent arg0) {}
 				});
-				**/
+				« ELSEIF input instanceof BotonCancelar » // Caso Cancelar
+				boton«input.name».addSelectionListener(new SelectionListener() {
+					
+					@Override
+					public void widgetSelected(SelectionEvent arg0) {
+						
+						«FOR inputVal : form.layout.entradas»
+						« IF inputVal instanceof InputTexto»
+						texto«inputVal.name».setText("");
+						« ELSEIF inputVal instanceof InputCheck »
+						«FOR valor : (inputVal as InputCheck).valores»
+						check«inputVal.name»[«(inputVal as InputCheck).valores.indexOf(valor)»].setSelection(false);
+						«ENDFOR»
+						« ELSEIF inputVal instanceof InputCombo »
+						combo«inputVal.name».deselect(0);
+						« ELSEIF inputVal instanceof InputRadio »
+						«FOR valor : (inputVal as InputRadio).valores»
+						radio«inputVal.name»[«(inputVal as InputRadio).valores.indexOf(valor)»].setSelection(false);
+						«ENDFOR»
+						« ENDIF »
+						« ENDFOR »
+						
+					}
+					
+					@Override
+					public void widgetDefaultSelected(SelectionEvent arg0) {}
+				});
+				« ELSEIF input instanceof BotonGuardar » // Caso Guardar
+				boton«input.name».addSelectionListener(new SelectionListener() {
+					
+					@Override
+					public void widgetSelected(SelectionEvent arg0) {
+						
+						FileDialog dialog = new FileDialog(shell, SWT.SAVE);
+					    dialog.setFilterNames(new String[] { "Formulario", "All Files (*.*)" });
+					    dialog.setFilterExtensions(new String[] { "*.formulario", "*.*" }); // Windows
+					                                    // wild
+					                                    // cards
+					    dialog.setFilterPath("c:\\"); // Windows path
+					    dialog.setFileName("form.formulario");
+					    String filename = dialog.open(); 
+					    
+					    while (!shell.isDisposed()) {
+				        if (!display.readAndDispatch())
+					        display.sleep();
+					    }
+					    display.dispose();
+					    
+					    FileWriter writer = null; 
+						try 
+						{ 
+							writer = new FileWriter(filename); 
+							«FOR inputVal : form.layout.entradas»
+							«IF inputVal instanceof InputTexto»
+							writer.write(texto«inputVal.name» + ": " + texto«inputVal.name».getText() + "\n"); 
+							«ELSEIF inputVal instanceof InputRadio»
+							String valoresRadio«inputVal.name» = "";
+							for(Button btnRadio : radio«inputVal.name»){
+								if (btnRadio.getSelection() == true){
+									valoresRadio«inputVal.name» += btnRadio.getText();
+									valoresRadio«inputVal.name» += " ";
+								}
+							}
+							writer.write(radio«inputVal.name» + ": " + valoresRadio«inputVal.name» + "\n"); 
+							«ELSEIF inputVal instanceof InputCombo»
+							writer.write(combo«inputVal.name» + ": " + combo«inputVal.name».getText() + "\n"); 
+							«ELSEIF inputVal instanceof InputCheck»
+							String valoresCheck«inputVal.name»= "";
+							for(Button btnCheck : check«inputVal.name»){
+								if (btnCheck.getSelection() == true){
+									valoresCheck«inputVal.name» += btnCheck.getText();
+									valoresCheck«inputVal.name» += " ";
+								}
+							}
+							writer.write(check«inputVal.name» + ": " + valoresCheck«inputVal.name» + "\n"); 
+							«ENDIF»
+							«ENDFOR»
+							writer.write("This\n is\n an\n example\n"); 
+						} 
+						catch (Exception e) 
+						{ 
+							System.err.println("Error al guardar el archivo"); 
+						} 
+						finally 
+						{ 
+							try 
+							{ 
+								writer.close();
+							} catch (Exception e) {} 
+						} 
+						
+					}
+					
+					@Override
+					public void widgetDefaultSelected(SelectionEvent arg0) {}
+				});
+				« ENDIF »
+				«ENDFOR»
 				
 				// show form
 				shell.pack();
@@ -263,7 +370,7 @@ class FormularioGenerator implements IGenerator {
 		}
 	'''
 	
-	def generarTest (PruebaInterfaz pruebas)'''
+	def generarTest (Formulario form)'''
 		package forms;
 
 		import static org.junit.Assert.assertFalse;
@@ -274,6 +381,7 @@ class FormularioGenerator implements IGenerator {
 		import org.eclipse.swtbot.swt.finder.SWTBot;
 		import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
 		import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
+		import org.eclipse.swtbot.swt.finder.widgets.SWTBotButton;
 		import org.eclipse.swtbot.swt.finder.widgets.SWTBotCheckBox;
 		import org.eclipse.swtbot.swt.finder.widgets.SWTBotLabel;
 		import org.eclipse.swtbot.swt.finder.widgets.SWTBotText;
@@ -299,34 +407,30 @@ class FormularioGenerator implements IGenerator {
 			public void test1() {
 				// slow down execution
 				SWTBotPreferences.PLAYBACK_DELAY = 100;
-		
-				« FOR accion : pruebas.acciones »
-				« IF accion instanceof AccionValor »// CASO ACCION VALOR
-				« IF accion.elemento instanceof InputBoton »// CASO BOTONES
-				SWTBotButton boton«accion.elemento.name» = bot.button("«accion.elemento.name»");
-				« ELSEIF accion.elemento instanceof InputTexto »// CASO TEXTO
-				SWTBotText texto«accion.elemento.name» = bot.textWithLabel("«accion.elemento.name»");
-				« ENDIF »
-				« ELSEIF accion instanceof AccionSeleccion » // CASO ACCION SELECCION
-				« IF accion.elemento instanceof InputCombo »// CASO COMBO
-				SWTBotButton boton«accion.elemento.name» = bot.comboWithLabel("«(accion.elemento as InputCheck).valores.get((accion as AccionSeleccion).valor)»");
-				« ELSEIF accion.elemento instanceof InputRadio »// CASO RADIO
-				SWTBotButton texto«accion.elemento.name» = bot.button("«accion.elemento.name»");
-				« ELSEIF accion.elemento instanceof InputCheck »// CASO CHECK
-				SWTBotCheckBox check«accion.elemento.name» = bot.checkBox("«(accion.elemento as InputCheck).valores.get((accion as AccionSeleccion).valor)»");
-				« ENDIF »
-				« ENDIF »
-				« ENDFOR »
 				
-				/*
-				SWTBotCheckBox checkCash  = bot.checkBox("Pay with cash?");
-				SWTBotText  textCCNumber  = bot.textWithLabel("Credit card number");
-				SWTBotLabel labelCCNumber = bot.label("Credit card number");
-				*/
+				// Añadimos las referencias a los elementos del formulario
+				«FOR input : form.layout.entradas»
+				
+				« IF input instanceof InputBoton »// CASO BOTON
+				SWTBotButton boton«input.name» = bot.button("«input.name»");
+				« ELSEIF input instanceof InputTexto »// CASO TEXTO
+				SWTBotButton texto«input.name» = bot.button("«input.name»");
+				« ELSEIF input instanceof InputCheck »// CASO CHECKBOX
+				
+				«FOR valor : (input as InputCheck).valores»
+				«ENDFOR»
+				« ELSEIF input instanceof InputRadio »// CASO RADIO
+
+				«FOR valor : (input as InputRadio).valores»
+				«ENDFOR»
+				« ELSEIF input instanceof InputCombo » // CASO COMBO
+				SWTBotButton boton«input.name» = bot.comboWithLabel("«input.name»");
+				« ENDIF »
+				«ENDFOR»
 				
 				// Ahora codificamos los ASSERTS
 				
-				« FOR accion : pruebas.acciones »
+				« FOR accion : form.pruebas.acciones »
 				« IF accion.asercion instanceof AsercionHabilitado »
 				« IF accion.asercion.elemento instanceof InputBoton »
 				assertTrue(boton«accion.asercion.elemento.name».isEnabled());
@@ -363,6 +467,7 @@ class FormularioGenerator implements IGenerator {
 				« ENDIF »
 				« ENDFOR »
 		
+				/*
 				// select check
 				checkCash.setFocus();
 				checkCash.select();
@@ -382,6 +487,7 @@ class FormularioGenerator implements IGenerator {
 				assertFalse(checkCash.isChecked());
 				assertTrue(textCCNumber.isVisible());
 				assertTrue(labelCCNumber.isVisible());
+				*/
 		
 				display.dispose();
 				shell.dispose();		 

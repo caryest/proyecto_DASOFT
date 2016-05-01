@@ -157,6 +157,15 @@ public interface Formularios_DASOFTFactory extends EFactory {
 	AccionSeleccion createAccionSeleccion();
 
 	/**
+	 * Returns a new object of class '<em>Accion Pulsacion</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Accion Pulsacion</em>'.
+	 * @generated
+	 */
+	AccionPulsacion createAccionPulsacion();
+
+	/**
 	 * Returns a new object of class '<em>Asercion Invisible</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -9,8 +9,6 @@
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Formulario">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Formulario/layout"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Formulario/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Formulario/comprobarAsercion"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Formulario/comprobarAccion"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Formulario/pruebas"/>
     </genClasses>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Layout">
@@ -57,6 +55,8 @@
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//PruebaInterfaz">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//PruebaInterfaz/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//PruebaInterfaz/acciones"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//PruebaInterfaz/comprobarAsercion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//PruebaInterfaz/comprobarAccion"/>
     </genClasses>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Accion">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Accion/elemento"/>
@@ -68,6 +68,7 @@
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//AccionSeleccion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//AccionSeleccion/valor"/>
     </genClasses>
+    <genClasses ecoreClass="Proyecto_DASOFT.ecore#//AccionPulsacion"/>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Asercion">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Proyecto_DASOFT.ecore#//Asercion/elemento"/>
     </genClasses>

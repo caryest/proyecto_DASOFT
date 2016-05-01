@@ -80,7 +80,7 @@ public class InputRadioImpl extends InputReaccionImpl implements InputRadio {
 	 */
 	public void setSeleccion(int newSeleccion) {
 		int oldSeleccion = seleccion;
-		seleccion = newSeleccion;
+		seleccion = newSeleccion-1;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.INPUT_RADIO__SELECCION, oldSeleccion, seleccion));
 	}

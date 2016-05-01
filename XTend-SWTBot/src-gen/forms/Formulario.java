@@ -1,5 +1,7 @@
 package forms;
 
+import java.io.FileWriter;
+
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
@@ -8,8 +10,10 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.MessageBox;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
@@ -28,7 +32,7 @@ public class Formulario {
 		
 		Shell shell = new Shell(display);
 		shell.setText  ("Prueba2");
-		shell.setLayout(new GridLayout(3, false));
+		shell.setLayout(new GridLayout(2, false));
 		
 		// Añadimos los elementos de la interfaz
 		
@@ -36,7 +40,7 @@ public class Formulario {
 		Composite contentTexttexto1 = new Composite(shell, SWT.BORDER);
 		contentTexttexto1.setLayout(new GridLayout(2, true));
 		Label labeltexto1 = new Label(contentTexttexto1, SWT.NONE);
-		Text  texttexto1  = new Text(contentTexttexto1, SWT.BORDER);
+		Text  textotexto1  = new Text(contentTexttexto1, SWT.BORDER);
 		labeltexto1.setText("texto1");
 				
 		// CASO RADIO
@@ -72,74 +76,159 @@ public class Formulario {
 		checkcheck1[1] = new Button(contentCheckcheck1, SWT.CHECK);
 		checkcheck1[1].setText("val2");
 				
-		// layout
-		GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
-		data.horizontalSpan = 2;
-		//checkCash.setLayoutData(data);	
-		
-		/**
-		// checkbutton
-		Button checkCash = new Button(shell, SWT.CHECK);
-		checkCash.setText("Pay with cash?");		
-		
-		// text field
-		Label labelCCNumber = new Label(shell, SWT.NONE);
-		Text  textCCNumber  = new Text(shell, SWT.BORDER);
-		labelCCNumber.setText("Credit card number");
-		
-		// layout
-		GridData data = new GridData(SWT.FILL, SWT.FILL, true, false);
-		shell.setLayout(new GridLayout(2, true));
-		data.horizontalSpan = 2;
-		checkCash.setLayoutData(data);		
-		**/
-		
+		// CASO BOTON
+		Button botonvalidar = new Button(shell, SWT.BUTTON1);
+		botonvalidar.setText("validar");
+				
+		// CASO BOTON
+		Button botoncancelar = new Button(shell, SWT.BUTTON1);
+		botoncancelar.setText("cancelar");
+				
+		// CASO BOTON
+		Button botonguardar = new Button(shell, SWT.BUTTON1);
+		botonguardar.setText("guardar");
+				
 		// Funciones Reaccion
-		
-		//Formularios_DASOFT.impl.InputTextoImpl
-				
-		//Formularios_DASOFT.impl.InputRadioImpl
-		// CASO RADIO
-		radioradio1[0].addSelectionListener(new SelectionListener() {
+				// CASO RADIO
+		radioradio1[1].addSelectionListener(new SelectionListener() {
 			
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
-				texttexto1.setEnabled( !radioradio1[0].getSelection() );
+				textotexto1.setEnabled( !radioradio1[1].getSelection() );
 			}
 			
 			@Override
 			public void widgetDefaultSelected(SelectionEvent arg0) {}
 		});
-		
-		//Formularios_DASOFT.impl.InputComboImpl
-				
-		//Formularios_DASOFT.impl.InputCheckImpl
-		// CASO CHECKBOX
-		checkcheck1[0].addSelectionListener(new SelectionListener() {
+				// CASO CHECKBOX
+		checkcheck1[1].addSelectionListener(new SelectionListener() {
 			
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
-				texttexto1.setVisible( !checkcheck1[0].getSelection() );
+				textotexto1.setVisible( !checkcheck1[1].getSelection() );
 			}
 			
 			@Override
 			public void widgetDefaultSelected(SelectionEvent arg0) {}
 		});
-				
-		/**
-		// show or hide text field depending on checkbutton selection
-		checkCash.addSelectionListener(new SelectionListener() {
+										
+		// Funciones de Input de tipo BOTON
+		// Caso Validar
+		botonvalidar.addSelectionListener(new SelectionListener() {
 			
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
-				labelCCNumber.setVisible( !checkCash.getSelection() );
-				textCCNumber.setVisible ( !checkCash.getSelection() );
+				
+				String mensaje_error = "";
+				boolean hay_error = false;
+				
+				if (textotexto1.getText().length() == 0){
+					hay_error = true;
+					mensaje_error += "*La entrada de texto 'texto1' no puede estar vacía.\n";
+				}
+				
+				if (hay_error){
+					MessageBox dialog = new MessageBox(shell, SWT.ICON_ERROR | SWT.OK);
+					dialog.setText("Validación");
+					dialog.setMessage(mensaje_error);
+					
+					// open dialog and await user selection
+					dialog.open();
+				}else{
+					MessageBox dialog = new MessageBox(shell, SWT.ICON_INFORMATION | SWT.OK);
+					dialog.setText("Validación");
+					dialog.setMessage("Resultado de la validación correcto.");
+					
+					// open dialog and await user selection
+					dialog.open();
+				}
+				
 			}
 			
 			@Override
 			public void widgetDefaultSelected(SelectionEvent arg0) {}
 		});
-		**/
+		 // Caso Cancelar
+		botoncancelar.addSelectionListener(new SelectionListener() {
+			
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				
+				textotexto1.setText("");
+				radioradio1[0].setSelection(false);
+				radioradio1[1].setSelection(false);
+				radioradio1[2].setSelection(false);
+				combocombo1.deselect(0);
+				checkcheck1[0].setSelection(false);
+				checkcheck1[1].setSelection(false);
+				
+			}
+			
+			@Override
+			public void widgetDefaultSelected(SelectionEvent arg0) {}
+		});
+		 // Caso Guardar
+		botonguardar.addSelectionListener(new SelectionListener() {
+			
+			@Override
+			public void widgetSelected(SelectionEvent arg0) {
+				
+				FileDialog dialog = new FileDialog(shell, SWT.SAVE);
+			    dialog.setFilterNames(new String[] { "Formulario", "All Files (*.*)" });
+			    dialog.setFilterExtensions(new String[] { "*.formulario", "*.*" }); // Windows
+			                                    // wild
+			                                    // cards
+			    dialog.setFilterPath("c:\\"); // Windows path
+			    dialog.setFileName("form.formulario");
+			    String filename = dialog.open(); 
+			    
+			    while (!shell.isDisposed()) {
+		        if (!display.readAndDispatch())
+			        display.sleep();
+			    }
+			    display.dispose();
+			    
+			    FileWriter writer = null; 
+				try 
+				{ 
+					writer = new FileWriter(filename); 
+					writer.write(textotexto1 + ": " + textotexto1.getText() + "\n"); 
+					String valoresRadioradio1 = "";
+					for(Button btnRadio : radioradio1){
+						if (btnRadio.getSelection() == true){
+							valoresRadioradio1 += btnRadio.getText();
+							valoresRadioradio1 += " ";
+						}
+					}
+					writer.write(radioradio1 + ": " + valoresRadioradio1 + "\n"); 
+					writer.write(combocombo1 + ": " + combocombo1.getText() + "\n"); 
+					String valoresCheckcheck1= "";
+					for(Button btnCheck : checkcheck1){
+						if (btnCheck.getSelection() == true){
+							valoresCheckcheck1 += btnCheck.getText();
+							valoresCheckcheck1 += " ";
+						}
+					}
+					writer.write(checkcheck1 + ": " + valoresCheckcheck1 + "\n"); 
+					writer.write("This\n is\n an\n example\n"); 
+				} 
+				catch (Exception e) 
+				{ 
+					System.err.println("Error al guardar el archivo"); 
+				} 
+				finally 
+				{ 
+					try 
+					{ 
+						writer.close();
+					} catch (Exception e) {} 
+				} 
+				
+			}
+			
+			@Override
+			public void widgetDefaultSelected(SelectionEvent arg0) {}
+		});
 		
 		// show form
 		shell.pack();

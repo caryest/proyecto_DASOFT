@@ -152,6 +152,10 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 				return createAccionSeleccionAdapter();
 			}
 			@Override
+			public Adapter caseAccionPulsacion(AccionPulsacion object) {
+				return createAccionPulsacionAdapter();
+			}
+			@Override
 			public Adapter caseAsercion(Asercion object) {
 				return createAsercionAdapter();
 			}
@@ -482,6 +486,20 @@ public class Formularios_DASOFTAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAccionSeleccionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link Formularios_DASOFT.AccionPulsacion <em>Accion Pulsacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see Formularios_DASOFT.AccionPulsacion
+	 * @generated
+	 */
+	public Adapter createAccionPulsacionAdapter() {
 		return null;
 	}
 

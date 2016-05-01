@@ -25,6 +25,7 @@ public class InternalFormularioLexer extends Lexer {
     public static final int T__51=51;
     public static final int T__52=52;
     public static final int T__53=53;
+    public static final int T__54=54;
     public static final int RULE_ID=5;
     public static final int T__26=26;
     public static final int T__27=27;
@@ -771,10 +772,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:44:7: ( 'AsercionInvisible' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:44:9: 'AsercionInvisible'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:44:7: ( 'AccionPulsacion' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:44:9: 'AccionPulsacion'
             {
-            match("AsercionInvisible"); 
+            match("AccionPulsacion"); 
 
 
             }
@@ -792,10 +793,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:45:7: ( 'AsercionHabilitado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:45:9: 'AsercionHabilitado'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:45:7: ( 'AsercionInvisible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:45:9: 'AsercionInvisible'
             {
-            match("AsercionHabilitado"); 
+            match("AsercionInvisible"); 
 
 
             }
@@ -813,10 +814,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:46:7: ( 'AsercionValor' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:46:9: 'AsercionValor'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:46:7: ( 'AsercionHabilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:46:9: 'AsercionHabilitado'
             {
-            match("AsercionValor"); 
+            match("AsercionHabilitado"); 
 
 
             }
@@ -834,10 +835,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:47:7: ( 'AsercionSeleccion' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:47:9: 'AsercionSeleccion'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:47:7: ( 'AsercionValor' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:47:9: 'AsercionValor'
             {
-            match("AsercionSeleccion"); 
+            match("AsercionValor"); 
 
 
             }
@@ -855,10 +856,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:48:7: ( 'estado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:48:9: 'estado'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:48:7: ( 'AsercionSeleccion' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:48:9: 'AsercionSeleccion'
             {
-            match("estado"); 
+            match("AsercionSeleccion"); 
 
 
             }
@@ -876,10 +877,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:49:7: ( 'comprobarAsercion' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:49:9: 'comprobarAsercion'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:49:7: ( 'estado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:49:9: 'estado'
             {
-            match("comprobarAsercion"); 
+            match("estado"); 
 
 
             }
@@ -897,10 +898,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:50:7: ( 'comprobarAccion' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:50:9: 'comprobarAccion'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:50:7: ( 'comprobarAsercion' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:50:9: 'comprobarAsercion'
             {
-            match("comprobarAccion"); 
+            match("comprobarAsercion"); 
 
 
             }
@@ -918,10 +919,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:51:7: ( 'visible' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:51:9: 'visible'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:51:7: ( 'comprobarAccion' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:51:9: 'comprobarAccion'
             {
-            match("visible"); 
+            match("comprobarAccion"); 
 
 
             }
@@ -939,10 +940,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:52:7: ( 'habilitado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:52:9: 'habilitado'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:52:7: ( 'visible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:52:9: 'visible'
             {
-            match("habilitado"); 
+            match("visible"); 
 
 
             }
@@ -960,10 +961,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:53:7: ( 'obligatorio' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:53:9: 'obligatorio'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:53:7: ( 'habilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:53:9: 'habilitado'
             {
-            match("obligatorio"); 
+            match("habilitado"); 
 
 
             }
@@ -976,15 +977,36 @@ public class InternalFormularioLexer extends Lexer {
     }
     // $ANTLR end "T__53"
 
+    // $ANTLR start "T__54"
+    public final void mT__54() throws RecognitionException {
+        try {
+            int _type = T__54;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:54:7: ( 'obligatorio' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:54:9: 'obligatorio'
+            {
+            match("obligatorio"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__54"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8275:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8275:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8569:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8569:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8275:11: ( '^' )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8569:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -993,7 +1015,7 @@ public class InternalFormularioLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8275:11: '^'
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8569:11: '^'
                     {
                     match('^'); 
 
@@ -1011,7 +1033,7 @@ public class InternalFormularioLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8275:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8569:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -1060,10 +1082,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8277:10: ( ( '0' .. '9' )+ )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8277:12: ( '0' .. '9' )+
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8571:10: ( ( '0' .. '9' )+ )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8571:12: ( '0' .. '9' )+
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8277:12: ( '0' .. '9' )+
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8571:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -1077,7 +1099,7 @@ public class InternalFormularioLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8277:13: '0' .. '9'
+            	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8571:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1109,10 +1131,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -1130,10 +1152,10 @@ public class InternalFormularioLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -1149,7 +1171,7 @@ public class InternalFormularioLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:21: '\\\\' .
+                    	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1157,7 +1179,7 @@ public class InternalFormularioLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1182,10 +1204,10 @@ public class InternalFormularioLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1201,7 +1223,7 @@ public class InternalFormularioLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:54: '\\\\' .
+                    	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1209,7 +1231,7 @@ public class InternalFormularioLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8279:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8573:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1252,12 +1274,12 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8281:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8281:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8575:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8575:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8281:24: ( options {greedy=false; } : . )*
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8575:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1282,7 +1304,7 @@ public class InternalFormularioLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8281:52: .
+            	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8575:52: .
             	    {
             	    matchAny(); 
 
@@ -1312,12 +1334,12 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8283:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8283:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8577:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8577:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8283:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8577:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -1330,7 +1352,7 @@ public class InternalFormularioLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8283:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8577:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1350,7 +1372,7 @@ public class InternalFormularioLexer extends Lexer {
                 }
             } while (true);
 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8283:40: ( ( '\\r' )? '\\n' )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8577:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -1359,9 +1381,9 @@ public class InternalFormularioLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8283:41: ( '\\r' )? '\\n'
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8577:41: ( '\\r' )? '\\n'
                     {
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8283:41: ( '\\r' )?
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8577:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -1370,7 +1392,7 @@ public class InternalFormularioLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8283:41: '\\r'
+                            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8577:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1402,10 +1424,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8285:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8285:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8579:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8579:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8285:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8579:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -1459,8 +1481,8 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8287:16: ( . )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8287:18: .
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8581:16: ( . )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8581:18: .
             {
             matchAny(); 
 
@@ -1475,8 +1497,8 @@ public class InternalFormularioLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=50;
+        // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=51;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -1781,49 +1803,56 @@ public class InternalFormularioLexer extends Lexer {
                 }
                 break;
             case 44 :
-                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:268: RULE_ID
+                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:268: T__54
+                {
+                mT__54(); 
+
+                }
+                break;
+            case 45 :
+                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:274: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 45 :
-                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:276: RULE_INT
+            case 46 :
+                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:282: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 46 :
-                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:285: RULE_STRING
+            case 47 :
+                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:291: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 47 :
-                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:297: RULE_ML_COMMENT
+            case 48 :
+                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:303: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 48 :
-                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:313: RULE_SL_COMMENT
+            case 49 :
+                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:319: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 49 :
-                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:329: RULE_WS
+            case 50 :
+                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:335: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 50 :
-                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:337: RULE_ANY_OTHER
+            case 51 :
+                // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1:343: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1840,20 +1869,20 @@ public class InternalFormularioLexer extends Lexer {
         "\1\uffff\1\40\1\uffff\1\40\1\uffff\4\40\1\uffff\2\40\1\uffff\12"+
         "\40\1\36\2\uffff\3\36\2\uffff\1\40\2\uffff\1\40\1\uffff\6\40\1\uffff"+
         "\3\40\1\uffff\14\40\5\uffff\102\40\1\u009f\14\40\1\u00ae\1\40\1"+
-        "\u00b0\4\40\1\u00b5\10\40\1\uffff\16\40\1\uffff\1\u00cf\1\uffff"+
-        "\4\40\1\uffff\10\40\1\u00dc\1\u00dd\6\40\1\u00e4\10\40\1\uffff\1"+
-        "\u00ed\1\40\1\u00ef\1\u00f0\1\40\1\u00f2\1\40\1\u00f4\4\40\2\uffff"+
-        "\1\u00f9\5\40\1\uffff\1\40\1\u0101\6\40\1\uffff\1\40\2\uffff\1\40"+
-        "\1\uffff\1\40\1\uffff\4\40\1\uffff\1\u0112\6\40\1\uffff\10\40\1"+
-        "\u0121\2\40\1\u0125\1\u0126\1\u0127\1\u0128\1\u0129\1\uffff\15\40"+
-        "\1\u0137\1\uffff\3\40\5\uffff\3\40\1\u013e\2\40\1\u0141\1\u0142"+
-        "\5\40\1\uffff\3\40\1\u014b\1\u014c\1\40\1\uffff\2\40\2\uffff\10"+
-        "\40\2\uffff\1\u0158\5\40\1\u015e\3\40\1\u0162\1\uffff\5\40\1\uffff"+
-        "\2\40\1\u016a\1\uffff\1\u016b\1\40\1\u016d\4\40\2\uffff\1\40\1\uffff"+
-        "\3\40\1\u0176\1\40\1\u0178\1\40\1\u017a\1\uffff\1\u017b\1\uffff"+
-        "\1\u017c\3\uffff";
+        "\u00b0\4\40\1\u00b5\10\40\1\uffff\16\40\1\uffff\1\u00d0\1\uffff"+
+        "\4\40\1\uffff\10\40\1\u00dd\1\u00de\6\40\1\u00e5\11\40\1\uffff\1"+
+        "\u00ef\1\40\1\u00f1\1\u00f2\1\40\1\u00f4\1\40\1\u00f6\4\40\2\uffff"+
+        "\1\u00fb\5\40\1\uffff\1\40\1\u0103\7\40\1\uffff\1\40\2\uffff\1\40"+
+        "\1\uffff\1\40\1\uffff\4\40\1\uffff\1\u0115\6\40\1\uffff\11\40\1"+
+        "\u0125\2\40\1\u0129\1\u012a\1\u012b\1\u012c\1\u012d\1\uffff\16\40"+
+        "\1\u013c\1\uffff\3\40\5\uffff\3\40\1\u0143\2\40\1\u0146\1\u0147"+
+        "\6\40\1\uffff\3\40\1\u0151\1\u0152\1\40\1\uffff\2\40\2\uffff\11"+
+        "\40\2\uffff\1\u015f\6\40\1\u0166\3\40\1\u016a\1\uffff\6\40\1\uffff"+
+        "\2\40\1\u0173\1\uffff\1\u0174\1\40\1\u0176\1\u0177\4\40\2\uffff"+
+        "\1\40\2\uffff\3\40\1\u0180\1\40\1\u0182\1\40\1\u0184\1\uffff\1\u0185"+
+        "\1\uffff\1\u0186\3\uffff";
     static final String DFA12_eofS =
-        "\u017d\uffff";
+        "\u0187\uffff";
     static final String DFA12_minS =
         "\1\0\1\157\1\uffff\1\141\1\uffff\1\162\1\141\1\157\1\154\1\uffff"+
         "\1\162\1\143\1\uffff\1\156\1\141\2\145\1\157\1\165\1\145\1\142\1"+
@@ -1869,24 +1898,24 @@ public class InternalFormularioLexer extends Lexer {
         "\1\154\1\151\1\143\1\103\1\157\2\151\1\141\1\156\2\151\1\141\1\60"+
         "\1\163\1\60\1\141\1\142\1\141\1\164\1\60\1\111\1\145\1\143\1\157"+
         "\1\145\1\141\1\150\1\163\1\uffff\1\145\1\157\1\151\1\141\1\165\1"+
-        "\141\1\156\1\157\1\166\1\164\1\123\1\157\1\164\1\162\1\uffff\1\60"+
+        "\141\1\156\1\157\1\166\1\164\1\120\1\157\1\164\1\162\1\uffff\1\60"+
         "\1\uffff\1\163\1\141\1\163\1\157\1\uffff\1\156\1\163\1\151\1\156"+
         "\1\170\1\144\1\155\1\145\2\60\1\156\1\157\1\154\1\141\1\156\1\163"+
-        "\1\60\1\156\2\157\1\141\1\145\1\156\1\141\1\151\1\uffff\1\60\1\162"+
-        "\2\60\1\164\1\60\1\157\1\60\1\164\1\151\1\142\1\143\2\uffff\1\60"+
-        "\1\156\1\151\1\162\1\143\1\164\1\uffff\1\110\1\60\1\162\2\154\1"+
-        "\110\1\144\1\157\1\uffff\1\101\2\uffff\1\145\1\uffff\1\156\1\uffff"+
+        "\1\60\1\156\2\157\1\141\1\145\1\165\1\156\1\141\1\151\1\uffff\1"+
+        "\60\1\162\2\60\1\164\1\60\1\157\1\60\1\164\1\151\1\142\1\143\2\uffff"+
+        "\1\60\1\156\1\151\1\162\1\143\1\164\1\uffff\1\110\1\60\1\162\3\154"+
+        "\1\110\1\144\1\157\1\uffff\1\101\2\uffff\1\145\1\uffff\1\156\1\uffff"+
         "\3\157\1\153\1\uffff\1\60\2\144\1\145\1\157\1\151\1\141\1\uffff"+
-        "\1\151\1\157\1\145\1\156\2\141\1\145\1\157\1\60\1\143\1\162\5\60"+
-        "\1\uffff\2\141\1\154\1\155\1\163\1\142\1\157\1\162\1\143\1\166\1"+
-        "\142\2\154\1\60\1\uffff\1\145\1\143\1\146\5\uffff\2\162\1\141\1"+
-        "\60\2\151\2\60\1\143\2\151\1\157\1\145\1\uffff\1\162\1\151\1\141"+
-        "\2\60\1\162\1\uffff\1\142\1\154\2\uffff\1\151\1\163\1\154\1\162"+
-        "\2\143\1\157\1\172\2\uffff\1\60\1\154\1\151\1\157\2\151\1\60\1\143"+
-        "\1\151\1\156\1\60\1\uffff\1\145\1\164\1\156\1\142\1\164\1\uffff"+
-        "\1\151\1\157\1\60\1\uffff\1\60\1\141\1\60\1\154\1\141\1\157\1\156"+
-        "\2\uffff\1\144\1\uffff\1\145\1\144\1\156\1\60\1\157\1\60\1\157\1"+
-        "\60\1\uffff\1\60\1\uffff\1\60\3\uffff";
+        "\1\151\1\157\1\145\1\163\1\156\2\141\1\145\1\157\1\60\1\143\1\162"+
+        "\5\60\1\uffff\2\141\1\154\1\155\1\163\1\142\1\157\1\162\1\143\1"+
+        "\141\1\166\1\142\2\154\1\60\1\uffff\1\145\1\143\1\146\5\uffff\2"+
+        "\162\1\141\1\60\2\151\2\60\2\143\2\151\1\157\1\145\1\uffff\1\162"+
+        "\1\151\1\141\2\60\1\162\1\uffff\1\142\1\154\2\uffff\2\151\1\163"+
+        "\1\154\1\162\2\143\1\157\1\172\2\uffff\1\60\1\154\1\151\2\157\2"+
+        "\151\1\60\1\143\1\151\1\156\1\60\1\uffff\1\145\1\164\2\156\1\142"+
+        "\1\164\1\uffff\1\151\1\157\1\60\1\uffff\1\60\1\141\2\60\1\154\1"+
+        "\141\1\157\1\156\2\uffff\1\144\2\uffff\1\145\1\144\1\156\1\60\1"+
+        "\157\1\60\1\157\1\60\1\uffff\1\60\1\uffff\1\60\3\uffff";
     static final String DFA12_maxS =
         "\1\uffff\1\157\1\uffff\1\141\1\uffff\1\162\1\141\1\157\1\163\1"+
         "\uffff\1\162\1\163\1\uffff\1\156\1\151\2\145\1\157\1\165\1\145\1"+
@@ -1905,34 +1934,35 @@ public class InternalFormularioLexer extends Lexer {
         "\165\1\156\1\157\1\166\1\164\1\126\1\157\1\164\1\162\1\uffff\1\172"+
         "\1\uffff\1\163\1\141\1\163\1\157\1\uffff\1\156\1\163\1\151\1\156"+
         "\1\170\1\144\1\155\1\145\2\172\1\156\1\157\1\154\1\141\1\156\1\163"+
-        "\1\172\1\156\2\157\1\141\1\145\1\156\1\141\1\151\1\uffff\1\172\1"+
-        "\162\2\172\1\164\1\172\1\157\1\172\1\164\1\151\1\142\1\143\2\uffff"+
-        "\1\172\1\156\1\151\1\162\1\143\1\164\1\uffff\1\126\1\172\1\162\2"+
-        "\154\1\126\1\144\1\157\1\uffff\1\101\2\uffff\1\145\1\uffff\1\156"+
-        "\1\uffff\3\157\1\153\1\uffff\1\172\2\144\1\145\1\157\1\151\1\141"+
-        "\1\uffff\1\151\1\157\1\145\1\156\2\141\1\145\1\157\1\172\1\163\1"+
-        "\162\5\172\1\uffff\2\141\1\154\1\155\1\163\1\142\1\157\1\162\1\143"+
-        "\1\166\1\142\2\154\1\172\1\uffff\1\145\1\143\1\146\5\uffff\2\162"+
-        "\1\141\1\172\2\151\2\172\1\143\2\151\1\157\1\145\1\uffff\1\162\1"+
-        "\151\1\141\2\172\1\162\1\uffff\1\142\1\154\2\uffff\1\151\1\163\1"+
-        "\154\1\162\2\143\1\157\1\172\2\uffff\1\172\1\154\1\151\1\157\2\151"+
-        "\1\172\1\143\1\151\1\156\1\172\1\uffff\1\145\1\164\1\156\1\142\1"+
-        "\164\1\uffff\1\151\1\157\1\172\1\uffff\1\172\1\141\1\172\1\154\1"+
-        "\141\1\157\1\156\2\uffff\1\144\1\uffff\1\145\1\144\1\156\1\172\1"+
-        "\157\1\172\1\157\1\172\1\uffff\1\172\1\uffff\1\172\3\uffff";
+        "\1\172\1\156\2\157\1\141\1\145\1\165\1\156\1\141\1\151\1\uffff\1"+
+        "\172\1\162\2\172\1\164\1\172\1\157\1\172\1\164\1\151\1\142\1\143"+
+        "\2\uffff\1\172\1\156\1\151\1\162\1\143\1\164\1\uffff\1\126\1\172"+
+        "\1\162\3\154\1\126\1\144\1\157\1\uffff\1\101\2\uffff\1\145\1\uffff"+
+        "\1\156\1\uffff\3\157\1\153\1\uffff\1\172\2\144\1\145\1\157\1\151"+
+        "\1\141\1\uffff\1\151\1\157\1\145\1\163\1\156\2\141\1\145\1\157\1"+
+        "\172\1\163\1\162\5\172\1\uffff\2\141\1\154\1\155\1\163\1\142\1\157"+
+        "\1\162\1\143\1\141\1\166\1\142\2\154\1\172\1\uffff\1\145\1\143\1"+
+        "\146\5\uffff\2\162\1\141\1\172\2\151\2\172\2\143\2\151\1\157\1\145"+
+        "\1\uffff\1\162\1\151\1\141\2\172\1\162\1\uffff\1\142\1\154\2\uffff"+
+        "\2\151\1\163\1\154\1\162\2\143\1\157\1\172\2\uffff\1\172\1\154\1"+
+        "\151\2\157\2\151\1\172\1\143\1\151\1\156\1\172\1\uffff\1\145\1\164"+
+        "\2\156\1\142\1\164\1\uffff\1\151\1\157\1\172\1\uffff\1\172\1\141"+
+        "\2\172\1\154\1\141\1\157\1\156\2\uffff\1\144\2\uffff\1\145\1\144"+
+        "\1\156\1\172\1\157\1\172\1\157\1\172\1\uffff\1\172\1\uffff\1\172"+
+        "\3\uffff";
     static final String DFA12_acceptS =
-        "\2\uffff\1\2\1\uffff\1\4\4\uffff\1\11\2\uffff\1\14\13\uffff\1\54"+
-        "\1\55\3\uffff\1\61\1\62\1\uffff\1\54\1\2\1\uffff\1\4\6\uffff\1\11"+
-        "\3\uffff\1\14\14\uffff\1\55\1\56\1\57\1\60\1\61\137\uffff\1\16\16"+
-        "\uffff\1\3\1\uffff\1\6\4\uffff\1\46\31\uffff\1\5\14\uffff\1\21\1"+
-        "\51\6\uffff\1\31\10\uffff\1\7\1\uffff\1\10\1\37\1\uffff\1\13\1\uffff"+
-        "\1\40\4\uffff\1\20\7\uffff\1\34\20\uffff\1\22\16\uffff\1\1\3\uffff"+
-        "\1\33\1\15\1\17\1\23\1\24\15\uffff\1\52\6\uffff\1\30\2\uffff\1\53"+
-        "\1\36\10\uffff\1\25\1\26\13\uffff\1\27\5\uffff\1\44\3\uffff\1\12"+
-        "\7\uffff\1\50\1\32\1\uffff\1\41\10\uffff\1\47\1\uffff\1\42\1\uffff"+
-        "\1\45\1\35\1\43";
+        "\2\uffff\1\2\1\uffff\1\4\4\uffff\1\11\2\uffff\1\14\13\uffff\1\55"+
+        "\1\56\3\uffff\1\62\1\63\1\uffff\1\55\1\2\1\uffff\1\4\6\uffff\1\11"+
+        "\3\uffff\1\14\14\uffff\1\56\1\57\1\60\1\61\1\62\137\uffff\1\16\16"+
+        "\uffff\1\3\1\uffff\1\6\4\uffff\1\47\32\uffff\1\5\14\uffff\1\21\1"+
+        "\52\6\uffff\1\31\11\uffff\1\7\1\uffff\1\10\1\37\1\uffff\1\13\1\uffff"+
+        "\1\40\4\uffff\1\20\7\uffff\1\34\21\uffff\1\22\17\uffff\1\1\3\uffff"+
+        "\1\33\1\15\1\17\1\23\1\24\16\uffff\1\53\6\uffff\1\30\2\uffff\1\54"+
+        "\1\36\11\uffff\1\25\1\26\14\uffff\1\27\6\uffff\1\45\3\uffff\1\12"+
+        "\10\uffff\1\51\1\32\1\uffff\1\41\1\42\10\uffff\1\50\1\uffff\1\43"+
+        "\1\uffff\1\46\1\35\1\44";
     static final String DFA12_specialS =
-        "\1\2\31\uffff\1\0\1\1\u0161\uffff}>";
+        "\1\2\31\uffff\1\0\1\1\u016b\uffff}>";
     static final String[] DFA12_transitionS = {
             "\11\36\2\35\2\36\1\35\22\36\1\35\1\36\1\32\4\36\1\33\4\36\1"+
             "\11\1\14\1\36\1\34\12\31\7\36\1\25\1\21\3\30\1\1\2\30\1\15\2"+
@@ -2109,19 +2139,18 @@ public class InternalFormularioLexer extends Lexer {
             "\1\u00c7",
             "\1\u00c8",
             "\1\u00c9",
-            "\1\u00cb\2\uffff\1\u00ca",
-            "\1\u00cc",
+            "\1\u00cc\2\uffff\1\u00cb\2\uffff\1\u00ca",
             "\1\u00cd",
             "\1\u00ce",
+            "\1\u00cf",
             "",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
-            "\1\u00d0",
             "\1\u00d1",
             "\1\u00d2",
             "\1\u00d3",
-            "",
             "\1\u00d4",
+            "",
             "\1\u00d5",
             "\1\u00d6",
             "\1\u00d7",
@@ -2129,16 +2158,16 @@ public class InternalFormularioLexer extends Lexer {
             "\1\u00d9",
             "\1\u00da",
             "\1\u00db",
+            "\1\u00dc",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u00de",
             "\1\u00df",
             "\1\u00e0",
             "\1\u00e1",
             "\1\u00e2",
             "\1\u00e3",
+            "\1\u00e4",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u00e5",
             "\1\u00e6",
             "\1\u00e7",
             "\1\u00e8",
@@ -2146,78 +2175,78 @@ public class InternalFormularioLexer extends Lexer {
             "\1\u00ea",
             "\1\u00eb",
             "\1\u00ec",
+            "\1\u00ed",
+            "\1\u00ee",
             "",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u00ee",
+            "\1\u00f0",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u00f1",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00f3",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00f5",
-            "\1\u00f6",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u00f7",
             "\1\u00f8",
+            "\1\u00f9",
+            "\1\u00fa",
             "",
             "",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u00fa",
-            "\1\u00fb",
             "\1\u00fc",
             "\1\u00fd",
             "\1\u00fe",
+            "\1\u00ff",
+            "\1\u0100",
             "",
-            "\1\u0100\15\uffff\1\u00ff",
+            "\1\u0102\15\uffff\1\u0101",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u0102",
-            "\1\u0103",
             "\1\u0104",
-            "\1\u0106\1\u0105\11\uffff\1\u0108\2\uffff\1\u0107",
-            "\1\u0109",
-            "\1\u010a",
-            "",
-            "\1\u010b",
-            "",
-            "",
+            "\1\u0105",
+            "\1\u0106",
+            "\1\u0107",
+            "\1\u0109\1\u0108\11\uffff\1\u010b\2\uffff\1\u010a",
             "\1\u010c",
-            "",
             "\1\u010d",
             "",
             "\1\u010e",
-            "\1\u010f",
-            "\1\u0110",
-            "\1\u0111",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\1\u010f",
+            "",
+            "\1\u0110",
+            "",
+            "\1\u0111",
+            "\1\u0112",
             "\1\u0113",
             "\1\u0114",
-            "\1\u0115",
+            "",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u0116",
             "\1\u0117",
             "\1\u0118",
-            "",
             "\1\u0119",
             "\1\u011a",
             "\1\u011b",
+            "",
             "\1\u011c",
             "\1\u011d",
             "\1\u011e",
             "\1\u011f",
             "\1\u0120",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u0123\17\uffff\1\u0122",
+            "\1\u0121",
+            "\1\u0122",
+            "\1\u0123",
             "\1\u0124",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u0127\17\uffff\1\u0126",
+            "\1\u0128",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
-            "\1\u012a",
-            "\1\u012b",
-            "\1\u012c",
-            "\1\u012d",
             "\1\u012e",
             "\1\u012f",
             "\1\u0130",
@@ -2227,91 +2256,102 @@ public class InternalFormularioLexer extends Lexer {
             "\1\u0134",
             "\1\u0135",
             "\1\u0136",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "",
+            "\1\u0137",
             "\1\u0138",
             "\1\u0139",
             "\1\u013a",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\u013b",
-            "\1\u013c",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
             "\1\u013d",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u013e",
             "\1\u013f",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\u0140",
+            "\1\u0141",
+            "\1\u0142",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u0143",
             "\1\u0144",
             "\1\u0145",
-            "\1\u0146",
-            "\1\u0147",
-            "",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u0148",
             "\1\u0149",
             "\1\u014a",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u014b",
+            "\1\u014c",
             "\1\u014d",
             "",
             "\1\u014e",
             "\1\u014f",
-            "",
-            "",
             "\1\u0150",
-            "\1\u0151",
-            "\1\u0152",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u0153",
+            "",
             "\1\u0154",
             "\1\u0155",
+            "",
+            "",
             "\1\u0156",
             "\1\u0157",
-            "",
-            "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u0158",
             "\1\u0159",
             "\1\u015a",
             "\1\u015b",
             "\1\u015c",
             "\1\u015d",
+            "\1\u015e",
+            "",
+            "",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u015f",
             "\1\u0160",
             "\1\u0161",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "",
+            "\1\u0162",
             "\1\u0163",
             "\1\u0164",
             "\1\u0165",
-            "\1\u0166",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u0167",
-            "",
             "\1\u0168",
             "\1\u0169",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u016b",
             "\1\u016c",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u016d",
             "\1\u016e",
             "\1\u016f",
             "\1\u0170",
+            "",
             "\1\u0171",
-            "",
-            "",
             "\1\u0172",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
-            "\1\u0173",
-            "\1\u0174",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\u0175",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\u0177",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u0178",
             "\1\u0179",
+            "\1\u017a",
+            "\1\u017b",
+            "",
+            "",
+            "\1\u017c",
+            "",
+            "",
+            "\1\u017d",
+            "\1\u017e",
+            "\1\u017f",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u0181",
+            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\u0183",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "",
             "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
@@ -2352,7 +2392,7 @@ public class InternalFormularioLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;

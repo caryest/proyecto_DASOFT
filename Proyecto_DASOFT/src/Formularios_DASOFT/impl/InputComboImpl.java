@@ -80,7 +80,7 @@ public class InputComboImpl extends InputMultipleImpl implements InputCombo {
 	 */
 	public void setSeleccion(int newSeleccion) {
 		int oldSeleccion = seleccion;
-		seleccion = newSeleccion;
+		seleccion = newSeleccion-1;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.INPUT_COMBO__SELECCION, oldSeleccion, seleccion));
 	}

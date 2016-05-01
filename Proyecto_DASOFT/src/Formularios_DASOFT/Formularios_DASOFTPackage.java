@@ -85,31 +85,13 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int FORMULARIO__NAME = 1;
 
 	/**
-	 * The feature id for the '<em><b>Comprobar Asercion</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORMULARIO__COMPROBAR_ASERCION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Comprobar Accion</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FORMULARIO__COMPROBAR_ACCION = 3;
-
-	/**
 	 * The feature id for the '<em><b>Pruebas</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORMULARIO__PRUEBAS = 4;
+	int FORMULARIO__PRUEBAS = 2;
 
 	/**
 	 * The number of structural features of the '<em>Formulario</em>' class.
@@ -118,7 +100,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FORMULARIO_FEATURE_COUNT = 5;
+	int FORMULARIO_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Formulario</em>' class.
@@ -1128,13 +1110,31 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int PRUEBA_INTERFAZ__ACCIONES = 1;
 
 	/**
+	 * The feature id for the '<em><b>Comprobar Asercion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRUEBA_INTERFAZ__COMPROBAR_ASERCION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Comprobar Accion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRUEBA_INTERFAZ__COMPROBAR_ACCION = 3;
+
+	/**
 	 * The number of structural features of the '<em>Prueba Interfaz</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRUEBA_INTERFAZ_FEATURE_COUNT = 2;
+	int PRUEBA_INTERFAZ_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Prueba Interfaz</em>' class.
@@ -1302,6 +1302,52 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int ACCION_SELECCION_OPERATION_COUNT = ACCION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link Formularios_DASOFT.impl.AccionPulsacionImpl <em>Accion Pulsacion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see Formularios_DASOFT.impl.AccionPulsacionImpl
+	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAccionPulsacion()
+	 * @generated
+	 */
+	int ACCION_PULSACION = 21;
+
+	/**
+	 * The feature id for the '<em><b>Elemento</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCION_PULSACION__ELEMENTO = ACCION__ELEMENTO;
+
+	/**
+	 * The feature id for the '<em><b>Asercion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCION_PULSACION__ASERCION = ACCION__ASERCION;
+
+	/**
+	 * The number of structural features of the '<em>Accion Pulsacion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCION_PULSACION_FEATURE_COUNT = ACCION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Accion Pulsacion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ACCION_PULSACION_OPERATION_COUNT = ACCION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link Formularios_DASOFT.impl.AsercionImpl <em>Asercion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1309,7 +1355,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercion()
 	 * @generated
 	 */
-	int ASERCION = 21;
+	int ASERCION = 22;
 
 	/**
 	 * The feature id for the '<em><b>Elemento</b></em>' reference.
@@ -1346,7 +1392,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionInvisible()
 	 * @generated
 	 */
-	int ASERCION_INVISIBLE = 22;
+	int ASERCION_INVISIBLE = 23;
 
 	/**
 	 * The feature id for the '<em><b>Elemento</b></em>' reference.
@@ -1392,7 +1438,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionHabilitado()
 	 * @generated
 	 */
-	int ASERCION_HABILITADO = 23;
+	int ASERCION_HABILITADO = 24;
 
 	/**
 	 * The feature id for the '<em><b>Elemento</b></em>' reference.
@@ -1438,7 +1484,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionValor()
 	 * @generated
 	 */
-	int ASERCION_VALOR = 24;
+	int ASERCION_VALOR = 25;
 
 	/**
 	 * The feature id for the '<em><b>Elemento</b></em>' reference.
@@ -1484,7 +1530,7 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAsercionSeleccion()
 	 * @generated
 	 */
-	int ASERCION_SELECCION = 25;
+	int ASERCION_SELECCION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Elemento</b></em>' reference.
@@ -1554,28 +1600,6 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getFormulario_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Formulario#isComprobarAsercion <em>Comprobar Asercion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Comprobar Asercion</em>'.
-	 * @see Formularios_DASOFT.Formulario#isComprobarAsercion()
-	 * @see #getFormulario()
-	 * @generated
-	 */
-	EAttribute getFormulario_ComprobarAsercion();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Formulario#isComprobarAccion <em>Comprobar Accion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Comprobar Accion</em>'.
-	 * @see Formularios_DASOFT.Formulario#isComprobarAccion()
-	 * @see #getFormulario()
-	 * @generated
-	 */
-	EAttribute getFormulario_ComprobarAccion();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link Formularios_DASOFT.Formulario#getPruebas <em>Pruebas</em>}'.
@@ -1946,6 +1970,28 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EReference getPruebaInterfaz_Acciones();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.PruebaInterfaz#isComprobarAsercion <em>Comprobar Asercion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comprobar Asercion</em>'.
+	 * @see Formularios_DASOFT.PruebaInterfaz#isComprobarAsercion()
+	 * @see #getPruebaInterfaz()
+	 * @generated
+	 */
+	EAttribute getPruebaInterfaz_ComprobarAsercion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.PruebaInterfaz#isComprobarAccion <em>Comprobar Accion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comprobar Accion</em>'.
+	 * @see Formularios_DASOFT.PruebaInterfaz#isComprobarAccion()
+	 * @see #getPruebaInterfaz()
+	 * @generated
+	 */
+	EAttribute getPruebaInterfaz_ComprobarAccion();
+
+	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.Accion <em>Accion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2018,6 +2064,16 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getAccionSeleccion_Valor();
+
+	/**
+	 * Returns the meta object for class '{@link Formularios_DASOFT.AccionPulsacion <em>Accion Pulsacion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Accion Pulsacion</em>'.
+	 * @see Formularios_DASOFT.AccionPulsacion
+	 * @generated
+	 */
+	EClass getAccionPulsacion();
 
 	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.Asercion <em>Asercion</em>}'.
@@ -2172,22 +2228,6 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute FORMULARIO__NAME = eINSTANCE.getFormulario_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Comprobar Asercion</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FORMULARIO__COMPROBAR_ASERCION = eINSTANCE.getFormulario_ComprobarAsercion();
-
-		/**
-		 * The meta object literal for the '<em><b>Comprobar Accion</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FORMULARIO__COMPROBAR_ACCION = eINSTANCE.getFormulario_ComprobarAccion();
 
 		/**
 		 * The meta object literal for the '<em><b>Pruebas</b></em>' containment reference feature.
@@ -2504,6 +2544,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EReference PRUEBA_INTERFAZ__ACCIONES = eINSTANCE.getPruebaInterfaz_Acciones();
 
 		/**
+		 * The meta object literal for the '<em><b>Comprobar Asercion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRUEBA_INTERFAZ__COMPROBAR_ASERCION = eINSTANCE.getPruebaInterfaz_ComprobarAsercion();
+
+		/**
+		 * The meta object literal for the '<em><b>Comprobar Accion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRUEBA_INTERFAZ__COMPROBAR_ACCION = eINSTANCE.getPruebaInterfaz_ComprobarAccion();
+
+		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AccionImpl <em>Accion</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2564,6 +2620,16 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ACCION_SELECCION__VALOR = eINSTANCE.getAccionSeleccion_Valor();
+
+		/**
+		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AccionPulsacionImpl <em>Accion Pulsacion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see Formularios_DASOFT.impl.AccionPulsacionImpl
+		 * @see Formularios_DASOFT.impl.Formularios_DASOFTPackageImpl#getAccionPulsacion()
+		 * @generated
+		 */
+		EClass ACCION_PULSACION = eINSTANCE.getAccionPulsacion();
 
 		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AsercionImpl <em>Asercion</em>}' class.

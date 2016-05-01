@@ -8,6 +8,8 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swtbot.swt.finder.SWTBot;
 import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
 import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
+import org.eclipse.swtbot.swt.finder.widgets.SWTBotButton;
+import org.eclipse.swtbot.swt.finder.widgets.SWTBotCCombo;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotCheckBox;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotLabel;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotText;
@@ -33,21 +35,36 @@ public class FormularioTest {
 	public void test1() {
 		// slow down execution
 		SWTBotPreferences.PLAYBACK_DELAY = 100;
+		
+		// Añadimos las referencias a los elementos del formulario
+		
+		// CASO TEXTO
+		SWTBotButton textotexto1 = bot.button("texto1");
+				
+		// CASO RADIO
 
-		 // CASO ACCION SELECCION
-				// CASO ACCION VALOR
-						
+				
+		 // CASO COMBO
+		//SWTBotCCombo botoncombo1 = bot.comboWithLabel("combo1");
+		
+		// CASO CHECKBOX
+		
+				
+		// CASO BOTON
+		SWTBotButton botonvalidar = bot.button("validar");
+				
+		// CASO BOTON
+		SWTBotButton botoncancelar = bot.button("cancelar");
+				
+		// CASO BOTON
+		SWTBotButton botonguardar = bot.button("guardar");
+				
+		// Ahora codificamos los ASSERTS
+		
+		assertTrue(textotexto1.isEnabled());
+		assertTrue(textotexto1.isVisible());
+
 		/*
-		SWTBotCheckBox checkCash  = bot.checkBox("Pay with cash?");
-		SWTBotText  textCCNumber  = bot.textWithLabel("Credit card number");
-		SWTBotLabel labelCCNumber = bot.label("Credit card number");
-		*/
-
-		// checkbutton should be unchecked, text field should be visible
-		assertFalse(checkCash.isChecked());
-		assertTrue(textCCNumber.isVisible());
-		assertTrue(labelCCNumber.isVisible());
-
 		// select check
 		checkCash.setFocus();
 		checkCash.select();
@@ -67,6 +84,7 @@ public class FormularioTest {
 		assertFalse(checkCash.isChecked());
 		assertTrue(textCCNumber.isVisible());
 		assertTrue(labelCCNumber.isVisible());
+		*/
 
 		display.dispose();
 		shell.dispose();		 

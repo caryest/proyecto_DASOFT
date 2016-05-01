@@ -26,8 +26,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link Formularios_DASOFT.impl.FormularioImpl#getLayout <em>Layout</em>}</li>
  *   <li>{@link Formularios_DASOFT.impl.FormularioImpl#getName <em>Name</em>}</li>
- *   <li>{@link Formularios_DASOFT.impl.FormularioImpl#isComprobarAsercion <em>Comprobar Asercion</em>}</li>
- *   <li>{@link Formularios_DASOFT.impl.FormularioImpl#isComprobarAccion <em>Comprobar Accion</em>}</li>
  *   <li>{@link Formularios_DASOFT.impl.FormularioImpl#getPruebas <em>Pruebas</em>}</li>
  * </ul>
  *
@@ -63,46 +61,6 @@ public class FormularioImpl extends MinimalEObjectImpl.Container implements Form
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isComprobarAsercion() <em>Comprobar Asercion</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isComprobarAsercion()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean COMPROBAR_ASERCION_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isComprobarAsercion() <em>Comprobar Asercion</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isComprobarAsercion()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean comprobarAsercion = COMPROBAR_ASERCION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #isComprobarAccion() <em>Comprobar Accion</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isComprobarAccion()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final boolean COMPROBAR_ACCION_EDEFAULT = false;
-
-	/**
-	 * The cached value of the '{@link #isComprobarAccion() <em>Comprobar Accion</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #isComprobarAccion()
-	 * @generated
-	 * @ordered
-	 */
-	protected boolean comprobarAccion = COMPROBAR_ACCION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getPruebas() <em>Pruebas</em>}' containment reference.
@@ -202,48 +160,6 @@ public class FormularioImpl extends MinimalEObjectImpl.Container implements Form
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isComprobarAsercion() {
-		return comprobarAsercion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setComprobarAsercion(boolean newComprobarAsercion) {
-		boolean oldComprobarAsercion = comprobarAsercion;
-		comprobarAsercion = newComprobarAsercion;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.FORMULARIO__COMPROBAR_ASERCION, oldComprobarAsercion, comprobarAsercion));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public boolean isComprobarAccion() {
-		return comprobarAccion;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setComprobarAccion(boolean newComprobarAccion) {
-		boolean oldComprobarAccion = comprobarAccion;
-		comprobarAccion = newComprobarAccion;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.FORMULARIO__COMPROBAR_ACCION, oldComprobarAccion, comprobarAccion));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public PruebaInterfaz getPruebas() {
 		return pruebas;
 	}
@@ -310,10 +226,6 @@ public class FormularioImpl extends MinimalEObjectImpl.Container implements Form
 				return getLayout();
 			case Formularios_DASOFTPackage.FORMULARIO__NAME:
 				return getName();
-			case Formularios_DASOFTPackage.FORMULARIO__COMPROBAR_ASERCION:
-				return isComprobarAsercion();
-			case Formularios_DASOFTPackage.FORMULARIO__COMPROBAR_ACCION:
-				return isComprobarAccion();
 			case Formularios_DASOFTPackage.FORMULARIO__PRUEBAS:
 				return getPruebas();
 		}
@@ -333,12 +245,6 @@ public class FormularioImpl extends MinimalEObjectImpl.Container implements Form
 				return;
 			case Formularios_DASOFTPackage.FORMULARIO__NAME:
 				setName((String)newValue);
-				return;
-			case Formularios_DASOFTPackage.FORMULARIO__COMPROBAR_ASERCION:
-				setComprobarAsercion((Boolean)newValue);
-				return;
-			case Formularios_DASOFTPackage.FORMULARIO__COMPROBAR_ACCION:
-				setComprobarAccion((Boolean)newValue);
 				return;
 			case Formularios_DASOFTPackage.FORMULARIO__PRUEBAS:
 				setPruebas((PruebaInterfaz)newValue);
@@ -361,12 +267,6 @@ public class FormularioImpl extends MinimalEObjectImpl.Container implements Form
 			case Formularios_DASOFTPackage.FORMULARIO__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Formularios_DASOFTPackage.FORMULARIO__COMPROBAR_ASERCION:
-				setComprobarAsercion(COMPROBAR_ASERCION_EDEFAULT);
-				return;
-			case Formularios_DASOFTPackage.FORMULARIO__COMPROBAR_ACCION:
-				setComprobarAccion(COMPROBAR_ACCION_EDEFAULT);
-				return;
 			case Formularios_DASOFTPackage.FORMULARIO__PRUEBAS:
 				setPruebas((PruebaInterfaz)null);
 				return;
@@ -386,10 +286,6 @@ public class FormularioImpl extends MinimalEObjectImpl.Container implements Form
 				return layout != null;
 			case Formularios_DASOFTPackage.FORMULARIO__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Formularios_DASOFTPackage.FORMULARIO__COMPROBAR_ASERCION:
-				return comprobarAsercion != COMPROBAR_ASERCION_EDEFAULT;
-			case Formularios_DASOFTPackage.FORMULARIO__COMPROBAR_ACCION:
-				return comprobarAccion != COMPROBAR_ACCION_EDEFAULT;
 			case Formularios_DASOFTPackage.FORMULARIO__PRUEBAS:
 				return pruebas != null;
 		}
@@ -408,10 +304,6 @@ public class FormularioImpl extends MinimalEObjectImpl.Container implements Form
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", comprobarAsercion: ");
-		result.append(comprobarAsercion);
-		result.append(", comprobarAccion: ");
-		result.append(comprobarAccion);
 		result.append(')');
 		return result.toString();
 	}

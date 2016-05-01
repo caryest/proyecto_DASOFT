@@ -218,6 +218,13 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case Formularios_DASOFTPackage.ACCION_PULSACION: {
+				AccionPulsacion accionPulsacion = (AccionPulsacion)theEObject;
+				T result = caseAccionPulsacion(accionPulsacion);
+				if (result == null) result = caseAccion(accionPulsacion);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case Formularios_DASOFTPackage.ASERCION: {
 				Asercion asercion = (Asercion)theEObject;
 				T result = caseAsercion(asercion);
@@ -568,6 +575,21 @@ public class Formularios_DASOFTSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAccionSeleccion(AccionSeleccion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Accion Pulsacion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Accion Pulsacion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccionPulsacion(AccionPulsacion object) {
 		return null;
 	}
 

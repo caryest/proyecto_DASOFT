@@ -71,6 +71,7 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 			case Formularios_DASOFTPackage.PRUEBA_INTERFAZ: return createPruebaInterfaz();
 			case Formularios_DASOFTPackage.ACCION_VALOR: return createAccionValor();
 			case Formularios_DASOFTPackage.ACCION_SELECCION: return createAccionSeleccion();
+			case Formularios_DASOFTPackage.ACCION_PULSACION: return createAccionPulsacion();
 			case Formularios_DASOFTPackage.ASERCION_INVISIBLE: return createAsercionInvisible();
 			case Formularios_DASOFTPackage.ASERCION_HABILITADO: return createAsercionHabilitado();
 			case Formularios_DASOFTPackage.ASERCION_VALOR: return createAsercionValor();
@@ -228,6 +229,16 @@ public class Formularios_DASOFTFactoryImpl extends EFactoryImpl implements Formu
 	public AccionSeleccion createAccionSeleccion() {
 		AccionSeleccionImpl accionSeleccion = new AccionSeleccionImpl();
 		return accionSeleccion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public AccionPulsacion createAccionPulsacion() {
+		AccionPulsacionImpl accionPulsacion = new AccionPulsacionImpl();
+		return accionPulsacion;
 	}
 
 	/**

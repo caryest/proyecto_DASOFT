@@ -2,9 +2,10 @@ Formulario Prueba2
 {
 	layout Layout
 	{
-		columnas 3
+		columnas 2
 		entradas
 		{
+			obligatorio
 			InputTexto texto1
 			{
 				valor Pepe
@@ -14,7 +15,7 @@ Formulario Prueba2
 				valores{ 
 					val1, val2, val3
 				}
-				seleccion 1
+				seleccion 2
 				reaccion ReaccionHabilitado
 				{
 					activacion 1
@@ -41,7 +42,10 @@ Formulario Prueba2
 					activacion 1
 					objetivo texto1
 				}
-			}
+			},
+			BotonValidar validar,
+			BotonCancelar cancelar,
+			BotonGuardar guardar
 			
 		}
 	}
@@ -49,18 +53,17 @@ Formulario Prueba2
 	{
 		acciones{
 			AccionSeleccion{
-				valor 2
-				elemento combo1
-				asercion AsercionSeleccion
+				valor 1
+				elemento radio1
+				asercion estado AsercionHabilitado // Aqui esta a true
 				{
-					estado 1
 					elemento texto1
 				}
 			},
-			AccionValor{
-				valor Pepe
-				elemento texto1
-				asercion estado AsercionHabilitado // Aqui es "true" habilitado
+			AccionSeleccion{
+				valor 1
+				elemento check1
+				asercion estado AsercionInvisible // Aqui es "true" habilitado
 				{
 					elemento texto1
 				}
