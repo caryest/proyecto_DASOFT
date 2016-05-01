@@ -431,6 +431,28 @@ class FormularioGenerator implements IGenerator {
 				// Ahora codificamos los ASSERTS
 				
 				« FOR accion : form.pruebas.acciones »
+				« IF accion.elemento instanceof InputBoton »
+				boton«accion.elemento.name».setFocus();
+				boton«accion.elemento.name».select();
+				display.update();
+				« ELSEIF accion.elemento instanceof InputTexto»
+				texto«accion.elemento.name».setFocus();
+				texto«accion.elemento.name».select();
+				texto«accion.elemento.name».setText("«(accion as AccionValor).valor»");
+				display.update();
+				« ELSEIF accion.elemento instanceof InputCheck»// ****************AUN QUEDA******************
+				check«accion.elemento.name».setFocus();
+				check«accion.elemento.name».select();
+				display.update();
+				« ELSEIF accion.elemento instanceof InputCombo »// ****************AUN QUEDA******************
+				combo«accion.elemento.name».setFocus();
+				combo«accion.elemento.name».select();
+				display.update();
+				« ELSEIF accion.elemento instanceof InputRadio »// ****************AUN QUEDA******************
+				radio«accion.elemento.name».setFocus();
+				radio«accion.elemento.name».select();
+				display.update();
+				« ENDIF »
 				« IF accion.asercion instanceof AsercionHabilitado »
 				« IF accion.asercion.elemento instanceof InputBoton »
 				assertTrue(boton«accion.asercion.elemento.name».isEnabled());
@@ -466,28 +488,6 @@ class FormularioGenerator implements IGenerator {
 				« ENDIF »
 				« ENDIF »
 				« ENDFOR »
-		
-				/*
-				// select check
-				checkCash.setFocus();
-				checkCash.select();
-				display.update();
-		
-				// checkbutton should be checked, text field should be hidden
-				assertTrue(checkCash.isChecked());
-				assertFalse(textCCNumber.isVisible());
-				assertFalse(labelCCNumber.isVisible());
-		
-				// deselect check
-				checkCash.setFocus();
-				checkCash.deselect();
-				display.update();
-		
-				// checkbutton should be unchecked, text field should be visible
-				assertFalse(checkCash.isChecked());
-				assertTrue(textCCNumber.isVisible());
-				assertTrue(labelCCNumber.isVisible());
-				*/
 		
 				display.dispose();
 				shell.dispose();		 
