@@ -80,7 +80,7 @@ public class AccionSeleccionImpl extends AccionImpl implements AccionSeleccion {
 	 */
 	public void setValor(int newValor) {
 		int oldValor = valor;
-		valor = newValor-1;
+		valor = newValor;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.ACCION_SELECCION__VALOR, oldValor, valor));
 	}

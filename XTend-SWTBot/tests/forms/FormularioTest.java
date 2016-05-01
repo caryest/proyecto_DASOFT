@@ -10,7 +10,9 @@ import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
 import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotButton;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotCheckBox;
+import org.eclipse.swtbot.swt.finder.widgets.SWTBotCombo;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotLabel;
+import org.eclipse.swtbot.swt.finder.widgets.SWTBotRadio;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotText;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,16 +40,21 @@ public class FormularioTest {
 		// Añadimos las referencias a los elementos del formulario
 		
 		// CASO TEXTO
-		SWTBotButton textotexto1 = bot.button("texto1");
+		SWTBotText textotexto1 = bot.textWithLabel("texto1");
 				
 		// CASO RADIO
-
+		SWTBotRadio radioradio1[] = new SWTBotRadio[3];
+		radioradio1[0] = bot.radio("val1");
+		radioradio1[1] = bot.radio("val2");
+		radioradio1[2] = bot.radio("val3");
 				
 		 // CASO COMBO
-		SWTBotButton botoncombo1 = bot.comboWithLabel("combo1");
+		SWTBotCombo combocombo1 = bot.comboBox("combo1");
 		
 		// CASO CHECKBOX
-		
+		SWTBotCheckBox checkcheck1[] = new SWTBotCheckBox[2];
+		checkcheck1[0] = bot.checkBox("val1");
+		checkcheck1[1] = bot.checkBox("val2");
 				
 		// CASO BOTON
 		SWTBotButton botonvalidar = bot.button("validar");
@@ -61,13 +68,13 @@ public class FormularioTest {
 		// Ahora codificamos los ASSERTS
 		
 // ****************AUN QUEDA******************
-		radioradio1.setFocus();
-		radioradio1.select();
+		radioradio1[0].setFocus();
+		radioradio1[0].click();
 		display.update();
 		assertTrue(textotexto1.isEnabled());
 // ****************AUN QUEDA******************
-		checkcheck1.setFocus();
-		checkcheck1.select();
+		checkcheck1[0].setFocus();
+		checkcheck1[0].select();
 		display.update();
 				assertTrue(textotexto1.isVisible());
 

@@ -63,6 +63,7 @@ public class Formulario {
 				
 		 // CASO COMBO
 		Combo combocombo1 = new Combo(shell, SWT.SIMPLE);
+		combocombo1.setText("combo1");
 		combocombo1.add("val1");
 		combocombo1.add("val2");
 		
