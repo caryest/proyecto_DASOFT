@@ -39,7 +39,7 @@ class FormularioGenerator implements IGenerator {
  		for(Formulario form : resource.allContents.toIterable.filter(Formulario)){
 			fsa.generateFile("forms/Formulario.java", generarFormulario(form))
 		
-			fsa.generateFile("../tests/forms/FormularioTest.java", generarTest(form.pruebas))
+			fsa.generateFile("../tests/forms/FormularioTest.java", generarTest(form))
 		}
 		
 	}
@@ -370,7 +370,7 @@ class FormularioGenerator implements IGenerator {
 		}
 	'''
 	
-	def generarTest (PruebaInterfaz pruebas)'''
+	def generarTest (Formulario form)'''
 		package forms;
 
 		import static org.junit.Assert.assertFalse;
@@ -381,6 +381,7 @@ class FormularioGenerator implements IGenerator {
 		import org.eclipse.swtbot.swt.finder.SWTBot;
 		import org.eclipse.swtbot.swt.finder.junit.SWTBotJunit4ClassRunner;
 		import org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences;
+		import org.eclipse.swtbot.swt.finder.widgets.SWTBotButton;
 		import org.eclipse.swtbot.swt.finder.widgets.SWTBotCheckBox;
 		import org.eclipse.swtbot.swt.finder.widgets.SWTBotLabel;
 		import org.eclipse.swtbot.swt.finder.widgets.SWTBotText;
@@ -406,28 +407,52 @@ class FormularioGenerator implements IGenerator {
 			public void test1() {
 				// slow down execution
 				SWTBotPreferences.PLAYBACK_DELAY = 100;
-		
-				« FOR accion : pruebas.acciones »
-				« IF accion instanceof AccionValor »// CASO ACCION VALOR
-				« IF accion.elemento instanceof InputBoton »// CASO BOTONES
-				SWTBotButton boton«accion.elemento.name» = bot.button("«accion.elemento.name»");
-				« ELSEIF accion.elemento instanceof InputTexto »// CASO TEXTO
-				SWTBotText texto«accion.elemento.name» = bot.textWithLabel("«accion.elemento.name»");
+				
+				// Añadimos las referencias a los elementos del formulario
+				«FOR input : form.layout.entradas»
+				
+				« IF input instanceof InputBoton »// CASO BOTON
+				SWTBotButton boton«input.name» = bot.button("«input.name»");
+				« ELSEIF input instanceof InputTexto »// CASO TEXTO
+				SWTBotButton texto«input.name» = bot.button("«input.name»");
+				« ELSEIF input instanceof InputCheck »// CASO CHECKBOX
+				
+				«FOR valor : (input as InputCheck).valores»
+				«ENDFOR»
+				« ELSEIF input instanceof InputRadio »// CASO RADIO
+
+				«FOR valor : (input as InputRadio).valores»
+				«ENDFOR»
+				« ELSEIF input instanceof InputCombo » // CASO COMBO
+				SWTBotButton boton«input.name» = bot.comboWithLabel("«input.name»");
 				« ENDIF »
-				« ELSEIF accion instanceof AccionSeleccion » // CASO ACCION SELECCION
-				« IF accion.elemento instanceof InputCombo »// CASO COMBO
-				SWTBotButton boton«accion.elemento.name» = bot.comboWithLabel("«(accion.elemento as InputCombo).valores.get((accion as AccionSeleccion).valor)»");
-				« ELSEIF accion.elemento instanceof InputRadio »// CASO RADIO
-				SWTBotButton texto«accion.elemento.name» = bot.button("«accion.elemento.name»");
-				« ELSEIF accion.elemento instanceof InputCheck »// CASO CHECK
-				SWTBotCheckBox check«accion.elemento.name» = bot.checkBox("«(accion.elemento as InputCheck).valores.get((accion as AccionSeleccion).valor)»");
-				« ENDIF »
-				« ENDIF »
-				« ENDFOR »
+				«ENDFOR»
 				
 				// Ahora codificamos los ASSERTS
 				
-				« FOR accion : pruebas.acciones »
+				« FOR accion : form.pruebas.acciones »
+				« IF accion.elemento instanceof InputBoton »
+				boton«accion.elemento.name».setFocus();
+				boton«accion.elemento.name».select();
+				display.update();
+				« ELSEIF accion.elemento instanceof InputTexto»
+				texto«accion.elemento.name».setFocus();
+				texto«accion.elemento.name».select();
+				texto«accion.elemento.name».setText("«(accion as AccionValor).valor»");
+				display.update();
+				« ELSEIF accion.elemento instanceof InputCheck»// ****************AUN QUEDA******************
+				check«accion.elemento.name».setFocus();
+				check«accion.elemento.name».select();
+				display.update();
+				« ELSEIF accion.elemento instanceof InputCombo »// ****************AUN QUEDA******************
+				combo«accion.elemento.name».setFocus();
+				combo«accion.elemento.name».select();
+				display.update();
+				« ELSEIF accion.elemento instanceof InputRadio »// ****************AUN QUEDA******************
+				radio«accion.elemento.name».setFocus();
+				radio«accion.elemento.name».select();
+				display.update();
+				« ENDIF »
 				« IF accion.asercion instanceof AsercionHabilitado »
 				« IF accion.asercion.elemento instanceof InputBoton »
 				assertTrue(boton«accion.asercion.elemento.name».isEnabled());
@@ -463,26 +488,6 @@ class FormularioGenerator implements IGenerator {
 				« ENDIF »
 				« ENDIF »
 				« ENDFOR »
-		
-				// select check
-				checkCash.setFocus();
-				checkCash.select();
-				display.update();
-		
-				// checkbutton should be checked, text field should be hidden
-				assertTrue(checkCash.isChecked());
-				assertFalse(textCCNumber.isVisible());
-				assertFalse(labelCCNumber.isVisible());
-		
-				// deselect check
-				checkCash.setFocus();
-				checkCash.deselect();
-				display.update();
-		
-				// checkbutton should be unchecked, text field should be visible
-				assertFalse(checkCash.isChecked());
-				assertTrue(textCCNumber.isVisible());
-				assertTrue(labelCCNumber.isVisible());
 		
 				display.dispose();
 				shell.dispose();		 
