@@ -289,7 +289,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (name=EString layout=Layout pruebas=PruebaInterfaz?)
+	 *     (comprobacionCampos?='comprobacionCampos'? comprobacionAccion?='comprobacionAccion'? name=EString layout=Layout pruebas=PruebaInterfaz?)
 	 */
 	protected void sequence_Formulario(EObject context, Formulario semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -357,7 +357,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (comprobarAsercion?='comprobarAsercion'? comprobarAccion?='comprobarAccion'? name=EString (acciones+=Accion acciones+=Accion*)?)
+	 *     (name=EString (acciones+=Accion acciones+=Accion*)?)
 	 */
 	protected void sequence_PruebaInterfaz(EObject context, PruebaInterfaz semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

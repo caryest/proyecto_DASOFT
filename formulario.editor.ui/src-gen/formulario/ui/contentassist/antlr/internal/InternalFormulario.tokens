@@ -24,8 +24,8 @@
 'activacion'=37
 'asercion'=42
 'columnas'=17
-'comprobarAccion'=51
-'comprobarAsercion'=50
+'comprobacionAccion'=51
+'comprobacionCampos'=50
 'elemento'=41
 'entradas'=18
 'estado'=49

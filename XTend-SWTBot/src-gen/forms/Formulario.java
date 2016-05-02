@@ -91,22 +91,22 @@ public class Formulario {
 				
 		// Funciones Reaccion
 				// CASO RADIO
-		radioradio1[1].addSelectionListener(new SelectionListener() {
+		radioradio1[0].addSelectionListener(new SelectionListener() {
 			
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
-				textotexto1.setEnabled( !radioradio1[1].getSelection() );
+				textotexto1.setEnabled( !radioradio1[0].getSelection() );
 			}
 			
 			@Override
 			public void widgetDefaultSelected(SelectionEvent arg0) {}
 		});
 				// CASO CHECKBOX
-		checkcheck1[1].addSelectionListener(new SelectionListener() {
+		checkcheck1[0].addSelectionListener(new SelectionListener() {
 			
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
-				textotexto1.setVisible( !checkcheck1[1].getSelection() );
+				textotexto1.setVisible( !checkcheck1[0].getSelection() );
 			}
 			
 			@Override

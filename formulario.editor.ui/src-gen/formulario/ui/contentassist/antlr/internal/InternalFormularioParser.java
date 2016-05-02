@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFormularioParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Formulario'", "'{'", "'layout'", "'}'", "'pruebas'", "'Layout'", "'columnas'", "'entradas'", "','", "'PruebaInterfaz'", "'acciones'", "'-'", "'InputTexto'", "'valor'", "'InputRadio'", "'reaccion'", "'valores'", "'seleccion'", "'InputCombo'", "'InputCheck'", "'BotonValidar'", "'BotonGuardar'", "'BotonCancelar'", "'BotonCustom'", "'funcion'", "'ReaccionVisible'", "'activacion'", "'objetivo'", "'ReaccionHabilitado'", "'AccionValor'", "'elemento'", "'asercion'", "'AccionSeleccion'", "'AccionPulsacion'", "'AsercionInvisible'", "'AsercionHabilitado'", "'AsercionValor'", "'AsercionSeleccion'", "'estado'", "'comprobarAsercion'", "'comprobarAccion'", "'visible'", "'habilitado'", "'obligatorio'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Formulario'", "'{'", "'layout'", "'}'", "'pruebas'", "'Layout'", "'columnas'", "'entradas'", "','", "'PruebaInterfaz'", "'acciones'", "'-'", "'InputTexto'", "'valor'", "'InputRadio'", "'reaccion'", "'valores'", "'seleccion'", "'InputCombo'", "'InputCheck'", "'BotonValidar'", "'BotonGuardar'", "'BotonCancelar'", "'BotonCustom'", "'funcion'", "'ReaccionVisible'", "'activacion'", "'objetivo'", "'ReaccionHabilitado'", "'AccionValor'", "'elemento'", "'asercion'", "'AccionSeleccion'", "'AccionPulsacion'", "'AsercionInvisible'", "'AsercionHabilitado'", "'AsercionValor'", "'AsercionSeleccion'", "'estado'", "'comprobacionCampos'", "'comprobacionAccion'", "'visible'", "'habilitado'", "'obligatorio'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -731,20 +731,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "entryRuleEInt"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:284:1: entryRuleEInt : ruleEInt EOF ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:286:1: entryRuleEInt : ruleEInt EOF ;
     public final void entryRuleEInt() throws RecognitionException {
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:285:1: ( ruleEInt EOF )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:286:1: ruleEInt EOF
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:287:1: ( ruleEInt EOF )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:288:1: ruleEInt EOF
             {
              before(grammarAccess.getEIntRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_entryRuleEInt541);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_entryRuleEInt543);
             ruleEInt();
 
             state._fsp--;
 
              after(grammarAccess.getEIntRule()); 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEInt548); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleEInt550); 
 
             }
 
@@ -761,23 +761,23 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleEInt"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:293:1: ruleEInt : ( ( rule__EInt__Group__0 ) ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:295:1: ruleEInt : ( ( rule__EInt__Group__0 ) ) ;
     public final void ruleEInt() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:297:2: ( ( ( rule__EInt__Group__0 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:298:1: ( ( rule__EInt__Group__0 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:299:2: ( ( ( rule__EInt__Group__0 ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:300:1: ( ( rule__EInt__Group__0 ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:298:1: ( ( rule__EInt__Group__0 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:299:1: ( rule__EInt__Group__0 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:300:1: ( ( rule__EInt__Group__0 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:301:1: ( rule__EInt__Group__0 )
             {
              before(grammarAccess.getEIntAccess().getGroup()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:300:1: ( rule__EInt__Group__0 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:300:2: rule__EInt__Group__0
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:302:1: ( rule__EInt__Group__0 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:302:2: rule__EInt__Group__0
             {
-            pushFollow(FollowSets000.FOLLOW_rule__EInt__Group__0_in_ruleEInt574);
+            pushFollow(FollowSets000.FOLLOW_rule__EInt__Group__0_in_ruleEInt576);
             rule__EInt__Group__0();
 
             state._fsp--;
@@ -2731,21 +2731,42 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:969:1: rule__Formulario__Group__0__Impl : ( 'Formulario' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:969:1: rule__Formulario__Group__0__Impl : ( ( rule__Formulario__ComprobacionCamposAssignment_0 )? ) ;
     public final void rule__Formulario__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:973:1: ( ( 'Formulario' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:974:1: ( 'Formulario' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:973:1: ( ( ( rule__Formulario__ComprobacionCamposAssignment_0 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:974:1: ( ( rule__Formulario__ComprobacionCamposAssignment_0 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:974:1: ( 'Formulario' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:975:1: 'Formulario'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:974:1: ( ( rule__Formulario__ComprobacionCamposAssignment_0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:975:1: ( rule__Formulario__ComprobacionCamposAssignment_0 )?
             {
-             before(grammarAccess.getFormularioAccess().getFormularioKeyword_0()); 
-            match(input,11,FollowSets000.FOLLOW_11_in_rule__Formulario__Group__0__Impl2060); 
-             after(grammarAccess.getFormularioAccess().getFormularioKeyword_0()); 
+             before(grammarAccess.getFormularioAccess().getComprobacionCamposAssignment_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:976:1: ( rule__Formulario__ComprobacionCamposAssignment_0 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
+
+            if ( (LA6_0==50) ) {
+                alt6=1;
+            }
+            switch (alt6) {
+                case 1 :
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:976:2: rule__Formulario__ComprobacionCamposAssignment_0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_rule__Formulario__ComprobacionCamposAssignment_0_in_rule__Formulario__Group__0__Impl2059);
+                    rule__Formulario__ComprobacionCamposAssignment_0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getFormularioAccess().getComprobacionCamposAssignment_0()); 
 
             }
 
@@ -2768,21 +2789,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:988:1: rule__Formulario__Group__1 : rule__Formulario__Group__1__Impl rule__Formulario__Group__2 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:986:1: rule__Formulario__Group__1 : rule__Formulario__Group__1__Impl rule__Formulario__Group__2 ;
     public final void rule__Formulario__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:992:1: ( rule__Formulario__Group__1__Impl rule__Formulario__Group__2 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:993:2: rule__Formulario__Group__1__Impl rule__Formulario__Group__2
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:990:1: ( rule__Formulario__Group__1__Impl rule__Formulario__Group__2 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:991:2: rule__Formulario__Group__1__Impl rule__Formulario__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__1__Impl_in_rule__Formulario__Group__12091);
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__1__Impl_in_rule__Formulario__Group__12090);
             rule__Formulario__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__2_in_rule__Formulario__Group__12094);
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__2_in_rule__Formulario__Group__12093);
             rule__Formulario__Group__2();
 
             state._fsp--;
@@ -2806,31 +2827,42 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1000:1: rule__Formulario__Group__1__Impl : ( ( rule__Formulario__NameAssignment_1 ) ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:998:1: rule__Formulario__Group__1__Impl : ( ( rule__Formulario__ComprobacionAccionAssignment_1 )? ) ;
     public final void rule__Formulario__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1004:1: ( ( ( rule__Formulario__NameAssignment_1 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1005:1: ( ( rule__Formulario__NameAssignment_1 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1002:1: ( ( ( rule__Formulario__ComprobacionAccionAssignment_1 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1003:1: ( ( rule__Formulario__ComprobacionAccionAssignment_1 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1005:1: ( ( rule__Formulario__NameAssignment_1 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1006:1: ( rule__Formulario__NameAssignment_1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1003:1: ( ( rule__Formulario__ComprobacionAccionAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1004:1: ( rule__Formulario__ComprobacionAccionAssignment_1 )?
             {
-             before(grammarAccess.getFormularioAccess().getNameAssignment_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1007:1: ( rule__Formulario__NameAssignment_1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1007:2: rule__Formulario__NameAssignment_1
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__NameAssignment_1_in_rule__Formulario__Group__1__Impl2121);
-            rule__Formulario__NameAssignment_1();
+             before(grammarAccess.getFormularioAccess().getComprobacionAccionAssignment_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1005:1: ( rule__Formulario__ComprobacionAccionAssignment_1 )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA7_0==51) ) {
+                alt7=1;
+            }
+            switch (alt7) {
+                case 1 :
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1005:2: rule__Formulario__ComprobacionAccionAssignment_1
+                    {
+                    pushFollow(FollowSets000.FOLLOW_rule__Formulario__ComprobacionAccionAssignment_1_in_rule__Formulario__Group__1__Impl2120);
+                    rule__Formulario__ComprobacionAccionAssignment_1();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getFormularioAccess().getNameAssignment_1()); 
+             after(grammarAccess.getFormularioAccess().getComprobacionAccionAssignment_1()); 
 
             }
 
@@ -2853,14 +2885,14 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1017:1: rule__Formulario__Group__2 : rule__Formulario__Group__2__Impl rule__Formulario__Group__3 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1015:1: rule__Formulario__Group__2 : rule__Formulario__Group__2__Impl rule__Formulario__Group__3 ;
     public final void rule__Formulario__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1021:1: ( rule__Formulario__Group__2__Impl rule__Formulario__Group__3 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1022:2: rule__Formulario__Group__2__Impl rule__Formulario__Group__3
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1019:1: ( rule__Formulario__Group__2__Impl rule__Formulario__Group__3 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1020:2: rule__Formulario__Group__2__Impl rule__Formulario__Group__3
             {
             pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__2__Impl_in_rule__Formulario__Group__22151);
             rule__Formulario__Group__2__Impl();
@@ -2891,21 +2923,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__2__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1029:1: rule__Formulario__Group__2__Impl : ( '{' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1027:1: rule__Formulario__Group__2__Impl : ( 'Formulario' ) ;
     public final void rule__Formulario__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1033:1: ( ( '{' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1034:1: ( '{' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1031:1: ( ( 'Formulario' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1032:1: ( 'Formulario' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1034:1: ( '{' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1035:1: '{'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1032:1: ( 'Formulario' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1033:1: 'Formulario'
             {
-             before(grammarAccess.getFormularioAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,12,FollowSets000.FOLLOW_12_in_rule__Formulario__Group__2__Impl2182); 
-             after(grammarAccess.getFormularioAccess().getLeftCurlyBracketKeyword_2()); 
+             before(grammarAccess.getFormularioAccess().getFormularioKeyword_2()); 
+            match(input,11,FollowSets000.FOLLOW_11_in_rule__Formulario__Group__2__Impl2182); 
+             after(grammarAccess.getFormularioAccess().getFormularioKeyword_2()); 
 
             }
 
@@ -2928,14 +2960,14 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__3"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1048:1: rule__Formulario__Group__3 : rule__Formulario__Group__3__Impl rule__Formulario__Group__4 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1046:1: rule__Formulario__Group__3 : rule__Formulario__Group__3__Impl rule__Formulario__Group__4 ;
     public final void rule__Formulario__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1052:1: ( rule__Formulario__Group__3__Impl rule__Formulario__Group__4 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1053:2: rule__Formulario__Group__3__Impl rule__Formulario__Group__4
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1050:1: ( rule__Formulario__Group__3__Impl rule__Formulario__Group__4 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1051:2: rule__Formulario__Group__3__Impl rule__Formulario__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__3__Impl_in_rule__Formulario__Group__32213);
             rule__Formulario__Group__3__Impl();
@@ -2966,21 +2998,31 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__3__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1060:1: rule__Formulario__Group__3__Impl : ( 'layout' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1058:1: rule__Formulario__Group__3__Impl : ( ( rule__Formulario__NameAssignment_3 ) ) ;
     public final void rule__Formulario__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1064:1: ( ( 'layout' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1065:1: ( 'layout' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1062:1: ( ( ( rule__Formulario__NameAssignment_3 ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1063:1: ( ( rule__Formulario__NameAssignment_3 ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1065:1: ( 'layout' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1066:1: 'layout'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1063:1: ( ( rule__Formulario__NameAssignment_3 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1064:1: ( rule__Formulario__NameAssignment_3 )
             {
-             before(grammarAccess.getFormularioAccess().getLayoutKeyword_3()); 
-            match(input,13,FollowSets000.FOLLOW_13_in_rule__Formulario__Group__3__Impl2244); 
-             after(grammarAccess.getFormularioAccess().getLayoutKeyword_3()); 
+             before(grammarAccess.getFormularioAccess().getNameAssignment_3()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1065:1: ( rule__Formulario__NameAssignment_3 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1065:2: rule__Formulario__NameAssignment_3
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__NameAssignment_3_in_rule__Formulario__Group__3__Impl2243);
+            rule__Formulario__NameAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getFormularioAccess().getNameAssignment_3()); 
 
             }
 
@@ -3003,21 +3045,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__4"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1079:1: rule__Formulario__Group__4 : rule__Formulario__Group__4__Impl rule__Formulario__Group__5 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1075:1: rule__Formulario__Group__4 : rule__Formulario__Group__4__Impl rule__Formulario__Group__5 ;
     public final void rule__Formulario__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1083:1: ( rule__Formulario__Group__4__Impl rule__Formulario__Group__5 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1084:2: rule__Formulario__Group__4__Impl rule__Formulario__Group__5
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1079:1: ( rule__Formulario__Group__4__Impl rule__Formulario__Group__5 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1080:2: rule__Formulario__Group__4__Impl rule__Formulario__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__4__Impl_in_rule__Formulario__Group__42275);
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__4__Impl_in_rule__Formulario__Group__42273);
             rule__Formulario__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__5_in_rule__Formulario__Group__42278);
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__5_in_rule__Formulario__Group__42276);
             rule__Formulario__Group__5();
 
             state._fsp--;
@@ -3041,31 +3083,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__4__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1091:1: rule__Formulario__Group__4__Impl : ( ( rule__Formulario__LayoutAssignment_4 ) ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1087:1: rule__Formulario__Group__4__Impl : ( '{' ) ;
     public final void rule__Formulario__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1095:1: ( ( ( rule__Formulario__LayoutAssignment_4 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1096:1: ( ( rule__Formulario__LayoutAssignment_4 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1091:1: ( ( '{' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1092:1: ( '{' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1096:1: ( ( rule__Formulario__LayoutAssignment_4 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1097:1: ( rule__Formulario__LayoutAssignment_4 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1092:1: ( '{' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1093:1: '{'
             {
-             before(grammarAccess.getFormularioAccess().getLayoutAssignment_4()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1098:1: ( rule__Formulario__LayoutAssignment_4 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1098:2: rule__Formulario__LayoutAssignment_4
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__LayoutAssignment_4_in_rule__Formulario__Group__4__Impl2305);
-            rule__Formulario__LayoutAssignment_4();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getFormularioAccess().getLayoutAssignment_4()); 
+             before(grammarAccess.getFormularioAccess().getLeftCurlyBracketKeyword_4()); 
+            match(input,12,FollowSets000.FOLLOW_12_in_rule__Formulario__Group__4__Impl2304); 
+             after(grammarAccess.getFormularioAccess().getLeftCurlyBracketKeyword_4()); 
 
             }
 
@@ -3088,14 +3120,14 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__5"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1108:1: rule__Formulario__Group__5 : rule__Formulario__Group__5__Impl rule__Formulario__Group__6 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1106:1: rule__Formulario__Group__5 : rule__Formulario__Group__5__Impl rule__Formulario__Group__6 ;
     public final void rule__Formulario__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1112:1: ( rule__Formulario__Group__5__Impl rule__Formulario__Group__6 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1113:2: rule__Formulario__Group__5__Impl rule__Formulario__Group__6
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1110:1: ( rule__Formulario__Group__5__Impl rule__Formulario__Group__6 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1111:2: rule__Formulario__Group__5__Impl rule__Formulario__Group__6
             {
             pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__5__Impl_in_rule__Formulario__Group__52335);
             rule__Formulario__Group__5__Impl();
@@ -3126,42 +3158,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__5__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1120:1: rule__Formulario__Group__5__Impl : ( ( rule__Formulario__Group_5__0 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1118:1: rule__Formulario__Group__5__Impl : ( 'layout' ) ;
     public final void rule__Formulario__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1124:1: ( ( ( rule__Formulario__Group_5__0 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1125:1: ( ( rule__Formulario__Group_5__0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1122:1: ( ( 'layout' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1123:1: ( 'layout' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1125:1: ( ( rule__Formulario__Group_5__0 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1126:1: ( rule__Formulario__Group_5__0 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1123:1: ( 'layout' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1124:1: 'layout'
             {
-             before(grammarAccess.getFormularioAccess().getGroup_5()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1127:1: ( rule__Formulario__Group_5__0 )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
-
-            if ( (LA6_0==15) ) {
-                alt6=1;
-            }
-            switch (alt6) {
-                case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1127:2: rule__Formulario__Group_5__0
-                    {
-                    pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group_5__0_in_rule__Formulario__Group__5__Impl2365);
-                    rule__Formulario__Group_5__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getFormularioAccess().getGroup_5()); 
+             before(grammarAccess.getFormularioAccess().getLayoutKeyword_5()); 
+            match(input,13,FollowSets000.FOLLOW_13_in_rule__Formulario__Group__5__Impl2366); 
+             after(grammarAccess.getFormularioAccess().getLayoutKeyword_5()); 
 
             }
 
@@ -3184,17 +3195,22 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__6"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1137:1: rule__Formulario__Group__6 : rule__Formulario__Group__6__Impl ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1137:1: rule__Formulario__Group__6 : rule__Formulario__Group__6__Impl rule__Formulario__Group__7 ;
     public final void rule__Formulario__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1141:1: ( rule__Formulario__Group__6__Impl )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1142:2: rule__Formulario__Group__6__Impl
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1141:1: ( rule__Formulario__Group__6__Impl rule__Formulario__Group__7 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1142:2: rule__Formulario__Group__6__Impl rule__Formulario__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__6__Impl_in_rule__Formulario__Group__62396);
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__6__Impl_in_rule__Formulario__Group__62397);
             rule__Formulario__Group__6__Impl();
+
+            state._fsp--;
+
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__7_in_rule__Formulario__Group__62400);
+            rule__Formulario__Group__7();
 
             state._fsp--;
 
@@ -3217,21 +3233,31 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formulario__Group__6__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1148:1: rule__Formulario__Group__6__Impl : ( '}' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1149:1: rule__Formulario__Group__6__Impl : ( ( rule__Formulario__LayoutAssignment_6 ) ) ;
     public final void rule__Formulario__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1152:1: ( ( '}' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1153:1: ( '}' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1153:1: ( ( ( rule__Formulario__LayoutAssignment_6 ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1154:1: ( ( rule__Formulario__LayoutAssignment_6 ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1153:1: ( '}' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1154:1: '}'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1154:1: ( ( rule__Formulario__LayoutAssignment_6 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1155:1: ( rule__Formulario__LayoutAssignment_6 )
             {
-             before(grammarAccess.getFormularioAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Formulario__Group__6__Impl2424); 
-             after(grammarAccess.getFormularioAccess().getRightCurlyBracketKeyword_6()); 
+             before(grammarAccess.getFormularioAccess().getLayoutAssignment_6()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1156:1: ( rule__Formulario__LayoutAssignment_6 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1156:2: rule__Formulario__LayoutAssignment_6
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__LayoutAssignment_6_in_rule__Formulario__Group__6__Impl2427);
+            rule__Formulario__LayoutAssignment_6();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getFormularioAccess().getLayoutAssignment_6()); 
 
             }
 
@@ -3253,93 +3279,23 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Formulario__Group__6__Impl"
 
 
-    // $ANTLR start "rule__Formulario__Group_5__0"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1181:1: rule__Formulario__Group_5__0 : rule__Formulario__Group_5__0__Impl rule__Formulario__Group_5__1 ;
-    public final void rule__Formulario__Group_5__0() throws RecognitionException {
+    // $ANTLR start "rule__Formulario__Group__7"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1166:1: rule__Formulario__Group__7 : rule__Formulario__Group__7__Impl rule__Formulario__Group__8 ;
+    public final void rule__Formulario__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1185:1: ( rule__Formulario__Group_5__0__Impl rule__Formulario__Group_5__1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1186:2: rule__Formulario__Group_5__0__Impl rule__Formulario__Group_5__1
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1170:1: ( rule__Formulario__Group__7__Impl rule__Formulario__Group__8 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1171:2: rule__Formulario__Group__7__Impl rule__Formulario__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group_5__0__Impl_in_rule__Formulario__Group_5__02469);
-            rule__Formulario__Group_5__0__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__7__Impl_in_rule__Formulario__Group__72457);
+            rule__Formulario__Group__7__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group_5__1_in_rule__Formulario__Group_5__02472);
-            rule__Formulario__Group_5__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Formulario__Group_5__0"
-
-
-    // $ANTLR start "rule__Formulario__Group_5__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1193:1: rule__Formulario__Group_5__0__Impl : ( 'pruebas' ) ;
-    public final void rule__Formulario__Group_5__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1197:1: ( ( 'pruebas' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1198:1: ( 'pruebas' )
-            {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1198:1: ( 'pruebas' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1199:1: 'pruebas'
-            {
-             before(grammarAccess.getFormularioAccess().getPruebasKeyword_5_0()); 
-            match(input,15,FollowSets000.FOLLOW_15_in_rule__Formulario__Group_5__0__Impl2500); 
-             after(grammarAccess.getFormularioAccess().getPruebasKeyword_5_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Formulario__Group_5__0__Impl"
-
-
-    // $ANTLR start "rule__Formulario__Group_5__1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1212:1: rule__Formulario__Group_5__1 : rule__Formulario__Group_5__1__Impl ;
-    public final void rule__Formulario__Group_5__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1216:1: ( rule__Formulario__Group_5__1__Impl )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1217:2: rule__Formulario__Group_5__1__Impl
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group_5__1__Impl_in_rule__Formulario__Group_5__12531);
-            rule__Formulario__Group_5__1__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__8_in_rule__Formulario__Group__72460);
+            rule__Formulario__Group__8();
 
             state._fsp--;
 
@@ -3358,35 +3314,46 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Formulario__Group_5__1"
+    // $ANTLR end "rule__Formulario__Group__7"
 
 
-    // $ANTLR start "rule__Formulario__Group_5__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1223:1: rule__Formulario__Group_5__1__Impl : ( ( rule__Formulario__PruebasAssignment_5_1 ) ) ;
-    public final void rule__Formulario__Group_5__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Formulario__Group__7__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1178:1: rule__Formulario__Group__7__Impl : ( ( rule__Formulario__Group_7__0 )? ) ;
+    public final void rule__Formulario__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1227:1: ( ( ( rule__Formulario__PruebasAssignment_5_1 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1228:1: ( ( rule__Formulario__PruebasAssignment_5_1 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1182:1: ( ( ( rule__Formulario__Group_7__0 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1183:1: ( ( rule__Formulario__Group_7__0 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1228:1: ( ( rule__Formulario__PruebasAssignment_5_1 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1229:1: ( rule__Formulario__PruebasAssignment_5_1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1183:1: ( ( rule__Formulario__Group_7__0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1184:1: ( rule__Formulario__Group_7__0 )?
             {
-             before(grammarAccess.getFormularioAccess().getPruebasAssignment_5_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1230:1: ( rule__Formulario__PruebasAssignment_5_1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1230:2: rule__Formulario__PruebasAssignment_5_1
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__Formulario__PruebasAssignment_5_1_in_rule__Formulario__Group_5__1__Impl2558);
-            rule__Formulario__PruebasAssignment_5_1();
+             before(grammarAccess.getFormularioAccess().getGroup_7()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1185:1: ( rule__Formulario__Group_7__0 )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA8_0==15) ) {
+                alt8=1;
+            }
+            switch (alt8) {
+                case 1 :
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1185:2: rule__Formulario__Group_7__0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group_7__0_in_rule__Formulario__Group__7__Impl2487);
+                    rule__Formulario__Group_7__0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getFormularioAccess().getPruebasAssignment_5_1()); 
+             after(grammarAccess.getFormularioAccess().getGroup_7()); 
 
             }
 
@@ -3405,25 +3372,250 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Formulario__Group_5__1__Impl"
+    // $ANTLR end "rule__Formulario__Group__7__Impl"
+
+
+    // $ANTLR start "rule__Formulario__Group__8"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1195:1: rule__Formulario__Group__8 : rule__Formulario__Group__8__Impl ;
+    public final void rule__Formulario__Group__8() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1199:1: ( rule__Formulario__Group__8__Impl )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1200:2: rule__Formulario__Group__8__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group__8__Impl_in_rule__Formulario__Group__82518);
+            rule__Formulario__Group__8__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Formulario__Group__8"
+
+
+    // $ANTLR start "rule__Formulario__Group__8__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1206:1: rule__Formulario__Group__8__Impl : ( '}' ) ;
+    public final void rule__Formulario__Group__8__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1210:1: ( ( '}' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1211:1: ( '}' )
+            {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1211:1: ( '}' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1212:1: '}'
+            {
+             before(grammarAccess.getFormularioAccess().getRightCurlyBracketKeyword_8()); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__Formulario__Group__8__Impl2546); 
+             after(grammarAccess.getFormularioAccess().getRightCurlyBracketKeyword_8()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Formulario__Group__8__Impl"
+
+
+    // $ANTLR start "rule__Formulario__Group_7__0"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1243:1: rule__Formulario__Group_7__0 : rule__Formulario__Group_7__0__Impl rule__Formulario__Group_7__1 ;
+    public final void rule__Formulario__Group_7__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1247:1: ( rule__Formulario__Group_7__0__Impl rule__Formulario__Group_7__1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1248:2: rule__Formulario__Group_7__0__Impl rule__Formulario__Group_7__1
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group_7__0__Impl_in_rule__Formulario__Group_7__02595);
+            rule__Formulario__Group_7__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group_7__1_in_rule__Formulario__Group_7__02598);
+            rule__Formulario__Group_7__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Formulario__Group_7__0"
+
+
+    // $ANTLR start "rule__Formulario__Group_7__0__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1255:1: rule__Formulario__Group_7__0__Impl : ( 'pruebas' ) ;
+    public final void rule__Formulario__Group_7__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1259:1: ( ( 'pruebas' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1260:1: ( 'pruebas' )
+            {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1260:1: ( 'pruebas' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1261:1: 'pruebas'
+            {
+             before(grammarAccess.getFormularioAccess().getPruebasKeyword_7_0()); 
+            match(input,15,FollowSets000.FOLLOW_15_in_rule__Formulario__Group_7__0__Impl2626); 
+             after(grammarAccess.getFormularioAccess().getPruebasKeyword_7_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Formulario__Group_7__0__Impl"
+
+
+    // $ANTLR start "rule__Formulario__Group_7__1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1274:1: rule__Formulario__Group_7__1 : rule__Formulario__Group_7__1__Impl ;
+    public final void rule__Formulario__Group_7__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1278:1: ( rule__Formulario__Group_7__1__Impl )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1279:2: rule__Formulario__Group_7__1__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__Group_7__1__Impl_in_rule__Formulario__Group_7__12657);
+            rule__Formulario__Group_7__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Formulario__Group_7__1"
+
+
+    // $ANTLR start "rule__Formulario__Group_7__1__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1285:1: rule__Formulario__Group_7__1__Impl : ( ( rule__Formulario__PruebasAssignment_7_1 ) ) ;
+    public final void rule__Formulario__Group_7__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1289:1: ( ( ( rule__Formulario__PruebasAssignment_7_1 ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1290:1: ( ( rule__Formulario__PruebasAssignment_7_1 ) )
+            {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1290:1: ( ( rule__Formulario__PruebasAssignment_7_1 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1291:1: ( rule__Formulario__PruebasAssignment_7_1 )
+            {
+             before(grammarAccess.getFormularioAccess().getPruebasAssignment_7_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1292:1: ( rule__Formulario__PruebasAssignment_7_1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1292:2: rule__Formulario__PruebasAssignment_7_1
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__Formulario__PruebasAssignment_7_1_in_rule__Formulario__Group_7__1__Impl2684);
+            rule__Formulario__PruebasAssignment_7_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getFormularioAccess().getPruebasAssignment_7_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Formulario__Group_7__1__Impl"
 
 
     // $ANTLR start "rule__Layout__Group__0"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1244:1: rule__Layout__Group__0 : rule__Layout__Group__0__Impl rule__Layout__Group__1 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1306:1: rule__Layout__Group__0 : rule__Layout__Group__0__Impl rule__Layout__Group__1 ;
     public final void rule__Layout__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1248:1: ( rule__Layout__Group__0__Impl rule__Layout__Group__1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1249:2: rule__Layout__Group__0__Impl rule__Layout__Group__1
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1310:1: ( rule__Layout__Group__0__Impl rule__Layout__Group__1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1311:2: rule__Layout__Group__0__Impl rule__Layout__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__0__Impl_in_rule__Layout__Group__02592);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__0__Impl_in_rule__Layout__Group__02718);
             rule__Layout__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__1_in_rule__Layout__Group__02595);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__1_in_rule__Layout__Group__02721);
             rule__Layout__Group__1();
 
             state._fsp--;
@@ -3447,20 +3639,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1256:1: rule__Layout__Group__0__Impl : ( 'Layout' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1318:1: rule__Layout__Group__0__Impl : ( 'Layout' ) ;
     public final void rule__Layout__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1260:1: ( ( 'Layout' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1261:1: ( 'Layout' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1322:1: ( ( 'Layout' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1323:1: ( 'Layout' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1261:1: ( 'Layout' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1262:1: 'Layout'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1323:1: ( 'Layout' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1324:1: 'Layout'
             {
              before(grammarAccess.getLayoutAccess().getLayoutKeyword_0()); 
-            match(input,16,FollowSets000.FOLLOW_16_in_rule__Layout__Group__0__Impl2623); 
+            match(input,16,FollowSets000.FOLLOW_16_in_rule__Layout__Group__0__Impl2749); 
              after(grammarAccess.getLayoutAccess().getLayoutKeyword_0()); 
 
             }
@@ -3484,21 +3676,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1275:1: rule__Layout__Group__1 : rule__Layout__Group__1__Impl rule__Layout__Group__2 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1337:1: rule__Layout__Group__1 : rule__Layout__Group__1__Impl rule__Layout__Group__2 ;
     public final void rule__Layout__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1279:1: ( rule__Layout__Group__1__Impl rule__Layout__Group__2 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1280:2: rule__Layout__Group__1__Impl rule__Layout__Group__2
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1341:1: ( rule__Layout__Group__1__Impl rule__Layout__Group__2 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1342:2: rule__Layout__Group__1__Impl rule__Layout__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__1__Impl_in_rule__Layout__Group__12654);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__1__Impl_in_rule__Layout__Group__12780);
             rule__Layout__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__2_in_rule__Layout__Group__12657);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__2_in_rule__Layout__Group__12783);
             rule__Layout__Group__2();
 
             state._fsp--;
@@ -3522,20 +3714,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1287:1: rule__Layout__Group__1__Impl : ( '{' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1349:1: rule__Layout__Group__1__Impl : ( '{' ) ;
     public final void rule__Layout__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1291:1: ( ( '{' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1292:1: ( '{' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1353:1: ( ( '{' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1354:1: ( '{' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1292:1: ( '{' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1293:1: '{'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1354:1: ( '{' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1355:1: '{'
             {
              before(grammarAccess.getLayoutAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,12,FollowSets000.FOLLOW_12_in_rule__Layout__Group__1__Impl2685); 
+            match(input,12,FollowSets000.FOLLOW_12_in_rule__Layout__Group__1__Impl2811); 
              after(grammarAccess.getLayoutAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
@@ -3559,21 +3751,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1306:1: rule__Layout__Group__2 : rule__Layout__Group__2__Impl rule__Layout__Group__3 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1368:1: rule__Layout__Group__2 : rule__Layout__Group__2__Impl rule__Layout__Group__3 ;
     public final void rule__Layout__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1310:1: ( rule__Layout__Group__2__Impl rule__Layout__Group__3 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1311:2: rule__Layout__Group__2__Impl rule__Layout__Group__3
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1372:1: ( rule__Layout__Group__2__Impl rule__Layout__Group__3 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1373:2: rule__Layout__Group__2__Impl rule__Layout__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__2__Impl_in_rule__Layout__Group__22716);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__2__Impl_in_rule__Layout__Group__22842);
             rule__Layout__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__3_in_rule__Layout__Group__22719);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__3_in_rule__Layout__Group__22845);
             rule__Layout__Group__3();
 
             state._fsp--;
@@ -3597,20 +3789,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__2__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1318:1: rule__Layout__Group__2__Impl : ( 'columnas' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1380:1: rule__Layout__Group__2__Impl : ( 'columnas' ) ;
     public final void rule__Layout__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1322:1: ( ( 'columnas' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1323:1: ( 'columnas' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1384:1: ( ( 'columnas' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1385:1: ( 'columnas' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1323:1: ( 'columnas' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1324:1: 'columnas'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1385:1: ( 'columnas' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1386:1: 'columnas'
             {
              before(grammarAccess.getLayoutAccess().getColumnasKeyword_2()); 
-            match(input,17,FollowSets000.FOLLOW_17_in_rule__Layout__Group__2__Impl2747); 
+            match(input,17,FollowSets000.FOLLOW_17_in_rule__Layout__Group__2__Impl2873); 
              after(grammarAccess.getLayoutAccess().getColumnasKeyword_2()); 
 
             }
@@ -3634,21 +3826,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__3"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1337:1: rule__Layout__Group__3 : rule__Layout__Group__3__Impl rule__Layout__Group__4 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1399:1: rule__Layout__Group__3 : rule__Layout__Group__3__Impl rule__Layout__Group__4 ;
     public final void rule__Layout__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1341:1: ( rule__Layout__Group__3__Impl rule__Layout__Group__4 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1342:2: rule__Layout__Group__3__Impl rule__Layout__Group__4
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1403:1: ( rule__Layout__Group__3__Impl rule__Layout__Group__4 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1404:2: rule__Layout__Group__3__Impl rule__Layout__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__3__Impl_in_rule__Layout__Group__32778);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__3__Impl_in_rule__Layout__Group__32904);
             rule__Layout__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__4_in_rule__Layout__Group__32781);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__4_in_rule__Layout__Group__32907);
             rule__Layout__Group__4();
 
             state._fsp--;
@@ -3672,23 +3864,23 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__3__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1349:1: rule__Layout__Group__3__Impl : ( ( rule__Layout__ColumnasAssignment_3 ) ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1411:1: rule__Layout__Group__3__Impl : ( ( rule__Layout__ColumnasAssignment_3 ) ) ;
     public final void rule__Layout__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1353:1: ( ( ( rule__Layout__ColumnasAssignment_3 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1354:1: ( ( rule__Layout__ColumnasAssignment_3 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1415:1: ( ( ( rule__Layout__ColumnasAssignment_3 ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1416:1: ( ( rule__Layout__ColumnasAssignment_3 ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1354:1: ( ( rule__Layout__ColumnasAssignment_3 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1355:1: ( rule__Layout__ColumnasAssignment_3 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1416:1: ( ( rule__Layout__ColumnasAssignment_3 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1417:1: ( rule__Layout__ColumnasAssignment_3 )
             {
              before(grammarAccess.getLayoutAccess().getColumnasAssignment_3()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1356:1: ( rule__Layout__ColumnasAssignment_3 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1356:2: rule__Layout__ColumnasAssignment_3
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1418:1: ( rule__Layout__ColumnasAssignment_3 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1418:2: rule__Layout__ColumnasAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__ColumnasAssignment_3_in_rule__Layout__Group__3__Impl2808);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__ColumnasAssignment_3_in_rule__Layout__Group__3__Impl2934);
             rule__Layout__ColumnasAssignment_3();
 
             state._fsp--;
@@ -3719,21 +3911,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__4"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1366:1: rule__Layout__Group__4 : rule__Layout__Group__4__Impl rule__Layout__Group__5 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1428:1: rule__Layout__Group__4 : rule__Layout__Group__4__Impl rule__Layout__Group__5 ;
     public final void rule__Layout__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1370:1: ( rule__Layout__Group__4__Impl rule__Layout__Group__5 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1371:2: rule__Layout__Group__4__Impl rule__Layout__Group__5
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1432:1: ( rule__Layout__Group__4__Impl rule__Layout__Group__5 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1433:2: rule__Layout__Group__4__Impl rule__Layout__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__4__Impl_in_rule__Layout__Group__42838);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__4__Impl_in_rule__Layout__Group__42964);
             rule__Layout__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__5_in_rule__Layout__Group__42841);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__5_in_rule__Layout__Group__42967);
             rule__Layout__Group__5();
 
             state._fsp--;
@@ -3757,31 +3949,31 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__4__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1378:1: rule__Layout__Group__4__Impl : ( ( rule__Layout__Group_4__0 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1440:1: rule__Layout__Group__4__Impl : ( ( rule__Layout__Group_4__0 )? ) ;
     public final void rule__Layout__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1382:1: ( ( ( rule__Layout__Group_4__0 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1383:1: ( ( rule__Layout__Group_4__0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1444:1: ( ( ( rule__Layout__Group_4__0 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1445:1: ( ( rule__Layout__Group_4__0 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1383:1: ( ( rule__Layout__Group_4__0 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1384:1: ( rule__Layout__Group_4__0 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1445:1: ( ( rule__Layout__Group_4__0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1446:1: ( rule__Layout__Group_4__0 )?
             {
              before(grammarAccess.getLayoutAccess().getGroup_4()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1385:1: ( rule__Layout__Group_4__0 )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1447:1: ( rule__Layout__Group_4__0 )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA7_0==18) ) {
-                alt7=1;
+            if ( (LA9_0==18) ) {
+                alt9=1;
             }
-            switch (alt7) {
+            switch (alt9) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1385:2: rule__Layout__Group_4__0
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1447:2: rule__Layout__Group_4__0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__0_in_rule__Layout__Group__4__Impl2868);
+                    pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__0_in_rule__Layout__Group__4__Impl2994);
                     rule__Layout__Group_4__0();
 
                     state._fsp--;
@@ -3815,16 +4007,16 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__5"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1395:1: rule__Layout__Group__5 : rule__Layout__Group__5__Impl ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1457:1: rule__Layout__Group__5 : rule__Layout__Group__5__Impl ;
     public final void rule__Layout__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1399:1: ( rule__Layout__Group__5__Impl )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1400:2: rule__Layout__Group__5__Impl
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1461:1: ( rule__Layout__Group__5__Impl )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1462:2: rule__Layout__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__5__Impl_in_rule__Layout__Group__52899);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group__5__Impl_in_rule__Layout__Group__53025);
             rule__Layout__Group__5__Impl();
 
             state._fsp--;
@@ -3848,20 +4040,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group__5__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1406:1: rule__Layout__Group__5__Impl : ( '}' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1468:1: rule__Layout__Group__5__Impl : ( '}' ) ;
     public final void rule__Layout__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1410:1: ( ( '}' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1411:1: ( '}' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1472:1: ( ( '}' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1473:1: ( '}' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1411:1: ( '}' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1412:1: '}'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1473:1: ( '}' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1474:1: '}'
             {
              before(grammarAccess.getLayoutAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Layout__Group__5__Impl2927); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__Layout__Group__5__Impl3053); 
              after(grammarAccess.getLayoutAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -3885,21 +4077,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4__0"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1437:1: rule__Layout__Group_4__0 : rule__Layout__Group_4__0__Impl rule__Layout__Group_4__1 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1499:1: rule__Layout__Group_4__0 : rule__Layout__Group_4__0__Impl rule__Layout__Group_4__1 ;
     public final void rule__Layout__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1441:1: ( rule__Layout__Group_4__0__Impl rule__Layout__Group_4__1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1442:2: rule__Layout__Group_4__0__Impl rule__Layout__Group_4__1
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1503:1: ( rule__Layout__Group_4__0__Impl rule__Layout__Group_4__1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1504:2: rule__Layout__Group_4__0__Impl rule__Layout__Group_4__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__0__Impl_in_rule__Layout__Group_4__02970);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__0__Impl_in_rule__Layout__Group_4__03096);
             rule__Layout__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__1_in_rule__Layout__Group_4__02973);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__1_in_rule__Layout__Group_4__03099);
             rule__Layout__Group_4__1();
 
             state._fsp--;
@@ -3923,20 +4115,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1449:1: rule__Layout__Group_4__0__Impl : ( 'entradas' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1511:1: rule__Layout__Group_4__0__Impl : ( 'entradas' ) ;
     public final void rule__Layout__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1453:1: ( ( 'entradas' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1454:1: ( 'entradas' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1515:1: ( ( 'entradas' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1516:1: ( 'entradas' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1454:1: ( 'entradas' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1455:1: 'entradas'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1516:1: ( 'entradas' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1517:1: 'entradas'
             {
              before(grammarAccess.getLayoutAccess().getEntradasKeyword_4_0()); 
-            match(input,18,FollowSets000.FOLLOW_18_in_rule__Layout__Group_4__0__Impl3001); 
+            match(input,18,FollowSets000.FOLLOW_18_in_rule__Layout__Group_4__0__Impl3127); 
              after(grammarAccess.getLayoutAccess().getEntradasKeyword_4_0()); 
 
             }
@@ -3960,21 +4152,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4__1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1468:1: rule__Layout__Group_4__1 : rule__Layout__Group_4__1__Impl rule__Layout__Group_4__2 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1530:1: rule__Layout__Group_4__1 : rule__Layout__Group_4__1__Impl rule__Layout__Group_4__2 ;
     public final void rule__Layout__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1472:1: ( rule__Layout__Group_4__1__Impl rule__Layout__Group_4__2 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1473:2: rule__Layout__Group_4__1__Impl rule__Layout__Group_4__2
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1534:1: ( rule__Layout__Group_4__1__Impl rule__Layout__Group_4__2 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1535:2: rule__Layout__Group_4__1__Impl rule__Layout__Group_4__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__1__Impl_in_rule__Layout__Group_4__13032);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__1__Impl_in_rule__Layout__Group_4__13158);
             rule__Layout__Group_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__2_in_rule__Layout__Group_4__13035);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__2_in_rule__Layout__Group_4__13161);
             rule__Layout__Group_4__2();
 
             state._fsp--;
@@ -3998,20 +4190,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1480:1: rule__Layout__Group_4__1__Impl : ( '{' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1542:1: rule__Layout__Group_4__1__Impl : ( '{' ) ;
     public final void rule__Layout__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1484:1: ( ( '{' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1485:1: ( '{' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1546:1: ( ( '{' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1547:1: ( '{' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1485:1: ( '{' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1486:1: '{'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1547:1: ( '{' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1548:1: '{'
             {
              before(grammarAccess.getLayoutAccess().getLeftCurlyBracketKeyword_4_1()); 
-            match(input,12,FollowSets000.FOLLOW_12_in_rule__Layout__Group_4__1__Impl3063); 
+            match(input,12,FollowSets000.FOLLOW_12_in_rule__Layout__Group_4__1__Impl3189); 
              after(grammarAccess.getLayoutAccess().getLeftCurlyBracketKeyword_4_1()); 
 
             }
@@ -4035,21 +4227,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4__2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1499:1: rule__Layout__Group_4__2 : rule__Layout__Group_4__2__Impl rule__Layout__Group_4__3 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1561:1: rule__Layout__Group_4__2 : rule__Layout__Group_4__2__Impl rule__Layout__Group_4__3 ;
     public final void rule__Layout__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1503:1: ( rule__Layout__Group_4__2__Impl rule__Layout__Group_4__3 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1504:2: rule__Layout__Group_4__2__Impl rule__Layout__Group_4__3
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1565:1: ( rule__Layout__Group_4__2__Impl rule__Layout__Group_4__3 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1566:2: rule__Layout__Group_4__2__Impl rule__Layout__Group_4__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__2__Impl_in_rule__Layout__Group_4__23094);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__2__Impl_in_rule__Layout__Group_4__23220);
             rule__Layout__Group_4__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__3_in_rule__Layout__Group_4__23097);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__3_in_rule__Layout__Group_4__23223);
             rule__Layout__Group_4__3();
 
             state._fsp--;
@@ -4073,23 +4265,23 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4__2__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1511:1: rule__Layout__Group_4__2__Impl : ( ( rule__Layout__EntradasAssignment_4_2 ) ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1573:1: rule__Layout__Group_4__2__Impl : ( ( rule__Layout__EntradasAssignment_4_2 ) ) ;
     public final void rule__Layout__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1515:1: ( ( ( rule__Layout__EntradasAssignment_4_2 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1516:1: ( ( rule__Layout__EntradasAssignment_4_2 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1577:1: ( ( ( rule__Layout__EntradasAssignment_4_2 ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1578:1: ( ( rule__Layout__EntradasAssignment_4_2 ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1516:1: ( ( rule__Layout__EntradasAssignment_4_2 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1517:1: ( rule__Layout__EntradasAssignment_4_2 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1578:1: ( ( rule__Layout__EntradasAssignment_4_2 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1579:1: ( rule__Layout__EntradasAssignment_4_2 )
             {
              before(grammarAccess.getLayoutAccess().getEntradasAssignment_4_2()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1518:1: ( rule__Layout__EntradasAssignment_4_2 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1518:2: rule__Layout__EntradasAssignment_4_2
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1580:1: ( rule__Layout__EntradasAssignment_4_2 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1580:2: rule__Layout__EntradasAssignment_4_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__EntradasAssignment_4_2_in_rule__Layout__Group_4__2__Impl3124);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__EntradasAssignment_4_2_in_rule__Layout__Group_4__2__Impl3250);
             rule__Layout__EntradasAssignment_4_2();
 
             state._fsp--;
@@ -4120,21 +4312,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4__3"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1528:1: rule__Layout__Group_4__3 : rule__Layout__Group_4__3__Impl rule__Layout__Group_4__4 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1590:1: rule__Layout__Group_4__3 : rule__Layout__Group_4__3__Impl rule__Layout__Group_4__4 ;
     public final void rule__Layout__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1532:1: ( rule__Layout__Group_4__3__Impl rule__Layout__Group_4__4 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1533:2: rule__Layout__Group_4__3__Impl rule__Layout__Group_4__4
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1594:1: ( rule__Layout__Group_4__3__Impl rule__Layout__Group_4__4 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1595:2: rule__Layout__Group_4__3__Impl rule__Layout__Group_4__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__3__Impl_in_rule__Layout__Group_4__33154);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__3__Impl_in_rule__Layout__Group_4__33280);
             rule__Layout__Group_4__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__4_in_rule__Layout__Group_4__33157);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__4_in_rule__Layout__Group_4__33283);
             rule__Layout__Group_4__4();
 
             state._fsp--;
@@ -4158,35 +4350,35 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4__3__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1540:1: rule__Layout__Group_4__3__Impl : ( ( rule__Layout__Group_4_3__0 )* ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1602:1: rule__Layout__Group_4__3__Impl : ( ( rule__Layout__Group_4_3__0 )* ) ;
     public final void rule__Layout__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1544:1: ( ( ( rule__Layout__Group_4_3__0 )* ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1545:1: ( ( rule__Layout__Group_4_3__0 )* )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1606:1: ( ( ( rule__Layout__Group_4_3__0 )* ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1607:1: ( ( rule__Layout__Group_4_3__0 )* )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1545:1: ( ( rule__Layout__Group_4_3__0 )* )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1546:1: ( rule__Layout__Group_4_3__0 )*
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1607:1: ( ( rule__Layout__Group_4_3__0 )* )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1608:1: ( rule__Layout__Group_4_3__0 )*
             {
              before(grammarAccess.getLayoutAccess().getGroup_4_3()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1547:1: ( rule__Layout__Group_4_3__0 )*
-            loop8:
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1609:1: ( rule__Layout__Group_4_3__0 )*
+            loop10:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( (LA8_0==19) ) {
-                    alt8=1;
+                if ( (LA10_0==19) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt10) {
             	case 1 :
-            	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1547:2: rule__Layout__Group_4_3__0
+            	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1609:2: rule__Layout__Group_4_3__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4_3__0_in_rule__Layout__Group_4__3__Impl3184);
+            	    pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4_3__0_in_rule__Layout__Group_4__3__Impl3310);
             	    rule__Layout__Group_4_3__0();
 
             	    state._fsp--;
@@ -4196,7 +4388,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             	    break;
 
             	default :
-            	    break loop8;
+            	    break loop10;
                 }
             } while (true);
 
@@ -4223,16 +4415,16 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4__4"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1557:1: rule__Layout__Group_4__4 : rule__Layout__Group_4__4__Impl ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1619:1: rule__Layout__Group_4__4 : rule__Layout__Group_4__4__Impl ;
     public final void rule__Layout__Group_4__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1561:1: ( rule__Layout__Group_4__4__Impl )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1562:2: rule__Layout__Group_4__4__Impl
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1623:1: ( rule__Layout__Group_4__4__Impl )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1624:2: rule__Layout__Group_4__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__4__Impl_in_rule__Layout__Group_4__43215);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4__4__Impl_in_rule__Layout__Group_4__43341);
             rule__Layout__Group_4__4__Impl();
 
             state._fsp--;
@@ -4256,20 +4448,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4__4__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1568:1: rule__Layout__Group_4__4__Impl : ( '}' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1630:1: rule__Layout__Group_4__4__Impl : ( '}' ) ;
     public final void rule__Layout__Group_4__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1572:1: ( ( '}' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1573:1: ( '}' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1634:1: ( ( '}' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1635:1: ( '}' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1573:1: ( '}' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1574:1: '}'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1635:1: ( '}' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1636:1: '}'
             {
              before(grammarAccess.getLayoutAccess().getRightCurlyBracketKeyword_4_4()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__Layout__Group_4__4__Impl3243); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__Layout__Group_4__4__Impl3369); 
              after(grammarAccess.getLayoutAccess().getRightCurlyBracketKeyword_4_4()); 
 
             }
@@ -4293,21 +4485,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4_3__0"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1597:1: rule__Layout__Group_4_3__0 : rule__Layout__Group_4_3__0__Impl rule__Layout__Group_4_3__1 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1659:1: rule__Layout__Group_4_3__0 : rule__Layout__Group_4_3__0__Impl rule__Layout__Group_4_3__1 ;
     public final void rule__Layout__Group_4_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1601:1: ( rule__Layout__Group_4_3__0__Impl rule__Layout__Group_4_3__1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1602:2: rule__Layout__Group_4_3__0__Impl rule__Layout__Group_4_3__1
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1663:1: ( rule__Layout__Group_4_3__0__Impl rule__Layout__Group_4_3__1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1664:2: rule__Layout__Group_4_3__0__Impl rule__Layout__Group_4_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4_3__0__Impl_in_rule__Layout__Group_4_3__03284);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4_3__0__Impl_in_rule__Layout__Group_4_3__03410);
             rule__Layout__Group_4_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4_3__1_in_rule__Layout__Group_4_3__03287);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4_3__1_in_rule__Layout__Group_4_3__03413);
             rule__Layout__Group_4_3__1();
 
             state._fsp--;
@@ -4331,20 +4523,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4_3__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1609:1: rule__Layout__Group_4_3__0__Impl : ( ',' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1671:1: rule__Layout__Group_4_3__0__Impl : ( ',' ) ;
     public final void rule__Layout__Group_4_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1613:1: ( ( ',' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1614:1: ( ',' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1675:1: ( ( ',' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1676:1: ( ',' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1614:1: ( ',' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1615:1: ','
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1676:1: ( ',' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1677:1: ','
             {
              before(grammarAccess.getLayoutAccess().getCommaKeyword_4_3_0()); 
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__Layout__Group_4_3__0__Impl3315); 
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__Layout__Group_4_3__0__Impl3441); 
              after(grammarAccess.getLayoutAccess().getCommaKeyword_4_3_0()); 
 
             }
@@ -4368,16 +4560,16 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4_3__1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1628:1: rule__Layout__Group_4_3__1 : rule__Layout__Group_4_3__1__Impl ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1690:1: rule__Layout__Group_4_3__1 : rule__Layout__Group_4_3__1__Impl ;
     public final void rule__Layout__Group_4_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1632:1: ( rule__Layout__Group_4_3__1__Impl )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1633:2: rule__Layout__Group_4_3__1__Impl
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1694:1: ( rule__Layout__Group_4_3__1__Impl )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1695:2: rule__Layout__Group_4_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4_3__1__Impl_in_rule__Layout__Group_4_3__13346);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__Group_4_3__1__Impl_in_rule__Layout__Group_4_3__13472);
             rule__Layout__Group_4_3__1__Impl();
 
             state._fsp--;
@@ -4401,23 +4593,23 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__Group_4_3__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1639:1: rule__Layout__Group_4_3__1__Impl : ( ( rule__Layout__EntradasAssignment_4_3_1 ) ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1701:1: rule__Layout__Group_4_3__1__Impl : ( ( rule__Layout__EntradasAssignment_4_3_1 ) ) ;
     public final void rule__Layout__Group_4_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1643:1: ( ( ( rule__Layout__EntradasAssignment_4_3_1 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1644:1: ( ( rule__Layout__EntradasAssignment_4_3_1 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1705:1: ( ( ( rule__Layout__EntradasAssignment_4_3_1 ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1706:1: ( ( rule__Layout__EntradasAssignment_4_3_1 ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1644:1: ( ( rule__Layout__EntradasAssignment_4_3_1 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1645:1: ( rule__Layout__EntradasAssignment_4_3_1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1706:1: ( ( rule__Layout__EntradasAssignment_4_3_1 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1707:1: ( rule__Layout__EntradasAssignment_4_3_1 )
             {
              before(grammarAccess.getLayoutAccess().getEntradasAssignment_4_3_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1646:1: ( rule__Layout__EntradasAssignment_4_3_1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1646:2: rule__Layout__EntradasAssignment_4_3_1
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1708:1: ( rule__Layout__EntradasAssignment_4_3_1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1708:2: rule__Layout__EntradasAssignment_4_3_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__Layout__EntradasAssignment_4_3_1_in_rule__Layout__Group_4_3__1__Impl3373);
+            pushFollow(FollowSets000.FOLLOW_rule__Layout__EntradasAssignment_4_3_1_in_rule__Layout__Group_4_3__1__Impl3499);
             rule__Layout__EntradasAssignment_4_3_1();
 
             state._fsp--;
@@ -4448,21 +4640,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__0"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1660:1: rule__PruebaInterfaz__Group__0 : rule__PruebaInterfaz__Group__0__Impl rule__PruebaInterfaz__Group__1 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1722:1: rule__PruebaInterfaz__Group__0 : rule__PruebaInterfaz__Group__0__Impl rule__PruebaInterfaz__Group__1 ;
     public final void rule__PruebaInterfaz__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1664:1: ( rule__PruebaInterfaz__Group__0__Impl rule__PruebaInterfaz__Group__1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1665:2: rule__PruebaInterfaz__Group__0__Impl rule__PruebaInterfaz__Group__1
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1726:1: ( rule__PruebaInterfaz__Group__0__Impl rule__PruebaInterfaz__Group__1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1727:2: rule__PruebaInterfaz__Group__0__Impl rule__PruebaInterfaz__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__0__Impl_in_rule__PruebaInterfaz__Group__03407);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__0__Impl_in_rule__PruebaInterfaz__Group__03533);
             rule__PruebaInterfaz__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__1_in_rule__PruebaInterfaz__Group__03410);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__1_in_rule__PruebaInterfaz__Group__03536);
             rule__PruebaInterfaz__Group__1();
 
             state._fsp--;
@@ -4486,21 +4678,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1672:1: rule__PruebaInterfaz__Group__0__Impl : ( () ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1734:1: rule__PruebaInterfaz__Group__0__Impl : ( () ) ;
     public final void rule__PruebaInterfaz__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1676:1: ( ( () ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1677:1: ( () )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1738:1: ( ( () ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1739:1: ( () )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1677:1: ( () )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1678:1: ()
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1739:1: ( () )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1740:1: ()
             {
              before(grammarAccess.getPruebaInterfazAccess().getPruebaInterfazAction_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1679:1: ()
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1681:1: 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1741:1: ()
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1743:1: 
             {
             }
 
@@ -4523,21 +4715,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1691:1: rule__PruebaInterfaz__Group__1 : rule__PruebaInterfaz__Group__1__Impl rule__PruebaInterfaz__Group__2 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1753:1: rule__PruebaInterfaz__Group__1 : rule__PruebaInterfaz__Group__1__Impl rule__PruebaInterfaz__Group__2 ;
     public final void rule__PruebaInterfaz__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1695:1: ( rule__PruebaInterfaz__Group__1__Impl rule__PruebaInterfaz__Group__2 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1696:2: rule__PruebaInterfaz__Group__1__Impl rule__PruebaInterfaz__Group__2
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1757:1: ( rule__PruebaInterfaz__Group__1__Impl rule__PruebaInterfaz__Group__2 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1758:2: rule__PruebaInterfaz__Group__1__Impl rule__PruebaInterfaz__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__1__Impl_in_rule__PruebaInterfaz__Group__13468);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__1__Impl_in_rule__PruebaInterfaz__Group__13594);
             rule__PruebaInterfaz__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__2_in_rule__PruebaInterfaz__Group__13471);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__2_in_rule__PruebaInterfaz__Group__13597);
             rule__PruebaInterfaz__Group__2();
 
             state._fsp--;
@@ -4561,42 +4753,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1703:1: rule__PruebaInterfaz__Group__1__Impl : ( ( rule__PruebaInterfaz__ComprobarAsercionAssignment_1 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1765:1: rule__PruebaInterfaz__Group__1__Impl : ( 'PruebaInterfaz' ) ;
     public final void rule__PruebaInterfaz__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1707:1: ( ( ( rule__PruebaInterfaz__ComprobarAsercionAssignment_1 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1708:1: ( ( rule__PruebaInterfaz__ComprobarAsercionAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1769:1: ( ( 'PruebaInterfaz' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1770:1: ( 'PruebaInterfaz' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1708:1: ( ( rule__PruebaInterfaz__ComprobarAsercionAssignment_1 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1709:1: ( rule__PruebaInterfaz__ComprobarAsercionAssignment_1 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1770:1: ( 'PruebaInterfaz' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1771:1: 'PruebaInterfaz'
             {
-             before(grammarAccess.getPruebaInterfazAccess().getComprobarAsercionAssignment_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1710:1: ( rule__PruebaInterfaz__ComprobarAsercionAssignment_1 )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( (LA9_0==50) ) {
-                alt9=1;
-            }
-            switch (alt9) {
-                case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1710:2: rule__PruebaInterfaz__ComprobarAsercionAssignment_1
-                    {
-                    pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__ComprobarAsercionAssignment_1_in_rule__PruebaInterfaz__Group__1__Impl3498);
-                    rule__PruebaInterfaz__ComprobarAsercionAssignment_1();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getPruebaInterfazAccess().getComprobarAsercionAssignment_1()); 
+             before(grammarAccess.getPruebaInterfazAccess().getPruebaInterfazKeyword_1()); 
+            match(input,20,FollowSets000.FOLLOW_20_in_rule__PruebaInterfaz__Group__1__Impl3625); 
+             after(grammarAccess.getPruebaInterfazAccess().getPruebaInterfazKeyword_1()); 
 
             }
 
@@ -4619,21 +4790,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1720:1: rule__PruebaInterfaz__Group__2 : rule__PruebaInterfaz__Group__2__Impl rule__PruebaInterfaz__Group__3 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1784:1: rule__PruebaInterfaz__Group__2 : rule__PruebaInterfaz__Group__2__Impl rule__PruebaInterfaz__Group__3 ;
     public final void rule__PruebaInterfaz__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1724:1: ( rule__PruebaInterfaz__Group__2__Impl rule__PruebaInterfaz__Group__3 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1725:2: rule__PruebaInterfaz__Group__2__Impl rule__PruebaInterfaz__Group__3
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1788:1: ( rule__PruebaInterfaz__Group__2__Impl rule__PruebaInterfaz__Group__3 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1789:2: rule__PruebaInterfaz__Group__2__Impl rule__PruebaInterfaz__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__2__Impl_in_rule__PruebaInterfaz__Group__23529);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__2__Impl_in_rule__PruebaInterfaz__Group__23656);
             rule__PruebaInterfaz__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__3_in_rule__PruebaInterfaz__Group__23532);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__3_in_rule__PruebaInterfaz__Group__23659);
             rule__PruebaInterfaz__Group__3();
 
             state._fsp--;
@@ -4657,42 +4828,31 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__2__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1732:1: rule__PruebaInterfaz__Group__2__Impl : ( ( rule__PruebaInterfaz__ComprobarAccionAssignment_2 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1796:1: rule__PruebaInterfaz__Group__2__Impl : ( ( rule__PruebaInterfaz__NameAssignment_2 ) ) ;
     public final void rule__PruebaInterfaz__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1736:1: ( ( ( rule__PruebaInterfaz__ComprobarAccionAssignment_2 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1737:1: ( ( rule__PruebaInterfaz__ComprobarAccionAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1800:1: ( ( ( rule__PruebaInterfaz__NameAssignment_2 ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1801:1: ( ( rule__PruebaInterfaz__NameAssignment_2 ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1737:1: ( ( rule__PruebaInterfaz__ComprobarAccionAssignment_2 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1738:1: ( rule__PruebaInterfaz__ComprobarAccionAssignment_2 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1801:1: ( ( rule__PruebaInterfaz__NameAssignment_2 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1802:1: ( rule__PruebaInterfaz__NameAssignment_2 )
             {
-             before(grammarAccess.getPruebaInterfazAccess().getComprobarAccionAssignment_2()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1739:1: ( rule__PruebaInterfaz__ComprobarAccionAssignment_2 )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+             before(grammarAccess.getPruebaInterfazAccess().getNameAssignment_2()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1803:1: ( rule__PruebaInterfaz__NameAssignment_2 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1803:2: rule__PruebaInterfaz__NameAssignment_2
+            {
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__NameAssignment_2_in_rule__PruebaInterfaz__Group__2__Impl3686);
+            rule__PruebaInterfaz__NameAssignment_2();
 
-            if ( (LA10_0==51) ) {
-                alt10=1;
-            }
-            switch (alt10) {
-                case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1739:2: rule__PruebaInterfaz__ComprobarAccionAssignment_2
-                    {
-                    pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__ComprobarAccionAssignment_2_in_rule__PruebaInterfaz__Group__2__Impl3559);
-                    rule__PruebaInterfaz__ComprobarAccionAssignment_2();
+            state._fsp--;
 
-                    state._fsp--;
-
-
-                    }
-                    break;
 
             }
 
-             after(grammarAccess.getPruebaInterfazAccess().getComprobarAccionAssignment_2()); 
+             after(grammarAccess.getPruebaInterfazAccess().getNameAssignment_2()); 
 
             }
 
@@ -4715,21 +4875,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__3"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1749:1: rule__PruebaInterfaz__Group__3 : rule__PruebaInterfaz__Group__3__Impl rule__PruebaInterfaz__Group__4 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1813:1: rule__PruebaInterfaz__Group__3 : rule__PruebaInterfaz__Group__3__Impl rule__PruebaInterfaz__Group__4 ;
     public final void rule__PruebaInterfaz__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1753:1: ( rule__PruebaInterfaz__Group__3__Impl rule__PruebaInterfaz__Group__4 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1754:2: rule__PruebaInterfaz__Group__3__Impl rule__PruebaInterfaz__Group__4
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1817:1: ( rule__PruebaInterfaz__Group__3__Impl rule__PruebaInterfaz__Group__4 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1818:2: rule__PruebaInterfaz__Group__3__Impl rule__PruebaInterfaz__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__3__Impl_in_rule__PruebaInterfaz__Group__33590);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__3__Impl_in_rule__PruebaInterfaz__Group__33716);
             rule__PruebaInterfaz__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__4_in_rule__PruebaInterfaz__Group__33593);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__4_in_rule__PruebaInterfaz__Group__33719);
             rule__PruebaInterfaz__Group__4();
 
             state._fsp--;
@@ -4753,21 +4913,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__3__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1761:1: rule__PruebaInterfaz__Group__3__Impl : ( 'PruebaInterfaz' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1825:1: rule__PruebaInterfaz__Group__3__Impl : ( '{' ) ;
     public final void rule__PruebaInterfaz__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1765:1: ( ( 'PruebaInterfaz' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1766:1: ( 'PruebaInterfaz' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1829:1: ( ( '{' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1830:1: ( '{' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1766:1: ( 'PruebaInterfaz' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1767:1: 'PruebaInterfaz'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1830:1: ( '{' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1831:1: '{'
             {
-             before(grammarAccess.getPruebaInterfazAccess().getPruebaInterfazKeyword_3()); 
-            match(input,20,FollowSets000.FOLLOW_20_in_rule__PruebaInterfaz__Group__3__Impl3621); 
-             after(grammarAccess.getPruebaInterfazAccess().getPruebaInterfazKeyword_3()); 
+             before(grammarAccess.getPruebaInterfazAccess().getLeftCurlyBracketKeyword_3()); 
+            match(input,12,FollowSets000.FOLLOW_12_in_rule__PruebaInterfaz__Group__3__Impl3747); 
+             after(grammarAccess.getPruebaInterfazAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
 
@@ -4790,21 +4950,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__4"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1780:1: rule__PruebaInterfaz__Group__4 : rule__PruebaInterfaz__Group__4__Impl rule__PruebaInterfaz__Group__5 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1844:1: rule__PruebaInterfaz__Group__4 : rule__PruebaInterfaz__Group__4__Impl rule__PruebaInterfaz__Group__5 ;
     public final void rule__PruebaInterfaz__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1784:1: ( rule__PruebaInterfaz__Group__4__Impl rule__PruebaInterfaz__Group__5 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1785:2: rule__PruebaInterfaz__Group__4__Impl rule__PruebaInterfaz__Group__5
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1848:1: ( rule__PruebaInterfaz__Group__4__Impl rule__PruebaInterfaz__Group__5 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1849:2: rule__PruebaInterfaz__Group__4__Impl rule__PruebaInterfaz__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__4__Impl_in_rule__PruebaInterfaz__Group__43652);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__4__Impl_in_rule__PruebaInterfaz__Group__43778);
             rule__PruebaInterfaz__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__5_in_rule__PruebaInterfaz__Group__43655);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__5_in_rule__PruebaInterfaz__Group__43781);
             rule__PruebaInterfaz__Group__5();
 
             state._fsp--;
@@ -4828,31 +4988,42 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__4__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1792:1: rule__PruebaInterfaz__Group__4__Impl : ( ( rule__PruebaInterfaz__NameAssignment_4 ) ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1856:1: rule__PruebaInterfaz__Group__4__Impl : ( ( rule__PruebaInterfaz__Group_4__0 )? ) ;
     public final void rule__PruebaInterfaz__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1796:1: ( ( ( rule__PruebaInterfaz__NameAssignment_4 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1797:1: ( ( rule__PruebaInterfaz__NameAssignment_4 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1860:1: ( ( ( rule__PruebaInterfaz__Group_4__0 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1861:1: ( ( rule__PruebaInterfaz__Group_4__0 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1797:1: ( ( rule__PruebaInterfaz__NameAssignment_4 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1798:1: ( rule__PruebaInterfaz__NameAssignment_4 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1861:1: ( ( rule__PruebaInterfaz__Group_4__0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1862:1: ( rule__PruebaInterfaz__Group_4__0 )?
             {
-             before(grammarAccess.getPruebaInterfazAccess().getNameAssignment_4()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1799:1: ( rule__PruebaInterfaz__NameAssignment_4 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1799:2: rule__PruebaInterfaz__NameAssignment_4
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__NameAssignment_4_in_rule__PruebaInterfaz__Group__4__Impl3682);
-            rule__PruebaInterfaz__NameAssignment_4();
+             before(grammarAccess.getPruebaInterfazAccess().getGroup_4()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1863:1: ( rule__PruebaInterfaz__Group_4__0 )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA11_0==21) ) {
+                alt11=1;
+            }
+            switch (alt11) {
+                case 1 :
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1863:2: rule__PruebaInterfaz__Group_4__0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4__0_in_rule__PruebaInterfaz__Group__4__Impl3808);
+                    rule__PruebaInterfaz__Group_4__0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getPruebaInterfazAccess().getNameAssignment_4()); 
+             after(grammarAccess.getPruebaInterfazAccess().getGroup_4()); 
 
             }
 
@@ -4875,22 +5046,17 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__5"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1809:1: rule__PruebaInterfaz__Group__5 : rule__PruebaInterfaz__Group__5__Impl rule__PruebaInterfaz__Group__6 ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1873:1: rule__PruebaInterfaz__Group__5 : rule__PruebaInterfaz__Group__5__Impl ;
     public final void rule__PruebaInterfaz__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1813:1: ( rule__PruebaInterfaz__Group__5__Impl rule__PruebaInterfaz__Group__6 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1814:2: rule__PruebaInterfaz__Group__5__Impl rule__PruebaInterfaz__Group__6
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1877:1: ( rule__PruebaInterfaz__Group__5__Impl )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1878:2: rule__PruebaInterfaz__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__5__Impl_in_rule__PruebaInterfaz__Group__53712);
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__5__Impl_in_rule__PruebaInterfaz__Group__53839);
             rule__PruebaInterfaz__Group__5__Impl();
-
-            state._fsp--;
-
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__6_in_rule__PruebaInterfaz__Group__53715);
-            rule__PruebaInterfaz__Group__6();
 
             state._fsp--;
 
@@ -4913,21 +5079,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PruebaInterfaz__Group__5__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1821:1: rule__PruebaInterfaz__Group__5__Impl : ( '{' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1884:1: rule__PruebaInterfaz__Group__5__Impl : ( '}' ) ;
     public final void rule__PruebaInterfaz__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1825:1: ( ( '{' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1826:1: ( '{' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1888:1: ( ( '}' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1889:1: ( '}' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1826:1: ( '{' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1827:1: '{'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1889:1: ( '}' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1890:1: '}'
             {
-             before(grammarAccess.getPruebaInterfazAccess().getLeftCurlyBracketKeyword_5()); 
-            match(input,12,FollowSets000.FOLLOW_12_in_rule__PruebaInterfaz__Group__5__Impl3743); 
-             after(grammarAccess.getPruebaInterfazAccess().getLeftCurlyBracketKeyword_5()); 
+             before(grammarAccess.getPruebaInterfazAccess().getRightCurlyBracketKeyword_5()); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__PruebaInterfaz__Group__5__Impl3867); 
+             after(grammarAccess.getPruebaInterfazAccess().getRightCurlyBracketKeyword_5()); 
 
             }
 
@@ -4949,114 +5115,23 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__PruebaInterfaz__Group__5__Impl"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group__6"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1840:1: rule__PruebaInterfaz__Group__6 : rule__PruebaInterfaz__Group__6__Impl rule__PruebaInterfaz__Group__7 ;
-    public final void rule__PruebaInterfaz__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4__0"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1915:1: rule__PruebaInterfaz__Group_4__0 : rule__PruebaInterfaz__Group_4__0__Impl rule__PruebaInterfaz__Group_4__1 ;
+    public final void rule__PruebaInterfaz__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1844:1: ( rule__PruebaInterfaz__Group__6__Impl rule__PruebaInterfaz__Group__7 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1845:2: rule__PruebaInterfaz__Group__6__Impl rule__PruebaInterfaz__Group__7
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1919:1: ( rule__PruebaInterfaz__Group_4__0__Impl rule__PruebaInterfaz__Group_4__1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1920:2: rule__PruebaInterfaz__Group_4__0__Impl rule__PruebaInterfaz__Group_4__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__6__Impl_in_rule__PruebaInterfaz__Group__63774);
-            rule__PruebaInterfaz__Group__6__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4__0__Impl_in_rule__PruebaInterfaz__Group_4__03910);
+            rule__PruebaInterfaz__Group_4__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__7_in_rule__PruebaInterfaz__Group__63777);
-            rule__PruebaInterfaz__Group__7();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__PruebaInterfaz__Group__6"
-
-
-    // $ANTLR start "rule__PruebaInterfaz__Group__6__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1852:1: rule__PruebaInterfaz__Group__6__Impl : ( ( rule__PruebaInterfaz__Group_6__0 )? ) ;
-    public final void rule__PruebaInterfaz__Group__6__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1856:1: ( ( ( rule__PruebaInterfaz__Group_6__0 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1857:1: ( ( rule__PruebaInterfaz__Group_6__0 )? )
-            {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1857:1: ( ( rule__PruebaInterfaz__Group_6__0 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1858:1: ( rule__PruebaInterfaz__Group_6__0 )?
-            {
-             before(grammarAccess.getPruebaInterfazAccess().getGroup_6()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1859:1: ( rule__PruebaInterfaz__Group_6__0 )?
-            int alt11=2;
-            int LA11_0 = input.LA(1);
-
-            if ( (LA11_0==21) ) {
-                alt11=1;
-            }
-            switch (alt11) {
-                case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1859:2: rule__PruebaInterfaz__Group_6__0
-                    {
-                    pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6__0_in_rule__PruebaInterfaz__Group__6__Impl3804);
-                    rule__PruebaInterfaz__Group_6__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getPruebaInterfazAccess().getGroup_6()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__PruebaInterfaz__Group__6__Impl"
-
-
-    // $ANTLR start "rule__PruebaInterfaz__Group__7"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1869:1: rule__PruebaInterfaz__Group__7 : rule__PruebaInterfaz__Group__7__Impl ;
-    public final void rule__PruebaInterfaz__Group__7() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1873:1: ( rule__PruebaInterfaz__Group__7__Impl )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1874:2: rule__PruebaInterfaz__Group__7__Impl
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group__7__Impl_in_rule__PruebaInterfaz__Group__73835);
-            rule__PruebaInterfaz__Group__7__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4__1_in_rule__PruebaInterfaz__Group_4__03913);
+            rule__PruebaInterfaz__Group_4__1();
 
             state._fsp--;
 
@@ -5075,87 +5150,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group__7"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4__0"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group__7__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1880:1: rule__PruebaInterfaz__Group__7__Impl : ( '}' ) ;
-    public final void rule__PruebaInterfaz__Group__7__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1884:1: ( ( '}' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1885:1: ( '}' )
-            {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1885:1: ( '}' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1886:1: '}'
-            {
-             before(grammarAccess.getPruebaInterfazAccess().getRightCurlyBracketKeyword_7()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__PruebaInterfaz__Group__7__Impl3863); 
-             after(grammarAccess.getPruebaInterfazAccess().getRightCurlyBracketKeyword_7()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__PruebaInterfaz__Group__7__Impl"
-
-
-    // $ANTLR start "rule__PruebaInterfaz__Group_6__0"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1915:1: rule__PruebaInterfaz__Group_6__0 : rule__PruebaInterfaz__Group_6__0__Impl rule__PruebaInterfaz__Group_6__1 ;
-    public final void rule__PruebaInterfaz__Group_6__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1919:1: ( rule__PruebaInterfaz__Group_6__0__Impl rule__PruebaInterfaz__Group_6__1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1920:2: rule__PruebaInterfaz__Group_6__0__Impl rule__PruebaInterfaz__Group_6__1
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6__0__Impl_in_rule__PruebaInterfaz__Group_6__03910);
-            rule__PruebaInterfaz__Group_6__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6__1_in_rule__PruebaInterfaz__Group_6__03913);
-            rule__PruebaInterfaz__Group_6__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6__0"
-
-
-    // $ANTLR start "rule__PruebaInterfaz__Group_6__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1927:1: rule__PruebaInterfaz__Group_6__0__Impl : ( 'acciones' ) ;
-    public final void rule__PruebaInterfaz__Group_6__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4__0__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1927:1: rule__PruebaInterfaz__Group_4__0__Impl : ( 'acciones' ) ;
+    public final void rule__PruebaInterfaz__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -5166,9 +5166,9 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1932:1: ( 'acciones' )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1933:1: 'acciones'
             {
-             before(grammarAccess.getPruebaInterfazAccess().getAccionesKeyword_6_0()); 
-            match(input,21,FollowSets000.FOLLOW_21_in_rule__PruebaInterfaz__Group_6__0__Impl3941); 
-             after(grammarAccess.getPruebaInterfazAccess().getAccionesKeyword_6_0()); 
+             before(grammarAccess.getPruebaInterfazAccess().getAccionesKeyword_4_0()); 
+            match(input,21,FollowSets000.FOLLOW_21_in_rule__PruebaInterfaz__Group_4__0__Impl3941); 
+             after(grammarAccess.getPruebaInterfazAccess().getAccionesKeyword_4_0()); 
 
             }
 
@@ -5187,26 +5187,26 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6__0__Impl"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4__0__Impl"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6__1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1946:1: rule__PruebaInterfaz__Group_6__1 : rule__PruebaInterfaz__Group_6__1__Impl rule__PruebaInterfaz__Group_6__2 ;
-    public final void rule__PruebaInterfaz__Group_6__1() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4__1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1946:1: rule__PruebaInterfaz__Group_4__1 : rule__PruebaInterfaz__Group_4__1__Impl rule__PruebaInterfaz__Group_4__2 ;
+    public final void rule__PruebaInterfaz__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1950:1: ( rule__PruebaInterfaz__Group_6__1__Impl rule__PruebaInterfaz__Group_6__2 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1951:2: rule__PruebaInterfaz__Group_6__1__Impl rule__PruebaInterfaz__Group_6__2
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1950:1: ( rule__PruebaInterfaz__Group_4__1__Impl rule__PruebaInterfaz__Group_4__2 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1951:2: rule__PruebaInterfaz__Group_4__1__Impl rule__PruebaInterfaz__Group_4__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6__1__Impl_in_rule__PruebaInterfaz__Group_6__13972);
-            rule__PruebaInterfaz__Group_6__1__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4__1__Impl_in_rule__PruebaInterfaz__Group_4__13972);
+            rule__PruebaInterfaz__Group_4__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6__2_in_rule__PruebaInterfaz__Group_6__13975);
-            rule__PruebaInterfaz__Group_6__2();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4__2_in_rule__PruebaInterfaz__Group_4__13975);
+            rule__PruebaInterfaz__Group_4__2();
 
             state._fsp--;
 
@@ -5225,12 +5225,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6__1"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4__1"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1958:1: rule__PruebaInterfaz__Group_6__1__Impl : ( '{' ) ;
-    public final void rule__PruebaInterfaz__Group_6__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4__1__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1958:1: rule__PruebaInterfaz__Group_4__1__Impl : ( '{' ) ;
+    public final void rule__PruebaInterfaz__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -5241,9 +5241,9 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1963:1: ( '{' )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1964:1: '{'
             {
-             before(grammarAccess.getPruebaInterfazAccess().getLeftCurlyBracketKeyword_6_1()); 
-            match(input,12,FollowSets000.FOLLOW_12_in_rule__PruebaInterfaz__Group_6__1__Impl4003); 
-             after(grammarAccess.getPruebaInterfazAccess().getLeftCurlyBracketKeyword_6_1()); 
+             before(grammarAccess.getPruebaInterfazAccess().getLeftCurlyBracketKeyword_4_1()); 
+            match(input,12,FollowSets000.FOLLOW_12_in_rule__PruebaInterfaz__Group_4__1__Impl4003); 
+             after(grammarAccess.getPruebaInterfazAccess().getLeftCurlyBracketKeyword_4_1()); 
 
             }
 
@@ -5262,26 +5262,26 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6__1__Impl"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4__1__Impl"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6__2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1977:1: rule__PruebaInterfaz__Group_6__2 : rule__PruebaInterfaz__Group_6__2__Impl rule__PruebaInterfaz__Group_6__3 ;
-    public final void rule__PruebaInterfaz__Group_6__2() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4__2"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1977:1: rule__PruebaInterfaz__Group_4__2 : rule__PruebaInterfaz__Group_4__2__Impl rule__PruebaInterfaz__Group_4__3 ;
+    public final void rule__PruebaInterfaz__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1981:1: ( rule__PruebaInterfaz__Group_6__2__Impl rule__PruebaInterfaz__Group_6__3 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1982:2: rule__PruebaInterfaz__Group_6__2__Impl rule__PruebaInterfaz__Group_6__3
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1981:1: ( rule__PruebaInterfaz__Group_4__2__Impl rule__PruebaInterfaz__Group_4__3 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1982:2: rule__PruebaInterfaz__Group_4__2__Impl rule__PruebaInterfaz__Group_4__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6__2__Impl_in_rule__PruebaInterfaz__Group_6__24034);
-            rule__PruebaInterfaz__Group_6__2__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4__2__Impl_in_rule__PruebaInterfaz__Group_4__24034);
+            rule__PruebaInterfaz__Group_4__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6__3_in_rule__PruebaInterfaz__Group_6__24037);
-            rule__PruebaInterfaz__Group_6__3();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4__3_in_rule__PruebaInterfaz__Group_4__24037);
+            rule__PruebaInterfaz__Group_4__3();
 
             state._fsp--;
 
@@ -5300,35 +5300,35 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6__2"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4__2"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6__2__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1989:1: rule__PruebaInterfaz__Group_6__2__Impl : ( ( rule__PruebaInterfaz__AccionesAssignment_6_2 ) ) ;
-    public final void rule__PruebaInterfaz__Group_6__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4__2__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1989:1: rule__PruebaInterfaz__Group_4__2__Impl : ( ( rule__PruebaInterfaz__AccionesAssignment_4_2 ) ) ;
+    public final void rule__PruebaInterfaz__Group_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1993:1: ( ( ( rule__PruebaInterfaz__AccionesAssignment_6_2 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1994:1: ( ( rule__PruebaInterfaz__AccionesAssignment_6_2 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1993:1: ( ( ( rule__PruebaInterfaz__AccionesAssignment_4_2 ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1994:1: ( ( rule__PruebaInterfaz__AccionesAssignment_4_2 ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1994:1: ( ( rule__PruebaInterfaz__AccionesAssignment_6_2 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1995:1: ( rule__PruebaInterfaz__AccionesAssignment_6_2 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1994:1: ( ( rule__PruebaInterfaz__AccionesAssignment_4_2 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1995:1: ( rule__PruebaInterfaz__AccionesAssignment_4_2 )
             {
-             before(grammarAccess.getPruebaInterfazAccess().getAccionesAssignment_6_2()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1996:1: ( rule__PruebaInterfaz__AccionesAssignment_6_2 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1996:2: rule__PruebaInterfaz__AccionesAssignment_6_2
+             before(grammarAccess.getPruebaInterfazAccess().getAccionesAssignment_4_2()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1996:1: ( rule__PruebaInterfaz__AccionesAssignment_4_2 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:1996:2: rule__PruebaInterfaz__AccionesAssignment_4_2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__AccionesAssignment_6_2_in_rule__PruebaInterfaz__Group_6__2__Impl4064);
-            rule__PruebaInterfaz__AccionesAssignment_6_2();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__AccionesAssignment_4_2_in_rule__PruebaInterfaz__Group_4__2__Impl4064);
+            rule__PruebaInterfaz__AccionesAssignment_4_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPruebaInterfazAccess().getAccionesAssignment_6_2()); 
+             after(grammarAccess.getPruebaInterfazAccess().getAccionesAssignment_4_2()); 
 
             }
 
@@ -5347,26 +5347,26 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6__2__Impl"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4__2__Impl"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6__3"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2006:1: rule__PruebaInterfaz__Group_6__3 : rule__PruebaInterfaz__Group_6__3__Impl rule__PruebaInterfaz__Group_6__4 ;
-    public final void rule__PruebaInterfaz__Group_6__3() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4__3"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2006:1: rule__PruebaInterfaz__Group_4__3 : rule__PruebaInterfaz__Group_4__3__Impl rule__PruebaInterfaz__Group_4__4 ;
+    public final void rule__PruebaInterfaz__Group_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2010:1: ( rule__PruebaInterfaz__Group_6__3__Impl rule__PruebaInterfaz__Group_6__4 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2011:2: rule__PruebaInterfaz__Group_6__3__Impl rule__PruebaInterfaz__Group_6__4
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2010:1: ( rule__PruebaInterfaz__Group_4__3__Impl rule__PruebaInterfaz__Group_4__4 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2011:2: rule__PruebaInterfaz__Group_4__3__Impl rule__PruebaInterfaz__Group_4__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6__3__Impl_in_rule__PruebaInterfaz__Group_6__34094);
-            rule__PruebaInterfaz__Group_6__3__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4__3__Impl_in_rule__PruebaInterfaz__Group_4__34094);
+            rule__PruebaInterfaz__Group_4__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6__4_in_rule__PruebaInterfaz__Group_6__34097);
-            rule__PruebaInterfaz__Group_6__4();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4__4_in_rule__PruebaInterfaz__Group_4__34097);
+            rule__PruebaInterfaz__Group_4__4();
 
             state._fsp--;
 
@@ -5385,24 +5385,24 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6__3"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4__3"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6__3__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2018:1: rule__PruebaInterfaz__Group_6__3__Impl : ( ( rule__PruebaInterfaz__Group_6_3__0 )* ) ;
-    public final void rule__PruebaInterfaz__Group_6__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4__3__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2018:1: rule__PruebaInterfaz__Group_4__3__Impl : ( ( rule__PruebaInterfaz__Group_4_3__0 )* ) ;
+    public final void rule__PruebaInterfaz__Group_4__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2022:1: ( ( ( rule__PruebaInterfaz__Group_6_3__0 )* ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2023:1: ( ( rule__PruebaInterfaz__Group_6_3__0 )* )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2022:1: ( ( ( rule__PruebaInterfaz__Group_4_3__0 )* ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2023:1: ( ( rule__PruebaInterfaz__Group_4_3__0 )* )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2023:1: ( ( rule__PruebaInterfaz__Group_6_3__0 )* )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2024:1: ( rule__PruebaInterfaz__Group_6_3__0 )*
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2023:1: ( ( rule__PruebaInterfaz__Group_4_3__0 )* )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2024:1: ( rule__PruebaInterfaz__Group_4_3__0 )*
             {
-             before(grammarAccess.getPruebaInterfazAccess().getGroup_6_3()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2025:1: ( rule__PruebaInterfaz__Group_6_3__0 )*
+             before(grammarAccess.getPruebaInterfazAccess().getGroup_4_3()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2025:1: ( rule__PruebaInterfaz__Group_4_3__0 )*
             loop12:
             do {
                 int alt12=2;
@@ -5415,10 +5415,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
                 switch (alt12) {
             	case 1 :
-            	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2025:2: rule__PruebaInterfaz__Group_6_3__0
+            	    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2025:2: rule__PruebaInterfaz__Group_4_3__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6_3__0_in_rule__PruebaInterfaz__Group_6__3__Impl4124);
-            	    rule__PruebaInterfaz__Group_6_3__0();
+            	    pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4_3__0_in_rule__PruebaInterfaz__Group_4__3__Impl4124);
+            	    rule__PruebaInterfaz__Group_4_3__0();
 
             	    state._fsp--;
 
@@ -5431,7 +5431,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
                 }
             } while (true);
 
-             after(grammarAccess.getPruebaInterfazAccess().getGroup_6_3()); 
+             after(grammarAccess.getPruebaInterfazAccess().getGroup_4_3()); 
 
             }
 
@@ -5450,21 +5450,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6__3__Impl"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4__3__Impl"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6__4"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2035:1: rule__PruebaInterfaz__Group_6__4 : rule__PruebaInterfaz__Group_6__4__Impl ;
-    public final void rule__PruebaInterfaz__Group_6__4() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4__4"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2035:1: rule__PruebaInterfaz__Group_4__4 : rule__PruebaInterfaz__Group_4__4__Impl ;
+    public final void rule__PruebaInterfaz__Group_4__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2039:1: ( rule__PruebaInterfaz__Group_6__4__Impl )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2040:2: rule__PruebaInterfaz__Group_6__4__Impl
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2039:1: ( rule__PruebaInterfaz__Group_4__4__Impl )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2040:2: rule__PruebaInterfaz__Group_4__4__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6__4__Impl_in_rule__PruebaInterfaz__Group_6__44155);
-            rule__PruebaInterfaz__Group_6__4__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4__4__Impl_in_rule__PruebaInterfaz__Group_4__44155);
+            rule__PruebaInterfaz__Group_4__4__Impl();
 
             state._fsp--;
 
@@ -5483,12 +5483,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6__4"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4__4"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6__4__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2046:1: rule__PruebaInterfaz__Group_6__4__Impl : ( '}' ) ;
-    public final void rule__PruebaInterfaz__Group_6__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4__4__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2046:1: rule__PruebaInterfaz__Group_4__4__Impl : ( '}' ) ;
+    public final void rule__PruebaInterfaz__Group_4__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -5499,9 +5499,9 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2051:1: ( '}' )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2052:1: '}'
             {
-             before(grammarAccess.getPruebaInterfazAccess().getRightCurlyBracketKeyword_6_4()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__PruebaInterfaz__Group_6__4__Impl4183); 
-             after(grammarAccess.getPruebaInterfazAccess().getRightCurlyBracketKeyword_6_4()); 
+             before(grammarAccess.getPruebaInterfazAccess().getRightCurlyBracketKeyword_4_4()); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__PruebaInterfaz__Group_4__4__Impl4183); 
+             after(grammarAccess.getPruebaInterfazAccess().getRightCurlyBracketKeyword_4_4()); 
 
             }
 
@@ -5520,26 +5520,26 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6__4__Impl"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4__4__Impl"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6_3__0"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2075:1: rule__PruebaInterfaz__Group_6_3__0 : rule__PruebaInterfaz__Group_6_3__0__Impl rule__PruebaInterfaz__Group_6_3__1 ;
-    public final void rule__PruebaInterfaz__Group_6_3__0() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4_3__0"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2075:1: rule__PruebaInterfaz__Group_4_3__0 : rule__PruebaInterfaz__Group_4_3__0__Impl rule__PruebaInterfaz__Group_4_3__1 ;
+    public final void rule__PruebaInterfaz__Group_4_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2079:1: ( rule__PruebaInterfaz__Group_6_3__0__Impl rule__PruebaInterfaz__Group_6_3__1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2080:2: rule__PruebaInterfaz__Group_6_3__0__Impl rule__PruebaInterfaz__Group_6_3__1
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2079:1: ( rule__PruebaInterfaz__Group_4_3__0__Impl rule__PruebaInterfaz__Group_4_3__1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2080:2: rule__PruebaInterfaz__Group_4_3__0__Impl rule__PruebaInterfaz__Group_4_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6_3__0__Impl_in_rule__PruebaInterfaz__Group_6_3__04224);
-            rule__PruebaInterfaz__Group_6_3__0__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4_3__0__Impl_in_rule__PruebaInterfaz__Group_4_3__04224);
+            rule__PruebaInterfaz__Group_4_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6_3__1_in_rule__PruebaInterfaz__Group_6_3__04227);
-            rule__PruebaInterfaz__Group_6_3__1();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4_3__1_in_rule__PruebaInterfaz__Group_4_3__04227);
+            rule__PruebaInterfaz__Group_4_3__1();
 
             state._fsp--;
 
@@ -5558,12 +5558,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6_3__0"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4_3__0"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6_3__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2087:1: rule__PruebaInterfaz__Group_6_3__0__Impl : ( ',' ) ;
-    public final void rule__PruebaInterfaz__Group_6_3__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4_3__0__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2087:1: rule__PruebaInterfaz__Group_4_3__0__Impl : ( ',' ) ;
+    public final void rule__PruebaInterfaz__Group_4_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -5574,9 +5574,9 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2092:1: ( ',' )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2093:1: ','
             {
-             before(grammarAccess.getPruebaInterfazAccess().getCommaKeyword_6_3_0()); 
-            match(input,19,FollowSets000.FOLLOW_19_in_rule__PruebaInterfaz__Group_6_3__0__Impl4255); 
-             after(grammarAccess.getPruebaInterfazAccess().getCommaKeyword_6_3_0()); 
+             before(grammarAccess.getPruebaInterfazAccess().getCommaKeyword_4_3_0()); 
+            match(input,19,FollowSets000.FOLLOW_19_in_rule__PruebaInterfaz__Group_4_3__0__Impl4255); 
+             after(grammarAccess.getPruebaInterfazAccess().getCommaKeyword_4_3_0()); 
 
             }
 
@@ -5595,21 +5595,21 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6_3__0__Impl"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4_3__0__Impl"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6_3__1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2106:1: rule__PruebaInterfaz__Group_6_3__1 : rule__PruebaInterfaz__Group_6_3__1__Impl ;
-    public final void rule__PruebaInterfaz__Group_6_3__1() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4_3__1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2106:1: rule__PruebaInterfaz__Group_4_3__1 : rule__PruebaInterfaz__Group_4_3__1__Impl ;
+    public final void rule__PruebaInterfaz__Group_4_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2110:1: ( rule__PruebaInterfaz__Group_6_3__1__Impl )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2111:2: rule__PruebaInterfaz__Group_6_3__1__Impl
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2110:1: ( rule__PruebaInterfaz__Group_4_3__1__Impl )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2111:2: rule__PruebaInterfaz__Group_4_3__1__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_6_3__1__Impl_in_rule__PruebaInterfaz__Group_6_3__14286);
-            rule__PruebaInterfaz__Group_6_3__1__Impl();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__Group_4_3__1__Impl_in_rule__PruebaInterfaz__Group_4_3__14286);
+            rule__PruebaInterfaz__Group_4_3__1__Impl();
 
             state._fsp--;
 
@@ -5628,35 +5628,35 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6_3__1"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4_3__1"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__Group_6_3__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2117:1: rule__PruebaInterfaz__Group_6_3__1__Impl : ( ( rule__PruebaInterfaz__AccionesAssignment_6_3_1 ) ) ;
-    public final void rule__PruebaInterfaz__Group_6_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__Group_4_3__1__Impl"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2117:1: rule__PruebaInterfaz__Group_4_3__1__Impl : ( ( rule__PruebaInterfaz__AccionesAssignment_4_3_1 ) ) ;
+    public final void rule__PruebaInterfaz__Group_4_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2121:1: ( ( ( rule__PruebaInterfaz__AccionesAssignment_6_3_1 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2122:1: ( ( rule__PruebaInterfaz__AccionesAssignment_6_3_1 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2121:1: ( ( ( rule__PruebaInterfaz__AccionesAssignment_4_3_1 ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2122:1: ( ( rule__PruebaInterfaz__AccionesAssignment_4_3_1 ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2122:1: ( ( rule__PruebaInterfaz__AccionesAssignment_6_3_1 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2123:1: ( rule__PruebaInterfaz__AccionesAssignment_6_3_1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2122:1: ( ( rule__PruebaInterfaz__AccionesAssignment_4_3_1 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2123:1: ( rule__PruebaInterfaz__AccionesAssignment_4_3_1 )
             {
-             before(grammarAccess.getPruebaInterfazAccess().getAccionesAssignment_6_3_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2124:1: ( rule__PruebaInterfaz__AccionesAssignment_6_3_1 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2124:2: rule__PruebaInterfaz__AccionesAssignment_6_3_1
+             before(grammarAccess.getPruebaInterfazAccess().getAccionesAssignment_4_3_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2124:1: ( rule__PruebaInterfaz__AccionesAssignment_4_3_1 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2124:2: rule__PruebaInterfaz__AccionesAssignment_4_3_1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__AccionesAssignment_6_3_1_in_rule__PruebaInterfaz__Group_6_3__1__Impl4313);
-            rule__PruebaInterfaz__AccionesAssignment_6_3_1();
+            pushFollow(FollowSets000.FOLLOW_rule__PruebaInterfaz__AccionesAssignment_4_3_1_in_rule__PruebaInterfaz__Group_4_3__1__Impl4313);
+            rule__PruebaInterfaz__AccionesAssignment_4_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getPruebaInterfazAccess().getAccionesAssignment_6_3_1()); 
+             after(grammarAccess.getPruebaInterfazAccess().getAccionesAssignment_4_3_1()); 
 
             }
 
@@ -5675,7 +5675,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__Group_6_3__1__Impl"
+    // $ANTLR end "rule__PruebaInterfaz__Group_4_3__1__Impl"
 
 
     // $ANTLR start "rule__EInt__Group__0"
@@ -18736,26 +18736,116 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__AsercionSeleccion__Group__6__Impl"
 
 
-    // $ANTLR start "rule__Formulario__NameAssignment_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7314:1: rule__Formulario__NameAssignment_1 : ( ruleEString ) ;
-    public final void rule__Formulario__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Formulario__ComprobacionCamposAssignment_0"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7314:1: rule__Formulario__ComprobacionCamposAssignment_0 : ( ( 'comprobacionCampos' ) ) ;
+    public final void rule__Formulario__ComprobacionCamposAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7318:1: ( ( ruleEString ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7319:1: ( ruleEString )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7318:1: ( ( ( 'comprobacionCampos' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7319:1: ( ( 'comprobacionCampos' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7319:1: ( ruleEString )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7320:1: ruleEString
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7319:1: ( ( 'comprobacionCampos' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7320:1: ( 'comprobacionCampos' )
             {
-             before(grammarAccess.getFormularioAccess().getNameEStringParserRuleCall_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Formulario__NameAssignment_114516);
+             before(grammarAccess.getFormularioAccess().getComprobacionCamposComprobacionCamposKeyword_0_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7321:1: ( 'comprobacionCampos' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7322:1: 'comprobacionCampos'
+            {
+             before(grammarAccess.getFormularioAccess().getComprobacionCamposComprobacionCamposKeyword_0_0()); 
+            match(input,50,FollowSets000.FOLLOW_50_in_rule__Formulario__ComprobacionCamposAssignment_014521); 
+             after(grammarAccess.getFormularioAccess().getComprobacionCamposComprobacionCamposKeyword_0_0()); 
+
+            }
+
+             after(grammarAccess.getFormularioAccess().getComprobacionCamposComprobacionCamposKeyword_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Formulario__ComprobacionCamposAssignment_0"
+
+
+    // $ANTLR start "rule__Formulario__ComprobacionAccionAssignment_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7337:1: rule__Formulario__ComprobacionAccionAssignment_1 : ( ( 'comprobacionAccion' ) ) ;
+    public final void rule__Formulario__ComprobacionAccionAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7341:1: ( ( ( 'comprobacionAccion' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7342:1: ( ( 'comprobacionAccion' ) )
+            {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7342:1: ( ( 'comprobacionAccion' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7343:1: ( 'comprobacionAccion' )
+            {
+             before(grammarAccess.getFormularioAccess().getComprobacionAccionComprobacionAccionKeyword_1_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7344:1: ( 'comprobacionAccion' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7345:1: 'comprobacionAccion'
+            {
+             before(grammarAccess.getFormularioAccess().getComprobacionAccionComprobacionAccionKeyword_1_0()); 
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__Formulario__ComprobacionAccionAssignment_114565); 
+             after(grammarAccess.getFormularioAccess().getComprobacionAccionComprobacionAccionKeyword_1_0()); 
+
+            }
+
+             after(grammarAccess.getFormularioAccess().getComprobacionAccionComprobacionAccionKeyword_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Formulario__ComprobacionAccionAssignment_1"
+
+
+    // $ANTLR start "rule__Formulario__NameAssignment_3"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7360:1: rule__Formulario__NameAssignment_3 : ( ruleEString ) ;
+    public final void rule__Formulario__NameAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7364:1: ( ( ruleEString ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7365:1: ( ruleEString )
+            {
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7365:1: ( ruleEString )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7366:1: ruleEString
+            {
+             before(grammarAccess.getFormularioAccess().getNameEStringParserRuleCall_3_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Formulario__NameAssignment_314604);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getFormularioAccess().getNameEStringParserRuleCall_1_0()); 
+             after(grammarAccess.getFormularioAccess().getNameEStringParserRuleCall_3_0()); 
 
             }
 
@@ -18774,29 +18864,29 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Formulario__NameAssignment_1"
+    // $ANTLR end "rule__Formulario__NameAssignment_3"
 
 
-    // $ANTLR start "rule__Formulario__LayoutAssignment_4"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7329:1: rule__Formulario__LayoutAssignment_4 : ( ruleLayout ) ;
-    public final void rule__Formulario__LayoutAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__Formulario__LayoutAssignment_6"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7375:1: rule__Formulario__LayoutAssignment_6 : ( ruleLayout ) ;
+    public final void rule__Formulario__LayoutAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7333:1: ( ( ruleLayout ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7334:1: ( ruleLayout )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7379:1: ( ( ruleLayout ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7380:1: ( ruleLayout )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7334:1: ( ruleLayout )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7335:1: ruleLayout
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7380:1: ( ruleLayout )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7381:1: ruleLayout
             {
-             before(grammarAccess.getFormularioAccess().getLayoutLayoutParserRuleCall_4_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleLayout_in_rule__Formulario__LayoutAssignment_414547);
+             before(grammarAccess.getFormularioAccess().getLayoutLayoutParserRuleCall_6_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleLayout_in_rule__Formulario__LayoutAssignment_614635);
             ruleLayout();
 
             state._fsp--;
 
-             after(grammarAccess.getFormularioAccess().getLayoutLayoutParserRuleCall_4_0()); 
+             after(grammarAccess.getFormularioAccess().getLayoutLayoutParserRuleCall_6_0()); 
 
             }
 
@@ -18815,29 +18905,29 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Formulario__LayoutAssignment_4"
+    // $ANTLR end "rule__Formulario__LayoutAssignment_6"
 
 
-    // $ANTLR start "rule__Formulario__PruebasAssignment_5_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7344:1: rule__Formulario__PruebasAssignment_5_1 : ( rulePruebaInterfaz ) ;
-    public final void rule__Formulario__PruebasAssignment_5_1() throws RecognitionException {
+    // $ANTLR start "rule__Formulario__PruebasAssignment_7_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7390:1: rule__Formulario__PruebasAssignment_7_1 : ( rulePruebaInterfaz ) ;
+    public final void rule__Formulario__PruebasAssignment_7_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7348:1: ( ( rulePruebaInterfaz ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7349:1: ( rulePruebaInterfaz )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7394:1: ( ( rulePruebaInterfaz ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7395:1: ( rulePruebaInterfaz )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7349:1: ( rulePruebaInterfaz )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7350:1: rulePruebaInterfaz
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7395:1: ( rulePruebaInterfaz )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7396:1: rulePruebaInterfaz
             {
-             before(grammarAccess.getFormularioAccess().getPruebasPruebaInterfazParserRuleCall_5_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_rulePruebaInterfaz_in_rule__Formulario__PruebasAssignment_5_114578);
+             before(grammarAccess.getFormularioAccess().getPruebasPruebaInterfazParserRuleCall_7_1_0()); 
+            pushFollow(FollowSets000.FOLLOW_rulePruebaInterfaz_in_rule__Formulario__PruebasAssignment_7_114666);
             rulePruebaInterfaz();
 
             state._fsp--;
 
-             after(grammarAccess.getFormularioAccess().getPruebasPruebaInterfazParserRuleCall_5_1_0()); 
+             after(grammarAccess.getFormularioAccess().getPruebasPruebaInterfazParserRuleCall_7_1_0()); 
 
             }
 
@@ -18856,24 +18946,24 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Formulario__PruebasAssignment_5_1"
+    // $ANTLR end "rule__Formulario__PruebasAssignment_7_1"
 
 
     // $ANTLR start "rule__Layout__ColumnasAssignment_3"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7359:1: rule__Layout__ColumnasAssignment_3 : ( ruleEInt ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7405:1: rule__Layout__ColumnasAssignment_3 : ( ruleEInt ) ;
     public final void rule__Layout__ColumnasAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7363:1: ( ( ruleEInt ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7364:1: ( ruleEInt )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7409:1: ( ( ruleEInt ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7410:1: ( ruleEInt )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7364:1: ( ruleEInt )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7365:1: ruleEInt
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7410:1: ( ruleEInt )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7411:1: ruleEInt
             {
              before(grammarAccess.getLayoutAccess().getColumnasEIntParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__Layout__ColumnasAssignment_314609);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__Layout__ColumnasAssignment_314697);
             ruleEInt();
 
             state._fsp--;
@@ -18901,20 +18991,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__EntradasAssignment_4_2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7374:1: rule__Layout__EntradasAssignment_4_2 : ( ruleInput ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7420:1: rule__Layout__EntradasAssignment_4_2 : ( ruleInput ) ;
     public final void rule__Layout__EntradasAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7378:1: ( ( ruleInput ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7379:1: ( ruleInput )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7424:1: ( ( ruleInput ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7425:1: ( ruleInput )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7379:1: ( ruleInput )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7380:1: ruleInput
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7425:1: ( ruleInput )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7426:1: ruleInput
             {
              before(grammarAccess.getLayoutAccess().getEntradasInputParserRuleCall_4_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_214640);
+            pushFollow(FollowSets000.FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_214728);
             ruleInput();
 
             state._fsp--;
@@ -18942,20 +19032,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Layout__EntradasAssignment_4_3_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7389:1: rule__Layout__EntradasAssignment_4_3_1 : ( ruleInput ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7435:1: rule__Layout__EntradasAssignment_4_3_1 : ( ruleInput ) ;
     public final void rule__Layout__EntradasAssignment_4_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7393:1: ( ( ruleInput ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7394:1: ( ruleInput )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7439:1: ( ( ruleInput ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7440:1: ( ruleInput )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7394:1: ( ruleInput )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7395:1: ruleInput
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7440:1: ( ruleInput )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7441:1: ruleInput
             {
              before(grammarAccess.getLayoutAccess().getEntradasInputParserRuleCall_4_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_3_114671);
+            pushFollow(FollowSets000.FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_3_114759);
             ruleInput();
 
             state._fsp--;
@@ -18982,99 +19072,9 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Layout__EntradasAssignment_4_3_1"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__ComprobarAsercionAssignment_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7404:1: rule__PruebaInterfaz__ComprobarAsercionAssignment_1 : ( ( 'comprobarAsercion' ) ) ;
-    public final void rule__PruebaInterfaz__ComprobarAsercionAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7408:1: ( ( ( 'comprobarAsercion' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7409:1: ( ( 'comprobarAsercion' ) )
-            {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7409:1: ( ( 'comprobarAsercion' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7410:1: ( 'comprobarAsercion' )
-            {
-             before(grammarAccess.getPruebaInterfazAccess().getComprobarAsercionComprobarAsercionKeyword_1_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7411:1: ( 'comprobarAsercion' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7412:1: 'comprobarAsercion'
-            {
-             before(grammarAccess.getPruebaInterfazAccess().getComprobarAsercionComprobarAsercionKeyword_1_0()); 
-            match(input,50,FollowSets000.FOLLOW_50_in_rule__PruebaInterfaz__ComprobarAsercionAssignment_114707); 
-             after(grammarAccess.getPruebaInterfazAccess().getComprobarAsercionComprobarAsercionKeyword_1_0()); 
-
-            }
-
-             after(grammarAccess.getPruebaInterfazAccess().getComprobarAsercionComprobarAsercionKeyword_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__PruebaInterfaz__ComprobarAsercionAssignment_1"
-
-
-    // $ANTLR start "rule__PruebaInterfaz__ComprobarAccionAssignment_2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7427:1: rule__PruebaInterfaz__ComprobarAccionAssignment_2 : ( ( 'comprobarAccion' ) ) ;
-    public final void rule__PruebaInterfaz__ComprobarAccionAssignment_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7431:1: ( ( ( 'comprobarAccion' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7432:1: ( ( 'comprobarAccion' ) )
-            {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7432:1: ( ( 'comprobarAccion' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7433:1: ( 'comprobarAccion' )
-            {
-             before(grammarAccess.getPruebaInterfazAccess().getComprobarAccionComprobarAccionKeyword_2_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7434:1: ( 'comprobarAccion' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7435:1: 'comprobarAccion'
-            {
-             before(grammarAccess.getPruebaInterfazAccess().getComprobarAccionComprobarAccionKeyword_2_0()); 
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__PruebaInterfaz__ComprobarAccionAssignment_214751); 
-             after(grammarAccess.getPruebaInterfazAccess().getComprobarAccionComprobarAccionKeyword_2_0()); 
-
-            }
-
-             after(grammarAccess.getPruebaInterfazAccess().getComprobarAccionComprobarAccionKeyword_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__PruebaInterfaz__ComprobarAccionAssignment_2"
-
-
-    // $ANTLR start "rule__PruebaInterfaz__NameAssignment_4"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7450:1: rule__PruebaInterfaz__NameAssignment_4 : ( ruleEString ) ;
-    public final void rule__PruebaInterfaz__NameAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__NameAssignment_2"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7450:1: rule__PruebaInterfaz__NameAssignment_2 : ( ruleEString ) ;
+    public final void rule__PruebaInterfaz__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -19085,13 +19085,13 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7455:1: ( ruleEString )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7456:1: ruleEString
             {
-             before(grammarAccess.getPruebaInterfazAccess().getNameEStringParserRuleCall_4_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__PruebaInterfaz__NameAssignment_414790);
+             before(grammarAccess.getPruebaInterfazAccess().getNameEStringParserRuleCall_2_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__PruebaInterfaz__NameAssignment_214790);
             ruleEString();
 
             state._fsp--;
 
-             after(grammarAccess.getPruebaInterfazAccess().getNameEStringParserRuleCall_4_0()); 
+             after(grammarAccess.getPruebaInterfazAccess().getNameEStringParserRuleCall_2_0()); 
 
             }
 
@@ -19110,12 +19110,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__NameAssignment_4"
+    // $ANTLR end "rule__PruebaInterfaz__NameAssignment_2"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__AccionesAssignment_6_2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7465:1: rule__PruebaInterfaz__AccionesAssignment_6_2 : ( ruleAccion ) ;
-    public final void rule__PruebaInterfaz__AccionesAssignment_6_2() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__AccionesAssignment_4_2"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7465:1: rule__PruebaInterfaz__AccionesAssignment_4_2 : ( ruleAccion ) ;
+    public final void rule__PruebaInterfaz__AccionesAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -19126,13 +19126,13 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7470:1: ( ruleAccion )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7471:1: ruleAccion
             {
-             before(grammarAccess.getPruebaInterfazAccess().getAccionesAccionParserRuleCall_6_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_6_214821);
+             before(grammarAccess.getPruebaInterfazAccess().getAccionesAccionParserRuleCall_4_2_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_214821);
             ruleAccion();
 
             state._fsp--;
 
-             after(grammarAccess.getPruebaInterfazAccess().getAccionesAccionParserRuleCall_6_2_0()); 
+             after(grammarAccess.getPruebaInterfazAccess().getAccionesAccionParserRuleCall_4_2_0()); 
 
             }
 
@@ -19151,12 +19151,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__AccionesAssignment_6_2"
+    // $ANTLR end "rule__PruebaInterfaz__AccionesAssignment_4_2"
 
 
-    // $ANTLR start "rule__PruebaInterfaz__AccionesAssignment_6_3_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7480:1: rule__PruebaInterfaz__AccionesAssignment_6_3_1 : ( ruleAccion ) ;
-    public final void rule__PruebaInterfaz__AccionesAssignment_6_3_1() throws RecognitionException {
+    // $ANTLR start "rule__PruebaInterfaz__AccionesAssignment_4_3_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7480:1: rule__PruebaInterfaz__AccionesAssignment_4_3_1 : ( ruleAccion ) ;
+    public final void rule__PruebaInterfaz__AccionesAssignment_4_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -19167,13 +19167,13 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7485:1: ( ruleAccion )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7486:1: ruleAccion
             {
-             before(grammarAccess.getPruebaInterfazAccess().getAccionesAccionParserRuleCall_6_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_6_3_114852);
+             before(grammarAccess.getPruebaInterfazAccess().getAccionesAccionParserRuleCall_4_3_1_0()); 
+            pushFollow(FollowSets000.FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_3_114852);
             ruleAccion();
 
             state._fsp--;
 
-             after(grammarAccess.getPruebaInterfazAccess().getAccionesAccionParserRuleCall_6_3_1_0()); 
+             after(grammarAccess.getPruebaInterfazAccess().getAccionesAccionParserRuleCall_4_3_1_0()); 
 
             }
 
@@ -19192,7 +19192,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__PruebaInterfaz__AccionesAssignment_6_3_1"
+    // $ANTLR end "rule__PruebaInterfaz__AccionesAssignment_4_3_1"
 
 
     // $ANTLR start "rule__InputTexto__VisibleAssignment_1"
@@ -21855,9 +21855,9 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rulePruebaInterfaz_in_entryRulePruebaInterfaz481 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRulePruebaInterfaz488 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__0_in_rulePruebaInterfaz514 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_entryRuleEInt541 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleEInt548 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__EInt__Group__0_in_ruleEInt574 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_entryRuleEInt543 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleEInt550 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__EInt__Group__0_in_ruleEInt576 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleInputTexto_in_entryRuleInputTexto603 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleInputTexto610 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputTexto__Group__0_in_ruleInputTexto636 = new BitSet(new long[]{0x0000000000000002L});
@@ -21928,108 +21928,108 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_ruleAsercionSeleccion_in_rule__Asercion__Alternatives1949 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_STRING_in_rule__EString__Alternatives1981 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_RULE_ID_in_rule__EString__Alternatives1998 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__Group__0__Impl_in_rule__Formulario__Group__02029 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__0__Impl_in_rule__Formulario__Group__02029 = new BitSet(new long[]{0x0008000000000800L});
         public static final BitSet FOLLOW_rule__Formulario__Group__1_in_rule__Formulario__Group__02032 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_11_in_rule__Formulario__Group__0__Impl2060 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__Group__1__Impl_in_rule__Formulario__Group__12091 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__Formulario__Group__2_in_rule__Formulario__Group__12094 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__NameAssignment_1_in_rule__Formulario__Group__1__Impl2121 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__Group__2__Impl_in_rule__Formulario__Group__22151 = new BitSet(new long[]{0x0000000000002000L});
+        public static final BitSet FOLLOW_rule__Formulario__ComprobacionCamposAssignment_0_in_rule__Formulario__Group__0__Impl2059 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__1__Impl_in_rule__Formulario__Group__12090 = new BitSet(new long[]{0x0008000000000800L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__2_in_rule__Formulario__Group__12093 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__ComprobacionAccionAssignment_1_in_rule__Formulario__Group__1__Impl2120 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__2__Impl_in_rule__Formulario__Group__22151 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_rule__Formulario__Group__3_in_rule__Formulario__Group__22154 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__Formulario__Group__2__Impl2182 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__Group__3__Impl_in_rule__Formulario__Group__32213 = new BitSet(new long[]{0x0000000000010000L});
+        public static final BitSet FOLLOW_11_in_rule__Formulario__Group__2__Impl2182 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__3__Impl_in_rule__Formulario__Group__32213 = new BitSet(new long[]{0x0000000000001000L});
         public static final BitSet FOLLOW_rule__Formulario__Group__4_in_rule__Formulario__Group__32216 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_13_in_rule__Formulario__Group__3__Impl2244 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__Group__4__Impl_in_rule__Formulario__Group__42275 = new BitSet(new long[]{0x000000000000C000L});
-        public static final BitSet FOLLOW_rule__Formulario__Group__5_in_rule__Formulario__Group__42278 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__LayoutAssignment_4_in_rule__Formulario__Group__4__Impl2305 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__Group__5__Impl_in_rule__Formulario__Group__52335 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_rule__Formulario__NameAssignment_3_in_rule__Formulario__Group__3__Impl2243 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__4__Impl_in_rule__Formulario__Group__42273 = new BitSet(new long[]{0x0000000000002000L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__5_in_rule__Formulario__Group__42276 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__Formulario__Group__4__Impl2304 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__5__Impl_in_rule__Formulario__Group__52335 = new BitSet(new long[]{0x0000000000010000L});
         public static final BitSet FOLLOW_rule__Formulario__Group__6_in_rule__Formulario__Group__52338 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__Group_5__0_in_rule__Formulario__Group__5__Impl2365 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__Group__6__Impl_in_rule__Formulario__Group__62396 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Formulario__Group__6__Impl2424 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__Group_5__0__Impl_in_rule__Formulario__Group_5__02469 = new BitSet(new long[]{0x000C000000100000L});
-        public static final BitSet FOLLOW_rule__Formulario__Group_5__1_in_rule__Formulario__Group_5__02472 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_15_in_rule__Formulario__Group_5__0__Impl2500 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__Group_5__1__Impl_in_rule__Formulario__Group_5__12531 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Formulario__PruebasAssignment_5_1_in_rule__Formulario__Group_5__1__Impl2558 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group__0__Impl_in_rule__Layout__Group__02592 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__Layout__Group__1_in_rule__Layout__Group__02595 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_16_in_rule__Layout__Group__0__Impl2623 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group__1__Impl_in_rule__Layout__Group__12654 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_rule__Layout__Group__2_in_rule__Layout__Group__12657 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__Layout__Group__1__Impl2685 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group__2__Impl_in_rule__Layout__Group__22716 = new BitSet(new long[]{0x0000000000400040L});
-        public static final BitSet FOLLOW_rule__Layout__Group__3_in_rule__Layout__Group__22719 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_17_in_rule__Layout__Group__2__Impl2747 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group__3__Impl_in_rule__Layout__Group__32778 = new BitSet(new long[]{0x0000000000044000L});
-        public static final BitSet FOLLOW_rule__Layout__Group__4_in_rule__Layout__Group__32781 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__ColumnasAssignment_3_in_rule__Layout__Group__3__Impl2808 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group__4__Impl_in_rule__Layout__Group__42838 = new BitSet(new long[]{0x0000000000044000L});
-        public static final BitSet FOLLOW_rule__Layout__Group__5_in_rule__Layout__Group__42841 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4__0_in_rule__Layout__Group__4__Impl2868 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group__5__Impl_in_rule__Layout__Group__52899 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Layout__Group__5__Impl2927 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4__0__Impl_in_rule__Layout__Group_4__02970 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4__1_in_rule__Layout__Group_4__02973 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_18_in_rule__Layout__Group_4__0__Impl3001 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4__1__Impl_in_rule__Layout__Group_4__13032 = new BitSet(new long[]{0x00700007E2800000L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4__2_in_rule__Layout__Group_4__13035 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__Layout__Group_4__1__Impl3063 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4__2__Impl_in_rule__Layout__Group_4__23094 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4__3_in_rule__Layout__Group_4__23097 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__EntradasAssignment_4_2_in_rule__Layout__Group_4__2__Impl3124 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4__3__Impl_in_rule__Layout__Group_4__33154 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4__4_in_rule__Layout__Group_4__33157 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4_3__0_in_rule__Layout__Group_4__3__Impl3184 = new BitSet(new long[]{0x0000000000080002L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4__4__Impl_in_rule__Layout__Group_4__43215 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__Layout__Group_4__4__Impl3243 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4_3__0__Impl_in_rule__Layout__Group_4_3__03284 = new BitSet(new long[]{0x00700007E2800000L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4_3__1_in_rule__Layout__Group_4_3__03287 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__Layout__Group_4_3__0__Impl3315 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__Group_4_3__1__Impl_in_rule__Layout__Group_4_3__13346 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__Layout__EntradasAssignment_4_3_1_in_rule__Layout__Group_4_3__1__Impl3373 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__0__Impl_in_rule__PruebaInterfaz__Group__03407 = new BitSet(new long[]{0x000C000000100000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__1_in_rule__PruebaInterfaz__Group__03410 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__1__Impl_in_rule__PruebaInterfaz__Group__13468 = new BitSet(new long[]{0x000C000000100000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__2_in_rule__PruebaInterfaz__Group__13471 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__ComprobarAsercionAssignment_1_in_rule__PruebaInterfaz__Group__1__Impl3498 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__2__Impl_in_rule__PruebaInterfaz__Group__23529 = new BitSet(new long[]{0x000C000000100000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__3_in_rule__PruebaInterfaz__Group__23532 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__ComprobarAccionAssignment_2_in_rule__PruebaInterfaz__Group__2__Impl3559 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__3__Impl_in_rule__PruebaInterfaz__Group__33590 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__4_in_rule__PruebaInterfaz__Group__33593 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_20_in_rule__PruebaInterfaz__Group__3__Impl3621 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__4__Impl_in_rule__PruebaInterfaz__Group__43652 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__5_in_rule__PruebaInterfaz__Group__43655 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__NameAssignment_4_in_rule__PruebaInterfaz__Group__4__Impl3682 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__5__Impl_in_rule__PruebaInterfaz__Group__53712 = new BitSet(new long[]{0x0000000000204000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__6_in_rule__PruebaInterfaz__Group__53715 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__PruebaInterfaz__Group__5__Impl3743 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__6__Impl_in_rule__PruebaInterfaz__Group__63774 = new BitSet(new long[]{0x0000000000204000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__7_in_rule__PruebaInterfaz__Group__63777 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6__0_in_rule__PruebaInterfaz__Group__6__Impl3804 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__7__Impl_in_rule__PruebaInterfaz__Group__73835 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__PruebaInterfaz__Group__7__Impl3863 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6__0__Impl_in_rule__PruebaInterfaz__Group_6__03910 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6__1_in_rule__PruebaInterfaz__Group_6__03913 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_21_in_rule__PruebaInterfaz__Group_6__0__Impl3941 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6__1__Impl_in_rule__PruebaInterfaz__Group_6__13972 = new BitSet(new long[]{0x0000190000000000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6__2_in_rule__PruebaInterfaz__Group_6__13975 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__PruebaInterfaz__Group_6__1__Impl4003 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6__2__Impl_in_rule__PruebaInterfaz__Group_6__24034 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6__3_in_rule__PruebaInterfaz__Group_6__24037 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__AccionesAssignment_6_2_in_rule__PruebaInterfaz__Group_6__2__Impl4064 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6__3__Impl_in_rule__PruebaInterfaz__Group_6__34094 = new BitSet(new long[]{0x0000000000084000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6__4_in_rule__PruebaInterfaz__Group_6__34097 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6_3__0_in_rule__PruebaInterfaz__Group_6__3__Impl4124 = new BitSet(new long[]{0x0000000000080002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6__4__Impl_in_rule__PruebaInterfaz__Group_6__44155 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__PruebaInterfaz__Group_6__4__Impl4183 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6_3__0__Impl_in_rule__PruebaInterfaz__Group_6_3__04224 = new BitSet(new long[]{0x0000190000000000L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6_3__1_in_rule__PruebaInterfaz__Group_6_3__04227 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_19_in_rule__PruebaInterfaz__Group_6_3__0__Impl4255 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_6_3__1__Impl_in_rule__PruebaInterfaz__Group_6_3__14286 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__PruebaInterfaz__AccionesAssignment_6_3_1_in_rule__PruebaInterfaz__Group_6_3__1__Impl4313 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_13_in_rule__Formulario__Group__5__Impl2366 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__6__Impl_in_rule__Formulario__Group__62397 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__7_in_rule__Formulario__Group__62400 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__LayoutAssignment_6_in_rule__Formulario__Group__6__Impl2427 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__7__Impl_in_rule__Formulario__Group__72457 = new BitSet(new long[]{0x000000000000C000L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__8_in_rule__Formulario__Group__72460 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group_7__0_in_rule__Formulario__Group__7__Impl2487 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group__8__Impl_in_rule__Formulario__Group__82518 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__Formulario__Group__8__Impl2546 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group_7__0__Impl_in_rule__Formulario__Group_7__02595 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_rule__Formulario__Group_7__1_in_rule__Formulario__Group_7__02598 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_15_in_rule__Formulario__Group_7__0__Impl2626 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__Group_7__1__Impl_in_rule__Formulario__Group_7__12657 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Formulario__PruebasAssignment_7_1_in_rule__Formulario__Group_7__1__Impl2684 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group__0__Impl_in_rule__Layout__Group__02718 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__Layout__Group__1_in_rule__Layout__Group__02721 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_16_in_rule__Layout__Group__0__Impl2749 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group__1__Impl_in_rule__Layout__Group__12780 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_rule__Layout__Group__2_in_rule__Layout__Group__12783 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__Layout__Group__1__Impl2811 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group__2__Impl_in_rule__Layout__Group__22842 = new BitSet(new long[]{0x0000000000400040L});
+        public static final BitSet FOLLOW_rule__Layout__Group__3_in_rule__Layout__Group__22845 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_17_in_rule__Layout__Group__2__Impl2873 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group__3__Impl_in_rule__Layout__Group__32904 = new BitSet(new long[]{0x0000000000044000L});
+        public static final BitSet FOLLOW_rule__Layout__Group__4_in_rule__Layout__Group__32907 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__ColumnasAssignment_3_in_rule__Layout__Group__3__Impl2934 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group__4__Impl_in_rule__Layout__Group__42964 = new BitSet(new long[]{0x0000000000044000L});
+        public static final BitSet FOLLOW_rule__Layout__Group__5_in_rule__Layout__Group__42967 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4__0_in_rule__Layout__Group__4__Impl2994 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group__5__Impl_in_rule__Layout__Group__53025 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__Layout__Group__5__Impl3053 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4__0__Impl_in_rule__Layout__Group_4__03096 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4__1_in_rule__Layout__Group_4__03099 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_18_in_rule__Layout__Group_4__0__Impl3127 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4__1__Impl_in_rule__Layout__Group_4__13158 = new BitSet(new long[]{0x00700007E2800000L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4__2_in_rule__Layout__Group_4__13161 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__Layout__Group_4__1__Impl3189 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4__2__Impl_in_rule__Layout__Group_4__23220 = new BitSet(new long[]{0x0000000000084000L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4__3_in_rule__Layout__Group_4__23223 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__EntradasAssignment_4_2_in_rule__Layout__Group_4__2__Impl3250 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4__3__Impl_in_rule__Layout__Group_4__33280 = new BitSet(new long[]{0x0000000000084000L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4__4_in_rule__Layout__Group_4__33283 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4_3__0_in_rule__Layout__Group_4__3__Impl3310 = new BitSet(new long[]{0x0000000000080002L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4__4__Impl_in_rule__Layout__Group_4__43341 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__Layout__Group_4__4__Impl3369 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4_3__0__Impl_in_rule__Layout__Group_4_3__03410 = new BitSet(new long[]{0x00700007E2800000L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4_3__1_in_rule__Layout__Group_4_3__03413 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__Layout__Group_4_3__0__Impl3441 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__Group_4_3__1__Impl_in_rule__Layout__Group_4_3__13472 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__Layout__EntradasAssignment_4_3_1_in_rule__Layout__Group_4_3__1__Impl3499 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__0__Impl_in_rule__PruebaInterfaz__Group__03533 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__1_in_rule__PruebaInterfaz__Group__03536 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__1__Impl_in_rule__PruebaInterfaz__Group__13594 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__2_in_rule__PruebaInterfaz__Group__13597 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_20_in_rule__PruebaInterfaz__Group__1__Impl3625 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__2__Impl_in_rule__PruebaInterfaz__Group__23656 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__3_in_rule__PruebaInterfaz__Group__23659 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__NameAssignment_2_in_rule__PruebaInterfaz__Group__2__Impl3686 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__3__Impl_in_rule__PruebaInterfaz__Group__33716 = new BitSet(new long[]{0x0000000000204000L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__4_in_rule__PruebaInterfaz__Group__33719 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__PruebaInterfaz__Group__3__Impl3747 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__4__Impl_in_rule__PruebaInterfaz__Group__43778 = new BitSet(new long[]{0x0000000000204000L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__5_in_rule__PruebaInterfaz__Group__43781 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4__0_in_rule__PruebaInterfaz__Group__4__Impl3808 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group__5__Impl_in_rule__PruebaInterfaz__Group__53839 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__PruebaInterfaz__Group__5__Impl3867 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4__0__Impl_in_rule__PruebaInterfaz__Group_4__03910 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4__1_in_rule__PruebaInterfaz__Group_4__03913 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_21_in_rule__PruebaInterfaz__Group_4__0__Impl3941 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4__1__Impl_in_rule__PruebaInterfaz__Group_4__13972 = new BitSet(new long[]{0x0000190000000000L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4__2_in_rule__PruebaInterfaz__Group_4__13975 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__PruebaInterfaz__Group_4__1__Impl4003 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4__2__Impl_in_rule__PruebaInterfaz__Group_4__24034 = new BitSet(new long[]{0x0000000000084000L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4__3_in_rule__PruebaInterfaz__Group_4__24037 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__AccionesAssignment_4_2_in_rule__PruebaInterfaz__Group_4__2__Impl4064 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4__3__Impl_in_rule__PruebaInterfaz__Group_4__34094 = new BitSet(new long[]{0x0000000000084000L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4__4_in_rule__PruebaInterfaz__Group_4__34097 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4_3__0_in_rule__PruebaInterfaz__Group_4__3__Impl4124 = new BitSet(new long[]{0x0000000000080002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4__4__Impl_in_rule__PruebaInterfaz__Group_4__44155 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__PruebaInterfaz__Group_4__4__Impl4183 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4_3__0__Impl_in_rule__PruebaInterfaz__Group_4_3__04224 = new BitSet(new long[]{0x0000190000000000L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4_3__1_in_rule__PruebaInterfaz__Group_4_3__04227 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_19_in_rule__PruebaInterfaz__Group_4_3__0__Impl4255 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__Group_4_3__1__Impl_in_rule__PruebaInterfaz__Group_4_3__14286 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__PruebaInterfaz__AccionesAssignment_4_3_1_in_rule__PruebaInterfaz__Group_4_3__1__Impl4313 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__EInt__Group__0__Impl_in_rule__EInt__Group__04347 = new BitSet(new long[]{0x0000000000400040L});
         public static final BitSet FOLLOW_rule__EInt__Group__1_in_rule__EInt__Group__04350 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_22_in_rule__EInt__Group__0__Impl4379 = new BitSet(new long[]{0x0000000000000002L});
@@ -22482,17 +22482,17 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__AsercionSeleccion__ElementoAssignment_5_in_rule__AsercionSeleccion__Group__5__Impl14408 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__6__Impl_in_rule__AsercionSeleccion__Group__614438 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_14_in_rule__AsercionSeleccion__Group__6__Impl14466 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__Formulario__NameAssignment_114516 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLayout_in_rule__Formulario__LayoutAssignment_414547 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePruebaInterfaz_in_rule__Formulario__PruebasAssignment_5_114578 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_rule__Layout__ColumnasAssignment_314609 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_214640 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_3_114671 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__PruebaInterfaz__ComprobarAsercionAssignment_114707 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__PruebaInterfaz__ComprobarAccionAssignment_214751 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__PruebaInterfaz__NameAssignment_414790 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_6_214821 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_6_3_114852 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__Formulario__ComprobacionCamposAssignment_014521 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__Formulario__ComprobacionAccionAssignment_114565 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__Formulario__NameAssignment_314604 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLayout_in_rule__Formulario__LayoutAssignment_614635 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePruebaInterfaz_in_rule__Formulario__PruebasAssignment_7_114666 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_rule__Layout__ColumnasAssignment_314697 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_214728 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_3_114759 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__PruebaInterfaz__NameAssignment_214790 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_214821 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_3_114852 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_52_in_rule__InputTexto__VisibleAssignment_114888 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_53_in_rule__InputTexto__HabilitadoAssignment_214932 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_54_in_rule__InputTexto__ObligatorioAssignment_314976 = new BitSet(new long[]{0x0000000000000002L});

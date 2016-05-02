@@ -5,6 +5,8 @@ import "platform:/resource/Proyecto_DASOFT/model/Proyecto_DASOFT.ecore"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 Formulario returns Formulario:
+	(comprobacionCampos?='comprobacionCampos')?
+	(comprobacionAccion?='comprobacionAccion')?
 	'Formulario'
 	name=EString
 	'{'
@@ -38,19 +40,17 @@ EString returns ecore::EString:
 
 PruebaInterfaz returns PruebaInterfaz:
 	{PruebaInterfaz}
-	(comprobarAsercion?='comprobarAsercion')?
-	(comprobarAccion?='comprobarAccion')?
 	'PruebaInterfaz'
 	name=EString
 	'{'
 		('acciones' '{' acciones+=Accion ( "," acciones+=Accion)* '}' )?
 	'}';
 
-EInt returns ecore::EInt:
-	'-'? INT;
-
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
+
+EInt returns ecore::EInt:
+	'-'? INT;
 
 InputTexto returns InputTexto:
 	{InputTexto}

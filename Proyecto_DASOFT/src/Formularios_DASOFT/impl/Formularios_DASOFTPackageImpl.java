@@ -661,24 +661,6 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPruebaInterfaz_ComprobarAsercion() {
-		return (EAttribute)pruebaInterfazEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getPruebaInterfaz_ComprobarAccion() {
-		return (EAttribute)pruebaInterfazEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getAccion() {
 		return accionEClass;
 	}
@@ -921,8 +903,6 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 		pruebaInterfazEClass = createEClass(PRUEBA_INTERFAZ);
 		createEAttribute(pruebaInterfazEClass, PRUEBA_INTERFAZ__NAME);
 		createEReference(pruebaInterfazEClass, PRUEBA_INTERFAZ__ACCIONES);
-		createEAttribute(pruebaInterfazEClass, PRUEBA_INTERFAZ__COMPROBAR_ASERCION);
-		createEAttribute(pruebaInterfazEClass, PRUEBA_INTERFAZ__COMPROBAR_ACCION);
 
 		accionEClass = createEClass(ACCION);
 		createEReference(accionEClass, ACCION__ELEMENTO);
@@ -1059,8 +1039,6 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 		initEClass(pruebaInterfazEClass, PruebaInterfaz.class, "PruebaInterfaz", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPruebaInterfaz_Name(), ecorePackage.getEString(), "name", null, 0, 1, PruebaInterfaz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPruebaInterfaz_Acciones(), this.getAccion(), null, "acciones", null, 0, -1, PruebaInterfaz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPruebaInterfaz_ComprobarAsercion(), ecorePackage.getEBoolean(), "comprobarAsercion", null, 0, 1, PruebaInterfaz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPruebaInterfaz_ComprobarAccion(), ecorePackage.getEBoolean(), "comprobarAccion", null, 0, 1, PruebaInterfaz.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(accionEClass, Accion.class, "Accion", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAccion_Elemento(), this.getInput(), null, "elemento", null, 1, 1, Accion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1091,6 +1069,26 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/OCL/Import
+		createImportAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/OCL/Import</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createImportAnnotations() {
+		String source = "http://www.eclipse.org/OCL/Import";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "ecore", "http://www.eclipse.org/emf/2002/Ecore"
+		   });
 	}
 
 } //Formularios_DASOFTPackageImpl

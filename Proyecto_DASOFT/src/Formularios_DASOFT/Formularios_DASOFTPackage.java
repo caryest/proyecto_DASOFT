@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EReference;
  * <!-- end-user-doc -->
  * @see Formularios_DASOFT.Formularios_DASOFTFactory
  * @model kind="package"
+ *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore'"
  * @generated
  */
 public interface Formularios_DASOFTPackage extends EPackage {
@@ -1128,31 +1129,13 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int PRUEBA_INTERFAZ__ACCIONES = 1;
 
 	/**
-	 * The feature id for the '<em><b>Comprobar Asercion</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRUEBA_INTERFAZ__COMPROBAR_ASERCION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Comprobar Accion</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PRUEBA_INTERFAZ__COMPROBAR_ACCION = 3;
-
-	/**
 	 * The number of structural features of the '<em>Prueba Interfaz</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRUEBA_INTERFAZ_FEATURE_COUNT = 4;
+	int PRUEBA_INTERFAZ_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Prueba Interfaz</em>' class.
@@ -2010,28 +1993,6 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EReference getPruebaInterfaz_Acciones();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.PruebaInterfaz#isComprobarAsercion <em>Comprobar Asercion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Comprobar Asercion</em>'.
-	 * @see Formularios_DASOFT.PruebaInterfaz#isComprobarAsercion()
-	 * @see #getPruebaInterfaz()
-	 * @generated
-	 */
-	EAttribute getPruebaInterfaz_ComprobarAsercion();
-
-	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.PruebaInterfaz#isComprobarAccion <em>Comprobar Accion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Comprobar Accion</em>'.
-	 * @see Formularios_DASOFT.PruebaInterfaz#isComprobarAccion()
-	 * @see #getPruebaInterfaz()
-	 * @generated
-	 */
-	EAttribute getPruebaInterfaz_ComprobarAccion();
-
-	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.Accion <em>Accion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2598,22 +2559,6 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PRUEBA_INTERFAZ__ACCIONES = eINSTANCE.getPruebaInterfaz_Acciones();
-
-		/**
-		 * The meta object literal for the '<em><b>Comprobar Asercion</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PRUEBA_INTERFAZ__COMPROBAR_ASERCION = eINSTANCE.getPruebaInterfaz_ComprobarAsercion();
-
-		/**
-		 * The meta object literal for the '<em><b>Comprobar Accion</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PRUEBA_INTERFAZ__COMPROBAR_ACCION = eINSTANCE.getPruebaInterfaz_ComprobarAccion();
 
 		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.AccionImpl <em>Accion</em>}' class.
