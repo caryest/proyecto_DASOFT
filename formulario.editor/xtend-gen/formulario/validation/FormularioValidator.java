@@ -3,7 +3,17 @@
  */
 package formulario.validation;
 
+import Formularios_DASOFT.Accion;
+import Formularios_DASOFT.Asercion;
+import Formularios_DASOFT.Formulario;
+import Formularios_DASOFT.Formularios_DASOFTPackage;
+import Formularios_DASOFT.Input;
+import Formularios_DASOFT.Layout;
+import Formularios_DASOFT.PruebaInterfaz;
+import com.google.common.base.Objects;
 import formulario.validation.AbstractFormularioValidator;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.xtext.validation.Check;
 
 /**
  * This class contains custom validation rules.
@@ -12,4 +22,58 @@ import formulario.validation.AbstractFormularioValidator;
  */
 @SuppressWarnings("all")
 public class FormularioValidator extends AbstractFormularioValidator {
+  @Check
+  public void validacionComprobacionCampos(final Formulario form) {
+    boolean flag = true;
+    boolean _isComprobacionCampos = form.isComprobacionCampos();
+    if (_isComprobacionCampos) {
+      flag = false;
+      Layout _layout = form.getLayout();
+      EList<Input> _entradas = _layout.getEntradas();
+      for (final Input input : _entradas) {
+        PruebaInterfaz _pruebas = form.getPruebas();
+        EList<Accion> _acciones = _pruebas.getAcciones();
+        for (final Accion accion : _acciones) {
+          Asercion _asercion = accion.getAsercion();
+          Input _elemento = _asercion.getElemento();
+          boolean _equals = Objects.equal(_elemento, input);
+          if (_equals) {
+            flag = true;
+          }
+        }
+      }
+      if ((!flag)) {
+        this.warning("El campo debe de estar incluido en al menos una asercion", 
+          Formularios_DASOFTPackage.Literals.FORMULARIO__COMPROBACION_CAMPOS, 
+          "faltaCampo");
+      }
+    }
+  }
+  
+  @Check
+  public void validacionComprobacionAccion(final Formulario form) {
+    boolean flag = true;
+    boolean _isComprobacionAccion = form.isComprobacionAccion();
+    if (_isComprobacionAccion) {
+      flag = false;
+      Layout _layout = form.getLayout();
+      EList<Input> _entradas = _layout.getEntradas();
+      for (final Input input : _entradas) {
+        PruebaInterfaz _pruebas = form.getPruebas();
+        EList<Accion> _acciones = _pruebas.getAcciones();
+        for (final Accion accion : _acciones) {
+          Input _elemento = accion.getElemento();
+          boolean _equals = Objects.equal(_elemento, input);
+          if (_equals) {
+            flag = true;
+          }
+        }
+      }
+      if ((!flag)) {
+        this.warning("El campo debe de estar incluido en al menos una accion", 
+          Formularios_DASOFTPackage.Literals.FORMULARIO__COMPROBACION_ACCION, 
+          "faltaAccion");
+      }
+    }
+  }
 }

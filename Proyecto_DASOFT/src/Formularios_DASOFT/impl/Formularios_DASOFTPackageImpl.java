@@ -337,6 +337,24 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getFormulario_ComprobacionCampos() {
+		return (EAttribute)formularioEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFormulario_ComprobacionAccion() {
+		return (EAttribute)formularioEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLayout() {
 		return layoutEClass;
 	}
@@ -850,6 +868,8 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 		createEReference(formularioEClass, FORMULARIO__LAYOUT);
 		createEAttribute(formularioEClass, FORMULARIO__NAME);
 		createEReference(formularioEClass, FORMULARIO__PRUEBAS);
+		createEAttribute(formularioEClass, FORMULARIO__COMPROBACION_CAMPOS);
+		createEAttribute(formularioEClass, FORMULARIO__COMPROBACION_ACCION);
 
 		layoutEClass = createEClass(LAYOUT);
 		createEAttribute(layoutEClass, LAYOUT__COLUMNAS);
@@ -986,6 +1006,8 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 		initEReference(getFormulario_Layout(), this.getLayout(), null, "layout", null, 1, 1, Formulario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getFormulario_Name(), ecorePackage.getEString(), "name", null, 0, 1, Formulario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFormulario_Pruebas(), this.getPruebaInterfaz(), null, "pruebas", null, 0, 1, Formulario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFormulario_ComprobacionCampos(), ecorePackage.getEBoolean(), "comprobacionCampos", "false", 0, 1, Formulario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFormulario_ComprobacionAccion(), ecorePackage.getEBoolean(), "comprobacionAccion", "false", 0, 1, Formulario.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(layoutEClass, Layout.class, "Layout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getLayout_Columnas(), ecorePackage.getEInt(), "columnas", null, 1, 1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

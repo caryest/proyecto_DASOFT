@@ -3,6 +3,12 @@
  */
 package formulario.validation
 
+import org.eclipse.xtext.validation.Check
+import Formularios_DASOFT.Formulario
+import Formularios_DASOFT.Asercion
+import formulario.parser.antlr.FormularioParser
+import Formularios_DASOFT.Formularios_DASOFTPackage
+
 //import org.eclipse.xtext.validation.Check
 
 /**
@@ -22,4 +28,55 @@ class FormularioValidator extends AbstractFormularioValidator {
 //					INVALID_NAME)
 //		}
 //	}
+
+	@Check
+	def validacionComprobacionCampos (Formulario form) {
+		var flag = true;
+		if (form.comprobacionCampos){
+			flag = false;
+			for(input : form.layout.entradas){
+				
+				for (accion : form.pruebas.acciones){
+					if (accion.asercion.elemento == input){
+						flag = true;
+					}
+				}
+
+			}
+			
+			if (!flag){
+				warning('El campo debe de estar incluido en al menos una asercion',
+					Formularios_DASOFTPackage.Literals.FORMULARIO__COMPROBACION_CAMPOS,
+					'faltaCampo')
+				
+			}
+		}
+		
+	}
+	
+	@Check
+	def validacionComprobacionAccion (Formulario form) {
+		var flag = true;
+		if (form.comprobacionAccion){
+			flag = false;
+			for(input : form.layout.entradas){
+				
+				for (accion : form.pruebas.acciones){
+					if (accion.elemento == input){
+						flag = true;
+					}
+				}
+
+			}
+			
+			if (!flag){
+				warning('El campo debe de estar incluido en al menos una accion',
+					Formularios_DASOFTPackage.Literals.FORMULARIO__COMPROBACION_ACCION,
+					'faltaAccion')
+				
+			}
+		}
+		
+	}
+
 }

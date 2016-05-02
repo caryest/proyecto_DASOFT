@@ -94,13 +94,31 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int FORMULARIO__PRUEBAS = 2;
 
 	/**
+	 * The feature id for the '<em><b>Comprobacion Campos</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMULARIO__COMPROBACION_CAMPOS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Comprobacion Accion</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMULARIO__COMPROBACION_ACCION = 4;
+
+	/**
 	 * The number of structural features of the '<em>Formulario</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORMULARIO_FEATURE_COUNT = 3;
+	int FORMULARIO_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Formulario</em>' class.
@@ -1613,6 +1631,28 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EReference getFormulario_Pruebas();
 
 	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Formulario#isComprobacionCampos <em>Comprobacion Campos</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comprobacion Campos</em>'.
+	 * @see Formularios_DASOFT.Formulario#isComprobacionCampos()
+	 * @see #getFormulario()
+	 * @generated
+	 */
+	EAttribute getFormulario_ComprobacionCampos();
+
+	/**
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Formulario#isComprobacionAccion <em>Comprobacion Accion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Comprobacion Accion</em>'.
+	 * @see Formularios_DASOFT.Formulario#isComprobacionAccion()
+	 * @see #getFormulario()
+	 * @generated
+	 */
+	EAttribute getFormulario_ComprobacionAccion();
+
+	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.Layout <em>Layout</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2236,6 +2276,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FORMULARIO__PRUEBAS = eINSTANCE.getFormulario_Pruebas();
+
+		/**
+		 * The meta object literal for the '<em><b>Comprobacion Campos</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORMULARIO__COMPROBACION_CAMPOS = eINSTANCE.getFormulario_ComprobacionCampos();
+
+		/**
+		 * The meta object literal for the '<em><b>Comprobacion Accion</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORMULARIO__COMPROBACION_ACCION = eINSTANCE.getFormulario_ComprobacionAccion();
 
 		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.LayoutImpl <em>Layout</em>}' class.

@@ -16,6 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link Formularios_DASOFT.Formulario#getLayout <em>Layout</em>}</li>
  *   <li>{@link Formularios_DASOFT.Formulario#getName <em>Name</em>}</li>
  *   <li>{@link Formularios_DASOFT.Formulario#getPruebas <em>Pruebas</em>}</li>
+ *   <li>{@link Formularios_DASOFT.Formulario#isComprobacionCampos <em>Comprobacion Campos</em>}</li>
+ *   <li>{@link Formularios_DASOFT.Formulario#isComprobacionAccion <em>Comprobacion Accion</em>}</li>
  * </ul>
  *
  * @see Formularios_DASOFT.Formularios_DASOFTPackage#getFormulario()
@@ -100,5 +102,59 @@ public interface Formulario extends EObject {
 	 * @generated
 	 */
 	void setPruebas(PruebaInterfaz value);
+
+	/**
+	 * Returns the value of the '<em><b>Comprobacion Campos</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Comprobacion Campos</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Comprobacion Campos</em>' attribute.
+	 * @see #setComprobacionCampos(boolean)
+	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getFormulario_ComprobacionCampos()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isComprobacionCampos();
+
+	/**
+	 * Sets the value of the '{@link Formularios_DASOFT.Formulario#isComprobacionCampos <em>Comprobacion Campos</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Comprobacion Campos</em>' attribute.
+	 * @see #isComprobacionCampos()
+	 * @generated
+	 */
+	void setComprobacionCampos(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Comprobacion Accion</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Comprobacion Accion</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Comprobacion Accion</em>' attribute.
+	 * @see #setComprobacionAccion(boolean)
+	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getFormulario_ComprobacionAccion()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isComprobacionAccion();
+
+	/**
+	 * Sets the value of the '{@link Formularios_DASOFT.Formulario#isComprobacionAccion <em>Comprobacion Accion</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Comprobacion Accion</em>' attribute.
+	 * @see #isComprobacionAccion()
+	 * @generated
+	 */
+	void setComprobacionAccion(boolean value);
 
 } // Formulario
