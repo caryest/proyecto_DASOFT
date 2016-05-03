@@ -13,10 +13,13 @@ import Formularios_DASOFT.InputBoton
 import Formularios_DASOFT.AccionValor
 import Formularios_DASOFT.InputTexto
 import Formularios_DASOFT.InputCheck
-import Formularios_DASOFT.impl.InputCheckImpl
 import Formularios_DASOFT.InputCombo
 import Formularios_DASOFT.InputRadio
 import Formularios_DASOFT.Input
+import Formularios_DASOFT.Layout
+import Formularios_DASOFT.InputReaccion
+import Formularios_DASOFT.ReaccionHabilitado
+import Formularios_DASOFT.ReaccionVisible
 
 //import org.eclipse.xtext.validation.Check
 
@@ -147,6 +150,48 @@ class FormularioValidator extends AbstractFormularioValidator {
 						Formularios_DASOFTPackage.Literals.INPUT_RADIO__SELECCION,
 						'SeleccionFueraDeRango');
 			}
+		}
+	}
+	
+	@Check
+	def comprobarAccionHabilitar(Input input){
+				
+		var flag = false;
+		var lo = input.eContainer as Layout;
+		if (input.deshabilitado){
+			for (input2 : lo.entradas){
+				if (input2 instanceof InputReaccion){
+					if (input2.reaccion.objetivo == input && input2.reaccion instanceof ReaccionHabilitado)
+					flag = true;
+				}
+			}
+		}
+		
+		if (!flag){
+			warning('Este input debe tener una accion que lo habilite',
+						Formularios_DASOFTPackage.Literals.INPUT__DESHABILITADO,
+						'ElementoNoHabilitable');
+		}
+	}
+	
+	@Check
+	def comprobarAccionVisualizar(Input input){
+				
+		var flag = false;
+		var lo = input.eContainer as Layout;
+		if (input.invisible){
+			for (input2 : lo.entradas){
+				if (input2 instanceof InputReaccion){
+					if (input2.reaccion.objetivo == input && input2.reaccion instanceof ReaccionVisible)
+					flag = true;
+				}
+			}
+		}
+		
+		if (!flag){
+			warning('Este input debe tener una accion que lo ponga visible',
+						Formularios_DASOFTPackage.Literals.INPUT__INVISIBLE,
+						'ElementoNoVisualizable');
 		}
 	}
 

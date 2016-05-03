@@ -16,12 +16,17 @@ import Formularios_DASOFT.InputCheck;
 import Formularios_DASOFT.InputCombo;
 import Formularios_DASOFT.InputMultiple;
 import Formularios_DASOFT.InputRadio;
+import Formularios_DASOFT.InputReaccion;
 import Formularios_DASOFT.InputTexto;
 import Formularios_DASOFT.Layout;
 import Formularios_DASOFT.PruebaInterfaz;
+import Formularios_DASOFT.Reaccion;
+import Formularios_DASOFT.ReaccionHabilitado;
+import Formularios_DASOFT.ReaccionVisible;
 import com.google.common.base.Objects;
 import formulario.validation.AbstractFormularioValidator;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.validation.Check;
 
 /**
@@ -195,6 +200,72 @@ public class FormularioValidator extends AbstractFormularioValidator {
           }
         }
       }
+    }
+  }
+  
+  @Check
+  public void comprobarAccionHabilitar(final Input input) {
+    boolean flag = false;
+    EObject _eContainer = input.eContainer();
+    Layout lo = ((Layout) _eContainer);
+    boolean _isDeshabilitado = input.isDeshabilitado();
+    if (_isDeshabilitado) {
+      EList<Input> _entradas = lo.getEntradas();
+      for (final Input input2 : _entradas) {
+        if ((input2 instanceof InputReaccion)) {
+          boolean _and = false;
+          Reaccion _reaccion = ((InputReaccion)input2).getReaccion();
+          Input _objetivo = _reaccion.getObjetivo();
+          boolean _equals = Objects.equal(_objetivo, input);
+          if (!_equals) {
+            _and = false;
+          } else {
+            Reaccion _reaccion_1 = ((InputReaccion)input2).getReaccion();
+            _and = (_reaccion_1 instanceof ReaccionHabilitado);
+          }
+          if (_and) {
+            flag = true;
+          }
+        }
+      }
+    }
+    if ((!flag)) {
+      this.warning("Este input debe tener una accion que lo habilite", 
+        Formularios_DASOFTPackage.Literals.INPUT__DESHABILITADO, 
+        "ElementoNoHabilitable");
+    }
+  }
+  
+  @Check
+  public void comprobarAccionVisualizar(final Input input) {
+    boolean flag = false;
+    EObject _eContainer = input.eContainer();
+    Layout lo = ((Layout) _eContainer);
+    boolean _isInvisible = input.isInvisible();
+    if (_isInvisible) {
+      EList<Input> _entradas = lo.getEntradas();
+      for (final Input input2 : _entradas) {
+        if ((input2 instanceof InputReaccion)) {
+          boolean _and = false;
+          Reaccion _reaccion = ((InputReaccion)input2).getReaccion();
+          Input _objetivo = _reaccion.getObjetivo();
+          boolean _equals = Objects.equal(_objetivo, input);
+          if (!_equals) {
+            _and = false;
+          } else {
+            Reaccion _reaccion_1 = ((InputReaccion)input2).getReaccion();
+            _and = (_reaccion_1 instanceof ReaccionVisible);
+          }
+          if (_and) {
+            flag = true;
+          }
+        }
+      }
+    }
+    if ((!flag)) {
+      this.warning("Este input debe tener una accion que lo ponga visible", 
+        Formularios_DASOFTPackage.Literals.INPUT__INVISIBLE, 
+        "ElementoNoVisualizable");
     }
   }
 }

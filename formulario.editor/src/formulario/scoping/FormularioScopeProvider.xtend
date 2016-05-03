@@ -3,6 +3,18 @@
  */
 package formulario.scoping
 
+import org.eclipse.xtext.scoping.IScope
+import org.eclipse.emf.ecore.EReference
+import Formularios_DASOFT.AccionSeleccion
+import org.eclipse.xtext.scoping.Scopes
+import java.util.ArrayList
+import Formularios_DASOFT.Formulario
+import Formularios_DASOFT.InputMultiple
+import Formularios_DASOFT.AccionPulsacion
+import Formularios_DASOFT.InputBoton
+import Formularios_DASOFT.AccionValor
+import Formularios_DASOFT.InputTexto
+
 /**
  * This class contains custom scoping description.
  * 
@@ -12,4 +24,42 @@ package formulario.scoping
  */
 class FormularioScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider {
 
+	def IScope scope_AccionSeleccion_elemento (AccionSeleccion accion, EReference ref) {
+
+		if (accion == null) return null
+		if (accion.eContainer == null) return null
+		var form = accion.eContainer.eContainer as Formulario;
+		var inputs = form.layout;
+		var scope = new ArrayList();
+		for (input : inputs.entradas)
+			if (input instanceof InputMultiple)
+				scope.add(input)
+		Scopes.scopeFor(scope)
+	}
+	
+	def IScope scope_AccionPulsacion_elemento (AccionPulsacion accion, EReference ref) {
+
+		if (accion == null) return null
+		if (accion.eContainer == null) return null
+		var form = accion.eContainer.eContainer as Formulario;
+		var inputs = form.layout;
+		var scope = new ArrayList();
+		for (input : inputs.entradas)
+			if (input instanceof InputBoton)
+				scope.add(input)
+		Scopes.scopeFor(scope)
+	}
+	
+	def IScope scope_AccionValor_elemento (AccionValor accion, EReference ref) {
+
+		if (accion == null) return null
+		if (accion.eContainer == null) return null
+		var form = accion.eContainer.eContainer as Formulario;
+		var inputs = form.layout;
+		var scope = new ArrayList();
+		for (input : inputs.entradas)
+			if (input instanceof InputTexto)
+				scope.add(input)
+		Scopes.scopeFor(scope)
+	}
 }
