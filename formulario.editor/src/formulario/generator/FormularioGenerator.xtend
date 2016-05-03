@@ -115,7 +115,7 @@ class FormularioGenerator implements IGenerator {
 				«ENDFOR»
 				« ELSEIF input instanceof InputCombo » // CASO COMBO
 				Combo combo«input.name» = new Combo(shell, SWT.SIMPLE);
-				combo«input.name».setText("«input.name»");
+				 combo«input.name».setText("«input.name»");
 				«FOR valor : (input as InputCombo).valores»
 				combo«input.name».add("«valor»");
 				«ENDFOR»
@@ -272,15 +272,23 @@ class FormularioGenerator implements IGenerator {
 						«FOR inputVal : form.layout.entradas»
 						« IF inputVal instanceof InputTexto»
 						texto«inputVal.name».setText("");
+						texto«inputVal.name».setVisible(true);
+						texto«inputVal.name».setEnabled(true);
 						« ELSEIF inputVal instanceof InputCheck »
 						«FOR valor : (inputVal as InputCheck).valores»
 						check«inputVal.name»[«(inputVal as InputCheck).valores.indexOf(valor)»].setSelection(false);
+						check«inputVal.name»[«(inputVal as InputCheck).valores.indexOf(valor)»].setVisible(true);
+						check«inputVal.name»[«(inputVal as InputCheck).valores.indexOf(valor)»].setEnabled(true);
 						«ENDFOR»
 						« ELSEIF inputVal instanceof InputCombo »
 						combo«inputVal.name».deselect(0);
+						combo«inputVal.name».setVisible(true);
+						combo«inputVal.name».setEnabled(true);
 						« ELSEIF inputVal instanceof InputRadio »
 						«FOR valor : (inputVal as InputRadio).valores»
 						radio«inputVal.name»[«(inputVal as InputRadio).valores.indexOf(valor)»].setSelection(false);
+						radio«inputVal.name»[«(inputVal as InputRadio).valores.indexOf(valor)»].setVisible(true);
+						radio«inputVal.name»[«(inputVal as InputRadio).valores.indexOf(valor)»].setEnabled(true);
 						«ENDFOR»
 						« ENDIF »
 						« ENDFOR »
@@ -437,28 +445,27 @@ class FormularioGenerator implements IGenerator {
 				
 				« FOR accion : form.pruebas.acciones »
 				« IF accion.elemento instanceof InputBoton »
-				boton«accion.elemento.name».setFocus();
-				boton«accion.elemento.name».select();
+				boton«accion.elemento.name».click();
 				display.update();
 				« ELSEIF accion.elemento instanceof InputTexto»
 				texto«accion.elemento.name».setFocus();
 				texto«accion.elemento.name».select();
 				texto«accion.elemento.name».setText("«(accion as AccionValor).valor»");
 				display.update();
-				« ELSEIF accion.elemento instanceof InputCheck»// ****************AUN QUEDA******************
+				« ELSEIF accion.elemento instanceof InputCheck»
 				check«accion.elemento.name»[«(accion as AccionSeleccion).valor-1»].setFocus();
 				check«accion.elemento.name»[«(accion as AccionSeleccion).valor-1»].select();
 				display.update();
-				« ELSEIF accion.elemento instanceof InputCombo »// ****************AUN QUEDA******************
+				« ELSEIF accion.elemento instanceof InputCombo »
 				combo«accion.elemento.name».setFocus();
-				combo«accion.elemento.name».select();
+				combo«accion.elemento.name».setSelection(«(accion as AccionSeleccion).valor»);
 				display.update();
-				« ELSEIF accion.elemento instanceof InputRadio »// ****************AUN QUEDA******************
-				radio«accion.elemento.name»[«(accion as AccionSeleccion).valor-1»].setFocus();
+				« ELSEIF accion.elemento instanceof InputRadio »
 				radio«accion.elemento.name»[«(accion as AccionSeleccion).valor-1»].click();
 				display.update();
 				« ENDIF »
 				« IF accion.asercion instanceof AsercionHabilitado »
+				« IF (accion.asercion as AsercionHabilitado).estado == true »
 				« IF accion.asercion.elemento instanceof InputBoton »
 				assertTrue(boton«accion.asercion.elemento.name».isEnabled());
 				« ELSEIF accion.asercion.elemento instanceof InputTexto »
@@ -466,11 +473,33 @@ class FormularioGenerator implements IGenerator {
 				« ELSEIF accion.asercion.elemento instanceof InputCombo »
 				assertTrue(combo«accion.asercion.elemento.name».isEnabled());
 				« ELSEIF accion.asercion.elemento instanceof InputRadio »
-				assertTrue(radio«accion.asercion.elemento.name».isEnabled()); /// ESTAAAAAA MAAAAAAAAAAAAAAL
+				«FOR valor: (accion.asercion.elemento as InputRadio).valores»
+				assertTrue(radio«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputRadio).valores.indexOf(valor)»].isEnabled());
+				«ENDFOR»
 				« ELSEIF accion.asercion.elemento instanceof InputCheck »
-				assertTrue(check«accion.asercion.elemento.name».isEnabled());
-				« ENDIF»
+				«FOR valor: (accion.asercion.elemento as InputCheck).valores»
+				assertTrue(check«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputCheck).valores.indexOf(valor)»].isEnabled());
+				«ENDFOR»
+				« ENDIF »
+				« ELSE »
+				« IF accion.asercion.elemento instanceof InputBoton »
+				assertFalse(boton«accion.asercion.elemento.name».isEnabled());
+				« ELSEIF accion.asercion.elemento instanceof InputTexto »
+				assertFalse(texto«accion.asercion.elemento.name».isEnabled());
+				« ELSEIF accion.asercion.elemento instanceof InputCombo »
+				assertFalse(combo«accion.asercion.elemento.name».isEnabled());
+				« ELSEIF accion.asercion.elemento instanceof InputRadio »
+				«FOR valor: (accion.asercion.elemento as InputRadio).valores»
+				assertFalse(radio«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputRadio).valores.indexOf(valor)»].isEnabled());
+				«ENDFOR»
+				« ELSEIF accion.asercion.elemento instanceof InputCheck »
+				«FOR valor: (accion.asercion.elemento as InputCheck).valores»
+				assertFalse(check«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputCheck).valores.indexOf(valor)»].isEnabled());
+				«ENDFOR»
+				« ENDIF »
+				« ENDIF »
 				« ELSEIF accion.asercion instanceof AsercionInvisible »
+				« IF (accion.asercion as AsercionInvisible).estado == true »
 				« IF accion.asercion.elemento instanceof InputBoton »
 				assertTrue(boton«accion.asercion.elemento.name».isVisible());
 				« ELSEIF accion.asercion.elemento instanceof InputTexto »
@@ -478,9 +507,31 @@ class FormularioGenerator implements IGenerator {
 				« ELSEIF accion.asercion.elemento instanceof InputCombo »
 				assertTrue(combo«accion.asercion.elemento.name».isVisible());
 				« ELSEIF accion.asercion.elemento instanceof InputRadio »
-				assertTrue(radio«accion.asercion.elemento.name».isVisible()); /// ESTAAAAAA MAAAAAAAAAAAAAAL
+				«FOR valor: (accion.asercion.elemento as InputRadio).valores»
+				assertTrue(radio«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputRadio).valores.indexOf(valor)»].isVisible());
+				«ENDFOR»
 				« ELSEIF accion.asercion.elemento instanceof InputCheck »
-				assertTrue(check«accion.asercion.elemento.name».isVisible());
+				«FOR valor: (accion.asercion.elemento as InputCheck).valores»
+				assertTrue(check«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputCheck).valores.indexOf(valor)»].isVisible());
+				«ENDFOR»
+				« ENDIF »
+				« ELSE »
+				« IF accion.asercion.elemento instanceof InputBoton »
+				assertFalse(boton«accion.asercion.elemento.name».isVisible());
+				« ELSEIF accion.asercion.elemento instanceof InputTexto »
+				assertFalse(texto«accion.asercion.elemento.name».isVisible());
+				« ELSEIF accion.asercion.elemento instanceof InputCombo »
+				assertFalse(combo«accion.asercion.elemento.name».isVisible());
+				« ELSEIF accion.asercion.elemento instanceof InputRadio »
+				«FOR valor: (accion.asercion.elemento as InputRadio).valores»
+				assertFalse(radio«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputRadio).valores.indexOf(valor)»].isVisible());
+				«ENDFOR»
+				« ELSEIF accion.asercion.elemento instanceof InputCheck »
+				«FOR valor: (accion.asercion.elemento as InputCheck).valores»
+				assertFalse(check«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputCheck).valores.indexOf(valor)»].isVisible());
+				«ENDFOR»
+				« ENDIF »
+				« ENDIF »
 				« ELSEIF accion.asercion instanceof AsercionValor »
 				« ELSEIF accion.asercion instanceof AsercionSeleccion »
 				« IF accion.asercion.elemento instanceof InputCheck »
@@ -491,12 +542,13 @@ class FormularioGenerator implements IGenerator {
 				assertTrue(radio«accion.asercion.elemento.name».isSelected());
 				« ENDIF »
 				« ENDIF »
-				« ENDIF »
 				« ENDFOR »
 		
 				display.dispose();
 				shell.dispose();		 
 			}
+			
+			
 		}
 	'''
 	

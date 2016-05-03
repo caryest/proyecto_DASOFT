@@ -2,7 +2,7 @@ Formulario Prueba2
 {
 	layout Layout
 	{
-		columnas 3
+		columnas 2
 		entradas
 		{
 			obligatorio
@@ -55,7 +55,7 @@ Formulario Prueba2
 			AccionSeleccion{
 				valor 1
 				elemento radio1
-				asercion estado AsercionHabilitado // Aqui esta a true
+				asercion AsercionHabilitado // Aqui esta a estado a "false" (comprobar deshabilitado)
 				{
 					elemento texto1
 				}
@@ -63,9 +63,15 @@ Formulario Prueba2
 			AccionSeleccion{
 				valor 1
 				elemento check1
-				asercion estado AsercionInvisible // Aqui es "true" habilitado
+				asercion AsercionInvisible // Aqui es estado a "false" (comprobar invisible)
 				{
 					elemento texto1
+				}
+			}, AccionPulsacion{
+				elemento cancelar
+				asercion estado AsercionInvisible
+				{
+					elemento check1
 				}
 			}
 		}

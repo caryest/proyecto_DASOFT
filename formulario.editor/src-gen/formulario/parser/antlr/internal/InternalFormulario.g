@@ -2178,7 +2178,7 @@ ruleAsercionInvisible returns [EObject current=null]
 	    }
 
 )
-)	otherlv_1='AsercionInvisible' 
+)?	otherlv_1='AsercionInvisible' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getAsercionInvisibleAccess().getAsercionInvisibleKeyword_1());
     }
@@ -2245,7 +2245,7 @@ ruleAsercionHabilitado returns [EObject current=null]
 	    }
 
 )
-)	otherlv_1='AsercionHabilitado' 
+)?	otherlv_1='AsercionHabilitado' 
     {
     	newLeafNode(otherlv_1, grammarAccess.getAsercionHabilitadoAccess().getAsercionHabilitadoKeyword_1());
     }

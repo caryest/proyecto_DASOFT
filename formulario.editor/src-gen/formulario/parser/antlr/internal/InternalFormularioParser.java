@@ -982,6 +982,16 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
                 }
                 }
                 break;
+            case 51:
+                {
+                alt7=1;
+                }
+                break;
+            case 52:
+                {
+                alt7=2;
+                }
+                break;
             case 53:
                 {
                 alt7=3;
@@ -5055,7 +5065,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAsercionInvisible"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2162:1: ruleAsercionInvisible returns [EObject current=null] : ( ( (lv_estado_0_0= 'estado' ) ) otherlv_1= 'AsercionInvisible' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2162:1: ruleAsercionInvisible returns [EObject current=null] : ( ( (lv_estado_0_0= 'estado' ) )? otherlv_1= 'AsercionInvisible' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' ) ;
     public final EObject ruleAsercionInvisible() throws RecognitionException {
         EObject current = null;
 
@@ -5068,43 +5078,54 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2165:28: ( ( ( (lv_estado_0_0= 'estado' ) ) otherlv_1= 'AsercionInvisible' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2166:1: ( ( (lv_estado_0_0= 'estado' ) ) otherlv_1= 'AsercionInvisible' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2165:28: ( ( ( (lv_estado_0_0= 'estado' ) )? otherlv_1= 'AsercionInvisible' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2166:1: ( ( (lv_estado_0_0= 'estado' ) )? otherlv_1= 'AsercionInvisible' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2166:1: ( ( (lv_estado_0_0= 'estado' ) ) otherlv_1= 'AsercionInvisible' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2166:2: ( (lv_estado_0_0= 'estado' ) ) otherlv_1= 'AsercionInvisible' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}'
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2166:1: ( ( (lv_estado_0_0= 'estado' ) )? otherlv_1= 'AsercionInvisible' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2166:2: ( (lv_estado_0_0= 'estado' ) )? otherlv_1= 'AsercionInvisible' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}'
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2166:2: ( (lv_estado_0_0= 'estado' ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2167:1: (lv_estado_0_0= 'estado' )
-            {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2167:1: (lv_estado_0_0= 'estado' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2168:3: lv_estado_0_0= 'estado'
-            {
-            lv_estado_0_0=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleAsercionInvisible4888); 
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2166:2: ( (lv_estado_0_0= 'estado' ) )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-                    newLeafNode(lv_estado_0_0, grammarAccess.getAsercionInvisibleAccess().getEstadoEstadoKeyword_0_0());
-                
+            if ( (LA42_0==50) ) {
+                alt42=1;
+            }
+            switch (alt42) {
+                case 1 :
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2167:1: (lv_estado_0_0= 'estado' )
+                    {
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2167:1: (lv_estado_0_0= 'estado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2168:3: lv_estado_0_0= 'estado'
+                    {
+                    lv_estado_0_0=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleAsercionInvisible4888); 
 
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getAsercionInvisibleRule());
-            	        }
-                   		setWithLastConsumed(current, "estado", true, "estado");
-            	    
+                            newLeafNode(lv_estado_0_0, grammarAccess.getAsercionInvisibleAccess().getEstadoEstadoKeyword_0_0());
+                        
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getAsercionInvisibleRule());
+                    	        }
+                           		setWithLastConsumed(current, "estado", true, "estado");
+                    	    
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
-
-            }
-
-            otherlv_1=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleAsercionInvisible4913); 
+            otherlv_1=(Token)match(input,51,FollowSets000.FOLLOW_51_in_ruleAsercionInvisible4914); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getAsercionInvisibleAccess().getAsercionInvisibleKeyword_1());
                 
-            otherlv_2=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleAsercionInvisible4925); 
+            otherlv_2=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleAsercionInvisible4926); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getAsercionInvisibleAccess().getLeftCurlyBracketKeyword_2());
                 
-            otherlv_3=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleAsercionInvisible4937); 
+            otherlv_3=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleAsercionInvisible4938); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getAsercionInvisibleAccess().getElementoKeyword_3());
                 
@@ -5122,7 +5143,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getAsercionInvisibleAccess().getElementoInputCrossReference_4_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAsercionInvisible4960);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAsercionInvisible4961);
             ruleEString();
 
             state._fsp--;
@@ -5136,7 +5157,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleAsercionInvisible4972); 
+            otherlv_5=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleAsercionInvisible4973); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getAsercionInvisibleAccess().getRightCurlyBracketKeyword_5());
                 
@@ -5173,13 +5194,13 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2222:2: iv_ruleAsercionHabilitado= ruleAsercionHabilitado EOF
             {
              newCompositeNode(grammarAccess.getAsercionHabilitadoRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAsercionHabilitado_in_entryRuleAsercionHabilitado5008);
+            pushFollow(FollowSets000.FOLLOW_ruleAsercionHabilitado_in_entryRuleAsercionHabilitado5009);
             iv_ruleAsercionHabilitado=ruleAsercionHabilitado();
 
             state._fsp--;
 
              current =iv_ruleAsercionHabilitado; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAsercionHabilitado5018); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAsercionHabilitado5019); 
 
             }
 
@@ -5197,7 +5218,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAsercionHabilitado"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2229:1: ruleAsercionHabilitado returns [EObject current=null] : ( ( (lv_estado_0_0= 'estado' ) ) otherlv_1= 'AsercionHabilitado' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2229:1: ruleAsercionHabilitado returns [EObject current=null] : ( ( (lv_estado_0_0= 'estado' ) )? otherlv_1= 'AsercionHabilitado' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' ) ;
     public final EObject ruleAsercionHabilitado() throws RecognitionException {
         EObject current = null;
 
@@ -5210,43 +5231,54 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2232:28: ( ( ( (lv_estado_0_0= 'estado' ) ) otherlv_1= 'AsercionHabilitado' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2233:1: ( ( (lv_estado_0_0= 'estado' ) ) otherlv_1= 'AsercionHabilitado' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2232:28: ( ( ( (lv_estado_0_0= 'estado' ) )? otherlv_1= 'AsercionHabilitado' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2233:1: ( ( (lv_estado_0_0= 'estado' ) )? otherlv_1= 'AsercionHabilitado' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2233:1: ( ( (lv_estado_0_0= 'estado' ) ) otherlv_1= 'AsercionHabilitado' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2233:2: ( (lv_estado_0_0= 'estado' ) ) otherlv_1= 'AsercionHabilitado' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}'
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2233:1: ( ( (lv_estado_0_0= 'estado' ) )? otherlv_1= 'AsercionHabilitado' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2233:2: ( (lv_estado_0_0= 'estado' ) )? otherlv_1= 'AsercionHabilitado' otherlv_2= '{' otherlv_3= 'elemento' ( ( ruleEString ) ) otherlv_5= '}'
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2233:2: ( (lv_estado_0_0= 'estado' ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2234:1: (lv_estado_0_0= 'estado' )
-            {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2234:1: (lv_estado_0_0= 'estado' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2235:3: lv_estado_0_0= 'estado'
-            {
-            lv_estado_0_0=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleAsercionHabilitado5061); 
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2233:2: ( (lv_estado_0_0= 'estado' ) )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-                    newLeafNode(lv_estado_0_0, grammarAccess.getAsercionHabilitadoAccess().getEstadoEstadoKeyword_0_0());
-                
+            if ( (LA43_0==50) ) {
+                alt43=1;
+            }
+            switch (alt43) {
+                case 1 :
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2234:1: (lv_estado_0_0= 'estado' )
+                    {
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2234:1: (lv_estado_0_0= 'estado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2235:3: lv_estado_0_0= 'estado'
+                    {
+                    lv_estado_0_0=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleAsercionHabilitado5062); 
 
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getAsercionHabilitadoRule());
-            	        }
-                   		setWithLastConsumed(current, "estado", true, "estado");
-            	    
+                            newLeafNode(lv_estado_0_0, grammarAccess.getAsercionHabilitadoAccess().getEstadoEstadoKeyword_0_0());
+                        
+
+                    	        if (current==null) {
+                    	            current = createModelElement(grammarAccess.getAsercionHabilitadoRule());
+                    	        }
+                           		setWithLastConsumed(current, "estado", true, "estado");
+                    	    
+
+                    }
+
+
+                    }
+                    break;
 
             }
 
-
-            }
-
-            otherlv_1=(Token)match(input,52,FollowSets000.FOLLOW_52_in_ruleAsercionHabilitado5086); 
+            otherlv_1=(Token)match(input,52,FollowSets000.FOLLOW_52_in_ruleAsercionHabilitado5088); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getAsercionHabilitadoAccess().getAsercionHabilitadoKeyword_1());
                 
-            otherlv_2=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleAsercionHabilitado5098); 
+            otherlv_2=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleAsercionHabilitado5100); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getAsercionHabilitadoAccess().getLeftCurlyBracketKeyword_2());
                 
-            otherlv_3=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleAsercionHabilitado5110); 
+            otherlv_3=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleAsercionHabilitado5112); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getAsercionHabilitadoAccess().getElementoKeyword_3());
                 
@@ -5264,7 +5296,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getAsercionHabilitadoAccess().getElementoInputCrossReference_4_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAsercionHabilitado5133);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAsercionHabilitado5135);
             ruleEString();
 
             state._fsp--;
@@ -5278,7 +5310,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleAsercionHabilitado5145); 
+            otherlv_5=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleAsercionHabilitado5147); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getAsercionHabilitadoAccess().getRightCurlyBracketKeyword_5());
                 
@@ -5315,13 +5347,13 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2289:2: iv_ruleAsercionValor= ruleAsercionValor EOF
             {
              newCompositeNode(grammarAccess.getAsercionValorRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAsercionValor_in_entryRuleAsercionValor5181);
+            pushFollow(FollowSets000.FOLLOW_ruleAsercionValor_in_entryRuleAsercionValor5183);
             iv_ruleAsercionValor=ruleAsercionValor();
 
             state._fsp--;
 
              current =iv_ruleAsercionValor; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAsercionValor5191); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAsercionValor5193); 
 
             }
 
@@ -5360,15 +5392,15 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2300:1: (otherlv_0= 'AsercionValor' otherlv_1= '{' otherlv_2= 'valor' ( (lv_valor_3_0= ruleEString ) ) otherlv_4= 'elemento' ( ( ruleEString ) ) otherlv_6= '}' )
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2300:3: otherlv_0= 'AsercionValor' otherlv_1= '{' otherlv_2= 'valor' ( (lv_valor_3_0= ruleEString ) ) otherlv_4= 'elemento' ( ( ruleEString ) ) otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleAsercionValor5228); 
+            otherlv_0=(Token)match(input,53,FollowSets000.FOLLOW_53_in_ruleAsercionValor5230); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getAsercionValorAccess().getAsercionValorKeyword_0());
                 
-            otherlv_1=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleAsercionValor5240); 
+            otherlv_1=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleAsercionValor5242); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getAsercionValorAccess().getLeftCurlyBracketKeyword_1());
                 
-            otherlv_2=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleAsercionValor5252); 
+            otherlv_2=(Token)match(input,29,FollowSets000.FOLLOW_29_in_ruleAsercionValor5254); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getAsercionValorAccess().getValorKeyword_2());
                 
@@ -5381,7 +5413,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getAsercionValorAccess().getValorEStringParserRuleCall_3_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAsercionValor5273);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAsercionValor5275);
             lv_valor_3_0=ruleEString();
 
             state._fsp--;
@@ -5403,7 +5435,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleAsercionValor5285); 
+            otherlv_4=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleAsercionValor5287); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getAsercionValorAccess().getElementoKeyword_4());
                 
@@ -5421,7 +5453,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getAsercionValorAccess().getElementoInputCrossReference_5_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAsercionValor5308);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAsercionValor5310);
             ruleEString();
 
             state._fsp--;
@@ -5435,7 +5467,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleAsercionValor5320); 
+            otherlv_6=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleAsercionValor5322); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getAsercionValorAccess().getRightCurlyBracketKeyword_6());
                 
@@ -5472,13 +5504,13 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2363:2: iv_ruleAsercionSeleccion= ruleAsercionSeleccion EOF
             {
              newCompositeNode(grammarAccess.getAsercionSeleccionRule()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAsercionSeleccion_in_entryRuleAsercionSeleccion5356);
+            pushFollow(FollowSets000.FOLLOW_ruleAsercionSeleccion_in_entryRuleAsercionSeleccion5358);
             iv_ruleAsercionSeleccion=ruleAsercionSeleccion();
 
             state._fsp--;
 
              current =iv_ruleAsercionSeleccion; 
-            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAsercionSeleccion5366); 
+            match(input,EOF,FollowSets000.FOLLOW_EOF_in_entryRuleAsercionSeleccion5368); 
 
             }
 
@@ -5517,15 +5549,15 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2374:1: (otherlv_0= 'AsercionSeleccion' otherlv_1= '{' otherlv_2= 'estado' ( (lv_estado_3_0= ruleEInt ) ) otherlv_4= 'elemento' ( ( ruleEString ) ) otherlv_6= '}' )
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:2374:3: otherlv_0= 'AsercionSeleccion' otherlv_1= '{' otherlv_2= 'estado' ( (lv_estado_3_0= ruleEInt ) ) otherlv_4= 'elemento' ( ( ruleEString ) ) otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleAsercionSeleccion5403); 
+            otherlv_0=(Token)match(input,54,FollowSets000.FOLLOW_54_in_ruleAsercionSeleccion5405); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getAsercionSeleccionAccess().getAsercionSeleccionKeyword_0());
                 
-            otherlv_1=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleAsercionSeleccion5415); 
+            otherlv_1=(Token)match(input,14,FollowSets000.FOLLOW_14_in_ruleAsercionSeleccion5417); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getAsercionSeleccionAccess().getLeftCurlyBracketKeyword_1());
                 
-            otherlv_2=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleAsercionSeleccion5427); 
+            otherlv_2=(Token)match(input,50,FollowSets000.FOLLOW_50_in_ruleAsercionSeleccion5429); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getAsercionSeleccionAccess().getEstadoKeyword_2());
                 
@@ -5538,7 +5570,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getAsercionSeleccionAccess().getEstadoEIntParserRuleCall_3_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleAsercionSeleccion5448);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_ruleAsercionSeleccion5450);
             lv_estado_3_0=ruleEInt();
 
             state._fsp--;
@@ -5560,7 +5592,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleAsercionSeleccion5460); 
+            otherlv_4=(Token)match(input,46,FollowSets000.FOLLOW_46_in_ruleAsercionSeleccion5462); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getAsercionSeleccionAccess().getElementoKeyword_4());
                 
@@ -5578,7 +5610,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
              
             	        newCompositeNode(grammarAccess.getAsercionSeleccionAccess().getElementoInputCrossReference_5_0()); 
             	    
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAsercionSeleccion5483);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_ruleAsercionSeleccion5485);
             ruleEString();
 
             state._fsp--;
@@ -5592,7 +5624,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleAsercionSeleccion5495); 
+            otherlv_6=(Token)match(input,17,FollowSets000.FOLLOW_17_in_ruleAsercionSeleccion5497); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getAsercionSeleccionAccess().getRightCurlyBracketKeyword_6());
                 
@@ -5873,7 +5905,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_ruleEString_in_ruleAccionValor4336 = new BitSet(new long[]{0x0000400000000000L});
         public static final BitSet FOLLOW_46_in_ruleAccionValor4348 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_ruleEString_in_ruleAccionValor4371 = new BitSet(new long[]{0x0000800000000000L});
-        public static final BitSet FOLLOW_47_in_ruleAccionValor4383 = new BitSet(new long[]{0x0064000000000000L});
+        public static final BitSet FOLLOW_47_in_ruleAccionValor4383 = new BitSet(new long[]{0x007C000000000000L});
         public static final BitSet FOLLOW_ruleAsercion_in_ruleAccionValor4404 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_17_in_ruleAccionValor4416 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleAccionSeleccion_in_entryRuleAccionSeleccion4452 = new BitSet(new long[]{0x0000000000000000L});
@@ -5884,7 +5916,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_ruleEInt_in_ruleAccionSeleccion4544 = new BitSet(new long[]{0x0000400000000000L});
         public static final BitSet FOLLOW_46_in_ruleAccionSeleccion4556 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_ruleEString_in_ruleAccionSeleccion4579 = new BitSet(new long[]{0x0000800000000000L});
-        public static final BitSet FOLLOW_47_in_ruleAccionSeleccion4591 = new BitSet(new long[]{0x0064000000000000L});
+        public static final BitSet FOLLOW_47_in_ruleAccionSeleccion4591 = new BitSet(new long[]{0x007C000000000000L});
         public static final BitSet FOLLOW_ruleAsercion_in_ruleAccionSeleccion4612 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_17_in_ruleAccionSeleccion4624 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleAccionPulsacion_in_entryRuleAccionPulsacion4660 = new BitSet(new long[]{0x0000000000000000L});
@@ -5893,43 +5925,43 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_14_in_ruleAccionPulsacion4719 = new BitSet(new long[]{0x0000400000000000L});
         public static final BitSet FOLLOW_46_in_ruleAccionPulsacion4731 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_ruleEString_in_ruleAccionPulsacion4754 = new BitSet(new long[]{0x0000800000000000L});
-        public static final BitSet FOLLOW_47_in_ruleAccionPulsacion4766 = new BitSet(new long[]{0x0064000000000000L});
+        public static final BitSet FOLLOW_47_in_ruleAccionPulsacion4766 = new BitSet(new long[]{0x007C000000000000L});
         public static final BitSet FOLLOW_ruleAsercion_in_ruleAccionPulsacion4787 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_17_in_ruleAccionPulsacion4799 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleAsercionInvisible_in_entryRuleAsercionInvisible4835 = new BitSet(new long[]{0x0000000000000000L});
         public static final BitSet FOLLOW_EOF_in_entryRuleAsercionInvisible4845 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_50_in_ruleAsercionInvisible4888 = new BitSet(new long[]{0x0008000000000000L});
-        public static final BitSet FOLLOW_51_in_ruleAsercionInvisible4913 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleAsercionInvisible4925 = new BitSet(new long[]{0x0000400000000000L});
-        public static final BitSet FOLLOW_46_in_ruleAsercionInvisible4937 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAsercionInvisible4960 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_17_in_ruleAsercionInvisible4972 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAsercionHabilitado_in_entryRuleAsercionHabilitado5008 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAsercionHabilitado5018 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_ruleAsercionHabilitado5061 = new BitSet(new long[]{0x0010000000000000L});
-        public static final BitSet FOLLOW_52_in_ruleAsercionHabilitado5086 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleAsercionHabilitado5098 = new BitSet(new long[]{0x0000400000000000L});
-        public static final BitSet FOLLOW_46_in_ruleAsercionHabilitado5110 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAsercionHabilitado5133 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_17_in_ruleAsercionHabilitado5145 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAsercionValor_in_entryRuleAsercionValor5181 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAsercionValor5191 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_ruleAsercionValor5228 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleAsercionValor5240 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_29_in_ruleAsercionValor5252 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAsercionValor5273 = new BitSet(new long[]{0x0000400000000000L});
-        public static final BitSet FOLLOW_46_in_ruleAsercionValor5285 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAsercionValor5308 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_17_in_ruleAsercionValor5320 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAsercionSeleccion_in_entryRuleAsercionSeleccion5356 = new BitSet(new long[]{0x0000000000000000L});
-        public static final BitSet FOLLOW_EOF_in_entryRuleAsercionSeleccion5366 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_54_in_ruleAsercionSeleccion5403 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_14_in_ruleAsercionSeleccion5415 = new BitSet(new long[]{0x0004000000000000L});
-        public static final BitSet FOLLOW_50_in_ruleAsercionSeleccion5427 = new BitSet(new long[]{0x0000000001000040L});
-        public static final BitSet FOLLOW_ruleEInt_in_ruleAsercionSeleccion5448 = new BitSet(new long[]{0x0000400000000000L});
-        public static final BitSet FOLLOW_46_in_ruleAsercionSeleccion5460 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_ruleEString_in_ruleAsercionSeleccion5483 = new BitSet(new long[]{0x0000000000020000L});
-        public static final BitSet FOLLOW_17_in_ruleAsercionSeleccion5495 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_ruleAsercionInvisible4914 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_14_in_ruleAsercionInvisible4926 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_46_in_ruleAsercionInvisible4938 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAsercionInvisible4961 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleAsercionInvisible4973 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAsercionHabilitado_in_entryRuleAsercionHabilitado5009 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleAsercionHabilitado5019 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_ruleAsercionHabilitado5062 = new BitSet(new long[]{0x0010000000000000L});
+        public static final BitSet FOLLOW_52_in_ruleAsercionHabilitado5088 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_14_in_ruleAsercionHabilitado5100 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_46_in_ruleAsercionHabilitado5112 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAsercionHabilitado5135 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleAsercionHabilitado5147 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAsercionValor_in_entryRuleAsercionValor5183 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleAsercionValor5193 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_ruleAsercionValor5230 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_14_in_ruleAsercionValor5242 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_29_in_ruleAsercionValor5254 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAsercionValor5275 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_46_in_ruleAsercionValor5287 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAsercionValor5310 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleAsercionValor5322 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAsercionSeleccion_in_entryRuleAsercionSeleccion5358 = new BitSet(new long[]{0x0000000000000000L});
+        public static final BitSet FOLLOW_EOF_in_entryRuleAsercionSeleccion5368 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_54_in_ruleAsercionSeleccion5405 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_14_in_ruleAsercionSeleccion5417 = new BitSet(new long[]{0x0004000000000000L});
+        public static final BitSet FOLLOW_50_in_ruleAsercionSeleccion5429 = new BitSet(new long[]{0x0000000001000040L});
+        public static final BitSet FOLLOW_ruleEInt_in_ruleAsercionSeleccion5450 = new BitSet(new long[]{0x0000400000000000L});
+        public static final BitSet FOLLOW_46_in_ruleAsercionSeleccion5462 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_ruleEString_in_ruleAsercionSeleccion5485 = new BitSet(new long[]{0x0000000000020000L});
+        public static final BitSet FOLLOW_17_in_ruleAsercionSeleccion5497 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

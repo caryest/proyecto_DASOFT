@@ -67,18 +67,21 @@ public class FormularioTest {
 				
 		// Ahora codificamos los ASSERTS
 		
-// ****************AUN QUEDA******************
-		radioradio1[0].setFocus();
 		radioradio1[0].click();
 		display.update();
-		assertTrue(textotexto1.isEnabled());
-// ****************AUN QUEDA******************
+		assertFalse(textotexto1.isEnabled());
 		checkcheck1[0].setFocus();
 		checkcheck1[0].select();
 		display.update();
-				assertTrue(textotexto1.isVisible());
+		assertFalse(textotexto1.isVisible());
+		botoncancelar.click();
+		display.update();
+		assertTrue(checkcheck1[0].isVisible());
+		assertTrue(checkcheck1[1].isVisible());
 
 		display.dispose();
 		shell.dispose();		 
 	}
+	
+	
 }

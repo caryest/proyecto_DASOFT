@@ -177,39 +177,19 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (estado?='estado' elemento=[Input|EString])
+	 *     (estado?='estado'? elemento=[Input|EString])
 	 */
 	protected void sequence_AsercionHabilitado(EObject context, AsercionHabilitado semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO));
-			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_HABILITADO__ESTADO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_HABILITADO__ESTADO));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAsercionHabilitadoAccess().getEstadoEstadoKeyword_0_0(), semanticObject.isEstado());
-		feeder.accept(grammarAccess.getAsercionHabilitadoAccess().getElementoInputEStringParserRuleCall_4_0_1(), semanticObject.getElemento());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (estado?='estado' elemento=[Input|EString])
+	 *     (estado?='estado'? elemento=[Input|EString])
 	 */
 	protected void sequence_AsercionInvisible(EObject context, AsercionInvisible semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO));
-			if(transientValues.isValueTransient(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_INVISIBLE__ESTADO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, Formularios_DASOFTPackage.Literals.ASERCION_INVISIBLE__ESTADO));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAsercionInvisibleAccess().getEstadoEstadoKeyword_0_0(), semanticObject.isEstado());
-		feeder.accept(grammarAccess.getAsercionInvisibleAccess().getElementoInputEStringParserRuleCall_4_0_1(), semanticObject.getElemento());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

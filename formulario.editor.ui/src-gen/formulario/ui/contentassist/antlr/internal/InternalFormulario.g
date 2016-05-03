@@ -6491,7 +6491,7 @@ rule__AsercionInvisible__Group__0__Impl
 :
 (
 { before(grammarAccess.getAsercionInvisibleAccess().getEstadoAssignment_0()); }
-(rule__AsercionInvisible__EstadoAssignment_0)
+(rule__AsercionInvisible__EstadoAssignment_0)?
 { after(grammarAccess.getAsercionInvisibleAccess().getEstadoAssignment_0()); }
 )
 
@@ -6684,7 +6684,7 @@ rule__AsercionHabilitado__Group__0__Impl
 :
 (
 { before(grammarAccess.getAsercionHabilitadoAccess().getEstadoAssignment_0()); }
-(rule__AsercionHabilitado__EstadoAssignment_0)
+(rule__AsercionHabilitado__EstadoAssignment_0)?
 { after(grammarAccess.getAsercionHabilitadoAccess().getEstadoAssignment_0()); }
 )
 

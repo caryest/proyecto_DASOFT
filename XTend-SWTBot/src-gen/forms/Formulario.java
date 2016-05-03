@@ -32,7 +32,7 @@ public class Formulario {
 		
 		Shell shell = new Shell(display);
 		shell.setText  ("Prueba2");
-		shell.setLayout(new GridLayout(3, false));
+		shell.setLayout(new GridLayout(2, false));
 		
 		// Añadimos los elementos de la interfaz
 		
@@ -63,7 +63,7 @@ public class Formulario {
 				
 		 // CASO COMBO
 		Combo combocombo1 = new Combo(shell, SWT.SIMPLE);
-		combocombo1.setText("combo1");
+		 combocombo1.setText("combo1");
 		combocombo1.add("val1");
 		combocombo1.add("val2");
 		
@@ -156,12 +156,26 @@ public class Formulario {
 			public void widgetSelected(SelectionEvent arg0) {
 				
 				textotexto1.setText("");
+				textotexto1.setVisible(true);
+				textotexto1.setEnabled(true);
 				radioradio1[0].setSelection(false);
+				radioradio1[0].setVisible(true);
+				radioradio1[0].setEnabled(true);
 				radioradio1[1].setSelection(false);
+				radioradio1[1].setVisible(true);
+				radioradio1[1].setEnabled(true);
 				radioradio1[2].setSelection(false);
+				radioradio1[2].setVisible(true);
+				radioradio1[2].setEnabled(true);
 				combocombo1.deselect(0);
+				combocombo1.setVisible(true);
+				combocombo1.setEnabled(true);
 				checkcheck1[0].setSelection(false);
+				checkcheck1[0].setVisible(true);
+				checkcheck1[0].setEnabled(true);
 				checkcheck1[1].setSelection(false);
+				checkcheck1[1].setVisible(true);
+				checkcheck1[1].setEnabled(true);
 				
 			}
 			

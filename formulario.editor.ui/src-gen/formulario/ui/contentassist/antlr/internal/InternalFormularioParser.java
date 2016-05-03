@@ -2496,11 +2496,11 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
                 {
                 int LA4_1 = input.LA(2);
 
-                if ( (LA4_1==45) ) {
-                    alt4=1;
-                }
-                else if ( (LA4_1==46) ) {
+                if ( (LA4_1==46) ) {
                     alt4=2;
+                }
+                else if ( (LA4_1==45) ) {
+                    alt4=1;
                 }
                 else {
                     NoViableAltException nvae =
@@ -2508,6 +2508,16 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
                     throw nvae;
                 }
+                }
+                break;
+            case 45:
+                {
+                alt4=1;
+                }
+                break;
+            case 46:
+                {
+                alt4=2;
                 }
                 break;
             case 47:
@@ -16765,27 +16775,38 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AsercionInvisible__Group__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6487:1: rule__AsercionInvisible__Group__0__Impl : ( ( rule__AsercionInvisible__EstadoAssignment_0 ) ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6487:1: rule__AsercionInvisible__Group__0__Impl : ( ( rule__AsercionInvisible__EstadoAssignment_0 )? ) ;
     public final void rule__AsercionInvisible__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6491:1: ( ( ( rule__AsercionInvisible__EstadoAssignment_0 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6492:1: ( ( rule__AsercionInvisible__EstadoAssignment_0 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6491:1: ( ( ( rule__AsercionInvisible__EstadoAssignment_0 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6492:1: ( ( rule__AsercionInvisible__EstadoAssignment_0 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6492:1: ( ( rule__AsercionInvisible__EstadoAssignment_0 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6493:1: ( rule__AsercionInvisible__EstadoAssignment_0 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6492:1: ( ( rule__AsercionInvisible__EstadoAssignment_0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6493:1: ( rule__AsercionInvisible__EstadoAssignment_0 )?
             {
              before(grammarAccess.getAsercionInvisibleAccess().getEstadoAssignment_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6494:1: ( rule__AsercionInvisible__EstadoAssignment_0 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6494:2: rule__AsercionInvisible__EstadoAssignment_0
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__EstadoAssignment_0_in_rule__AsercionInvisible__Group__0__Impl12905);
-            rule__AsercionInvisible__EstadoAssignment_0();
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6494:1: ( rule__AsercionInvisible__EstadoAssignment_0 )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA42_0==49) ) {
+                alt42=1;
+            }
+            switch (alt42) {
+                case 1 :
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6494:2: rule__AsercionInvisible__EstadoAssignment_0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__EstadoAssignment_0_in_rule__AsercionInvisible__Group__0__Impl12905);
+                    rule__AsercionInvisible__EstadoAssignment_0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
@@ -16821,12 +16842,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6508:1: ( rule__AsercionInvisible__Group__1__Impl rule__AsercionInvisible__Group__2 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6509:2: rule__AsercionInvisible__Group__1__Impl rule__AsercionInvisible__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__1__Impl_in_rule__AsercionInvisible__Group__112935);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__1__Impl_in_rule__AsercionInvisible__Group__112936);
             rule__AsercionInvisible__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__2_in_rule__AsercionInvisible__Group__112938);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__2_in_rule__AsercionInvisible__Group__112939);
             rule__AsercionInvisible__Group__2();
 
             state._fsp--;
@@ -16863,7 +16884,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6522:1: 'AsercionInvisible'
             {
              before(grammarAccess.getAsercionInvisibleAccess().getAsercionInvisibleKeyword_1()); 
-            match(input,45,FollowSets000.FOLLOW_45_in_rule__AsercionInvisible__Group__1__Impl12966); 
+            match(input,45,FollowSets000.FOLLOW_45_in_rule__AsercionInvisible__Group__1__Impl12967); 
              after(grammarAccess.getAsercionInvisibleAccess().getAsercionInvisibleKeyword_1()); 
 
             }
@@ -16896,12 +16917,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6539:1: ( rule__AsercionInvisible__Group__2__Impl rule__AsercionInvisible__Group__3 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6540:2: rule__AsercionInvisible__Group__2__Impl rule__AsercionInvisible__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__2__Impl_in_rule__AsercionInvisible__Group__212997);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__2__Impl_in_rule__AsercionInvisible__Group__212998);
             rule__AsercionInvisible__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__3_in_rule__AsercionInvisible__Group__213000);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__3_in_rule__AsercionInvisible__Group__213001);
             rule__AsercionInvisible__Group__3();
 
             state._fsp--;
@@ -16938,7 +16959,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6553:1: '{'
             {
              before(grammarAccess.getAsercionInvisibleAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,12,FollowSets000.FOLLOW_12_in_rule__AsercionInvisible__Group__2__Impl13028); 
+            match(input,12,FollowSets000.FOLLOW_12_in_rule__AsercionInvisible__Group__2__Impl13029); 
              after(grammarAccess.getAsercionInvisibleAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -16971,12 +16992,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6570:1: ( rule__AsercionInvisible__Group__3__Impl rule__AsercionInvisible__Group__4 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6571:2: rule__AsercionInvisible__Group__3__Impl rule__AsercionInvisible__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__3__Impl_in_rule__AsercionInvisible__Group__313059);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__3__Impl_in_rule__AsercionInvisible__Group__313060);
             rule__AsercionInvisible__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__4_in_rule__AsercionInvisible__Group__313062);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__4_in_rule__AsercionInvisible__Group__313063);
             rule__AsercionInvisible__Group__4();
 
             state._fsp--;
@@ -17013,7 +17034,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6584:1: 'elemento'
             {
              before(grammarAccess.getAsercionInvisibleAccess().getElementoKeyword_3()); 
-            match(input,41,FollowSets000.FOLLOW_41_in_rule__AsercionInvisible__Group__3__Impl13090); 
+            match(input,41,FollowSets000.FOLLOW_41_in_rule__AsercionInvisible__Group__3__Impl13091); 
              after(grammarAccess.getAsercionInvisibleAccess().getElementoKeyword_3()); 
 
             }
@@ -17046,12 +17067,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6601:1: ( rule__AsercionInvisible__Group__4__Impl rule__AsercionInvisible__Group__5 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6602:2: rule__AsercionInvisible__Group__4__Impl rule__AsercionInvisible__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__4__Impl_in_rule__AsercionInvisible__Group__413121);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__4__Impl_in_rule__AsercionInvisible__Group__413122);
             rule__AsercionInvisible__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__5_in_rule__AsercionInvisible__Group__413124);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__5_in_rule__AsercionInvisible__Group__413125);
             rule__AsercionInvisible__Group__5();
 
             state._fsp--;
@@ -17091,7 +17112,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6616:1: ( rule__AsercionInvisible__ElementoAssignment_4 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6616:2: rule__AsercionInvisible__ElementoAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__ElementoAssignment_4_in_rule__AsercionInvisible__Group__4__Impl13151);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__ElementoAssignment_4_in_rule__AsercionInvisible__Group__4__Impl13152);
             rule__AsercionInvisible__ElementoAssignment_4();
 
             state._fsp--;
@@ -17131,7 +17152,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6630:1: ( rule__AsercionInvisible__Group__5__Impl )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6631:2: rule__AsercionInvisible__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__5__Impl_in_rule__AsercionInvisible__Group__513181);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionInvisible__Group__5__Impl_in_rule__AsercionInvisible__Group__513182);
             rule__AsercionInvisible__Group__5__Impl();
 
             state._fsp--;
@@ -17168,7 +17189,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6643:1: '}'
             {
              before(grammarAccess.getAsercionInvisibleAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__AsercionInvisible__Group__5__Impl13209); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__AsercionInvisible__Group__5__Impl13210); 
              after(grammarAccess.getAsercionInvisibleAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -17201,12 +17222,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6672:1: ( rule__AsercionHabilitado__Group__0__Impl rule__AsercionHabilitado__Group__1 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6673:2: rule__AsercionHabilitado__Group__0__Impl rule__AsercionHabilitado__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__0__Impl_in_rule__AsercionHabilitado__Group__013252);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__0__Impl_in_rule__AsercionHabilitado__Group__013253);
             rule__AsercionHabilitado__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__1_in_rule__AsercionHabilitado__Group__013255);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__1_in_rule__AsercionHabilitado__Group__013256);
             rule__AsercionHabilitado__Group__1();
 
             state._fsp--;
@@ -17230,27 +17251,38 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__AsercionHabilitado__Group__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6680:1: rule__AsercionHabilitado__Group__0__Impl : ( ( rule__AsercionHabilitado__EstadoAssignment_0 ) ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6680:1: rule__AsercionHabilitado__Group__0__Impl : ( ( rule__AsercionHabilitado__EstadoAssignment_0 )? ) ;
     public final void rule__AsercionHabilitado__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6684:1: ( ( ( rule__AsercionHabilitado__EstadoAssignment_0 ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6685:1: ( ( rule__AsercionHabilitado__EstadoAssignment_0 ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6684:1: ( ( ( rule__AsercionHabilitado__EstadoAssignment_0 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6685:1: ( ( rule__AsercionHabilitado__EstadoAssignment_0 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6685:1: ( ( rule__AsercionHabilitado__EstadoAssignment_0 ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6686:1: ( rule__AsercionHabilitado__EstadoAssignment_0 )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6685:1: ( ( rule__AsercionHabilitado__EstadoAssignment_0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6686:1: ( rule__AsercionHabilitado__EstadoAssignment_0 )?
             {
              before(grammarAccess.getAsercionHabilitadoAccess().getEstadoAssignment_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6687:1: ( rule__AsercionHabilitado__EstadoAssignment_0 )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6687:2: rule__AsercionHabilitado__EstadoAssignment_0
-            {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__EstadoAssignment_0_in_rule__AsercionHabilitado__Group__0__Impl13282);
-            rule__AsercionHabilitado__EstadoAssignment_0();
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6687:1: ( rule__AsercionHabilitado__EstadoAssignment_0 )?
+            int alt43=2;
+            int LA43_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA43_0==49) ) {
+                alt43=1;
+            }
+            switch (alt43) {
+                case 1 :
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6687:2: rule__AsercionHabilitado__EstadoAssignment_0
+                    {
+                    pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__EstadoAssignment_0_in_rule__AsercionHabilitado__Group__0__Impl13283);
+                    rule__AsercionHabilitado__EstadoAssignment_0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
@@ -17286,12 +17318,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6701:1: ( rule__AsercionHabilitado__Group__1__Impl rule__AsercionHabilitado__Group__2 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6702:2: rule__AsercionHabilitado__Group__1__Impl rule__AsercionHabilitado__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__1__Impl_in_rule__AsercionHabilitado__Group__113312);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__1__Impl_in_rule__AsercionHabilitado__Group__113314);
             rule__AsercionHabilitado__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__2_in_rule__AsercionHabilitado__Group__113315);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__2_in_rule__AsercionHabilitado__Group__113317);
             rule__AsercionHabilitado__Group__2();
 
             state._fsp--;
@@ -17328,7 +17360,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6715:1: 'AsercionHabilitado'
             {
              before(grammarAccess.getAsercionHabilitadoAccess().getAsercionHabilitadoKeyword_1()); 
-            match(input,46,FollowSets000.FOLLOW_46_in_rule__AsercionHabilitado__Group__1__Impl13343); 
+            match(input,46,FollowSets000.FOLLOW_46_in_rule__AsercionHabilitado__Group__1__Impl13345); 
              after(grammarAccess.getAsercionHabilitadoAccess().getAsercionHabilitadoKeyword_1()); 
 
             }
@@ -17361,12 +17393,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6732:1: ( rule__AsercionHabilitado__Group__2__Impl rule__AsercionHabilitado__Group__3 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6733:2: rule__AsercionHabilitado__Group__2__Impl rule__AsercionHabilitado__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__2__Impl_in_rule__AsercionHabilitado__Group__213374);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__2__Impl_in_rule__AsercionHabilitado__Group__213376);
             rule__AsercionHabilitado__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__3_in_rule__AsercionHabilitado__Group__213377);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__3_in_rule__AsercionHabilitado__Group__213379);
             rule__AsercionHabilitado__Group__3();
 
             state._fsp--;
@@ -17403,7 +17435,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6746:1: '{'
             {
              before(grammarAccess.getAsercionHabilitadoAccess().getLeftCurlyBracketKeyword_2()); 
-            match(input,12,FollowSets000.FOLLOW_12_in_rule__AsercionHabilitado__Group__2__Impl13405); 
+            match(input,12,FollowSets000.FOLLOW_12_in_rule__AsercionHabilitado__Group__2__Impl13407); 
              after(grammarAccess.getAsercionHabilitadoAccess().getLeftCurlyBracketKeyword_2()); 
 
             }
@@ -17436,12 +17468,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6763:1: ( rule__AsercionHabilitado__Group__3__Impl rule__AsercionHabilitado__Group__4 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6764:2: rule__AsercionHabilitado__Group__3__Impl rule__AsercionHabilitado__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__3__Impl_in_rule__AsercionHabilitado__Group__313436);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__3__Impl_in_rule__AsercionHabilitado__Group__313438);
             rule__AsercionHabilitado__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__4_in_rule__AsercionHabilitado__Group__313439);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__4_in_rule__AsercionHabilitado__Group__313441);
             rule__AsercionHabilitado__Group__4();
 
             state._fsp--;
@@ -17478,7 +17510,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6777:1: 'elemento'
             {
              before(grammarAccess.getAsercionHabilitadoAccess().getElementoKeyword_3()); 
-            match(input,41,FollowSets000.FOLLOW_41_in_rule__AsercionHabilitado__Group__3__Impl13467); 
+            match(input,41,FollowSets000.FOLLOW_41_in_rule__AsercionHabilitado__Group__3__Impl13469); 
              after(grammarAccess.getAsercionHabilitadoAccess().getElementoKeyword_3()); 
 
             }
@@ -17511,12 +17543,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6794:1: ( rule__AsercionHabilitado__Group__4__Impl rule__AsercionHabilitado__Group__5 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6795:2: rule__AsercionHabilitado__Group__4__Impl rule__AsercionHabilitado__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__4__Impl_in_rule__AsercionHabilitado__Group__413498);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__4__Impl_in_rule__AsercionHabilitado__Group__413500);
             rule__AsercionHabilitado__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__5_in_rule__AsercionHabilitado__Group__413501);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__5_in_rule__AsercionHabilitado__Group__413503);
             rule__AsercionHabilitado__Group__5();
 
             state._fsp--;
@@ -17556,7 +17588,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6809:1: ( rule__AsercionHabilitado__ElementoAssignment_4 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6809:2: rule__AsercionHabilitado__ElementoAssignment_4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__ElementoAssignment_4_in_rule__AsercionHabilitado__Group__4__Impl13528);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__ElementoAssignment_4_in_rule__AsercionHabilitado__Group__4__Impl13530);
             rule__AsercionHabilitado__ElementoAssignment_4();
 
             state._fsp--;
@@ -17596,7 +17628,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6823:1: ( rule__AsercionHabilitado__Group__5__Impl )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6824:2: rule__AsercionHabilitado__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__5__Impl_in_rule__AsercionHabilitado__Group__513558);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionHabilitado__Group__5__Impl_in_rule__AsercionHabilitado__Group__513560);
             rule__AsercionHabilitado__Group__5__Impl();
 
             state._fsp--;
@@ -17633,7 +17665,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6836:1: '}'
             {
              before(grammarAccess.getAsercionHabilitadoAccess().getRightCurlyBracketKeyword_5()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__AsercionHabilitado__Group__5__Impl13586); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__AsercionHabilitado__Group__5__Impl13588); 
              after(grammarAccess.getAsercionHabilitadoAccess().getRightCurlyBracketKeyword_5()); 
 
             }
@@ -17666,12 +17698,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6865:1: ( rule__AsercionValor__Group__0__Impl rule__AsercionValor__Group__1 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6866:2: rule__AsercionValor__Group__0__Impl rule__AsercionValor__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__0__Impl_in_rule__AsercionValor__Group__013629);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__0__Impl_in_rule__AsercionValor__Group__013631);
             rule__AsercionValor__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__1_in_rule__AsercionValor__Group__013632);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__1_in_rule__AsercionValor__Group__013634);
             rule__AsercionValor__Group__1();
 
             state._fsp--;
@@ -17708,7 +17740,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6879:1: 'AsercionValor'
             {
              before(grammarAccess.getAsercionValorAccess().getAsercionValorKeyword_0()); 
-            match(input,47,FollowSets000.FOLLOW_47_in_rule__AsercionValor__Group__0__Impl13660); 
+            match(input,47,FollowSets000.FOLLOW_47_in_rule__AsercionValor__Group__0__Impl13662); 
              after(grammarAccess.getAsercionValorAccess().getAsercionValorKeyword_0()); 
 
             }
@@ -17741,12 +17773,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6896:1: ( rule__AsercionValor__Group__1__Impl rule__AsercionValor__Group__2 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6897:2: rule__AsercionValor__Group__1__Impl rule__AsercionValor__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__1__Impl_in_rule__AsercionValor__Group__113691);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__1__Impl_in_rule__AsercionValor__Group__113693);
             rule__AsercionValor__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__2_in_rule__AsercionValor__Group__113694);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__2_in_rule__AsercionValor__Group__113696);
             rule__AsercionValor__Group__2();
 
             state._fsp--;
@@ -17783,7 +17815,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6910:1: '{'
             {
              before(grammarAccess.getAsercionValorAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,12,FollowSets000.FOLLOW_12_in_rule__AsercionValor__Group__1__Impl13722); 
+            match(input,12,FollowSets000.FOLLOW_12_in_rule__AsercionValor__Group__1__Impl13724); 
              after(grammarAccess.getAsercionValorAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
@@ -17816,12 +17848,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6927:1: ( rule__AsercionValor__Group__2__Impl rule__AsercionValor__Group__3 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6928:2: rule__AsercionValor__Group__2__Impl rule__AsercionValor__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__2__Impl_in_rule__AsercionValor__Group__213753);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__2__Impl_in_rule__AsercionValor__Group__213755);
             rule__AsercionValor__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__3_in_rule__AsercionValor__Group__213756);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__3_in_rule__AsercionValor__Group__213758);
             rule__AsercionValor__Group__3();
 
             state._fsp--;
@@ -17858,7 +17890,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6941:1: 'valor'
             {
              before(grammarAccess.getAsercionValorAccess().getValorKeyword_2()); 
-            match(input,24,FollowSets000.FOLLOW_24_in_rule__AsercionValor__Group__2__Impl13784); 
+            match(input,24,FollowSets000.FOLLOW_24_in_rule__AsercionValor__Group__2__Impl13786); 
              after(grammarAccess.getAsercionValorAccess().getValorKeyword_2()); 
 
             }
@@ -17891,12 +17923,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6958:1: ( rule__AsercionValor__Group__3__Impl rule__AsercionValor__Group__4 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6959:2: rule__AsercionValor__Group__3__Impl rule__AsercionValor__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__3__Impl_in_rule__AsercionValor__Group__313815);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__3__Impl_in_rule__AsercionValor__Group__313817);
             rule__AsercionValor__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__4_in_rule__AsercionValor__Group__313818);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__4_in_rule__AsercionValor__Group__313820);
             rule__AsercionValor__Group__4();
 
             state._fsp--;
@@ -17936,7 +17968,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6973:1: ( rule__AsercionValor__ValorAssignment_3 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6973:2: rule__AsercionValor__ValorAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__ValorAssignment_3_in_rule__AsercionValor__Group__3__Impl13845);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__ValorAssignment_3_in_rule__AsercionValor__Group__3__Impl13847);
             rule__AsercionValor__ValorAssignment_3();
 
             state._fsp--;
@@ -17976,12 +18008,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6987:1: ( rule__AsercionValor__Group__4__Impl rule__AsercionValor__Group__5 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:6988:2: rule__AsercionValor__Group__4__Impl rule__AsercionValor__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__4__Impl_in_rule__AsercionValor__Group__413875);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__4__Impl_in_rule__AsercionValor__Group__413877);
             rule__AsercionValor__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__5_in_rule__AsercionValor__Group__413878);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__5_in_rule__AsercionValor__Group__413880);
             rule__AsercionValor__Group__5();
 
             state._fsp--;
@@ -18018,7 +18050,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7001:1: 'elemento'
             {
              before(grammarAccess.getAsercionValorAccess().getElementoKeyword_4()); 
-            match(input,41,FollowSets000.FOLLOW_41_in_rule__AsercionValor__Group__4__Impl13906); 
+            match(input,41,FollowSets000.FOLLOW_41_in_rule__AsercionValor__Group__4__Impl13908); 
              after(grammarAccess.getAsercionValorAccess().getElementoKeyword_4()); 
 
             }
@@ -18051,12 +18083,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7018:1: ( rule__AsercionValor__Group__5__Impl rule__AsercionValor__Group__6 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7019:2: rule__AsercionValor__Group__5__Impl rule__AsercionValor__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__5__Impl_in_rule__AsercionValor__Group__513937);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__5__Impl_in_rule__AsercionValor__Group__513939);
             rule__AsercionValor__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__6_in_rule__AsercionValor__Group__513940);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__6_in_rule__AsercionValor__Group__513942);
             rule__AsercionValor__Group__6();
 
             state._fsp--;
@@ -18096,7 +18128,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7033:1: ( rule__AsercionValor__ElementoAssignment_5 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7033:2: rule__AsercionValor__ElementoAssignment_5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__ElementoAssignment_5_in_rule__AsercionValor__Group__5__Impl13967);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__ElementoAssignment_5_in_rule__AsercionValor__Group__5__Impl13969);
             rule__AsercionValor__ElementoAssignment_5();
 
             state._fsp--;
@@ -18136,7 +18168,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7047:1: ( rule__AsercionValor__Group__6__Impl )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7048:2: rule__AsercionValor__Group__6__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__6__Impl_in_rule__AsercionValor__Group__613997);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionValor__Group__6__Impl_in_rule__AsercionValor__Group__613999);
             rule__AsercionValor__Group__6__Impl();
 
             state._fsp--;
@@ -18173,7 +18205,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7060:1: '}'
             {
              before(grammarAccess.getAsercionValorAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__AsercionValor__Group__6__Impl14025); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__AsercionValor__Group__6__Impl14027); 
              after(grammarAccess.getAsercionValorAccess().getRightCurlyBracketKeyword_6()); 
 
             }
@@ -18206,12 +18238,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7091:1: ( rule__AsercionSeleccion__Group__0__Impl rule__AsercionSeleccion__Group__1 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7092:2: rule__AsercionSeleccion__Group__0__Impl rule__AsercionSeleccion__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__0__Impl_in_rule__AsercionSeleccion__Group__014070);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__0__Impl_in_rule__AsercionSeleccion__Group__014072);
             rule__AsercionSeleccion__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__1_in_rule__AsercionSeleccion__Group__014073);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__1_in_rule__AsercionSeleccion__Group__014075);
             rule__AsercionSeleccion__Group__1();
 
             state._fsp--;
@@ -18248,7 +18280,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7105:1: 'AsercionSeleccion'
             {
              before(grammarAccess.getAsercionSeleccionAccess().getAsercionSeleccionKeyword_0()); 
-            match(input,48,FollowSets000.FOLLOW_48_in_rule__AsercionSeleccion__Group__0__Impl14101); 
+            match(input,48,FollowSets000.FOLLOW_48_in_rule__AsercionSeleccion__Group__0__Impl14103); 
              after(grammarAccess.getAsercionSeleccionAccess().getAsercionSeleccionKeyword_0()); 
 
             }
@@ -18281,12 +18313,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7122:1: ( rule__AsercionSeleccion__Group__1__Impl rule__AsercionSeleccion__Group__2 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7123:2: rule__AsercionSeleccion__Group__1__Impl rule__AsercionSeleccion__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__1__Impl_in_rule__AsercionSeleccion__Group__114132);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__1__Impl_in_rule__AsercionSeleccion__Group__114134);
             rule__AsercionSeleccion__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__2_in_rule__AsercionSeleccion__Group__114135);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__2_in_rule__AsercionSeleccion__Group__114137);
             rule__AsercionSeleccion__Group__2();
 
             state._fsp--;
@@ -18323,7 +18355,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7136:1: '{'
             {
              before(grammarAccess.getAsercionSeleccionAccess().getLeftCurlyBracketKeyword_1()); 
-            match(input,12,FollowSets000.FOLLOW_12_in_rule__AsercionSeleccion__Group__1__Impl14163); 
+            match(input,12,FollowSets000.FOLLOW_12_in_rule__AsercionSeleccion__Group__1__Impl14165); 
              after(grammarAccess.getAsercionSeleccionAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
@@ -18356,12 +18388,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7153:1: ( rule__AsercionSeleccion__Group__2__Impl rule__AsercionSeleccion__Group__3 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7154:2: rule__AsercionSeleccion__Group__2__Impl rule__AsercionSeleccion__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__2__Impl_in_rule__AsercionSeleccion__Group__214194);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__2__Impl_in_rule__AsercionSeleccion__Group__214196);
             rule__AsercionSeleccion__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__3_in_rule__AsercionSeleccion__Group__214197);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__3_in_rule__AsercionSeleccion__Group__214199);
             rule__AsercionSeleccion__Group__3();
 
             state._fsp--;
@@ -18398,7 +18430,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7167:1: 'estado'
             {
              before(grammarAccess.getAsercionSeleccionAccess().getEstadoKeyword_2()); 
-            match(input,49,FollowSets000.FOLLOW_49_in_rule__AsercionSeleccion__Group__2__Impl14225); 
+            match(input,49,FollowSets000.FOLLOW_49_in_rule__AsercionSeleccion__Group__2__Impl14227); 
              after(grammarAccess.getAsercionSeleccionAccess().getEstadoKeyword_2()); 
 
             }
@@ -18431,12 +18463,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7184:1: ( rule__AsercionSeleccion__Group__3__Impl rule__AsercionSeleccion__Group__4 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7185:2: rule__AsercionSeleccion__Group__3__Impl rule__AsercionSeleccion__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__3__Impl_in_rule__AsercionSeleccion__Group__314256);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__3__Impl_in_rule__AsercionSeleccion__Group__314258);
             rule__AsercionSeleccion__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__4_in_rule__AsercionSeleccion__Group__314259);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__4_in_rule__AsercionSeleccion__Group__314261);
             rule__AsercionSeleccion__Group__4();
 
             state._fsp--;
@@ -18476,7 +18508,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7199:1: ( rule__AsercionSeleccion__EstadoAssignment_3 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7199:2: rule__AsercionSeleccion__EstadoAssignment_3
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__EstadoAssignment_3_in_rule__AsercionSeleccion__Group__3__Impl14286);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__EstadoAssignment_3_in_rule__AsercionSeleccion__Group__3__Impl14288);
             rule__AsercionSeleccion__EstadoAssignment_3();
 
             state._fsp--;
@@ -18516,12 +18548,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7213:1: ( rule__AsercionSeleccion__Group__4__Impl rule__AsercionSeleccion__Group__5 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7214:2: rule__AsercionSeleccion__Group__4__Impl rule__AsercionSeleccion__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__4__Impl_in_rule__AsercionSeleccion__Group__414316);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__4__Impl_in_rule__AsercionSeleccion__Group__414318);
             rule__AsercionSeleccion__Group__4__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__5_in_rule__AsercionSeleccion__Group__414319);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__5_in_rule__AsercionSeleccion__Group__414321);
             rule__AsercionSeleccion__Group__5();
 
             state._fsp--;
@@ -18558,7 +18590,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7227:1: 'elemento'
             {
              before(grammarAccess.getAsercionSeleccionAccess().getElementoKeyword_4()); 
-            match(input,41,FollowSets000.FOLLOW_41_in_rule__AsercionSeleccion__Group__4__Impl14347); 
+            match(input,41,FollowSets000.FOLLOW_41_in_rule__AsercionSeleccion__Group__4__Impl14349); 
              after(grammarAccess.getAsercionSeleccionAccess().getElementoKeyword_4()); 
 
             }
@@ -18591,12 +18623,12 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7244:1: ( rule__AsercionSeleccion__Group__5__Impl rule__AsercionSeleccion__Group__6 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7245:2: rule__AsercionSeleccion__Group__5__Impl rule__AsercionSeleccion__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__5__Impl_in_rule__AsercionSeleccion__Group__514378);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__5__Impl_in_rule__AsercionSeleccion__Group__514380);
             rule__AsercionSeleccion__Group__5__Impl();
 
             state._fsp--;
 
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__6_in_rule__AsercionSeleccion__Group__514381);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__6_in_rule__AsercionSeleccion__Group__514383);
             rule__AsercionSeleccion__Group__6();
 
             state._fsp--;
@@ -18636,7 +18668,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7259:1: ( rule__AsercionSeleccion__ElementoAssignment_5 )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7259:2: rule__AsercionSeleccion__ElementoAssignment_5
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__ElementoAssignment_5_in_rule__AsercionSeleccion__Group__5__Impl14408);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__ElementoAssignment_5_in_rule__AsercionSeleccion__Group__5__Impl14410);
             rule__AsercionSeleccion__ElementoAssignment_5();
 
             state._fsp--;
@@ -18676,7 +18708,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7273:1: ( rule__AsercionSeleccion__Group__6__Impl )
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7274:2: rule__AsercionSeleccion__Group__6__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__6__Impl_in_rule__AsercionSeleccion__Group__614438);
+            pushFollow(FollowSets000.FOLLOW_rule__AsercionSeleccion__Group__6__Impl_in_rule__AsercionSeleccion__Group__614440);
             rule__AsercionSeleccion__Group__6__Impl();
 
             state._fsp--;
@@ -18713,7 +18745,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7286:1: '}'
             {
              before(grammarAccess.getAsercionSeleccionAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,14,FollowSets000.FOLLOW_14_in_rule__AsercionSeleccion__Group__6__Impl14466); 
+            match(input,14,FollowSets000.FOLLOW_14_in_rule__AsercionSeleccion__Group__6__Impl14468); 
              after(grammarAccess.getAsercionSeleccionAccess().getRightCurlyBracketKeyword_6()); 
 
             }
@@ -18754,7 +18786,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7322:1: 'comprobacionCampos'
             {
              before(grammarAccess.getFormularioAccess().getComprobacionCamposComprobacionCamposKeyword_0_0()); 
-            match(input,50,FollowSets000.FOLLOW_50_in_rule__Formulario__ComprobacionCamposAssignment_014521); 
+            match(input,50,FollowSets000.FOLLOW_50_in_rule__Formulario__ComprobacionCamposAssignment_014523); 
              after(grammarAccess.getFormularioAccess().getComprobacionCamposComprobacionCamposKeyword_0_0()); 
 
             }
@@ -18799,7 +18831,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7345:1: 'comprobacionAccion'
             {
              before(grammarAccess.getFormularioAccess().getComprobacionAccionComprobacionAccionKeyword_1_0()); 
-            match(input,51,FollowSets000.FOLLOW_51_in_rule__Formulario__ComprobacionAccionAssignment_114565); 
+            match(input,51,FollowSets000.FOLLOW_51_in_rule__Formulario__ComprobacionAccionAssignment_114567); 
              after(grammarAccess.getFormularioAccess().getComprobacionAccionComprobacionAccionKeyword_1_0()); 
 
             }
@@ -18840,7 +18872,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7366:1: ruleEString
             {
              before(grammarAccess.getFormularioAccess().getNameEStringParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Formulario__NameAssignment_314604);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__Formulario__NameAssignment_314606);
             ruleEString();
 
             state._fsp--;
@@ -18881,7 +18913,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7381:1: ruleLayout
             {
              before(grammarAccess.getFormularioAccess().getLayoutLayoutParserRuleCall_6_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleLayout_in_rule__Formulario__LayoutAssignment_614635);
+            pushFollow(FollowSets000.FOLLOW_ruleLayout_in_rule__Formulario__LayoutAssignment_614637);
             ruleLayout();
 
             state._fsp--;
@@ -18922,7 +18954,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7396:1: rulePruebaInterfaz
             {
              before(grammarAccess.getFormularioAccess().getPruebasPruebaInterfazParserRuleCall_7_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_rulePruebaInterfaz_in_rule__Formulario__PruebasAssignment_7_114666);
+            pushFollow(FollowSets000.FOLLOW_rulePruebaInterfaz_in_rule__Formulario__PruebasAssignment_7_114668);
             rulePruebaInterfaz();
 
             state._fsp--;
@@ -18963,7 +18995,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7411:1: ruleEInt
             {
              before(grammarAccess.getLayoutAccess().getColumnasEIntParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__Layout__ColumnasAssignment_314697);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__Layout__ColumnasAssignment_314699);
             ruleEInt();
 
             state._fsp--;
@@ -19004,7 +19036,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7426:1: ruleInput
             {
              before(grammarAccess.getLayoutAccess().getEntradasInputParserRuleCall_4_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_214728);
+            pushFollow(FollowSets000.FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_214730);
             ruleInput();
 
             state._fsp--;
@@ -19045,7 +19077,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7441:1: ruleInput
             {
              before(grammarAccess.getLayoutAccess().getEntradasInputParserRuleCall_4_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_3_114759);
+            pushFollow(FollowSets000.FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_3_114761);
             ruleInput();
 
             state._fsp--;
@@ -19086,7 +19118,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7456:1: ruleEString
             {
              before(grammarAccess.getPruebaInterfazAccess().getNameEStringParserRuleCall_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__PruebaInterfaz__NameAssignment_214790);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__PruebaInterfaz__NameAssignment_214792);
             ruleEString();
 
             state._fsp--;
@@ -19127,7 +19159,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7471:1: ruleAccion
             {
              before(grammarAccess.getPruebaInterfazAccess().getAccionesAccionParserRuleCall_4_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_214821);
+            pushFollow(FollowSets000.FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_214823);
             ruleAccion();
 
             state._fsp--;
@@ -19168,7 +19200,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7486:1: ruleAccion
             {
              before(grammarAccess.getPruebaInterfazAccess().getAccionesAccionParserRuleCall_4_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_3_114852);
+            pushFollow(FollowSets000.FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_3_114854);
             ruleAccion();
 
             state._fsp--;
@@ -19213,7 +19245,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7503:1: 'visible'
             {
              before(grammarAccess.getInputTextoAccess().getVisibleVisibleKeyword_1_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputTexto__VisibleAssignment_114888); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputTexto__VisibleAssignment_114890); 
              after(grammarAccess.getInputTextoAccess().getVisibleVisibleKeyword_1_0()); 
 
             }
@@ -19258,7 +19290,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7526:1: 'habilitado'
             {
              before(grammarAccess.getInputTextoAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputTexto__HabilitadoAssignment_214932); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputTexto__HabilitadoAssignment_214934); 
              after(grammarAccess.getInputTextoAccess().getHabilitadoHabilitadoKeyword_2_0()); 
 
             }
@@ -19303,7 +19335,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7549:1: 'obligatorio'
             {
              before(grammarAccess.getInputTextoAccess().getObligatorioObligatorioKeyword_3_0()); 
-            match(input,54,FollowSets000.FOLLOW_54_in_rule__InputTexto__ObligatorioAssignment_314976); 
+            match(input,54,FollowSets000.FOLLOW_54_in_rule__InputTexto__ObligatorioAssignment_314978); 
              after(grammarAccess.getInputTextoAccess().getObligatorioObligatorioKeyword_3_0()); 
 
             }
@@ -19344,7 +19376,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7570:1: ruleEString
             {
              before(grammarAccess.getInputTextoAccess().getNameEStringParserRuleCall_5_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputTexto__NameAssignment_515015);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputTexto__NameAssignment_515017);
             ruleEString();
 
             state._fsp--;
@@ -19385,7 +19417,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7585:1: ruleEString
             {
              before(grammarAccess.getInputTextoAccess().getValorEStringParserRuleCall_7_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputTexto__ValorAssignment_7_115046);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputTexto__ValorAssignment_7_115048);
             ruleEString();
 
             state._fsp--;
@@ -19430,7 +19462,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7602:1: 'visible'
             {
              before(grammarAccess.getInputRadioAccess().getVisibleVisibleKeyword_0_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputRadio__VisibleAssignment_015082); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputRadio__VisibleAssignment_015084); 
              after(grammarAccess.getInputRadioAccess().getVisibleVisibleKeyword_0_0()); 
 
             }
@@ -19475,7 +19507,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7625:1: 'habilitado'
             {
              before(grammarAccess.getInputRadioAccess().getHabilitadoHabilitadoKeyword_1_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputRadio__HabilitadoAssignment_115126); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputRadio__HabilitadoAssignment_115128); 
              after(grammarAccess.getInputRadioAccess().getHabilitadoHabilitadoKeyword_1_0()); 
 
             }
@@ -19516,7 +19548,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7646:1: ruleEString
             {
              before(grammarAccess.getInputRadioAccess().getNameEStringParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputRadio__NameAssignment_315165);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputRadio__NameAssignment_315167);
             ruleEString();
 
             state._fsp--;
@@ -19557,7 +19589,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7661:1: ruleEString
             {
              before(grammarAccess.getInputRadioAccess().getValoresEStringParserRuleCall_5_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputRadio__ValoresAssignment_5_215196);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputRadio__ValoresAssignment_5_215198);
             ruleEString();
 
             state._fsp--;
@@ -19598,7 +19630,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7676:1: ruleEString
             {
              before(grammarAccess.getInputRadioAccess().getValoresEStringParserRuleCall_5_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputRadio__ValoresAssignment_5_3_115227);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputRadio__ValoresAssignment_5_3_115229);
             ruleEString();
 
             state._fsp--;
@@ -19639,7 +19671,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7691:1: ruleEInt
             {
              before(grammarAccess.getInputRadioAccess().getSeleccionEIntParserRuleCall_6_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__InputRadio__SeleccionAssignment_6_115258);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__InputRadio__SeleccionAssignment_6_115260);
             ruleEInt();
 
             state._fsp--;
@@ -19680,7 +19712,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7706:1: ruleReaccion
             {
              before(grammarAccess.getInputRadioAccess().getReaccionReaccionParserRuleCall_8_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleReaccion_in_rule__InputRadio__ReaccionAssignment_815289);
+            pushFollow(FollowSets000.FOLLOW_ruleReaccion_in_rule__InputRadio__ReaccionAssignment_815291);
             ruleReaccion();
 
             state._fsp--;
@@ -19725,7 +19757,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7723:1: 'visible'
             {
              before(grammarAccess.getInputComboAccess().getVisibleVisibleKeyword_1_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputCombo__VisibleAssignment_115325); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputCombo__VisibleAssignment_115327); 
              after(grammarAccess.getInputComboAccess().getVisibleVisibleKeyword_1_0()); 
 
             }
@@ -19770,7 +19802,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7746:1: 'habilitado'
             {
              before(grammarAccess.getInputComboAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputCombo__HabilitadoAssignment_215369); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputCombo__HabilitadoAssignment_215371); 
              after(grammarAccess.getInputComboAccess().getHabilitadoHabilitadoKeyword_2_0()); 
 
             }
@@ -19811,7 +19843,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7767:1: ruleEString
             {
              before(grammarAccess.getInputComboAccess().getNameEStringParserRuleCall_4_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCombo__NameAssignment_415408);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCombo__NameAssignment_415410);
             ruleEString();
 
             state._fsp--;
@@ -19852,7 +19884,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7782:1: ruleEString
             {
              before(grammarAccess.getInputComboAccess().getValoresEStringParserRuleCall_6_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCombo__ValoresAssignment_6_215439);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCombo__ValoresAssignment_6_215441);
             ruleEString();
 
             state._fsp--;
@@ -19893,7 +19925,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7797:1: ruleEString
             {
              before(grammarAccess.getInputComboAccess().getValoresEStringParserRuleCall_6_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCombo__ValoresAssignment_6_3_115470);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCombo__ValoresAssignment_6_3_115472);
             ruleEString();
 
             state._fsp--;
@@ -19934,7 +19966,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7812:1: ruleEInt
             {
              before(grammarAccess.getInputComboAccess().getSeleccionEIntParserRuleCall_7_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__InputCombo__SeleccionAssignment_7_115501);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__InputCombo__SeleccionAssignment_7_115503);
             ruleEInt();
 
             state._fsp--;
@@ -19979,7 +20011,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7829:1: 'visible'
             {
              before(grammarAccess.getInputCheckAccess().getVisibleVisibleKeyword_0_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputCheck__VisibleAssignment_015537); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputCheck__VisibleAssignment_015539); 
              after(grammarAccess.getInputCheckAccess().getVisibleVisibleKeyword_0_0()); 
 
             }
@@ -20024,7 +20056,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7852:1: 'habilitado'
             {
              before(grammarAccess.getInputCheckAccess().getHabilitadoHabilitadoKeyword_1_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputCheck__HabilitadoAssignment_115581); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputCheck__HabilitadoAssignment_115583); 
              after(grammarAccess.getInputCheckAccess().getHabilitadoHabilitadoKeyword_1_0()); 
 
             }
@@ -20065,7 +20097,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7873:1: ruleEString
             {
              before(grammarAccess.getInputCheckAccess().getNameEStringParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCheck__NameAssignment_315620);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCheck__NameAssignment_315622);
             ruleEString();
 
             state._fsp--;
@@ -20106,7 +20138,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7888:1: ruleEString
             {
              before(grammarAccess.getInputCheckAccess().getValoresEStringParserRuleCall_5_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCheck__ValoresAssignment_5_215651);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCheck__ValoresAssignment_5_215653);
             ruleEString();
 
             state._fsp--;
@@ -20147,7 +20179,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7903:1: ruleEString
             {
              before(grammarAccess.getInputCheckAccess().getValoresEStringParserRuleCall_5_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCheck__ValoresAssignment_5_3_115682);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__InputCheck__ValoresAssignment_5_3_115684);
             ruleEString();
 
             state._fsp--;
@@ -20188,7 +20220,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7918:1: ruleEInt
             {
              before(grammarAccess.getInputCheckAccess().getSeleccionEIntParserRuleCall_6_2_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__InputCheck__SeleccionAssignment_6_215713);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__InputCheck__SeleccionAssignment_6_215715);
             ruleEInt();
 
             state._fsp--;
@@ -20229,7 +20261,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7933:1: ruleEInt
             {
              before(grammarAccess.getInputCheckAccess().getSeleccionEIntParserRuleCall_6_3_1_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__InputCheck__SeleccionAssignment_6_3_115744);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__InputCheck__SeleccionAssignment_6_3_115746);
             ruleEInt();
 
             state._fsp--;
@@ -20270,7 +20302,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7948:1: ruleReaccion
             {
              before(grammarAccess.getInputCheckAccess().getReaccionReaccionParserRuleCall_8_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleReaccion_in_rule__InputCheck__ReaccionAssignment_815775);
+            pushFollow(FollowSets000.FOLLOW_ruleReaccion_in_rule__InputCheck__ReaccionAssignment_815777);
             ruleReaccion();
 
             state._fsp--;
@@ -20315,7 +20347,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7965:1: 'visible'
             {
              before(grammarAccess.getBotonValidarAccess().getVisibleVisibleKeyword_1_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonValidar__VisibleAssignment_115811); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonValidar__VisibleAssignment_115813); 
              after(grammarAccess.getBotonValidarAccess().getVisibleVisibleKeyword_1_0()); 
 
             }
@@ -20360,7 +20392,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7988:1: 'habilitado'
             {
              before(grammarAccess.getBotonValidarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonValidar__HabilitadoAssignment_215855); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonValidar__HabilitadoAssignment_215857); 
              after(grammarAccess.getBotonValidarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
 
             }
@@ -20401,7 +20433,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8009:1: ruleEString
             {
              before(grammarAccess.getBotonValidarAccess().getNameEStringParserRuleCall_4_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__BotonValidar__NameAssignment_415894);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__BotonValidar__NameAssignment_415896);
             ruleEString();
 
             state._fsp--;
@@ -20446,7 +20478,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8026:1: 'visible'
             {
              before(grammarAccess.getBotonGuardar_ImplAccess().getVisibleVisibleKeyword_1_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonGuardar_Impl__VisibleAssignment_115930); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonGuardar_Impl__VisibleAssignment_115932); 
              after(grammarAccess.getBotonGuardar_ImplAccess().getVisibleVisibleKeyword_1_0()); 
 
             }
@@ -20491,7 +20523,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8049:1: 'habilitado'
             {
              before(grammarAccess.getBotonGuardar_ImplAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonGuardar_Impl__HabilitadoAssignment_215974); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonGuardar_Impl__HabilitadoAssignment_215976); 
              after(grammarAccess.getBotonGuardar_ImplAccess().getHabilitadoHabilitadoKeyword_2_0()); 
 
             }
@@ -20532,7 +20564,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8070:1: ruleEString
             {
              before(grammarAccess.getBotonGuardar_ImplAccess().getNameEStringParserRuleCall_4_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__BotonGuardar_Impl__NameAssignment_416013);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__BotonGuardar_Impl__NameAssignment_416015);
             ruleEString();
 
             state._fsp--;
@@ -20577,7 +20609,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8087:1: 'visible'
             {
              before(grammarAccess.getBotonCancelarAccess().getVisibleVisibleKeyword_1_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonCancelar__VisibleAssignment_116049); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonCancelar__VisibleAssignment_116051); 
              after(grammarAccess.getBotonCancelarAccess().getVisibleVisibleKeyword_1_0()); 
 
             }
@@ -20622,7 +20654,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8110:1: 'habilitado'
             {
              before(grammarAccess.getBotonCancelarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonCancelar__HabilitadoAssignment_216093); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonCancelar__HabilitadoAssignment_216095); 
              after(grammarAccess.getBotonCancelarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
 
             }
@@ -20663,7 +20695,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8131:1: ruleEString
             {
              before(grammarAccess.getBotonCancelarAccess().getNameEStringParserRuleCall_4_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__BotonCancelar__NameAssignment_416132);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__BotonCancelar__NameAssignment_416134);
             ruleEString();
 
             state._fsp--;
@@ -20708,7 +20740,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8148:1: 'visible'
             {
              before(grammarAccess.getBotonCustomAccess().getVisibleVisibleKeyword_0_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonCustom__VisibleAssignment_016168); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonCustom__VisibleAssignment_016170); 
              after(grammarAccess.getBotonCustomAccess().getVisibleVisibleKeyword_0_0()); 
 
             }
@@ -20753,7 +20785,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8171:1: 'habilitado'
             {
              before(grammarAccess.getBotonCustomAccess().getHabilitadoHabilitadoKeyword_1_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonCustom__HabilitadoAssignment_116212); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonCustom__HabilitadoAssignment_116214); 
              after(grammarAccess.getBotonCustomAccess().getHabilitadoHabilitadoKeyword_1_0()); 
 
             }
@@ -20794,7 +20826,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8192:1: ruleEString
             {
              before(grammarAccess.getBotonCustomAccess().getNameEStringParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__BotonCustom__NameAssignment_316251);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__BotonCustom__NameAssignment_316253);
             ruleEString();
 
             state._fsp--;
@@ -20835,7 +20867,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8207:1: ruleEString
             {
              before(grammarAccess.getBotonCustomAccess().getFuncionEStringParserRuleCall_6_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__BotonCustom__FuncionAssignment_616282);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__BotonCustom__FuncionAssignment_616284);
             ruleEString();
 
             state._fsp--;
@@ -20876,7 +20908,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8222:1: ruleEInt
             {
              before(grammarAccess.getReaccionVisibleAccess().getActivacionEIntParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__ReaccionVisible__ActivacionAssignment_316313);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__ReaccionVisible__ActivacionAssignment_316315);
             ruleEInt();
 
             state._fsp--;
@@ -20921,7 +20953,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8239:1: ruleEString
             {
              before(grammarAccess.getReaccionVisibleAccess().getObjetivoInputEStringParserRuleCall_5_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__ReaccionVisible__ObjetivoAssignment_516348);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__ReaccionVisible__ObjetivoAssignment_516350);
             ruleEString();
 
             state._fsp--;
@@ -20966,7 +20998,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8256:1: ruleEInt
             {
              before(grammarAccess.getReaccionHabilitadoAccess().getActivacionEIntParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__ReaccionHabilitado__ActivacionAssignment_316383);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__ReaccionHabilitado__ActivacionAssignment_316385);
             ruleEInt();
 
             state._fsp--;
@@ -21011,7 +21043,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8273:1: ruleEString
             {
              before(grammarAccess.getReaccionHabilitadoAccess().getObjetivoInputEStringParserRuleCall_5_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__ReaccionHabilitado__ObjetivoAssignment_516418);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__ReaccionHabilitado__ObjetivoAssignment_516420);
             ruleEString();
 
             state._fsp--;
@@ -21056,7 +21088,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8290:1: ruleEString
             {
              before(grammarAccess.getAccionValorAccess().getValorEStringParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AccionValor__ValorAssignment_316453);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AccionValor__ValorAssignment_316455);
             ruleEString();
 
             state._fsp--;
@@ -21101,7 +21133,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8307:1: ruleEString
             {
              before(grammarAccess.getAccionValorAccess().getElementoInputEStringParserRuleCall_5_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AccionValor__ElementoAssignment_516488);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AccionValor__ElementoAssignment_516490);
             ruleEString();
 
             state._fsp--;
@@ -21146,7 +21178,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8324:1: ruleAsercion
             {
              before(grammarAccess.getAccionValorAccess().getAsercionAsercionParserRuleCall_7_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAsercion_in_rule__AccionValor__AsercionAssignment_716523);
+            pushFollow(FollowSets000.FOLLOW_ruleAsercion_in_rule__AccionValor__AsercionAssignment_716525);
             ruleAsercion();
 
             state._fsp--;
@@ -21187,7 +21219,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8339:1: ruleEInt
             {
              before(grammarAccess.getAccionSeleccionAccess().getValorEIntParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__AccionSeleccion__ValorAssignment_316554);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__AccionSeleccion__ValorAssignment_316556);
             ruleEInt();
 
             state._fsp--;
@@ -21232,7 +21264,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8356:1: ruleEString
             {
              before(grammarAccess.getAccionSeleccionAccess().getElementoInputEStringParserRuleCall_5_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AccionSeleccion__ElementoAssignment_516589);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AccionSeleccion__ElementoAssignment_516591);
             ruleEString();
 
             state._fsp--;
@@ -21277,7 +21309,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8373:1: ruleAsercion
             {
              before(grammarAccess.getAccionSeleccionAccess().getAsercionAsercionParserRuleCall_7_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAsercion_in_rule__AccionSeleccion__AsercionAssignment_716624);
+            pushFollow(FollowSets000.FOLLOW_ruleAsercion_in_rule__AccionSeleccion__AsercionAssignment_716626);
             ruleAsercion();
 
             state._fsp--;
@@ -21322,7 +21354,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8390:1: ruleEString
             {
              before(grammarAccess.getAccionPulsacionAccess().getElementoInputEStringParserRuleCall_3_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AccionPulsacion__ElementoAssignment_316659);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AccionPulsacion__ElementoAssignment_316661);
             ruleEString();
 
             state._fsp--;
@@ -21367,7 +21399,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8407:1: ruleAsercion
             {
              before(grammarAccess.getAccionPulsacionAccess().getAsercionAsercionParserRuleCall_5_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleAsercion_in_rule__AccionPulsacion__AsercionAssignment_516694);
+            pushFollow(FollowSets000.FOLLOW_ruleAsercion_in_rule__AccionPulsacion__AsercionAssignment_516696);
             ruleAsercion();
 
             state._fsp--;
@@ -21412,7 +21444,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8424:1: 'estado'
             {
              before(grammarAccess.getAsercionInvisibleAccess().getEstadoEstadoKeyword_0_0()); 
-            match(input,49,FollowSets000.FOLLOW_49_in_rule__AsercionInvisible__EstadoAssignment_016730); 
+            match(input,49,FollowSets000.FOLLOW_49_in_rule__AsercionInvisible__EstadoAssignment_016732); 
              after(grammarAccess.getAsercionInvisibleAccess().getEstadoEstadoKeyword_0_0()); 
 
             }
@@ -21457,7 +21489,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8447:1: ruleEString
             {
              before(grammarAccess.getAsercionInvisibleAccess().getElementoInputEStringParserRuleCall_4_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AsercionInvisible__ElementoAssignment_416773);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AsercionInvisible__ElementoAssignment_416775);
             ruleEString();
 
             state._fsp--;
@@ -21506,7 +21538,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8466:1: 'estado'
             {
              before(grammarAccess.getAsercionHabilitadoAccess().getEstadoEstadoKeyword_0_0()); 
-            match(input,49,FollowSets000.FOLLOW_49_in_rule__AsercionHabilitado__EstadoAssignment_016813); 
+            match(input,49,FollowSets000.FOLLOW_49_in_rule__AsercionHabilitado__EstadoAssignment_016815); 
              after(grammarAccess.getAsercionHabilitadoAccess().getEstadoEstadoKeyword_0_0()); 
 
             }
@@ -21551,7 +21583,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8489:1: ruleEString
             {
              before(grammarAccess.getAsercionHabilitadoAccess().getElementoInputEStringParserRuleCall_4_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AsercionHabilitado__ElementoAssignment_416856);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AsercionHabilitado__ElementoAssignment_416858);
             ruleEString();
 
             state._fsp--;
@@ -21596,7 +21628,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8506:1: ruleEString
             {
              before(grammarAccess.getAsercionValorAccess().getValorEStringParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AsercionValor__ValorAssignment_316891);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AsercionValor__ValorAssignment_316893);
             ruleEString();
 
             state._fsp--;
@@ -21641,7 +21673,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8523:1: ruleEString
             {
              before(grammarAccess.getAsercionValorAccess().getElementoInputEStringParserRuleCall_5_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AsercionValor__ElementoAssignment_516926);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AsercionValor__ElementoAssignment_516928);
             ruleEString();
 
             state._fsp--;
@@ -21686,7 +21718,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8540:1: ruleEInt
             {
              before(grammarAccess.getAsercionSeleccionAccess().getEstadoEIntParserRuleCall_3_0()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__AsercionSeleccion__EstadoAssignment_316961);
+            pushFollow(FollowSets000.FOLLOW_ruleEInt_in_rule__AsercionSeleccion__EstadoAssignment_316963);
             ruleEInt();
 
             state._fsp--;
@@ -21731,7 +21763,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8557:1: ruleEString
             {
              before(grammarAccess.getAsercionSeleccionAccess().getElementoInputEStringParserRuleCall_5_0_1()); 
-            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AsercionSeleccion__ElementoAssignment_516996);
+            pushFollow(FollowSets000.FOLLOW_ruleEString_in_rule__AsercionSeleccion__ElementoAssignment_516998);
             ruleEString();
 
             state._fsp--;
@@ -22354,7 +22386,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__AccionValor__Group__5__Impl_in_rule__AccionValor__Group__511608 = new BitSet(new long[]{0x0000040000000000L});
         public static final BitSet FOLLOW_rule__AccionValor__Group__6_in_rule__AccionValor__Group__511611 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__AccionValor__ElementoAssignment_5_in_rule__AccionValor__Group__5__Impl11638 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AccionValor__Group__6__Impl_in_rule__AccionValor__Group__611668 = new BitSet(new long[]{0x0003800000000000L});
+        public static final BitSet FOLLOW_rule__AccionValor__Group__6__Impl_in_rule__AccionValor__Group__611668 = new BitSet(new long[]{0x0003E00000000000L});
         public static final BitSet FOLLOW_rule__AccionValor__Group__7_in_rule__AccionValor__Group__611671 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_42_in_rule__AccionValor__Group__6__Impl11699 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__AccionValor__Group__7__Impl_in_rule__AccionValor__Group__711730 = new BitSet(new long[]{0x0000000000004000L});
@@ -22380,7 +22412,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__AccionSeleccion__Group__5__Impl_in_rule__AccionSeleccion__Group__512175 = new BitSet(new long[]{0x0000040000000000L});
         public static final BitSet FOLLOW_rule__AccionSeleccion__Group__6_in_rule__AccionSeleccion__Group__512178 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__AccionSeleccion__ElementoAssignment_5_in_rule__AccionSeleccion__Group__5__Impl12205 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AccionSeleccion__Group__6__Impl_in_rule__AccionSeleccion__Group__612235 = new BitSet(new long[]{0x0003800000000000L});
+        public static final BitSet FOLLOW_rule__AccionSeleccion__Group__6__Impl_in_rule__AccionSeleccion__Group__612235 = new BitSet(new long[]{0x0003E00000000000L});
         public static final BitSet FOLLOW_rule__AccionSeleccion__Group__7_in_rule__AccionSeleccion__Group__612238 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_42_in_rule__AccionSeleccion__Group__6__Impl12266 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__AccionSeleccion__Group__7__Impl_in_rule__AccionSeleccion__Group__712297 = new BitSet(new long[]{0x0000000000004000L});
@@ -22400,7 +22432,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__AccionPulsacion__Group__3__Impl_in_rule__AccionPulsacion__Group__312620 = new BitSet(new long[]{0x0000040000000000L});
         public static final BitSet FOLLOW_rule__AccionPulsacion__Group__4_in_rule__AccionPulsacion__Group__312623 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__AccionPulsacion__ElementoAssignment_3_in_rule__AccionPulsacion__Group__3__Impl12650 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AccionPulsacion__Group__4__Impl_in_rule__AccionPulsacion__Group__412680 = new BitSet(new long[]{0x0003800000000000L});
+        public static final BitSet FOLLOW_rule__AccionPulsacion__Group__4__Impl_in_rule__AccionPulsacion__Group__412680 = new BitSet(new long[]{0x0003E00000000000L});
         public static final BitSet FOLLOW_rule__AccionPulsacion__Group__5_in_rule__AccionPulsacion__Group__412683 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_42_in_rule__AccionPulsacion__Group__4__Impl12711 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__AccionPulsacion__Group__5__Impl_in_rule__AccionPulsacion__Group__512742 = new BitSet(new long[]{0x0000000000004000L});
@@ -22408,150 +22440,150 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__AccionPulsacion__AsercionAssignment_5_in_rule__AccionPulsacion__Group__5__Impl12772 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__AccionPulsacion__Group__6__Impl_in_rule__AccionPulsacion__Group__612802 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_14_in_rule__AccionPulsacion__Group__6__Impl12830 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__0__Impl_in_rule__AsercionInvisible__Group__012875 = new BitSet(new long[]{0x0000200000000000L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__0__Impl_in_rule__AsercionInvisible__Group__012875 = new BitSet(new long[]{0x0002200000000000L});
         public static final BitSet FOLLOW_rule__AsercionInvisible__Group__1_in_rule__AsercionInvisible__Group__012878 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__AsercionInvisible__EstadoAssignment_0_in_rule__AsercionInvisible__Group__0__Impl12905 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__1__Impl_in_rule__AsercionInvisible__Group__112935 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__2_in_rule__AsercionInvisible__Group__112938 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_45_in_rule__AsercionInvisible__Group__1__Impl12966 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__2__Impl_in_rule__AsercionInvisible__Group__212997 = new BitSet(new long[]{0x0000020000000000L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__3_in_rule__AsercionInvisible__Group__213000 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__AsercionInvisible__Group__2__Impl13028 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__3__Impl_in_rule__AsercionInvisible__Group__313059 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__4_in_rule__AsercionInvisible__Group__313062 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_41_in_rule__AsercionInvisible__Group__3__Impl13090 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__4__Impl_in_rule__AsercionInvisible__Group__413121 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__5_in_rule__AsercionInvisible__Group__413124 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__ElementoAssignment_4_in_rule__AsercionInvisible__Group__4__Impl13151 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__5__Impl_in_rule__AsercionInvisible__Group__513181 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__AsercionInvisible__Group__5__Impl13209 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__0__Impl_in_rule__AsercionHabilitado__Group__013252 = new BitSet(new long[]{0x0000400000000000L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__1_in_rule__AsercionHabilitado__Group__013255 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__EstadoAssignment_0_in_rule__AsercionHabilitado__Group__0__Impl13282 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__1__Impl_in_rule__AsercionHabilitado__Group__113312 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__2_in_rule__AsercionHabilitado__Group__113315 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_46_in_rule__AsercionHabilitado__Group__1__Impl13343 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__2__Impl_in_rule__AsercionHabilitado__Group__213374 = new BitSet(new long[]{0x0000020000000000L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__3_in_rule__AsercionHabilitado__Group__213377 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__AsercionHabilitado__Group__2__Impl13405 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__3__Impl_in_rule__AsercionHabilitado__Group__313436 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__4_in_rule__AsercionHabilitado__Group__313439 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_41_in_rule__AsercionHabilitado__Group__3__Impl13467 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__4__Impl_in_rule__AsercionHabilitado__Group__413498 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__5_in_rule__AsercionHabilitado__Group__413501 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__ElementoAssignment_4_in_rule__AsercionHabilitado__Group__4__Impl13528 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__5__Impl_in_rule__AsercionHabilitado__Group__513558 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__AsercionHabilitado__Group__5__Impl13586 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__0__Impl_in_rule__AsercionValor__Group__013629 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__1_in_rule__AsercionValor__Group__013632 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_47_in_rule__AsercionValor__Group__0__Impl13660 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__1__Impl_in_rule__AsercionValor__Group__113691 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__2_in_rule__AsercionValor__Group__113694 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__AsercionValor__Group__1__Impl13722 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__2__Impl_in_rule__AsercionValor__Group__213753 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__3_in_rule__AsercionValor__Group__213756 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_24_in_rule__AsercionValor__Group__2__Impl13784 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__3__Impl_in_rule__AsercionValor__Group__313815 = new BitSet(new long[]{0x0000020000000000L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__4_in_rule__AsercionValor__Group__313818 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionValor__ValorAssignment_3_in_rule__AsercionValor__Group__3__Impl13845 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__4__Impl_in_rule__AsercionValor__Group__413875 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__5_in_rule__AsercionValor__Group__413878 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_41_in_rule__AsercionValor__Group__4__Impl13906 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__5__Impl_in_rule__AsercionValor__Group__513937 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__6_in_rule__AsercionValor__Group__513940 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionValor__ElementoAssignment_5_in_rule__AsercionValor__Group__5__Impl13967 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionValor__Group__6__Impl_in_rule__AsercionValor__Group__613997 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__AsercionValor__Group__6__Impl14025 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__0__Impl_in_rule__AsercionSeleccion__Group__014070 = new BitSet(new long[]{0x0000000000001000L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__1_in_rule__AsercionSeleccion__Group__014073 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_48_in_rule__AsercionSeleccion__Group__0__Impl14101 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__1__Impl_in_rule__AsercionSeleccion__Group__114132 = new BitSet(new long[]{0x0002000000000000L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__2_in_rule__AsercionSeleccion__Group__114135 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_12_in_rule__AsercionSeleccion__Group__1__Impl14163 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__2__Impl_in_rule__AsercionSeleccion__Group__214194 = new BitSet(new long[]{0x0000000000400040L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__3_in_rule__AsercionSeleccion__Group__214197 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_49_in_rule__AsercionSeleccion__Group__2__Impl14225 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__3__Impl_in_rule__AsercionSeleccion__Group__314256 = new BitSet(new long[]{0x0000020000000000L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__4_in_rule__AsercionSeleccion__Group__314259 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__EstadoAssignment_3_in_rule__AsercionSeleccion__Group__3__Impl14286 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__4__Impl_in_rule__AsercionSeleccion__Group__414316 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__5_in_rule__AsercionSeleccion__Group__414319 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_41_in_rule__AsercionSeleccion__Group__4__Impl14347 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__5__Impl_in_rule__AsercionSeleccion__Group__514378 = new BitSet(new long[]{0x0000000000004000L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__6_in_rule__AsercionSeleccion__Group__514381 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__ElementoAssignment_5_in_rule__AsercionSeleccion__Group__5__Impl14408 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__6__Impl_in_rule__AsercionSeleccion__Group__614438 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_14_in_rule__AsercionSeleccion__Group__6__Impl14466 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_50_in_rule__Formulario__ComprobacionCamposAssignment_014521 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_51_in_rule__Formulario__ComprobacionAccionAssignment_114565 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__Formulario__NameAssignment_314604 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleLayout_in_rule__Formulario__LayoutAssignment_614635 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rulePruebaInterfaz_in_rule__Formulario__PruebasAssignment_7_114666 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_rule__Layout__ColumnasAssignment_314697 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_214728 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_3_114759 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__PruebaInterfaz__NameAssignment_214790 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_214821 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_3_114852 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__InputTexto__VisibleAssignment_114888 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__InputTexto__HabilitadoAssignment_214932 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_54_in_rule__InputTexto__ObligatorioAssignment_314976 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputTexto__NameAssignment_515015 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputTexto__ValorAssignment_7_115046 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__InputRadio__VisibleAssignment_015082 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__InputRadio__HabilitadoAssignment_115126 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputRadio__NameAssignment_315165 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputRadio__ValoresAssignment_5_215196 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputRadio__ValoresAssignment_5_3_115227 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_rule__InputRadio__SeleccionAssignment_6_115258 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleReaccion_in_rule__InputRadio__ReaccionAssignment_815289 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__InputCombo__VisibleAssignment_115325 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__InputCombo__HabilitadoAssignment_215369 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputCombo__NameAssignment_415408 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputCombo__ValoresAssignment_6_215439 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputCombo__ValoresAssignment_6_3_115470 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_rule__InputCombo__SeleccionAssignment_7_115501 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__InputCheck__VisibleAssignment_015537 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__InputCheck__HabilitadoAssignment_115581 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputCheck__NameAssignment_315620 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputCheck__ValoresAssignment_5_215651 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__InputCheck__ValoresAssignment_5_3_115682 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_rule__InputCheck__SeleccionAssignment_6_215713 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_rule__InputCheck__SeleccionAssignment_6_3_115744 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleReaccion_in_rule__InputCheck__ReaccionAssignment_815775 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__BotonValidar__VisibleAssignment_115811 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__BotonValidar__HabilitadoAssignment_215855 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__BotonValidar__NameAssignment_415894 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__BotonGuardar_Impl__VisibleAssignment_115930 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__BotonGuardar_Impl__HabilitadoAssignment_215974 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__BotonGuardar_Impl__NameAssignment_416013 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__BotonCancelar__VisibleAssignment_116049 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__BotonCancelar__HabilitadoAssignment_216093 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__BotonCancelar__NameAssignment_416132 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__BotonCustom__VisibleAssignment_016168 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__BotonCustom__HabilitadoAssignment_116212 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__BotonCustom__NameAssignment_316251 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__BotonCustom__FuncionAssignment_616282 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_rule__ReaccionVisible__ActivacionAssignment_316313 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__ReaccionVisible__ObjetivoAssignment_516348 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_rule__ReaccionHabilitado__ActivacionAssignment_316383 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__ReaccionHabilitado__ObjetivoAssignment_516418 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AccionValor__ValorAssignment_316453 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AccionValor__ElementoAssignment_516488 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAsercion_in_rule__AccionValor__AsercionAssignment_716523 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_rule__AccionSeleccion__ValorAssignment_316554 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AccionSeleccion__ElementoAssignment_516589 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAsercion_in_rule__AccionSeleccion__AsercionAssignment_716624 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AccionPulsacion__ElementoAssignment_316659 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleAsercion_in_rule__AccionPulsacion__AsercionAssignment_516694 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_49_in_rule__AsercionInvisible__EstadoAssignment_016730 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AsercionInvisible__ElementoAssignment_416773 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_49_in_rule__AsercionHabilitado__EstadoAssignment_016813 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AsercionHabilitado__ElementoAssignment_416856 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AsercionValor__ValorAssignment_316891 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AsercionValor__ElementoAssignment_516926 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEInt_in_rule__AsercionSeleccion__EstadoAssignment_316961 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_ruleEString_in_rule__AsercionSeleccion__ElementoAssignment_516996 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__1__Impl_in_rule__AsercionInvisible__Group__112936 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__2_in_rule__AsercionInvisible__Group__112939 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_45_in_rule__AsercionInvisible__Group__1__Impl12967 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__2__Impl_in_rule__AsercionInvisible__Group__212998 = new BitSet(new long[]{0x0000020000000000L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__3_in_rule__AsercionInvisible__Group__213001 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__AsercionInvisible__Group__2__Impl13029 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__3__Impl_in_rule__AsercionInvisible__Group__313060 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__4_in_rule__AsercionInvisible__Group__313063 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_41_in_rule__AsercionInvisible__Group__3__Impl13091 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__4__Impl_in_rule__AsercionInvisible__Group__413122 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__5_in_rule__AsercionInvisible__Group__413125 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__ElementoAssignment_4_in_rule__AsercionInvisible__Group__4__Impl13152 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionInvisible__Group__5__Impl_in_rule__AsercionInvisible__Group__513182 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__AsercionInvisible__Group__5__Impl13210 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__0__Impl_in_rule__AsercionHabilitado__Group__013253 = new BitSet(new long[]{0x0002400000000000L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__1_in_rule__AsercionHabilitado__Group__013256 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__EstadoAssignment_0_in_rule__AsercionHabilitado__Group__0__Impl13283 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__1__Impl_in_rule__AsercionHabilitado__Group__113314 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__2_in_rule__AsercionHabilitado__Group__113317 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_46_in_rule__AsercionHabilitado__Group__1__Impl13345 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__2__Impl_in_rule__AsercionHabilitado__Group__213376 = new BitSet(new long[]{0x0000020000000000L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__3_in_rule__AsercionHabilitado__Group__213379 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__AsercionHabilitado__Group__2__Impl13407 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__3__Impl_in_rule__AsercionHabilitado__Group__313438 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__4_in_rule__AsercionHabilitado__Group__313441 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_41_in_rule__AsercionHabilitado__Group__3__Impl13469 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__4__Impl_in_rule__AsercionHabilitado__Group__413500 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__5_in_rule__AsercionHabilitado__Group__413503 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__ElementoAssignment_4_in_rule__AsercionHabilitado__Group__4__Impl13530 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionHabilitado__Group__5__Impl_in_rule__AsercionHabilitado__Group__513560 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__AsercionHabilitado__Group__5__Impl13588 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__0__Impl_in_rule__AsercionValor__Group__013631 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__1_in_rule__AsercionValor__Group__013634 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_47_in_rule__AsercionValor__Group__0__Impl13662 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__1__Impl_in_rule__AsercionValor__Group__113693 = new BitSet(new long[]{0x0000000001000000L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__2_in_rule__AsercionValor__Group__113696 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__AsercionValor__Group__1__Impl13724 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__2__Impl_in_rule__AsercionValor__Group__213755 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__3_in_rule__AsercionValor__Group__213758 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_24_in_rule__AsercionValor__Group__2__Impl13786 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__3__Impl_in_rule__AsercionValor__Group__313817 = new BitSet(new long[]{0x0000020000000000L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__4_in_rule__AsercionValor__Group__313820 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionValor__ValorAssignment_3_in_rule__AsercionValor__Group__3__Impl13847 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__4__Impl_in_rule__AsercionValor__Group__413877 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__5_in_rule__AsercionValor__Group__413880 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_41_in_rule__AsercionValor__Group__4__Impl13908 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__5__Impl_in_rule__AsercionValor__Group__513939 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__6_in_rule__AsercionValor__Group__513942 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionValor__ElementoAssignment_5_in_rule__AsercionValor__Group__5__Impl13969 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionValor__Group__6__Impl_in_rule__AsercionValor__Group__613999 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__AsercionValor__Group__6__Impl14027 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__0__Impl_in_rule__AsercionSeleccion__Group__014072 = new BitSet(new long[]{0x0000000000001000L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__1_in_rule__AsercionSeleccion__Group__014075 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_48_in_rule__AsercionSeleccion__Group__0__Impl14103 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__1__Impl_in_rule__AsercionSeleccion__Group__114134 = new BitSet(new long[]{0x0002000000000000L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__2_in_rule__AsercionSeleccion__Group__114137 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_12_in_rule__AsercionSeleccion__Group__1__Impl14165 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__2__Impl_in_rule__AsercionSeleccion__Group__214196 = new BitSet(new long[]{0x0000000000400040L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__3_in_rule__AsercionSeleccion__Group__214199 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_49_in_rule__AsercionSeleccion__Group__2__Impl14227 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__3__Impl_in_rule__AsercionSeleccion__Group__314258 = new BitSet(new long[]{0x0000020000000000L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__4_in_rule__AsercionSeleccion__Group__314261 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__EstadoAssignment_3_in_rule__AsercionSeleccion__Group__3__Impl14288 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__4__Impl_in_rule__AsercionSeleccion__Group__414318 = new BitSet(new long[]{0x0000000000000030L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__5_in_rule__AsercionSeleccion__Group__414321 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_41_in_rule__AsercionSeleccion__Group__4__Impl14349 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__5__Impl_in_rule__AsercionSeleccion__Group__514380 = new BitSet(new long[]{0x0000000000004000L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__6_in_rule__AsercionSeleccion__Group__514383 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__ElementoAssignment_5_in_rule__AsercionSeleccion__Group__5__Impl14410 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__AsercionSeleccion__Group__6__Impl_in_rule__AsercionSeleccion__Group__614440 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_14_in_rule__AsercionSeleccion__Group__6__Impl14468 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_50_in_rule__Formulario__ComprobacionCamposAssignment_014523 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_51_in_rule__Formulario__ComprobacionAccionAssignment_114567 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__Formulario__NameAssignment_314606 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleLayout_in_rule__Formulario__LayoutAssignment_614637 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rulePruebaInterfaz_in_rule__Formulario__PruebasAssignment_7_114668 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_rule__Layout__ColumnasAssignment_314699 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_214730 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleInput_in_rule__Layout__EntradasAssignment_4_3_114761 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__PruebaInterfaz__NameAssignment_214792 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_214823 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_3_114854 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__InputTexto__VisibleAssignment_114890 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__InputTexto__HabilitadoAssignment_214934 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_54_in_rule__InputTexto__ObligatorioAssignment_314978 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputTexto__NameAssignment_515017 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputTexto__ValorAssignment_7_115048 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__InputRadio__VisibleAssignment_015084 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__InputRadio__HabilitadoAssignment_115128 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputRadio__NameAssignment_315167 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputRadio__ValoresAssignment_5_215198 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputRadio__ValoresAssignment_5_3_115229 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_rule__InputRadio__SeleccionAssignment_6_115260 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleReaccion_in_rule__InputRadio__ReaccionAssignment_815291 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__InputCombo__VisibleAssignment_115327 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__InputCombo__HabilitadoAssignment_215371 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputCombo__NameAssignment_415410 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputCombo__ValoresAssignment_6_215441 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputCombo__ValoresAssignment_6_3_115472 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_rule__InputCombo__SeleccionAssignment_7_115503 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__InputCheck__VisibleAssignment_015539 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__InputCheck__HabilitadoAssignment_115583 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputCheck__NameAssignment_315622 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputCheck__ValoresAssignment_5_215653 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__InputCheck__ValoresAssignment_5_3_115684 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_rule__InputCheck__SeleccionAssignment_6_215715 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_rule__InputCheck__SeleccionAssignment_6_3_115746 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleReaccion_in_rule__InputCheck__ReaccionAssignment_815777 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__BotonValidar__VisibleAssignment_115813 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__BotonValidar__HabilitadoAssignment_215857 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__BotonValidar__NameAssignment_415896 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__BotonGuardar_Impl__VisibleAssignment_115932 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__BotonGuardar_Impl__HabilitadoAssignment_215976 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__BotonGuardar_Impl__NameAssignment_416015 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__BotonCancelar__VisibleAssignment_116051 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__BotonCancelar__HabilitadoAssignment_216095 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__BotonCancelar__NameAssignment_416134 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__BotonCustom__VisibleAssignment_016170 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__BotonCustom__HabilitadoAssignment_116214 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__BotonCustom__NameAssignment_316253 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__BotonCustom__FuncionAssignment_616284 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_rule__ReaccionVisible__ActivacionAssignment_316315 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__ReaccionVisible__ObjetivoAssignment_516350 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_rule__ReaccionHabilitado__ActivacionAssignment_316385 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__ReaccionHabilitado__ObjetivoAssignment_516420 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AccionValor__ValorAssignment_316455 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AccionValor__ElementoAssignment_516490 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAsercion_in_rule__AccionValor__AsercionAssignment_716525 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_rule__AccionSeleccion__ValorAssignment_316556 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AccionSeleccion__ElementoAssignment_516591 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAsercion_in_rule__AccionSeleccion__AsercionAssignment_716626 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AccionPulsacion__ElementoAssignment_316661 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleAsercion_in_rule__AccionPulsacion__AsercionAssignment_516696 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_49_in_rule__AsercionInvisible__EstadoAssignment_016732 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AsercionInvisible__ElementoAssignment_416775 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_49_in_rule__AsercionHabilitado__EstadoAssignment_016815 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AsercionHabilitado__ElementoAssignment_416858 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AsercionValor__ValorAssignment_316893 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AsercionValor__ElementoAssignment_516928 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEInt_in_rule__AsercionSeleccion__EstadoAssignment_316963 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_ruleEString_in_rule__AsercionSeleccion__ElementoAssignment_516998 = new BitSet(new long[]{0x0000000000000002L});
     }
 
 

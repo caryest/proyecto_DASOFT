@@ -459,6 +459,7 @@ class FormularioGenerator implements IGenerator {
 				display.update();
 				« ENDIF »
 				« IF accion.asercion instanceof AsercionHabilitado »
+				« IF (accion.asercion as AsercionHabilitado).estado == true »
 				« IF accion.asercion.elemento instanceof InputBoton »
 				assertTrue(boton«accion.asercion.elemento.name».isEnabled());
 				« ELSEIF accion.asercion.elemento instanceof InputTexto »
@@ -469,8 +470,22 @@ class FormularioGenerator implements IGenerator {
 				assertTrue(radio«accion.asercion.elemento.name».isEnabled()); /// ESTAAAAAA MAAAAAAAAAAAAAAL
 				« ELSEIF accion.asercion.elemento instanceof InputCheck »
 				assertTrue(check«accion.asercion.elemento.name».isEnabled());
-				« ENDIF»
+				« ENDIF »
+				« ELSE »
+				« IF accion.asercion.elemento instanceof InputBoton »
+				assertFalse(boton«accion.asercion.elemento.name».isEnabled());
+				« ELSEIF accion.asercion.elemento instanceof InputTexto »
+				assertFalse(texto«accion.asercion.elemento.name».isEnabled());
+				« ELSEIF accion.asercion.elemento instanceof InputCombo »
+				assertFalse(combo«accion.asercion.elemento.name».isEnabled());
+				« ELSEIF accion.asercion.elemento instanceof InputRadio »
+				assertFalse(radio«accion.asercion.elemento.name».isEnabled()); /// ESTAAAAAA MAAAAAAAAAAAAAAL
+				« ELSEIF accion.asercion.elemento instanceof InputCheck »
+				assertFalse(check«accion.asercion.elemento.name».isEnabled());
+				« ENDIF »
+				« ENDIF »
 				« ELSEIF accion.asercion instanceof AsercionInvisible »
+				« IF (accion.asercion as AsercionInvisible).estado == true »
 				« IF accion.asercion.elemento instanceof InputBoton »
 				assertTrue(boton«accion.asercion.elemento.name».isVisible());
 				« ELSEIF accion.asercion.elemento instanceof InputTexto »
@@ -481,6 +496,20 @@ class FormularioGenerator implements IGenerator {
 				assertTrue(radio«accion.asercion.elemento.name».isVisible()); /// ESTAAAAAA MAAAAAAAAAAAAAAL
 				« ELSEIF accion.asercion.elemento instanceof InputCheck »
 				assertTrue(check«accion.asercion.elemento.name».isVisible());
+				« ENDIF »
+				« ELSE »
+				« IF accion.asercion.elemento instanceof InputBoton »
+				assertFalse(boton«accion.asercion.elemento.name».isVisible());
+				« ELSEIF accion.asercion.elemento instanceof InputTexto »
+				assertFalse(texto«accion.asercion.elemento.name».isVisible());
+				« ELSEIF accion.asercion.elemento instanceof InputCombo »
+				assertFalse(combo«accion.asercion.elemento.name».isVisible());
+				« ELSEIF accion.asercion.elemento instanceof InputRadio »
+				assertFalse(radio«accion.asercion.elemento.name».isVisible()); /// ESTAAAAAA MAAAAAAAAAAAAAAL
+				« ELSEIF accion.asercion.elemento instanceof InputCheck »
+				assertFalse(check«accion.asercion.elemento.name».isVisible());«»
+				« ENDIF »
+				« ENDIF »
 				« ELSEIF accion.asercion instanceof AsercionValor »
 				« ELSEIF accion.asercion instanceof AsercionSeleccion »
 				« IF accion.asercion.elemento instanceof InputCheck »
@@ -489,7 +518,6 @@ class FormularioGenerator implements IGenerator {
 				assertTrue(combo«accion.asercion.elemento.name».isSelected());
 				« ELSEIF accion.asercion.elemento instanceof InputRadio »
 				assertTrue(radio«accion.asercion.elemento.name».isSelected());
-				« ENDIF »
 				« ENDIF »
 				« ENDIF »
 				« ENDFOR »

@@ -1365,13 +1365,13 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//AsercionInvisible:
-		//	estado?="estado" "AsercionInvisible" "{" "elemento" elemento=[Input|EString] "}";
+		//	estado?="estado"? "AsercionInvisible" "{" "elemento" elemento=[Input|EString] "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//estado?="estado" "AsercionInvisible" "{" "elemento" elemento=[Input|EString] "}"
+		//estado?="estado"? "AsercionInvisible" "{" "elemento" elemento=[Input|EString] "}"
 		public Group getGroup() { return cGroup; }
 
-		//estado?="estado"
+		//estado?="estado"?
 		public Assignment getEstadoAssignment_0() { return cEstadoAssignment_0; }
 
 		//"estado"
@@ -1413,13 +1413,13 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//AsercionHabilitado:
-		//	estado?="estado" "AsercionHabilitado" "{" "elemento" elemento=[Input|EString] "}";
+		//	estado?="estado"? "AsercionHabilitado" "{" "elemento" elemento=[Input|EString] "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//estado?="estado" "AsercionHabilitado" "{" "elemento" elemento=[Input|EString] "}"
+		//estado?="estado"? "AsercionHabilitado" "{" "elemento" elemento=[Input|EString] "}"
 		public Group getGroup() { return cGroup; }
 
-		//estado?="estado"
+		//estado?="estado"?
 		public Assignment getEstadoAssignment_0() { return cEstadoAssignment_0; }
 
 		//"estado"
@@ -1883,7 +1883,7 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AsercionInvisible:
-	//	estado?="estado" "AsercionInvisible" "{" "elemento" elemento=[Input|EString] "}";
+	//	estado?="estado"? "AsercionInvisible" "{" "elemento" elemento=[Input|EString] "}";
 	public AsercionInvisibleElements getAsercionInvisibleAccess() {
 		return pAsercionInvisible;
 	}
@@ -1893,7 +1893,7 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AsercionHabilitado:
-	//	estado?="estado" "AsercionHabilitado" "{" "elemento" elemento=[Input|EString] "}";
+	//	estado?="estado"? "AsercionHabilitado" "{" "elemento" elemento=[Input|EString] "}";
 	public AsercionHabilitadoElements getAsercionHabilitadoAccess() {
 		return pAsercionHabilitado;
 	}
