@@ -233,7 +233,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString)
+	 *     (invisible?='invisible'? deshabilitado?='deshabilitado'? name=EString)
 	 */
 	protected void sequence_BotonCancelar(EObject context, BotonCancelar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -242,7 +242,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString funcion=EString)
+	 *     (invisible?='invisible'? deshabilitado?='deshabilitado'? name=EString funcion=EString)
 	 */
 	protected void sequence_BotonCustom(EObject context, BotonCustom semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -251,7 +251,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString)
+	 *     (invisible?='invisible'? deshabilitado?='deshabilitado'? name=EString)
 	 */
 	protected void sequence_BotonGuardar_Impl(EObject context, BotonGuardar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -260,7 +260,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString)
+	 *     (invisible?='invisible'? deshabilitado?='deshabilitado'? name=EString)
 	 */
 	protected void sequence_BotonValidar(EObject context, BotonValidar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -279,8 +279,8 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	/**
 	 * Constraint:
 	 *     (
-	 *         visible?='visible'? 
-	 *         habilitado?='habilitado'? 
+	 *         invisible?='invisible'? 
+	 *         deshabilitado?='deshabilitado'? 
 	 *         name=EString 
 	 *         (valores+=EString valores+=EString*)? 
 	 *         (seleccion+=EInt seleccion+=EInt*)? 
@@ -294,7 +294,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? name=EString (valores+=EString valores+=EString*)? seleccion=EInt?)
+	 *     (invisible?='invisible'? deshabilitado?='deshabilitado'? name=EString (valores+=EString valores+=EString*)? seleccion=EInt?)
 	 */
 	protected void sequence_InputCombo(EObject context, InputCombo semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -304,8 +304,8 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	/**
 	 * Constraint:
 	 *     (
-	 *         visible?='visible'? 
-	 *         habilitado?='habilitado'? 
+	 *         invisible?='invisible'? 
+	 *         deshabilitado?='deshabilitado'? 
 	 *         name=EString 
 	 *         (valores+=EString valores+=EString*)? 
 	 *         seleccion=EInt? 
@@ -319,7 +319,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (visible?='visible'? habilitado?='habilitado'? obligatorio?='obligatorio'? name=EString valor=EString?)
+	 *     (invisible?='invisible'? deshabilitado?='deshabilitado'? obligatorio?='obligatorio'? name=EString valor=EString?)
 	 */
 	protected void sequence_InputTexto(EObject context, InputTexto semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

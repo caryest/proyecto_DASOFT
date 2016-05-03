@@ -196,22 +196,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__VISIBLE = 1;
+	int INPUT__INVISIBLE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__HABILITADO = 2;
+	int INPUT__DESHABILITADO = 2;
 
 	/**
 	 * The number of structural features of the '<em>Input</em>' class.
@@ -251,22 +251,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_TEXTO__NAME = INPUT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_TEXTO__VISIBLE = INPUT__VISIBLE;
+	int INPUT_TEXTO__INVISIBLE = INPUT__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_TEXTO__HABILITADO = INPUT__HABILITADO;
+	int INPUT_TEXTO__DESHABILITADO = INPUT__DESHABILITADO;
 
 	/**
 	 * The feature id for the '<em><b>Obligatorio</b></em>' attribute.
@@ -324,22 +324,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_BOTON__NAME = INPUT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_BOTON__VISIBLE = INPUT__VISIBLE;
+	int INPUT_BOTON__INVISIBLE = INPUT__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_BOTON__HABILITADO = INPUT__HABILITADO;
+	int INPUT_BOTON__DESHABILITADO = INPUT__DESHABILITADO;
 
 	/**
 	 * The number of structural features of the '<em>Input Boton</em>' class.
@@ -379,22 +379,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_MULTIPLE__NAME = INPUT__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_MULTIPLE__VISIBLE = INPUT__VISIBLE;
+	int INPUT_MULTIPLE__INVISIBLE = INPUT__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_MULTIPLE__HABILITADO = INPUT__HABILITADO;
+	int INPUT_MULTIPLE__DESHABILITADO = INPUT__DESHABILITADO;
 
 	/**
 	 * The feature id for the '<em><b>Valores</b></em>' attribute list.
@@ -443,22 +443,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_REACCION__NAME = INPUT_MULTIPLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_REACCION__VISIBLE = INPUT_MULTIPLE__VISIBLE;
+	int INPUT_REACCION__INVISIBLE = INPUT_MULTIPLE__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_REACCION__HABILITADO = INPUT_MULTIPLE__HABILITADO;
+	int INPUT_REACCION__DESHABILITADO = INPUT_MULTIPLE__DESHABILITADO;
 
 	/**
 	 * The feature id for the '<em><b>Valores</b></em>' attribute list.
@@ -516,22 +516,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_RADIO__NAME = INPUT_REACCION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_RADIO__VISIBLE = INPUT_REACCION__VISIBLE;
+	int INPUT_RADIO__INVISIBLE = INPUT_REACCION__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_RADIO__HABILITADO = INPUT_REACCION__HABILITADO;
+	int INPUT_RADIO__DESHABILITADO = INPUT_REACCION__DESHABILITADO;
 
 	/**
 	 * The feature id for the '<em><b>Valores</b></em>' attribute list.
@@ -598,22 +598,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_COMBO__NAME = INPUT_MULTIPLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_COMBO__VISIBLE = INPUT_MULTIPLE__VISIBLE;
+	int INPUT_COMBO__INVISIBLE = INPUT_MULTIPLE__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_COMBO__HABILITADO = INPUT_MULTIPLE__HABILITADO;
+	int INPUT_COMBO__DESHABILITADO = INPUT_MULTIPLE__DESHABILITADO;
 
 	/**
 	 * The feature id for the '<em><b>Valores</b></em>' attribute list.
@@ -671,22 +671,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int INPUT_CHECK__NAME = INPUT_REACCION__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_CHECK__VISIBLE = INPUT_REACCION__VISIBLE;
+	int INPUT_CHECK__INVISIBLE = INPUT_REACCION__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_CHECK__HABILITADO = INPUT_REACCION__HABILITADO;
+	int INPUT_CHECK__DESHABILITADO = INPUT_REACCION__DESHABILITADO;
 
 	/**
 	 * The feature id for the '<em><b>Valores</b></em>' attribute list.
@@ -753,22 +753,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int BOTON_VALIDAR__NAME = INPUT_BOTON__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOTON_VALIDAR__VISIBLE = INPUT_BOTON__VISIBLE;
+	int BOTON_VALIDAR__INVISIBLE = INPUT_BOTON__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOTON_VALIDAR__HABILITADO = INPUT_BOTON__HABILITADO;
+	int BOTON_VALIDAR__DESHABILITADO = INPUT_BOTON__DESHABILITADO;
 
 	/**
 	 * The number of structural features of the '<em>Boton Validar</em>' class.
@@ -808,22 +808,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int BOTON_GUARDAR__NAME = INPUT_BOTON__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOTON_GUARDAR__VISIBLE = INPUT_BOTON__VISIBLE;
+	int BOTON_GUARDAR__INVISIBLE = INPUT_BOTON__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOTON_GUARDAR__HABILITADO = INPUT_BOTON__HABILITADO;
+	int BOTON_GUARDAR__DESHABILITADO = INPUT_BOTON__DESHABILITADO;
 
 	/**
 	 * The number of structural features of the '<em>Boton Guardar</em>' class.
@@ -863,22 +863,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int BOTON_CANCELAR__NAME = BOTON_GUARDAR__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOTON_CANCELAR__VISIBLE = BOTON_GUARDAR__VISIBLE;
+	int BOTON_CANCELAR__INVISIBLE = BOTON_GUARDAR__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOTON_CANCELAR__HABILITADO = BOTON_GUARDAR__HABILITADO;
+	int BOTON_CANCELAR__DESHABILITADO = BOTON_GUARDAR__DESHABILITADO;
 
 	/**
 	 * The number of structural features of the '<em>Boton Cancelar</em>' class.
@@ -918,22 +918,22 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	int BOTON_CUSTOM__NAME = INPUT_BOTON__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Visible</b></em>' attribute.
+	 * The feature id for the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOTON_CUSTOM__VISIBLE = INPUT_BOTON__VISIBLE;
+	int BOTON_CUSTOM__INVISIBLE = INPUT_BOTON__INVISIBLE;
 
 	/**
-	 * The feature id for the '<em><b>Habilitado</b></em>' attribute.
+	 * The feature id for the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOTON_CUSTOM__HABILITADO = INPUT_BOTON__HABILITADO;
+	int BOTON_CUSTOM__DESHABILITADO = INPUT_BOTON__DESHABILITADO;
 
 	/**
 	 * The feature id for the '<em><b>Funcion</b></em>' attribute.
@@ -1689,26 +1689,26 @@ public interface Formularios_DASOFTPackage extends EPackage {
 	EAttribute getInput_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Input#isVisible <em>Visible</em>}'.
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Input#isInvisible <em>Invisible</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Visible</em>'.
-	 * @see Formularios_DASOFT.Input#isVisible()
+	 * @return the meta object for the attribute '<em>Invisible</em>'.
+	 * @see Formularios_DASOFT.Input#isInvisible()
 	 * @see #getInput()
 	 * @generated
 	 */
-	EAttribute getInput_Visible();
+	EAttribute getInput_Invisible();
 
 	/**
-	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Input#isHabilitado <em>Habilitado</em>}'.
+	 * Returns the meta object for the attribute '{@link Formularios_DASOFT.Input#isDeshabilitado <em>Deshabilitado</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Habilitado</em>'.
-	 * @see Formularios_DASOFT.Input#isHabilitado()
+	 * @return the meta object for the attribute '<em>Deshabilitado</em>'.
+	 * @see Formularios_DASOFT.Input#isDeshabilitado()
 	 * @see #getInput()
 	 * @generated
 	 */
-	EAttribute getInput_Habilitado();
+	EAttribute getInput_Deshabilitado();
 
 	/**
 	 * Returns the meta object for class '{@link Formularios_DASOFT.InputTexto <em>Input Texto</em>}'.
@@ -2299,20 +2299,20 @@ public interface Formularios_DASOFTPackage extends EPackage {
 		EAttribute INPUT__NAME = eINSTANCE.getInput_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Visible</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Invisible</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INPUT__VISIBLE = eINSTANCE.getInput_Visible();
+		EAttribute INPUT__INVISIBLE = eINSTANCE.getInput_Invisible();
 
 		/**
-		 * The meta object literal for the '<em><b>Habilitado</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Deshabilitado</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INPUT__HABILITADO = eINSTANCE.getInput_Habilitado();
+		EAttribute INPUT__DESHABILITADO = eINSTANCE.getInput_Deshabilitado();
 
 		/**
 		 * The meta object literal for the '{@link Formularios_DASOFT.impl.InputTextoImpl <em>Input Texto</em>}' class.

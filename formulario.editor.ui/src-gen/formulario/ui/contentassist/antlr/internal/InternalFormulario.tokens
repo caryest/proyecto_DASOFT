@@ -26,11 +26,12 @@
 'columnas'=17
 'comprobacionAccion'=51
 'comprobacionCampos'=50
+'deshabilitado'=53
 'elemento'=41
 'entradas'=18
 'estado'=49
 'funcion'=35
-'habilitado'=53
+'invisible'=52
 'layout'=13
 'objetivo'=38
 'obligatorio'=54
@@ -39,7 +40,6 @@
 'seleccion'=28
 'valor'=24
 'valores'=27
-'visible'=52
 '{'=12
 '}'=14
 RULE_ANY_OTHER=10

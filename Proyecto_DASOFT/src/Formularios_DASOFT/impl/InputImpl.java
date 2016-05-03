@@ -21,8 +21,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link Formularios_DASOFT.impl.InputImpl#getName <em>Name</em>}</li>
- *   <li>{@link Formularios_DASOFT.impl.InputImpl#isVisible <em>Visible</em>}</li>
- *   <li>{@link Formularios_DASOFT.impl.InputImpl#isHabilitado <em>Habilitado</em>}</li>
+ *   <li>{@link Formularios_DASOFT.impl.InputImpl#isInvisible <em>Invisible</em>}</li>
+ *   <li>{@link Formularios_DASOFT.impl.InputImpl#isDeshabilitado <em>Deshabilitado</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,44 +49,44 @@ public abstract class InputImpl extends MinimalEObjectImpl.Container implements 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
+	 * The default value of the '{@link #isInvisible() <em>Invisible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isVisible()
+	 * @see #isInvisible()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean VISIBLE_EDEFAULT = false;
+	protected static final boolean INVISIBLE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isVisible() <em>Visible</em>}' attribute.
+	 * The cached value of the '{@link #isInvisible() <em>Invisible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isVisible()
+	 * @see #isInvisible()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean visible = VISIBLE_EDEFAULT;
+	protected boolean invisible = INVISIBLE_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #isHabilitado() <em>Habilitado</em>}' attribute.
+	 * The default value of the '{@link #isDeshabilitado() <em>Deshabilitado</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isHabilitado()
+	 * @see #isDeshabilitado()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean HABILITADO_EDEFAULT = false;
+	protected static final boolean DESHABILITADO_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isHabilitado() <em>Habilitado</em>}' attribute.
+	 * The cached value of the '{@link #isDeshabilitado() <em>Deshabilitado</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isHabilitado()
+	 * @see #isDeshabilitado()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean habilitado = HABILITADO_EDEFAULT;
+	protected boolean deshabilitado = DESHABILITADO_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,8 +133,8 @@ public abstract class InputImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isVisible() {
-		return visible;
+	public boolean isInvisible() {
+		return invisible;
 	}
 
 	/**
@@ -142,11 +142,11 @@ public abstract class InputImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVisible(boolean newVisible) {
-		boolean oldVisible = visible;
-		visible = newVisible;
+	public void setInvisible(boolean newInvisible) {
+		boolean oldInvisible = invisible;
+		invisible = newInvisible;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.INPUT__VISIBLE, oldVisible, visible));
+			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.INPUT__INVISIBLE, oldInvisible, invisible));
 	}
 
 	/**
@@ -154,8 +154,8 @@ public abstract class InputImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isHabilitado() {
-		return habilitado;
+	public boolean isDeshabilitado() {
+		return deshabilitado;
 	}
 
 	/**
@@ -163,11 +163,11 @@ public abstract class InputImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setHabilitado(boolean newHabilitado) {
-		boolean oldHabilitado = habilitado;
-		habilitado = newHabilitado;
+	public void setDeshabilitado(boolean newDeshabilitado) {
+		boolean oldDeshabilitado = deshabilitado;
+		deshabilitado = newDeshabilitado;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.INPUT__HABILITADO, oldHabilitado, habilitado));
+			eNotify(new ENotificationImpl(this, Notification.SET, Formularios_DASOFTPackage.INPUT__DESHABILITADO, oldDeshabilitado, deshabilitado));
 	}
 
 	/**
@@ -180,10 +180,10 @@ public abstract class InputImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case Formularios_DASOFTPackage.INPUT__NAME:
 				return getName();
-			case Formularios_DASOFTPackage.INPUT__VISIBLE:
-				return isVisible();
-			case Formularios_DASOFTPackage.INPUT__HABILITADO:
-				return isHabilitado();
+			case Formularios_DASOFTPackage.INPUT__INVISIBLE:
+				return isInvisible();
+			case Formularios_DASOFTPackage.INPUT__DESHABILITADO:
+				return isDeshabilitado();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -199,11 +199,11 @@ public abstract class InputImpl extends MinimalEObjectImpl.Container implements 
 			case Formularios_DASOFTPackage.INPUT__NAME:
 				setName((String)newValue);
 				return;
-			case Formularios_DASOFTPackage.INPUT__VISIBLE:
-				setVisible((Boolean)newValue);
+			case Formularios_DASOFTPackage.INPUT__INVISIBLE:
+				setInvisible((Boolean)newValue);
 				return;
-			case Formularios_DASOFTPackage.INPUT__HABILITADO:
-				setHabilitado((Boolean)newValue);
+			case Formularios_DASOFTPackage.INPUT__DESHABILITADO:
+				setDeshabilitado((Boolean)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -220,11 +220,11 @@ public abstract class InputImpl extends MinimalEObjectImpl.Container implements 
 			case Formularios_DASOFTPackage.INPUT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case Formularios_DASOFTPackage.INPUT__VISIBLE:
-				setVisible(VISIBLE_EDEFAULT);
+			case Formularios_DASOFTPackage.INPUT__INVISIBLE:
+				setInvisible(INVISIBLE_EDEFAULT);
 				return;
-			case Formularios_DASOFTPackage.INPUT__HABILITADO:
-				setHabilitado(HABILITADO_EDEFAULT);
+			case Formularios_DASOFTPackage.INPUT__DESHABILITADO:
+				setDeshabilitado(DESHABILITADO_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -240,10 +240,10 @@ public abstract class InputImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case Formularios_DASOFTPackage.INPUT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case Formularios_DASOFTPackage.INPUT__VISIBLE:
-				return visible != VISIBLE_EDEFAULT;
-			case Formularios_DASOFTPackage.INPUT__HABILITADO:
-				return habilitado != HABILITADO_EDEFAULT;
+			case Formularios_DASOFTPackage.INPUT__INVISIBLE:
+				return invisible != INVISIBLE_EDEFAULT;
+			case Formularios_DASOFTPackage.INPUT__DESHABILITADO:
+				return deshabilitado != DESHABILITADO_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -260,10 +260,10 @@ public abstract class InputImpl extends MinimalEObjectImpl.Container implements 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", visible: ");
-		result.append(visible);
-		result.append(", habilitado: ");
-		result.append(habilitado);
+		result.append(", invisible: ");
+		result.append(invisible);
+		result.append(", deshabilitado: ");
+		result.append(deshabilitado);
 		result.append(')');
 		return result.toString();
 	}

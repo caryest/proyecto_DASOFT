@@ -54,8 +54,8 @@ EInt returns ecore::EInt:
 
 InputTexto returns InputTexto:
 	{InputTexto}
-	(visible?='visible')?
-	(habilitado?='habilitado')?
+	(invisible?='invisible')?
+	(deshabilitado?='deshabilitado')?
 	(obligatorio?='obligatorio')?
 	'InputTexto'
 	name=EString
@@ -64,8 +64,8 @@ InputTexto returns InputTexto:
 	'}';
 
 InputRadio returns InputRadio:
-	(visible?='visible')?
-	(habilitado?='habilitado')?
+	(invisible?='invisible')?
+	(deshabilitado?='deshabilitado')?
 	'InputRadio'
 	name=EString
 	'{'
@@ -76,8 +76,8 @@ InputRadio returns InputRadio:
 
 InputCombo returns InputCombo:
 	{InputCombo}
-	(visible?='visible')?
-	(habilitado?='habilitado')?
+	(invisible?='invisible')?
+	(deshabilitado?='deshabilitado')?
 	'InputCombo'
 	name=EString
 	'{'
@@ -86,8 +86,8 @@ InputCombo returns InputCombo:
 	'}';
 
 InputCheck returns InputCheck:
-	(visible?='visible')?
-	(habilitado?='habilitado')?
+	(invisible?='invisible')?
+	(deshabilitado?='deshabilitado')?
 	'InputCheck'
 	name=EString
 	'{'
@@ -98,28 +98,28 @@ InputCheck returns InputCheck:
 
 BotonValidar returns BotonValidar:
 	{BotonValidar}
-	(visible?='visible')?
-	(habilitado?='habilitado')?
+	(invisible?='invisible')?
+	(deshabilitado?='deshabilitado')?
 	'BotonValidar'
 	name=EString;
 
 BotonGuardar_Impl returns BotonGuardar:
 	{BotonGuardar}
-	(visible?='visible')?
-	(habilitado?='habilitado')?
+	(invisible?='invisible')?
+	(deshabilitado?='deshabilitado')?
 	'BotonGuardar'
 	name=EString;
 
 BotonCancelar returns BotonCancelar:
 	{BotonCancelar}
-	(visible?='visible')?
-	(habilitado?='habilitado')?
+	(invisible?='invisible')?
+	(deshabilitado?='deshabilitado')?
 	'BotonCancelar'
 	name=EString;
 
 BotonCustom returns BotonCustom:
-	(visible?='visible')?
-	(habilitado?='habilitado')?
+	(invisible?='invisible')?
+	(deshabilitado?='deshabilitado')?
 	'BotonCustom'
 	name=EString
 	'{'

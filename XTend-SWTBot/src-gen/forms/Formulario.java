@@ -20,22 +20,15 @@ import org.eclipse.swt.widgets.Text;
 public class Formulario {
 	
 	// Añadimos los elementos de la interfaz
-	// CASO TEXTO
 	Label labeltexto1;
 	Text  textotexto1;
-		// CASO RADIO
 	Button[] radioradio1;
-		 // CASO COMBO
 	Combo combocombo1;
-	// CASO CHECKBOX
 	Button[] checkcheck1;
-		// CASO BOTON
 	private Button botonvalidar;
-		// CASO BOTON
 	private Button botoncancelar;
-		// CASO BOTON
 	private Button botonguardar;
-				
+			
 	public static void main(String[] args) {
 		Display display = new Display();
 		Shell   shell   = new Formulario().showForm(display);
@@ -49,7 +42,7 @@ public class Formulario {
 		
 		Shell shell = new Shell(display);
 		shell.setText  ("Prueba2");
-		shell.setLayout(new GridLayout(3, false));
+		shell.setLayout(new GridLayout(2, false));
 		
 		// Añadimos los elementos de la interfaz
 		
@@ -80,7 +73,7 @@ public class Formulario {
 				
 		 // CASO COMBO
 		combocombo1 = new Combo(shell, SWT.SIMPLE);
-		 combocombo1.setText("combo1");
+		combocombo1.setText("combo1");
 		combocombo1.add("val1");
 		combocombo1.add("val2");
 		
@@ -91,20 +84,28 @@ public class Formulario {
 		
 		checkcheck1[0] = new Button(contentCheckcheck1, SWT.CHECK);
 		checkcheck1[0].setText("val1");
+		checkcheck1[0].setEnabled(false);
 		checkcheck1[1] = new Button(contentCheckcheck1, SWT.CHECK);
 		checkcheck1[1].setText("val2");
+		checkcheck1[1].setEnabled(false);
 				
 		// CASO BOTON
 		botonvalidar = new Button(shell, SWT.BUTTON1);
 		botonvalidar.setText("validar");
+		botonvalidar.setEnabled(false);
+		botonvalidar.setVisible(false);
 				
 		// CASO BOTON
 		botoncancelar = new Button(shell, SWT.BUTTON1);
 		botoncancelar.setText("cancelar");
+		botoncancelar.setEnabled(false);
+		botoncancelar.setVisible(false);
 				
 		// CASO BOTON
 		botonguardar = new Button(shell, SWT.BUTTON1);
 		botonguardar.setText("guardar");
+		botonguardar.setEnabled(false);
+		botonguardar.setVisible(false);
 				
 		// Funciones Reaccion
 				// CASO RADIO

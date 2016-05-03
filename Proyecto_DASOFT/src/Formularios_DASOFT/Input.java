@@ -14,8 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link Formularios_DASOFT.Input#getName <em>Name</em>}</li>
- *   <li>{@link Formularios_DASOFT.Input#isVisible <em>Visible</em>}</li>
- *   <li>{@link Formularios_DASOFT.Input#isHabilitado <em>Habilitado</em>}</li>
+ *   <li>{@link Formularios_DASOFT.Input#isInvisible <em>Invisible</em>}</li>
+ *   <li>{@link Formularios_DASOFT.Input#isDeshabilitado <em>Deshabilitado</em>}</li>
  * </ul>
  *
  * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInput()
@@ -51,55 +51,55 @@ public interface Input extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Visible</b></em>' attribute.
+	 * Returns the value of the '<em><b>Invisible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Visible</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Invisible</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Visible</em>' attribute.
-	 * @see #setVisible(boolean)
-	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInput_Visible()
+	 * @return the value of the '<em>Invisible</em>' attribute.
+	 * @see #setInvisible(boolean)
+	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInput_Invisible()
 	 * @model
 	 * @generated
 	 */
-	boolean isVisible();
+	boolean isInvisible();
 
 	/**
-	 * Sets the value of the '{@link Formularios_DASOFT.Input#isVisible <em>Visible</em>}' attribute.
+	 * Sets the value of the '{@link Formularios_DASOFT.Input#isInvisible <em>Invisible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Visible</em>' attribute.
-	 * @see #isVisible()
+	 * @param value the new value of the '<em>Invisible</em>' attribute.
+	 * @see #isInvisible()
 	 * @generated
 	 */
-	void setVisible(boolean value);
+	void setInvisible(boolean value);
 
 	/**
-	 * Returns the value of the '<em><b>Habilitado</b></em>' attribute.
+	 * Returns the value of the '<em><b>Deshabilitado</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Habilitado</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Deshabilitado</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Habilitado</em>' attribute.
-	 * @see #setHabilitado(boolean)
-	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInput_Habilitado()
+	 * @return the value of the '<em>Deshabilitado</em>' attribute.
+	 * @see #setDeshabilitado(boolean)
+	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInput_Deshabilitado()
 	 * @model
 	 * @generated
 	 */
-	boolean isHabilitado();
+	boolean isDeshabilitado();
 
 	/**
-	 * Sets the value of the '{@link Formularios_DASOFT.Input#isHabilitado <em>Habilitado</em>}' attribute.
+	 * Sets the value of the '{@link Formularios_DASOFT.Input#isDeshabilitado <em>Deshabilitado</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Habilitado</em>' attribute.
-	 * @see #isHabilitado()
+	 * @param value the new value of the '<em>Deshabilitado</em>' attribute.
+	 * @see #isDeshabilitado()
 	 * @generated
 	 */
-	void setHabilitado(boolean value);
+	void setDeshabilitado(boolean value);
 
 } // Input

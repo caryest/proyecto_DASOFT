@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFormularioParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Formulario'", "'{'", "'layout'", "'}'", "'pruebas'", "'Layout'", "'columnas'", "'entradas'", "','", "'PruebaInterfaz'", "'acciones'", "'-'", "'InputTexto'", "'valor'", "'InputRadio'", "'reaccion'", "'valores'", "'seleccion'", "'InputCombo'", "'InputCheck'", "'BotonValidar'", "'BotonGuardar'", "'BotonCancelar'", "'BotonCustom'", "'funcion'", "'ReaccionVisible'", "'activacion'", "'objetivo'", "'ReaccionHabilitado'", "'AccionValor'", "'elemento'", "'asercion'", "'AccionSeleccion'", "'AccionPulsacion'", "'AsercionInvisible'", "'AsercionHabilitado'", "'AsercionValor'", "'AsercionSeleccion'", "'estado'", "'comprobacionCampos'", "'comprobacionAccion'", "'visible'", "'habilitado'", "'obligatorio'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Formulario'", "'{'", "'layout'", "'}'", "'pruebas'", "'Layout'", "'columnas'", "'entradas'", "','", "'PruebaInterfaz'", "'acciones'", "'-'", "'InputTexto'", "'valor'", "'InputRadio'", "'reaccion'", "'valores'", "'seleccion'", "'InputCombo'", "'InputCheck'", "'BotonValidar'", "'BotonGuardar'", "'BotonCancelar'", "'BotonCustom'", "'funcion'", "'ReaccionVisible'", "'activacion'", "'objetivo'", "'ReaccionHabilitado'", "'AccionValor'", "'elemento'", "'asercion'", "'AccionSeleccion'", "'AccionPulsacion'", "'AsercionInvisible'", "'AsercionHabilitado'", "'AsercionValor'", "'AsercionSeleccion'", "'estado'", "'comprobacionCampos'", "'comprobacionAccion'", "'invisible'", "'deshabilitado'", "'obligatorio'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -5964,20 +5964,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InputTexto__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2244:1: rule__InputTexto__Group__1__Impl : ( ( rule__InputTexto__VisibleAssignment_1 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2244:1: rule__InputTexto__Group__1__Impl : ( ( rule__InputTexto__InvisibleAssignment_1 )? ) ;
     public final void rule__InputTexto__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2248:1: ( ( ( rule__InputTexto__VisibleAssignment_1 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2249:1: ( ( rule__InputTexto__VisibleAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2248:1: ( ( ( rule__InputTexto__InvisibleAssignment_1 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2249:1: ( ( rule__InputTexto__InvisibleAssignment_1 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2249:1: ( ( rule__InputTexto__VisibleAssignment_1 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2250:1: ( rule__InputTexto__VisibleAssignment_1 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2249:1: ( ( rule__InputTexto__InvisibleAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2250:1: ( rule__InputTexto__InvisibleAssignment_1 )?
             {
-             before(grammarAccess.getInputTextoAccess().getVisibleAssignment_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2251:1: ( rule__InputTexto__VisibleAssignment_1 )?
+             before(grammarAccess.getInputTextoAccess().getInvisibleAssignment_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2251:1: ( rule__InputTexto__InvisibleAssignment_1 )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -5986,10 +5986,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt14) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2251:2: rule__InputTexto__VisibleAssignment_1
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2251:2: rule__InputTexto__InvisibleAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__InputTexto__VisibleAssignment_1_in_rule__InputTexto__Group__1__Impl4563);
-                    rule__InputTexto__VisibleAssignment_1();
+                    pushFollow(FollowSets000.FOLLOW_rule__InputTexto__InvisibleAssignment_1_in_rule__InputTexto__Group__1__Impl4563);
+                    rule__InputTexto__InvisibleAssignment_1();
 
                     state._fsp--;
 
@@ -5999,7 +5999,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getInputTextoAccess().getVisibleAssignment_1()); 
+             after(grammarAccess.getInputTextoAccess().getInvisibleAssignment_1()); 
 
             }
 
@@ -6060,20 +6060,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InputTexto__Group__2__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2273:1: rule__InputTexto__Group__2__Impl : ( ( rule__InputTexto__HabilitadoAssignment_2 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2273:1: rule__InputTexto__Group__2__Impl : ( ( rule__InputTexto__DeshabilitadoAssignment_2 )? ) ;
     public final void rule__InputTexto__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2277:1: ( ( ( rule__InputTexto__HabilitadoAssignment_2 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2278:1: ( ( rule__InputTexto__HabilitadoAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2277:1: ( ( ( rule__InputTexto__DeshabilitadoAssignment_2 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2278:1: ( ( rule__InputTexto__DeshabilitadoAssignment_2 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2278:1: ( ( rule__InputTexto__HabilitadoAssignment_2 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2279:1: ( rule__InputTexto__HabilitadoAssignment_2 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2278:1: ( ( rule__InputTexto__DeshabilitadoAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2279:1: ( rule__InputTexto__DeshabilitadoAssignment_2 )?
             {
-             before(grammarAccess.getInputTextoAccess().getHabilitadoAssignment_2()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2280:1: ( rule__InputTexto__HabilitadoAssignment_2 )?
+             before(grammarAccess.getInputTextoAccess().getDeshabilitadoAssignment_2()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2280:1: ( rule__InputTexto__DeshabilitadoAssignment_2 )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -6082,10 +6082,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt15) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2280:2: rule__InputTexto__HabilitadoAssignment_2
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2280:2: rule__InputTexto__DeshabilitadoAssignment_2
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__InputTexto__HabilitadoAssignment_2_in_rule__InputTexto__Group__2__Impl4624);
-                    rule__InputTexto__HabilitadoAssignment_2();
+                    pushFollow(FollowSets000.FOLLOW_rule__InputTexto__DeshabilitadoAssignment_2_in_rule__InputTexto__Group__2__Impl4624);
+                    rule__InputTexto__DeshabilitadoAssignment_2();
 
                     state._fsp--;
 
@@ -6095,7 +6095,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getInputTextoAccess().getHabilitadoAssignment_2()); 
+             after(grammarAccess.getInputTextoAccess().getDeshabilitadoAssignment_2()); 
 
             }
 
@@ -6808,20 +6808,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InputRadio__Group__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2562:1: rule__InputRadio__Group__0__Impl : ( ( rule__InputRadio__VisibleAssignment_0 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2562:1: rule__InputRadio__Group__0__Impl : ( ( rule__InputRadio__InvisibleAssignment_0 )? ) ;
     public final void rule__InputRadio__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2566:1: ( ( ( rule__InputRadio__VisibleAssignment_0 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2567:1: ( ( rule__InputRadio__VisibleAssignment_0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2566:1: ( ( ( rule__InputRadio__InvisibleAssignment_0 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2567:1: ( ( rule__InputRadio__InvisibleAssignment_0 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2567:1: ( ( rule__InputRadio__VisibleAssignment_0 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2568:1: ( rule__InputRadio__VisibleAssignment_0 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2567:1: ( ( rule__InputRadio__InvisibleAssignment_0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2568:1: ( rule__InputRadio__InvisibleAssignment_0 )?
             {
-             before(grammarAccess.getInputRadioAccess().getVisibleAssignment_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2569:1: ( rule__InputRadio__VisibleAssignment_0 )?
+             before(grammarAccess.getInputRadioAccess().getInvisibleAssignment_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2569:1: ( rule__InputRadio__InvisibleAssignment_0 )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -6830,10 +6830,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt18) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2569:2: rule__InputRadio__VisibleAssignment_0
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2569:2: rule__InputRadio__InvisibleAssignment_0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__InputRadio__VisibleAssignment_0_in_rule__InputRadio__Group__0__Impl5191);
-                    rule__InputRadio__VisibleAssignment_0();
+                    pushFollow(FollowSets000.FOLLOW_rule__InputRadio__InvisibleAssignment_0_in_rule__InputRadio__Group__0__Impl5191);
+                    rule__InputRadio__InvisibleAssignment_0();
 
                     state._fsp--;
 
@@ -6843,7 +6843,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getInputRadioAccess().getVisibleAssignment_0()); 
+             after(grammarAccess.getInputRadioAccess().getInvisibleAssignment_0()); 
 
             }
 
@@ -6904,20 +6904,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InputRadio__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2591:1: rule__InputRadio__Group__1__Impl : ( ( rule__InputRadio__HabilitadoAssignment_1 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2591:1: rule__InputRadio__Group__1__Impl : ( ( rule__InputRadio__DeshabilitadoAssignment_1 )? ) ;
     public final void rule__InputRadio__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2595:1: ( ( ( rule__InputRadio__HabilitadoAssignment_1 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2596:1: ( ( rule__InputRadio__HabilitadoAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2595:1: ( ( ( rule__InputRadio__DeshabilitadoAssignment_1 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2596:1: ( ( rule__InputRadio__DeshabilitadoAssignment_1 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2596:1: ( ( rule__InputRadio__HabilitadoAssignment_1 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2597:1: ( rule__InputRadio__HabilitadoAssignment_1 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2596:1: ( ( rule__InputRadio__DeshabilitadoAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2597:1: ( rule__InputRadio__DeshabilitadoAssignment_1 )?
             {
-             before(grammarAccess.getInputRadioAccess().getHabilitadoAssignment_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2598:1: ( rule__InputRadio__HabilitadoAssignment_1 )?
+             before(grammarAccess.getInputRadioAccess().getDeshabilitadoAssignment_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2598:1: ( rule__InputRadio__DeshabilitadoAssignment_1 )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -6926,10 +6926,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt19) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2598:2: rule__InputRadio__HabilitadoAssignment_1
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:2598:2: rule__InputRadio__DeshabilitadoAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__InputRadio__HabilitadoAssignment_1_in_rule__InputRadio__Group__1__Impl5252);
-                    rule__InputRadio__HabilitadoAssignment_1();
+                    pushFollow(FollowSets000.FOLLOW_rule__InputRadio__DeshabilitadoAssignment_1_in_rule__InputRadio__Group__1__Impl5252);
+                    rule__InputRadio__DeshabilitadoAssignment_1();
 
                     state._fsp--;
 
@@ -6939,7 +6939,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getInputRadioAccess().getHabilitadoAssignment_1()); 
+             after(grammarAccess.getInputRadioAccess().getDeshabilitadoAssignment_1()); 
 
             }
 
@@ -8450,20 +8450,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InputCombo__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3196:1: rule__InputCombo__Group__1__Impl : ( ( rule__InputCombo__VisibleAssignment_1 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3196:1: rule__InputCombo__Group__1__Impl : ( ( rule__InputCombo__InvisibleAssignment_1 )? ) ;
     public final void rule__InputCombo__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3200:1: ( ( ( rule__InputCombo__VisibleAssignment_1 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3201:1: ( ( rule__InputCombo__VisibleAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3200:1: ( ( ( rule__InputCombo__InvisibleAssignment_1 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3201:1: ( ( rule__InputCombo__InvisibleAssignment_1 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3201:1: ( ( rule__InputCombo__VisibleAssignment_1 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3202:1: ( rule__InputCombo__VisibleAssignment_1 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3201:1: ( ( rule__InputCombo__InvisibleAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3202:1: ( rule__InputCombo__InvisibleAssignment_1 )?
             {
-             before(grammarAccess.getInputComboAccess().getVisibleAssignment_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3203:1: ( rule__InputCombo__VisibleAssignment_1 )?
+             before(grammarAccess.getInputComboAccess().getInvisibleAssignment_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3203:1: ( rule__InputCombo__InvisibleAssignment_1 )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -8472,10 +8472,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt23) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3203:2: rule__InputCombo__VisibleAssignment_1
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3203:2: rule__InputCombo__InvisibleAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__InputCombo__VisibleAssignment_1_in_rule__InputCombo__Group__1__Impl6441);
-                    rule__InputCombo__VisibleAssignment_1();
+                    pushFollow(FollowSets000.FOLLOW_rule__InputCombo__InvisibleAssignment_1_in_rule__InputCombo__Group__1__Impl6441);
+                    rule__InputCombo__InvisibleAssignment_1();
 
                     state._fsp--;
 
@@ -8485,7 +8485,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getInputComboAccess().getVisibleAssignment_1()); 
+             after(grammarAccess.getInputComboAccess().getInvisibleAssignment_1()); 
 
             }
 
@@ -8546,20 +8546,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InputCombo__Group__2__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3225:1: rule__InputCombo__Group__2__Impl : ( ( rule__InputCombo__HabilitadoAssignment_2 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3225:1: rule__InputCombo__Group__2__Impl : ( ( rule__InputCombo__DeshabilitadoAssignment_2 )? ) ;
     public final void rule__InputCombo__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3229:1: ( ( ( rule__InputCombo__HabilitadoAssignment_2 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3230:1: ( ( rule__InputCombo__HabilitadoAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3229:1: ( ( ( rule__InputCombo__DeshabilitadoAssignment_2 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3230:1: ( ( rule__InputCombo__DeshabilitadoAssignment_2 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3230:1: ( ( rule__InputCombo__HabilitadoAssignment_2 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3231:1: ( rule__InputCombo__HabilitadoAssignment_2 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3230:1: ( ( rule__InputCombo__DeshabilitadoAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3231:1: ( rule__InputCombo__DeshabilitadoAssignment_2 )?
             {
-             before(grammarAccess.getInputComboAccess().getHabilitadoAssignment_2()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3232:1: ( rule__InputCombo__HabilitadoAssignment_2 )?
+             before(grammarAccess.getInputComboAccess().getDeshabilitadoAssignment_2()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3232:1: ( rule__InputCombo__DeshabilitadoAssignment_2 )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -8568,10 +8568,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt24) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3232:2: rule__InputCombo__HabilitadoAssignment_2
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3232:2: rule__InputCombo__DeshabilitadoAssignment_2
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__InputCombo__HabilitadoAssignment_2_in_rule__InputCombo__Group__2__Impl6502);
-                    rule__InputCombo__HabilitadoAssignment_2();
+                    pushFollow(FollowSets000.FOLLOW_rule__InputCombo__DeshabilitadoAssignment_2_in_rule__InputCombo__Group__2__Impl6502);
+                    rule__InputCombo__DeshabilitadoAssignment_2();
 
                     state._fsp--;
 
@@ -8581,7 +8581,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getInputComboAccess().getHabilitadoAssignment_2()); 
+             after(grammarAccess.getInputComboAccess().getDeshabilitadoAssignment_2()); 
 
             }
 
@@ -9857,20 +9857,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InputCheck__Group__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3737:1: rule__InputCheck__Group__0__Impl : ( ( rule__InputCheck__VisibleAssignment_0 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3737:1: rule__InputCheck__Group__0__Impl : ( ( rule__InputCheck__InvisibleAssignment_0 )? ) ;
     public final void rule__InputCheck__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3741:1: ( ( ( rule__InputCheck__VisibleAssignment_0 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3742:1: ( ( rule__InputCheck__VisibleAssignment_0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3741:1: ( ( ( rule__InputCheck__InvisibleAssignment_0 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3742:1: ( ( rule__InputCheck__InvisibleAssignment_0 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3742:1: ( ( rule__InputCheck__VisibleAssignment_0 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3743:1: ( rule__InputCheck__VisibleAssignment_0 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3742:1: ( ( rule__InputCheck__InvisibleAssignment_0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3743:1: ( rule__InputCheck__InvisibleAssignment_0 )?
             {
-             before(grammarAccess.getInputCheckAccess().getVisibleAssignment_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3744:1: ( rule__InputCheck__VisibleAssignment_0 )?
+             before(grammarAccess.getInputCheckAccess().getInvisibleAssignment_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3744:1: ( rule__InputCheck__InvisibleAssignment_0 )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -9879,10 +9879,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt28) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3744:2: rule__InputCheck__VisibleAssignment_0
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3744:2: rule__InputCheck__InvisibleAssignment_0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__InputCheck__VisibleAssignment_0_in_rule__InputCheck__Group__0__Impl7506);
-                    rule__InputCheck__VisibleAssignment_0();
+                    pushFollow(FollowSets000.FOLLOW_rule__InputCheck__InvisibleAssignment_0_in_rule__InputCheck__Group__0__Impl7506);
+                    rule__InputCheck__InvisibleAssignment_0();
 
                     state._fsp--;
 
@@ -9892,7 +9892,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getInputCheckAccess().getVisibleAssignment_0()); 
+             after(grammarAccess.getInputCheckAccess().getInvisibleAssignment_0()); 
 
             }
 
@@ -9953,20 +9953,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__InputCheck__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3766:1: rule__InputCheck__Group__1__Impl : ( ( rule__InputCheck__HabilitadoAssignment_1 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3766:1: rule__InputCheck__Group__1__Impl : ( ( rule__InputCheck__DeshabilitadoAssignment_1 )? ) ;
     public final void rule__InputCheck__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3770:1: ( ( ( rule__InputCheck__HabilitadoAssignment_1 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3771:1: ( ( rule__InputCheck__HabilitadoAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3770:1: ( ( ( rule__InputCheck__DeshabilitadoAssignment_1 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3771:1: ( ( rule__InputCheck__DeshabilitadoAssignment_1 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3771:1: ( ( rule__InputCheck__HabilitadoAssignment_1 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3772:1: ( rule__InputCheck__HabilitadoAssignment_1 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3771:1: ( ( rule__InputCheck__DeshabilitadoAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3772:1: ( rule__InputCheck__DeshabilitadoAssignment_1 )?
             {
-             before(grammarAccess.getInputCheckAccess().getHabilitadoAssignment_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3773:1: ( rule__InputCheck__HabilitadoAssignment_1 )?
+             before(grammarAccess.getInputCheckAccess().getDeshabilitadoAssignment_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3773:1: ( rule__InputCheck__DeshabilitadoAssignment_1 )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -9975,10 +9975,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt29) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3773:2: rule__InputCheck__HabilitadoAssignment_1
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:3773:2: rule__InputCheck__DeshabilitadoAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__InputCheck__HabilitadoAssignment_1_in_rule__InputCheck__Group__1__Impl7567);
-                    rule__InputCheck__HabilitadoAssignment_1();
+                    pushFollow(FollowSets000.FOLLOW_rule__InputCheck__DeshabilitadoAssignment_1_in_rule__InputCheck__Group__1__Impl7567);
+                    rule__InputCheck__DeshabilitadoAssignment_1();
 
                     state._fsp--;
 
@@ -9988,7 +9988,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getInputCheckAccess().getHabilitadoAssignment_1()); 
+             after(grammarAccess.getInputCheckAccess().getDeshabilitadoAssignment_1()); 
 
             }
 
@@ -11907,20 +11907,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__BotonValidar__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4531:1: rule__BotonValidar__Group__1__Impl : ( ( rule__BotonValidar__VisibleAssignment_1 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4531:1: rule__BotonValidar__Group__1__Impl : ( ( rule__BotonValidar__InvisibleAssignment_1 )? ) ;
     public final void rule__BotonValidar__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4535:1: ( ( ( rule__BotonValidar__VisibleAssignment_1 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4536:1: ( ( rule__BotonValidar__VisibleAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4535:1: ( ( ( rule__BotonValidar__InvisibleAssignment_1 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4536:1: ( ( rule__BotonValidar__InvisibleAssignment_1 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4536:1: ( ( rule__BotonValidar__VisibleAssignment_1 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4537:1: ( rule__BotonValidar__VisibleAssignment_1 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4536:1: ( ( rule__BotonValidar__InvisibleAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4537:1: ( rule__BotonValidar__InvisibleAssignment_1 )?
             {
-             before(grammarAccess.getBotonValidarAccess().getVisibleAssignment_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4538:1: ( rule__BotonValidar__VisibleAssignment_1 )?
+             before(grammarAccess.getBotonValidarAccess().getInvisibleAssignment_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4538:1: ( rule__BotonValidar__InvisibleAssignment_1 )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -11929,10 +11929,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt34) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4538:2: rule__BotonValidar__VisibleAssignment_1
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4538:2: rule__BotonValidar__InvisibleAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__BotonValidar__VisibleAssignment_1_in_rule__BotonValidar__Group__1__Impl9070);
-                    rule__BotonValidar__VisibleAssignment_1();
+                    pushFollow(FollowSets000.FOLLOW_rule__BotonValidar__InvisibleAssignment_1_in_rule__BotonValidar__Group__1__Impl9070);
+                    rule__BotonValidar__InvisibleAssignment_1();
 
                     state._fsp--;
 
@@ -11942,7 +11942,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getBotonValidarAccess().getVisibleAssignment_1()); 
+             after(grammarAccess.getBotonValidarAccess().getInvisibleAssignment_1()); 
 
             }
 
@@ -12003,20 +12003,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__BotonValidar__Group__2__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4560:1: rule__BotonValidar__Group__2__Impl : ( ( rule__BotonValidar__HabilitadoAssignment_2 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4560:1: rule__BotonValidar__Group__2__Impl : ( ( rule__BotonValidar__DeshabilitadoAssignment_2 )? ) ;
     public final void rule__BotonValidar__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4564:1: ( ( ( rule__BotonValidar__HabilitadoAssignment_2 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4565:1: ( ( rule__BotonValidar__HabilitadoAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4564:1: ( ( ( rule__BotonValidar__DeshabilitadoAssignment_2 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4565:1: ( ( rule__BotonValidar__DeshabilitadoAssignment_2 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4565:1: ( ( rule__BotonValidar__HabilitadoAssignment_2 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4566:1: ( rule__BotonValidar__HabilitadoAssignment_2 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4565:1: ( ( rule__BotonValidar__DeshabilitadoAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4566:1: ( rule__BotonValidar__DeshabilitadoAssignment_2 )?
             {
-             before(grammarAccess.getBotonValidarAccess().getHabilitadoAssignment_2()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4567:1: ( rule__BotonValidar__HabilitadoAssignment_2 )?
+             before(grammarAccess.getBotonValidarAccess().getDeshabilitadoAssignment_2()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4567:1: ( rule__BotonValidar__DeshabilitadoAssignment_2 )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -12025,10 +12025,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt35) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4567:2: rule__BotonValidar__HabilitadoAssignment_2
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4567:2: rule__BotonValidar__DeshabilitadoAssignment_2
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__BotonValidar__HabilitadoAssignment_2_in_rule__BotonValidar__Group__2__Impl9131);
-                    rule__BotonValidar__HabilitadoAssignment_2();
+                    pushFollow(FollowSets000.FOLLOW_rule__BotonValidar__DeshabilitadoAssignment_2_in_rule__BotonValidar__Group__2__Impl9131);
+                    rule__BotonValidar__DeshabilitadoAssignment_2();
 
                     state._fsp--;
 
@@ -12038,7 +12038,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getBotonValidarAccess().getHabilitadoAssignment_2()); 
+             after(grammarAccess.getBotonValidarAccess().getDeshabilitadoAssignment_2()); 
 
             }
 
@@ -12329,20 +12329,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__BotonGuardar_Impl__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4689:1: rule__BotonGuardar_Impl__Group__1__Impl : ( ( rule__BotonGuardar_Impl__VisibleAssignment_1 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4689:1: rule__BotonGuardar_Impl__Group__1__Impl : ( ( rule__BotonGuardar_Impl__InvisibleAssignment_1 )? ) ;
     public final void rule__BotonGuardar_Impl__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4693:1: ( ( ( rule__BotonGuardar_Impl__VisibleAssignment_1 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4694:1: ( ( rule__BotonGuardar_Impl__VisibleAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4693:1: ( ( ( rule__BotonGuardar_Impl__InvisibleAssignment_1 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4694:1: ( ( rule__BotonGuardar_Impl__InvisibleAssignment_1 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4694:1: ( ( rule__BotonGuardar_Impl__VisibleAssignment_1 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4695:1: ( rule__BotonGuardar_Impl__VisibleAssignment_1 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4694:1: ( ( rule__BotonGuardar_Impl__InvisibleAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4695:1: ( rule__BotonGuardar_Impl__InvisibleAssignment_1 )?
             {
-             before(grammarAccess.getBotonGuardar_ImplAccess().getVisibleAssignment_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4696:1: ( rule__BotonGuardar_Impl__VisibleAssignment_1 )?
+             before(grammarAccess.getBotonGuardar_ImplAccess().getInvisibleAssignment_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4696:1: ( rule__BotonGuardar_Impl__InvisibleAssignment_1 )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -12351,10 +12351,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt36) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4696:2: rule__BotonGuardar_Impl__VisibleAssignment_1
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4696:2: rule__BotonGuardar_Impl__InvisibleAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__BotonGuardar_Impl__VisibleAssignment_1_in_rule__BotonGuardar_Impl__Group__1__Impl9382);
-                    rule__BotonGuardar_Impl__VisibleAssignment_1();
+                    pushFollow(FollowSets000.FOLLOW_rule__BotonGuardar_Impl__InvisibleAssignment_1_in_rule__BotonGuardar_Impl__Group__1__Impl9382);
+                    rule__BotonGuardar_Impl__InvisibleAssignment_1();
 
                     state._fsp--;
 
@@ -12364,7 +12364,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getBotonGuardar_ImplAccess().getVisibleAssignment_1()); 
+             after(grammarAccess.getBotonGuardar_ImplAccess().getInvisibleAssignment_1()); 
 
             }
 
@@ -12425,20 +12425,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__BotonGuardar_Impl__Group__2__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4718:1: rule__BotonGuardar_Impl__Group__2__Impl : ( ( rule__BotonGuardar_Impl__HabilitadoAssignment_2 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4718:1: rule__BotonGuardar_Impl__Group__2__Impl : ( ( rule__BotonGuardar_Impl__DeshabilitadoAssignment_2 )? ) ;
     public final void rule__BotonGuardar_Impl__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4722:1: ( ( ( rule__BotonGuardar_Impl__HabilitadoAssignment_2 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4723:1: ( ( rule__BotonGuardar_Impl__HabilitadoAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4722:1: ( ( ( rule__BotonGuardar_Impl__DeshabilitadoAssignment_2 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4723:1: ( ( rule__BotonGuardar_Impl__DeshabilitadoAssignment_2 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4723:1: ( ( rule__BotonGuardar_Impl__HabilitadoAssignment_2 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4724:1: ( rule__BotonGuardar_Impl__HabilitadoAssignment_2 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4723:1: ( ( rule__BotonGuardar_Impl__DeshabilitadoAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4724:1: ( rule__BotonGuardar_Impl__DeshabilitadoAssignment_2 )?
             {
-             before(grammarAccess.getBotonGuardar_ImplAccess().getHabilitadoAssignment_2()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4725:1: ( rule__BotonGuardar_Impl__HabilitadoAssignment_2 )?
+             before(grammarAccess.getBotonGuardar_ImplAccess().getDeshabilitadoAssignment_2()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4725:1: ( rule__BotonGuardar_Impl__DeshabilitadoAssignment_2 )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -12447,10 +12447,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt37) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4725:2: rule__BotonGuardar_Impl__HabilitadoAssignment_2
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4725:2: rule__BotonGuardar_Impl__DeshabilitadoAssignment_2
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__BotonGuardar_Impl__HabilitadoAssignment_2_in_rule__BotonGuardar_Impl__Group__2__Impl9443);
-                    rule__BotonGuardar_Impl__HabilitadoAssignment_2();
+                    pushFollow(FollowSets000.FOLLOW_rule__BotonGuardar_Impl__DeshabilitadoAssignment_2_in_rule__BotonGuardar_Impl__Group__2__Impl9443);
+                    rule__BotonGuardar_Impl__DeshabilitadoAssignment_2();
 
                     state._fsp--;
 
@@ -12460,7 +12460,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getBotonGuardar_ImplAccess().getHabilitadoAssignment_2()); 
+             after(grammarAccess.getBotonGuardar_ImplAccess().getDeshabilitadoAssignment_2()); 
 
             }
 
@@ -12751,20 +12751,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__BotonCancelar__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4847:1: rule__BotonCancelar__Group__1__Impl : ( ( rule__BotonCancelar__VisibleAssignment_1 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4847:1: rule__BotonCancelar__Group__1__Impl : ( ( rule__BotonCancelar__InvisibleAssignment_1 )? ) ;
     public final void rule__BotonCancelar__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4851:1: ( ( ( rule__BotonCancelar__VisibleAssignment_1 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4852:1: ( ( rule__BotonCancelar__VisibleAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4851:1: ( ( ( rule__BotonCancelar__InvisibleAssignment_1 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4852:1: ( ( rule__BotonCancelar__InvisibleAssignment_1 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4852:1: ( ( rule__BotonCancelar__VisibleAssignment_1 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4853:1: ( rule__BotonCancelar__VisibleAssignment_1 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4852:1: ( ( rule__BotonCancelar__InvisibleAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4853:1: ( rule__BotonCancelar__InvisibleAssignment_1 )?
             {
-             before(grammarAccess.getBotonCancelarAccess().getVisibleAssignment_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4854:1: ( rule__BotonCancelar__VisibleAssignment_1 )?
+             before(grammarAccess.getBotonCancelarAccess().getInvisibleAssignment_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4854:1: ( rule__BotonCancelar__InvisibleAssignment_1 )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -12773,10 +12773,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt38) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4854:2: rule__BotonCancelar__VisibleAssignment_1
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4854:2: rule__BotonCancelar__InvisibleAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__BotonCancelar__VisibleAssignment_1_in_rule__BotonCancelar__Group__1__Impl9694);
-                    rule__BotonCancelar__VisibleAssignment_1();
+                    pushFollow(FollowSets000.FOLLOW_rule__BotonCancelar__InvisibleAssignment_1_in_rule__BotonCancelar__Group__1__Impl9694);
+                    rule__BotonCancelar__InvisibleAssignment_1();
 
                     state._fsp--;
 
@@ -12786,7 +12786,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getBotonCancelarAccess().getVisibleAssignment_1()); 
+             after(grammarAccess.getBotonCancelarAccess().getInvisibleAssignment_1()); 
 
             }
 
@@ -12847,20 +12847,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__BotonCancelar__Group__2__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4876:1: rule__BotonCancelar__Group__2__Impl : ( ( rule__BotonCancelar__HabilitadoAssignment_2 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4876:1: rule__BotonCancelar__Group__2__Impl : ( ( rule__BotonCancelar__DeshabilitadoAssignment_2 )? ) ;
     public final void rule__BotonCancelar__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4880:1: ( ( ( rule__BotonCancelar__HabilitadoAssignment_2 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4881:1: ( ( rule__BotonCancelar__HabilitadoAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4880:1: ( ( ( rule__BotonCancelar__DeshabilitadoAssignment_2 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4881:1: ( ( rule__BotonCancelar__DeshabilitadoAssignment_2 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4881:1: ( ( rule__BotonCancelar__HabilitadoAssignment_2 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4882:1: ( rule__BotonCancelar__HabilitadoAssignment_2 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4881:1: ( ( rule__BotonCancelar__DeshabilitadoAssignment_2 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4882:1: ( rule__BotonCancelar__DeshabilitadoAssignment_2 )?
             {
-             before(grammarAccess.getBotonCancelarAccess().getHabilitadoAssignment_2()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4883:1: ( rule__BotonCancelar__HabilitadoAssignment_2 )?
+             before(grammarAccess.getBotonCancelarAccess().getDeshabilitadoAssignment_2()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4883:1: ( rule__BotonCancelar__DeshabilitadoAssignment_2 )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
@@ -12869,10 +12869,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt39) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4883:2: rule__BotonCancelar__HabilitadoAssignment_2
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4883:2: rule__BotonCancelar__DeshabilitadoAssignment_2
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__BotonCancelar__HabilitadoAssignment_2_in_rule__BotonCancelar__Group__2__Impl9755);
-                    rule__BotonCancelar__HabilitadoAssignment_2();
+                    pushFollow(FollowSets000.FOLLOW_rule__BotonCancelar__DeshabilitadoAssignment_2_in_rule__BotonCancelar__Group__2__Impl9755);
+                    rule__BotonCancelar__DeshabilitadoAssignment_2();
 
                     state._fsp--;
 
@@ -12882,7 +12882,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getBotonCancelarAccess().getHabilitadoAssignment_2()); 
+             after(grammarAccess.getBotonCancelarAccess().getDeshabilitadoAssignment_2()); 
 
             }
 
@@ -13098,20 +13098,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__BotonCustom__Group__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4974:1: rule__BotonCustom__Group__0__Impl : ( ( rule__BotonCustom__VisibleAssignment_0 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4974:1: rule__BotonCustom__Group__0__Impl : ( ( rule__BotonCustom__InvisibleAssignment_0 )? ) ;
     public final void rule__BotonCustom__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4978:1: ( ( ( rule__BotonCustom__VisibleAssignment_0 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4979:1: ( ( rule__BotonCustom__VisibleAssignment_0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4978:1: ( ( ( rule__BotonCustom__InvisibleAssignment_0 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4979:1: ( ( rule__BotonCustom__InvisibleAssignment_0 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4979:1: ( ( rule__BotonCustom__VisibleAssignment_0 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4980:1: ( rule__BotonCustom__VisibleAssignment_0 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4979:1: ( ( rule__BotonCustom__InvisibleAssignment_0 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4980:1: ( rule__BotonCustom__InvisibleAssignment_0 )?
             {
-             before(grammarAccess.getBotonCustomAccess().getVisibleAssignment_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4981:1: ( rule__BotonCustom__VisibleAssignment_0 )?
+             before(grammarAccess.getBotonCustomAccess().getInvisibleAssignment_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4981:1: ( rule__BotonCustom__InvisibleAssignment_0 )?
             int alt40=2;
             int LA40_0 = input.LA(1);
 
@@ -13120,10 +13120,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt40) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4981:2: rule__BotonCustom__VisibleAssignment_0
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4981:2: rule__BotonCustom__InvisibleAssignment_0
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__BotonCustom__VisibleAssignment_0_in_rule__BotonCustom__Group__0__Impl9945);
-                    rule__BotonCustom__VisibleAssignment_0();
+                    pushFollow(FollowSets000.FOLLOW_rule__BotonCustom__InvisibleAssignment_0_in_rule__BotonCustom__Group__0__Impl9945);
+                    rule__BotonCustom__InvisibleAssignment_0();
 
                     state._fsp--;
 
@@ -13133,7 +13133,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getBotonCustomAccess().getVisibleAssignment_0()); 
+             after(grammarAccess.getBotonCustomAccess().getInvisibleAssignment_0()); 
 
             }
 
@@ -13194,20 +13194,20 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__BotonCustom__Group__1__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5003:1: rule__BotonCustom__Group__1__Impl : ( ( rule__BotonCustom__HabilitadoAssignment_1 )? ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5003:1: rule__BotonCustom__Group__1__Impl : ( ( rule__BotonCustom__DeshabilitadoAssignment_1 )? ) ;
     public final void rule__BotonCustom__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5007:1: ( ( ( rule__BotonCustom__HabilitadoAssignment_1 )? ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5008:1: ( ( rule__BotonCustom__HabilitadoAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5007:1: ( ( ( rule__BotonCustom__DeshabilitadoAssignment_1 )? ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5008:1: ( ( rule__BotonCustom__DeshabilitadoAssignment_1 )? )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5008:1: ( ( rule__BotonCustom__HabilitadoAssignment_1 )? )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5009:1: ( rule__BotonCustom__HabilitadoAssignment_1 )?
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5008:1: ( ( rule__BotonCustom__DeshabilitadoAssignment_1 )? )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5009:1: ( rule__BotonCustom__DeshabilitadoAssignment_1 )?
             {
-             before(grammarAccess.getBotonCustomAccess().getHabilitadoAssignment_1()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5010:1: ( rule__BotonCustom__HabilitadoAssignment_1 )?
+             before(grammarAccess.getBotonCustomAccess().getDeshabilitadoAssignment_1()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5010:1: ( rule__BotonCustom__DeshabilitadoAssignment_1 )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -13216,10 +13216,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
             }
             switch (alt41) {
                 case 1 :
-                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5010:2: rule__BotonCustom__HabilitadoAssignment_1
+                    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:5010:2: rule__BotonCustom__DeshabilitadoAssignment_1
                     {
-                    pushFollow(FollowSets000.FOLLOW_rule__BotonCustom__HabilitadoAssignment_1_in_rule__BotonCustom__Group__1__Impl10006);
-                    rule__BotonCustom__HabilitadoAssignment_1();
+                    pushFollow(FollowSets000.FOLLOW_rule__BotonCustom__DeshabilitadoAssignment_1_in_rule__BotonCustom__Group__1__Impl10006);
+                    rule__BotonCustom__DeshabilitadoAssignment_1();
 
                     state._fsp--;
 
@@ -13229,7 +13229,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getBotonCustomAccess().getHabilitadoAssignment_1()); 
+             after(grammarAccess.getBotonCustomAccess().getDeshabilitadoAssignment_1()); 
 
             }
 
@@ -19227,30 +19227,30 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__PruebaInterfaz__AccionesAssignment_4_3_1"
 
 
-    // $ANTLR start "rule__InputTexto__VisibleAssignment_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7495:1: rule__InputTexto__VisibleAssignment_1 : ( ( 'visible' ) ) ;
-    public final void rule__InputTexto__VisibleAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__InputTexto__InvisibleAssignment_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7495:1: rule__InputTexto__InvisibleAssignment_1 : ( ( 'invisible' ) ) ;
+    public final void rule__InputTexto__InvisibleAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7499:1: ( ( ( 'visible' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7500:1: ( ( 'visible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7499:1: ( ( ( 'invisible' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7500:1: ( ( 'invisible' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7500:1: ( ( 'visible' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7501:1: ( 'visible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7500:1: ( ( 'invisible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7501:1: ( 'invisible' )
             {
-             before(grammarAccess.getInputTextoAccess().getVisibleVisibleKeyword_1_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7502:1: ( 'visible' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7503:1: 'visible'
+             before(grammarAccess.getInputTextoAccess().getInvisibleInvisibleKeyword_1_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7502:1: ( 'invisible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7503:1: 'invisible'
             {
-             before(grammarAccess.getInputTextoAccess().getVisibleVisibleKeyword_1_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputTexto__VisibleAssignment_114890); 
-             after(grammarAccess.getInputTextoAccess().getVisibleVisibleKeyword_1_0()); 
+             before(grammarAccess.getInputTextoAccess().getInvisibleInvisibleKeyword_1_0()); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputTexto__InvisibleAssignment_114890); 
+             after(grammarAccess.getInputTextoAccess().getInvisibleInvisibleKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getInputTextoAccess().getVisibleVisibleKeyword_1_0()); 
+             after(grammarAccess.getInputTextoAccess().getInvisibleInvisibleKeyword_1_0()); 
 
             }
 
@@ -19269,33 +19269,33 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__InputTexto__VisibleAssignment_1"
+    // $ANTLR end "rule__InputTexto__InvisibleAssignment_1"
 
 
-    // $ANTLR start "rule__InputTexto__HabilitadoAssignment_2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7518:1: rule__InputTexto__HabilitadoAssignment_2 : ( ( 'habilitado' ) ) ;
-    public final void rule__InputTexto__HabilitadoAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__InputTexto__DeshabilitadoAssignment_2"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7518:1: rule__InputTexto__DeshabilitadoAssignment_2 : ( ( 'deshabilitado' ) ) ;
+    public final void rule__InputTexto__DeshabilitadoAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7522:1: ( ( ( 'habilitado' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7523:1: ( ( 'habilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7522:1: ( ( ( 'deshabilitado' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7523:1: ( ( 'deshabilitado' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7523:1: ( ( 'habilitado' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7524:1: ( 'habilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7523:1: ( ( 'deshabilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7524:1: ( 'deshabilitado' )
             {
-             before(grammarAccess.getInputTextoAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7525:1: ( 'habilitado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7526:1: 'habilitado'
+             before(grammarAccess.getInputTextoAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7525:1: ( 'deshabilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7526:1: 'deshabilitado'
             {
-             before(grammarAccess.getInputTextoAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputTexto__HabilitadoAssignment_214934); 
-             after(grammarAccess.getInputTextoAccess().getHabilitadoHabilitadoKeyword_2_0()); 
+             before(grammarAccess.getInputTextoAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputTexto__DeshabilitadoAssignment_214934); 
+             after(grammarAccess.getInputTextoAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
 
             }
 
-             after(grammarAccess.getInputTextoAccess().getHabilitadoHabilitadoKeyword_2_0()); 
+             after(grammarAccess.getInputTextoAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
 
             }
 
@@ -19314,7 +19314,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__InputTexto__HabilitadoAssignment_2"
+    // $ANTLR end "rule__InputTexto__DeshabilitadoAssignment_2"
 
 
     // $ANTLR start "rule__InputTexto__ObligatorioAssignment_3"
@@ -19444,30 +19444,30 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__InputTexto__ValorAssignment_7_1"
 
 
-    // $ANTLR start "rule__InputRadio__VisibleAssignment_0"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7594:1: rule__InputRadio__VisibleAssignment_0 : ( ( 'visible' ) ) ;
-    public final void rule__InputRadio__VisibleAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__InputRadio__InvisibleAssignment_0"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7594:1: rule__InputRadio__InvisibleAssignment_0 : ( ( 'invisible' ) ) ;
+    public final void rule__InputRadio__InvisibleAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7598:1: ( ( ( 'visible' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7599:1: ( ( 'visible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7598:1: ( ( ( 'invisible' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7599:1: ( ( 'invisible' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7599:1: ( ( 'visible' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7600:1: ( 'visible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7599:1: ( ( 'invisible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7600:1: ( 'invisible' )
             {
-             before(grammarAccess.getInputRadioAccess().getVisibleVisibleKeyword_0_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7601:1: ( 'visible' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7602:1: 'visible'
+             before(grammarAccess.getInputRadioAccess().getInvisibleInvisibleKeyword_0_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7601:1: ( 'invisible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7602:1: 'invisible'
             {
-             before(grammarAccess.getInputRadioAccess().getVisibleVisibleKeyword_0_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputRadio__VisibleAssignment_015084); 
-             after(grammarAccess.getInputRadioAccess().getVisibleVisibleKeyword_0_0()); 
+             before(grammarAccess.getInputRadioAccess().getInvisibleInvisibleKeyword_0_0()); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputRadio__InvisibleAssignment_015084); 
+             after(grammarAccess.getInputRadioAccess().getInvisibleInvisibleKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getInputRadioAccess().getVisibleVisibleKeyword_0_0()); 
+             after(grammarAccess.getInputRadioAccess().getInvisibleInvisibleKeyword_0_0()); 
 
             }
 
@@ -19486,33 +19486,33 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__InputRadio__VisibleAssignment_0"
+    // $ANTLR end "rule__InputRadio__InvisibleAssignment_0"
 
 
-    // $ANTLR start "rule__InputRadio__HabilitadoAssignment_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7617:1: rule__InputRadio__HabilitadoAssignment_1 : ( ( 'habilitado' ) ) ;
-    public final void rule__InputRadio__HabilitadoAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__InputRadio__DeshabilitadoAssignment_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7617:1: rule__InputRadio__DeshabilitadoAssignment_1 : ( ( 'deshabilitado' ) ) ;
+    public final void rule__InputRadio__DeshabilitadoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7621:1: ( ( ( 'habilitado' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7622:1: ( ( 'habilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7621:1: ( ( ( 'deshabilitado' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7622:1: ( ( 'deshabilitado' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7622:1: ( ( 'habilitado' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7623:1: ( 'habilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7622:1: ( ( 'deshabilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7623:1: ( 'deshabilitado' )
             {
-             before(grammarAccess.getInputRadioAccess().getHabilitadoHabilitadoKeyword_1_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7624:1: ( 'habilitado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7625:1: 'habilitado'
+             before(grammarAccess.getInputRadioAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7624:1: ( 'deshabilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7625:1: 'deshabilitado'
             {
-             before(grammarAccess.getInputRadioAccess().getHabilitadoHabilitadoKeyword_1_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputRadio__HabilitadoAssignment_115128); 
-             after(grammarAccess.getInputRadioAccess().getHabilitadoHabilitadoKeyword_1_0()); 
+             before(grammarAccess.getInputRadioAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputRadio__DeshabilitadoAssignment_115128); 
+             after(grammarAccess.getInputRadioAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getInputRadioAccess().getHabilitadoHabilitadoKeyword_1_0()); 
+             after(grammarAccess.getInputRadioAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
 
             }
 
@@ -19531,7 +19531,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__InputRadio__HabilitadoAssignment_1"
+    // $ANTLR end "rule__InputRadio__DeshabilitadoAssignment_1"
 
 
     // $ANTLR start "rule__InputRadio__NameAssignment_3"
@@ -19739,30 +19739,30 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__InputRadio__ReaccionAssignment_8"
 
 
-    // $ANTLR start "rule__InputCombo__VisibleAssignment_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7715:1: rule__InputCombo__VisibleAssignment_1 : ( ( 'visible' ) ) ;
-    public final void rule__InputCombo__VisibleAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__InputCombo__InvisibleAssignment_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7715:1: rule__InputCombo__InvisibleAssignment_1 : ( ( 'invisible' ) ) ;
+    public final void rule__InputCombo__InvisibleAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7719:1: ( ( ( 'visible' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7720:1: ( ( 'visible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7719:1: ( ( ( 'invisible' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7720:1: ( ( 'invisible' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7720:1: ( ( 'visible' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7721:1: ( 'visible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7720:1: ( ( 'invisible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7721:1: ( 'invisible' )
             {
-             before(grammarAccess.getInputComboAccess().getVisibleVisibleKeyword_1_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7722:1: ( 'visible' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7723:1: 'visible'
+             before(grammarAccess.getInputComboAccess().getInvisibleInvisibleKeyword_1_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7722:1: ( 'invisible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7723:1: 'invisible'
             {
-             before(grammarAccess.getInputComboAccess().getVisibleVisibleKeyword_1_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputCombo__VisibleAssignment_115327); 
-             after(grammarAccess.getInputComboAccess().getVisibleVisibleKeyword_1_0()); 
+             before(grammarAccess.getInputComboAccess().getInvisibleInvisibleKeyword_1_0()); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputCombo__InvisibleAssignment_115327); 
+             after(grammarAccess.getInputComboAccess().getInvisibleInvisibleKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getInputComboAccess().getVisibleVisibleKeyword_1_0()); 
+             after(grammarAccess.getInputComboAccess().getInvisibleInvisibleKeyword_1_0()); 
 
             }
 
@@ -19781,33 +19781,33 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__InputCombo__VisibleAssignment_1"
+    // $ANTLR end "rule__InputCombo__InvisibleAssignment_1"
 
 
-    // $ANTLR start "rule__InputCombo__HabilitadoAssignment_2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7738:1: rule__InputCombo__HabilitadoAssignment_2 : ( ( 'habilitado' ) ) ;
-    public final void rule__InputCombo__HabilitadoAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__InputCombo__DeshabilitadoAssignment_2"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7738:1: rule__InputCombo__DeshabilitadoAssignment_2 : ( ( 'deshabilitado' ) ) ;
+    public final void rule__InputCombo__DeshabilitadoAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7742:1: ( ( ( 'habilitado' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7743:1: ( ( 'habilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7742:1: ( ( ( 'deshabilitado' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7743:1: ( ( 'deshabilitado' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7743:1: ( ( 'habilitado' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7744:1: ( 'habilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7743:1: ( ( 'deshabilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7744:1: ( 'deshabilitado' )
             {
-             before(grammarAccess.getInputComboAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7745:1: ( 'habilitado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7746:1: 'habilitado'
+             before(grammarAccess.getInputComboAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7745:1: ( 'deshabilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7746:1: 'deshabilitado'
             {
-             before(grammarAccess.getInputComboAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputCombo__HabilitadoAssignment_215371); 
-             after(grammarAccess.getInputComboAccess().getHabilitadoHabilitadoKeyword_2_0()); 
+             before(grammarAccess.getInputComboAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputCombo__DeshabilitadoAssignment_215371); 
+             after(grammarAccess.getInputComboAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
 
             }
 
-             after(grammarAccess.getInputComboAccess().getHabilitadoHabilitadoKeyword_2_0()); 
+             after(grammarAccess.getInputComboAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
 
             }
 
@@ -19826,7 +19826,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__InputCombo__HabilitadoAssignment_2"
+    // $ANTLR end "rule__InputCombo__DeshabilitadoAssignment_2"
 
 
     // $ANTLR start "rule__InputCombo__NameAssignment_4"
@@ -19993,30 +19993,30 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__InputCombo__SeleccionAssignment_7_1"
 
 
-    // $ANTLR start "rule__InputCheck__VisibleAssignment_0"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7821:1: rule__InputCheck__VisibleAssignment_0 : ( ( 'visible' ) ) ;
-    public final void rule__InputCheck__VisibleAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__InputCheck__InvisibleAssignment_0"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7821:1: rule__InputCheck__InvisibleAssignment_0 : ( ( 'invisible' ) ) ;
+    public final void rule__InputCheck__InvisibleAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7825:1: ( ( ( 'visible' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7826:1: ( ( 'visible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7825:1: ( ( ( 'invisible' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7826:1: ( ( 'invisible' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7826:1: ( ( 'visible' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7827:1: ( 'visible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7826:1: ( ( 'invisible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7827:1: ( 'invisible' )
             {
-             before(grammarAccess.getInputCheckAccess().getVisibleVisibleKeyword_0_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7828:1: ( 'visible' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7829:1: 'visible'
+             before(grammarAccess.getInputCheckAccess().getInvisibleInvisibleKeyword_0_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7828:1: ( 'invisible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7829:1: 'invisible'
             {
-             before(grammarAccess.getInputCheckAccess().getVisibleVisibleKeyword_0_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputCheck__VisibleAssignment_015539); 
-             after(grammarAccess.getInputCheckAccess().getVisibleVisibleKeyword_0_0()); 
+             before(grammarAccess.getInputCheckAccess().getInvisibleInvisibleKeyword_0_0()); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__InputCheck__InvisibleAssignment_015539); 
+             after(grammarAccess.getInputCheckAccess().getInvisibleInvisibleKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getInputCheckAccess().getVisibleVisibleKeyword_0_0()); 
+             after(grammarAccess.getInputCheckAccess().getInvisibleInvisibleKeyword_0_0()); 
 
             }
 
@@ -20035,33 +20035,33 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__InputCheck__VisibleAssignment_0"
+    // $ANTLR end "rule__InputCheck__InvisibleAssignment_0"
 
 
-    // $ANTLR start "rule__InputCheck__HabilitadoAssignment_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7844:1: rule__InputCheck__HabilitadoAssignment_1 : ( ( 'habilitado' ) ) ;
-    public final void rule__InputCheck__HabilitadoAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__InputCheck__DeshabilitadoAssignment_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7844:1: rule__InputCheck__DeshabilitadoAssignment_1 : ( ( 'deshabilitado' ) ) ;
+    public final void rule__InputCheck__DeshabilitadoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7848:1: ( ( ( 'habilitado' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7849:1: ( ( 'habilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7848:1: ( ( ( 'deshabilitado' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7849:1: ( ( 'deshabilitado' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7849:1: ( ( 'habilitado' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7850:1: ( 'habilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7849:1: ( ( 'deshabilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7850:1: ( 'deshabilitado' )
             {
-             before(grammarAccess.getInputCheckAccess().getHabilitadoHabilitadoKeyword_1_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7851:1: ( 'habilitado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7852:1: 'habilitado'
+             before(grammarAccess.getInputCheckAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7851:1: ( 'deshabilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7852:1: 'deshabilitado'
             {
-             before(grammarAccess.getInputCheckAccess().getHabilitadoHabilitadoKeyword_1_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputCheck__HabilitadoAssignment_115583); 
-             after(grammarAccess.getInputCheckAccess().getHabilitadoHabilitadoKeyword_1_0()); 
+             before(grammarAccess.getInputCheckAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__InputCheck__DeshabilitadoAssignment_115583); 
+             after(grammarAccess.getInputCheckAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getInputCheckAccess().getHabilitadoHabilitadoKeyword_1_0()); 
+             after(grammarAccess.getInputCheckAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
 
             }
 
@@ -20080,7 +20080,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__InputCheck__HabilitadoAssignment_1"
+    // $ANTLR end "rule__InputCheck__DeshabilitadoAssignment_1"
 
 
     // $ANTLR start "rule__InputCheck__NameAssignment_3"
@@ -20329,30 +20329,30 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__InputCheck__ReaccionAssignment_8"
 
 
-    // $ANTLR start "rule__BotonValidar__VisibleAssignment_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7957:1: rule__BotonValidar__VisibleAssignment_1 : ( ( 'visible' ) ) ;
-    public final void rule__BotonValidar__VisibleAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__BotonValidar__InvisibleAssignment_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7957:1: rule__BotonValidar__InvisibleAssignment_1 : ( ( 'invisible' ) ) ;
+    public final void rule__BotonValidar__InvisibleAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7961:1: ( ( ( 'visible' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7962:1: ( ( 'visible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7961:1: ( ( ( 'invisible' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7962:1: ( ( 'invisible' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7962:1: ( ( 'visible' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7963:1: ( 'visible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7962:1: ( ( 'invisible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7963:1: ( 'invisible' )
             {
-             before(grammarAccess.getBotonValidarAccess().getVisibleVisibleKeyword_1_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7964:1: ( 'visible' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7965:1: 'visible'
+             before(grammarAccess.getBotonValidarAccess().getInvisibleInvisibleKeyword_1_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7964:1: ( 'invisible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7965:1: 'invisible'
             {
-             before(grammarAccess.getBotonValidarAccess().getVisibleVisibleKeyword_1_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonValidar__VisibleAssignment_115813); 
-             after(grammarAccess.getBotonValidarAccess().getVisibleVisibleKeyword_1_0()); 
+             before(grammarAccess.getBotonValidarAccess().getInvisibleInvisibleKeyword_1_0()); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonValidar__InvisibleAssignment_115813); 
+             after(grammarAccess.getBotonValidarAccess().getInvisibleInvisibleKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getBotonValidarAccess().getVisibleVisibleKeyword_1_0()); 
+             after(grammarAccess.getBotonValidarAccess().getInvisibleInvisibleKeyword_1_0()); 
 
             }
 
@@ -20371,33 +20371,33 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__BotonValidar__VisibleAssignment_1"
+    // $ANTLR end "rule__BotonValidar__InvisibleAssignment_1"
 
 
-    // $ANTLR start "rule__BotonValidar__HabilitadoAssignment_2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7980:1: rule__BotonValidar__HabilitadoAssignment_2 : ( ( 'habilitado' ) ) ;
-    public final void rule__BotonValidar__HabilitadoAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__BotonValidar__DeshabilitadoAssignment_2"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7980:1: rule__BotonValidar__DeshabilitadoAssignment_2 : ( ( 'deshabilitado' ) ) ;
+    public final void rule__BotonValidar__DeshabilitadoAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7984:1: ( ( ( 'habilitado' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7985:1: ( ( 'habilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7984:1: ( ( ( 'deshabilitado' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7985:1: ( ( 'deshabilitado' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7985:1: ( ( 'habilitado' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7986:1: ( 'habilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7985:1: ( ( 'deshabilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7986:1: ( 'deshabilitado' )
             {
-             before(grammarAccess.getBotonValidarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7987:1: ( 'habilitado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7988:1: 'habilitado'
+             before(grammarAccess.getBotonValidarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7987:1: ( 'deshabilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:7988:1: 'deshabilitado'
             {
-             before(grammarAccess.getBotonValidarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonValidar__HabilitadoAssignment_215857); 
-             after(grammarAccess.getBotonValidarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
+             before(grammarAccess.getBotonValidarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonValidar__DeshabilitadoAssignment_215857); 
+             after(grammarAccess.getBotonValidarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
 
             }
 
-             after(grammarAccess.getBotonValidarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
+             after(grammarAccess.getBotonValidarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
 
             }
 
@@ -20416,7 +20416,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__BotonValidar__HabilitadoAssignment_2"
+    // $ANTLR end "rule__BotonValidar__DeshabilitadoAssignment_2"
 
 
     // $ANTLR start "rule__BotonValidar__NameAssignment_4"
@@ -20460,30 +20460,30 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__BotonValidar__NameAssignment_4"
 
 
-    // $ANTLR start "rule__BotonGuardar_Impl__VisibleAssignment_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8018:1: rule__BotonGuardar_Impl__VisibleAssignment_1 : ( ( 'visible' ) ) ;
-    public final void rule__BotonGuardar_Impl__VisibleAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__BotonGuardar_Impl__InvisibleAssignment_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8018:1: rule__BotonGuardar_Impl__InvisibleAssignment_1 : ( ( 'invisible' ) ) ;
+    public final void rule__BotonGuardar_Impl__InvisibleAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8022:1: ( ( ( 'visible' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8023:1: ( ( 'visible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8022:1: ( ( ( 'invisible' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8023:1: ( ( 'invisible' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8023:1: ( ( 'visible' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8024:1: ( 'visible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8023:1: ( ( 'invisible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8024:1: ( 'invisible' )
             {
-             before(grammarAccess.getBotonGuardar_ImplAccess().getVisibleVisibleKeyword_1_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8025:1: ( 'visible' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8026:1: 'visible'
+             before(grammarAccess.getBotonGuardar_ImplAccess().getInvisibleInvisibleKeyword_1_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8025:1: ( 'invisible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8026:1: 'invisible'
             {
-             before(grammarAccess.getBotonGuardar_ImplAccess().getVisibleVisibleKeyword_1_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonGuardar_Impl__VisibleAssignment_115932); 
-             after(grammarAccess.getBotonGuardar_ImplAccess().getVisibleVisibleKeyword_1_0()); 
+             before(grammarAccess.getBotonGuardar_ImplAccess().getInvisibleInvisibleKeyword_1_0()); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonGuardar_Impl__InvisibleAssignment_115932); 
+             after(grammarAccess.getBotonGuardar_ImplAccess().getInvisibleInvisibleKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getBotonGuardar_ImplAccess().getVisibleVisibleKeyword_1_0()); 
+             after(grammarAccess.getBotonGuardar_ImplAccess().getInvisibleInvisibleKeyword_1_0()); 
 
             }
 
@@ -20502,33 +20502,33 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__BotonGuardar_Impl__VisibleAssignment_1"
+    // $ANTLR end "rule__BotonGuardar_Impl__InvisibleAssignment_1"
 
 
-    // $ANTLR start "rule__BotonGuardar_Impl__HabilitadoAssignment_2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8041:1: rule__BotonGuardar_Impl__HabilitadoAssignment_2 : ( ( 'habilitado' ) ) ;
-    public final void rule__BotonGuardar_Impl__HabilitadoAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__BotonGuardar_Impl__DeshabilitadoAssignment_2"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8041:1: rule__BotonGuardar_Impl__DeshabilitadoAssignment_2 : ( ( 'deshabilitado' ) ) ;
+    public final void rule__BotonGuardar_Impl__DeshabilitadoAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8045:1: ( ( ( 'habilitado' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8046:1: ( ( 'habilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8045:1: ( ( ( 'deshabilitado' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8046:1: ( ( 'deshabilitado' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8046:1: ( ( 'habilitado' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8047:1: ( 'habilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8046:1: ( ( 'deshabilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8047:1: ( 'deshabilitado' )
             {
-             before(grammarAccess.getBotonGuardar_ImplAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8048:1: ( 'habilitado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8049:1: 'habilitado'
+             before(grammarAccess.getBotonGuardar_ImplAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8048:1: ( 'deshabilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8049:1: 'deshabilitado'
             {
-             before(grammarAccess.getBotonGuardar_ImplAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonGuardar_Impl__HabilitadoAssignment_215976); 
-             after(grammarAccess.getBotonGuardar_ImplAccess().getHabilitadoHabilitadoKeyword_2_0()); 
+             before(grammarAccess.getBotonGuardar_ImplAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonGuardar_Impl__DeshabilitadoAssignment_215976); 
+             after(grammarAccess.getBotonGuardar_ImplAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
 
             }
 
-             after(grammarAccess.getBotonGuardar_ImplAccess().getHabilitadoHabilitadoKeyword_2_0()); 
+             after(grammarAccess.getBotonGuardar_ImplAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
 
             }
 
@@ -20547,7 +20547,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__BotonGuardar_Impl__HabilitadoAssignment_2"
+    // $ANTLR end "rule__BotonGuardar_Impl__DeshabilitadoAssignment_2"
 
 
     // $ANTLR start "rule__BotonGuardar_Impl__NameAssignment_4"
@@ -20591,30 +20591,30 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__BotonGuardar_Impl__NameAssignment_4"
 
 
-    // $ANTLR start "rule__BotonCancelar__VisibleAssignment_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8079:1: rule__BotonCancelar__VisibleAssignment_1 : ( ( 'visible' ) ) ;
-    public final void rule__BotonCancelar__VisibleAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__BotonCancelar__InvisibleAssignment_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8079:1: rule__BotonCancelar__InvisibleAssignment_1 : ( ( 'invisible' ) ) ;
+    public final void rule__BotonCancelar__InvisibleAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8083:1: ( ( ( 'visible' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8084:1: ( ( 'visible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8083:1: ( ( ( 'invisible' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8084:1: ( ( 'invisible' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8084:1: ( ( 'visible' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8085:1: ( 'visible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8084:1: ( ( 'invisible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8085:1: ( 'invisible' )
             {
-             before(grammarAccess.getBotonCancelarAccess().getVisibleVisibleKeyword_1_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8086:1: ( 'visible' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8087:1: 'visible'
+             before(grammarAccess.getBotonCancelarAccess().getInvisibleInvisibleKeyword_1_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8086:1: ( 'invisible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8087:1: 'invisible'
             {
-             before(grammarAccess.getBotonCancelarAccess().getVisibleVisibleKeyword_1_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonCancelar__VisibleAssignment_116051); 
-             after(grammarAccess.getBotonCancelarAccess().getVisibleVisibleKeyword_1_0()); 
+             before(grammarAccess.getBotonCancelarAccess().getInvisibleInvisibleKeyword_1_0()); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonCancelar__InvisibleAssignment_116051); 
+             after(grammarAccess.getBotonCancelarAccess().getInvisibleInvisibleKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getBotonCancelarAccess().getVisibleVisibleKeyword_1_0()); 
+             after(grammarAccess.getBotonCancelarAccess().getInvisibleInvisibleKeyword_1_0()); 
 
             }
 
@@ -20633,33 +20633,33 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__BotonCancelar__VisibleAssignment_1"
+    // $ANTLR end "rule__BotonCancelar__InvisibleAssignment_1"
 
 
-    // $ANTLR start "rule__BotonCancelar__HabilitadoAssignment_2"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8102:1: rule__BotonCancelar__HabilitadoAssignment_2 : ( ( 'habilitado' ) ) ;
-    public final void rule__BotonCancelar__HabilitadoAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__BotonCancelar__DeshabilitadoAssignment_2"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8102:1: rule__BotonCancelar__DeshabilitadoAssignment_2 : ( ( 'deshabilitado' ) ) ;
+    public final void rule__BotonCancelar__DeshabilitadoAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8106:1: ( ( ( 'habilitado' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8107:1: ( ( 'habilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8106:1: ( ( ( 'deshabilitado' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8107:1: ( ( 'deshabilitado' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8107:1: ( ( 'habilitado' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8108:1: ( 'habilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8107:1: ( ( 'deshabilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8108:1: ( 'deshabilitado' )
             {
-             before(grammarAccess.getBotonCancelarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8109:1: ( 'habilitado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8110:1: 'habilitado'
+             before(grammarAccess.getBotonCancelarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8109:1: ( 'deshabilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8110:1: 'deshabilitado'
             {
-             before(grammarAccess.getBotonCancelarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonCancelar__HabilitadoAssignment_216095); 
-             after(grammarAccess.getBotonCancelarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
+             before(grammarAccess.getBotonCancelarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonCancelar__DeshabilitadoAssignment_216095); 
+             after(grammarAccess.getBotonCancelarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
 
             }
 
-             after(grammarAccess.getBotonCancelarAccess().getHabilitadoHabilitadoKeyword_2_0()); 
+             after(grammarAccess.getBotonCancelarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0()); 
 
             }
 
@@ -20678,7 +20678,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__BotonCancelar__HabilitadoAssignment_2"
+    // $ANTLR end "rule__BotonCancelar__DeshabilitadoAssignment_2"
 
 
     // $ANTLR start "rule__BotonCancelar__NameAssignment_4"
@@ -20722,30 +20722,30 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__BotonCancelar__NameAssignment_4"
 
 
-    // $ANTLR start "rule__BotonCustom__VisibleAssignment_0"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8140:1: rule__BotonCustom__VisibleAssignment_0 : ( ( 'visible' ) ) ;
-    public final void rule__BotonCustom__VisibleAssignment_0() throws RecognitionException {
+    // $ANTLR start "rule__BotonCustom__InvisibleAssignment_0"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8140:1: rule__BotonCustom__InvisibleAssignment_0 : ( ( 'invisible' ) ) ;
+    public final void rule__BotonCustom__InvisibleAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8144:1: ( ( ( 'visible' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8145:1: ( ( 'visible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8144:1: ( ( ( 'invisible' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8145:1: ( ( 'invisible' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8145:1: ( ( 'visible' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8146:1: ( 'visible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8145:1: ( ( 'invisible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8146:1: ( 'invisible' )
             {
-             before(grammarAccess.getBotonCustomAccess().getVisibleVisibleKeyword_0_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8147:1: ( 'visible' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8148:1: 'visible'
+             before(grammarAccess.getBotonCustomAccess().getInvisibleInvisibleKeyword_0_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8147:1: ( 'invisible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8148:1: 'invisible'
             {
-             before(grammarAccess.getBotonCustomAccess().getVisibleVisibleKeyword_0_0()); 
-            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonCustom__VisibleAssignment_016170); 
-             after(grammarAccess.getBotonCustomAccess().getVisibleVisibleKeyword_0_0()); 
+             before(grammarAccess.getBotonCustomAccess().getInvisibleInvisibleKeyword_0_0()); 
+            match(input,52,FollowSets000.FOLLOW_52_in_rule__BotonCustom__InvisibleAssignment_016170); 
+             after(grammarAccess.getBotonCustomAccess().getInvisibleInvisibleKeyword_0_0()); 
 
             }
 
-             after(grammarAccess.getBotonCustomAccess().getVisibleVisibleKeyword_0_0()); 
+             after(grammarAccess.getBotonCustomAccess().getInvisibleInvisibleKeyword_0_0()); 
 
             }
 
@@ -20764,33 +20764,33 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__BotonCustom__VisibleAssignment_0"
+    // $ANTLR end "rule__BotonCustom__InvisibleAssignment_0"
 
 
-    // $ANTLR start "rule__BotonCustom__HabilitadoAssignment_1"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8163:1: rule__BotonCustom__HabilitadoAssignment_1 : ( ( 'habilitado' ) ) ;
-    public final void rule__BotonCustom__HabilitadoAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__BotonCustom__DeshabilitadoAssignment_1"
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8163:1: rule__BotonCustom__DeshabilitadoAssignment_1 : ( ( 'deshabilitado' ) ) ;
+    public final void rule__BotonCustom__DeshabilitadoAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8167:1: ( ( ( 'habilitado' ) ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8168:1: ( ( 'habilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8167:1: ( ( ( 'deshabilitado' ) ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8168:1: ( ( 'deshabilitado' ) )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8168:1: ( ( 'habilitado' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8169:1: ( 'habilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8168:1: ( ( 'deshabilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8169:1: ( 'deshabilitado' )
             {
-             before(grammarAccess.getBotonCustomAccess().getHabilitadoHabilitadoKeyword_1_0()); 
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8170:1: ( 'habilitado' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8171:1: 'habilitado'
+             before(grammarAccess.getBotonCustomAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8170:1: ( 'deshabilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:8171:1: 'deshabilitado'
             {
-             before(grammarAccess.getBotonCustomAccess().getHabilitadoHabilitadoKeyword_1_0()); 
-            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonCustom__HabilitadoAssignment_116214); 
-             after(grammarAccess.getBotonCustomAccess().getHabilitadoHabilitadoKeyword_1_0()); 
+             before(grammarAccess.getBotonCustomAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
+            match(input,53,FollowSets000.FOLLOW_53_in_rule__BotonCustom__DeshabilitadoAssignment_116214); 
+             after(grammarAccess.getBotonCustomAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
 
             }
 
-             after(grammarAccess.getBotonCustomAccess().getHabilitadoHabilitadoKeyword_1_0()); 
+             after(grammarAccess.getBotonCustomAccess().getDeshabilitadoDeshabilitadoKeyword_1_0()); 
 
             }
 
@@ -20809,7 +20809,7 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__BotonCustom__HabilitadoAssignment_1"
+    // $ANTLR end "rule__BotonCustom__DeshabilitadoAssignment_1"
 
 
     // $ANTLR start "rule__BotonCustom__NameAssignment_3"
@@ -22071,10 +22071,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__InputTexto__Group__1_in_rule__InputTexto__Group__04475 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputTexto__Group__1__Impl_in_rule__InputTexto__Group__14533 = new BitSet(new long[]{0x0070000000800000L});
         public static final BitSet FOLLOW_rule__InputTexto__Group__2_in_rule__InputTexto__Group__14536 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__InputTexto__VisibleAssignment_1_in_rule__InputTexto__Group__1__Impl4563 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__InputTexto__InvisibleAssignment_1_in_rule__InputTexto__Group__1__Impl4563 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputTexto__Group__2__Impl_in_rule__InputTexto__Group__24594 = new BitSet(new long[]{0x0070000000800000L});
         public static final BitSet FOLLOW_rule__InputTexto__Group__3_in_rule__InputTexto__Group__24597 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__InputTexto__HabilitadoAssignment_2_in_rule__InputTexto__Group__2__Impl4624 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__InputTexto__DeshabilitadoAssignment_2_in_rule__InputTexto__Group__2__Impl4624 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputTexto__Group__3__Impl_in_rule__InputTexto__Group__34655 = new BitSet(new long[]{0x0070000000800000L});
         public static final BitSet FOLLOW_rule__InputTexto__Group__4_in_rule__InputTexto__Group__34658 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputTexto__ObligatorioAssignment_3_in_rule__InputTexto__Group__3__Impl4685 = new BitSet(new long[]{0x0000000000000002L});
@@ -22099,10 +22099,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__InputTexto__ValorAssignment_7_1_in_rule__InputTexto__Group_7__1__Impl5127 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputRadio__Group__0__Impl_in_rule__InputRadio__Group__05161 = new BitSet(new long[]{0x0030000002000000L});
         public static final BitSet FOLLOW_rule__InputRadio__Group__1_in_rule__InputRadio__Group__05164 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__InputRadio__VisibleAssignment_0_in_rule__InputRadio__Group__0__Impl5191 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__InputRadio__InvisibleAssignment_0_in_rule__InputRadio__Group__0__Impl5191 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputRadio__Group__1__Impl_in_rule__InputRadio__Group__15222 = new BitSet(new long[]{0x0030000002000000L});
         public static final BitSet FOLLOW_rule__InputRadio__Group__2_in_rule__InputRadio__Group__15225 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__InputRadio__HabilitadoAssignment_1_in_rule__InputRadio__Group__1__Impl5252 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__InputRadio__DeshabilitadoAssignment_1_in_rule__InputRadio__Group__1__Impl5252 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputRadio__Group__2__Impl_in_rule__InputRadio__Group__25283 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_rule__InputRadio__Group__3_in_rule__InputRadio__Group__25286 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_25_in_rule__InputRadio__Group__2__Impl5314 = new BitSet(new long[]{0x0000000000000002L});
@@ -22154,10 +22154,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__InputCombo__Group__1_in_rule__InputCombo__Group__06353 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputCombo__Group__1__Impl_in_rule__InputCombo__Group__16411 = new BitSet(new long[]{0x0030000020000000L});
         public static final BitSet FOLLOW_rule__InputCombo__Group__2_in_rule__InputCombo__Group__16414 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__InputCombo__VisibleAssignment_1_in_rule__InputCombo__Group__1__Impl6441 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__InputCombo__InvisibleAssignment_1_in_rule__InputCombo__Group__1__Impl6441 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputCombo__Group__2__Impl_in_rule__InputCombo__Group__26472 = new BitSet(new long[]{0x0030000020000000L});
         public static final BitSet FOLLOW_rule__InputCombo__Group__3_in_rule__InputCombo__Group__26475 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__InputCombo__HabilitadoAssignment_2_in_rule__InputCombo__Group__2__Impl6502 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__InputCombo__DeshabilitadoAssignment_2_in_rule__InputCombo__Group__2__Impl6502 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputCombo__Group__3__Impl_in_rule__InputCombo__Group__36533 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_rule__InputCombo__Group__4_in_rule__InputCombo__Group__36536 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_29_in_rule__InputCombo__Group__3__Impl6564 = new BitSet(new long[]{0x0000000000000002L});
@@ -22201,10 +22201,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__InputCombo__SeleccionAssignment_7_1_in_rule__InputCombo__Group_7__1__Impl7442 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputCheck__Group__0__Impl_in_rule__InputCheck__Group__07476 = new BitSet(new long[]{0x0030000040000000L});
         public static final BitSet FOLLOW_rule__InputCheck__Group__1_in_rule__InputCheck__Group__07479 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__InputCheck__VisibleAssignment_0_in_rule__InputCheck__Group__0__Impl7506 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__InputCheck__InvisibleAssignment_0_in_rule__InputCheck__Group__0__Impl7506 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputCheck__Group__1__Impl_in_rule__InputCheck__Group__17537 = new BitSet(new long[]{0x0030000040000000L});
         public static final BitSet FOLLOW_rule__InputCheck__Group__2_in_rule__InputCheck__Group__17540 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__InputCheck__HabilitadoAssignment_1_in_rule__InputCheck__Group__1__Impl7567 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__InputCheck__DeshabilitadoAssignment_1_in_rule__InputCheck__Group__1__Impl7567 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__InputCheck__Group__2__Impl_in_rule__InputCheck__Group__27598 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_rule__InputCheck__Group__3_in_rule__InputCheck__Group__27601 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_30_in_rule__InputCheck__Group__2__Impl7629 = new BitSet(new long[]{0x0000000000000002L});
@@ -22270,10 +22270,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__BotonValidar__Group__1_in_rule__BotonValidar__Group__08982 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonValidar__Group__1__Impl_in_rule__BotonValidar__Group__19040 = new BitSet(new long[]{0x0030000080000000L});
         public static final BitSet FOLLOW_rule__BotonValidar__Group__2_in_rule__BotonValidar__Group__19043 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BotonValidar__VisibleAssignment_1_in_rule__BotonValidar__Group__1__Impl9070 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BotonValidar__InvisibleAssignment_1_in_rule__BotonValidar__Group__1__Impl9070 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonValidar__Group__2__Impl_in_rule__BotonValidar__Group__29101 = new BitSet(new long[]{0x0030000080000000L});
         public static final BitSet FOLLOW_rule__BotonValidar__Group__3_in_rule__BotonValidar__Group__29104 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BotonValidar__HabilitadoAssignment_2_in_rule__BotonValidar__Group__2__Impl9131 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BotonValidar__DeshabilitadoAssignment_2_in_rule__BotonValidar__Group__2__Impl9131 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonValidar__Group__3__Impl_in_rule__BotonValidar__Group__39162 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_rule__BotonValidar__Group__4_in_rule__BotonValidar__Group__39165 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_31_in_rule__BotonValidar__Group__3__Impl9193 = new BitSet(new long[]{0x0000000000000002L});
@@ -22283,10 +22283,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__BotonGuardar_Impl__Group__1_in_rule__BotonGuardar_Impl__Group__09294 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonGuardar_Impl__Group__1__Impl_in_rule__BotonGuardar_Impl__Group__19352 = new BitSet(new long[]{0x0030000100000000L});
         public static final BitSet FOLLOW_rule__BotonGuardar_Impl__Group__2_in_rule__BotonGuardar_Impl__Group__19355 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BotonGuardar_Impl__VisibleAssignment_1_in_rule__BotonGuardar_Impl__Group__1__Impl9382 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BotonGuardar_Impl__InvisibleAssignment_1_in_rule__BotonGuardar_Impl__Group__1__Impl9382 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonGuardar_Impl__Group__2__Impl_in_rule__BotonGuardar_Impl__Group__29413 = new BitSet(new long[]{0x0030000100000000L});
         public static final BitSet FOLLOW_rule__BotonGuardar_Impl__Group__3_in_rule__BotonGuardar_Impl__Group__29416 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BotonGuardar_Impl__HabilitadoAssignment_2_in_rule__BotonGuardar_Impl__Group__2__Impl9443 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BotonGuardar_Impl__DeshabilitadoAssignment_2_in_rule__BotonGuardar_Impl__Group__2__Impl9443 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonGuardar_Impl__Group__3__Impl_in_rule__BotonGuardar_Impl__Group__39474 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_rule__BotonGuardar_Impl__Group__4_in_rule__BotonGuardar_Impl__Group__39477 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_32_in_rule__BotonGuardar_Impl__Group__3__Impl9505 = new BitSet(new long[]{0x0000000000000002L});
@@ -22296,10 +22296,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__BotonCancelar__Group__1_in_rule__BotonCancelar__Group__09606 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonCancelar__Group__1__Impl_in_rule__BotonCancelar__Group__19664 = new BitSet(new long[]{0x0030000200000000L});
         public static final BitSet FOLLOW_rule__BotonCancelar__Group__2_in_rule__BotonCancelar__Group__19667 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BotonCancelar__VisibleAssignment_1_in_rule__BotonCancelar__Group__1__Impl9694 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BotonCancelar__InvisibleAssignment_1_in_rule__BotonCancelar__Group__1__Impl9694 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonCancelar__Group__2__Impl_in_rule__BotonCancelar__Group__29725 = new BitSet(new long[]{0x0030000200000000L});
         public static final BitSet FOLLOW_rule__BotonCancelar__Group__3_in_rule__BotonCancelar__Group__29728 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BotonCancelar__HabilitadoAssignment_2_in_rule__BotonCancelar__Group__2__Impl9755 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BotonCancelar__DeshabilitadoAssignment_2_in_rule__BotonCancelar__Group__2__Impl9755 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonCancelar__Group__3__Impl_in_rule__BotonCancelar__Group__39786 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_rule__BotonCancelar__Group__4_in_rule__BotonCancelar__Group__39789 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_33_in_rule__BotonCancelar__Group__3__Impl9817 = new BitSet(new long[]{0x0000000000000002L});
@@ -22307,10 +22307,10 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_rule__BotonCancelar__NameAssignment_4_in_rule__BotonCancelar__Group__4__Impl9875 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonCustom__Group__0__Impl_in_rule__BotonCustom__Group__09915 = new BitSet(new long[]{0x00700007E2800000L});
         public static final BitSet FOLLOW_rule__BotonCustom__Group__1_in_rule__BotonCustom__Group__09918 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BotonCustom__VisibleAssignment_0_in_rule__BotonCustom__Group__0__Impl9945 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BotonCustom__InvisibleAssignment_0_in_rule__BotonCustom__Group__0__Impl9945 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonCustom__Group__1__Impl_in_rule__BotonCustom__Group__19976 = new BitSet(new long[]{0x00700007E2800000L});
         public static final BitSet FOLLOW_rule__BotonCustom__Group__2_in_rule__BotonCustom__Group__19979 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_rule__BotonCustom__HabilitadoAssignment_1_in_rule__BotonCustom__Group__1__Impl10006 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_rule__BotonCustom__DeshabilitadoAssignment_1_in_rule__BotonCustom__Group__1__Impl10006 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_rule__BotonCustom__Group__2__Impl_in_rule__BotonCustom__Group__210037 = new BitSet(new long[]{0x0000000000000030L});
         public static final BitSet FOLLOW_rule__BotonCustom__Group__3_in_rule__BotonCustom__Group__210040 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_34_in_rule__BotonCustom__Group__2__Impl10068 = new BitSet(new long[]{0x0000000000000002L});
@@ -22525,43 +22525,43 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_ruleEString_in_rule__PruebaInterfaz__NameAssignment_214792 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_214823 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleAccion_in_rule__PruebaInterfaz__AccionesAssignment_4_3_114854 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__InputTexto__VisibleAssignment_114890 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__InputTexto__HabilitadoAssignment_214934 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__InputTexto__InvisibleAssignment_114890 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__InputTexto__DeshabilitadoAssignment_214934 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_54_in_rule__InputTexto__ObligatorioAssignment_314978 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputTexto__NameAssignment_515017 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputTexto__ValorAssignment_7_115048 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__InputRadio__VisibleAssignment_015084 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__InputRadio__HabilitadoAssignment_115128 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__InputRadio__InvisibleAssignment_015084 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__InputRadio__DeshabilitadoAssignment_115128 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputRadio__NameAssignment_315167 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputRadio__ValoresAssignment_5_215198 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputRadio__ValoresAssignment_5_3_115229 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEInt_in_rule__InputRadio__SeleccionAssignment_6_115260 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleReaccion_in_rule__InputRadio__ReaccionAssignment_815291 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__InputCombo__VisibleAssignment_115327 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__InputCombo__HabilitadoAssignment_215371 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__InputCombo__InvisibleAssignment_115327 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__InputCombo__DeshabilitadoAssignment_215371 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputCombo__NameAssignment_415410 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputCombo__ValoresAssignment_6_215441 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputCombo__ValoresAssignment_6_3_115472 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEInt_in_rule__InputCombo__SeleccionAssignment_7_115503 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__InputCheck__VisibleAssignment_015539 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__InputCheck__HabilitadoAssignment_115583 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__InputCheck__InvisibleAssignment_015539 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__InputCheck__DeshabilitadoAssignment_115583 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputCheck__NameAssignment_315622 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputCheck__ValoresAssignment_5_215653 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__InputCheck__ValoresAssignment_5_3_115684 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEInt_in_rule__InputCheck__SeleccionAssignment_6_215715 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEInt_in_rule__InputCheck__SeleccionAssignment_6_3_115746 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleReaccion_in_rule__InputCheck__ReaccionAssignment_815777 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__BotonValidar__VisibleAssignment_115813 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__BotonValidar__HabilitadoAssignment_215857 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__BotonValidar__InvisibleAssignment_115813 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__BotonValidar__DeshabilitadoAssignment_215857 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__BotonValidar__NameAssignment_415896 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__BotonGuardar_Impl__VisibleAssignment_115932 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__BotonGuardar_Impl__HabilitadoAssignment_215976 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__BotonGuardar_Impl__InvisibleAssignment_115932 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__BotonGuardar_Impl__DeshabilitadoAssignment_215976 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__BotonGuardar_Impl__NameAssignment_416015 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__BotonCancelar__VisibleAssignment_116051 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__BotonCancelar__HabilitadoAssignment_216095 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__BotonCancelar__InvisibleAssignment_116051 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__BotonCancelar__DeshabilitadoAssignment_216095 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__BotonCancelar__NameAssignment_416134 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_52_in_rule__BotonCustom__VisibleAssignment_016170 = new BitSet(new long[]{0x0000000000000002L});
-        public static final BitSet FOLLOW_53_in_rule__BotonCustom__HabilitadoAssignment_116214 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_52_in_rule__BotonCustom__InvisibleAssignment_016170 = new BitSet(new long[]{0x0000000000000002L});
+        public static final BitSet FOLLOW_53_in_rule__BotonCustom__DeshabilitadoAssignment_116214 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__BotonCustom__NameAssignment_316253 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEString_in_rule__BotonCustom__FuncionAssignment_616284 = new BitSet(new long[]{0x0000000000000002L});
         public static final BitSet FOLLOW_ruleEInt_in_rule__ReaccionVisible__ActivacionAssignment_316315 = new BitSet(new long[]{0x0000000000000002L});

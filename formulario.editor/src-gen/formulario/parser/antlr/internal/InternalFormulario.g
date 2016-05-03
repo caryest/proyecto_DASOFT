@@ -748,31 +748,31 @@ ruleInputTexto returns [EObject current=null]
     }
 )(
 (
-		lv_visible_1_0=	'visible' 
+		lv_invisible_1_0=	'invisible' 
     {
-        newLeafNode(lv_visible_1_0, grammarAccess.getInputTextoAccess().getVisibleVisibleKeyword_1_0());
+        newLeafNode(lv_invisible_1_0, grammarAccess.getInputTextoAccess().getInvisibleInvisibleKeyword_1_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getInputTextoRule());
 	        }
-       		setWithLastConsumed($current, "visible", true, "visible");
+       		setWithLastConsumed($current, "invisible", true, "invisible");
 	    }
 
 )
 )?(
 (
-		lv_habilitado_2_0=	'habilitado' 
+		lv_deshabilitado_2_0=	'deshabilitado' 
     {
-        newLeafNode(lv_habilitado_2_0, grammarAccess.getInputTextoAccess().getHabilitadoHabilitadoKeyword_2_0());
+        newLeafNode(lv_deshabilitado_2_0, grammarAccess.getInputTextoAccess().getDeshabilitadoDeshabilitadoKeyword_2_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getInputTextoRule());
 	        }
-       		setWithLastConsumed($current, "habilitado", true, "habilitado");
+       		setWithLastConsumed($current, "deshabilitado", true, "deshabilitado");
 	    }
 
 )
@@ -866,31 +866,31 @@ ruleInputRadio returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_visible_0_0=	'visible' 
+		lv_invisible_0_0=	'invisible' 
     {
-        newLeafNode(lv_visible_0_0, grammarAccess.getInputRadioAccess().getVisibleVisibleKeyword_0_0());
+        newLeafNode(lv_invisible_0_0, grammarAccess.getInputRadioAccess().getInvisibleInvisibleKeyword_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getInputRadioRule());
 	        }
-       		setWithLastConsumed($current, "visible", true, "visible");
+       		setWithLastConsumed($current, "invisible", true, "invisible");
 	    }
 
 )
 )?(
 (
-		lv_habilitado_1_0=	'habilitado' 
+		lv_deshabilitado_1_0=	'deshabilitado' 
     {
-        newLeafNode(lv_habilitado_1_0, grammarAccess.getInputRadioAccess().getHabilitadoHabilitadoKeyword_1_0());
+        newLeafNode(lv_deshabilitado_1_0, grammarAccess.getInputRadioAccess().getDeshabilitadoDeshabilitadoKeyword_1_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getInputRadioRule());
 	        }
-       		setWithLastConsumed($current, "habilitado", true, "habilitado");
+       		setWithLastConsumed($current, "deshabilitado", true, "deshabilitado");
 	    }
 
 )
@@ -1049,31 +1049,31 @@ ruleInputCombo returns [EObject current=null]
     }
 )(
 (
-		lv_visible_1_0=	'visible' 
+		lv_invisible_1_0=	'invisible' 
     {
-        newLeafNode(lv_visible_1_0, grammarAccess.getInputComboAccess().getVisibleVisibleKeyword_1_0());
+        newLeafNode(lv_invisible_1_0, grammarAccess.getInputComboAccess().getInvisibleInvisibleKeyword_1_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getInputComboRule());
 	        }
-       		setWithLastConsumed($current, "visible", true, "visible");
+       		setWithLastConsumed($current, "invisible", true, "invisible");
 	    }
 
 )
 )?(
 (
-		lv_habilitado_2_0=	'habilitado' 
+		lv_deshabilitado_2_0=	'deshabilitado' 
     {
-        newLeafNode(lv_habilitado_2_0, grammarAccess.getInputComboAccess().getHabilitadoHabilitadoKeyword_2_0());
+        newLeafNode(lv_deshabilitado_2_0, grammarAccess.getInputComboAccess().getDeshabilitadoDeshabilitadoKeyword_2_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getInputComboRule());
 	        }
-       		setWithLastConsumed($current, "habilitado", true, "habilitado");
+       		setWithLastConsumed($current, "deshabilitado", true, "deshabilitado");
 	    }
 
 )
@@ -1204,31 +1204,31 @@ ruleInputCheck returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_visible_0_0=	'visible' 
+		lv_invisible_0_0=	'invisible' 
     {
-        newLeafNode(lv_visible_0_0, grammarAccess.getInputCheckAccess().getVisibleVisibleKeyword_0_0());
+        newLeafNode(lv_invisible_0_0, grammarAccess.getInputCheckAccess().getInvisibleInvisibleKeyword_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getInputCheckRule());
 	        }
-       		setWithLastConsumed($current, "visible", true, "visible");
+       		setWithLastConsumed($current, "invisible", true, "invisible");
 	    }
 
 )
 )?(
 (
-		lv_habilitado_1_0=	'habilitado' 
+		lv_deshabilitado_1_0=	'deshabilitado' 
     {
-        newLeafNode(lv_habilitado_1_0, grammarAccess.getInputCheckAccess().getHabilitadoHabilitadoKeyword_1_0());
+        newLeafNode(lv_deshabilitado_1_0, grammarAccess.getInputCheckAccess().getDeshabilitadoDeshabilitadoKeyword_1_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getInputCheckRule());
 	        }
-       		setWithLastConsumed($current, "habilitado", true, "habilitado");
+       		setWithLastConsumed($current, "deshabilitado", true, "deshabilitado");
 	    }
 
 )
@@ -1417,31 +1417,31 @@ ruleBotonValidar returns [EObject current=null]
     }
 )(
 (
-		lv_visible_1_0=	'visible' 
+		lv_invisible_1_0=	'invisible' 
     {
-        newLeafNode(lv_visible_1_0, grammarAccess.getBotonValidarAccess().getVisibleVisibleKeyword_1_0());
+        newLeafNode(lv_invisible_1_0, grammarAccess.getBotonValidarAccess().getInvisibleInvisibleKeyword_1_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getBotonValidarRule());
 	        }
-       		setWithLastConsumed($current, "visible", true, "visible");
+       		setWithLastConsumed($current, "invisible", true, "invisible");
 	    }
 
 )
 )?(
 (
-		lv_habilitado_2_0=	'habilitado' 
+		lv_deshabilitado_2_0=	'deshabilitado' 
     {
-        newLeafNode(lv_habilitado_2_0, grammarAccess.getBotonValidarAccess().getHabilitadoHabilitadoKeyword_2_0());
+        newLeafNode(lv_deshabilitado_2_0, grammarAccess.getBotonValidarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getBotonValidarRule());
 	        }
-       		setWithLastConsumed($current, "habilitado", true, "habilitado");
+       		setWithLastConsumed($current, "deshabilitado", true, "deshabilitado");
 	    }
 
 )
@@ -1496,31 +1496,31 @@ ruleBotonGuardar_Impl returns [EObject current=null]
     }
 )(
 (
-		lv_visible_1_0=	'visible' 
+		lv_invisible_1_0=	'invisible' 
     {
-        newLeafNode(lv_visible_1_0, grammarAccess.getBotonGuardar_ImplAccess().getVisibleVisibleKeyword_1_0());
+        newLeafNode(lv_invisible_1_0, grammarAccess.getBotonGuardar_ImplAccess().getInvisibleInvisibleKeyword_1_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getBotonGuardar_ImplRule());
 	        }
-       		setWithLastConsumed($current, "visible", true, "visible");
+       		setWithLastConsumed($current, "invisible", true, "invisible");
 	    }
 
 )
 )?(
 (
-		lv_habilitado_2_0=	'habilitado' 
+		lv_deshabilitado_2_0=	'deshabilitado' 
     {
-        newLeafNode(lv_habilitado_2_0, grammarAccess.getBotonGuardar_ImplAccess().getHabilitadoHabilitadoKeyword_2_0());
+        newLeafNode(lv_deshabilitado_2_0, grammarAccess.getBotonGuardar_ImplAccess().getDeshabilitadoDeshabilitadoKeyword_2_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getBotonGuardar_ImplRule());
 	        }
-       		setWithLastConsumed($current, "habilitado", true, "habilitado");
+       		setWithLastConsumed($current, "deshabilitado", true, "deshabilitado");
 	    }
 
 )
@@ -1575,31 +1575,31 @@ ruleBotonCancelar returns [EObject current=null]
     }
 )(
 (
-		lv_visible_1_0=	'visible' 
+		lv_invisible_1_0=	'invisible' 
     {
-        newLeafNode(lv_visible_1_0, grammarAccess.getBotonCancelarAccess().getVisibleVisibleKeyword_1_0());
+        newLeafNode(lv_invisible_1_0, grammarAccess.getBotonCancelarAccess().getInvisibleInvisibleKeyword_1_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getBotonCancelarRule());
 	        }
-       		setWithLastConsumed($current, "visible", true, "visible");
+       		setWithLastConsumed($current, "invisible", true, "invisible");
 	    }
 
 )
 )?(
 (
-		lv_habilitado_2_0=	'habilitado' 
+		lv_deshabilitado_2_0=	'deshabilitado' 
     {
-        newLeafNode(lv_habilitado_2_0, grammarAccess.getBotonCancelarAccess().getHabilitadoHabilitadoKeyword_2_0());
+        newLeafNode(lv_deshabilitado_2_0, grammarAccess.getBotonCancelarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getBotonCancelarRule());
 	        }
-       		setWithLastConsumed($current, "habilitado", true, "habilitado");
+       		setWithLastConsumed($current, "deshabilitado", true, "deshabilitado");
 	    }
 
 )
@@ -1648,31 +1648,31 @@ ruleBotonCustom returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_visible_0_0=	'visible' 
+		lv_invisible_0_0=	'invisible' 
     {
-        newLeafNode(lv_visible_0_0, grammarAccess.getBotonCustomAccess().getVisibleVisibleKeyword_0_0());
+        newLeafNode(lv_invisible_0_0, grammarAccess.getBotonCustomAccess().getInvisibleInvisibleKeyword_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getBotonCustomRule());
 	        }
-       		setWithLastConsumed($current, "visible", true, "visible");
+       		setWithLastConsumed($current, "invisible", true, "invisible");
 	    }
 
 )
 )?(
 (
-		lv_habilitado_1_0=	'habilitado' 
+		lv_deshabilitado_1_0=	'deshabilitado' 
     {
-        newLeafNode(lv_habilitado_1_0, grammarAccess.getBotonCustomAccess().getHabilitadoHabilitadoKeyword_1_0());
+        newLeafNode(lv_deshabilitado_1_0, grammarAccess.getBotonCustomAccess().getDeshabilitadoDeshabilitadoKeyword_1_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getBotonCustomRule());
 	        }
-       		setWithLastConsumed($current, "habilitado", true, "habilitado");
+       		setWithLastConsumed($current, "deshabilitado", true, "deshabilitado");
 	    }
 
 )

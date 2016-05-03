@@ -429,10 +429,10 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InputTexto");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cInputTextoAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cVisibleAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cVisibleVisibleKeyword_1_0 = (Keyword)cVisibleAssignment_1.eContents().get(0);
-		private final Assignment cHabilitadoAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final Keyword cHabilitadoHabilitadoKeyword_2_0 = (Keyword)cHabilitadoAssignment_2.eContents().get(0);
+		private final Assignment cInvisibleAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cInvisibleInvisibleKeyword_1_0 = (Keyword)cInvisibleAssignment_1.eContents().get(0);
+		private final Assignment cDeshabilitadoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cDeshabilitadoDeshabilitadoKeyword_2_0 = (Keyword)cDeshabilitadoAssignment_2.eContents().get(0);
 		private final Assignment cObligatorioAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final Keyword cObligatorioObligatorioKeyword_3_0 = (Keyword)cObligatorioAssignment_3.eContents().get(0);
 		private final Keyword cInputTextoKeyword_4 = (Keyword)cGroup.eContents().get(4);
@@ -446,28 +446,28 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//InputTexto:
-		//	{InputTexto} visible?="visible"? habilitado?="habilitado"? obligatorio?="obligatorio"? "InputTexto" name=EString "{"
-		//	("valor" valor=EString)? "}";
+		//	{InputTexto} invisible?="invisible"? deshabilitado?="deshabilitado"? obligatorio?="obligatorio"? "InputTexto"
+		//	name=EString "{" ("valor" valor=EString)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//{InputTexto} visible?="visible"? habilitado?="habilitado"? obligatorio?="obligatorio"? "InputTexto" name=EString "{"
-		//("valor" valor=EString)? "}"
+		//{InputTexto} invisible?="invisible"? deshabilitado?="deshabilitado"? obligatorio?="obligatorio"? "InputTexto"
+		//name=EString "{" ("valor" valor=EString)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{InputTexto}
 		public Action getInputTextoAction_0() { return cInputTextoAction_0; }
 
-		//visible?="visible"?
-		public Assignment getVisibleAssignment_1() { return cVisibleAssignment_1; }
+		//invisible?="invisible"?
+		public Assignment getInvisibleAssignment_1() { return cInvisibleAssignment_1; }
 
-		//"visible"
-		public Keyword getVisibleVisibleKeyword_1_0() { return cVisibleVisibleKeyword_1_0; }
+		//"invisible"
+		public Keyword getInvisibleInvisibleKeyword_1_0() { return cInvisibleInvisibleKeyword_1_0; }
 
-		//habilitado?="habilitado"?
-		public Assignment getHabilitadoAssignment_2() { return cHabilitadoAssignment_2; }
+		//deshabilitado?="deshabilitado"?
+		public Assignment getDeshabilitadoAssignment_2() { return cDeshabilitadoAssignment_2; }
 
-		//"habilitado"
-		public Keyword getHabilitadoHabilitadoKeyword_2_0() { return cHabilitadoHabilitadoKeyword_2_0; }
+		//"deshabilitado"
+		public Keyword getDeshabilitadoDeshabilitadoKeyword_2_0() { return cDeshabilitadoDeshabilitadoKeyword_2_0; }
 
 		//obligatorio?="obligatorio"?
 		public Assignment getObligatorioAssignment_3() { return cObligatorioAssignment_3; }
@@ -506,10 +506,10 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	public class InputRadioElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InputRadio");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cVisibleAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cVisibleVisibleKeyword_0_0 = (Keyword)cVisibleAssignment_0.eContents().get(0);
-		private final Assignment cHabilitadoAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cHabilitadoHabilitadoKeyword_1_0 = (Keyword)cHabilitadoAssignment_1.eContents().get(0);
+		private final Assignment cInvisibleAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cInvisibleInvisibleKeyword_0_0 = (Keyword)cInvisibleAssignment_0.eContents().get(0);
+		private final Assignment cDeshabilitadoAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cDeshabilitadoDeshabilitadoKeyword_1_0 = (Keyword)cDeshabilitadoAssignment_1.eContents().get(0);
 		private final Keyword cInputRadioKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameEStringParserRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
@@ -534,25 +534,25 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//InputRadio:
-		//	visible?="visible"? habilitado?="habilitado"? "InputRadio" name=EString "{" ("valores" "{" valores+=EString (","
-		//	valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "reaccion" reaccion=Reaccion "}";
+		//	invisible?="invisible"? deshabilitado?="deshabilitado"? "InputRadio" name=EString "{" ("valores" "{" valores+=EString
+		//	("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "reaccion" reaccion=Reaccion "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//visible?="visible"? habilitado?="habilitado"? "InputRadio" name=EString "{" ("valores" "{" valores+=EString (","
-		//valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "reaccion" reaccion=Reaccion "}"
+		//invisible?="invisible"? deshabilitado?="deshabilitado"? "InputRadio" name=EString "{" ("valores" "{" valores+=EString
+		//("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "reaccion" reaccion=Reaccion "}"
 		public Group getGroup() { return cGroup; }
 
-		//visible?="visible"?
-		public Assignment getVisibleAssignment_0() { return cVisibleAssignment_0; }
+		//invisible?="invisible"?
+		public Assignment getInvisibleAssignment_0() { return cInvisibleAssignment_0; }
 
-		//"visible"
-		public Keyword getVisibleVisibleKeyword_0_0() { return cVisibleVisibleKeyword_0_0; }
+		//"invisible"
+		public Keyword getInvisibleInvisibleKeyword_0_0() { return cInvisibleInvisibleKeyword_0_0; }
 
-		//habilitado?="habilitado"?
-		public Assignment getHabilitadoAssignment_1() { return cHabilitadoAssignment_1; }
+		//deshabilitado?="deshabilitado"?
+		public Assignment getDeshabilitadoAssignment_1() { return cDeshabilitadoAssignment_1; }
 
-		//"habilitado"
-		public Keyword getHabilitadoHabilitadoKeyword_1_0() { return cHabilitadoHabilitadoKeyword_1_0; }
+		//"deshabilitado"
+		public Keyword getDeshabilitadoDeshabilitadoKeyword_1_0() { return cDeshabilitadoDeshabilitadoKeyword_1_0; }
 
 		//"InputRadio"
 		public Keyword getInputRadioKeyword_2() { return cInputRadioKeyword_2; }
@@ -625,10 +625,10 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InputCombo");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cInputComboAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cVisibleAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cVisibleVisibleKeyword_1_0 = (Keyword)cVisibleAssignment_1.eContents().get(0);
-		private final Assignment cHabilitadoAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final Keyword cHabilitadoHabilitadoKeyword_2_0 = (Keyword)cHabilitadoAssignment_2.eContents().get(0);
+		private final Assignment cInvisibleAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cInvisibleInvisibleKeyword_1_0 = (Keyword)cInvisibleAssignment_1.eContents().get(0);
+		private final Assignment cDeshabilitadoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cDeshabilitadoDeshabilitadoKeyword_2_0 = (Keyword)cDeshabilitadoAssignment_2.eContents().get(0);
 		private final Keyword cInputComboKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cNameEStringParserRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
@@ -650,28 +650,28 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//InputCombo:
-		//	{InputCombo} visible?="visible"? habilitado?="habilitado"? "InputCombo" name=EString "{" ("valores" "{"
+		//	{InputCombo} invisible?="invisible"? deshabilitado?="deshabilitado"? "InputCombo" name=EString "{" ("valores" "{"
 		//	valores+=EString ("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//{InputCombo} visible?="visible"? habilitado?="habilitado"? "InputCombo" name=EString "{" ("valores" "{" valores+=EString
-		//("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "}"
+		//{InputCombo} invisible?="invisible"? deshabilitado?="deshabilitado"? "InputCombo" name=EString "{" ("valores" "{"
+		//valores+=EString ("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//{InputCombo}
 		public Action getInputComboAction_0() { return cInputComboAction_0; }
 
-		//visible?="visible"?
-		public Assignment getVisibleAssignment_1() { return cVisibleAssignment_1; }
+		//invisible?="invisible"?
+		public Assignment getInvisibleAssignment_1() { return cInvisibleAssignment_1; }
 
-		//"visible"
-		public Keyword getVisibleVisibleKeyword_1_0() { return cVisibleVisibleKeyword_1_0; }
+		//"invisible"
+		public Keyword getInvisibleInvisibleKeyword_1_0() { return cInvisibleInvisibleKeyword_1_0; }
 
-		//habilitado?="habilitado"?
-		public Assignment getHabilitadoAssignment_2() { return cHabilitadoAssignment_2; }
+		//deshabilitado?="deshabilitado"?
+		public Assignment getDeshabilitadoAssignment_2() { return cDeshabilitadoAssignment_2; }
 
-		//"habilitado"
-		public Keyword getHabilitadoHabilitadoKeyword_2_0() { return cHabilitadoHabilitadoKeyword_2_0; }
+		//"deshabilitado"
+		public Keyword getDeshabilitadoDeshabilitadoKeyword_2_0() { return cDeshabilitadoDeshabilitadoKeyword_2_0; }
 
 		//"InputCombo"
 		public Keyword getInputComboKeyword_3() { return cInputComboKeyword_3; }
@@ -734,10 +734,10 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	public class InputCheckElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "InputCheck");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cVisibleAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cVisibleVisibleKeyword_0_0 = (Keyword)cVisibleAssignment_0.eContents().get(0);
-		private final Assignment cHabilitadoAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cHabilitadoHabilitadoKeyword_1_0 = (Keyword)cHabilitadoAssignment_1.eContents().get(0);
+		private final Assignment cInvisibleAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cInvisibleInvisibleKeyword_0_0 = (Keyword)cInvisibleAssignment_0.eContents().get(0);
+		private final Assignment cDeshabilitadoAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cDeshabilitadoDeshabilitadoKeyword_1_0 = (Keyword)cDeshabilitadoAssignment_1.eContents().get(0);
 		private final Keyword cInputCheckKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameEStringParserRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
@@ -768,27 +768,27 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//InputCheck:
-		//	visible?="visible"? habilitado?="habilitado"? "InputCheck" name=EString "{" ("valores" "{" valores+=EString (","
-		//	valores+=EString)* "}")? ("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "reaccion" reaccion=Reaccion
-		//	"}";
+		//	invisible?="invisible"? deshabilitado?="deshabilitado"? "InputCheck" name=EString "{" ("valores" "{" valores+=EString
+		//	("," valores+=EString)* "}")? ("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "reaccion"
+		//	reaccion=Reaccion "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//visible?="visible"? habilitado?="habilitado"? "InputCheck" name=EString "{" ("valores" "{" valores+=EString (","
-		//valores+=EString)* "}")? ("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "reaccion" reaccion=Reaccion
-		//"}"
+		//invisible?="invisible"? deshabilitado?="deshabilitado"? "InputCheck" name=EString "{" ("valores" "{" valores+=EString
+		//("," valores+=EString)* "}")? ("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "reaccion"
+		//reaccion=Reaccion "}"
 		public Group getGroup() { return cGroup; }
 
-		//visible?="visible"?
-		public Assignment getVisibleAssignment_0() { return cVisibleAssignment_0; }
+		//invisible?="invisible"?
+		public Assignment getInvisibleAssignment_0() { return cInvisibleAssignment_0; }
 
-		//"visible"
-		public Keyword getVisibleVisibleKeyword_0_0() { return cVisibleVisibleKeyword_0_0; }
+		//"invisible"
+		public Keyword getInvisibleInvisibleKeyword_0_0() { return cInvisibleInvisibleKeyword_0_0; }
 
-		//habilitado?="habilitado"?
-		public Assignment getHabilitadoAssignment_1() { return cHabilitadoAssignment_1; }
+		//deshabilitado?="deshabilitado"?
+		public Assignment getDeshabilitadoAssignment_1() { return cDeshabilitadoAssignment_1; }
 
-		//"habilitado"
-		public Keyword getHabilitadoHabilitadoKeyword_1_0() { return cHabilitadoHabilitadoKeyword_1_0; }
+		//"deshabilitado"
+		public Keyword getDeshabilitadoDeshabilitadoKeyword_1_0() { return cDeshabilitadoDeshabilitadoKeyword_1_0; }
 
 		//"InputCheck"
 		public Keyword getInputCheckKeyword_2() { return cInputCheckKeyword_2; }
@@ -879,35 +879,35 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BotonValidar");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cBotonValidarAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cVisibleAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cVisibleVisibleKeyword_1_0 = (Keyword)cVisibleAssignment_1.eContents().get(0);
-		private final Assignment cHabilitadoAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final Keyword cHabilitadoHabilitadoKeyword_2_0 = (Keyword)cHabilitadoAssignment_2.eContents().get(0);
+		private final Assignment cInvisibleAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cInvisibleInvisibleKeyword_1_0 = (Keyword)cInvisibleAssignment_1.eContents().get(0);
+		private final Assignment cDeshabilitadoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cDeshabilitadoDeshabilitadoKeyword_2_0 = (Keyword)cDeshabilitadoAssignment_2.eContents().get(0);
 		private final Keyword cBotonValidarKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cNameEStringParserRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
 		
 		//BotonValidar:
-		//	{BotonValidar} visible?="visible"? habilitado?="habilitado"? "BotonValidar" name=EString;
+		//	{BotonValidar} invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonValidar" name=EString;
 		@Override public ParserRule getRule() { return rule; }
 
-		//{BotonValidar} visible?="visible"? habilitado?="habilitado"? "BotonValidar" name=EString
+		//{BotonValidar} invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonValidar" name=EString
 		public Group getGroup() { return cGroup; }
 
 		//{BotonValidar}
 		public Action getBotonValidarAction_0() { return cBotonValidarAction_0; }
 
-		//visible?="visible"?
-		public Assignment getVisibleAssignment_1() { return cVisibleAssignment_1; }
+		//invisible?="invisible"?
+		public Assignment getInvisibleAssignment_1() { return cInvisibleAssignment_1; }
 
-		//"visible"
-		public Keyword getVisibleVisibleKeyword_1_0() { return cVisibleVisibleKeyword_1_0; }
+		//"invisible"
+		public Keyword getInvisibleInvisibleKeyword_1_0() { return cInvisibleInvisibleKeyword_1_0; }
 
-		//habilitado?="habilitado"?
-		public Assignment getHabilitadoAssignment_2() { return cHabilitadoAssignment_2; }
+		//deshabilitado?="deshabilitado"?
+		public Assignment getDeshabilitadoAssignment_2() { return cDeshabilitadoAssignment_2; }
 
-		//"habilitado"
-		public Keyword getHabilitadoHabilitadoKeyword_2_0() { return cHabilitadoHabilitadoKeyword_2_0; }
+		//"deshabilitado"
+		public Keyword getDeshabilitadoDeshabilitadoKeyword_2_0() { return cDeshabilitadoDeshabilitadoKeyword_2_0; }
 
 		//"BotonValidar"
 		public Keyword getBotonValidarKeyword_3() { return cBotonValidarKeyword_3; }
@@ -923,35 +923,35 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BotonGuardar_Impl");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cBotonGuardarAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cVisibleAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cVisibleVisibleKeyword_1_0 = (Keyword)cVisibleAssignment_1.eContents().get(0);
-		private final Assignment cHabilitadoAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final Keyword cHabilitadoHabilitadoKeyword_2_0 = (Keyword)cHabilitadoAssignment_2.eContents().get(0);
+		private final Assignment cInvisibleAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cInvisibleInvisibleKeyword_1_0 = (Keyword)cInvisibleAssignment_1.eContents().get(0);
+		private final Assignment cDeshabilitadoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cDeshabilitadoDeshabilitadoKeyword_2_0 = (Keyword)cDeshabilitadoAssignment_2.eContents().get(0);
 		private final Keyword cBotonGuardarKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cNameEStringParserRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
 		
 		//BotonGuardar_Impl returns BotonGuardar:
-		//	{BotonGuardar} visible?="visible"? habilitado?="habilitado"? "BotonGuardar" name=EString;
+		//	{BotonGuardar} invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonGuardar" name=EString;
 		@Override public ParserRule getRule() { return rule; }
 
-		//{BotonGuardar} visible?="visible"? habilitado?="habilitado"? "BotonGuardar" name=EString
+		//{BotonGuardar} invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonGuardar" name=EString
 		public Group getGroup() { return cGroup; }
 
 		//{BotonGuardar}
 		public Action getBotonGuardarAction_0() { return cBotonGuardarAction_0; }
 
-		//visible?="visible"?
-		public Assignment getVisibleAssignment_1() { return cVisibleAssignment_1; }
+		//invisible?="invisible"?
+		public Assignment getInvisibleAssignment_1() { return cInvisibleAssignment_1; }
 
-		//"visible"
-		public Keyword getVisibleVisibleKeyword_1_0() { return cVisibleVisibleKeyword_1_0; }
+		//"invisible"
+		public Keyword getInvisibleInvisibleKeyword_1_0() { return cInvisibleInvisibleKeyword_1_0; }
 
-		//habilitado?="habilitado"?
-		public Assignment getHabilitadoAssignment_2() { return cHabilitadoAssignment_2; }
+		//deshabilitado?="deshabilitado"?
+		public Assignment getDeshabilitadoAssignment_2() { return cDeshabilitadoAssignment_2; }
 
-		//"habilitado"
-		public Keyword getHabilitadoHabilitadoKeyword_2_0() { return cHabilitadoHabilitadoKeyword_2_0; }
+		//"deshabilitado"
+		public Keyword getDeshabilitadoDeshabilitadoKeyword_2_0() { return cDeshabilitadoDeshabilitadoKeyword_2_0; }
 
 		//"BotonGuardar"
 		public Keyword getBotonGuardarKeyword_3() { return cBotonGuardarKeyword_3; }
@@ -967,35 +967,35 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BotonCancelar");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cBotonCancelarAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cVisibleAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cVisibleVisibleKeyword_1_0 = (Keyword)cVisibleAssignment_1.eContents().get(0);
-		private final Assignment cHabilitadoAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final Keyword cHabilitadoHabilitadoKeyword_2_0 = (Keyword)cHabilitadoAssignment_2.eContents().get(0);
+		private final Assignment cInvisibleAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cInvisibleInvisibleKeyword_1_0 = (Keyword)cInvisibleAssignment_1.eContents().get(0);
+		private final Assignment cDeshabilitadoAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cDeshabilitadoDeshabilitadoKeyword_2_0 = (Keyword)cDeshabilitadoAssignment_2.eContents().get(0);
 		private final Keyword cBotonCancelarKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cNameEStringParserRuleCall_4_0 = (RuleCall)cNameAssignment_4.eContents().get(0);
 		
 		//BotonCancelar:
-		//	{BotonCancelar} visible?="visible"? habilitado?="habilitado"? "BotonCancelar" name=EString;
+		//	{BotonCancelar} invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonCancelar" name=EString;
 		@Override public ParserRule getRule() { return rule; }
 
-		//{BotonCancelar} visible?="visible"? habilitado?="habilitado"? "BotonCancelar" name=EString
+		//{BotonCancelar} invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonCancelar" name=EString
 		public Group getGroup() { return cGroup; }
 
 		//{BotonCancelar}
 		public Action getBotonCancelarAction_0() { return cBotonCancelarAction_0; }
 
-		//visible?="visible"?
-		public Assignment getVisibleAssignment_1() { return cVisibleAssignment_1; }
+		//invisible?="invisible"?
+		public Assignment getInvisibleAssignment_1() { return cInvisibleAssignment_1; }
 
-		//"visible"
-		public Keyword getVisibleVisibleKeyword_1_0() { return cVisibleVisibleKeyword_1_0; }
+		//"invisible"
+		public Keyword getInvisibleInvisibleKeyword_1_0() { return cInvisibleInvisibleKeyword_1_0; }
 
-		//habilitado?="habilitado"?
-		public Assignment getHabilitadoAssignment_2() { return cHabilitadoAssignment_2; }
+		//deshabilitado?="deshabilitado"?
+		public Assignment getDeshabilitadoAssignment_2() { return cDeshabilitadoAssignment_2; }
 
-		//"habilitado"
-		public Keyword getHabilitadoHabilitadoKeyword_2_0() { return cHabilitadoHabilitadoKeyword_2_0; }
+		//"deshabilitado"
+		public Keyword getDeshabilitadoDeshabilitadoKeyword_2_0() { return cDeshabilitadoDeshabilitadoKeyword_2_0; }
 
 		//"BotonCancelar"
 		public Keyword getBotonCancelarKeyword_3() { return cBotonCancelarKeyword_3; }
@@ -1010,10 +1010,10 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	public class BotonCustomElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BotonCustom");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cVisibleAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cVisibleVisibleKeyword_0_0 = (Keyword)cVisibleAssignment_0.eContents().get(0);
-		private final Assignment cHabilitadoAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cHabilitadoHabilitadoKeyword_1_0 = (Keyword)cHabilitadoAssignment_1.eContents().get(0);
+		private final Assignment cInvisibleAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cInvisibleInvisibleKeyword_0_0 = (Keyword)cInvisibleAssignment_0.eContents().get(0);
+		private final Assignment cDeshabilitadoAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cDeshabilitadoDeshabilitadoKeyword_1_0 = (Keyword)cDeshabilitadoAssignment_1.eContents().get(0);
 		private final Keyword cBotonCustomKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameEStringParserRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
@@ -1024,23 +1024,23 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//BotonCustom:
-		//	visible?="visible"? habilitado?="habilitado"? "BotonCustom" name=EString "{" "funcion" funcion=EString "}";
+		//	invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonCustom" name=EString "{" "funcion" funcion=EString "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//visible?="visible"? habilitado?="habilitado"? "BotonCustom" name=EString "{" "funcion" funcion=EString "}"
+		//invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonCustom" name=EString "{" "funcion" funcion=EString "}"
 		public Group getGroup() { return cGroup; }
 
-		//visible?="visible"?
-		public Assignment getVisibleAssignment_0() { return cVisibleAssignment_0; }
+		//invisible?="invisible"?
+		public Assignment getInvisibleAssignment_0() { return cInvisibleAssignment_0; }
 
-		//"visible"
-		public Keyword getVisibleVisibleKeyword_0_0() { return cVisibleVisibleKeyword_0_0; }
+		//"invisible"
+		public Keyword getInvisibleInvisibleKeyword_0_0() { return cInvisibleInvisibleKeyword_0_0; }
 
-		//habilitado?="habilitado"?
-		public Assignment getHabilitadoAssignment_1() { return cHabilitadoAssignment_1; }
+		//deshabilitado?="deshabilitado"?
+		public Assignment getDeshabilitadoAssignment_1() { return cDeshabilitadoAssignment_1; }
 
-		//"habilitado"
-		public Keyword getHabilitadoHabilitadoKeyword_1_0() { return cHabilitadoHabilitadoKeyword_1_0; }
+		//"deshabilitado"
+		public Keyword getDeshabilitadoDeshabilitadoKeyword_1_0() { return cDeshabilitadoDeshabilitadoKeyword_1_0; }
 
 		//"BotonCustom"
 		public Keyword getBotonCustomKeyword_2() { return cBotonCustomKeyword_2; }
@@ -1748,8 +1748,8 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InputTexto:
-	//	{InputTexto} visible?="visible"? habilitado?="habilitado"? obligatorio?="obligatorio"? "InputTexto" name=EString "{"
-	//	("valor" valor=EString)? "}";
+	//	{InputTexto} invisible?="invisible"? deshabilitado?="deshabilitado"? obligatorio?="obligatorio"? "InputTexto"
+	//	name=EString "{" ("valor" valor=EString)? "}";
 	public InputTextoElements getInputTextoAccess() {
 		return pInputTexto;
 	}
@@ -1759,8 +1759,8 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InputRadio:
-	//	visible?="visible"? habilitado?="habilitado"? "InputRadio" name=EString "{" ("valores" "{" valores+=EString (","
-	//	valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "reaccion" reaccion=Reaccion "}";
+	//	invisible?="invisible"? deshabilitado?="deshabilitado"? "InputRadio" name=EString "{" ("valores" "{" valores+=EString
+	//	("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "reaccion" reaccion=Reaccion "}";
 	public InputRadioElements getInputRadioAccess() {
 		return pInputRadio;
 	}
@@ -1770,7 +1770,7 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InputCombo:
-	//	{InputCombo} visible?="visible"? habilitado?="habilitado"? "InputCombo" name=EString "{" ("valores" "{"
+	//	{InputCombo} invisible?="invisible"? deshabilitado?="deshabilitado"? "InputCombo" name=EString "{" ("valores" "{"
 	//	valores+=EString ("," valores+=EString)* "}")? ("seleccion" seleccion=EInt)? "}";
 	public InputComboElements getInputComboAccess() {
 		return pInputCombo;
@@ -1781,9 +1781,9 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//InputCheck:
-	//	visible?="visible"? habilitado?="habilitado"? "InputCheck" name=EString "{" ("valores" "{" valores+=EString (","
-	//	valores+=EString)* "}")? ("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "reaccion" reaccion=Reaccion
-	//	"}";
+	//	invisible?="invisible"? deshabilitado?="deshabilitado"? "InputCheck" name=EString "{" ("valores" "{" valores+=EString
+	//	("," valores+=EString)* "}")? ("seleccion" "{" seleccion+=EInt ("," seleccion+=EInt)* "}")? "reaccion"
+	//	reaccion=Reaccion "}";
 	public InputCheckElements getInputCheckAccess() {
 		return pInputCheck;
 	}
@@ -1793,7 +1793,7 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BotonValidar:
-	//	{BotonValidar} visible?="visible"? habilitado?="habilitado"? "BotonValidar" name=EString;
+	//	{BotonValidar} invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonValidar" name=EString;
 	public BotonValidarElements getBotonValidarAccess() {
 		return pBotonValidar;
 	}
@@ -1803,7 +1803,7 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BotonGuardar_Impl returns BotonGuardar:
-	//	{BotonGuardar} visible?="visible"? habilitado?="habilitado"? "BotonGuardar" name=EString;
+	//	{BotonGuardar} invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonGuardar" name=EString;
 	public BotonGuardar_ImplElements getBotonGuardar_ImplAccess() {
 		return pBotonGuardar_Impl;
 	}
@@ -1813,7 +1813,7 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BotonCancelar:
-	//	{BotonCancelar} visible?="visible"? habilitado?="habilitado"? "BotonCancelar" name=EString;
+	//	{BotonCancelar} invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonCancelar" name=EString;
 	public BotonCancelarElements getBotonCancelarAccess() {
 		return pBotonCancelar;
 	}
@@ -1823,7 +1823,7 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BotonCustom:
-	//	visible?="visible"? habilitado?="habilitado"? "BotonCustom" name=EString "{" "funcion" funcion=EString "}";
+	//	invisible?="invisible"? deshabilitado?="deshabilitado"? "BotonCustom" name=EString "{" "funcion" funcion=EString "}";
 	public BotonCustomElements getBotonCustomAccess() {
 		return pBotonCustom;
 	}

@@ -400,7 +400,7 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getInput_Visible() {
+	public EAttribute getInput_Invisible() {
 		return (EAttribute)inputEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -409,7 +409,7 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getInput_Habilitado() {
+	public EAttribute getInput_Deshabilitado() {
 		return (EAttribute)inputEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -859,8 +859,8 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 
 		inputEClass = createEClass(INPUT);
 		createEAttribute(inputEClass, INPUT__NAME);
-		createEAttribute(inputEClass, INPUT__VISIBLE);
-		createEAttribute(inputEClass, INPUT__HABILITADO);
+		createEAttribute(inputEClass, INPUT__INVISIBLE);
+		createEAttribute(inputEClass, INPUT__DESHABILITADO);
 
 		inputTextoEClass = createEClass(INPUT_TEXTO);
 		createEAttribute(inputTextoEClass, INPUT_TEXTO__OBLIGATORIO);
@@ -995,8 +995,8 @@ public class Formularios_DASOFTPackageImpl extends EPackageImpl implements Formu
 
 		initEClass(inputEClass, Input.class, "Input", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInput_Name(), ecorePackage.getEString(), "name", "prueba", 1, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInput_Visible(), ecorePackage.getEBoolean(), "visible", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getInput_Habilitado(), ecorePackage.getEBoolean(), "habilitado", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInput_Invisible(), ecorePackage.getEBoolean(), "invisible", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getInput_Deshabilitado(), ecorePackage.getEBoolean(), "deshabilitado", null, 0, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputTextoEClass, InputTexto.class, "InputTexto", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInputTexto_Obligatorio(), ecorePackage.getEBoolean(), "obligatorio", null, 0, 1, InputTexto.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -19,8 +19,8 @@
     </genClasses>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//Input">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Input/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Input/visible"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Input/habilitado"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Input/invisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//Input/deshabilitado"/>
     </genClasses>
     <genClasses ecoreClass="Proyecto_DASOFT.ecore#//InputTexto">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Proyecto_DASOFT.ecore#//InputTexto/obligatorio"/>

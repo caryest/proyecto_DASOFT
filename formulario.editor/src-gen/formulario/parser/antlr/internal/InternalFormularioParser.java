@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFormularioParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'comprobacionCampos'", "'comprobacionAccion'", "'Formulario'", "'{'", "'layout'", "'pruebas'", "'}'", "'Layout'", "'columnas'", "'entradas'", "','", "'PruebaInterfaz'", "'acciones'", "'-'", "'visible'", "'habilitado'", "'obligatorio'", "'InputTexto'", "'valor'", "'InputRadio'", "'valores'", "'seleccion'", "'reaccion'", "'InputCombo'", "'InputCheck'", "'BotonValidar'", "'BotonGuardar'", "'BotonCancelar'", "'BotonCustom'", "'funcion'", "'ReaccionVisible'", "'activacion'", "'objetivo'", "'ReaccionHabilitado'", "'AccionValor'", "'elemento'", "'asercion'", "'AccionSeleccion'", "'AccionPulsacion'", "'estado'", "'AsercionInvisible'", "'AsercionHabilitado'", "'AsercionValor'", "'AsercionSeleccion'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'comprobacionCampos'", "'comprobacionAccion'", "'Formulario'", "'{'", "'layout'", "'pruebas'", "'}'", "'Layout'", "'columnas'", "'entradas'", "','", "'PruebaInterfaz'", "'acciones'", "'-'", "'invisible'", "'deshabilitado'", "'obligatorio'", "'InputTexto'", "'valor'", "'InputRadio'", "'valores'", "'seleccion'", "'reaccion'", "'InputCombo'", "'InputCheck'", "'BotonValidar'", "'BotonGuardar'", "'BotonCancelar'", "'BotonCustom'", "'funcion'", "'ReaccionVisible'", "'activacion'", "'objetivo'", "'ReaccionHabilitado'", "'AccionValor'", "'elemento'", "'asercion'", "'AccionSeleccion'", "'AccionPulsacion'", "'estado'", "'AsercionInvisible'", "'AsercionHabilitado'", "'AsercionValor'", "'AsercionSeleccion'"
     };
     public static final int T__50=50;
     public static final int T__19=19;
@@ -1862,12 +1862,12 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInputTexto"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:739:1: ruleInputTexto returns [EObject current=null] : ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? ( (lv_obligatorio_3_0= 'obligatorio' ) )? otherlv_4= 'InputTexto' ( (lv_name_5_0= ruleEString ) ) otherlv_6= '{' (otherlv_7= 'valor' ( (lv_valor_8_0= ruleEString ) ) )? otherlv_9= '}' ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:739:1: ruleInputTexto returns [EObject current=null] : ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? ( (lv_obligatorio_3_0= 'obligatorio' ) )? otherlv_4= 'InputTexto' ( (lv_name_5_0= ruleEString ) ) otherlv_6= '{' (otherlv_7= 'valor' ( (lv_valor_8_0= ruleEString ) ) )? otherlv_9= '}' ) ;
     public final EObject ruleInputTexto() throws RecognitionException {
         EObject current = null;
 
-        Token lv_visible_1_0=null;
-        Token lv_habilitado_2_0=null;
+        Token lv_invisible_1_0=null;
+        Token lv_deshabilitado_2_0=null;
         Token lv_obligatorio_3_0=null;
         Token otherlv_4=null;
         Token otherlv_6=null;
@@ -1881,11 +1881,11 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:742:28: ( ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? ( (lv_obligatorio_3_0= 'obligatorio' ) )? otherlv_4= 'InputTexto' ( (lv_name_5_0= ruleEString ) ) otherlv_6= '{' (otherlv_7= 'valor' ( (lv_valor_8_0= ruleEString ) ) )? otherlv_9= '}' ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:743:1: ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? ( (lv_obligatorio_3_0= 'obligatorio' ) )? otherlv_4= 'InputTexto' ( (lv_name_5_0= ruleEString ) ) otherlv_6= '{' (otherlv_7= 'valor' ( (lv_valor_8_0= ruleEString ) ) )? otherlv_9= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:742:28: ( ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? ( (lv_obligatorio_3_0= 'obligatorio' ) )? otherlv_4= 'InputTexto' ( (lv_name_5_0= ruleEString ) ) otherlv_6= '{' (otherlv_7= 'valor' ( (lv_valor_8_0= ruleEString ) ) )? otherlv_9= '}' ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:743:1: ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? ( (lv_obligatorio_3_0= 'obligatorio' ) )? otherlv_4= 'InputTexto' ( (lv_name_5_0= ruleEString ) ) otherlv_6= '{' (otherlv_7= 'valor' ( (lv_valor_8_0= ruleEString ) ) )? otherlv_9= '}' )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:743:1: ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? ( (lv_obligatorio_3_0= 'obligatorio' ) )? otherlv_4= 'InputTexto' ( (lv_name_5_0= ruleEString ) ) otherlv_6= '{' (otherlv_7= 'valor' ( (lv_valor_8_0= ruleEString ) ) )? otherlv_9= '}' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:743:2: () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? ( (lv_obligatorio_3_0= 'obligatorio' ) )? otherlv_4= 'InputTexto' ( (lv_name_5_0= ruleEString ) ) otherlv_6= '{' (otherlv_7= 'valor' ( (lv_valor_8_0= ruleEString ) ) )? otherlv_9= '}'
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:743:1: ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? ( (lv_obligatorio_3_0= 'obligatorio' ) )? otherlv_4= 'InputTexto' ( (lv_name_5_0= ruleEString ) ) otherlv_6= '{' (otherlv_7= 'valor' ( (lv_valor_8_0= ruleEString ) ) )? otherlv_9= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:743:2: () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? ( (lv_obligatorio_3_0= 'obligatorio' ) )? otherlv_4= 'InputTexto' ( (lv_name_5_0= ruleEString ) ) otherlv_6= '{' (otherlv_7= 'valor' ( (lv_valor_8_0= ruleEString ) ) )? otherlv_9= '}'
             {
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:743:2: ()
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:744:5: 
@@ -1898,7 +1898,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:749:2: ( (lv_visible_1_0= 'visible' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:749:2: ( (lv_invisible_1_0= 'invisible' ) )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1907,20 +1907,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt14) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:750:1: (lv_visible_1_0= 'visible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:750:1: (lv_invisible_1_0= 'invisible' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:750:1: (lv_visible_1_0= 'visible' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:751:3: lv_visible_1_0= 'visible'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:750:1: (lv_invisible_1_0= 'invisible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:751:3: lv_invisible_1_0= 'invisible'
                     {
-                    lv_visible_1_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleInputTexto1824); 
+                    lv_invisible_1_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleInputTexto1824); 
 
-                            newLeafNode(lv_visible_1_0, grammarAccess.getInputTextoAccess().getVisibleVisibleKeyword_1_0());
+                            newLeafNode(lv_invisible_1_0, grammarAccess.getInputTextoAccess().getInvisibleInvisibleKeyword_1_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInputTextoRule());
                     	        }
-                           		setWithLastConsumed(current, "visible", true, "visible");
+                           		setWithLastConsumed(current, "invisible", true, "invisible");
                     	    
 
                     }
@@ -1931,7 +1931,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:764:3: ( (lv_habilitado_2_0= 'habilitado' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:764:3: ( (lv_deshabilitado_2_0= 'deshabilitado' ) )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1940,20 +1940,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt15) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:765:1: (lv_habilitado_2_0= 'habilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:765:1: (lv_deshabilitado_2_0= 'deshabilitado' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:765:1: (lv_habilitado_2_0= 'habilitado' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:766:3: lv_habilitado_2_0= 'habilitado'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:765:1: (lv_deshabilitado_2_0= 'deshabilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:766:3: lv_deshabilitado_2_0= 'deshabilitado'
                     {
-                    lv_habilitado_2_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleInputTexto1856); 
+                    lv_deshabilitado_2_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleInputTexto1856); 
 
-                            newLeafNode(lv_habilitado_2_0, grammarAccess.getInputTextoAccess().getHabilitadoHabilitadoKeyword_2_0());
+                            newLeafNode(lv_deshabilitado_2_0, grammarAccess.getInputTextoAccess().getDeshabilitadoDeshabilitadoKeyword_2_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInputTextoRule());
                     	        }
-                           		setWithLastConsumed(current, "habilitado", true, "habilitado");
+                           		setWithLastConsumed(current, "deshabilitado", true, "deshabilitado");
                     	    
 
                     }
@@ -2149,12 +2149,12 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInputRadio"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:863:1: ruleInputRadio returns [EObject current=null] : ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'InputRadio' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' ( (lv_seleccion_12_0= ruleEInt ) ) )? otherlv_13= 'reaccion' ( (lv_reaccion_14_0= ruleReaccion ) ) otherlv_15= '}' ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:863:1: ruleInputRadio returns [EObject current=null] : ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'InputRadio' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' ( (lv_seleccion_12_0= ruleEInt ) ) )? otherlv_13= 'reaccion' ( (lv_reaccion_14_0= ruleReaccion ) ) otherlv_15= '}' ) ;
     public final EObject ruleInputRadio() throws RecognitionException {
         EObject current = null;
 
-        Token lv_visible_0_0=null;
-        Token lv_habilitado_1_0=null;
+        Token lv_invisible_0_0=null;
+        Token lv_deshabilitado_1_0=null;
         Token otherlv_2=null;
         Token otherlv_4=null;
         Token otherlv_5=null;
@@ -2178,13 +2178,13 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:866:28: ( ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'InputRadio' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' ( (lv_seleccion_12_0= ruleEInt ) ) )? otherlv_13= 'reaccion' ( (lv_reaccion_14_0= ruleReaccion ) ) otherlv_15= '}' ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:867:1: ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'InputRadio' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' ( (lv_seleccion_12_0= ruleEInt ) ) )? otherlv_13= 'reaccion' ( (lv_reaccion_14_0= ruleReaccion ) ) otherlv_15= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:866:28: ( ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'InputRadio' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' ( (lv_seleccion_12_0= ruleEInt ) ) )? otherlv_13= 'reaccion' ( (lv_reaccion_14_0= ruleReaccion ) ) otherlv_15= '}' ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:867:1: ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'InputRadio' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' ( (lv_seleccion_12_0= ruleEInt ) ) )? otherlv_13= 'reaccion' ( (lv_reaccion_14_0= ruleReaccion ) ) otherlv_15= '}' )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:867:1: ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'InputRadio' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' ( (lv_seleccion_12_0= ruleEInt ) ) )? otherlv_13= 'reaccion' ( (lv_reaccion_14_0= ruleReaccion ) ) otherlv_15= '}' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:867:2: ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'InputRadio' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' ( (lv_seleccion_12_0= ruleEInt ) ) )? otherlv_13= 'reaccion' ( (lv_reaccion_14_0= ruleReaccion ) ) otherlv_15= '}'
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:867:1: ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'InputRadio' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' ( (lv_seleccion_12_0= ruleEInt ) ) )? otherlv_13= 'reaccion' ( (lv_reaccion_14_0= ruleReaccion ) ) otherlv_15= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:867:2: ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'InputRadio' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' ( (lv_seleccion_12_0= ruleEInt ) ) )? otherlv_13= 'reaccion' ( (lv_reaccion_14_0= ruleReaccion ) ) otherlv_15= '}'
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:867:2: ( (lv_visible_0_0= 'visible' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:867:2: ( (lv_invisible_0_0= 'invisible' ) )?
             int alt18=2;
             int LA18_0 = input.LA(1);
 
@@ -2193,20 +2193,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt18) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:868:1: (lv_visible_0_0= 'visible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:868:1: (lv_invisible_0_0= 'invisible' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:868:1: (lv_visible_0_0= 'visible' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:869:3: lv_visible_0_0= 'visible'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:868:1: (lv_invisible_0_0= 'invisible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:869:3: lv_invisible_0_0= 'invisible'
                     {
-                    lv_visible_0_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleInputRadio2084); 
+                    lv_invisible_0_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleInputRadio2084); 
 
-                            newLeafNode(lv_visible_0_0, grammarAccess.getInputRadioAccess().getVisibleVisibleKeyword_0_0());
+                            newLeafNode(lv_invisible_0_0, grammarAccess.getInputRadioAccess().getInvisibleInvisibleKeyword_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInputRadioRule());
                     	        }
-                           		setWithLastConsumed(current, "visible", true, "visible");
+                           		setWithLastConsumed(current, "invisible", true, "invisible");
                     	    
 
                     }
@@ -2217,7 +2217,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:882:3: ( (lv_habilitado_1_0= 'habilitado' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:882:3: ( (lv_deshabilitado_1_0= 'deshabilitado' ) )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -2226,20 +2226,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt19) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:883:1: (lv_habilitado_1_0= 'habilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:883:1: (lv_deshabilitado_1_0= 'deshabilitado' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:883:1: (lv_habilitado_1_0= 'habilitado' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:884:3: lv_habilitado_1_0= 'habilitado'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:883:1: (lv_deshabilitado_1_0= 'deshabilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:884:3: lv_deshabilitado_1_0= 'deshabilitado'
                     {
-                    lv_habilitado_1_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleInputRadio2116); 
+                    lv_deshabilitado_1_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleInputRadio2116); 
 
-                            newLeafNode(lv_habilitado_1_0, grammarAccess.getInputRadioAccess().getHabilitadoHabilitadoKeyword_1_0());
+                            newLeafNode(lv_deshabilitado_1_0, grammarAccess.getInputRadioAccess().getDeshabilitadoDeshabilitadoKeyword_1_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInputRadioRule());
                     	        }
-                           		setWithLastConsumed(current, "habilitado", true, "habilitado");
+                           		setWithLastConsumed(current, "deshabilitado", true, "deshabilitado");
                     	    
 
                     }
@@ -2556,12 +2556,12 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInputCombo"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1040:1: ruleInputCombo returns [EObject current=null] : ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'InputCombo' ( (lv_name_4_0= ruleEString ) ) otherlv_5= '{' (otherlv_6= 'valores' otherlv_7= '{' ( (lv_valores_8_0= ruleEString ) ) (otherlv_9= ',' ( (lv_valores_10_0= ruleEString ) ) )* otherlv_11= '}' )? (otherlv_12= 'seleccion' ( (lv_seleccion_13_0= ruleEInt ) ) )? otherlv_14= '}' ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1040:1: ruleInputCombo returns [EObject current=null] : ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'InputCombo' ( (lv_name_4_0= ruleEString ) ) otherlv_5= '{' (otherlv_6= 'valores' otherlv_7= '{' ( (lv_valores_8_0= ruleEString ) ) (otherlv_9= ',' ( (lv_valores_10_0= ruleEString ) ) )* otherlv_11= '}' )? (otherlv_12= 'seleccion' ( (lv_seleccion_13_0= ruleEInt ) ) )? otherlv_14= '}' ) ;
     public final EObject ruleInputCombo() throws RecognitionException {
         EObject current = null;
 
-        Token lv_visible_1_0=null;
-        Token lv_habilitado_2_0=null;
+        Token lv_invisible_1_0=null;
+        Token lv_deshabilitado_2_0=null;
         Token otherlv_3=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
@@ -2582,11 +2582,11 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1043:28: ( ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'InputCombo' ( (lv_name_4_0= ruleEString ) ) otherlv_5= '{' (otherlv_6= 'valores' otherlv_7= '{' ( (lv_valores_8_0= ruleEString ) ) (otherlv_9= ',' ( (lv_valores_10_0= ruleEString ) ) )* otherlv_11= '}' )? (otherlv_12= 'seleccion' ( (lv_seleccion_13_0= ruleEInt ) ) )? otherlv_14= '}' ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1044:1: ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'InputCombo' ( (lv_name_4_0= ruleEString ) ) otherlv_5= '{' (otherlv_6= 'valores' otherlv_7= '{' ( (lv_valores_8_0= ruleEString ) ) (otherlv_9= ',' ( (lv_valores_10_0= ruleEString ) ) )* otherlv_11= '}' )? (otherlv_12= 'seleccion' ( (lv_seleccion_13_0= ruleEInt ) ) )? otherlv_14= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1043:28: ( ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'InputCombo' ( (lv_name_4_0= ruleEString ) ) otherlv_5= '{' (otherlv_6= 'valores' otherlv_7= '{' ( (lv_valores_8_0= ruleEString ) ) (otherlv_9= ',' ( (lv_valores_10_0= ruleEString ) ) )* otherlv_11= '}' )? (otherlv_12= 'seleccion' ( (lv_seleccion_13_0= ruleEInt ) ) )? otherlv_14= '}' ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1044:1: ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'InputCombo' ( (lv_name_4_0= ruleEString ) ) otherlv_5= '{' (otherlv_6= 'valores' otherlv_7= '{' ( (lv_valores_8_0= ruleEString ) ) (otherlv_9= ',' ( (lv_valores_10_0= ruleEString ) ) )* otherlv_11= '}' )? (otherlv_12= 'seleccion' ( (lv_seleccion_13_0= ruleEInt ) ) )? otherlv_14= '}' )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1044:1: ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'InputCombo' ( (lv_name_4_0= ruleEString ) ) otherlv_5= '{' (otherlv_6= 'valores' otherlv_7= '{' ( (lv_valores_8_0= ruleEString ) ) (otherlv_9= ',' ( (lv_valores_10_0= ruleEString ) ) )* otherlv_11= '}' )? (otherlv_12= 'seleccion' ( (lv_seleccion_13_0= ruleEInt ) ) )? otherlv_14= '}' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1044:2: () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'InputCombo' ( (lv_name_4_0= ruleEString ) ) otherlv_5= '{' (otherlv_6= 'valores' otherlv_7= '{' ( (lv_valores_8_0= ruleEString ) ) (otherlv_9= ',' ( (lv_valores_10_0= ruleEString ) ) )* otherlv_11= '}' )? (otherlv_12= 'seleccion' ( (lv_seleccion_13_0= ruleEInt ) ) )? otherlv_14= '}'
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1044:1: ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'InputCombo' ( (lv_name_4_0= ruleEString ) ) otherlv_5= '{' (otherlv_6= 'valores' otherlv_7= '{' ( (lv_valores_8_0= ruleEString ) ) (otherlv_9= ',' ( (lv_valores_10_0= ruleEString ) ) )* otherlv_11= '}' )? (otherlv_12= 'seleccion' ( (lv_seleccion_13_0= ruleEInt ) ) )? otherlv_14= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1044:2: () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'InputCombo' ( (lv_name_4_0= ruleEString ) ) otherlv_5= '{' (otherlv_6= 'valores' otherlv_7= '{' ( (lv_valores_8_0= ruleEString ) ) (otherlv_9= ',' ( (lv_valores_10_0= ruleEString ) ) )* otherlv_11= '}' )? (otherlv_12= 'seleccion' ( (lv_seleccion_13_0= ruleEInt ) ) )? otherlv_14= '}'
             {
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1044:2: ()
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1045:5: 
@@ -2599,7 +2599,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1050:2: ( (lv_visible_1_0= 'visible' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1050:2: ( (lv_invisible_1_0= 'invisible' ) )?
             int alt23=2;
             int LA23_0 = input.LA(1);
 
@@ -2608,20 +2608,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt23) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1051:1: (lv_visible_1_0= 'visible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1051:1: (lv_invisible_1_0= 'invisible' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1051:1: (lv_visible_1_0= 'visible' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1052:3: lv_visible_1_0= 'visible'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1051:1: (lv_invisible_1_0= 'invisible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1052:3: lv_invisible_1_0= 'invisible'
                     {
-                    lv_visible_1_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleInputCombo2450); 
+                    lv_invisible_1_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleInputCombo2450); 
 
-                            newLeafNode(lv_visible_1_0, grammarAccess.getInputComboAccess().getVisibleVisibleKeyword_1_0());
+                            newLeafNode(lv_invisible_1_0, grammarAccess.getInputComboAccess().getInvisibleInvisibleKeyword_1_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInputComboRule());
                     	        }
-                           		setWithLastConsumed(current, "visible", true, "visible");
+                           		setWithLastConsumed(current, "invisible", true, "invisible");
                     	    
 
                     }
@@ -2632,7 +2632,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1065:3: ( (lv_habilitado_2_0= 'habilitado' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1065:3: ( (lv_deshabilitado_2_0= 'deshabilitado' ) )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -2641,20 +2641,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt24) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1066:1: (lv_habilitado_2_0= 'habilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1066:1: (lv_deshabilitado_2_0= 'deshabilitado' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1066:1: (lv_habilitado_2_0= 'habilitado' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1067:3: lv_habilitado_2_0= 'habilitado'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1066:1: (lv_deshabilitado_2_0= 'deshabilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1067:3: lv_deshabilitado_2_0= 'deshabilitado'
                     {
-                    lv_habilitado_2_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleInputCombo2482); 
+                    lv_deshabilitado_2_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleInputCombo2482); 
 
-                            newLeafNode(lv_habilitado_2_0, grammarAccess.getInputComboAccess().getHabilitadoHabilitadoKeyword_2_0());
+                            newLeafNode(lv_deshabilitado_2_0, grammarAccess.getInputComboAccess().getDeshabilitadoDeshabilitadoKeyword_2_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInputComboRule());
                     	        }
-                           		setWithLastConsumed(current, "habilitado", true, "habilitado");
+                           		setWithLastConsumed(current, "deshabilitado", true, "deshabilitado");
                     	    
 
                     }
@@ -2936,12 +2936,12 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInputCheck"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1201:1: ruleInputCheck returns [EObject current=null] : ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'InputCheck' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' otherlv_12= '{' ( (lv_seleccion_13_0= ruleEInt ) ) (otherlv_14= ',' ( (lv_seleccion_15_0= ruleEInt ) ) )* otherlv_16= '}' )? otherlv_17= 'reaccion' ( (lv_reaccion_18_0= ruleReaccion ) ) otherlv_19= '}' ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1201:1: ruleInputCheck returns [EObject current=null] : ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'InputCheck' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' otherlv_12= '{' ( (lv_seleccion_13_0= ruleEInt ) ) (otherlv_14= ',' ( (lv_seleccion_15_0= ruleEInt ) ) )* otherlv_16= '}' )? otherlv_17= 'reaccion' ( (lv_reaccion_18_0= ruleReaccion ) ) otherlv_19= '}' ) ;
     public final EObject ruleInputCheck() throws RecognitionException {
         EObject current = null;
 
-        Token lv_visible_0_0=null;
-        Token lv_habilitado_1_0=null;
+        Token lv_invisible_0_0=null;
+        Token lv_deshabilitado_1_0=null;
         Token otherlv_2=null;
         Token otherlv_4=null;
         Token otherlv_5=null;
@@ -2970,13 +2970,13 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1204:28: ( ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'InputCheck' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' otherlv_12= '{' ( (lv_seleccion_13_0= ruleEInt ) ) (otherlv_14= ',' ( (lv_seleccion_15_0= ruleEInt ) ) )* otherlv_16= '}' )? otherlv_17= 'reaccion' ( (lv_reaccion_18_0= ruleReaccion ) ) otherlv_19= '}' ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1205:1: ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'InputCheck' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' otherlv_12= '{' ( (lv_seleccion_13_0= ruleEInt ) ) (otherlv_14= ',' ( (lv_seleccion_15_0= ruleEInt ) ) )* otherlv_16= '}' )? otherlv_17= 'reaccion' ( (lv_reaccion_18_0= ruleReaccion ) ) otherlv_19= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1204:28: ( ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'InputCheck' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' otherlv_12= '{' ( (lv_seleccion_13_0= ruleEInt ) ) (otherlv_14= ',' ( (lv_seleccion_15_0= ruleEInt ) ) )* otherlv_16= '}' )? otherlv_17= 'reaccion' ( (lv_reaccion_18_0= ruleReaccion ) ) otherlv_19= '}' ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1205:1: ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'InputCheck' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' otherlv_12= '{' ( (lv_seleccion_13_0= ruleEInt ) ) (otherlv_14= ',' ( (lv_seleccion_15_0= ruleEInt ) ) )* otherlv_16= '}' )? otherlv_17= 'reaccion' ( (lv_reaccion_18_0= ruleReaccion ) ) otherlv_19= '}' )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1205:1: ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'InputCheck' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' otherlv_12= '{' ( (lv_seleccion_13_0= ruleEInt ) ) (otherlv_14= ',' ( (lv_seleccion_15_0= ruleEInt ) ) )* otherlv_16= '}' )? otherlv_17= 'reaccion' ( (lv_reaccion_18_0= ruleReaccion ) ) otherlv_19= '}' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1205:2: ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'InputCheck' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' otherlv_12= '{' ( (lv_seleccion_13_0= ruleEInt ) ) (otherlv_14= ',' ( (lv_seleccion_15_0= ruleEInt ) ) )* otherlv_16= '}' )? otherlv_17= 'reaccion' ( (lv_reaccion_18_0= ruleReaccion ) ) otherlv_19= '}'
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1205:1: ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'InputCheck' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' otherlv_12= '{' ( (lv_seleccion_13_0= ruleEInt ) ) (otherlv_14= ',' ( (lv_seleccion_15_0= ruleEInt ) ) )* otherlv_16= '}' )? otherlv_17= 'reaccion' ( (lv_reaccion_18_0= ruleReaccion ) ) otherlv_19= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1205:2: ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'InputCheck' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' (otherlv_5= 'valores' otherlv_6= '{' ( (lv_valores_7_0= ruleEString ) ) (otherlv_8= ',' ( (lv_valores_9_0= ruleEString ) ) )* otherlv_10= '}' )? (otherlv_11= 'seleccion' otherlv_12= '{' ( (lv_seleccion_13_0= ruleEInt ) ) (otherlv_14= ',' ( (lv_seleccion_15_0= ruleEInt ) ) )* otherlv_16= '}' )? otherlv_17= 'reaccion' ( (lv_reaccion_18_0= ruleReaccion ) ) otherlv_19= '}'
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1205:2: ( (lv_visible_0_0= 'visible' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1205:2: ( (lv_invisible_0_0= 'invisible' ) )?
             int alt28=2;
             int LA28_0 = input.LA(1);
 
@@ -2985,20 +2985,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt28) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1206:1: (lv_visible_0_0= 'visible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1206:1: (lv_invisible_0_0= 'invisible' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1206:1: (lv_visible_0_0= 'visible' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1207:3: lv_visible_0_0= 'visible'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1206:1: (lv_invisible_0_0= 'invisible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1207:3: lv_invisible_0_0= 'invisible'
                     {
-                    lv_visible_0_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleInputCheck2774); 
+                    lv_invisible_0_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleInputCheck2774); 
 
-                            newLeafNode(lv_visible_0_0, grammarAccess.getInputCheckAccess().getVisibleVisibleKeyword_0_0());
+                            newLeafNode(lv_invisible_0_0, grammarAccess.getInputCheckAccess().getInvisibleInvisibleKeyword_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInputCheckRule());
                     	        }
-                           		setWithLastConsumed(current, "visible", true, "visible");
+                           		setWithLastConsumed(current, "invisible", true, "invisible");
                     	    
 
                     }
@@ -3009,7 +3009,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1220:3: ( (lv_habilitado_1_0= 'habilitado' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1220:3: ( (lv_deshabilitado_1_0= 'deshabilitado' ) )?
             int alt29=2;
             int LA29_0 = input.LA(1);
 
@@ -3018,20 +3018,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt29) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1221:1: (lv_habilitado_1_0= 'habilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1221:1: (lv_deshabilitado_1_0= 'deshabilitado' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1221:1: (lv_habilitado_1_0= 'habilitado' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1222:3: lv_habilitado_1_0= 'habilitado'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1221:1: (lv_deshabilitado_1_0= 'deshabilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1222:3: lv_deshabilitado_1_0= 'deshabilitado'
                     {
-                    lv_habilitado_1_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleInputCheck2806); 
+                    lv_deshabilitado_1_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleInputCheck2806); 
 
-                            newLeafNode(lv_habilitado_1_0, grammarAccess.getInputCheckAccess().getHabilitadoHabilitadoKeyword_1_0());
+                            newLeafNode(lv_deshabilitado_1_0, grammarAccess.getInputCheckAccess().getDeshabilitadoDeshabilitadoKeyword_1_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getInputCheckRule());
                     	        }
-                           		setWithLastConsumed(current, "habilitado", true, "habilitado");
+                           		setWithLastConsumed(current, "deshabilitado", true, "deshabilitado");
                     	    
 
                     }
@@ -3415,12 +3415,12 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBotonValidar"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1408:1: ruleBotonValidar returns [EObject current=null] : ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonValidar' ( (lv_name_4_0= ruleEString ) ) ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1408:1: ruleBotonValidar returns [EObject current=null] : ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonValidar' ( (lv_name_4_0= ruleEString ) ) ) ;
     public final EObject ruleBotonValidar() throws RecognitionException {
         EObject current = null;
 
-        Token lv_visible_1_0=null;
-        Token lv_habilitado_2_0=null;
+        Token lv_invisible_1_0=null;
+        Token lv_deshabilitado_2_0=null;
         Token otherlv_3=null;
         AntlrDatatypeRuleToken lv_name_4_0 = null;
 
@@ -3428,11 +3428,11 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1411:28: ( ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonValidar' ( (lv_name_4_0= ruleEString ) ) ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1412:1: ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonValidar' ( (lv_name_4_0= ruleEString ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1411:28: ( ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonValidar' ( (lv_name_4_0= ruleEString ) ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1412:1: ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonValidar' ( (lv_name_4_0= ruleEString ) ) )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1412:1: ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonValidar' ( (lv_name_4_0= ruleEString ) ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1412:2: () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonValidar' ( (lv_name_4_0= ruleEString ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1412:1: ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonValidar' ( (lv_name_4_0= ruleEString ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1412:2: () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonValidar' ( (lv_name_4_0= ruleEString ) )
             {
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1412:2: ()
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1413:5: 
@@ -3445,7 +3445,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1418:2: ( (lv_visible_1_0= 'visible' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1418:2: ( (lv_invisible_1_0= 'invisible' ) )?
             int alt34=2;
             int LA34_0 = input.LA(1);
 
@@ -3454,20 +3454,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt34) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1419:1: (lv_visible_1_0= 'visible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1419:1: (lv_invisible_1_0= 'invisible' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1419:1: (lv_visible_1_0= 'visible' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1420:3: lv_visible_1_0= 'visible'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1419:1: (lv_invisible_1_0= 'invisible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1420:3: lv_invisible_1_0= 'invisible'
                     {
-                    lv_visible_1_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleBotonValidar3200); 
+                    lv_invisible_1_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleBotonValidar3200); 
 
-                            newLeafNode(lv_visible_1_0, grammarAccess.getBotonValidarAccess().getVisibleVisibleKeyword_1_0());
+                            newLeafNode(lv_invisible_1_0, grammarAccess.getBotonValidarAccess().getInvisibleInvisibleKeyword_1_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getBotonValidarRule());
                     	        }
-                           		setWithLastConsumed(current, "visible", true, "visible");
+                           		setWithLastConsumed(current, "invisible", true, "invisible");
                     	    
 
                     }
@@ -3478,7 +3478,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1433:3: ( (lv_habilitado_2_0= 'habilitado' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1433:3: ( (lv_deshabilitado_2_0= 'deshabilitado' ) )?
             int alt35=2;
             int LA35_0 = input.LA(1);
 
@@ -3487,20 +3487,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt35) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1434:1: (lv_habilitado_2_0= 'habilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1434:1: (lv_deshabilitado_2_0= 'deshabilitado' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1434:1: (lv_habilitado_2_0= 'habilitado' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1435:3: lv_habilitado_2_0= 'habilitado'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1434:1: (lv_deshabilitado_2_0= 'deshabilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1435:3: lv_deshabilitado_2_0= 'deshabilitado'
                     {
-                    lv_habilitado_2_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleBotonValidar3232); 
+                    lv_deshabilitado_2_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleBotonValidar3232); 
 
-                            newLeafNode(lv_habilitado_2_0, grammarAccess.getBotonValidarAccess().getHabilitadoHabilitadoKeyword_2_0());
+                            newLeafNode(lv_deshabilitado_2_0, grammarAccess.getBotonValidarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getBotonValidarRule());
                     	        }
-                           		setWithLastConsumed(current, "habilitado", true, "habilitado");
+                           		setWithLastConsumed(current, "deshabilitado", true, "deshabilitado");
                     	    
 
                     }
@@ -3603,12 +3603,12 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBotonGuardar_Impl"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1487:1: ruleBotonGuardar_Impl returns [EObject current=null] : ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonGuardar' ( (lv_name_4_0= ruleEString ) ) ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1487:1: ruleBotonGuardar_Impl returns [EObject current=null] : ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonGuardar' ( (lv_name_4_0= ruleEString ) ) ) ;
     public final EObject ruleBotonGuardar_Impl() throws RecognitionException {
         EObject current = null;
 
-        Token lv_visible_1_0=null;
-        Token lv_habilitado_2_0=null;
+        Token lv_invisible_1_0=null;
+        Token lv_deshabilitado_2_0=null;
         Token otherlv_3=null;
         AntlrDatatypeRuleToken lv_name_4_0 = null;
 
@@ -3616,11 +3616,11 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1490:28: ( ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonGuardar' ( (lv_name_4_0= ruleEString ) ) ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1491:1: ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonGuardar' ( (lv_name_4_0= ruleEString ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1490:28: ( ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonGuardar' ( (lv_name_4_0= ruleEString ) ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1491:1: ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonGuardar' ( (lv_name_4_0= ruleEString ) ) )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1491:1: ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonGuardar' ( (lv_name_4_0= ruleEString ) ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1491:2: () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonGuardar' ( (lv_name_4_0= ruleEString ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1491:1: ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonGuardar' ( (lv_name_4_0= ruleEString ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1491:2: () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonGuardar' ( (lv_name_4_0= ruleEString ) )
             {
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1491:2: ()
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1492:5: 
@@ -3633,7 +3633,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1497:2: ( (lv_visible_1_0= 'visible' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1497:2: ( (lv_invisible_1_0= 'invisible' ) )?
             int alt36=2;
             int LA36_0 = input.LA(1);
 
@@ -3642,20 +3642,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt36) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1498:1: (lv_visible_1_0= 'visible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1498:1: (lv_invisible_1_0= 'invisible' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1498:1: (lv_visible_1_0= 'visible' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1499:3: lv_visible_1_0= 'visible'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1498:1: (lv_invisible_1_0= 'invisible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1499:3: lv_invisible_1_0= 'invisible'
                     {
-                    lv_visible_1_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleBotonGuardar_Impl3377); 
+                    lv_invisible_1_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleBotonGuardar_Impl3377); 
 
-                            newLeafNode(lv_visible_1_0, grammarAccess.getBotonGuardar_ImplAccess().getVisibleVisibleKeyword_1_0());
+                            newLeafNode(lv_invisible_1_0, grammarAccess.getBotonGuardar_ImplAccess().getInvisibleInvisibleKeyword_1_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getBotonGuardar_ImplRule());
                     	        }
-                           		setWithLastConsumed(current, "visible", true, "visible");
+                           		setWithLastConsumed(current, "invisible", true, "invisible");
                     	    
 
                     }
@@ -3666,7 +3666,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1512:3: ( (lv_habilitado_2_0= 'habilitado' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1512:3: ( (lv_deshabilitado_2_0= 'deshabilitado' ) )?
             int alt37=2;
             int LA37_0 = input.LA(1);
 
@@ -3675,20 +3675,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt37) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1513:1: (lv_habilitado_2_0= 'habilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1513:1: (lv_deshabilitado_2_0= 'deshabilitado' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1513:1: (lv_habilitado_2_0= 'habilitado' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1514:3: lv_habilitado_2_0= 'habilitado'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1513:1: (lv_deshabilitado_2_0= 'deshabilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1514:3: lv_deshabilitado_2_0= 'deshabilitado'
                     {
-                    lv_habilitado_2_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleBotonGuardar_Impl3409); 
+                    lv_deshabilitado_2_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleBotonGuardar_Impl3409); 
 
-                            newLeafNode(lv_habilitado_2_0, grammarAccess.getBotonGuardar_ImplAccess().getHabilitadoHabilitadoKeyword_2_0());
+                            newLeafNode(lv_deshabilitado_2_0, grammarAccess.getBotonGuardar_ImplAccess().getDeshabilitadoDeshabilitadoKeyword_2_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getBotonGuardar_ImplRule());
                     	        }
-                           		setWithLastConsumed(current, "habilitado", true, "habilitado");
+                           		setWithLastConsumed(current, "deshabilitado", true, "deshabilitado");
                     	    
 
                     }
@@ -3791,12 +3791,12 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBotonCancelar"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1566:1: ruleBotonCancelar returns [EObject current=null] : ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonCancelar' ( (lv_name_4_0= ruleEString ) ) ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1566:1: ruleBotonCancelar returns [EObject current=null] : ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonCancelar' ( (lv_name_4_0= ruleEString ) ) ) ;
     public final EObject ruleBotonCancelar() throws RecognitionException {
         EObject current = null;
 
-        Token lv_visible_1_0=null;
-        Token lv_habilitado_2_0=null;
+        Token lv_invisible_1_0=null;
+        Token lv_deshabilitado_2_0=null;
         Token otherlv_3=null;
         AntlrDatatypeRuleToken lv_name_4_0 = null;
 
@@ -3804,11 +3804,11 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1569:28: ( ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonCancelar' ( (lv_name_4_0= ruleEString ) ) ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1570:1: ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonCancelar' ( (lv_name_4_0= ruleEString ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1569:28: ( ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonCancelar' ( (lv_name_4_0= ruleEString ) ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1570:1: ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonCancelar' ( (lv_name_4_0= ruleEString ) ) )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1570:1: ( () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonCancelar' ( (lv_name_4_0= ruleEString ) ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1570:2: () ( (lv_visible_1_0= 'visible' ) )? ( (lv_habilitado_2_0= 'habilitado' ) )? otherlv_3= 'BotonCancelar' ( (lv_name_4_0= ruleEString ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1570:1: ( () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonCancelar' ( (lv_name_4_0= ruleEString ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1570:2: () ( (lv_invisible_1_0= 'invisible' ) )? ( (lv_deshabilitado_2_0= 'deshabilitado' ) )? otherlv_3= 'BotonCancelar' ( (lv_name_4_0= ruleEString ) )
             {
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1570:2: ()
             // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1571:5: 
@@ -3821,7 +3821,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1576:2: ( (lv_visible_1_0= 'visible' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1576:2: ( (lv_invisible_1_0= 'invisible' ) )?
             int alt38=2;
             int LA38_0 = input.LA(1);
 
@@ -3830,20 +3830,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt38) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1577:1: (lv_visible_1_0= 'visible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1577:1: (lv_invisible_1_0= 'invisible' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1577:1: (lv_visible_1_0= 'visible' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1578:3: lv_visible_1_0= 'visible'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1577:1: (lv_invisible_1_0= 'invisible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1578:3: lv_invisible_1_0= 'invisible'
                     {
-                    lv_visible_1_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleBotonCancelar3554); 
+                    lv_invisible_1_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleBotonCancelar3554); 
 
-                            newLeafNode(lv_visible_1_0, grammarAccess.getBotonCancelarAccess().getVisibleVisibleKeyword_1_0());
+                            newLeafNode(lv_invisible_1_0, grammarAccess.getBotonCancelarAccess().getInvisibleInvisibleKeyword_1_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getBotonCancelarRule());
                     	        }
-                           		setWithLastConsumed(current, "visible", true, "visible");
+                           		setWithLastConsumed(current, "invisible", true, "invisible");
                     	    
 
                     }
@@ -3854,7 +3854,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1591:3: ( (lv_habilitado_2_0= 'habilitado' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1591:3: ( (lv_deshabilitado_2_0= 'deshabilitado' ) )?
             int alt39=2;
             int LA39_0 = input.LA(1);
 
@@ -3863,20 +3863,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt39) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1592:1: (lv_habilitado_2_0= 'habilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1592:1: (lv_deshabilitado_2_0= 'deshabilitado' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1592:1: (lv_habilitado_2_0= 'habilitado' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1593:3: lv_habilitado_2_0= 'habilitado'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1592:1: (lv_deshabilitado_2_0= 'deshabilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1593:3: lv_deshabilitado_2_0= 'deshabilitado'
                     {
-                    lv_habilitado_2_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleBotonCancelar3586); 
+                    lv_deshabilitado_2_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleBotonCancelar3586); 
 
-                            newLeafNode(lv_habilitado_2_0, grammarAccess.getBotonCancelarAccess().getHabilitadoHabilitadoKeyword_2_0());
+                            newLeafNode(lv_deshabilitado_2_0, grammarAccess.getBotonCancelarAccess().getDeshabilitadoDeshabilitadoKeyword_2_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getBotonCancelarRule());
                     	        }
-                           		setWithLastConsumed(current, "habilitado", true, "habilitado");
+                           		setWithLastConsumed(current, "deshabilitado", true, "deshabilitado");
                     	    
 
                     }
@@ -3979,12 +3979,12 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBotonCustom"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1645:1: ruleBotonCustom returns [EObject current=null] : ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'BotonCustom' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' otherlv_5= 'funcion' ( (lv_funcion_6_0= ruleEString ) ) otherlv_7= '}' ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1645:1: ruleBotonCustom returns [EObject current=null] : ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'BotonCustom' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' otherlv_5= 'funcion' ( (lv_funcion_6_0= ruleEString ) ) otherlv_7= '}' ) ;
     public final EObject ruleBotonCustom() throws RecognitionException {
         EObject current = null;
 
-        Token lv_visible_0_0=null;
-        Token lv_habilitado_1_0=null;
+        Token lv_invisible_0_0=null;
+        Token lv_deshabilitado_1_0=null;
         Token otherlv_2=null;
         Token otherlv_4=null;
         Token otherlv_5=null;
@@ -3997,13 +3997,13 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1648:28: ( ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'BotonCustom' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' otherlv_5= 'funcion' ( (lv_funcion_6_0= ruleEString ) ) otherlv_7= '}' ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1649:1: ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'BotonCustom' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' otherlv_5= 'funcion' ( (lv_funcion_6_0= ruleEString ) ) otherlv_7= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1648:28: ( ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'BotonCustom' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' otherlv_5= 'funcion' ( (lv_funcion_6_0= ruleEString ) ) otherlv_7= '}' ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1649:1: ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'BotonCustom' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' otherlv_5= 'funcion' ( (lv_funcion_6_0= ruleEString ) ) otherlv_7= '}' )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1649:1: ( ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'BotonCustom' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' otherlv_5= 'funcion' ( (lv_funcion_6_0= ruleEString ) ) otherlv_7= '}' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1649:2: ( (lv_visible_0_0= 'visible' ) )? ( (lv_habilitado_1_0= 'habilitado' ) )? otherlv_2= 'BotonCustom' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' otherlv_5= 'funcion' ( (lv_funcion_6_0= ruleEString ) ) otherlv_7= '}'
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1649:1: ( ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'BotonCustom' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' otherlv_5= 'funcion' ( (lv_funcion_6_0= ruleEString ) ) otherlv_7= '}' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1649:2: ( (lv_invisible_0_0= 'invisible' ) )? ( (lv_deshabilitado_1_0= 'deshabilitado' ) )? otherlv_2= 'BotonCustom' ( (lv_name_3_0= ruleEString ) ) otherlv_4= '{' otherlv_5= 'funcion' ( (lv_funcion_6_0= ruleEString ) ) otherlv_7= '}'
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1649:2: ( (lv_visible_0_0= 'visible' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1649:2: ( (lv_invisible_0_0= 'invisible' ) )?
             int alt40=2;
             int LA40_0 = input.LA(1);
 
@@ -4012,20 +4012,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt40) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1650:1: (lv_visible_0_0= 'visible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1650:1: (lv_invisible_0_0= 'invisible' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1650:1: (lv_visible_0_0= 'visible' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1651:3: lv_visible_0_0= 'visible'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1650:1: (lv_invisible_0_0= 'invisible' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1651:3: lv_invisible_0_0= 'invisible'
                     {
-                    lv_visible_0_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleBotonCustom3722); 
+                    lv_invisible_0_0=(Token)match(input,25,FollowSets000.FOLLOW_25_in_ruleBotonCustom3722); 
 
-                            newLeafNode(lv_visible_0_0, grammarAccess.getBotonCustomAccess().getVisibleVisibleKeyword_0_0());
+                            newLeafNode(lv_invisible_0_0, grammarAccess.getBotonCustomAccess().getInvisibleInvisibleKeyword_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getBotonCustomRule());
                     	        }
-                           		setWithLastConsumed(current, "visible", true, "visible");
+                           		setWithLastConsumed(current, "invisible", true, "invisible");
                     	    
 
                     }
@@ -4036,7 +4036,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1664:3: ( (lv_habilitado_1_0= 'habilitado' ) )?
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1664:3: ( (lv_deshabilitado_1_0= 'deshabilitado' ) )?
             int alt41=2;
             int LA41_0 = input.LA(1);
 
@@ -4045,20 +4045,20 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
             }
             switch (alt41) {
                 case 1 :
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1665:1: (lv_habilitado_1_0= 'habilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1665:1: (lv_deshabilitado_1_0= 'deshabilitado' )
                     {
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1665:1: (lv_habilitado_1_0= 'habilitado' )
-                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1666:3: lv_habilitado_1_0= 'habilitado'
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1665:1: (lv_deshabilitado_1_0= 'deshabilitado' )
+                    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1666:3: lv_deshabilitado_1_0= 'deshabilitado'
                     {
-                    lv_habilitado_1_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleBotonCustom3754); 
+                    lv_deshabilitado_1_0=(Token)match(input,26,FollowSets000.FOLLOW_26_in_ruleBotonCustom3754); 
 
-                            newLeafNode(lv_habilitado_1_0, grammarAccess.getBotonCustomAccess().getHabilitadoHabilitadoKeyword_1_0());
+                            newLeafNode(lv_deshabilitado_1_0, grammarAccess.getBotonCustomAccess().getDeshabilitadoDeshabilitadoKeyword_1_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getBotonCustomRule());
                     	        }
-                           		setWithLastConsumed(current, "habilitado", true, "habilitado");
+                           		setWithLastConsumed(current, "deshabilitado", true, "deshabilitado");
                     	    
 
                     }
