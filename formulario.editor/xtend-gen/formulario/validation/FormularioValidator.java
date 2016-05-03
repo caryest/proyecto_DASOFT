@@ -4,10 +4,19 @@
 package formulario.validation;
 
 import Formularios_DASOFT.Accion;
+import Formularios_DASOFT.AccionPulsacion;
+import Formularios_DASOFT.AccionSeleccion;
+import Formularios_DASOFT.AccionValor;
 import Formularios_DASOFT.Asercion;
 import Formularios_DASOFT.Formulario;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
 import Formularios_DASOFT.Input;
+import Formularios_DASOFT.InputBoton;
+import Formularios_DASOFT.InputCheck;
+import Formularios_DASOFT.InputCombo;
+import Formularios_DASOFT.InputMultiple;
+import Formularios_DASOFT.InputRadio;
+import Formularios_DASOFT.InputTexto;
 import Formularios_DASOFT.Layout;
 import Formularios_DASOFT.PruebaInterfaz;
 import com.google.common.base.Objects;
@@ -73,6 +82,118 @@ public class FormularioValidator extends AbstractFormularioValidator {
         this.warning("El campo debe de estar incluido en al menos una accion", 
           Formularios_DASOFTPackage.Literals.FORMULARIO__COMPROBACION_ACCION, 
           "faltaAccion");
+      }
+    }
+  }
+  
+  @Check
+  public void inputAccionSeleccion(final AccionSeleccion accion) {
+    Input _elemento = accion.getElemento();
+    boolean _not = (!(_elemento instanceof InputMultiple));
+    if (_not) {
+      this.warning("Una accion de este tipo no puede apuntar a este input", 
+        Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO, 
+        "InputIncorrecto");
+    }
+  }
+  
+  @Check
+  public void inputAccionPulsacion(final AccionPulsacion accion) {
+    Input _elemento = accion.getElemento();
+    boolean _not = (!(_elemento instanceof InputBoton));
+    if (_not) {
+      this.warning("Una accion de este tipo no puede apuntar a este input", 
+        Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO, 
+        "InputIncorrecto");
+    }
+  }
+  
+  @Check
+  public void inputAccionValor(final AccionValor accion) {
+    Input _elemento = accion.getElemento();
+    boolean _not = (!(_elemento instanceof InputTexto));
+    if (_not) {
+      this.warning("Una accion de este tipo no puede apuntar a este input", 
+        Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO, 
+        "InputIncorrecto");
+    }
+  }
+  
+  @Check
+  public void comprobarTamañoSeleccion(final Input input) {
+    if ((input instanceof InputCheck)) {
+      EList<Integer> _seleccion = ((InputCheck)input).getSeleccion();
+      int _size = _seleccion.size();
+      EList<String> _valores = ((InputCheck)input).getValores();
+      int _size_1 = _valores.size();
+      boolean _greaterThan = (_size > _size_1);
+      if (_greaterThan) {
+        this.warning("Este input no puede tener esa cantidad de opciones por defecto", 
+          Formularios_DASOFTPackage.Literals.INPUT_CHECK__SELECCION, 
+          "SeleccionFueraDeRango");
+      }
+    }
+  }
+  
+  @Check
+  public void comprobarSeleccionCorrecta(final Input input) {
+    if ((input instanceof InputCheck)) {
+      EList<Integer> _seleccion = ((InputCheck)input).getSeleccion();
+      for (final Integer valor : _seleccion) {
+        boolean _or = false;
+        if (((valor).intValue() < 1)) {
+          _or = true;
+        } else {
+          EList<String> _valores = ((InputCheck)input).getValores();
+          int _size = _valores.size();
+          boolean _greaterThan = ((valor).intValue() > _size);
+          _or = _greaterThan;
+        }
+        if (_or) {
+          this.warning("Una de las opciones por defecto de este input no es válida", 
+            Formularios_DASOFTPackage.Literals.INPUT_CHECK__SELECCION, 
+            "SeleccionFueraDeRango");
+        }
+      }
+    } else {
+      if ((input instanceof InputCombo)) {
+        boolean _or_1 = false;
+        int _seleccion_1 = ((InputCombo)input).getSeleccion();
+        boolean _lessThan = (_seleccion_1 < 1);
+        if (_lessThan) {
+          _or_1 = true;
+        } else {
+          int _seleccion_2 = ((InputCombo)input).getSeleccion();
+          EList<String> _valores_1 = ((InputCombo)input).getValores();
+          int _size_1 = _valores_1.size();
+          boolean _greaterThan_1 = (_seleccion_2 > _size_1);
+          _or_1 = _greaterThan_1;
+        }
+        if (_or_1) {
+          this.warning("Este input no puede tener esa cantidad de opciones por defecto", 
+            Formularios_DASOFTPackage.Literals.INPUT_COMBO__SELECCION, 
+            "SeleccionFueraDeRango");
+        }
+      } else {
+        if ((input instanceof InputRadio)) {
+          boolean _or_2 = false;
+          int _seleccion_3 = ((InputRadio)input).getSeleccion();
+          boolean _lessThan_1 = (_seleccion_3 < 1);
+          if (_lessThan_1) {
+            _or_2 = true;
+          } else {
+            int _seleccion_4 = ((InputRadio)input).getSeleccion();
+            EList<String> _valores_2 = ((InputRadio)input).getValores();
+            int _size_2 = _valores_2.size();
+            boolean _greaterThan_2 = (_seleccion_4 > _size_2);
+            _or_2 = _greaterThan_2;
+          }
+          if (_or_2) {
+            this.warning("Este input no puede tener esa cantidad de opciones por defecto", 
+              Formularios_DASOFTPackage.Literals.INPUT_RADIO__SELECCION, 
+              "SeleccionFueraDeRango");
+          }
+        }
       }
     }
   }
