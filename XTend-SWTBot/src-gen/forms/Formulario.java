@@ -18,7 +18,24 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
 public class Formulario {
-		
+	
+	// Añadimos los elementos de la interfaz
+	// CASO TEXTO
+	Label labeltexto1;
+	Text  textotexto1;
+		// CASO RADIO
+	Button[] radioradio1;
+		 // CASO COMBO
+	Combo combocombo1;
+	// CASO CHECKBOX
+	Button[] checkcheck1;
+		// CASO BOTON
+	private Button botonvalidar;
+		// CASO BOTON
+	private Button botoncancelar;
+		// CASO BOTON
+	private Button botonguardar;
+				
 	public static void main(String[] args) {
 		Display display = new Display();
 		Shell   shell   = new Formulario().showForm(display);
@@ -32,21 +49,21 @@ public class Formulario {
 		
 		Shell shell = new Shell(display);
 		shell.setText  ("Prueba2");
-		shell.setLayout(new GridLayout(2, false));
+		shell.setLayout(new GridLayout(3, false));
 		
 		// Añadimos los elementos de la interfaz
 		
 		// CASO TEXTO
 		Composite contentTexttexto1 = new Composite(shell, SWT.BORDER);
 		contentTexttexto1.setLayout(new GridLayout(2, true));
-		Label labeltexto1 = new Label(contentTexttexto1, SWT.NONE);
-		Text  textotexto1  = new Text(contentTexttexto1, SWT.BORDER);
+		labeltexto1 = new Label(contentTexttexto1, SWT.NONE);
+		textotexto1  = new Text(contentTexttexto1, SWT.BORDER);
 		labeltexto1.setText("texto1");
 				
 		// CASO RADIO
 		Composite contentRadioradio1 = new Composite(shell, SWT.BORDER);
 		contentRadioradio1.setLayout(new GridLayout(1, true));
-		Button[] radioradio1 = new Button[3];
+		radioradio1 = new Button[3];
 
 		radioradio1[0] = new Button(contentRadioradio1, SWT.RADIO);
 		radioradio1[0].setSelection(false);
@@ -62,7 +79,7 @@ public class Formulario {
 		radioradio1[2].setBounds(10, 5, 75, 30);
 				
 		 // CASO COMBO
-		Combo combocombo1 = new Combo(shell, SWT.SIMPLE);
+		combocombo1 = new Combo(shell, SWT.SIMPLE);
 		 combocombo1.setText("combo1");
 		combocombo1.add("val1");
 		combocombo1.add("val2");
@@ -70,7 +87,7 @@ public class Formulario {
 		// CASO CHECKBOX
 		Composite contentCheckcheck1 = new Composite(shell, SWT.BORDER);
 		contentCheckcheck1.setLayout(new GridLayout(1, true));
-		Button[] checkcheck1 = new Button[2];
+		checkcheck1 = new Button[2];
 		
 		checkcheck1[0] = new Button(contentCheckcheck1, SWT.CHECK);
 		checkcheck1[0].setText("val1");
@@ -78,15 +95,15 @@ public class Formulario {
 		checkcheck1[1].setText("val2");
 				
 		// CASO BOTON
-		Button botonvalidar = new Button(shell, SWT.BUTTON1);
+		botonvalidar = new Button(shell, SWT.BUTTON1);
 		botonvalidar.setText("validar");
 				
 		// CASO BOTON
-		Button botoncancelar = new Button(shell, SWT.BUTTON1);
+		botoncancelar = new Button(shell, SWT.BUTTON1);
 		botoncancelar.setText("cancelar");
 				
 		// CASO BOTON
-		Button botonguardar = new Button(shell, SWT.BUTTON1);
+		botonguardar = new Button(shell, SWT.BUTTON1);
 		botonguardar.setText("guardar");
 				
 		// Funciones Reaccion
@@ -190,24 +207,15 @@ public class Formulario {
 				
 				FileDialog dialog = new FileDialog(shell, SWT.SAVE);
 			    dialog.setFilterNames(new String[] { "Formulario", "All Files (*.*)" });
-			    dialog.setFilterExtensions(new String[] { "*.formulario", "*.*" }); // Windows
-			                                    // wild
-			                                    // cards
-			    dialog.setFilterPath("c:\\"); // Windows path
-			    dialog.setFileName("form.formulario");
+			    dialog.setFilterExtensions(new String[] { "*.formulario", "*.*" });
+			    dialog.setFileName("formulario.txt");
 			    String filename = dialog.open(); 
-			    
-			    while (!shell.isDisposed()) {
-		        if (!display.readAndDispatch())
-			        display.sleep();
-			    }
-			    display.dispose();
 			    
 			    FileWriter writer = null; 
 				try 
 				{ 
 					writer = new FileWriter(filename); 
-					writer.write(textotexto1 + ": " + textotexto1.getText() + "\n"); 
+					writer.write("textotexto1: " + textotexto1.getText() + "\n"); 
 					String valoresRadioradio1 = "";
 					for(Button btnRadio : radioradio1){
 						if (btnRadio.getSelection() == true){
@@ -215,8 +223,8 @@ public class Formulario {
 							valoresRadioradio1 += " ";
 						}
 					}
-					writer.write(radioradio1 + ": " + valoresRadioradio1 + "\n"); 
-					writer.write(combocombo1 + ": " + combocombo1.getText() + "\n"); 
+					writer.write("radioradio1: " + valoresRadioradio1 + "\n"); 
+					writer.write("combocombo1: " + combocombo1.getText() + "\n"); 
 					String valoresCheckcheck1= "";
 					for(Button btnCheck : checkcheck1){
 						if (btnCheck.getSelection() == true){
@@ -224,8 +232,7 @@ public class Formulario {
 							valoresCheckcheck1 += " ";
 						}
 					}
-					writer.write(checkcheck1 + ": " + valoresCheckcheck1 + "\n"); 
-					writer.write("This\n is\n an\n example\n"); 
+					writer.write("checkcheck1: " + valoresCheckcheck1 + "\n"); 
 				} 
 				catch (Exception e) 
 				{ 

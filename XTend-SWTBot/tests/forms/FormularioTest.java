@@ -70,14 +70,24 @@ public class FormularioTest {
 		radioradio1[0].click();
 		display.update();
 		assertFalse(textotexto1.isEnabled());
+		
+		textotexto1.setText("");
+		
 		checkcheck1[0].setFocus();
 		checkcheck1[0].select();
 		display.update();
 		assertFalse(textotexto1.isVisible());
+		
+		textotexto1.setText("");
+		
 		botoncancelar.click();
 		display.update();
 		assertTrue(checkcheck1[0].isVisible());
 		assertTrue(checkcheck1[1].isVisible());
+		
+		assertFalse(checkcheck1[0].isEnabled());
+		assertFalse(checkcheck1[1].isEnabled());
+		
 
 		display.dispose();
 		shell.dispose();		 

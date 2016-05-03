@@ -98,7 +98,85 @@ public class FormularioGenerator implements IGenerator {
     _builder.newLine();
     _builder.append("public class Formulario {");
     _builder.newLine();
-    _builder.append("\t\t");
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("// Añadimos los elementos de la interfaz");
+    _builder.newLine();
+    {
+      Layout _layout = form.getLayout();
+      EList<Input> _entradas = _layout.getEntradas();
+      for(final Input input : _entradas) {
+        _builder.append("\t");
+        {
+          if ((input instanceof InputBoton)) {
+            _builder.append("// CASO BOTON");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+            _builder.append("private Button boton");
+            String _name = ((InputBoton)input).getName();
+            _builder.append(_name, "\t");
+            _builder.append(";");
+            _builder.newLineIfNotEmpty();
+            _builder.append("\t");
+          } else {
+            if ((input instanceof InputTexto)) {
+              _builder.append("// CASO TEXTO");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("Label label");
+              String _name_1 = input.getName();
+              _builder.append(_name_1, "\t");
+              _builder.append(";");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+              _builder.append("Text  texto");
+              String _name_2 = input.getName();
+              _builder.append(_name_2, "\t");
+              _builder.append(";");
+              _builder.newLineIfNotEmpty();
+              _builder.append("\t");
+            } else {
+              if ((input instanceof InputCheck)) {
+                _builder.append("// CASO CHECKBOX");
+                _builder.newLineIfNotEmpty();
+                _builder.append("\t");
+                _builder.append("Button[] check");
+                String _name_3 = input.getName();
+                _builder.append(_name_3, "\t");
+                _builder.append(";");
+                _builder.newLineIfNotEmpty();
+                _builder.append("\t");
+              } else {
+                if ((input instanceof InputRadio)) {
+                  _builder.append("// CASO RADIO");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t");
+                  _builder.append("Button[] radio");
+                  String _name_4 = input.getName();
+                  _builder.append(_name_4, "\t");
+                  _builder.append(";");
+                  _builder.newLineIfNotEmpty();
+                  _builder.append("\t");
+                } else {
+                  if ((input instanceof InputCombo)) {
+                    _builder.append(" // CASO COMBO");
+                    _builder.newLineIfNotEmpty();
+                    _builder.append("\t");
+                    _builder.append("Combo combo");
+                    String _name_5 = input.getName();
+                    _builder.append(_name_5, "\t");
+                    _builder.append(";");
+                    _builder.newLineIfNotEmpty();
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    _builder.append("\t\t\t");
     _builder.newLine();
     _builder.append("\t");
     _builder.append("public static void main(String[] args) {");
@@ -136,14 +214,14 @@ public class FormularioGenerator implements IGenerator {
     _builder.newLine();
     _builder.append("\t\t");
     _builder.append("shell.setText  (\"");
-    String _name = form.getName();
-    _builder.append(_name, "\t\t");
+    String _name_6 = form.getName();
+    _builder.append(_name_6, "\t\t");
     _builder.append("\");");
     _builder.newLineIfNotEmpty();
     _builder.append("\t\t");
     _builder.append("shell.setLayout(new GridLayout(");
-    Layout _layout = form.getLayout();
-    int _columnas = _layout.getColumnas();
+    Layout _layout_1 = form.getLayout();
+    int _columnas = _layout_1.getColumnas();
     _builder.append(_columnas, "\t\t");
     _builder.append(", false));");
     _builder.newLineIfNotEmpty();
@@ -153,98 +231,98 @@ public class FormularioGenerator implements IGenerator {
     _builder.append("// Añadimos los elementos de la interfaz");
     _builder.newLine();
     {
-      Layout _layout_1 = form.getLayout();
-      EList<Input> _entradas = _layout_1.getEntradas();
-      for(final Input input : _entradas) {
+      Layout _layout_2 = form.getLayout();
+      EList<Input> _entradas_1 = _layout_2.getEntradas();
+      for(final Input input_1 : _entradas_1) {
         _builder.append("\t\t");
         _builder.newLine();
         _builder.append("\t\t");
         {
-          if ((input instanceof InputBoton)) {
+          if ((input_1 instanceof InputBoton)) {
             _builder.append("// CASO BOTON");
             _builder.newLineIfNotEmpty();
             _builder.append("\t\t");
-            _builder.append("Button boton");
-            String _name_1 = ((InputBoton)input).getName();
-            _builder.append(_name_1, "\t\t");
+            _builder.append("boton");
+            String _name_7 = ((InputBoton)input_1).getName();
+            _builder.append(_name_7, "\t\t");
             _builder.append(" = new Button(shell, SWT.BUTTON1);");
             _builder.newLineIfNotEmpty();
             _builder.append("\t\t");
             _builder.append("boton");
-            String _name_2 = ((InputBoton)input).getName();
-            _builder.append(_name_2, "\t\t");
+            String _name_8 = ((InputBoton)input_1).getName();
+            _builder.append(_name_8, "\t\t");
             _builder.append(".setText(\"");
-            String _name_3 = ((InputBoton)input).getName();
-            _builder.append(_name_3, "\t\t");
+            String _name_9 = ((InputBoton)input_1).getName();
+            _builder.append(_name_9, "\t\t");
             _builder.append("\");");
             _builder.newLineIfNotEmpty();
             _builder.append("\t\t");
           } else {
-            if ((input instanceof InputTexto)) {
+            if ((input_1 instanceof InputTexto)) {
               _builder.append("// CASO TEXTO");
               _builder.newLineIfNotEmpty();
               _builder.append("\t\t");
               _builder.append("Composite contentText");
-              String _name_4 = input.getName();
-              _builder.append(_name_4, "\t\t");
+              String _name_10 = input_1.getName();
+              _builder.append(_name_10, "\t\t");
               _builder.append(" = new Composite(shell, SWT.BORDER);");
               _builder.newLineIfNotEmpty();
               _builder.append("\t\t");
               _builder.append("contentText");
-              String _name_5 = input.getName();
-              _builder.append(_name_5, "\t\t");
+              String _name_11 = input_1.getName();
+              _builder.append(_name_11, "\t\t");
               _builder.append(".setLayout(new GridLayout(2, true));");
               _builder.newLineIfNotEmpty();
               _builder.append("\t\t");
-              _builder.append("Label label");
-              String _name_6 = input.getName();
-              _builder.append(_name_6, "\t\t");
+              _builder.append("label");
+              String _name_12 = input_1.getName();
+              _builder.append(_name_12, "\t\t");
               _builder.append(" = new Label(contentText");
-              String _name_7 = input.getName();
-              _builder.append(_name_7, "\t\t");
+              String _name_13 = input_1.getName();
+              _builder.append(_name_13, "\t\t");
               _builder.append(", SWT.NONE);");
               _builder.newLineIfNotEmpty();
               _builder.append("\t\t");
-              _builder.append("Text  texto");
-              String _name_8 = input.getName();
-              _builder.append(_name_8, "\t\t");
+              _builder.append("texto");
+              String _name_14 = input_1.getName();
+              _builder.append(_name_14, "\t\t");
               _builder.append("  = new Text(contentText");
-              String _name_9 = input.getName();
-              _builder.append(_name_9, "\t\t");
+              String _name_15 = input_1.getName();
+              _builder.append(_name_15, "\t\t");
               _builder.append(", SWT.BORDER);");
               _builder.newLineIfNotEmpty();
               _builder.append("\t\t");
               _builder.append("label");
-              String _name_10 = input.getName();
-              _builder.append(_name_10, "\t\t");
+              String _name_16 = input_1.getName();
+              _builder.append(_name_16, "\t\t");
               _builder.append(".setText(\"");
-              String _name_11 = input.getName();
-              _builder.append(_name_11, "\t\t");
+              String _name_17 = input_1.getName();
+              _builder.append(_name_17, "\t\t");
               _builder.append("\");");
               _builder.newLineIfNotEmpty();
               _builder.append("\t\t");
             } else {
-              if ((input instanceof InputCheck)) {
+              if ((input_1 instanceof InputCheck)) {
                 _builder.append("// CASO CHECKBOX");
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t");
                 _builder.append("Composite contentCheck");
-                String _name_12 = input.getName();
-                _builder.append(_name_12, "\t\t");
+                String _name_18 = input_1.getName();
+                _builder.append(_name_18, "\t\t");
                 _builder.append(" = new Composite(shell, SWT.BORDER);");
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t");
                 _builder.append("contentCheck");
-                String _name_13 = input.getName();
-                _builder.append(_name_13, "\t\t");
+                String _name_19 = input_1.getName();
+                _builder.append(_name_19, "\t\t");
                 _builder.append(".setLayout(new GridLayout(1, true));");
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t");
-                _builder.append("Button[] check");
-                String _name_14 = input.getName();
-                _builder.append(_name_14, "\t\t");
+                _builder.append("check");
+                String _name_20 = input_1.getName();
+                _builder.append(_name_20, "\t\t");
                 _builder.append(" = new Button[");
-                EList<String> _valores = ((InputCheck) input).getValores();
+                EList<String> _valores = ((InputCheck) input_1).getValores();
                 int _size = _valores.size();
                 _builder.append(_size, "\t\t");
                 _builder.append("];");
@@ -252,27 +330,27 @@ public class FormularioGenerator implements IGenerator {
                 _builder.append("\t\t");
                 _builder.newLine();
                 {
-                  EList<String> _valores_1 = ((InputCheck) input).getValores();
+                  EList<String> _valores_1 = ((InputCheck) input_1).getValores();
                   for(final String valor : _valores_1) {
                     _builder.append("\t\t");
                     _builder.append("check");
-                    String _name_15 = input.getName();
-                    _builder.append(_name_15, "\t\t");
+                    String _name_21 = input_1.getName();
+                    _builder.append(_name_21, "\t\t");
                     _builder.append("[");
-                    EList<String> _valores_2 = ((InputCheck) input).getValores();
+                    EList<String> _valores_2 = ((InputCheck) input_1).getValores();
                     int _indexOf = _valores_2.indexOf(valor);
                     _builder.append(_indexOf, "\t\t");
                     _builder.append("] = new Button(contentCheck");
-                    String _name_16 = input.getName();
-                    _builder.append(_name_16, "\t\t");
+                    String _name_22 = input_1.getName();
+                    _builder.append(_name_22, "\t\t");
                     _builder.append(", SWT.CHECK);");
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t");
                     _builder.append("check");
-                    String _name_17 = input.getName();
-                    _builder.append(_name_17, "\t\t");
+                    String _name_23 = input_1.getName();
+                    _builder.append(_name_23, "\t\t");
                     _builder.append("[");
-                    EList<String> _valores_3 = ((InputCheck) input).getValores();
+                    EList<String> _valores_3 = ((InputCheck) input_1).getValores();
                     int _indexOf_1 = _valores_3.indexOf(valor);
                     _builder.append(_indexOf_1, "\t\t");
                     _builder.append("].setText(\"");
@@ -283,64 +361,64 @@ public class FormularioGenerator implements IGenerator {
                 }
                 _builder.append("\t\t");
               } else {
-                if ((input instanceof InputRadio)) {
+                if ((input_1 instanceof InputRadio)) {
                   _builder.append("// CASO RADIO");
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t\t");
                   _builder.append("Composite contentRadio");
-                  String _name_18 = input.getName();
-                  _builder.append(_name_18, "\t\t");
+                  String _name_24 = input_1.getName();
+                  _builder.append(_name_24, "\t\t");
                   _builder.append(" = new Composite(shell, SWT.BORDER);");
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t\t");
                   _builder.append("contentRadio");
-                  String _name_19 = input.getName();
-                  _builder.append(_name_19, "\t\t");
+                  String _name_25 = input_1.getName();
+                  _builder.append(_name_25, "\t\t");
                   _builder.append(".setLayout(new GridLayout(1, true));");
                   _builder.newLineIfNotEmpty();
                   _builder.append("\t\t");
-                  _builder.append("Button[] radio");
-                  String _name_20 = input.getName();
-                  _builder.append(_name_20, "\t\t");
+                  _builder.append("radio");
+                  String _name_26 = input_1.getName();
+                  _builder.append(_name_26, "\t\t");
                   _builder.append(" = new Button[");
-                  EList<String> _valores_4 = ((InputRadio) input).getValores();
+                  EList<String> _valores_4 = ((InputRadio) input_1).getValores();
                   int _size_1 = _valores_4.size();
                   _builder.append(_size_1, "\t\t");
                   _builder.append("];");
                   _builder.newLineIfNotEmpty();
                   _builder.newLine();
                   {
-                    EList<String> _valores_5 = ((InputRadio) input).getValores();
+                    EList<String> _valores_5 = ((InputRadio) input_1).getValores();
                     for(final String valor_1 : _valores_5) {
                       _builder.append("\t\t");
                       _builder.append("radio");
-                      String _name_21 = input.getName();
-                      _builder.append(_name_21, "\t\t");
+                      String _name_27 = input_1.getName();
+                      _builder.append(_name_27, "\t\t");
                       _builder.append("[");
-                      EList<String> _valores_6 = ((InputRadio) input).getValores();
+                      EList<String> _valores_6 = ((InputRadio) input_1).getValores();
                       int _indexOf_2 = _valores_6.indexOf(valor_1);
                       _builder.append(_indexOf_2, "\t\t");
                       _builder.append("] = new Button(contentRadio");
-                      String _name_22 = input.getName();
-                      _builder.append(_name_22, "\t\t");
+                      String _name_28 = input_1.getName();
+                      _builder.append(_name_28, "\t\t");
                       _builder.append(", SWT.RADIO);");
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t\t");
                       _builder.append("radio");
-                      String _name_23 = input.getName();
-                      _builder.append(_name_23, "\t\t");
+                      String _name_29 = input_1.getName();
+                      _builder.append(_name_29, "\t\t");
                       _builder.append("[");
-                      EList<String> _valores_7 = ((InputRadio) input).getValores();
+                      EList<String> _valores_7 = ((InputRadio) input_1).getValores();
                       int _indexOf_3 = _valores_7.indexOf(valor_1);
                       _builder.append(_indexOf_3, "\t\t");
                       _builder.append("].setSelection(false);");
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t\t");
                       _builder.append("radio");
-                      String _name_24 = input.getName();
-                      _builder.append(_name_24, "\t\t");
+                      String _name_30 = input_1.getName();
+                      _builder.append(_name_30, "\t\t");
                       _builder.append("[");
-                      EList<String> _valores_8 = ((InputRadio) input).getValores();
+                      EList<String> _valores_8 = ((InputRadio) input_1).getValores();
                       int _indexOf_4 = _valores_8.indexOf(valor_1);
                       _builder.append(_indexOf_4, "\t\t");
                       _builder.append("].setText(\"");
@@ -349,10 +427,10 @@ public class FormularioGenerator implements IGenerator {
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t\t");
                       _builder.append("radio");
-                      String _name_25 = input.getName();
-                      _builder.append(_name_25, "\t\t");
+                      String _name_31 = input_1.getName();
+                      _builder.append(_name_31, "\t\t");
                       _builder.append("[");
-                      EList<String> _valores_9 = ((InputRadio) input).getValores();
+                      EList<String> _valores_9 = ((InputRadio) input_1).getValores();
                       int _indexOf_5 = _valores_9.indexOf(valor_1);
                       _builder.append(_indexOf_5, "\t\t");
                       _builder.append("].setBounds(10, 5, 75, 30);");
@@ -361,32 +439,32 @@ public class FormularioGenerator implements IGenerator {
                   }
                   _builder.append("\t\t");
                 } else {
-                  if ((input instanceof InputCombo)) {
+                  if ((input_1 instanceof InputCombo)) {
                     _builder.append(" // CASO COMBO");
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t");
-                    _builder.append("Combo combo");
-                    String _name_26 = input.getName();
-                    _builder.append(_name_26, "\t\t");
+                    _builder.append("combo");
+                    String _name_32 = input_1.getName();
+                    _builder.append(_name_32, "\t\t");
                     _builder.append(" = new Combo(shell, SWT.SIMPLE);");
                     _builder.newLineIfNotEmpty();
                     _builder.append("\t\t");
                     _builder.append(" ");
                     _builder.append("combo");
-                    String _name_27 = input.getName();
-                    _builder.append(_name_27, "\t\t ");
+                    String _name_33 = input_1.getName();
+                    _builder.append(_name_33, "\t\t ");
                     _builder.append(".setText(\"");
-                    String _name_28 = input.getName();
-                    _builder.append(_name_28, "\t\t ");
+                    String _name_34 = input_1.getName();
+                    _builder.append(_name_34, "\t\t ");
                     _builder.append("\");");
                     _builder.newLineIfNotEmpty();
                     {
-                      EList<String> _valores_10 = ((InputCombo) input).getValores();
+                      EList<String> _valores_10 = ((InputCombo) input_1).getValores();
                       for(final String valor_2 : _valores_10) {
                         _builder.append("\t\t");
                         _builder.append("combo");
-                        String _name_29 = input.getName();
-                        _builder.append(_name_29, "\t\t");
+                        String _name_35 = input_1.getName();
+                        _builder.append(_name_35, "\t\t");
                         _builder.append(".add(\"");
                         _builder.append(valor_2, "\t\t");
                         _builder.append("\");");
@@ -407,27 +485,27 @@ public class FormularioGenerator implements IGenerator {
     _builder.append("// Funciones Reaccion");
     _builder.newLine();
     {
-      Layout _layout_2 = form.getLayout();
-      EList<Input> _entradas_1 = _layout_2.getEntradas();
-      for(final Input input_1 : _entradas_1) {
+      Layout _layout_3 = form.getLayout();
+      EList<Input> _entradas_2 = _layout_3.getEntradas();
+      for(final Input input_2 : _entradas_2) {
         _builder.append("\t\t");
         {
-          if ((input_1 instanceof InputCheck)) {
+          if ((input_2 instanceof InputCheck)) {
             _builder.append("// CASO CHECKBOX");
             _builder.newLineIfNotEmpty();
             {
-              Reaccion _reaccion = ((InputCheck) input_1).getReaccion();
+              Reaccion _reaccion = ((InputCheck) input_2).getReaccion();
               boolean _notEquals = (!Objects.equal(_reaccion, null));
               if (_notEquals) {
                 {
-                  Reaccion _reaccion_1 = ((InputCheck) input_1).getReaccion();
+                  Reaccion _reaccion_1 = ((InputCheck) input_2).getReaccion();
                   if ((_reaccion_1 instanceof ReaccionVisible)) {
                     _builder.append("\t\t");
                     _builder.append("check");
-                    String _name_30 = ((InputCheck)input_1).getName();
-                    _builder.append(_name_30, "\t\t");
+                    String _name_36 = ((InputCheck)input_2).getName();
+                    _builder.append(_name_36, "\t\t");
                     _builder.append("[");
-                    Reaccion _reaccion_2 = ((InputCheck) input_1).getReaccion();
+                    Reaccion _reaccion_2 = ((InputCheck) input_2).getReaccion();
                     int _activacion = _reaccion_2.getActivacion();
                     int _minus = (_activacion - 1);
                     _builder.append(_minus, "\t\t");
@@ -445,105 +523,105 @@ public class FormularioGenerator implements IGenerator {
                     _builder.append("public void widgetSelected(SelectionEvent arg0) {");
                     _builder.newLine();
                     {
-                      Reaccion _reaccion_3 = ((InputCheck) input_1).getReaccion();
+                      Reaccion _reaccion_3 = ((InputCheck) input_2).getReaccion();
                       Input _objetivo = _reaccion_3.getObjetivo();
                       if ((_objetivo instanceof InputBoton)) {
                         _builder.append("\t\t");
                         _builder.append("\t\t");
                         _builder.append("boton");
-                        Reaccion _reaccion_4 = ((InputCheck) input_1).getReaccion();
+                        Reaccion _reaccion_4 = ((InputCheck) input_2).getReaccion();
                         Input _objetivo_1 = _reaccion_4.getObjetivo();
-                        String _name_31 = _objetivo_1.getName();
-                        _builder.append(_name_31, "\t\t\t\t");
+                        String _name_37 = _objetivo_1.getName();
+                        _builder.append(_name_37, "\t\t\t\t");
                         _builder.append(".setVisible( !check");
-                        String _name_32 = ((InputCheck)input_1).getName();
-                        _builder.append(_name_32, "\t\t\t\t");
+                        String _name_38 = ((InputCheck)input_2).getName();
+                        _builder.append(_name_38, "\t\t\t\t");
                         _builder.append("[");
-                        Reaccion _reaccion_5 = ((InputCheck) input_1).getReaccion();
+                        Reaccion _reaccion_5 = ((InputCheck) input_2).getReaccion();
                         int _activacion_1 = _reaccion_5.getActivacion();
                         int _minus_1 = (_activacion_1 - 1);
                         _builder.append(_minus_1, "\t\t\t\t");
                         _builder.append("].getSelection() );");
                         _builder.newLineIfNotEmpty();
                       } else {
-                        Reaccion _reaccion_6 = ((InputCheck) input_1).getReaccion();
+                        Reaccion _reaccion_6 = ((InputCheck) input_2).getReaccion();
                         Input _objetivo_2 = _reaccion_6.getObjetivo();
                         if ((_objetivo_2 instanceof InputTexto)) {
                           _builder.append("\t\t");
                           _builder.append("\t\t");
                           _builder.append("texto");
-                          Reaccion _reaccion_7 = ((InputCheck) input_1).getReaccion();
+                          Reaccion _reaccion_7 = ((InputCheck) input_2).getReaccion();
                           Input _objetivo_3 = _reaccion_7.getObjetivo();
-                          String _name_33 = _objetivo_3.getName();
-                          _builder.append(_name_33, "\t\t\t\t");
+                          String _name_39 = _objetivo_3.getName();
+                          _builder.append(_name_39, "\t\t\t\t");
                           _builder.append(".setVisible( !check");
-                          String _name_34 = ((InputCheck)input_1).getName();
-                          _builder.append(_name_34, "\t\t\t\t");
+                          String _name_40 = ((InputCheck)input_2).getName();
+                          _builder.append(_name_40, "\t\t\t\t");
                           _builder.append("[");
-                          Reaccion _reaccion_8 = ((InputCheck) input_1).getReaccion();
+                          Reaccion _reaccion_8 = ((InputCheck) input_2).getReaccion();
                           int _activacion_2 = _reaccion_8.getActivacion();
                           int _minus_2 = (_activacion_2 - 1);
                           _builder.append(_minus_2, "\t\t\t\t");
                           _builder.append("].getSelection() );");
                           _builder.newLineIfNotEmpty();
                         } else {
-                          Reaccion _reaccion_9 = ((InputCheck) input_1).getReaccion();
+                          Reaccion _reaccion_9 = ((InputCheck) input_2).getReaccion();
                           Input _objetivo_4 = _reaccion_9.getObjetivo();
                           if ((_objetivo_4 instanceof InputCheck)) {
                             _builder.append("\t\t");
                             _builder.append("\t\t");
                             _builder.append("check");
-                            Reaccion _reaccion_10 = ((InputCheck) input_1).getReaccion();
+                            Reaccion _reaccion_10 = ((InputCheck) input_2).getReaccion();
                             Input _objetivo_5 = _reaccion_10.getObjetivo();
-                            String _name_35 = _objetivo_5.getName();
-                            _builder.append(_name_35, "\t\t\t\t");
+                            String _name_41 = _objetivo_5.getName();
+                            _builder.append(_name_41, "\t\t\t\t");
                             _builder.append(".setVisible( !check");
-                            String _name_36 = ((InputCheck)input_1).getName();
-                            _builder.append(_name_36, "\t\t\t\t");
+                            String _name_42 = ((InputCheck)input_2).getName();
+                            _builder.append(_name_42, "\t\t\t\t");
                             _builder.append("[");
-                            Reaccion _reaccion_11 = ((InputCheck) input_1).getReaccion();
+                            Reaccion _reaccion_11 = ((InputCheck) input_2).getReaccion();
                             int _activacion_3 = _reaccion_11.getActivacion();
                             int _minus_3 = (_activacion_3 - 1);
                             _builder.append(_minus_3, "\t\t\t\t");
                             _builder.append("].getSelection() );");
                             _builder.newLineIfNotEmpty();
                           } else {
-                            Reaccion _reaccion_12 = ((InputCheck) input_1).getReaccion();
+                            Reaccion _reaccion_12 = ((InputCheck) input_2).getReaccion();
                             Input _objetivo_6 = _reaccion_12.getObjetivo();
                             if ((_objetivo_6 instanceof InputCombo)) {
                               _builder.append("\t\t");
                               _builder.append("\t\t");
                               _builder.append("combo");
-                              Reaccion _reaccion_13 = ((InputCheck) input_1).getReaccion();
+                              Reaccion _reaccion_13 = ((InputCheck) input_2).getReaccion();
                               Input _objetivo_7 = _reaccion_13.getObjetivo();
-                              String _name_37 = _objetivo_7.getName();
-                              _builder.append(_name_37, "\t\t\t\t");
+                              String _name_43 = _objetivo_7.getName();
+                              _builder.append(_name_43, "\t\t\t\t");
                               _builder.append(".setVisible( !check");
-                              String _name_38 = ((InputCheck)input_1).getName();
-                              _builder.append(_name_38, "\t\t\t\t");
+                              String _name_44 = ((InputCheck)input_2).getName();
+                              _builder.append(_name_44, "\t\t\t\t");
                               _builder.append("[");
-                              Reaccion _reaccion_14 = ((InputCheck) input_1).getReaccion();
+                              Reaccion _reaccion_14 = ((InputCheck) input_2).getReaccion();
                               int _activacion_4 = _reaccion_14.getActivacion();
                               int _minus_4 = (_activacion_4 - 1);
                               _builder.append(_minus_4, "\t\t\t\t");
                               _builder.append("].getSelection() );");
                               _builder.newLineIfNotEmpty();
                             } else {
-                              Reaccion _reaccion_15 = ((InputCheck) input_1).getReaccion();
+                              Reaccion _reaccion_15 = ((InputCheck) input_2).getReaccion();
                               Input _objetivo_8 = _reaccion_15.getObjetivo();
                               if ((_objetivo_8 instanceof InputRadio)) {
                                 _builder.append("\t\t");
                                 _builder.append("\t\t");
                                 _builder.append("radio");
-                                Reaccion _reaccion_16 = ((InputCheck) input_1).getReaccion();
+                                Reaccion _reaccion_16 = ((InputCheck) input_2).getReaccion();
                                 Input _objetivo_9 = _reaccion_16.getObjetivo();
-                                String _name_39 = _objetivo_9.getName();
-                                _builder.append(_name_39, "\t\t\t\t");
+                                String _name_45 = _objetivo_9.getName();
+                                _builder.append(_name_45, "\t\t\t\t");
                                 _builder.append(".setVisible( !check");
-                                String _name_40 = ((InputCheck)input_1).getName();
-                                _builder.append(_name_40, "\t\t\t\t");
+                                String _name_46 = ((InputCheck)input_2).getName();
+                                _builder.append(_name_46, "\t\t\t\t");
                                 _builder.append("[");
-                                Reaccion _reaccion_17 = ((InputCheck) input_1).getReaccion();
+                                Reaccion _reaccion_17 = ((InputCheck) input_2).getReaccion();
                                 int _activacion_5 = _reaccion_17.getActivacion();
                                 int _minus_5 = (_activacion_5 - 1);
                                 _builder.append(_minus_5, "\t\t\t\t");
@@ -574,14 +652,14 @@ public class FormularioGenerator implements IGenerator {
                     _builder.append("});");
                     _builder.newLine();
                   } else {
-                    Reaccion _reaccion_18 = ((InputCheck) input_1).getReaccion();
+                    Reaccion _reaccion_18 = ((InputCheck) input_2).getReaccion();
                     if ((_reaccion_18 instanceof ReaccionHabilitado)) {
                       _builder.append("\t\t");
                       _builder.append("check");
-                      String _name_41 = ((InputCheck)input_1).getName();
-                      _builder.append(_name_41, "\t\t");
+                      String _name_47 = ((InputCheck)input_2).getName();
+                      _builder.append(_name_47, "\t\t");
                       _builder.append("[");
-                      Reaccion _reaccion_19 = ((InputCheck) input_1).getReaccion();
+                      Reaccion _reaccion_19 = ((InputCheck) input_2).getReaccion();
                       int _activacion_6 = _reaccion_19.getActivacion();
                       int _minus_6 = (_activacion_6 - 1);
                       _builder.append(_minus_6, "\t\t");
@@ -599,105 +677,105 @@ public class FormularioGenerator implements IGenerator {
                       _builder.append("public void widgetSelected(SelectionEvent arg0) {");
                       _builder.newLine();
                       {
-                        Reaccion _reaccion_20 = ((InputCheck) input_1).getReaccion();
+                        Reaccion _reaccion_20 = ((InputCheck) input_2).getReaccion();
                         Input _objetivo_10 = _reaccion_20.getObjetivo();
                         if ((_objetivo_10 instanceof InputBoton)) {
                           _builder.append("\t\t");
                           _builder.append("\t\t");
                           _builder.append("boton");
-                          Reaccion _reaccion_21 = ((InputCheck) input_1).getReaccion();
+                          Reaccion _reaccion_21 = ((InputCheck) input_2).getReaccion();
                           Input _objetivo_11 = _reaccion_21.getObjetivo();
-                          String _name_42 = _objetivo_11.getName();
-                          _builder.append(_name_42, "\t\t\t\t");
+                          String _name_48 = _objetivo_11.getName();
+                          _builder.append(_name_48, "\t\t\t\t");
                           _builder.append(".setEnabled( !check");
-                          String _name_43 = ((InputCheck)input_1).getName();
-                          _builder.append(_name_43, "\t\t\t\t");
+                          String _name_49 = ((InputCheck)input_2).getName();
+                          _builder.append(_name_49, "\t\t\t\t");
                           _builder.append("[");
-                          Reaccion _reaccion_22 = ((InputCheck) input_1).getReaccion();
+                          Reaccion _reaccion_22 = ((InputCheck) input_2).getReaccion();
                           int _activacion_7 = _reaccion_22.getActivacion();
                           int _minus_7 = (_activacion_7 - 1);
                           _builder.append(_minus_7, "\t\t\t\t");
                           _builder.append("].getSelection() );");
                           _builder.newLineIfNotEmpty();
                         } else {
-                          Reaccion _reaccion_23 = ((InputCheck) input_1).getReaccion();
+                          Reaccion _reaccion_23 = ((InputCheck) input_2).getReaccion();
                           Input _objetivo_12 = _reaccion_23.getObjetivo();
                           if ((_objetivo_12 instanceof InputTexto)) {
                             _builder.append("\t\t");
                             _builder.append("\t\t");
                             _builder.append("texto");
-                            Reaccion _reaccion_24 = ((InputCheck) input_1).getReaccion();
+                            Reaccion _reaccion_24 = ((InputCheck) input_2).getReaccion();
                             Input _objetivo_13 = _reaccion_24.getObjetivo();
-                            String _name_44 = _objetivo_13.getName();
-                            _builder.append(_name_44, "\t\t\t\t");
+                            String _name_50 = _objetivo_13.getName();
+                            _builder.append(_name_50, "\t\t\t\t");
                             _builder.append(".setEnabled( !check");
-                            String _name_45 = ((InputCheck)input_1).getName();
-                            _builder.append(_name_45, "\t\t\t\t");
+                            String _name_51 = ((InputCheck)input_2).getName();
+                            _builder.append(_name_51, "\t\t\t\t");
                             _builder.append("[");
-                            Reaccion _reaccion_25 = ((InputCheck) input_1).getReaccion();
+                            Reaccion _reaccion_25 = ((InputCheck) input_2).getReaccion();
                             int _activacion_8 = _reaccion_25.getActivacion();
                             int _minus_8 = (_activacion_8 - 1);
                             _builder.append(_minus_8, "\t\t\t\t");
                             _builder.append("].getSelection() );");
                             _builder.newLineIfNotEmpty();
                           } else {
-                            Reaccion _reaccion_26 = ((InputCheck) input_1).getReaccion();
+                            Reaccion _reaccion_26 = ((InputCheck) input_2).getReaccion();
                             Input _objetivo_14 = _reaccion_26.getObjetivo();
                             if ((_objetivo_14 instanceof InputCheck)) {
                               _builder.append("\t\t");
                               _builder.append("\t\t");
                               _builder.append("check");
-                              Reaccion _reaccion_27 = ((InputCheck) input_1).getReaccion();
+                              Reaccion _reaccion_27 = ((InputCheck) input_2).getReaccion();
                               Input _objetivo_15 = _reaccion_27.getObjetivo();
-                              String _name_46 = _objetivo_15.getName();
-                              _builder.append(_name_46, "\t\t\t\t");
+                              String _name_52 = _objetivo_15.getName();
+                              _builder.append(_name_52, "\t\t\t\t");
                               _builder.append(".setEnabled( !check");
-                              String _name_47 = ((InputCheck)input_1).getName();
-                              _builder.append(_name_47, "\t\t\t\t");
+                              String _name_53 = ((InputCheck)input_2).getName();
+                              _builder.append(_name_53, "\t\t\t\t");
                               _builder.append("[");
-                              Reaccion _reaccion_28 = ((InputCheck) input_1).getReaccion();
+                              Reaccion _reaccion_28 = ((InputCheck) input_2).getReaccion();
                               int _activacion_9 = _reaccion_28.getActivacion();
                               int _minus_9 = (_activacion_9 - 1);
                               _builder.append(_minus_9, "\t\t\t\t");
                               _builder.append("].getSelection() );");
                               _builder.newLineIfNotEmpty();
                             } else {
-                              Reaccion _reaccion_29 = ((InputCheck) input_1).getReaccion();
+                              Reaccion _reaccion_29 = ((InputCheck) input_2).getReaccion();
                               Input _objetivo_16 = _reaccion_29.getObjetivo();
                               if ((_objetivo_16 instanceof InputCombo)) {
                                 _builder.append("\t\t");
                                 _builder.append("\t\t");
                                 _builder.append("combo");
-                                Reaccion _reaccion_30 = ((InputCheck) input_1).getReaccion();
+                                Reaccion _reaccion_30 = ((InputCheck) input_2).getReaccion();
                                 Input _objetivo_17 = _reaccion_30.getObjetivo();
-                                String _name_48 = _objetivo_17.getName();
-                                _builder.append(_name_48, "\t\t\t\t");
+                                String _name_54 = _objetivo_17.getName();
+                                _builder.append(_name_54, "\t\t\t\t");
                                 _builder.append(".setEnabled( !check");
-                                String _name_49 = ((InputCheck)input_1).getName();
-                                _builder.append(_name_49, "\t\t\t\t");
+                                String _name_55 = ((InputCheck)input_2).getName();
+                                _builder.append(_name_55, "\t\t\t\t");
                                 _builder.append("[");
-                                Reaccion _reaccion_31 = ((InputCheck) input_1).getReaccion();
+                                Reaccion _reaccion_31 = ((InputCheck) input_2).getReaccion();
                                 int _activacion_10 = _reaccion_31.getActivacion();
                                 int _minus_10 = (_activacion_10 - 1);
                                 _builder.append(_minus_10, "\t\t\t\t");
                                 _builder.append("].getSelection() );");
                                 _builder.newLineIfNotEmpty();
                               } else {
-                                Reaccion _reaccion_32 = ((InputCheck) input_1).getReaccion();
+                                Reaccion _reaccion_32 = ((InputCheck) input_2).getReaccion();
                                 Input _objetivo_18 = _reaccion_32.getObjetivo();
                                 if ((_objetivo_18 instanceof InputRadio)) {
                                   _builder.append("\t\t");
                                   _builder.append("\t\t");
                                   _builder.append("radio");
-                                  Reaccion _reaccion_33 = ((InputCheck) input_1).getReaccion();
+                                  Reaccion _reaccion_33 = ((InputCheck) input_2).getReaccion();
                                   Input _objetivo_19 = _reaccion_33.getObjetivo();
-                                  String _name_50 = _objetivo_19.getName();
-                                  _builder.append(_name_50, "\t\t\t\t");
+                                  String _name_56 = _objetivo_19.getName();
+                                  _builder.append(_name_56, "\t\t\t\t");
                                   _builder.append(".setEnabled( !check");
-                                  String _name_51 = ((InputCheck)input_1).getName();
-                                  _builder.append(_name_51, "\t\t\t\t");
+                                  String _name_57 = ((InputCheck)input_2).getName();
+                                  _builder.append(_name_57, "\t\t\t\t");
                                   _builder.append("[");
-                                  Reaccion _reaccion_34 = ((InputCheck) input_1).getReaccion();
+                                  Reaccion _reaccion_34 = ((InputCheck) input_2).getReaccion();
                                   int _activacion_11 = _reaccion_34.getActivacion();
                                   int _minus_11 = (_activacion_11 - 1);
                                   _builder.append(_minus_11, "\t\t\t\t");
@@ -734,22 +812,22 @@ public class FormularioGenerator implements IGenerator {
             }
             _builder.append("\t\t");
           } else {
-            if ((input_1 instanceof InputRadio)) {
+            if ((input_2 instanceof InputRadio)) {
               _builder.append("// CASO RADIO");
               _builder.newLineIfNotEmpty();
               {
-                Reaccion _reaccion_35 = ((InputRadio) input_1).getReaccion();
+                Reaccion _reaccion_35 = ((InputRadio) input_2).getReaccion();
                 boolean _notEquals_1 = (!Objects.equal(_reaccion_35, null));
                 if (_notEquals_1) {
                   {
-                    Reaccion _reaccion_36 = ((InputRadio) input_1).getReaccion();
+                    Reaccion _reaccion_36 = ((InputRadio) input_2).getReaccion();
                     if ((_reaccion_36 instanceof ReaccionVisible)) {
                       _builder.append("\t\t");
                       _builder.append("radio");
-                      String _name_52 = input_1.getName();
-                      _builder.append(_name_52, "\t\t");
+                      String _name_58 = input_2.getName();
+                      _builder.append(_name_58, "\t\t");
                       _builder.append("[");
-                      Reaccion _reaccion_37 = ((InputRadio) input_1).getReaccion();
+                      Reaccion _reaccion_37 = ((InputRadio) input_2).getReaccion();
                       int _activacion_12 = _reaccion_37.getActivacion();
                       int _minus_12 = (_activacion_12 - 1);
                       _builder.append(_minus_12, "\t\t");
@@ -767,105 +845,105 @@ public class FormularioGenerator implements IGenerator {
                       _builder.append("public void widgetSelected(SelectionEvent arg0) {");
                       _builder.newLine();
                       {
-                        Reaccion _reaccion_38 = ((InputRadio) input_1).getReaccion();
+                        Reaccion _reaccion_38 = ((InputRadio) input_2).getReaccion();
                         Input _objetivo_20 = _reaccion_38.getObjetivo();
                         if ((_objetivo_20 instanceof InputBoton)) {
                           _builder.append("\t\t");
                           _builder.append("\t\t");
                           _builder.append("boton");
-                          Reaccion _reaccion_39 = ((InputRadio) input_1).getReaccion();
+                          Reaccion _reaccion_39 = ((InputRadio) input_2).getReaccion();
                           Input _objetivo_21 = _reaccion_39.getObjetivo();
-                          String _name_53 = _objetivo_21.getName();
-                          _builder.append(_name_53, "\t\t\t\t");
+                          String _name_59 = _objetivo_21.getName();
+                          _builder.append(_name_59, "\t\t\t\t");
                           _builder.append(".setVisible( !radio");
-                          String _name_54 = input_1.getName();
-                          _builder.append(_name_54, "\t\t\t\t");
+                          String _name_60 = input_2.getName();
+                          _builder.append(_name_60, "\t\t\t\t");
                           _builder.append("[");
-                          Reaccion _reaccion_40 = ((InputRadio) input_1).getReaccion();
+                          Reaccion _reaccion_40 = ((InputRadio) input_2).getReaccion();
                           int _activacion_13 = _reaccion_40.getActivacion();
                           int _minus_13 = (_activacion_13 - 1);
                           _builder.append(_minus_13, "\t\t\t\t");
                           _builder.append("].getSelection() );");
                           _builder.newLineIfNotEmpty();
                         } else {
-                          Reaccion _reaccion_41 = ((InputRadio) input_1).getReaccion();
+                          Reaccion _reaccion_41 = ((InputRadio) input_2).getReaccion();
                           Input _objetivo_22 = _reaccion_41.getObjetivo();
                           if ((_objetivo_22 instanceof InputTexto)) {
                             _builder.append("\t\t");
                             _builder.append("\t\t");
                             _builder.append("texto");
-                            Reaccion _reaccion_42 = ((InputRadio) input_1).getReaccion();
+                            Reaccion _reaccion_42 = ((InputRadio) input_2).getReaccion();
                             Input _objetivo_23 = _reaccion_42.getObjetivo();
-                            String _name_55 = _objetivo_23.getName();
-                            _builder.append(_name_55, "\t\t\t\t");
+                            String _name_61 = _objetivo_23.getName();
+                            _builder.append(_name_61, "\t\t\t\t");
                             _builder.append(".setVisible( !radio");
-                            String _name_56 = input_1.getName();
-                            _builder.append(_name_56, "\t\t\t\t");
+                            String _name_62 = input_2.getName();
+                            _builder.append(_name_62, "\t\t\t\t");
                             _builder.append("[");
-                            Reaccion _reaccion_43 = ((InputRadio) input_1).getReaccion();
+                            Reaccion _reaccion_43 = ((InputRadio) input_2).getReaccion();
                             int _activacion_14 = _reaccion_43.getActivacion();
                             int _minus_14 = (_activacion_14 - 1);
                             _builder.append(_minus_14, "\t\t\t\t");
                             _builder.append("].getSelection() );");
                             _builder.newLineIfNotEmpty();
                           } else {
-                            Reaccion _reaccion_44 = ((InputRadio) input_1).getReaccion();
+                            Reaccion _reaccion_44 = ((InputRadio) input_2).getReaccion();
                             Input _objetivo_24 = _reaccion_44.getObjetivo();
                             if ((_objetivo_24 instanceof InputCheck)) {
                               _builder.append("\t\t");
                               _builder.append("\t\t");
                               _builder.append("check");
-                              Reaccion _reaccion_45 = ((InputRadio) input_1).getReaccion();
+                              Reaccion _reaccion_45 = ((InputRadio) input_2).getReaccion();
                               Input _objetivo_25 = _reaccion_45.getObjetivo();
-                              String _name_57 = _objetivo_25.getName();
-                              _builder.append(_name_57, "\t\t\t\t");
+                              String _name_63 = _objetivo_25.getName();
+                              _builder.append(_name_63, "\t\t\t\t");
                               _builder.append(".setVisible( !radio");
-                              String _name_58 = input_1.getName();
-                              _builder.append(_name_58, "\t\t\t\t");
+                              String _name_64 = input_2.getName();
+                              _builder.append(_name_64, "\t\t\t\t");
                               _builder.append("[");
-                              Reaccion _reaccion_46 = ((InputRadio) input_1).getReaccion();
+                              Reaccion _reaccion_46 = ((InputRadio) input_2).getReaccion();
                               int _activacion_15 = _reaccion_46.getActivacion();
                               int _minus_15 = (_activacion_15 - 1);
                               _builder.append(_minus_15, "\t\t\t\t");
                               _builder.append("].getSelection() );");
                               _builder.newLineIfNotEmpty();
                             } else {
-                              Reaccion _reaccion_47 = ((InputRadio) input_1).getReaccion();
+                              Reaccion _reaccion_47 = ((InputRadio) input_2).getReaccion();
                               Input _objetivo_26 = _reaccion_47.getObjetivo();
                               if ((_objetivo_26 instanceof InputCombo)) {
                                 _builder.append("\t\t");
                                 _builder.append("\t\t");
                                 _builder.append("combo");
-                                Reaccion _reaccion_48 = ((InputRadio) input_1).getReaccion();
+                                Reaccion _reaccion_48 = ((InputRadio) input_2).getReaccion();
                                 Input _objetivo_27 = _reaccion_48.getObjetivo();
-                                String _name_59 = _objetivo_27.getName();
-                                _builder.append(_name_59, "\t\t\t\t");
+                                String _name_65 = _objetivo_27.getName();
+                                _builder.append(_name_65, "\t\t\t\t");
                                 _builder.append(".setVisible( !radio");
-                                String _name_60 = input_1.getName();
-                                _builder.append(_name_60, "\t\t\t\t");
+                                String _name_66 = input_2.getName();
+                                _builder.append(_name_66, "\t\t\t\t");
                                 _builder.append("[");
-                                Reaccion _reaccion_49 = ((InputRadio) input_1).getReaccion();
+                                Reaccion _reaccion_49 = ((InputRadio) input_2).getReaccion();
                                 int _activacion_16 = _reaccion_49.getActivacion();
                                 int _minus_16 = (_activacion_16 - 1);
                                 _builder.append(_minus_16, "\t\t\t\t");
                                 _builder.append("].getSelection() );");
                                 _builder.newLineIfNotEmpty();
                               } else {
-                                Reaccion _reaccion_50 = ((InputRadio) input_1).getReaccion();
+                                Reaccion _reaccion_50 = ((InputRadio) input_2).getReaccion();
                                 Input _objetivo_28 = _reaccion_50.getObjetivo();
                                 if ((_objetivo_28 instanceof InputRadio)) {
                                   _builder.append("\t\t");
                                   _builder.append("\t\t");
                                   _builder.append("radio");
-                                  Reaccion _reaccion_51 = ((InputRadio) input_1).getReaccion();
+                                  Reaccion _reaccion_51 = ((InputRadio) input_2).getReaccion();
                                   Input _objetivo_29 = _reaccion_51.getObjetivo();
-                                  String _name_61 = _objetivo_29.getName();
-                                  _builder.append(_name_61, "\t\t\t\t");
+                                  String _name_67 = _objetivo_29.getName();
+                                  _builder.append(_name_67, "\t\t\t\t");
                                   _builder.append(".setVisible( !radio");
-                                  String _name_62 = input_1.getName();
-                                  _builder.append(_name_62, "\t\t\t\t");
+                                  String _name_68 = input_2.getName();
+                                  _builder.append(_name_68, "\t\t\t\t");
                                   _builder.append("[");
-                                  Reaccion _reaccion_52 = ((InputRadio) input_1).getReaccion();
+                                  Reaccion _reaccion_52 = ((InputRadio) input_2).getReaccion();
                                   int _activacion_17 = _reaccion_52.getActivacion();
                                   int _minus_17 = (_activacion_17 - 1);
                                   _builder.append(_minus_17, "\t\t\t\t");
@@ -896,14 +974,14 @@ public class FormularioGenerator implements IGenerator {
                       _builder.append("});");
                       _builder.newLine();
                     } else {
-                      Reaccion _reaccion_53 = ((InputRadio) input_1).getReaccion();
+                      Reaccion _reaccion_53 = ((InputRadio) input_2).getReaccion();
                       if ((_reaccion_53 instanceof ReaccionHabilitado)) {
                         _builder.append("\t\t");
                         _builder.append("radio");
-                        String _name_63 = input_1.getName();
-                        _builder.append(_name_63, "\t\t");
+                        String _name_69 = input_2.getName();
+                        _builder.append(_name_69, "\t\t");
                         _builder.append("[");
-                        Reaccion _reaccion_54 = ((InputRadio) input_1).getReaccion();
+                        Reaccion _reaccion_54 = ((InputRadio) input_2).getReaccion();
                         int _activacion_18 = _reaccion_54.getActivacion();
                         int _minus_18 = (_activacion_18 - 1);
                         _builder.append(_minus_18, "\t\t");
@@ -921,105 +999,105 @@ public class FormularioGenerator implements IGenerator {
                         _builder.append("public void widgetSelected(SelectionEvent arg0) {");
                         _builder.newLine();
                         {
-                          Reaccion _reaccion_55 = ((InputRadio) input_1).getReaccion();
+                          Reaccion _reaccion_55 = ((InputRadio) input_2).getReaccion();
                           Input _objetivo_30 = _reaccion_55.getObjetivo();
                           if ((_objetivo_30 instanceof InputBoton)) {
                             _builder.append("\t\t");
                             _builder.append("\t\t");
                             _builder.append("boton");
-                            Reaccion _reaccion_56 = ((InputRadio) input_1).getReaccion();
+                            Reaccion _reaccion_56 = ((InputRadio) input_2).getReaccion();
                             Input _objetivo_31 = _reaccion_56.getObjetivo();
-                            String _name_64 = _objetivo_31.getName();
-                            _builder.append(_name_64, "\t\t\t\t");
+                            String _name_70 = _objetivo_31.getName();
+                            _builder.append(_name_70, "\t\t\t\t");
                             _builder.append(".setEnabled( !radio");
-                            String _name_65 = input_1.getName();
-                            _builder.append(_name_65, "\t\t\t\t");
+                            String _name_71 = input_2.getName();
+                            _builder.append(_name_71, "\t\t\t\t");
                             _builder.append("[");
-                            Reaccion _reaccion_57 = ((InputRadio) input_1).getReaccion();
+                            Reaccion _reaccion_57 = ((InputRadio) input_2).getReaccion();
                             int _activacion_19 = _reaccion_57.getActivacion();
                             int _minus_19 = (_activacion_19 - 1);
                             _builder.append(_minus_19, "\t\t\t\t");
                             _builder.append("].getSelection() );");
                             _builder.newLineIfNotEmpty();
                           } else {
-                            Reaccion _reaccion_58 = ((InputRadio) input_1).getReaccion();
+                            Reaccion _reaccion_58 = ((InputRadio) input_2).getReaccion();
                             Input _objetivo_32 = _reaccion_58.getObjetivo();
                             if ((_objetivo_32 instanceof InputTexto)) {
                               _builder.append("\t\t");
                               _builder.append("\t\t");
                               _builder.append("texto");
-                              Reaccion _reaccion_59 = ((InputRadio) input_1).getReaccion();
+                              Reaccion _reaccion_59 = ((InputRadio) input_2).getReaccion();
                               Input _objetivo_33 = _reaccion_59.getObjetivo();
-                              String _name_66 = _objetivo_33.getName();
-                              _builder.append(_name_66, "\t\t\t\t");
+                              String _name_72 = _objetivo_33.getName();
+                              _builder.append(_name_72, "\t\t\t\t");
                               _builder.append(".setEnabled( !radio");
-                              String _name_67 = input_1.getName();
-                              _builder.append(_name_67, "\t\t\t\t");
+                              String _name_73 = input_2.getName();
+                              _builder.append(_name_73, "\t\t\t\t");
                               _builder.append("[");
-                              Reaccion _reaccion_60 = ((InputRadio) input_1).getReaccion();
+                              Reaccion _reaccion_60 = ((InputRadio) input_2).getReaccion();
                               int _activacion_20 = _reaccion_60.getActivacion();
                               int _minus_20 = (_activacion_20 - 1);
                               _builder.append(_minus_20, "\t\t\t\t");
                               _builder.append("].getSelection() );");
                               _builder.newLineIfNotEmpty();
                             } else {
-                              Reaccion _reaccion_61 = ((InputRadio) input_1).getReaccion();
+                              Reaccion _reaccion_61 = ((InputRadio) input_2).getReaccion();
                               Input _objetivo_34 = _reaccion_61.getObjetivo();
                               if ((_objetivo_34 instanceof InputCheck)) {
                                 _builder.append("\t\t");
                                 _builder.append("\t\t");
                                 _builder.append("check");
-                                Reaccion _reaccion_62 = ((InputRadio) input_1).getReaccion();
+                                Reaccion _reaccion_62 = ((InputRadio) input_2).getReaccion();
                                 Input _objetivo_35 = _reaccion_62.getObjetivo();
-                                String _name_68 = _objetivo_35.getName();
-                                _builder.append(_name_68, "\t\t\t\t");
+                                String _name_74 = _objetivo_35.getName();
+                                _builder.append(_name_74, "\t\t\t\t");
                                 _builder.append(".setEnabled( !radio");
-                                String _name_69 = input_1.getName();
-                                _builder.append(_name_69, "\t\t\t\t");
+                                String _name_75 = input_2.getName();
+                                _builder.append(_name_75, "\t\t\t\t");
                                 _builder.append("[");
-                                Reaccion _reaccion_63 = ((InputRadio) input_1).getReaccion();
+                                Reaccion _reaccion_63 = ((InputRadio) input_2).getReaccion();
                                 int _activacion_21 = _reaccion_63.getActivacion();
                                 int _minus_21 = (_activacion_21 - 1);
                                 _builder.append(_minus_21, "\t\t\t\t");
                                 _builder.append("].getSelection() );");
                                 _builder.newLineIfNotEmpty();
                               } else {
-                                Reaccion _reaccion_64 = ((InputRadio) input_1).getReaccion();
+                                Reaccion _reaccion_64 = ((InputRadio) input_2).getReaccion();
                                 Input _objetivo_36 = _reaccion_64.getObjetivo();
                                 if ((_objetivo_36 instanceof InputCombo)) {
                                   _builder.append("\t\t");
                                   _builder.append("\t\t");
                                   _builder.append("combo");
-                                  Reaccion _reaccion_65 = ((InputRadio) input_1).getReaccion();
+                                  Reaccion _reaccion_65 = ((InputRadio) input_2).getReaccion();
                                   Input _objetivo_37 = _reaccion_65.getObjetivo();
-                                  String _name_70 = _objetivo_37.getName();
-                                  _builder.append(_name_70, "\t\t\t\t");
+                                  String _name_76 = _objetivo_37.getName();
+                                  _builder.append(_name_76, "\t\t\t\t");
                                   _builder.append(".setEnabled( !radio");
-                                  String _name_71 = input_1.getName();
-                                  _builder.append(_name_71, "\t\t\t\t");
+                                  String _name_77 = input_2.getName();
+                                  _builder.append(_name_77, "\t\t\t\t");
                                   _builder.append("[");
-                                  Reaccion _reaccion_66 = ((InputRadio) input_1).getReaccion();
+                                  Reaccion _reaccion_66 = ((InputRadio) input_2).getReaccion();
                                   int _activacion_22 = _reaccion_66.getActivacion();
                                   int _minus_22 = (_activacion_22 - 1);
                                   _builder.append(_minus_22, "\t\t\t\t");
                                   _builder.append("].getSelection() );");
                                   _builder.newLineIfNotEmpty();
                                 } else {
-                                  Reaccion _reaccion_67 = ((InputRadio) input_1).getReaccion();
+                                  Reaccion _reaccion_67 = ((InputRadio) input_2).getReaccion();
                                   Input _objetivo_38 = _reaccion_67.getObjetivo();
                                   if ((_objetivo_38 instanceof InputRadio)) {
                                     _builder.append("\t\t");
                                     _builder.append("\t\t");
                                     _builder.append("radio");
-                                    Reaccion _reaccion_68 = ((InputRadio) input_1).getReaccion();
+                                    Reaccion _reaccion_68 = ((InputRadio) input_2).getReaccion();
                                     Input _objetivo_39 = _reaccion_68.getObjetivo();
-                                    String _name_72 = _objetivo_39.getName();
-                                    _builder.append(_name_72, "\t\t\t\t");
+                                    String _name_78 = _objetivo_39.getName();
+                                    _builder.append(_name_78, "\t\t\t\t");
                                     _builder.append(".setEnabled( !radio");
-                                    String _name_73 = input_1.getName();
-                                    _builder.append(_name_73, "\t\t\t\t");
+                                    String _name_79 = input_2.getName();
+                                    _builder.append(_name_79, "\t\t\t\t");
                                     _builder.append("[");
-                                    Reaccion _reaccion_69 = ((InputRadio) input_1).getReaccion();
+                                    Reaccion _reaccion_69 = ((InputRadio) input_2).getReaccion();
                                     int _activacion_23 = _reaccion_69.getActivacion();
                                     int _minus_23 = (_activacion_23 - 1);
                                     _builder.append(_minus_23, "\t\t\t\t");
@@ -1065,18 +1143,18 @@ public class FormularioGenerator implements IGenerator {
     _builder.append("// Funciones de Input de tipo BOTON");
     _builder.newLine();
     {
-      Layout _layout_3 = form.getLayout();
-      EList<Input> _entradas_2 = _layout_3.getEntradas();
-      for(final Input input_2 : _entradas_2) {
+      Layout _layout_4 = form.getLayout();
+      EList<Input> _entradas_3 = _layout_4.getEntradas();
+      for(final Input input_3 : _entradas_3) {
         {
-          if ((input_2 instanceof BotonValidar)) {
+          if ((input_3 instanceof BotonValidar)) {
             _builder.append("\t\t");
             _builder.append("// Caso Validar");
             _builder.newLine();
             _builder.append("\t\t");
             _builder.append("boton");
-            String _name_74 = ((BotonValidar)input_2).getName();
-            _builder.append(_name_74, "\t\t");
+            String _name_80 = ((BotonValidar)input_3).getName();
+            _builder.append(_name_80, "\t\t");
             _builder.append(".addSelectionListener(new SelectionListener() {");
             _builder.newLineIfNotEmpty();
             _builder.append("\t\t");
@@ -1105,9 +1183,9 @@ public class FormularioGenerator implements IGenerator {
             _builder.append("\t\t");
             _builder.newLine();
             {
-              Layout _layout_4 = form.getLayout();
-              EList<Input> _entradas_3 = _layout_4.getEntradas();
-              for(final Input inputVal : _entradas_3) {
+              Layout _layout_5 = form.getLayout();
+              EList<Input> _entradas_4 = _layout_5.getEntradas();
+              for(final Input inputVal : _entradas_4) {
                 {
                   if ((inputVal instanceof InputTexto)) {
                     {
@@ -1117,8 +1195,8 @@ public class FormularioGenerator implements IGenerator {
                         _builder.append("\t\t");
                         _builder.append("\t\t");
                         _builder.append("if (texto");
-                        String _name_75 = ((InputTexto)inputVal).getName();
-                        _builder.append(_name_75, "\t\t\t\t");
+                        String _name_81 = ((InputTexto)inputVal).getName();
+                        _builder.append(_name_81, "\t\t\t\t");
                         _builder.append(".getText().length() == 0){");
                         _builder.newLineIfNotEmpty();
                         _builder.append("\t\t");
@@ -1130,8 +1208,8 @@ public class FormularioGenerator implements IGenerator {
                         _builder.append("\t\t");
                         _builder.append("\t");
                         _builder.append("mensaje_error += \"*La entrada de texto \'");
-                        String _name_76 = ((InputTexto)inputVal).getName();
-                        _builder.append(_name_76, "\t\t\t\t\t");
+                        String _name_82 = ((InputTexto)inputVal).getName();
+                        _builder.append(_name_82, "\t\t\t\t\t");
                         _builder.append("\' no puede estar vacía.\\n\";");
                         _builder.newLineIfNotEmpty();
                         _builder.append("\t\t");
@@ -1228,13 +1306,13 @@ public class FormularioGenerator implements IGenerator {
             _builder.newLine();
             _builder.append("\t\t");
           } else {
-            if ((input_2 instanceof BotonCancelar)) {
+            if ((input_3 instanceof BotonCancelar)) {
               _builder.append(" // Caso Cancelar");
               _builder.newLineIfNotEmpty();
               _builder.append("\t\t");
               _builder.append("boton");
-              String _name_77 = input_2.getName();
-              _builder.append(_name_77, "\t\t");
+              String _name_83 = input_3.getName();
+              _builder.append(_name_83, "\t\t");
               _builder.append(".addSelectionListener(new SelectionListener() {");
               _builder.newLineIfNotEmpty();
               _builder.append("\t\t");
@@ -1252,30 +1330,30 @@ public class FormularioGenerator implements IGenerator {
               _builder.append("\t\t");
               _builder.newLine();
               {
-                Layout _layout_5 = form.getLayout();
-                EList<Input> _entradas_4 = _layout_5.getEntradas();
-                for(final Input inputVal_1 : _entradas_4) {
+                Layout _layout_6 = form.getLayout();
+                EList<Input> _entradas_5 = _layout_6.getEntradas();
+                for(final Input inputVal_1 : _entradas_5) {
                   {
                     if ((inputVal_1 instanceof InputTexto)) {
                       _builder.append("\t\t");
                       _builder.append("\t\t");
                       _builder.append("texto");
-                      String _name_78 = ((InputTexto)inputVal_1).getName();
-                      _builder.append(_name_78, "\t\t\t\t");
+                      String _name_84 = ((InputTexto)inputVal_1).getName();
+                      _builder.append(_name_84, "\t\t\t\t");
                       _builder.append(".setText(\"\");");
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t\t");
                       _builder.append("\t\t");
                       _builder.append("texto");
-                      String _name_79 = ((InputTexto)inputVal_1).getName();
-                      _builder.append(_name_79, "\t\t\t\t");
+                      String _name_85 = ((InputTexto)inputVal_1).getName();
+                      _builder.append(_name_85, "\t\t\t\t");
                       _builder.append(".setVisible(true);");
                       _builder.newLineIfNotEmpty();
                       _builder.append("\t\t");
                       _builder.append("\t\t");
                       _builder.append("texto");
-                      String _name_80 = ((InputTexto)inputVal_1).getName();
-                      _builder.append(_name_80, "\t\t\t\t");
+                      String _name_86 = ((InputTexto)inputVal_1).getName();
+                      _builder.append(_name_86, "\t\t\t\t");
                       _builder.append(".setEnabled(true);");
                       _builder.newLineIfNotEmpty();
                     } else {
@@ -1286,8 +1364,8 @@ public class FormularioGenerator implements IGenerator {
                             _builder.append("\t\t");
                             _builder.append("\t\t");
                             _builder.append("check");
-                            String _name_81 = inputVal_1.getName();
-                            _builder.append(_name_81, "\t\t\t\t");
+                            String _name_87 = inputVal_1.getName();
+                            _builder.append(_name_87, "\t\t\t\t");
                             _builder.append("[");
                             EList<String> _valores_12 = ((InputCheck) inputVal_1).getValores();
                             int _indexOf_6 = _valores_12.indexOf(valor_3);
@@ -1297,8 +1375,8 @@ public class FormularioGenerator implements IGenerator {
                             _builder.append("\t\t");
                             _builder.append("\t\t");
                             _builder.append("check");
-                            String _name_82 = inputVal_1.getName();
-                            _builder.append(_name_82, "\t\t\t\t");
+                            String _name_88 = inputVal_1.getName();
+                            _builder.append(_name_88, "\t\t\t\t");
                             _builder.append("[");
                             EList<String> _valores_13 = ((InputCheck) inputVal_1).getValores();
                             int _indexOf_7 = _valores_13.indexOf(valor_3);
@@ -1308,8 +1386,8 @@ public class FormularioGenerator implements IGenerator {
                             _builder.append("\t\t");
                             _builder.append("\t\t");
                             _builder.append("check");
-                            String _name_83 = inputVal_1.getName();
-                            _builder.append(_name_83, "\t\t\t\t");
+                            String _name_89 = inputVal_1.getName();
+                            _builder.append(_name_89, "\t\t\t\t");
                             _builder.append("[");
                             EList<String> _valores_14 = ((InputCheck) inputVal_1).getValores();
                             int _indexOf_8 = _valores_14.indexOf(valor_3);
@@ -1323,22 +1401,22 @@ public class FormularioGenerator implements IGenerator {
                           _builder.append("\t\t");
                           _builder.append("\t\t");
                           _builder.append("combo");
-                          String _name_84 = inputVal_1.getName();
-                          _builder.append(_name_84, "\t\t\t\t");
+                          String _name_90 = inputVal_1.getName();
+                          _builder.append(_name_90, "\t\t\t\t");
                           _builder.append(".deselect(0);");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
                           _builder.append("\t\t");
                           _builder.append("combo");
-                          String _name_85 = inputVal_1.getName();
-                          _builder.append(_name_85, "\t\t\t\t");
+                          String _name_91 = inputVal_1.getName();
+                          _builder.append(_name_91, "\t\t\t\t");
                           _builder.append(".setVisible(true);");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
                           _builder.append("\t\t");
                           _builder.append("combo");
-                          String _name_86 = inputVal_1.getName();
-                          _builder.append(_name_86, "\t\t\t\t");
+                          String _name_92 = inputVal_1.getName();
+                          _builder.append(_name_92, "\t\t\t\t");
                           _builder.append(".setEnabled(true);");
                           _builder.newLineIfNotEmpty();
                         } else {
@@ -1349,8 +1427,8 @@ public class FormularioGenerator implements IGenerator {
                                 _builder.append("\t\t");
                                 _builder.append("\t\t");
                                 _builder.append("radio");
-                                String _name_87 = inputVal_1.getName();
-                                _builder.append(_name_87, "\t\t\t\t");
+                                String _name_93 = inputVal_1.getName();
+                                _builder.append(_name_93, "\t\t\t\t");
                                 _builder.append("[");
                                 EList<String> _valores_16 = ((InputRadio) inputVal_1).getValores();
                                 int _indexOf_9 = _valores_16.indexOf(valor_4);
@@ -1360,8 +1438,8 @@ public class FormularioGenerator implements IGenerator {
                                 _builder.append("\t\t");
                                 _builder.append("\t\t");
                                 _builder.append("radio");
-                                String _name_88 = inputVal_1.getName();
-                                _builder.append(_name_88, "\t\t\t\t");
+                                String _name_94 = inputVal_1.getName();
+                                _builder.append(_name_94, "\t\t\t\t");
                                 _builder.append("[");
                                 EList<String> _valores_17 = ((InputRadio) inputVal_1).getValores();
                                 int _indexOf_10 = _valores_17.indexOf(valor_4);
@@ -1371,8 +1449,8 @@ public class FormularioGenerator implements IGenerator {
                                 _builder.append("\t\t");
                                 _builder.append("\t\t");
                                 _builder.append("radio");
-                                String _name_89 = inputVal_1.getName();
-                                _builder.append(_name_89, "\t\t\t\t");
+                                String _name_95 = inputVal_1.getName();
+                                _builder.append(_name_95, "\t\t\t\t");
                                 _builder.append("[");
                                 EList<String> _valores_18 = ((InputRadio) inputVal_1).getValores();
                                 int _indexOf_11 = _valores_18.indexOf(valor_4);
@@ -1411,13 +1489,13 @@ public class FormularioGenerator implements IGenerator {
               _builder.newLine();
               _builder.append("\t\t");
             } else {
-              if ((input_2 instanceof BotonGuardar)) {
+              if ((input_3 instanceof BotonGuardar)) {
                 _builder.append(" // Caso Guardar");
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t");
                 _builder.append("boton");
-                String _name_90 = input_2.getName();
-                _builder.append(_name_90, "\t\t");
+                String _name_96 = input_3.getName();
+                _builder.append(_name_96, "\t\t");
                 _builder.append(".addSelectionListener(new SelectionListener() {");
                 _builder.newLineIfNotEmpty();
                 _builder.append("\t\t");
@@ -1444,50 +1522,15 @@ public class FormularioGenerator implements IGenerator {
                 _builder.newLine();
                 _builder.append("\t\t");
                 _builder.append("\t    ");
-                _builder.append("dialog.setFilterExtensions(new String[] { \"*.formulario\", \"*.*\" }); // Windows");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("\t                                    ");
-                _builder.append("// wild");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("\t                                    ");
-                _builder.append("// cards");
+                _builder.append("dialog.setFilterExtensions(new String[] { \"*.formulario\", \"*.*\" });");
                 _builder.newLine();
                 _builder.append("\t\t");
                 _builder.append("\t    ");
-                _builder.append("dialog.setFilterPath(\"c:\\\\\"); // Windows path");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("\t    ");
-                _builder.append("dialog.setFileName(\"form.formulario\");");
+                _builder.append("dialog.setFileName(\"formulario.txt\");");
                 _builder.newLine();
                 _builder.append("\t\t");
                 _builder.append("\t    ");
                 _builder.append("String filename = dialog.open(); ");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("\t    ");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("\t    ");
-                _builder.append("while (!shell.isDisposed()) {");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("        ");
-                _builder.append("if (!display.readAndDispatch())");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("\t        ");
-                _builder.append("display.sleep();");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("\t    ");
-                _builder.append("}");
-                _builder.newLine();
-                _builder.append("\t\t");
-                _builder.append("\t    ");
-                _builder.append("display.dispose();");
                 _builder.newLine();
                 _builder.append("\t\t");
                 _builder.append("\t    ");
@@ -1509,19 +1552,19 @@ public class FormularioGenerator implements IGenerator {
                 _builder.append("writer = new FileWriter(filename); ");
                 _builder.newLine();
                 {
-                  Layout _layout_6 = form.getLayout();
-                  EList<Input> _entradas_5 = _layout_6.getEntradas();
-                  for(final Input inputVal_2 : _entradas_5) {
+                  Layout _layout_7 = form.getLayout();
+                  EList<Input> _entradas_6 = _layout_7.getEntradas();
+                  for(final Input inputVal_2 : _entradas_6) {
                     {
                       if ((inputVal_2 instanceof InputTexto)) {
                         _builder.append("\t\t");
                         _builder.append("\t\t\t");
-                        _builder.append("writer.write(texto");
-                        String _name_91 = ((InputTexto)inputVal_2).getName();
-                        _builder.append(_name_91, "\t\t\t\t\t");
-                        _builder.append(" + \": \" + texto");
-                        String _name_92 = ((InputTexto)inputVal_2).getName();
-                        _builder.append(_name_92, "\t\t\t\t\t");
+                        _builder.append("writer.write(\"texto");
+                        String _name_97 = ((InputTexto)inputVal_2).getName();
+                        _builder.append(_name_97, "\t\t\t\t\t");
+                        _builder.append(": \" + texto");
+                        String _name_98 = ((InputTexto)inputVal_2).getName();
+                        _builder.append(_name_98, "\t\t\t\t\t");
                         _builder.append(".getText() + \"\\n\"); ");
                         _builder.newLineIfNotEmpty();
                       } else {
@@ -1529,15 +1572,15 @@ public class FormularioGenerator implements IGenerator {
                           _builder.append("\t\t");
                           _builder.append("\t\t\t");
                           _builder.append("String valoresRadio");
-                          String _name_93 = inputVal_2.getName();
-                          _builder.append(_name_93, "\t\t\t\t\t");
+                          String _name_99 = inputVal_2.getName();
+                          _builder.append(_name_99, "\t\t\t\t\t");
                           _builder.append(" = \"\";");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
                           _builder.append("\t\t\t");
                           _builder.append("for(Button btnRadio : radio");
-                          String _name_94 = inputVal_2.getName();
-                          _builder.append(_name_94, "\t\t\t\t\t");
+                          String _name_100 = inputVal_2.getName();
+                          _builder.append(_name_100, "\t\t\t\t\t");
                           _builder.append("){");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
@@ -1549,16 +1592,16 @@ public class FormularioGenerator implements IGenerator {
                           _builder.append("\t\t\t");
                           _builder.append("\t\t");
                           _builder.append("valoresRadio");
-                          String _name_95 = inputVal_2.getName();
-                          _builder.append(_name_95, "\t\t\t\t\t\t\t");
+                          String _name_101 = inputVal_2.getName();
+                          _builder.append(_name_101, "\t\t\t\t\t\t\t");
                           _builder.append(" += btnRadio.getText();");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
                           _builder.append("\t\t\t");
                           _builder.append("\t\t");
                           _builder.append("valoresRadio");
-                          String _name_96 = inputVal_2.getName();
-                          _builder.append(_name_96, "\t\t\t\t\t\t\t");
+                          String _name_102 = inputVal_2.getName();
+                          _builder.append(_name_102, "\t\t\t\t\t\t\t");
                           _builder.append(" += \" \";");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
@@ -1572,24 +1615,24 @@ public class FormularioGenerator implements IGenerator {
                           _builder.newLine();
                           _builder.append("\t\t");
                           _builder.append("\t\t\t");
-                          _builder.append("writer.write(radio");
-                          String _name_97 = inputVal_2.getName();
-                          _builder.append(_name_97, "\t\t\t\t\t");
-                          _builder.append(" + \": \" + valoresRadio");
-                          String _name_98 = inputVal_2.getName();
-                          _builder.append(_name_98, "\t\t\t\t\t");
+                          _builder.append("writer.write(\"radio");
+                          String _name_103 = inputVal_2.getName();
+                          _builder.append(_name_103, "\t\t\t\t\t");
+                          _builder.append(": \" + valoresRadio");
+                          String _name_104 = inputVal_2.getName();
+                          _builder.append(_name_104, "\t\t\t\t\t");
                           _builder.append(" + \"\\n\"); ");
                           _builder.newLineIfNotEmpty();
                         } else {
                           if ((inputVal_2 instanceof InputCombo)) {
                             _builder.append("\t\t");
                             _builder.append("\t\t\t");
-                            _builder.append("writer.write(combo");
-                            String _name_99 = inputVal_2.getName();
-                            _builder.append(_name_99, "\t\t\t\t\t");
-                            _builder.append(" + \": \" + combo");
-                            String _name_100 = inputVal_2.getName();
-                            _builder.append(_name_100, "\t\t\t\t\t");
+                            _builder.append("writer.write(\"combo");
+                            String _name_105 = inputVal_2.getName();
+                            _builder.append(_name_105, "\t\t\t\t\t");
+                            _builder.append(": \" + combo");
+                            String _name_106 = inputVal_2.getName();
+                            _builder.append(_name_106, "\t\t\t\t\t");
                             _builder.append(".getText() + \"\\n\"); ");
                             _builder.newLineIfNotEmpty();
                           } else {
@@ -1597,15 +1640,15 @@ public class FormularioGenerator implements IGenerator {
                               _builder.append("\t\t");
                               _builder.append("\t\t\t");
                               _builder.append("String valoresCheck");
-                              String _name_101 = inputVal_2.getName();
-                              _builder.append(_name_101, "\t\t\t\t\t");
+                              String _name_107 = inputVal_2.getName();
+                              _builder.append(_name_107, "\t\t\t\t\t");
                               _builder.append("= \"\";");
                               _builder.newLineIfNotEmpty();
                               _builder.append("\t\t");
                               _builder.append("\t\t\t");
                               _builder.append("for(Button btnCheck : check");
-                              String _name_102 = inputVal_2.getName();
-                              _builder.append(_name_102, "\t\t\t\t\t");
+                              String _name_108 = inputVal_2.getName();
+                              _builder.append(_name_108, "\t\t\t\t\t");
                               _builder.append("){");
                               _builder.newLineIfNotEmpty();
                               _builder.append("\t\t");
@@ -1617,16 +1660,16 @@ public class FormularioGenerator implements IGenerator {
                               _builder.append("\t\t\t");
                               _builder.append("\t\t");
                               _builder.append("valoresCheck");
-                              String _name_103 = inputVal_2.getName();
-                              _builder.append(_name_103, "\t\t\t\t\t\t\t");
+                              String _name_109 = inputVal_2.getName();
+                              _builder.append(_name_109, "\t\t\t\t\t\t\t");
                               _builder.append(" += btnCheck.getText();");
                               _builder.newLineIfNotEmpty();
                               _builder.append("\t\t");
                               _builder.append("\t\t\t");
                               _builder.append("\t\t");
                               _builder.append("valoresCheck");
-                              String _name_104 = inputVal_2.getName();
-                              _builder.append(_name_104, "\t\t\t\t\t\t\t");
+                              String _name_110 = inputVal_2.getName();
+                              _builder.append(_name_110, "\t\t\t\t\t\t\t");
                               _builder.append(" += \" \";");
                               _builder.newLineIfNotEmpty();
                               _builder.append("\t\t");
@@ -1640,12 +1683,12 @@ public class FormularioGenerator implements IGenerator {
                               _builder.newLine();
                               _builder.append("\t\t");
                               _builder.append("\t\t\t");
-                              _builder.append("writer.write(check");
-                              String _name_105 = inputVal_2.getName();
-                              _builder.append(_name_105, "\t\t\t\t\t");
-                              _builder.append(" + \": \" + valoresCheck");
-                              String _name_106 = inputVal_2.getName();
-                              _builder.append(_name_106, "\t\t\t\t\t");
+                              _builder.append("writer.write(\"check");
+                              String _name_111 = inputVal_2.getName();
+                              _builder.append(_name_111, "\t\t\t\t\t");
+                              _builder.append(": \" + valoresCheck");
+                              String _name_112 = inputVal_2.getName();
+                              _builder.append(_name_112, "\t\t\t\t\t");
                               _builder.append(" + \"\\n\"); ");
                               _builder.newLineIfNotEmpty();
                             }
@@ -1655,10 +1698,6 @@ public class FormularioGenerator implements IGenerator {
                     }
                   }
                 }
-                _builder.append("\t\t");
-                _builder.append("\t\t\t");
-                _builder.append("writer.write(\"This\\n is\\n an\\n example\\n\"); ");
-                _builder.newLine();
                 _builder.append("\t\t");
                 _builder.append("\t\t");
                 _builder.append("} ");
@@ -2538,6 +2577,102 @@ public class FormularioGenerator implements IGenerator {
             }
           }
         }
+        _builder.append("\t\t");
+        _builder.newLine();
+        {
+          Asercion _asercion_68 = accion.getAsercion();
+          Input _elemento_76 = _asercion_68.getElemento();
+          if ((_elemento_76 instanceof InputBoton)) {
+            _builder.append("\t\t");
+            _builder.append("boton");
+            Asercion _asercion_69 = accion.getAsercion();
+            Input _elemento_77 = _asercion_69.getElemento();
+            String _name_42 = _elemento_77.getName();
+            _builder.append(_name_42, "\t\t");
+            _builder.append(".deselect();");
+            _builder.newLineIfNotEmpty();
+          } else {
+            Asercion _asercion_70 = accion.getAsercion();
+            Input _elemento_78 = _asercion_70.getElemento();
+            if ((_elemento_78 instanceof InputTexto)) {
+              _builder.append("\t\t");
+              _builder.append("texto");
+              Asercion _asercion_71 = accion.getAsercion();
+              Input _elemento_79 = _asercion_71.getElemento();
+              String _name_43 = _elemento_79.getName();
+              _builder.append(_name_43, "\t\t");
+              _builder.append(".setText(\"\");");
+              _builder.newLineIfNotEmpty();
+            } else {
+              Asercion _asercion_72 = accion.getAsercion();
+              Input _elemento_80 = _asercion_72.getElemento();
+              if ((_elemento_80 instanceof InputCombo)) {
+                _builder.append("\t\t");
+                _builder.append("combo");
+                Asercion _asercion_73 = accion.getAsercion();
+                Input _elemento_81 = _asercion_73.getElemento();
+                String _name_44 = _elemento_81.getName();
+                _builder.append(_name_44, "\t\t");
+                _builder.append(".setSelection(0);");
+                _builder.newLineIfNotEmpty();
+              } else {
+                Asercion _asercion_74 = accion.getAsercion();
+                Input _elemento_82 = _asercion_74.getElemento();
+                if ((_elemento_82 instanceof InputRadio)) {
+                  {
+                    Asercion _asercion_75 = accion.getAsercion();
+                    Input _elemento_83 = _asercion_75.getElemento();
+                    EList<String> _valores_22 = ((InputRadio) _elemento_83).getValores();
+                    for(final String valor_10 : _valores_22) {
+                      _builder.append("\t\t");
+                      _builder.append("radio");
+                      Asercion _asercion_76 = accion.getAsercion();
+                      Input _elemento_84 = _asercion_76.getElemento();
+                      String _name_45 = _elemento_84.getName();
+                      _builder.append(_name_45, "\t\t");
+                      _builder.append("[");
+                      Asercion _asercion_77 = accion.getAsercion();
+                      Input _elemento_85 = _asercion_77.getElemento();
+                      EList<String> _valores_23 = ((InputRadio) _elemento_85).getValores();
+                      int _indexOf_10 = _valores_23.indexOf(valor_10);
+                      _builder.append(_indexOf_10, "\t\t");
+                      _builder.append("].isEnabled());");
+                      _builder.newLineIfNotEmpty();
+                    }
+                  }
+                } else {
+                  Asercion _asercion_78 = accion.getAsercion();
+                  Input _elemento_86 = _asercion_78.getElemento();
+                  if ((_elemento_86 instanceof InputCheck)) {
+                    {
+                      Asercion _asercion_79 = accion.getAsercion();
+                      Input _elemento_87 = _asercion_79.getElemento();
+                      EList<String> _valores_24 = ((InputCheck) _elemento_87).getValores();
+                      for(final String valor_11 : _valores_24) {
+                        _builder.append("\t\t");
+                        _builder.append("assertFalse(check");
+                        Asercion _asercion_80 = accion.getAsercion();
+                        Input _elemento_88 = _asercion_80.getElemento();
+                        String _name_46 = _elemento_88.getName();
+                        _builder.append(_name_46, "\t\t");
+                        _builder.append("[");
+                        Asercion _asercion_81 = accion.getAsercion();
+                        Input _elemento_89 = _asercion_81.getElemento();
+                        EList<String> _valores_25 = ((InputCheck) _elemento_89).getValores();
+                        int _indexOf_11 = _valores_25.indexOf(valor_11);
+                        _builder.append(_indexOf_11, "\t\t");
+                        _builder.append("].isEnabled());");
+                        _builder.newLineIfNotEmpty();
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        _builder.append("\t\t");
+        _builder.newLine();
       }
     }
     _builder.newLine();
