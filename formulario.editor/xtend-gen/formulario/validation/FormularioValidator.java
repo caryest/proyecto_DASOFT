@@ -268,4 +268,21 @@ public class FormularioValidator extends AbstractFormularioValidator {
         "ElementoNoVisualizable");
     }
   }
+  
+  @Check
+  public void comprobarNombreUnicoInput(final Input input) {
+    EObject _eContainer = input.eContainer();
+    Layout lo = ((Layout) _eContainer);
+    EList<Input> _entradas = lo.getEntradas();
+    for (final Input input2 : _entradas) {
+      String _name = input.getName();
+      String _name_1 = input2.getName();
+      boolean _equals = Objects.equal(_name, _name_1);
+      if (_equals) {
+        this.warning("Dos input no pueden tener el mismo nombre", 
+          Formularios_DASOFTPackage.Literals.INPUT__NAME, 
+          "NombreNoUnico");
+      }
+    }
+  }
 }

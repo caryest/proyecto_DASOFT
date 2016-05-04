@@ -7,11 +7,10 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 Formulario returns Formulario:
 	(comprobacionCampos?='comprobacionCampos')?
 	(comprobacionAccion?='comprobacionAccion')?
-	'Formulario'
-	name=EString
+	'Formulario' name=EString
 	'{'
-		'layout' layout=Layout
-		('pruebas' pruebas=PruebaInterfaz)?
+		layout=Layout
+		(pruebas=PruebaInterfaz)?
 	'}';
 
 
@@ -40,11 +39,10 @@ EString returns ecore::EString:
 
 PruebaInterfaz returns PruebaInterfaz:
 	{PruebaInterfaz}
-	'PruebaInterfaz'
+	'PruebaInterfaz:'
 	name=EString
-	'{'
 		('acciones' '{' acciones+=Accion ( "," acciones+=Accion)* '}' )?
-	'}';
+	;
 
 EBoolean returns ecore::EBoolean:
 	'true' | 'false';
@@ -57,7 +55,7 @@ InputTexto returns InputTexto:
 	(invisible?='invisible')?
 	(deshabilitado?='deshabilitado')?
 	(obligatorio?='obligatorio')?
-	'InputTexto'
+	'Input Texto'
 	name=EString
 	'{'
 		('valor' valor=EString)?
@@ -66,7 +64,7 @@ InputTexto returns InputTexto:
 InputRadio returns InputRadio:
 	(invisible?='invisible')?
 	(deshabilitado?='deshabilitado')?
-	'InputRadio'
+	'Radio'
 	name=EString
 	'{'
 		('valores' '{' valores+=EString ( "," valores+=EString)* '}' )?
@@ -78,7 +76,7 @@ InputCombo returns InputCombo:
 	{InputCombo}
 	(invisible?='invisible')?
 	(deshabilitado?='deshabilitado')?
-	'InputCombo'
+	'Combo'
 	name=EString
 	'{'
 		('valores' '{' valores+=EString ( "," valores+=EString)* '}' )?
@@ -88,7 +86,7 @@ InputCombo returns InputCombo:
 InputCheck returns InputCheck:
 	(invisible?='invisible')?
 	(deshabilitado?='deshabilitado')?
-	'InputCheck'
+	'Check'
 	name=EString
 	'{'
 		('valores' '{' valores+=EString ( "," valores+=EString)* '}' )?
@@ -98,63 +96,38 @@ InputCheck returns InputCheck:
 
 BotonValidar returns BotonValidar:
 	{BotonValidar}
-	(invisible?='invisible')?
-	(deshabilitado?='deshabilitado')?
-	'BotonValidar'
-	name=EString;
+	'BotonValidar'	name=EString (invisible?='invisible')? (deshabilitado?='deshabilitado')?;
 
 BotonGuardar_Impl returns BotonGuardar:
 	{BotonGuardar}
-	(invisible?='invisible')?
-	(deshabilitado?='deshabilitado')?
-	'BotonGuardar'
-	name=EString;
+	'BotonGuardar' name=EString (invisible?='invisible')? (deshabilitado?='deshabilitado')?;
 
 BotonCancelar returns BotonCancelar:
 	{BotonCancelar}
-	(invisible?='invisible')?
-	(deshabilitado?='deshabilitado')?
-	'BotonCancelar'
-	name=EString;
+	'BotonCancelar'	name=EString (invisible?='invisible')? (deshabilitado?='deshabilitado')?;
 
 BotonCustom returns BotonCustom:
-	(invisible?='invisible')?
-	(deshabilitado?='deshabilitado')?
-	'BotonCustom'
-	name=EString
-	'{'
-		'funcion' funcion=EString
+	
+	'BotonCustom'name=EString (invisible?='invisible')? (deshabilitado?='deshabilitado')?
+	'funcion{'
+		funcion=EString
 	'}';
 
 ReaccionVisible returns ReaccionVisible:
-	'ReaccionVisible'
-	'{'
-		'activacion' activacion=EInt
-		'objetivo' objetivo=[Input|EString]
-	'}';
+	'Reaccion Visible:' activacion=EInt '->' objetivo=[Input|EString]
+	;
 
 ReaccionHabilitado returns ReaccionHabilitado:
-	'ReaccionHabilitado'
-	'{'
-		'activacion' activacion=EInt
-		'objetivo' objetivo=[Input|EString]
-	'}';
+	'Reaccion Deshabilitado:' activacion=EInt '->' objetivo=[Input|EString]
+	;
 
 AccionValor returns AccionValor:
-	'AccionValor'
-	'{'
-		'valor' valor=EString
-		'elemento' elemento=[Input|EString]
-		'asercion' asercion=Asercion
-	'}';
+	'Accion para Texto' valor=EString ':' elemento=[Input|EString] '->' asercion=Asercion
+	;
 
 AccionSeleccion returns AccionSeleccion:
-	'AccionSeleccion'
-	'{'
-		'valor' valor=EInt
-		'elemento' elemento=[Input|EString]
-		'asercion' asercion=Asercion
-	'}';
+	'Accion para Seleccion' elemento=[Input|EString]':' valor=EInt '->' asercion=Asercion
+	;
 
 AccionPulsacion returns AccionPulsacion:
 	'AccionPulsacion'
@@ -165,28 +138,17 @@ AccionPulsacion returns AccionPulsacion:
 
 AsercionInvisible returns AsercionInvisible:
 	(estado?='estado')?
-	'AsercionInvisible'
-	'{'
-		'elemento' elemento=[Input|EString]
-	'}';
+	'AsercionInvisible' elemento=[Input|EString]
+	;
 
 AsercionHabilitado returns AsercionHabilitado:
 	(estado?='estado')?
-	'AsercionHabilitado'
-	'{'
-		'elemento' elemento=[Input|EString]
-	'}';
+	'AsercionHabilitado' elemento=[Input|EString]
+	;
 
 AsercionValor returns AsercionValor:
-	'AsercionValor'
-	'{'
-		'valor' valor=EString
-		'elemento' elemento=[Input|EString]
+	'AsercionValor''('valor=EString', ' elemento=[Input|EString]')'
 	'}';
 
 AsercionSeleccion returns AsercionSeleccion:
-	'AsercionSeleccion'
-	'{'
-		'estado' estado=EInt
-		'elemento' elemento=[Input|EString]
-	'}';
+	'AsercionSeleccion''(' estado=EInt ', ' elemento=[Input|EString]')';

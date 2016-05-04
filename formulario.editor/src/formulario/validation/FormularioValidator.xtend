@@ -194,5 +194,17 @@ class FormularioValidator extends AbstractFormularioValidator {
 						'ElementoNoVisualizable');
 		}
 	}
+	
+	@Check
+	def comprobarNombreUnicoInput(Input input){
+		var lo = input.eContainer as Layout;
+		
+		for(input2 : lo.entradas)
+			if (input.name == input2.name)
+				warning('Dos input no pueden tener el mismo nombre',
+						Formularios_DASOFTPackage.Literals.INPUT__NAME,
+						'NombreNoUnico');
+		
+	}
 
 }
