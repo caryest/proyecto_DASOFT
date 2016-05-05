@@ -20,6 +20,7 @@ import Formularios_DASOFT.Layout
 import Formularios_DASOFT.InputReaccion
 import Formularios_DASOFT.ReaccionHabilitado
 import Formularios_DASOFT.ReaccionVisible
+import Formularios_DASOFT.AsercionSeleccion
 
 //import org.eclipse.xtext.validation.Check
 
@@ -205,6 +206,24 @@ class FormularioValidator extends AbstractFormularioValidator {
 						Formularios_DASOFTPackage.Literals.INPUT__NAME,
 						'NombreNoUnico');
 		
+	}
+	
+	@Check
+	def comprobarInputAsercionMultiple(AsercionSeleccion asercion){
+		if(!(asercion.elemento instanceof InputMultiple)){
+			error('Este tipo de aserción no puede tener este tipo de input.',
+						Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO,
+						'ElementoNoMultiple');
+		}
+	}
+	
+	@Check
+	def comprobarEspaciosInput(Input input){
+		if(input.name.contains(" ")){
+			error('Un input no puede tener espacios en su nombre.',
+						Formularios_DASOFTPackage.Literals.INPUT__NAME,
+						'NoEspaciosEnNombre');
+		}
 	}
 
 }

@@ -8,6 +8,7 @@ import Formularios_DASOFT.AccionPulsacion;
 import Formularios_DASOFT.AccionSeleccion;
 import Formularios_DASOFT.AccionValor;
 import Formularios_DASOFT.Asercion;
+import Formularios_DASOFT.AsercionSeleccion;
 import Formularios_DASOFT.Formulario;
 import Formularios_DASOFT.Formularios_DASOFTPackage;
 import Formularios_DASOFT.Input;
@@ -307,6 +308,28 @@ public class FormularioValidator extends AbstractFormularioValidator {
           Formularios_DASOFTPackage.Literals.INPUT__NAME, 
           "NombreNoUnico");
       }
+    }
+  }
+  
+  @Check
+  public void comprobarInputAsercionMultiple(final AsercionSeleccion asercion) {
+    Input _elemento = asercion.getElemento();
+    boolean _not = (!(_elemento instanceof InputMultiple));
+    if (_not) {
+      this.error("Este tipo de aserción no puede tener este tipo de input.", 
+        Formularios_DASOFTPackage.Literals.ASERCION__ELEMENTO, 
+        "ElementoNoMultiple");
+    }
+  }
+  
+  @Check
+  public void comprobarEspaciosInput(final Input input) {
+    String _name = input.getName();
+    boolean _contains = _name.contains(" ");
+    if (_contains) {
+      this.error("Un input no puede tener espacios en su nombre.", 
+        Formularios_DASOFTPackage.Literals.INPUT__NAME, 
+        "NoEspaciosEnNombre");
     }
   }
 }

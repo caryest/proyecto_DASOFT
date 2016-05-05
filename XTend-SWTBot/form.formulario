@@ -22,6 +22,6 @@ Formulario Pruebas
 	{
 		Accion para Seleccion Estado_Civil: 1 -> Asercion invisible falso -> Nombre,
 		Accion para Texto Pepe: Apellido -> Asercion deshabilitado falso -> Edad,
-		Accion para Boton Cancelar -> Asercion seleccion 2 -> Estado_Civil
+		Accion para Boton Cancelar -> Asercion valor '' -> Apellido
 	}
 }
