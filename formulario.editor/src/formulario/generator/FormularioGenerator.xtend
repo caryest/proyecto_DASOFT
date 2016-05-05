@@ -25,6 +25,7 @@ import Formularios_DASOFT.BotonValidar
 import Formularios_DASOFT.BotonCancelar
 import Formularios_DASOFT.BotonGuardar
 import Formularios_DASOFT.impl.InputCheckImpl
+import Formularios_DASOFT.BotonCustom
 
 /**
  * Generates code from your model files on save.
@@ -74,10 +75,13 @@ class FormularioGenerator implements IGenerator {
 			Label label«input.name»;
 			Text  texto«input.name»;
 			« ELSEIF input instanceof InputCheck »
+			Label label«input.name»;
 			Button[] check«input.name»;
 			« ELSEIF input instanceof InputRadio »
+			Label label«input.name»;
 			Button[] radio«input.name»;
 			« ELSEIF input instanceof InputCombo »
+			Label label«input.name»;
 			Combo combo«input.name»;
 			« ENDIF »
 			«ENDFOR»
@@ -103,10 +107,10 @@ class FormularioGenerator implements IGenerator {
 				« IF input instanceof InputBoton »// CASO BOTON
 				boton«input.name» = new Button(shell, SWT.BUTTON1);
 				boton«input.name».setText("«input.name»");
-				«IF input.deshabilitado == false»
+				«IF input.deshabilitado == true»
 				boton«input.name».setEnabled(false);
 				«ENDIF»
-				«IF input.invisible == false»
+				«IF input.invisible == true»
 				boton«input.name».setVisible(false);
 				«ENDIF»
 				« ELSEIF input instanceof InputTexto »// CASO TEXTO
@@ -121,10 +125,19 @@ class FormularioGenerator implements IGenerator {
 				«IF input.invisible == true»
 				texto«input.name».setVisible(false);
 				«ENDIF»
+				« IF (input as InputTexto).valor != null»
+				texto«input.name».setText("«(input as InputTexto).valor»");
+				«ENDIF»
 				« ELSEIF input instanceof InputCheck »// CASO CHECKBOX
-				Composite contentCheck«input.name» = new Composite(shell, SWT.BORDER);
-				contentCheck«input.name».setLayout(new GridLayout(1, true));
+				Composite contentCheckAll«input.name» = new Composite(shell, SWT.BORDER);
+				contentCheckAll«input.name».setLayout(new GridLayout(2, true));
+				
+				label«input.name» = new Label(contentCheckAll«input.name», SWT.NONE);
+				label«input.name».setText("«input.name»");
 				check«input.name» = new Button[«(input as InputCheck).valores.size»];
+				
+				Composite contentCheck«input.name» = new Composite(contentCheckAll«input.name», SWT.BORDER);
+				contentCheck«input.name».setLayout(new GridLayout(1, true));
 				
 				«FOR valor : (input as InputCheck).valores»
 				check«input.name»[«(input as InputCheck).valores.indexOf(valor)»] = new Button(contentCheck«input.name», SWT.CHECK);
@@ -135,15 +148,28 @@ class FormularioGenerator implements IGenerator {
 				«IF input.invisible == true»
 				check«input.name»[«(input as InputCheck).valores.indexOf(valor)»].setVisible(false);
 				«ENDIF»
+				« IF (input as InputCheck).seleccion.contains((input as InputCheck).valores.indexOf(valor)+1)»
+				check«input.name»[«(input as InputCheck).valores.indexOf(valor)»].setSelection(true);
+				«ENDIF»
 				«ENDFOR»
 				« ELSEIF input instanceof InputRadio »// CASO RADIO
-				Composite contentRadio«input.name» = new Composite(shell, SWT.BORDER);
-				contentRadio«input.name».setLayout(new GridLayout(1, true));
+				Composite contentRadioAll«input.name» = new Composite(shell, SWT.BORDER);
+				contentRadioAll«input.name».setLayout(new GridLayout(2, true));
+				
+				label«input.name» = new Label(contentRadioAll«input.name», SWT.NONE);
+				label«input.name».setText("«input.name»");
 				radio«input.name» = new Button[«(input as InputRadio).valores.size»];
+				
+				Composite contentRadio«input.name» = new Composite(contentRadioAll«input.name», SWT.BORDER);
+				contentRadio«input.name».setLayout(new GridLayout(1, true));
 
 				«FOR valor : (input as InputRadio).valores»
 				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»] = new Button(contentRadio«input.name», SWT.RADIO);
+				« IF (input as InputRadio).seleccion == (input as InputRadio).valores.indexOf(valor)+1»
+				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»].setSelection(true);
+				« ELSE »
 				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»].setSelection(false);
+				«ENDIF»
 				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»].setText("«valor»");
 				radio«input.name»[«(input as InputRadio).valores.indexOf(valor)»].setBounds(10, 5, 75, 30);
 				«IF input.deshabilitado == true»
@@ -154,8 +180,11 @@ class FormularioGenerator implements IGenerator {
 				«ENDIF»
 				«ENDFOR»
 				« ELSEIF input instanceof InputCombo » // CASO COMBO
-				combo«input.name» = new Combo(shell, SWT.SIMPLE);
-				combo«input.name».setText("«input.name»");
+				Composite contentCombo«input.name» = new Composite(shell, SWT.BORDER);
+				contentCombo«input.name».setLayout(new GridLayout(2, true));
+				label«input.name» = new Label(contentCombo«input.name», SWT.NONE);
+				label«input.name».setText("«input.name»");
+				combo«input.name» = new Combo(contentCombo«input.name», SWT.SIMPLE);
 				«IF input.deshabilitado == true»
 				combo«input.name».setEnabled(false);
 				«ENDIF»
@@ -165,6 +194,9 @@ class FormularioGenerator implements IGenerator {
 				«FOR valor : (input as InputCombo).valores»
 				combo«input.name».add("«valor»");
 				«ENDFOR»
+				« IF (input as InputCombo).seleccion != 0»
+				combo«input.name».select("«(input as InputCombo).seleccion»");
+				«ENDIF»
 				« ENDIF »
 				«ENDFOR»
 				
@@ -318,23 +350,15 @@ class FormularioGenerator implements IGenerator {
 						«FOR inputVal : form.layout.entradas»
 						« IF inputVal instanceof InputTexto»
 						texto«inputVal.name».setText("");
-						texto«inputVal.name».setVisible(true);
-						texto«inputVal.name».setEnabled(true);
 						« ELSEIF inputVal instanceof InputCheck »
 						«FOR valor : (inputVal as InputCheck).valores»
 						check«inputVal.name»[«(inputVal as InputCheck).valores.indexOf(valor)»].setSelection(false);
-						check«inputVal.name»[«(inputVal as InputCheck).valores.indexOf(valor)»].setVisible(true);
-						check«inputVal.name»[«(inputVal as InputCheck).valores.indexOf(valor)»].setEnabled(true);
 						«ENDFOR»
 						« ELSEIF inputVal instanceof InputCombo »
 						combo«inputVal.name».deselect(0);
-						combo«inputVal.name».setVisible(true);
-						combo«inputVal.name».setEnabled(true);
 						« ELSEIF inputVal instanceof InputRadio »
 						«FOR valor : (inputVal as InputRadio).valores»
 						radio«inputVal.name»[«(inputVal as InputRadio).valores.indexOf(valor)»].setSelection(false);
-						radio«inputVal.name»[«(inputVal as InputRadio).valores.indexOf(valor)»].setVisible(true);
-						radio«inputVal.name»[«(inputVal as InputRadio).valores.indexOf(valor)»].setEnabled(true);
 						«ENDFOR»
 						« ENDIF »
 						« ENDFOR »
@@ -362,7 +386,7 @@ class FormularioGenerator implements IGenerator {
 							writer = new FileWriter(filename); 
 							«FOR inputVal : form.layout.entradas»
 							«IF inputVal instanceof InputTexto»
-							writer.write("texto«inputVal.name»: " + texto«inputVal.name».getText() + "\n"); 
+							writer.write("«inputVal.name»: " + texto«inputVal.name».getText() + System.getProperty( "line.separator" )); 
 							«ELSEIF inputVal instanceof InputRadio»
 							String valoresRadio«inputVal.name» = "";
 							for(Button btnRadio : radio«inputVal.name»){
@@ -371,9 +395,9 @@ class FormularioGenerator implements IGenerator {
 									valoresRadio«inputVal.name» += " ";
 								}
 							}
-							writer.write("radio«inputVal.name»: " + valoresRadio«inputVal.name» + "\n"); 
+							writer.write("«inputVal.name»: " + valoresRadio«inputVal.name» + System.getProperty( "line.separator" )); 
 							«ELSEIF inputVal instanceof InputCombo»
-							writer.write("combo«inputVal.name»: " + combo«inputVal.name».getText() + "\n"); 
+							writer.write("«inputVal.name»: " + combo«inputVal.name».getText() + System.getProperty( "line.separator" )); 
 							«ELSEIF inputVal instanceof InputCheck»
 							String valoresCheck«inputVal.name»= "";
 							for(Button btnCheck : check«inputVal.name»){
@@ -382,7 +406,7 @@ class FormularioGenerator implements IGenerator {
 									valoresCheck«inputVal.name» += " ";
 								}
 							}
-							writer.write("check«inputVal.name»: " + valoresCheck«inputVal.name» + "\n"); 
+							writer.write("«inputVal.name»: " + valoresCheck«inputVal.name» + System.getProperty( "line.separator" )); 
 							«ENDIF»
 							«ENDFOR»
 						} 
@@ -397,6 +421,29 @@ class FormularioGenerator implements IGenerator {
 								writer.close();
 							} catch (Exception e) {} 
 						} 
+						
+					}
+					
+					@Override
+					public void widgetDefaultSelected(SelectionEvent arg0) {}
+				});
+				« ELSEIF input instanceof BotonCustom » // Caso Custom
+				boton«input.name».addSelectionListener(new SelectionListener() {
+					
+					@Override
+					public void widgetSelected(SelectionEvent arg0) {
+						
+						try
+						{
+						«(input as BotonCustom).funcion»
+						}catch(Exception e){
+							MessageBox dialog = new MessageBox(shell, SWT.ICON_ERROR | SWT.OK);
+							dialog.setText("Boton «input.name»");
+							dialog.setMessage(e.toString());
+							
+							// open dialog and await user selection
+							dialog.open();
+						}
 						
 					}
 					
@@ -479,6 +526,8 @@ class FormularioGenerator implements IGenerator {
 				
 				// Ahora codificamos los ASSERTS
 				
+				« IF form.pruebas != null»
+				« IF form.pruebas.acciones != null»
 				« FOR accion : form.pruebas.acciones »
 				« IF accion.elemento instanceof InputBoton »
 				boton«accion.elemento.name».click();
@@ -594,8 +643,9 @@ class FormularioGenerator implements IGenerator {
 				assertFalse(check«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputCheck).valores.indexOf(valor)»].isEnabled());
 				«ENDFOR»
 				« ENDIF »
-				
 				« ENDFOR »
+				« ENDIF »
+				« ENDIF »
 		
 				display.dispose();
 				shell.dispose();		 

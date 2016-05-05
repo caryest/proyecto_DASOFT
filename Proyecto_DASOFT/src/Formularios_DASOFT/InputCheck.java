@@ -32,7 +32,7 @@ public interface InputCheck extends InputReaccion {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Seleccion</em>' attribute list.
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInputCheck_Seleccion()
-	 * @model
+	 * @model default="0"
 	 * @generated
 	 */
 	EList<Integer> getSeleccion();

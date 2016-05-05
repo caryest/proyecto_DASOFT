@@ -52,6 +52,7 @@ public interface Input extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Invisible</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Invisible</em>' attribute isn't clear,
@@ -61,7 +62,7 @@ public interface Input extends EObject {
 	 * @return the value of the '<em>Invisible</em>' attribute.
 	 * @see #setInvisible(boolean)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInput_Invisible()
-	 * @model
+	 * @model default="false"
 	 * @generated
 	 */
 	boolean isInvisible();
@@ -78,6 +79,7 @@ public interface Input extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Deshabilitado</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Deshabilitado</em>' attribute isn't clear,
@@ -87,7 +89,7 @@ public interface Input extends EObject {
 	 * @return the value of the '<em>Deshabilitado</em>' attribute.
 	 * @see #setDeshabilitado(boolean)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInput_Deshabilitado()
-	 * @model
+	 * @model default="false"
 	 * @generated
 	 */
 	boolean isDeshabilitado();

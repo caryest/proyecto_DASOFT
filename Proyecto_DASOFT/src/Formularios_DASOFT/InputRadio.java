@@ -22,6 +22,7 @@ package Formularios_DASOFT;
 public interface InputRadio extends InputReaccion {
 	/**
 	 * Returns the value of the '<em><b>Seleccion</b></em>' attribute.
+	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Seleccion</em>' attribute isn't clear,
@@ -31,7 +32,7 @@ public interface InputRadio extends InputReaccion {
 	 * @return the value of the '<em>Seleccion</em>' attribute.
 	 * @see #setSeleccion(int)
 	 * @see Formularios_DASOFT.Formularios_DASOFTPackage#getInputRadio_Seleccion()
-	 * @model
+	 * @model default="0"
 	 * @generated
 	 */
 	int getSeleccion();

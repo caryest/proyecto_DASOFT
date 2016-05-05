@@ -1,79 +1,25 @@
-Formulario Prueba2
+Formulario Pruebas
 {
-	layout Layout
-	{
+	Layout {
 		columnas 2
-		entradas
-		{
-			obligatorio
-			InputTexto texto1
-			{
-				valor Pepe
-			},
-			InputRadio radio1
-			{
-				valores{ 
-					val1, val2, val3
-				}
-				seleccion 2
-				reaccion ReaccionHabilitado
-				{
-					activacion 1
-					objetivo texto1
-				}
-			},
-			InputCombo combo1
-			{
-				valores{ 
-					val1, val2
-				}
-				seleccion 1
-			},
-			deshabilitado InputCheck check1
-			{
-				valores{ 
-					val1, val2
-				}
-				seleccion{ 
-					1,2
-				}
-				reaccion ReaccionVisible
-				{
-					activacion 1
-					objetivo texto1
-				}
-			},
-			BotonValidar validar,
-			BotonCancelar cancelar,
-			BotonGuardar guardar
-			
-		}
-	}
-	pruebas PruebaInterfaz prueba1
-	{
-		acciones{
-			AccionSeleccion{
-				valor 1
-				elemento radio1
-				asercion AsercionHabilitado // Aqui esta a estado a "false" (comprobar deshabilitado)
-				{
-					elemento texto1
-				}
-			},
-			AccionSeleccion{
-				valor 1
-				elemento check1
-				asercion AsercionInvisible // Aqui es estado a "false" (comprobar invisible)
-				{
-					elemento texto1
-				}
-			}, AccionPulsacion{
-				elemento cancelar
-				asercion estado AsercionInvisible
-				{
-					elemento check1
-				}
+		entradas [
+			Input Texto invisible Nombre ,
+			Input Texto obligatorio Apellido ,
+			Combo Edad: {'0-18','19-64','+65'},
+			Radio Estado_Civil: {'Soltero', 'Casado', 'Viudo'} inicial 1 reaccion ,
+			Check Intereses: {'Peliculas', 'Deporte', 'Fotografia', 'Literatura'} iniciales {1,4},
+			BotonValidar Validar,
+			BotonCancelar Cancelar,
+			BotonGuardar Guardar,
+			BotonCustom Custom {
+				"int i = 1+1;
+				System.out.println(i);
+				"
 			}
-		}
+		]
+	}
+	PruebaInterfaz
+	{
+		Accion para Seleccion
 	}
 }

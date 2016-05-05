@@ -125,15 +125,15 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAccionPulsacionAccess().getElementoInputEStringParserRuleCall_3_0_1(), semanticObject.getElemento());
-		feeder.accept(grammarAccess.getAccionPulsacionAccess().getAsercionAsercionParserRuleCall_5_0(), semanticObject.getAsercion());
+		feeder.accept(grammarAccess.getAccionPulsacionAccess().getElementoInputEStringParserRuleCall_1_0_1(), semanticObject.getElemento());
+		feeder.accept(grammarAccess.getAccionPulsacionAccess().getAsercionAsercionParserRuleCall_3_0(), semanticObject.getAsercion());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (valor=EInt elemento=[Input|EString] asercion=Asercion)
+	 *     (elemento=[Input|EString] valor=EInt asercion=Asercion)
 	 */
 	protected void sequence_AccionSeleccion(EObject context, AccionSeleccion semanticObject) {
 		if(errorAcceptor != null) {
@@ -146,9 +146,9 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAccionSeleccionAccess().getElementoInputEStringParserRuleCall_1_0_1(), semanticObject.getElemento());
 		feeder.accept(grammarAccess.getAccionSeleccionAccess().getValorEIntParserRuleCall_3_0(), semanticObject.getValor());
-		feeder.accept(grammarAccess.getAccionSeleccionAccess().getElementoInputEStringParserRuleCall_5_0_1(), semanticObject.getElemento());
-		feeder.accept(grammarAccess.getAccionSeleccionAccess().getAsercionAsercionParserRuleCall_7_0(), semanticObject.getAsercion());
+		feeder.accept(grammarAccess.getAccionSeleccionAccess().getAsercionAsercionParserRuleCall_5_0(), semanticObject.getAsercion());
 		feeder.finish();
 	}
 	
@@ -168,16 +168,16 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAccionValorAccess().getValorEStringParserRuleCall_3_0(), semanticObject.getValor());
-		feeder.accept(grammarAccess.getAccionValorAccess().getElementoInputEStringParserRuleCall_5_0_1(), semanticObject.getElemento());
-		feeder.accept(grammarAccess.getAccionValorAccess().getAsercionAsercionParserRuleCall_7_0(), semanticObject.getAsercion());
+		feeder.accept(grammarAccess.getAccionValorAccess().getValorEStringParserRuleCall_1_0(), semanticObject.getValor());
+		feeder.accept(grammarAccess.getAccionValorAccess().getElementoInputEStringParserRuleCall_3_0_1(), semanticObject.getElemento());
+		feeder.accept(grammarAccess.getAccionValorAccess().getAsercionAsercionParserRuleCall_5_0(), semanticObject.getAsercion());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (estado?='estado'? elemento=[Input|EString])
+	 *     (estado?='falso'? elemento=[Input|EString])
 	 */
 	protected void sequence_AsercionHabilitado(EObject context, AsercionHabilitado semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -186,7 +186,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (estado?='estado'? elemento=[Input|EString])
+	 *     (estado?='falso'? elemento=[Input|EString])
 	 */
 	protected void sequence_AsercionInvisible(EObject context, AsercionInvisible semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -206,8 +206,8 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAsercionSeleccionAccess().getEstadoEIntParserRuleCall_3_0(), semanticObject.getEstado());
-		feeder.accept(grammarAccess.getAsercionSeleccionAccess().getElementoInputEStringParserRuleCall_5_0_1(), semanticObject.getElemento());
+		feeder.accept(grammarAccess.getAsercionSeleccionAccess().getEstadoEIntParserRuleCall_1_0(), semanticObject.getEstado());
+		feeder.accept(grammarAccess.getAsercionSeleccionAccess().getElementoInputEStringParserRuleCall_3_0_1(), semanticObject.getElemento());
 		feeder.finish();
 	}
 	
@@ -225,8 +225,8 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAsercionValorAccess().getValorEStringParserRuleCall_3_0(), semanticObject.getValor());
-		feeder.accept(grammarAccess.getAsercionValorAccess().getElementoInputEStringParserRuleCall_5_0_1(), semanticObject.getElemento());
+		feeder.accept(grammarAccess.getAsercionValorAccess().getValorEStringParserRuleCall_1_0(), semanticObject.getValor());
+		feeder.accept(grammarAccess.getAsercionValorAccess().getElementoInputEStringParserRuleCall_3_0_1(), semanticObject.getElemento());
 		feeder.finish();
 	}
 	
@@ -269,7 +269,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (comprobacionCampos?='comprobacionCampos'? comprobacionAccion?='comprobacionAccion'? name=EString layout=Layout pruebas=PruebaInterfaz?)
+	 *     (name=EString comprobacionCampos?='comprobacionCampos'? comprobacionAccion?='comprobacionAccion'? layout=Layout pruebas=PruebaInterfaz?)
 	 */
 	protected void sequence_Formulario(EObject context, Formulario semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -284,7 +284,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	 *         name=EString 
 	 *         (valores+=EString valores+=EString*)? 
 	 *         (seleccion+=EInt seleccion+=EInt*)? 
-	 *         reaccion=Reaccion
+	 *         reaccion=Reaccion?
 	 *     )
 	 */
 	protected void sequence_InputCheck(EObject context, InputCheck semanticObject) {
@@ -309,7 +309,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	 *         name=EString 
 	 *         (valores+=EString valores+=EString*)? 
 	 *         seleccion=EInt? 
-	 *         reaccion=Reaccion
+	 *         reaccion=Reaccion?
 	 *     )
 	 */
 	protected void sequence_InputRadio(EObject context, InputRadio semanticObject) {
@@ -319,7 +319,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (invisible?='invisible'? deshabilitado?='deshabilitado'? obligatorio?='obligatorio'? name=EString valor=EString?)
+	 *     (deshabilitado?='deshabilitado'? obligatorio?='obligatorio'? invisible?='invisible'? name=EString valor=EString?)
 	 */
 	protected void sequence_InputTexto(EObject context, InputTexto semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -337,7 +337,7 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 	
 	/**
 	 * Constraint:
-	 *     (name=EString (acciones+=Accion acciones+=Accion*)?)
+	 *     ((acciones+=Accion acciones+=Accion*)?)
 	 */
 	protected void sequence_PruebaInterfaz(EObject context, PruebaInterfaz semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -357,8 +357,8 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getReaccionHabilitadoAccess().getActivacionEIntParserRuleCall_3_0(), semanticObject.getActivacion());
-		feeder.accept(grammarAccess.getReaccionHabilitadoAccess().getObjetivoInputEStringParserRuleCall_5_0_1(), semanticObject.getObjetivo());
+		feeder.accept(grammarAccess.getReaccionHabilitadoAccess().getActivacionEIntParserRuleCall_1_0(), semanticObject.getActivacion());
+		feeder.accept(grammarAccess.getReaccionHabilitadoAccess().getObjetivoInputEStringParserRuleCall_3_0_1(), semanticObject.getObjetivo());
 		feeder.finish();
 	}
 	
@@ -376,8 +376,8 @@ public abstract class AbstractFormularioSemanticSequencer extends AbstractDelega
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getReaccionVisibleAccess().getActivacionEIntParserRuleCall_3_0(), semanticObject.getActivacion());
-		feeder.accept(grammarAccess.getReaccionVisibleAccess().getObjetivoInputEStringParserRuleCall_5_0_1(), semanticObject.getObjetivo());
+		feeder.accept(grammarAccess.getReaccionVisibleAccess().getActivacionEIntParserRuleCall_1_0(), semanticObject.getActivacion());
+		feeder.accept(grammarAccess.getReaccionVisibleAccess().getObjetivoInputEStringParserRuleCall_3_0_1(), semanticObject.getObjetivo());
 		feeder.finish();
 	}
 }

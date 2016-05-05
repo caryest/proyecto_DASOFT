@@ -57,7 +57,7 @@ public class FormularioValidator extends AbstractFormularioValidator {
         }
       }
       if ((!flag)) {
-        this.warning("El campo debe de estar incluido en al menos una asercion", 
+        this.error("El campo debe de estar incluido en al menos una asercion", 
           Formularios_DASOFTPackage.Literals.FORMULARIO__COMPROBACION_CAMPOS, 
           "faltaCampo");
       }
@@ -84,7 +84,7 @@ public class FormularioValidator extends AbstractFormularioValidator {
         }
       }
       if ((!flag)) {
-        this.warning("El campo debe de estar incluido en al menos una accion", 
+        this.error("El campo debe de estar incluido en al menos una accion", 
           Formularios_DASOFTPackage.Literals.FORMULARIO__COMPROBACION_ACCION, 
           "faltaAccion");
       }
@@ -96,7 +96,7 @@ public class FormularioValidator extends AbstractFormularioValidator {
     Input _elemento = accion.getElemento();
     boolean _not = (!(_elemento instanceof InputMultiple));
     if (_not) {
-      this.warning("Una accion de este tipo no puede apuntar a este input", 
+      this.error("Una accion de este tipo no puede apuntar a este input", 
         Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO, 
         "InputIncorrecto");
     }
@@ -107,7 +107,7 @@ public class FormularioValidator extends AbstractFormularioValidator {
     Input _elemento = accion.getElemento();
     boolean _not = (!(_elemento instanceof InputBoton));
     if (_not) {
-      this.warning("Una accion de este tipo no puede apuntar a este input", 
+      this.error("Una accion de este tipo no puede apuntar a este input", 
         Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO, 
         "InputIncorrecto");
     }
@@ -118,7 +118,7 @@ public class FormularioValidator extends AbstractFormularioValidator {
     Input _elemento = accion.getElemento();
     boolean _not = (!(_elemento instanceof InputTexto));
     if (_not) {
-      this.warning("Una accion de este tipo no puede apuntar a este input", 
+      this.error("Una accion de este tipo no puede apuntar a este input", 
         Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO, 
         "InputIncorrecto");
     }
@@ -133,7 +133,7 @@ public class FormularioValidator extends AbstractFormularioValidator {
       int _size_1 = _valores.size();
       boolean _greaterThan = (_size > _size_1);
       if (_greaterThan) {
-        this.warning("Este input no puede tener esa cantidad de opciones por defecto", 
+        this.error("Este input no puede tener esa cantidad de opciones por defecto", 
           Formularios_DASOFTPackage.Literals.INPUT_CHECK__SELECCION, 
           "SeleccionFueraDeRango");
       }
@@ -155,46 +155,62 @@ public class FormularioValidator extends AbstractFormularioValidator {
           _or = _greaterThan;
         }
         if (_or) {
-          this.warning("Una de las opciones por defecto de este input no es válida", 
+          this.error("Una de las opciones por defecto de este input no es válida", 
             Formularios_DASOFTPackage.Literals.INPUT_CHECK__SELECCION, 
             "SeleccionFueraDeRango");
         }
       }
     } else {
       if ((input instanceof InputCombo)) {
-        boolean _or_1 = false;
+        boolean _and = false;
         int _seleccion_1 = ((InputCombo)input).getSeleccion();
-        boolean _lessThan = (_seleccion_1 < 1);
-        if (_lessThan) {
-          _or_1 = true;
+        boolean _notEquals = (_seleccion_1 != 0);
+        if (!_notEquals) {
+          _and = false;
         } else {
+          boolean _or_1 = false;
           int _seleccion_2 = ((InputCombo)input).getSeleccion();
-          EList<String> _valores_1 = ((InputCombo)input).getValores();
-          int _size_1 = _valores_1.size();
-          boolean _greaterThan_1 = (_seleccion_2 > _size_1);
-          _or_1 = _greaterThan_1;
+          boolean _lessThan = (_seleccion_2 < 1);
+          if (_lessThan) {
+            _or_1 = true;
+          } else {
+            int _seleccion_3 = ((InputCombo)input).getSeleccion();
+            EList<String> _valores_1 = ((InputCombo)input).getValores();
+            int _size_1 = _valores_1.size();
+            boolean _greaterThan_1 = (_seleccion_3 > _size_1);
+            _or_1 = _greaterThan_1;
+          }
+          _and = _or_1;
         }
-        if (_or_1) {
-          this.warning("Este input no puede tener esa cantidad de opciones por defecto", 
+        if (_and) {
+          this.error("Este input no puede tener esa cantidad de opciones por defecto", 
             Formularios_DASOFTPackage.Literals.INPUT_COMBO__SELECCION, 
             "SeleccionFueraDeRango");
         }
       } else {
         if ((input instanceof InputRadio)) {
-          boolean _or_2 = false;
-          int _seleccion_3 = ((InputRadio)input).getSeleccion();
-          boolean _lessThan_1 = (_seleccion_3 < 1);
-          if (_lessThan_1) {
-            _or_2 = true;
+          boolean _and_1 = false;
+          int _seleccion_4 = ((InputRadio)input).getSeleccion();
+          boolean _notEquals_1 = (_seleccion_4 != 0);
+          if (!_notEquals_1) {
+            _and_1 = false;
           } else {
-            int _seleccion_4 = ((InputRadio)input).getSeleccion();
-            EList<String> _valores_2 = ((InputRadio)input).getValores();
-            int _size_2 = _valores_2.size();
-            boolean _greaterThan_2 = (_seleccion_4 > _size_2);
-            _or_2 = _greaterThan_2;
+            boolean _or_2 = false;
+            int _seleccion_5 = ((InputRadio)input).getSeleccion();
+            boolean _lessThan_1 = (_seleccion_5 < 1);
+            if (_lessThan_1) {
+              _or_2 = true;
+            } else {
+              int _seleccion_6 = ((InputRadio)input).getSeleccion();
+              EList<String> _valores_2 = ((InputRadio)input).getValores();
+              int _size_2 = _valores_2.size();
+              boolean _greaterThan_2 = (_seleccion_6 > _size_2);
+              _or_2 = _greaterThan_2;
+            }
+            _and_1 = _or_2;
           }
-          if (_or_2) {
-            this.warning("Este input no puede tener esa cantidad de opciones por defecto", 
+          if (_and_1) {
+            this.error("Este input no puede tener esa cantidad de opciones por defecto", 
               Formularios_DASOFTPackage.Literals.INPUT_RADIO__SELECCION, 
               "SeleccionFueraDeRango");
           }
@@ -228,11 +244,11 @@ public class FormularioValidator extends AbstractFormularioValidator {
           }
         }
       }
-    }
-    if ((!flag)) {
-      this.warning("Este input debe tener una accion que lo habilite", 
-        Formularios_DASOFTPackage.Literals.INPUT__DESHABILITADO, 
-        "ElementoNoHabilitable");
+      if ((!flag)) {
+        this.error("Este input debe tener una accion que lo habilite", 
+          Formularios_DASOFTPackage.Literals.INPUT__DESHABILITADO, 
+          "ElementoNoHabilitable");
+      }
     }
   }
   
@@ -261,11 +277,11 @@ public class FormularioValidator extends AbstractFormularioValidator {
           }
         }
       }
-    }
-    if ((!flag)) {
-      this.warning("Este input debe tener una accion que lo ponga visible", 
-        Formularios_DASOFTPackage.Literals.INPUT__INVISIBLE, 
-        "ElementoNoVisualizable");
+      if ((!flag)) {
+        this.error("Este input debe tener una accion que lo ponga visible", 
+          Formularios_DASOFTPackage.Literals.INPUT__INVISIBLE, 
+          "ElementoNoVisualizable");
+      }
     }
   }
   
@@ -275,11 +291,19 @@ public class FormularioValidator extends AbstractFormularioValidator {
     Layout lo = ((Layout) _eContainer);
     EList<Input> _entradas = lo.getEntradas();
     for (final Input input2 : _entradas) {
+      boolean _and = false;
       String _name = input.getName();
       String _name_1 = input2.getName();
       boolean _equals = Objects.equal(_name, _name_1);
-      if (_equals) {
-        this.warning("Dos input no pueden tener el mismo nombre", 
+      if (!_equals) {
+        _and = false;
+      } else {
+        boolean _equals_1 = input.equals(input2);
+        boolean _not = (!_equals_1);
+        _and = _not;
+      }
+      if (_and) {
+        this.error("Dos input no pueden tener el mismo nombre", 
           Formularios_DASOFTPackage.Literals.INPUT__NAME, 
           "NombreNoUnico");
       }

@@ -35,7 +35,7 @@ class FormularioValidator extends AbstractFormularioValidator {
 //	@Check
 //	def checkGreetingStartsWithCapital(Greeting greeting) {
 //		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
+//			error('Name should start with a capital', 
 //					MyDslPackage.Literals.GREETING__NAME,
 //					INVALID_NAME)
 //		}
@@ -57,7 +57,7 @@ class FormularioValidator extends AbstractFormularioValidator {
 			}
 			
 			if (!flag){
-				warning('El campo debe de estar incluido en al menos una asercion',
+				error('El campo debe de estar incluido en al menos una asercion',
 					Formularios_DASOFTPackage.Literals.FORMULARIO__COMPROBACION_CAMPOS,
 					'faltaCampo')
 				
@@ -81,7 +81,7 @@ class FormularioValidator extends AbstractFormularioValidator {
 			}
 			
 			if (!flag){
-				warning('El campo debe de estar incluido en al menos una accion',
+				error('El campo debe de estar incluido en al menos una accion',
 					Formularios_DASOFTPackage.Literals.FORMULARIO__COMPROBACION_ACCION,
 					'faltaAccion');	
 			}
@@ -91,7 +91,7 @@ class FormularioValidator extends AbstractFormularioValidator {
 	@Check
 	def inputAccionSeleccion (AccionSeleccion accion){
 		if (!(accion.elemento instanceof InputMultiple)){
-			warning('Una accion de este tipo no puede apuntar a este input',
+			error('Una accion de este tipo no puede apuntar a este input',
 					Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO,
 					'InputIncorrecto');	
 		}
@@ -100,7 +100,7 @@ class FormularioValidator extends AbstractFormularioValidator {
 	@Check
 	def inputAccionPulsacion (AccionPulsacion accion){
 		if (!(accion.elemento instanceof InputBoton)){
-			warning('Una accion de este tipo no puede apuntar a este input',
+			error('Una accion de este tipo no puede apuntar a este input',
 					Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO,
 					'InputIncorrecto');	
 		}
@@ -109,7 +109,7 @@ class FormularioValidator extends AbstractFormularioValidator {
 	@Check
 	def inputAccionValor (AccionValor accion){
 		if (!(accion.elemento instanceof InputTexto)){
-			warning('Una accion de este tipo no puede apuntar a este input',
+			error('Una accion de este tipo no puede apuntar a este input',
 					Formularios_DASOFTPackage.Literals.ACCION__ELEMENTO,
 					'InputIncorrecto');	
 		}
@@ -121,7 +121,7 @@ class FormularioValidator extends AbstractFormularioValidator {
 		if (input instanceof InputCheck){
 			
 			if (input.seleccion.size > input.valores.size){
-				warning('Este input no puede tener esa cantidad de opciones por defecto',
+				error('Este input no puede tener esa cantidad de opciones por defecto',
 						Formularios_DASOFTPackage.Literals.INPUT_CHECK__SELECCION,
 						'SeleccionFueraDeRango');	
 			}
@@ -133,20 +133,20 @@ class FormularioValidator extends AbstractFormularioValidator {
 		if (input instanceof InputCheck){
 			for (valor : input.seleccion){
 				if (valor < 1 || valor > input.valores.size){
-					warning('Una de las opciones por defecto de este input no es válida',
+					error('Una de las opciones por defecto de este input no es válida',
 							Formularios_DASOFTPackage.Literals.INPUT_CHECK__SELECCION,
 							'SeleccionFueraDeRango');
 				}
 			}
 		} else if (input instanceof InputCombo){
-			if (input.seleccion < 1 || input.seleccion > input.valores.size){
-				warning('Este input no puede tener esa cantidad de opciones por defecto',
+			if ((input.seleccion != 0) && (input.seleccion < 1 || input.seleccion > input.valores.size)){
+				error('Este input no puede tener esa cantidad de opciones por defecto',
 						Formularios_DASOFTPackage.Literals.INPUT_COMBO__SELECCION,
 						'SeleccionFueraDeRango');
 			}
 		} else if (input instanceof InputRadio){
-			if (input.seleccion < 1 || input.seleccion > input.valores.size){
-				warning('Este input no puede tener esa cantidad de opciones por defecto',
+			if ((input.seleccion != 0) && (input.seleccion < 1 || input.seleccion > input.valores.size)){
+				error('Este input no puede tener esa cantidad de opciones por defecto',
 						Formularios_DASOFTPackage.Literals.INPUT_RADIO__SELECCION,
 						'SeleccionFueraDeRango');
 			}
@@ -165,12 +165,11 @@ class FormularioValidator extends AbstractFormularioValidator {
 					flag = true;
 				}
 			}
-		}
-		
-		if (!flag){
-			warning('Este input debe tener una accion que lo habilite',
+			if (!flag){
+			error('Este input debe tener una accion que lo habilite',
 						Formularios_DASOFTPackage.Literals.INPUT__DESHABILITADO,
 						'ElementoNoHabilitable');
+			}
 		}
 	}
 	
@@ -185,14 +184,15 @@ class FormularioValidator extends AbstractFormularioValidator {
 					if (input2.reaccion.objetivo == input && input2.reaccion instanceof ReaccionVisible)
 					flag = true;
 				}
+		
+			}
+			if (!flag){
+			error('Este input debe tener una accion que lo ponga visible',
+						Formularios_DASOFTPackage.Literals.INPUT__INVISIBLE,
+						'ElementoNoVisualizable');
 			}
 		}
 		
-		if (!flag){
-			warning('Este input debe tener una accion que lo ponga visible',
-						Formularios_DASOFTPackage.Literals.INPUT__INVISIBLE,
-						'ElementoNoVisualizable');
-		}
 	}
 	
 	@Check
@@ -200,8 +200,8 @@ class FormularioValidator extends AbstractFormularioValidator {
 		var lo = input.eContainer as Layout;
 		
 		for(input2 : lo.entradas)
-			if (input.name == input2.name)
-				warning('Dos input no pueden tener el mismo nombre',
+			if (input.name == input2.name && !input.equals(input2))
+				error('Dos input no pueden tener el mismo nombre',
 						Formularios_DASOFTPackage.Literals.INPUT__NAME,
 						'NombreNoUnico');
 		
