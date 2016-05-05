@@ -185,6 +185,7 @@ class FormularioGenerator implements IGenerator {
 				label«input.name» = new Label(contentCombo«input.name», SWT.NONE);
 				label«input.name».setText("«input.name»");
 				combo«input.name» = new Combo(contentCombo«input.name», SWT.SIMPLE);
+				combo«input.name».setText("«input.name»");
 				«IF input.deshabilitado == true»
 				combo«input.name».setEnabled(false);
 				«ENDIF»
@@ -210,15 +211,35 @@ class FormularioGenerator implements IGenerator {
 					@Override
 					public void widgetSelected(SelectionEvent arg0) {
 						« IF (input as InputCheck).reaccion.objetivo instanceof InputBoton »
+						« IF (input as InputCheck).reaccion.objetivo.invisible == false »
+						boton«(input as InputCheck).reaccion.objetivo.name».setVisible( check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						boton«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputTexto »
+						« IF (input as InputCheck).reaccion.objetivo.invisible == false »
+						texto«(input as InputCheck).reaccion.objetivo.name».setVisible( check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						texto«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCheck »
+						« IF (input as InputCheck).reaccion.objetivo.invisible == false »
+						check«(input as InputCheck).reaccion.objetivo.name».setVisible( check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						check«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCombo »
+						« IF (input as InputCheck).reaccion.objetivo.invisible == false »
+						combo«(input as InputCheck).reaccion.objetivo.name».setVisible( check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						combo«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputRadio »
+						« IF (input as InputCheck).reaccion.objetivo.invisible == false »
+						radio«(input as InputCheck).reaccion.objetivo.name».setVisible( check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						radio«(input as InputCheck).reaccion.objetivo.name».setVisible( !check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ENDIF »
 					}
 					
@@ -231,15 +252,35 @@ class FormularioGenerator implements IGenerator {
 					@Override
 					public void widgetSelected(SelectionEvent arg0) {
 						« IF (input as InputCheck).reaccion.objetivo instanceof InputBoton »
+						« IF (input as InputCheck).reaccion.objetivo.invisible == true »
+						boton«(input as InputCheck).reaccion.objetivo.name».setEnabled( check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						boton«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputTexto »
+						« IF (input as InputCheck).reaccion.objetivo.invisible == true »
+						texto«(input as InputCheck).reaccion.objetivo.name».setEnabled( check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						texto«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCheck »
+						« IF (input as InputCheck).reaccion.objetivo.invisible == true »
+						check«(input as InputCheck).reaccion.objetivo.name».setEnabled( check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						check«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputCombo »
+						« IF (input as InputCheck).reaccion.objetivo.invisible == true »
+						combo«(input as InputCheck).reaccion.objetivo.name».setEnabled( check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						combo«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputCheck).reaccion.objetivo instanceof InputRadio »
+						« IF (input as InputCheck).reaccion.objetivo.invisible == true »
+						radio«(input as InputCheck).reaccion.objetivo.name».setEnabled( check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						radio«(input as InputCheck).reaccion.objetivo.name».setEnabled( !check«input.name»[«(input as InputCheck).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ENDIF »
 					}
 					
@@ -256,15 +297,35 @@ class FormularioGenerator implements IGenerator {
 					@Override
 					public void widgetSelected(SelectionEvent arg0) {
 						« IF (input as InputRadio).reaccion.objetivo instanceof InputBoton »
+						« IF (input as InputRadio).reaccion.objetivo.invisible == true »
+						boton«(input as InputRadio).reaccion.objetivo.name».setVisible( radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						boton«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputTexto »
+						« IF (input as InputRadio).reaccion.objetivo.invisible == true »
+						texto«(input as InputRadio).reaccion.objetivo.name».setVisible( radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						texto«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCheck »
+						« IF (input as InputRadio).reaccion.objetivo.invisible == true »
+						check«(input as InputRadio).reaccion.objetivo.name».setVisible( radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						check«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCombo »
+						« IF (input as InputRadio).reaccion.objetivo.invisible == true »
+						combo«(input as InputRadio).reaccion.objetivo.name».setVisible( radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						combo«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputRadio »
+						« IF (input as InputRadio).reaccion.objetivo.invisible == true »
+						radio«(input as InputRadio).reaccion.objetivo.name».setVisible( radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						radio«(input as InputRadio).reaccion.objetivo.name».setVisible( !radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ENDIF »
 					}
 					
@@ -277,15 +338,35 @@ class FormularioGenerator implements IGenerator {
 					@Override
 					public void widgetSelected(SelectionEvent arg0) {
 						« IF (input as InputRadio).reaccion.objetivo instanceof InputBoton »
+						« IF (input as InputRadio).reaccion.objetivo.invisible == true »
+						boton«(input as InputRadio).reaccion.objetivo.name».setEnabled( radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						boton«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputTexto »
+						« IF (input as InputRadio).reaccion.objetivo.invisible == true »
+						texto«(input as InputRadio).reaccion.objetivo.name».setEnabled( radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						texto«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCheck »
+						« IF (input as InputRadio).reaccion.objetivo.invisible == true »
+						check«(input as InputRadio).reaccion.objetivo.name».setEnabled( radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						check«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputCombo »
+						« IF (input as InputRadio).reaccion.objetivo.invisible == true »
+						combo«(input as InputRadio).reaccion.objetivo.name».setEnabled( radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						combo«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ELSEIF (input as InputRadio).reaccion.objetivo instanceof InputRadio »
+						« IF (input as InputRadio).reaccion.objetivo.invisible == true »
+						radio«(input as InputRadio).reaccion.objetivo.name».setEnabled( radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ELSE »
 						radio«(input as InputRadio).reaccion.objetivo.name».setEnabled( !radio«input.name»[«(input as InputRadio).reaccion.activacion-1»].getSelection() );
+						« ENDIF »
 						« ENDIF »
 					}
 					
@@ -534,7 +615,6 @@ class FormularioGenerator implements IGenerator {
 				display.update();
 				« ELSEIF accion.elemento instanceof InputTexto»
 				texto«accion.elemento.name».setFocus();
-				texto«accion.elemento.name».select();
 				texto«accion.elemento.name».setText("«(accion as AccionValor).valor»");
 				display.update();
 				« ELSEIF accion.elemento instanceof InputCheck»
@@ -620,11 +700,11 @@ class FormularioGenerator implements IGenerator {
 				« ELSEIF accion.asercion instanceof AsercionValor »
 				« ELSEIF accion.asercion instanceof AsercionSeleccion »
 				« IF accion.asercion.elemento instanceof InputCheck »
-				assertTrue(check«accion.asercion.elemento.name».isSelected());
+				assertTrue(check«accion.asercion.elemento.name»[«(accion.asercion as AsercionSeleccion).estado-1»].isSelected());
 				« ELSEIF accion.asercion.elemento instanceof InputCombo »
-				assertTrue(combo«accion.asercion.elemento.name».isSelected());
+				assertTrue(combo«accion.asercion.elemento.name»[«(accion.asercion as AsercionSeleccion).estado-1»].isSelected());
 				« ELSEIF accion.asercion.elemento instanceof InputRadio »
-				assertTrue(radio«accion.asercion.elemento.name».isSelected());
+				assertTrue(radio«accion.asercion.elemento.name»[«(accion.asercion as AsercionSeleccion).estado-1»].isSelected());
 				« ENDIF »
 				« ENDIF »
 				
@@ -636,7 +716,7 @@ class FormularioGenerator implements IGenerator {
 				combo«accion.asercion.elemento.name».setSelection(0);
 				« ELSEIF accion.asercion.elemento instanceof InputRadio »
 				«FOR valor: (accion.asercion.elemento as InputRadio).valores»
-				radio«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputRadio).valores.indexOf(valor)»].isEnabled());
+				assertFalse(radio«accion.asercion.elemento.name»[«(accion.asercion.elemento as InputRadio).valores.indexOf(valor)»].isEnabled());
 				«ENDFOR»
 				« ELSEIF accion.asercion.elemento instanceof InputCheck »
 				«FOR valor: (accion.asercion.elemento as InputCheck).valores»

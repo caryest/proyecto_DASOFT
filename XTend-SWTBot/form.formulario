@@ -6,7 +6,7 @@ Formulario Pruebas
 			Input Texto invisible Nombre ,
 			Input Texto obligatorio Apellido ,
 			Combo Edad: {'0-18','19-64','+65'},
-			Radio Estado_Civil: {'Soltero', 'Casado', 'Viudo'} inicial 1 reaccion ,
+			Radio Estado_Civil: {'Soltero', 'Casado', 'Viudo'} inicial 2 Reaccion Visible 1 -> Nombre,
 			Check Intereses: {'Peliculas', 'Deporte', 'Fotografia', 'Literatura'} iniciales {1,4},
 			BotonValidar Validar,
 			BotonCancelar Cancelar,
@@ -20,6 +20,8 @@ Formulario Pruebas
 	}
 	PruebaInterfaz
 	{
-		Accion para Seleccion
+		Accion para Seleccion Estado_Civil: 1 -> Asercion invisible falso -> Nombre,
+		Accion para Texto Pepe: Apellido -> Asercion deshabilitado falso -> Edad,
+		Accion para Boton Cancelar -> Asercion seleccion 2 -> Estado_Civil
 	}
 }

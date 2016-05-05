@@ -103,15 +103,15 @@ BotonCustom returns BotonCustom:
 	'}';
 
 ReaccionVisible returns ReaccionVisible:
-	'Visible:' activacion=EInt '->' objetivo=[Input|EString]
+	'Visible' activacion=EInt '->' objetivo=[Input|EString]
 	;
 
 ReaccionHabilitado returns ReaccionHabilitado:
-	'Deshabilitado:' activacion=EInt '->' objetivo=[Input|EString]
+	'Deshabilitado' activacion=EInt '->' objetivo=[Input|EString]
 	;
 
 AccionValor returns AccionValor:
-	'Accion para Texto' valor=EString ':' elemento=[Input|EString] '->' asercion=Asercion
+	'Accion para Texto' elemento=[Input|EString] ':' valor=EString'->' asercion=Asercion
 	;
 
 AccionSeleccion returns AccionSeleccion:

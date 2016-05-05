@@ -1675,7 +1675,7 @@ ruleReaccionVisible returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='Visible:' 
+(	otherlv_0='Visible' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getReaccionVisibleAccess().getVisibleKeyword_0());
     }
@@ -1737,7 +1737,7 @@ ruleReaccionHabilitado returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='Deshabilitado:' 
+(	otherlv_0='Deshabilitado' 
     {
     	newLeafNode(otherlv_0, grammarAccess.getReaccionHabilitadoAccess().getDeshabilitadoKeyword_0());
     }

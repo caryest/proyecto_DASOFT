@@ -659,10 +659,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:39:7: ( 'Visible:' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:39:9: 'Visible:'
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:39:7: ( 'Visible' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:39:9: 'Visible'
             {
-            match("Visible:"); 
+            match("Visible"); 
 
 
             }
@@ -701,10 +701,10 @@ public class InternalFormularioLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:41:7: ( 'Deshabilitado:' )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:41:9: 'Deshabilitado:'
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:41:7: ( 'Deshabilitado' )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:41:9: 'Deshabilitado'
             {
-            match("Deshabilitado:"); 
+            match("Deshabilitado"); 
 
 
             }
@@ -1722,13 +1722,13 @@ public class InternalFormularioLexer extends Lexer {
         "\1\uffff\6\41\1\37\2\uffff\3\37\2\uffff\1\41\2\uffff\1\41\1\uffff"+
         "\2\41\3\uffff\1\41\2\uffff\6\41\1\uffff\10\41\5\uffff\65\41\1\u008b"+
         "\1\41\1\u008d\1\u008e\5\41\1\u0096\3\41\1\u009a\2\41\1\uffff\4\41"+
-        "\1\uffff\1\41\2\uffff\7\41\1\uffff\3\41\1\uffff\5\41\1\u00b3\7\41"+
-        "\1\uffff\3\41\1\u00bf\1\u00c0\5\41\1\uffff\1\u00c6\4\41\1\uffff"+
-        "\1\41\1\uffff\3\41\2\uffff\3\41\1\u00d3\1\u00d4\1\uffff\5\41\2\uffff"+
-        "\1\u00df\4\41\2\uffff\5\41\6\uffff\3\41\1\u00ed\3\41\1\u00f1\1\41"+
-        "\1\uffff\3\41\1\uffff\1\u00f8\1\u00f9\1\41\1\uffff\1\41\1\uffff"+
-        "\3\41\1\u0102\2\uffff\1\u0103\1\41\3\uffff\2\41\1\u0107\3\uffff"+
-        "\2\41\1\uffff\4\41\1\u010e\1\u010f\2\uffff";
+        "\1\uffff\1\41\2\uffff\7\41\1\uffff\3\41\1\uffff\5\41\1\u00b3\5\41"+
+        "\1\u00b9\1\41\1\uffff\3\41\1\u00bf\1\u00c0\5\41\1\uffff\1\u00c6"+
+        "\4\41\1\uffff\1\41\1\uffff\3\41\2\uffff\3\41\1\u00d3\1\u00d4\1\uffff"+
+        "\5\41\2\uffff\1\u00df\4\41\2\uffff\5\41\6\uffff\3\41\1\u00ed\3\41"+
+        "\1\u00f1\1\41\1\uffff\3\41\1\uffff\1\u00f8\1\u00f9\1\41\1\uffff"+
+        "\1\41\1\uffff\3\41\1\u0102\2\uffff\1\u0103\1\u0104\3\uffff\2\41"+
+        "\1\u0107\3\uffff\2\41\1\uffff\4\41\1\u010e\1\u010f\2\uffff";
     static final String DFA12_eofS =
         "\u0110\uffff";
     static final String DFA12_minS =
@@ -1746,15 +1746,15 @@ public class InternalFormularioLexer extends Lexer {
         "\1\141\1\111\1\uffff\1\151\1\164\1\142\1\154\1\uffff\1\157\2\uffff"+
         "\1\141\1\165\1\141\1\145\1\151\1\40\1\157\1\uffff\1\162\1\141\1"+
         "\163\1\uffff\1\163\1\156\1\154\1\157\1\154\1\60\1\156\1\154\1\141"+
-        "\1\156\1\163\1\72\1\154\1\160\1\156\1\151\1\143\2\60\1\164\1\151"+
+        "\1\156\1\163\1\60\1\154\1\160\1\156\1\151\1\143\2\60\1\164\1\151"+
         "\1\162\1\145\1\163\1\uffff\1\60\1\151\1\162\1\143\1\164\1\uffff"+
         "\1\151\1\141\1\40\1\157\1\151\2\uffff\1\145\1\164\1\151\2\60\1\uffff"+
         "\2\144\1\145\1\157\1\164\1\162\1\144\1\60\1\157\1\162\1\141\1\157"+
         "\2\uffff\2\141\1\154\1\155\2\141\5\uffff\1\156\1\146\1\144\1\60"+
         "\2\162\1\141\1\60\1\144\1\40\1\101\1\141\1\157\1\uffff\2\60\1\162"+
-        "\1\uffff\1\157\1\102\1\141\1\143\1\172\1\60\2\uffff\1\60\1\72\3"+
-        "\uffff\1\155\1\143\1\60\3\uffff\1\160\1\151\1\uffff\2\157\1\163"+
-        "\1\156\2\60\2\uffff";
+        "\1\uffff\1\157\1\102\1\141\1\143\1\172\1\60\2\uffff\2\60\3\uffff"+
+        "\1\155\1\143\1\60\3\uffff\1\160\1\151\1\uffff\2\157\1\163\1\156"+
+        "\2\60\2\uffff";
     static final String DFA12_maxS =
         "\1\uffff\1\157\1\uffff\1\157\1\uffff\1\141\1\156\3\uffff\1\162"+
         "\1\76\1\156\1\145\1\142\1\156\1\145\1\uffff\2\157\1\151\1\145\1"+
@@ -1770,15 +1770,15 @@ public class InternalFormularioLexer extends Lexer {
         "\1\141\1\111\1\uffff\1\151\1\164\1\142\1\154\1\uffff\1\157\2\uffff"+
         "\1\141\2\165\1\145\1\151\1\40\1\157\1\uffff\1\162\1\141\1\163\1"+
         "\uffff\1\163\1\156\1\154\1\157\1\154\1\172\1\156\1\154\1\141\1\156"+
-        "\1\163\1\72\1\154\1\160\1\156\1\151\1\143\2\172\1\164\1\151\1\162"+
+        "\1\163\1\172\1\154\1\160\1\156\1\151\1\143\2\172\1\164\1\151\1\162"+
         "\1\145\1\163\1\uffff\1\172\1\151\1\162\1\143\1\164\1\uffff\1\151"+
         "\1\141\1\40\1\157\1\151\2\uffff\1\145\1\164\1\151\2\172\1\uffff"+
         "\2\144\1\145\1\157\1\164\1\162\1\166\1\172\1\157\1\162\1\141\1\157"+
         "\2\uffff\2\141\1\154\1\155\2\141\5\uffff\1\156\1\146\1\144\1\172"+
         "\2\162\1\141\1\172\1\144\1\40\1\103\1\141\1\157\1\uffff\2\172\1"+
-        "\162\1\uffff\1\157\1\124\1\141\1\143\2\172\2\uffff\1\172\1\72\3"+
-        "\uffff\1\155\1\143\1\172\3\uffff\1\160\1\151\1\uffff\2\157\1\163"+
-        "\1\156\2\172\2\uffff";
+        "\162\1\uffff\1\157\1\124\1\141\1\143\2\172\2\uffff\2\172\3\uffff"+
+        "\1\155\1\143\1\172\3\uffff\1\160\1\151\1\uffff\2\157\1\163\1\156"+
+        "\2\172\2\uffff";
     static final String DFA12_acceptS =
         "\2\uffff\1\2\1\uffff\1\5\2\uffff\1\11\1\12\1\13\7\uffff\1\24\7"+
         "\uffff\1\50\1\51\3\uffff\1\55\1\56\1\uffff\1\50\1\2\1\uffff\1\5"+
@@ -1790,7 +1790,7 @@ public class InternalFormularioLexer extends Lexer {
         "\40\1\41\1\42\3\uffff\1\17\1\33\1\37\2\uffff\1\14\6\uffff\1\3\1"+
         "\4";
     static final String DFA12_specialS =
-        "\1\2\32\uffff\1\1\1\0\u00f3\uffff}>";
+        "\1\0\32\uffff\1\1\1\2\u00f3\uffff}>";
     static final String[] DFA12_transitionS = {
             "\11\37\2\36\2\37\1\36\22\37\1\36\1\37\1\33\4\37\1\34\4\37\1"+
             "\10\1\13\1\37\1\35\12\32\1\21\6\37\1\26\1\23\1\22\1\25\1\31"+
@@ -1963,7 +1963,7 @@ public class InternalFormularioLexer extends Lexer {
             "\1\u00b6",
             "\1\u00b7",
             "\1\u00b8",
-            "\1\u00b9",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\u00ba",
             "\1\u00bb",
             "\1\u00bc",
@@ -2048,7 +2048,7 @@ public class InternalFormularioLexer extends Lexer {
             "",
             "",
             "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-            "\1\u0104",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
             "",
             "",
@@ -2108,26 +2108,6 @@ public class InternalFormularioLexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA12_28 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_28>='\u0000' && LA12_28<='\uFFFF')) ) {s = 61;}
-
-                        else s = 31;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA12_27 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA12_27>='\u0000' && LA12_27<='\uFFFF')) ) {s = 61;}
-
-                        else s = 31;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA12_0 = input.LA(1);
 
                         s = -1;
@@ -2192,6 +2172,26 @@ public class InternalFormularioLexer extends Lexer {
                         else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 30;}
 
                         else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='+')||LA12_0=='.'||(LA12_0>=';' && LA12_0<='@')||LA12_0=='\\'||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 31;}
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA12_27 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_27>='\u0000' && LA12_27<='\uFFFF')) ) {s = 61;}
+
+                        else s = 31;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA12_28 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA12_28>='\u0000' && LA12_28<='\uFFFF')) ) {s = 61;}
+
+                        else s = 31;
 
                         if ( s>=0 ) return s;
                         break;

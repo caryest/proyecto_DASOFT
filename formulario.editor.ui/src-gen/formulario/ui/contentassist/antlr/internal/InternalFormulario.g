@@ -4771,7 +4771,7 @@ rule__ReaccionVisible__Group__0__Impl
 (
 { before(grammarAccess.getReaccionVisibleAccess().getVisibleKeyword_0()); }
 
-	'Visible:' 
+	'Visible' 
 
 { after(grammarAccess.getReaccionVisibleAccess().getVisibleKeyword_0()); }
 )
@@ -4898,7 +4898,7 @@ rule__ReaccionHabilitado__Group__0__Impl
 (
 { before(grammarAccess.getReaccionHabilitadoAccess().getDeshabilitadoKeyword_0()); }
 
-	'Deshabilitado:' 
+	'Deshabilitado' 
 
 { after(grammarAccess.getReaccionHabilitadoAccess().getDeshabilitadoKeyword_0()); }
 )

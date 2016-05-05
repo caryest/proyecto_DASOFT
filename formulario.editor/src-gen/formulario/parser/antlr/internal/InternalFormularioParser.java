@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFormularioParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Formulario'", "'{'", "'comprobacionCampos'", "'comprobacionAccion'", "'}'", "'Layout'", "'columnas'", "'entradas'", "'['", "','", "']'", "'PruebaInterfaz'", "'-'", "'Input Texto'", "'deshabilitado'", "'obligatorio'", "'invisible'", "'inicial'", "'Radio'", "':'", "'Reaccion'", "'Combo'", "'Check'", "'iniciales'", "'BotonValidar'", "'BotonGuardar'", "'BotonCancelar'", "'BotonCustom'", "'Visible:'", "'->'", "'Deshabilitado:'", "'Accion para Texto'", "'Accion para Seleccion'", "'Accion para Boton'", "'Asercion invisible'", "'falso'", "'Asercion deshabilitado'", "'Asercion valor'", "'Asercion seleccion'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Formulario'", "'{'", "'comprobacionCampos'", "'comprobacionAccion'", "'}'", "'Layout'", "'columnas'", "'entradas'", "'['", "','", "']'", "'PruebaInterfaz'", "'-'", "'Input Texto'", "'deshabilitado'", "'obligatorio'", "'invisible'", "'inicial'", "'Radio'", "':'", "'Reaccion'", "'Combo'", "'Check'", "'iniciales'", "'BotonValidar'", "'BotonGuardar'", "'BotonCancelar'", "'BotonCustom'", "'Visible'", "'->'", "'Deshabilitado'", "'Accion para Texto'", "'Accion para Seleccion'", "'Accion para Boton'", "'Asercion invisible'", "'falso'", "'Asercion deshabilitado'", "'Asercion valor'", "'Asercion seleccion'"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -4153,7 +4153,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReaccionVisible"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1674:1: ruleReaccionVisible returns [EObject current=null] : (otherlv_0= 'Visible:' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1674:1: ruleReaccionVisible returns [EObject current=null] : (otherlv_0= 'Visible' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) ) ;
     public final EObject ruleReaccionVisible() throws RecognitionException {
         EObject current = null;
 
@@ -4165,11 +4165,11 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1677:28: ( (otherlv_0= 'Visible:' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1678:1: (otherlv_0= 'Visible:' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1677:28: ( (otherlv_0= 'Visible' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1678:1: (otherlv_0= 'Visible' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1678:1: (otherlv_0= 'Visible:' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1678:3: otherlv_0= 'Visible:' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1678:1: (otherlv_0= 'Visible' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1678:3: otherlv_0= 'Visible' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) )
             {
             otherlv_0=(Token)match(input,39,FollowSets000.FOLLOW_39_in_ruleReaccionVisible3756); 
 
@@ -4295,7 +4295,7 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleReaccionHabilitado"
-    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1736:1: ruleReaccionHabilitado returns [EObject current=null] : (otherlv_0= 'Deshabilitado:' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) ) ;
+    // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1736:1: ruleReaccionHabilitado returns [EObject current=null] : (otherlv_0= 'Deshabilitado' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) ) ;
     public final EObject ruleReaccionHabilitado() throws RecognitionException {
         EObject current = null;
 
@@ -4307,11 +4307,11 @@ public class InternalFormularioParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1739:28: ( (otherlv_0= 'Deshabilitado:' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1740:1: (otherlv_0= 'Deshabilitado:' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1739:28: ( (otherlv_0= 'Deshabilitado' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1740:1: (otherlv_0= 'Deshabilitado' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) )
             {
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1740:1: (otherlv_0= 'Deshabilitado:' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) )
-            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1740:3: otherlv_0= 'Deshabilitado:' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1740:1: (otherlv_0= 'Deshabilitado' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) ) )
+            // ../formulario.editor/src-gen/formulario/parser/antlr/internal/InternalFormulario.g:1740:3: otherlv_0= 'Deshabilitado' ( (lv_activacion_1_0= ruleEInt ) ) otherlv_2= '->' ( ( ruleEString ) )
             {
             otherlv_0=(Token)match(input,41,FollowSets000.FOLLOW_41_in_ruleReaccionHabilitado3895); 
 

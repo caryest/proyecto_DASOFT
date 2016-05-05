@@ -1017,13 +1017,13 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cObjetivoInputEStringParserRuleCall_3_0_1 = (RuleCall)cObjetivoInputCrossReference_3_0.eContents().get(1);
 		
 		//ReaccionVisible:
-		//	"Visible:" activacion=EInt "->" objetivo=[Input|EString];
+		//	"Visible" activacion=EInt "->" objetivo=[Input|EString];
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Visible:" activacion=EInt "->" objetivo=[Input|EString]
+		//"Visible" activacion=EInt "->" objetivo=[Input|EString]
 		public Group getGroup() { return cGroup; }
 
-		//"Visible:"
+		//"Visible"
 		public Keyword getVisibleKeyword_0() { return cVisibleKeyword_0; }
 
 		//activacion=EInt
@@ -1057,13 +1057,13 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cObjetivoInputEStringParserRuleCall_3_0_1 = (RuleCall)cObjetivoInputCrossReference_3_0.eContents().get(1);
 		
 		//ReaccionHabilitado:
-		//	"Deshabilitado:" activacion=EInt "->" objetivo=[Input|EString];
+		//	"Deshabilitado" activacion=EInt "->" objetivo=[Input|EString];
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Deshabilitado:" activacion=EInt "->" objetivo=[Input|EString]
+		//"Deshabilitado" activacion=EInt "->" objetivo=[Input|EString]
 		public Group getGroup() { return cGroup; }
 
-		//"Deshabilitado:"
+		//"Deshabilitado"
 		public Keyword getDeshabilitadoKeyword_0() { return cDeshabilitadoKeyword_0; }
 
 		//activacion=EInt
@@ -1670,7 +1670,7 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ReaccionVisible:
-	//	"Visible:" activacion=EInt "->" objetivo=[Input|EString];
+	//	"Visible" activacion=EInt "->" objetivo=[Input|EString];
 	public ReaccionVisibleElements getReaccionVisibleAccess() {
 		return pReaccionVisible;
 	}
@@ -1680,7 +1680,7 @@ public class FormularioGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ReaccionHabilitado:
-	//	"Deshabilitado:" activacion=EInt "->" objetivo=[Input|EString];
+	//	"Deshabilitado" activacion=EInt "->" objetivo=[Input|EString];
 	public ReaccionHabilitadoElements getReaccionHabilitadoAccess() {
 		return pReaccionHabilitado;
 	}

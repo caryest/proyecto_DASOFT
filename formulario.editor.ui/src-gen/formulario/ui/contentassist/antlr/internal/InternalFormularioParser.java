@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFormularioParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Formulario'", "'{'", "'}'", "'Layout'", "'columnas'", "'entradas'", "'['", "']'", "','", "'PruebaInterfaz'", "'-'", "'Input Texto'", "'inicial'", "'Radio'", "':'", "'Reaccion'", "'Combo'", "'Check'", "'iniciales'", "'BotonValidar'", "'BotonGuardar'", "'BotonCancelar'", "'BotonCustom'", "'Visible:'", "'->'", "'Deshabilitado:'", "'Accion para Texto'", "'Accion para Seleccion'", "'Accion para Boton'", "'Asercion invisible'", "'Asercion deshabilitado'", "'Asercion valor'", "'Asercion seleccion'", "'comprobacionCampos'", "'comprobacionAccion'", "'deshabilitado'", "'obligatorio'", "'invisible'", "'falso'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Formulario'", "'{'", "'}'", "'Layout'", "'columnas'", "'entradas'", "'['", "']'", "','", "'PruebaInterfaz'", "'-'", "'Input Texto'", "'inicial'", "'Radio'", "':'", "'Reaccion'", "'Combo'", "'Check'", "'iniciales'", "'BotonValidar'", "'BotonGuardar'", "'BotonCancelar'", "'BotonCustom'", "'Visible'", "'->'", "'Deshabilitado'", "'Accion para Texto'", "'Accion para Seleccion'", "'Accion para Boton'", "'Asercion invisible'", "'Asercion deshabilitado'", "'Asercion valor'", "'Asercion seleccion'", "'comprobacionCampos'", "'comprobacionAccion'", "'deshabilitado'", "'obligatorio'", "'invisible'", "'falso'"
     };
     public static final int T__19=19;
     public static final int T__15=15;
@@ -12746,17 +12746,17 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ReaccionVisible__Group__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4766:1: rule__ReaccionVisible__Group__0__Impl : ( 'Visible:' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4766:1: rule__ReaccionVisible__Group__0__Impl : ( 'Visible' ) ;
     public final void rule__ReaccionVisible__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4770:1: ( ( 'Visible:' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4771:1: ( 'Visible:' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4770:1: ( ( 'Visible' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4771:1: ( 'Visible' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4771:1: ( 'Visible:' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4772:1: 'Visible:'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4771:1: ( 'Visible' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4772:1: 'Visible'
             {
              before(grammarAccess.getReaccionVisibleAccess().getVisibleKeyword_0()); 
             match(input,34,FollowSets000.FOLLOW_34_in_rule__ReaccionVisible__Group__0__Impl9552); 
@@ -13061,17 +13061,17 @@ public class InternalFormularioParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__ReaccionHabilitado__Group__0__Impl"
-    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4893:1: rule__ReaccionHabilitado__Group__0__Impl : ( 'Deshabilitado:' ) ;
+    // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4893:1: rule__ReaccionHabilitado__Group__0__Impl : ( 'Deshabilitado' ) ;
     public final void rule__ReaccionHabilitado__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4897:1: ( ( 'Deshabilitado:' ) )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4898:1: ( 'Deshabilitado:' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4897:1: ( ( 'Deshabilitado' ) )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4898:1: ( 'Deshabilitado' )
             {
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4898:1: ( 'Deshabilitado:' )
-            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4899:1: 'Deshabilitado:'
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4898:1: ( 'Deshabilitado' )
+            // ../formulario.editor.ui/src-gen/formulario/ui/contentassist/antlr/internal/InternalFormulario.g:4899:1: 'Deshabilitado'
             {
              before(grammarAccess.getReaccionHabilitadoAccess().getDeshabilitadoKeyword_0()); 
             match(input,36,FollowSets000.FOLLOW_36_in_rule__ReaccionHabilitado__Group__0__Impl9801); 
